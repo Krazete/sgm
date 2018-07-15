@@ -16,4 +16,4 @@ Moisterrific
 * [Beowulf](http://forum.skullgirlsmobile.com/threads/moisterrifics-beowulf-tier-list-and-recommended-builds.669/)
 
 ## Marquee Abilities
-[Takio](http://forum.skullgirlsmobile.com/threads/list-of-marquee-abilities.3214/#post-16620)
+[Takio](http://forum.skullgirlsmobile.com/threads/list-of-marquee-abilities.3214)
