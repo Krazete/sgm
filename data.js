@@ -606,7 +606,56 @@ var skull = {
             "atk": 3628
         }
     },
-    "Squigly": {},
+    "Squigly": {
+        "Nearly Departed": {
+            "element": 3,
+            "tier": 1,
+            "signature": {
+                "name": "Abracadaver",
+                "1": "When using a BLOCKBUSTER with an ODD COMBO COUNT, gain INVINCIBLE for 8 seconds",
+                "2": "Also RESSURECT teammates with 25% HEALTH, if Squigly is below 25% HEALTH"
+            },
+            "fs": -1,
+            "hp": -1,
+            "atk": -1
+        },
+        "Dead Heat": {
+            "element": 0,
+            "tier": 1,
+            "signature": {
+                "name": "Immolation",
+                "1": "BLOCKBUSTERS and SPECIAL MOVES become UNBLOCKABLE while below 25% HEALTH",
+                "2": "If your opponent has a fully charged BLOCKBUSTER and you do not, gain 3% BLOCKBUSTER METER per second"
+            },
+            "fs": -1,
+            "hp": -1,
+            "atk": -1
+        },
+        "Scared Stiff": {
+            "element": 3,
+            "tier": 0,
+            "signature": {
+                "name": "Rigor Mortis",
+                "1": "Gain UNFLINCHING for 5 seconds every 30 seconds",
+                "2": "Cannot suffer more than 20% of your MAX HEALTH from a single HIT"
+            },
+            "fs": -1,
+            "hp": -1,
+            "atk": -1
+        },
+        "Stage Fright": {
+            "element": 4,
+            "tier": 0,
+            "signature": {
+                "name": "Memento Mori",
+                "1": "When the opponent's health frops below 25% HEALTH, they will be afflicted with CURSE and HEX fro 10 seconds",
+                "2": "Inflict a 30 seconds DOOM when defeated with a BLOCKBUSTER"
+            },
+            "fs": -1,
+            "hp": -1,
+            "atk": -1
+        },
+    },
     "Big Band": {
         "Epic Sax": {
             "element": 3,
