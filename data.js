@@ -979,21 +979,3 @@ var character = {
     // "Robo-Fortune": {},
     // "Fukua": {}
 };
-
-for (var girl in skull) {
-    for (var variant in skull[girl]) {
-        var card = document.createElement("div");
-        card.className = "card";
-        var moniker = document.createElement("h1");
-            moniker.className = "moniker";
-            moniker.innerHTML = girl + " - " + variant;
-        card.appendChild(moniker);
-        var signatures = document.createElement("signatures");
-            signatures.className = "signatures";
-            signatures.innerHTML = skull[girl][variant].signature.name;
-            signatures.innerHTML += "<br>" + skull[girl][variant].signature[1];
-            signatures.innerHTML += "<br>" + skull[girl][variant].signature[2];
-        card.appendChild(signatures);
-        document.body.appendChild(card);
-    }
-}
