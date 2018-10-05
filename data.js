@@ -87,6 +87,18 @@ var skull = {
             "fs": 7120,
             "hp": 22260,
             "atk": 3257
+        },
+        "Idol Threat": {
+        	"tier": 2,
+        	"element": 1,
+        	"signature": {
+        		"name": "",
+        		"1": "",
+        		"2": ""
+        	},
+        	"fs": -1,
+        	"hp": -1,
+        	"atk": -1
         }
     },
     "Cerebella": {
@@ -345,6 +357,18 @@ var skull = {
             "fs": 7120,
             "hp": 21000,
             "atk": 3468
+        },
+        "Star Crossed": {
+        	"tier": 2,
+        	"element": 1,
+        	"signature": {
+        		"name": "",
+        		"1": "",
+        		"2": ""
+        	},
+        	"fs": -1,
+        	"hp": -1,
+        	"atk": -1
         }
     },
     // "Ms. Fortune": {},
@@ -432,6 +456,18 @@ var skull = {
             "fs": 7795,
             "hp": 20200,
             "atk": 4261
+        },
+        "Grim Fan": {
+        	"tier": 2,
+        	"element": 1,
+        	"signature": {
+        		"name": "",
+        		"1": "",
+        		"2": ""
+        	},
+        	"fs": -1,
+        	"hp": -1,
+        	"atk": -1
         }
     },
     "Valentine": {
@@ -518,6 +554,18 @@ var skull = {
             "fs": 6690,
             "hp": 20996,
             "atk": 3047
+        },
+        "Pyro Technique": {
+        	"tier": 2,
+        	"element": 1,
+        	"signature": {
+        		"name": "",
+        		"1": "",
+        		"2": ""
+        	},
+        	"fs": -1,
+        	"hp": -1,
+        	"atk": -1
         }
     },
     "Double": {
@@ -655,6 +703,18 @@ var skull = {
             "hp": -1,
             "atk": -1
         },
+        "Necrobreaker": {
+        	"tier": 2,
+        	"element": 1,
+        	"signature": {
+        		"name": "",
+        		"1": "",
+        		"2": ""
+        	},
+        	"fs": -1,
+        	"hp": -1,
+        	"atk": -1
+        }
     },
     "Big Band": {
         "Epic Sax": {
@@ -740,6 +800,18 @@ var skull = {
             "fs": 7583,
             "hp": 26200,
             "atk": 3000
+        },
+        "Megasonic": {
+        	"tier": 2,
+        	"element": 1,
+        	"signature": {
+        		"name": "",
+        		"1": "",
+        		"2": ""
+        	},
+        	"fs": -1,
+        	"hp": -1,
+        	"atk": -1
         }
     },
     "Eliza": {
