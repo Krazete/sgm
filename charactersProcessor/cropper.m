@@ -8,11 +8,15 @@ if exist('crops', 'dir')
 end
 copyfile('raw', 'crops');
 
-% make mask directory
-if exist('masksRaw', 'dir')
-    rmdir('masksRaw', 's');
+% make mask directories
+if exist('masksShadowRaw', 'dir')
+    rmdir('masksShadowRaw', 's');
 end
-mkdir('masksRaw');
+mkdir('masksShadowRaw');
+if exist('masksColorRaw', 'dir')
+    rmdir('masksColorRaw', 's');
+end
+mkdir('masksColorRaw');
 
 % for each character folder
 cd('crops');
@@ -74,13 +78,18 @@ for n = 1:N
             deltaB = abs(im2(:, :, 3) - im1(:, :, 3));
             delta = (deltaR + deltaG + deltaB) / 3;
             if exist('deltas', 'var')
+                maxdelta = max(maxdelta, delta);
                 deltas = deltas + delta;
             else
+                maxdelta = delta;
                 deltas = delta;
             end
         end
-        maskRaw = 255 * backgrounds - deltas;
-        imwrite(maskRaw, ['../../masksRaw/', character.name, '.png']);
+%         deltas = max(deltas, maxdelta);
+        maskShadowRaw = 255 * backgrounds - deltas;
+        imwrite(maskShadowRaw, ['../../masksShadowRaw/', character.name, '.png']);
+        maskColorRaw = maxdelta .^ 2;
+        imwrite(maskColorRaw, ['../../masksColorRaw/', character.name, '.png']);
         cd('..');
     end
 end
