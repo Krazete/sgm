@@ -6,7 +6,7 @@ function init() {
     for (var girl in skull) {
         for (var variant in skull[girl]) {
             var lowerElement = elements[skull[girl][variant].element];
-            var properElement = lowerElement[0] + lowerElement.slice(1);
+            var properElement = lowerElement[0].toUpperCase() + lowerElement.slice(1);
             var card = document.createElement("div");
                 card.className = "card";
                 var element = document.createElement("img");
