@@ -1,0 +1,12 @@
+1. Lookup Character Statistics
+	Marquee Abilities
+	Variants
+		HP, Attack, Etc at different levels and different tiers
+	Sort with all in-game sort options
+2. Lookup Modifiers
+	Buffs
+	Event and Prize Fight modifiers
+3. Compare characters
+	rank attackers by optimal DPS
+	rank defenders by suboptimal DPS
+4. Filter by buff

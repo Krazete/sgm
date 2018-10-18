@@ -1,4 +1,4 @@
-var elements = ["fire", "water", "air", "light", "dark", "neutral"];
+var elements = ["fire", "water", "wind", "light", "dark", "neutral"];
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var ratings = ["F", "E", "D", "C", "B", "A", "S"];
 
