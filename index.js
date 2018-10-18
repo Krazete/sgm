@@ -5,18 +5,18 @@ function hypertext(text) {
 function init() {
     for (var girl in skull) {
         for (var variant in skull[girl]) {
+            var lowerElement = elements[skull[girl][variant].element];
+            var properElement = lowerElement[0] + lowerElement.slice(1);
             var card = document.createElement("div");
                 card.className = "card";
                 var element = document.createElement("img");
                     element.className = "element";
-                    element.src = "official/element/" + elements[skull[girl][variant].element] + ".png";
+                    element.src = "official/element/" + properElement + ".png";
                 card.appendChild(element);
                 var portraitFrame = document.createElement("div");
                     portraitFrame.className = "portrait-frame " + tiers[skull[girl][variant].tier];
                     var portraitMount = document.createElement("div");
-                        var element = elements[skull[girl][variant].element];
-                        var properElement = element[0] + element.slice(1);
-                        portraitMount.className = "portrait-mount " + properElement;
+                        portraitMount.className = "portrait-mount " + lowerElement;
                         var portrait = document.createElement("img");
                             portrait.className = "portrait";
                             portrait.src = "characters/" + girl.toLowerCase().replace(/\W/g, "") + "/" + variant.toLowerCase().replace(/\W/g, "") + ".png";
