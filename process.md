@@ -24,8 +24,8 @@
 1. Run AssetStudio and load the folder `sgm_decoded`.
 2. For corpus files, select `TextAsset` in the `Filter Type` menu.
 3. For image files, select `Sprite` and `Texture2D` in the `Filter Type` menu.
-4. For audio files, select `AudioClip` in the `Filter Type` menu.
-5. Click `Filtered assets` in the `Export` menu. Save to a new folder called `sgm_exports`.
+4. Select `Group by type` in the dropdown list under the `Options` menu.
+5. Click `Filtered assets` in the `Export` menu. Save to a new folder named `sgm_exports`.
 
 ## Extract Scripts
 1. Run Il2CppDumper and open `sgm_decoded/lib/x86/libil2cpp.so` and then `sgm_decoded/assets/bin/Data/Managed/Metadata/global-metadata.dat` when prompted. Select mode 3 and note the new `DummyDll` folder created in the same directory as the Il2CppDumper program.
@@ -43,5 +43,5 @@
 
 #### Notes
 - AssetStudio is used for extracting most files because it's easier to use and exports assets in a nicely structured way.
-- UABE is used for extracting scripts because it rebuilds scripts; AssetStudio pretty much only exports reference pointers.
+- UABE is used for extracting scripts because it rebuilds scripts and formats them as JSON; AssetStudio pretty much only exports reference pointers.
 - The palletized portraits don't appear to be within the APK.
