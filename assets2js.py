@@ -1,21 +1,25 @@
 import os
 import json
 import re
+from collections import namedtuple
 
-text_root = 'Extracted/TextAsset'
-mono_root = 'Extracted/MonoBehaviour'
+# 1. Dump TextAssets into corpus.
+# 2. Extract character identifiers from corpus.
+# 3. Dump MonoBehaviours into monolith.
+# 4. Using character identifiers, extract character info from monolith.
 
-corpus_name_pattern = re.compile('[A-Za-z]+_[BSGD]_V\d+')
-monolith_key_pattern = re.compile('split\d-(\d+)-Mono')
-monolith_name_pattern = re.compile('[A-Za-z]+_[BSGD]_[A-Za-z]+')
+text_root = 'sgm_exports/TextAsset'
+mono_root = 'sgm_exports/MonoBehaviour'
 
-corpus = {} # all valid TextAsset files
-corpus_char_keys = [] # character names captured from corpus keys
+corpus = {}
+monolith = {}
 
-monolith = {} # all valid MonoBehaviour files
-monolith_char_keys = [] # monolith keys of files matching char_name_pattern
+characters = []
+unvisited = []
 
 data = {}
+
+Character = namedtuple('Character', ('fighter', 'tier', 'vid', 'variant', 'vkey'))
 
 def for_each_JSON(directory, function, show_error=False):
     'Open all valid JSON files in a directory and apply a function to each one.'
@@ -30,48 +34,49 @@ def for_each_JSON(directory, function, show_error=False):
                     print('JSONDecodeError:', filename)
 
 def add_to_corpus(language, content):
-    'Dump TextAssets into corpus and record keys containing Variant names.'
+    'Dump TextAssets into corpus.'
     corpus.setdefault(language, content)
-    if language == 'en': # avoid needless repetition
-        for key in corpus[language]:
-            names = re.findall(corpus_name_pattern, key)
-            if names:
-                corpus_char_keys.append(key)
+
+def get_characters_from_corpus():
+    'Extract character identifiers from corpus.'
+    for key in corpus['en']:
+        matches = re.findall(corpus_name_pattern, key)
+        for match in matches:
+            fighter, tier, vid = match
+            variant = corpus['en'][key]
+            character = Character(fighter, tier, vid, variant, key)
+            characters.append(character)
+            unvisited.append(key)
+
+def get_monolith_name_pattern():
+    'Create a pattern based off of character identifiers from the corpus.'
+    fighters = set()
+    tiers = set()
+    for fighter, tier, vid, variant, vkey in characters:
+        fighters.add(fighter)
+        tiers.add(tier)
+    template = '({})_({})_([A-Za-z]+)-sharedassets'
+    fighter_pattern = '|'.join(fighters)
+    tier_pattern = '|'.join(tiers)
+    pattern = template.format(fighter_pattern, tier_pattern)
+    return pattern
 
 def add_to_monolith(stem, content):
     'Dump MonoBehaviours into monolith and record keys marking Variant info.'
     keys = re.findall(monolith_key_pattern, stem)
-    names = re.findall(monolith_name_pattern, stem)
+    matches = re.findall(monolith_name_pattern, stem)
     for key in keys: # keys should be atomic
         monolith.setdefault(key, content)
-        if names:
-            monolith_char_keys.append(key)
+        for match in matches:
+            for fighter, tier, vid, variant, vkey in characters:
+                if content['displayVariantName'] == vkey:
+                    unvisited.remove(vkey)
 
 def study_monolith_char(i):
     'Pretty print a monolith object to study its structure.'
     char_key = monolith_char_keys[i]
-    for base in monolith[char_key]:
-        for key in monolith[char_key][base]:
-            print('{:64}{}'.format(key, monolith[char_key][base][key]))
-
-def process_monolith_keys(raw_mono, is_root=True):
-    'Format keys of an monolith object to remove number and type.'
-    if isinstance(raw_mono, dict):
-        mono = {}
-        for raw_key in raw_mono:
-            key = raw_key.split()[-1]
-            value = process_monolith_keys(raw_mono[raw_key], False)
-            mono.setdefault(key, value)
-    elif isinstance(raw_mono, list):
-        mono = []
-        for item in raw_mono:
-            value = process_monolith_keys(item, False)
-            mono.append(value)
-    else:
-        mono = raw_mono
-    if is_root:
-        return mono['Base']
-    return mono
+    for key in monolith[char_key]:
+        print('{:32}{}'.format(key, monolith[char_key][key]))
 
 def build_datum(mono, language):
     corp = corpus[language]
@@ -80,35 +85,43 @@ def build_datum(mono, language):
         'name': corp[mono['displayVariantName']],
         'quote': corp[mono['variantQuote']],
         'tier': mono['initialTier'],
+        'element': mono['elementAffiliation'],
         'baseStats': mono['baseScaledValuesByTier'],
+        'tint': mono['tintColor'],
         'signature': mono['signatureAbility'],
         'super': mono['superAbility'],
-        'enabled': mono['m_Enabled'],
-        'tintColor': mono['tintColor']
+        'enabled': 1,
     }
     return key, value
 
 def build_data():
     for char_key in monolith_char_keys:
-        raw_mono = monolith[char_key]
-        mono = process_monolith_keys(raw_mono)
+        mono = monolith[char_key]
         for language in corpus:
             key, value = build_datum(mono, language)
             data.setdefault(language, {})
             data[language].setdefault(key, value)
     data_names = [data['en'][key]['name'] for key in data['en']]
-    for char_key in corpus_char_keys:
-        name = corpus['en'][char_key]
-        if name not in data_names:
-            value = {'enabled': 0}
-            for language in data:
-                data[language].setdefault(key, value)
+    for key in unvisited:
+        for language in data:
+            value = {
+                'name': corpus[language][key],
+                'enabled': 0
+            }
+            data[language].setdefault(key, value)
 
-for_each_JSON(text_root, add_to_corpus)
-for_each_JSON(mono_root, add_to_monolith)
+if __name__ == '__main__':
+    corpus_name_pattern = re.compile('Char_([A-Za-z]+)_(\w)_V(\d+)_Name')
+    for_each_JSON(text_root, add_to_corpus)
 
-# study_monolith_char(-1)
+    get_characters_from_corpus()
 
-build_data()
+    monolith_key_pattern = re.compile('split\d-(\d+)-Mono')
+    monolith_name_pattern = create_monolith_name_pattern()
+    for_each_JSON(mono_root, add_to_monolith)
 
-# corpus['en']['25029']
+    # study_monolith_char(-1)
+
+    build_data()
+
+    # monolith_char_keys
