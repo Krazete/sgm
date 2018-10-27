@@ -11,12 +11,12 @@
 1. Download [APKTool](https://ibotpeaches.github.io/Apktool/install/).
 2. Download [AssetStudio](https://github.com/Perfare/AssetStudio) and its [Requirements](https://github.com/Perfare/AssetStudio#requirements).
 3. Open Notepad and enter `apktool d sgm.apk -f -o sgm_decoded`. Save the file as `decode_sgm.bat`.
-4. Download [UnityAssetBundleExtractor](https://github.com/DerPopo/UABE) (UABE). Version 2.2 is probably best.
+4. Download [UnityAssetBundleExtractor](https://github.com/DerPopo/UABE) (UABE).
 5. Download [Visual C++ 2010](https://www.microsoft.com/en-us/download/details.aspx?id=14632) (required for UABE).
 6. Download [Il2CppDumper](https://github.com/Perfare/Il2CppDumper) (required for UABE).
 
 ## Decompile the APK
-1. Download the latest [APK](https://apkpure.com/skullgirls/com.autumn.skullgirls).
+1. Download the [APK](https://apkpure.com/skullgirls/com.autumn.skullgirls).
 2. Rename the APK to `sgm.apk` and move it into the folder where `decode_sgm.bat` is located.
 3. Run `decode_sgm.bat`.
 
@@ -28,7 +28,7 @@
 5. Click `Filtered assets` in the `Export` menu. Save to a new folder named `sgm_exports`.
 
 ## Extract Scripts
-1. Run Il2CppDumper and open `sgm_decoded/lib/x86/libil2cpp.so` and then `sgm_decoded/assets/bin/Data/Managed/Metadata/global-metadata.dat` when prompted. Select mode 3 and note the new `DummyDll` folder created in the same directory as the Il2CppDumper program.
+1. Run Il2CppDumper and open `sgm_decoded/lib/x86/libil2cpp.so` and then `sgm_decoded/assets/bin/Data/Managed/Metadata/global-metadata.dat` when prompted. Select mode 4 and note the new `DummyDll` folder created in the same directory as the Il2CppDumper program.
 2. Run UABE and open `sgm_decoded/assets/bin/data/sharedassets0.assets.split0`.
 3. Click `Get script information` in the `Tools` menu. Several windows will appear sequentially.
 4. Navigate to the `DummyDll` folder and select the file that appears (if no file appears, click Cancel). Repeat. Afterwards, there will be a window detailing errors; click OK.
@@ -45,3 +45,4 @@
 - AssetStudio is used for extracting most files because it's easier to use and exports assets in a nicely structured way.
 - UABE is used for extracting scripts because it rebuilds scripts and formats them as JSON; AssetStudio pretty much only exports reference pointers.
 - The palletized portraits don't appear to be within the APK.
+- It looks like Il2CppDumper (or UABE, idk) doesn't work properly with version 2.7.0 of the APK.
