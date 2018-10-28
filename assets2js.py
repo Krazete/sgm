@@ -129,17 +129,29 @@ def build_datum(mono, language):
     'Generate data for the database to be used on the website.'
     corp = corpus[language]
     key = mono['humanReadableGuid']
-    value = {
-        'name': corp[mono['displayVariantName']],
-        'quote': corp[mono['variantQuote']],
-        'tier': mono['initialTier'],
-        'element': mono['elementAffiliation'],
-        'baseStats': mono['baseScaledValuesByTier'],
-        'tint': mono['tintColor'],
-        'signature': mono['signatureAbility'],
-        'super': mono['superAbility'],
-        'enabled': 1,
-    }
+    value = {}
+    value.setdefault('name', corp[mono['displayVariantName']])
+    value.setdefault('name', corp[mono['displayVariantName']])
+    value.setdefault('quote', corp[mono['variantQuote']])
+    value.setdefault('tier', mono['initialTier'])
+    value.setdefault('element', mono['elementAffiliation'])
+    value.setdefault('baseStats', mono['baseScaledValuesByTier'])
+    value.setdefault('tint', mono['tintColor'])
+    value.setdefault('signature', [
+        {
+            'name': corpus[language][monolith[str(mono['signatureAbility']['m_PathID'])]['title']],
+            'ability': [
+                {
+                    'name': corpus[language][monolith[str(signature['m_PathID'])]['description']],
+                    'iterations': [monolith[str(iteration['m_PathID'])]['modifierSets']
+                        for iteration in monolith[str(signature['m_PathID'])]['tiers']
+                    ]
+                }
+            ]
+        } for signature in monolith[str(mono['signatureAbility']['m_PathID'])]['features']
+    ])
+    value.setdefault('super', mono['superAbility'])
+    value.setdefault('enabled', 1)
     return key, value
 
 if __name__ == '__main__':
@@ -154,9 +166,11 @@ if __name__ == '__main__':
 
     # study_monolith_char(12)
 
-    ignored_keys = ['skillTree', 'features', 'homeStage', 'blockbusters', 'specialMoves', 'evoCelebration_HitAction']
+    ignored_keys = ['skillTree', 'homeStage', 'blockbusters', 'specialMoves', 'evoCelebration_HitAction']
     bHDay_study = gather_monolith_references(monolith[monolith_char_keys[12]], ignored_keys)
     with open('sgm_exports/study.json', 'w') as fp:
         json.dump(bHDay_study, fp, indent=4, separators=(',', ': '))
 
     build_data()
+
+    # data['en']['bHDay']
