@@ -17,6 +17,7 @@ monolith = {}
 characters = []
 unvisited = []
 
+monolith_char_keys = []
 data = {}
 
 Character = namedtuple('Character', ('fighter', 'tier', 'vid', 'variant', 'vkey'))
@@ -71,6 +72,7 @@ def add_to_monolith(stem, content):
             for fighter, tier, vid, variant, vkey in characters:
                 if content['displayVariantName'] == vkey:
                     unvisited.remove(vkey)
+            monolith_char_keys.append(key)
 
 def study_monolith_char(i):
     'Pretty print a monolith object to study its structure.'
@@ -78,23 +80,36 @@ def study_monolith_char(i):
     for key in monolith[char_key]:
         print('{:32}{}'.format(key, monolith[char_key][key]))
 
-def build_datum(mono, language):
-    corp = corpus[language]
-    key = mono['humanReadableGuid']
-    value = {
-        'name': corp[mono['displayVariantName']],
-        'quote': corp[mono['variantQuote']],
-        'tier': mono['initialTier'],
-        'element': mono['elementAffiliation'],
-        'baseStats': mono['baseScaledValuesByTier'],
-        'tint': mono['tintColor'],
-        'signature': mono['signatureAbility'],
-        'super': mono['superAbility'],
-        'enabled': 1,
-    }
-    return key, value
+def gather_monolith_references(obj, ignored_keys=set(), is_root=True):
+    'Replace references with the objects they point to (for further study).'
+    global visited_monolith_keys
+    if is_root:
+        visited_monolith_keys = set()
+    if isinstance(obj, dict):
+        if 'm_PathID' in obj:
+            key = str(obj['m_PathID'])
+            if key not in visited_monolith_keys:
+                visited_monolith_keys.add(key)
+                try:
+                    value = gather_monolith_references(monolith[key], ignored_keys, False)
+                except KeyError:
+                    value = 'NOT FOUND'
+                return {key: value}
+            return {key: 'REPEATED'}
+        retobj = {}
+        for key in obj:
+            if key not in ignored_keys:
+                retobj.setdefault(key, gather_monolith_references(obj[key], ignored_keys, False))
+            else:
+                retobj.setdefault(key, 'IGNORED')
+        return retobj
+    elif isinstance(obj, list):
+        return [gather_monolith_references(item, ignored_keys, False) for item in obj]
+    else:
+        return obj
 
 def build_data():
+    'Generate database to be used on the website.'
     for char_key in monolith_char_keys:
         mono = monolith[char_key]
         for language in corpus:
@@ -110,6 +125,23 @@ def build_data():
             }
             data[language].setdefault(key, value)
 
+def build_datum(mono, language):
+    'Generate data for the database to be used on the website.'
+    corp = corpus[language]
+    key = mono['humanReadableGuid']
+    value = {
+        'name': corp[mono['displayVariantName']],
+        'quote': corp[mono['variantQuote']],
+        'tier': mono['initialTier'],
+        'element': mono['elementAffiliation'],
+        'baseStats': mono['baseScaledValuesByTier'],
+        'tint': mono['tintColor'],
+        'signature': mono['signatureAbility'],
+        'super': mono['superAbility'],
+        'enabled': 1,
+    }
+    return key, value
+
 if __name__ == '__main__':
     corpus_name_pattern = re.compile('Char_([A-Za-z]+)_(\w)_V(\d+)_Name')
     for_each_JSON(text_root, add_to_corpus)
@@ -117,11 +149,14 @@ if __name__ == '__main__':
     get_characters_from_corpus()
 
     monolith_key_pattern = re.compile('split\d-(\d+)-Mono')
-    monolith_name_pattern = create_monolith_name_pattern()
+    monolith_name_pattern = get_monolith_name_pattern()
     for_each_JSON(mono_root, add_to_monolith)
 
-    # study_monolith_char(-1)
+    # study_monolith_char(12)
+
+    ignored_keys = ['skillTree', 'features', 'homeStage', 'blockbusters', 'specialMoves', 'evoCelebration_HitAction']
+    bHDay_study = gather_monolith_references(monolith[monolith_char_keys[12]], ignored_keys)
+    with open('sgm_exports/study.json', 'w') as fp:
+        json.dump(bHDay_study, fp, indent=4, separators=(',', ': '))
 
     build_data()
-
-    # monolith_char_keys

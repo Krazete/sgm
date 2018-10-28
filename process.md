@@ -43,6 +43,6 @@
 
 #### Notes
 - AssetStudio is used for extracting most files because it's easier to use and exports assets in a nicely structured way.
-- UABE is used for extracting scripts because it rebuilds scripts and formats them as JSON; AssetStudio pretty much only exports reference pointers.
+- UABE is used for extracting scripts because AssetStudio always misses important scripts for some reason.
 - The palletized portraits don't appear to be within the APK.
 - It looks like Il2CppDumper (or UABE, idk) doesn't work properly with version 2.7.0 of the APK.
