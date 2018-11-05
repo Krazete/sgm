@@ -1,4 +1,4 @@
-import loader
+from preprocessing import file
 from collections import namedtuple
 import re
 
@@ -133,8 +133,8 @@ def build_data(monolith, mono_char_keys):
     return fighters, variants, corpus_keys
 
 if __name__ == '__main__':
-    monolith = loader.load('sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
-    corpus = loader.load('sgm_exports/TextAsset')
+    monolith = file.load('preprocessing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
+    corpus = file.load('preprocessing/sgm_exports/TextAsset')
 
     mono_char_keys = get_monolith_character_keys(monolith)
     corp_char_keys = get_corpus_character_keys(corpus)
@@ -144,11 +144,11 @@ if __name__ == '__main__':
     #     mono = monolith[key]
     #     study_dictionary(mono)
     #     monostudy = compile_mono(mono)
-    #     loader.save(monostudy, 'data/study.json')
+    #     file.save(monostudy, 'preprocessing/data/study.json')
 
     fighters, variants, corpus_keys = build_data(monolith, mono_char_keys)
 
     for language in corpus:
-        loader.save(corpus[language], 'data/{}.json'.format(language))
-    loader.save(fighters, 'data/fighter_data.json')
-    loader.save(variants, 'data/variant_data.json')
+        file.save(corpus[language], 'preprocessing/data/{}.json'.format(language))
+    file.save(fighters, 'preprocessing/data/fighter_data.json')
+    file.save(variants, 'preprocessing/data/variant_data.json')

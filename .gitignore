@@ -1,3 +1,4 @@
 __pycache__
-sgm_exports
-data
+preprocessing/sgm_exports
+preprocessing/data
+preprocessing/study.json
