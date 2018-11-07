@@ -1,0 +1,213 @@
+{
+    "sq": {
+        "death": "SuperDeath_Squigly",
+        "name": "Char_Squigly_Name",
+        "voice": {
+            "ja": "Credits_VA_SQI_JA",
+            "en": "Credits_VA_SQI_EN"
+        },
+        "characterability": {
+            "abilityIcon": {
+                "m_PathID": 24732,
+                "m_FileID": 0
+            },
+            "description": "Char_Squigly_CA_Desc",
+            "debug": 0,
+            "chargeTimeInFrames": 35,
+            "squiglyImage": {
+                "m_PathID": 15918,
+                "m_FileID": 0
+            },
+            "title": "Char_Squigly_CA_Title"
+        },
+        "loading": "Loading_Squigly"
+    },
+    "el": {
+        "death": "SuperDeath_Eliza",
+        "name": "Char_Eliza_Name",
+        "voice": {
+            "ja": "Credits_VA_ELI_JA",
+            "en": "Credits_VA_ELI_EN"
+        },
+        "characterability": {
+            "sekhmetIcon": {
+                "m_PathID": 24731,
+                "m_FileID": 0
+            },
+            "timeInSekhmet": 5,
+            "description": "Char_Eliza_CA_Desc",
+            "elizaImage": {
+                "m_PathID": 15470,
+                "m_FileID": 0
+            },
+            "title": "Char_Eliza_CA_Title"
+        },
+        "loading": "Loading_Eliza"
+    },
+    "pw": {
+        "death": "SuperDeath_Painwheel",
+        "name": "Char_Painwheel_Name",
+        "voice": {
+            "ja": "Credits_VA_PAI_JA",
+            "en": "Credits_VA_PAI_EN"
+        },
+        "characterability": {
+            "description": "Char_Painwheel_CA_Desc",
+            "title": "Char_Painwheel_CA_Title"
+        },
+        "loading": "Loading_Painwheel"
+    },
+    "fi": {
+        "death": "SuperDeath_Filia",
+        "name": "Char_Filia_Name",
+        "voice": {
+            "ja": "Credits_VA_FIL_JA",
+            "en": "Credits_VA_FIL_EN"
+        },
+        "characterability": {
+            "description": "Char_Filia_CA_Desc",
+            "title": "Char_Filia_CA_Title"
+        },
+        "loading": "Loading_Filia"
+    },
+    "pe": {
+        "death": "SuperDeath_Peacock",
+        "name": "Char_Peacock_Name",
+        "voice": {
+            "ja": "Credits_VA_PEA_JA",
+            "en": "Credits_VA_PEA_EN"
+        },
+        "characterability": {
+            "description": "Char_Peacock_CA_Desc",
+            "title": "Char_Peacock_CA_Title"
+        },
+        "loading": "Loading_Peacock"
+    },
+    "ce": {
+        "death": "SuperDeath_Cerebella",
+        "name": "Char_Cerebella_Name",
+        "voice": {
+            "ja": "Credits_VA_CER_JA",
+            "en": "Credits_VA_CER_EN"
+        },
+        "characterability": {
+            "description": "Char_Cerebella_CA_Desc",
+            "title": "Char_Cerebella_CA_Title"
+        },
+        "loading": "Loading_Cerebella"
+    },
+    "va": {
+        "death": "SuperDeath_Valentine",
+        "name": "Char_Valentine_Name",
+        "voice": {
+            "ja": "Credits_VA_VAL_JA",
+            "en": "Credits_VA_VAL_EN"
+        },
+        "characterability": {
+            "description": "Char_Valentine_CA2_Desc",
+            "redLifeMultiplier": 0.5,
+            "lifeStealPercentage": 0.75,
+            "title": "Char_Valentine_CA2_Title"
+        },
+        "loading": "Loading_Valentine"
+    },
+    "mf": {
+        "death": "SuperDeath_Msfortune",
+        "name": "Char_MsFortune_Name",
+        "voice": {
+            "ja": "Kana Hanazawa",
+            "en": "Kimlinh Tran"
+        },
+        "characterability": {
+            "description": "Char_MsFortune_CA_Desc",
+            "zoomImage": {
+                "m_PathID": 15624,
+                "m_FileID": 0
+            },
+            "recallImage": {
+                "m_PathID": 15622,
+                "m_FileID": 0
+            },
+            "msFortuneImage": {
+                "m_PathID": 15620,
+                "m_FileID": 0
+            },
+            "headbuttImage": {
+                "m_PathID": 15621,
+                "m_FileID": 0
+            },
+            "felineAllergiesImage": {
+                "m_PathID": 15623,
+                "m_FileID": 0
+            },
+            "title": "Char_MsFortune_CA_Title"
+        },
+        "loading": "Loading_MsFortune"
+    },
+    "do": {
+        "death": "SuperDeath_Double",
+        "name": "Char_Double_Name",
+        "voice": {
+            "ja": "Credits_VA_DBL_JA",
+            "en": "Credits_VA_DBL_EN"
+        },
+        "characterability": {
+            "linearElementChoice": 0,
+            "description": "Char_Double_CA_Desc",
+            "elementalBonus": 0.100000001,
+            "blockTime": 1,
+            "resetOnBlockstun": 1,
+            "title": "Char_Double_CA_Title"
+        },
+        "loading": "Loading_Double"
+    },
+    "bb": {
+        "death": "SuperDeath_Bigband",
+        "name": "Char_BigBand_Name",
+        "voice": {
+            "ja": "Credits_VA_BIG_JA",
+            "en": "Credits_VA_BIG_EN"
+        },
+        "characterability": {
+            "description": "Char_BigBand_CA_Desc",
+            "title": "Char_BigBand_CA_Title"
+        },
+        "loading": "Loading_BigBand"
+    },
+    "pa": {
+        "death": "SuperDeath_Parasoul",
+        "name": "Char_Parasoul_Name",
+        "voice": {
+            "ja": "Credits_VA_PAR_JA",
+            "en": "Credits_VA_PAR_EN"
+        },
+        "characterability": {
+            "description": "Char_Parasoul_CA_Desc",
+            "title": "Char_Parasoul_CA_Title"
+        },
+        "loading": "Loading_Parasoul"
+    },
+    "be": {
+        "death": "SuperDeath_Beowulf",
+        "name": "Char_Beowulf_Name",
+        "voice": {
+            "ja": "Credits_VA_BEO_JA",
+            "en": "Credits_VA_BEO_EN"
+        },
+        "characterability": {
+            "beowulfImage": {
+                "m_PathID": 15179,
+                "m_FileID": 0
+            },
+            "description": "Char_Beowulf_CA_Desc",
+            "hypeIcon": {
+                "m_PathID": 24730,
+                "m_FileID": 0
+            },
+            "debug": 1,
+            "title": "Char_Beowulf_CA_Title",
+            "hypeTime": 10
+        },
+        "loading": "Loading_Beowulf"
+    }
+}

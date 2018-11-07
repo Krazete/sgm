@@ -89,6 +89,10 @@ def build_data(monolith, mono_char_keys):
         key = str(ref['m_PathID'])
         return monolith[key]
 
+    def get_image(ref):
+        'Format and return the URL of an image reference object.'
+        return ref['resourcePath'].split("/")[-1]
+
     def record(key):
         'Record corpus key and return it.'
         corpus_keys.add(key)
@@ -100,12 +104,12 @@ def build_data(monolith, mono_char_keys):
         if f_key in fighters: # skip copies
             return
         f_value = {
-            'dataName': base['dataName'], # TODO: maybe delete
+            # 'dataName': base['dataName'],
             'name': record(base['displayName']),
-            'role': record(base['roleDescription']), # TODO: maybe delete
-            # 'loading': monoref(base['characterAbility'])['resourcePath'], # TODO: maybe delete
-            'death': base['superDeathTexture']['resourcePath'], # TODO: maybe delete
-            # 'portrait': monoref(base['hudPortraitPalettizedImage'])['resourcePath'], # TODO: maybe delete
+            # 'role': record(base['roleDescription']),
+            'loading': get_image(base['loadingTexture']),
+            'death': get_image(base['superDeathTexture']),
+            # 'portrait': get_image(monoref(base['hudPortraitPalettizedImage'])['dynamicSprite']),
             'voice': {
                 'en': base['englishVoArtist'],
                 'ja': base['japaneseVoArtist']
@@ -135,14 +139,14 @@ def build_data(monolith, mono_char_keys):
         v_value = {
             'base': f_key,
             'name': record(mono['displayVariantName']),
-            'role': record(mono['variantDescription']), # TODO: maybe delete
+            # 'role': record(mono['variantDescription']),
             'quote': record(mono['variantQuote']),
             'tier': mono['initialTier'],
             'element': mono['elementAffiliation'],
             'baseStats': mono['baseScaledValuesByTier'],
-            'palette': mono['paletteIndex'], # TODO: maybe delete
-            'paletteURL': monoref(mono['cardPortraitPalettizedImage'])['dynamicSprite']['resourcePath'], # TODO: maybe delete
-            'tint': mono['tintColor'], # TODO: maybe delete
+            # 'palette': mono['paletteIndex'],
+            # 'paletteURL': get_image(monoref(mono['cardPortraitPalettizedImage'])['dynamicSprite']),
+            'tint': mono['tintColor'],
             # 'signature': {
             #     'title': monoref(mono['signatureAbility'])['title'],
             #     'features': [monoref(feature) for feature in monoref(mono['signatureAbility'])['features']] # TODO: fix this
@@ -165,12 +169,12 @@ if __name__ == '__main__':
     mono_char_keys = get_monolith_character_keys(monolith)
     corp_char_keys = get_corpus_character_keys(corpus)
 
-    study_sample(monolith, mono_char_keys)
+    # study_sample(monolith, mono_char_keys)
 
     fighters, variants, corpus_keys = build_data(monolith, mono_char_keys)
 
     for language in corpus:
         primcorpus = {key: corpus[language][key] for key in corpus_keys if key in corpus[language]}
         file.save(primcorpus, 'data/{}.json'.format(language))
-    file.save(fighters, 'data/fighter_data.json')
-    file.save(variants, 'data/variant_data.json')
+    file.save(fighters, 'data/fighters.json')
+    file.save(variants, 'data/variants.json')
