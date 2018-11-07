@@ -1,3 +1,46 @@
+var corpus, fighters, variants;
+
+function loadLanguage() {
+    return window.localStorage.getItem("language") || "en";
+}
+
+function saveLanguage(language) {
+    window.localStorage.setItem("language", language);
+}
+
+function load(path) {
+    function request(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", path, true);
+        xhr.onload = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) { // xhr.onload
+                resolve(JSON.parse(this.response));
+    		}
+    	};
+        xhr.onerror = function() {
+            reject(new Error("Could not load '" + path + "'."));
+        };
+        xhr.send();
+    }
+    return new Promise(request);
+}
+
+function initialize() {
+    var language = loadLanguage();
+
+    function callback(responses) {
+        corpus = responses[0];
+        fighters = responses[1];
+        variants = responses[2];
+    }
+
+    Promise.all([
+        load("data/" + language + ".json"),
+        load("data/fighters.json"),
+        load("data/variants.json")
+    ]).then(callback);
+}
+
 function hypertext(text) {
     var span = document.createElement("span");
 }
@@ -38,4 +81,4 @@ function init() {
     }
 }
 
-window.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", initialize);
