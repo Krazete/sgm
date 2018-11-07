@@ -32,52 +32,46 @@ function initialize() {
         corpus = responses[0];
         fighters = responses[1];
         variants = responses[2];
+        init();
     }
 
     Promise.all([
-        load("data/" + language + ".json"),
-        load("data/fighters.json"),
-        load("data/variants.json")
+        load("./data/" + language + ".json"),
+        load("./data/fighters.json"),
+        load("./data/variants.json")
     ]).then(callback);
 }
 
-function hypertext(text) {
-    var span = document.createElement("span");
-}
-
 function init() {
-    for (var girl in skull) {
-        for (var variant in skull[girl]) {
-            var lowerElement = elements[skull[girl][variant].element];
-            var properElement = lowerElement[0].toUpperCase() + lowerElement.slice(1);
-            var card = document.createElement("div");
-                card.className = "card";
-                var element = document.createElement("img");
-                    element.className = "element";
-                    element.src = "official/element/" + properElement + ".png";
-                card.appendChild(element);
-                var portraitFrame = document.createElement("div");
-                    portraitFrame.className = "portrait-frame " + tiers[skull[girl][variant].tier];
-                    var portraitMount = document.createElement("div");
-                        portraitMount.className = "portrait-mount " + lowerElement;
-                        var portrait = document.createElement("img");
-                            portrait.className = "portrait";
-                            portrait.src = "characters/" + girl.toLowerCase().replace(/\W/g, "") + "/" + variant.toLowerCase().replace(/\W/g, "") + ".png";
-                        portraitMount.appendChild(portrait);
-                    portraitFrame.appendChild(portraitMount);
-                card.appendChild(portraitFrame);
-                var moniker = document.createElement("div");
-                    moniker.className = "moniker";
-                    moniker.innerHTML = girl + " - " + variant;
-                card.appendChild(moniker);
-                var signatures = document.createElement("signatures");
-                    signatures.className = "signatures";
-                    signatures.innerHTML = skull[girl][variant].signature.name;
-                    signatures.innerHTML += "<br>" + skull[girl][variant].signature[1];
-                    signatures.innerHTML += "<br>" + skull[girl][variant].signature[2];
-                card.appendChild(signatures);
-            document.body.appendChild(card);
+    for (var key in variants) {
+    	var variant = variants[key];
+    	var div = document.createElement("div");
+    	div.style.background = "rgba(" + 256*variant.tint.r + "," + 256*variant.tint.g + "," + 256*variant.tint.b + "," + variant.tint.a + ")";
+    	if (variant.name in corpus) {
+    		div.innerHTML += "<img src=\"../preprocessing/sgm_exports/Texture2D/" + fighters[variant.base].super + ".png\" width=\"100%\">";
+    		div.innerHTML += "<br>";
+    		div.innerHTML += corpus[fighters[variant.base].name] + " - " + corpus[variant.name];
+    		div.innerHTML += "<br>";
+    		div.innerHTML += corpus[variant.quote];
+            div.innerHTML += "<br>";
+            div.innerHTML += "<br>";
+            div.innerHTML += corpus[fighters[variant.base].characterability.title];
+            div.innerHTML += "<br>";
+            div.innerHTML += corpus[fighters[variant.base].characterability.description];
+            div.innerHTML += "<br>";
+            div.innerHTML += "<br>";
+            div.innerHTML += ["Neutral", "Fire", "Water", "Wind", "Dark", "Light"][variant.element];
+            div.innerHTML += "<br>";
+            div.innerHTML += ["Bronze", "Silver", "Gold", "Diamond"][variant.tier];
+            for (var stat of variant.baseStats) {
+                div.innerHTML += "<br>";
+                div.innerHTML += "HP: " + stat.lifebar + " / ATK: " + stat.attack;
+            }
         }
+        if (!variant.enabled) {
+            div.style.opacity = 0.5;
+        }
+    	document.body.appendChild(div);
     }
 }
 

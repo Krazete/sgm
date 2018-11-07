@@ -95,7 +95,11 @@ def build_data(monolith, mono_char_keys):
 
     def record(key):
         'Record corpus key and return it.'
-        corpus_keys.add(key)
+        if isinstance(key, dict):
+            for subkey in key:
+                record(key[subkey])
+        else:
+            corpus_keys.add(key)
         return key
 
     def build_fighter(mono):
@@ -107,7 +111,9 @@ def build_data(monolith, mono_char_keys):
             # 'dataName': base['dataName'],
             'name': record(base['displayName']),
             # 'role': record(base['roleDescription']),
+            'outline': get_image(base['gachaRewardOutline']),
             'loading': get_image(base['loadingTexture']),
+            'super': get_image(base['blockbusterTexture']),
             'death': get_image(base['superDeathTexture']),
             # 'portrait': get_image(monoref(base['hudPortraitPalettizedImage'])['dynamicSprite']),
             'voice': {
@@ -116,7 +122,7 @@ def build_data(monolith, mono_char_keys):
             },
             # 'blockbusters': [monoref(x) for x in base['blockbusters']], # TODO: add this in
             # 'specialmoves': {}, # TODO: add this in
-            'characterability': monoref(base['characterAbility']),
+            'characterability': record(monoref(base['characterAbility'])),
             # 'marquee': {
             #     'title': monoref(mono['superAbility'])['title'],
             #     'features': [monoref(feature) for feature in monoref(mono['superAbility'])['features']] # TODO: fix this

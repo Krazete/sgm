@@ -1,6 +1,8 @@
 {
     "sq": {
         "death": "SuperDeath_Squigly",
+        "outline": "SquiglyOutline",
+        "super": "super_squigly01",
         "name": "Char_Squigly_Name",
         "voice": {
             "ja": "Credits_VA_SQI_JA",
@@ -24,6 +26,8 @@
     },
     "el": {
         "death": "SuperDeath_Eliza",
+        "outline": "ElizaOutline",
+        "super": "super_eliza01",
         "name": "Char_Eliza_Name",
         "voice": {
             "ja": "Credits_VA_ELI_JA",
@@ -46,6 +50,8 @@
     },
     "pw": {
         "death": "SuperDeath_Painwheel",
+        "outline": "PainwheelOutline",
+        "super": "super_painwheel01",
         "name": "Char_Painwheel_Name",
         "voice": {
             "ja": "Credits_VA_PAI_JA",
@@ -59,6 +65,8 @@
     },
     "fi": {
         "death": "SuperDeath_Filia",
+        "outline": "FiliaOutline",
+        "super": "super_filia01",
         "name": "Char_Filia_Name",
         "voice": {
             "ja": "Credits_VA_FIL_JA",
@@ -72,6 +80,8 @@
     },
     "pe": {
         "death": "SuperDeath_Peacock",
+        "outline": "PeacockOutline",
+        "super": "super_peacock01",
         "name": "Char_Peacock_Name",
         "voice": {
             "ja": "Credits_VA_PEA_JA",
@@ -85,6 +95,8 @@
     },
     "ce": {
         "death": "SuperDeath_Cerebella",
+        "outline": "CerebellaOutline",
+        "super": "super_cerebella01",
         "name": "Char_Cerebella_Name",
         "voice": {
             "ja": "Credits_VA_CER_JA",
@@ -98,6 +110,8 @@
     },
     "va": {
         "death": "SuperDeath_Valentine",
+        "outline": "ValentineOutline",
+        "super": "super_valentine01",
         "name": "Char_Valentine_Name",
         "voice": {
             "ja": "Credits_VA_VAL_JA",
@@ -113,6 +127,8 @@
     },
     "mf": {
         "death": "SuperDeath_Msfortune",
+        "outline": "MsFortuneOutline",
+        "super": "super_msfortune01",
         "name": "Char_MsFortune_Name",
         "voice": {
             "ja": "Kana Hanazawa",
@@ -146,6 +162,8 @@
     },
     "do": {
         "death": "SuperDeath_Double",
+        "outline": "DoubleOutline",
+        "super": "super_double01",
         "name": "Char_Double_Name",
         "voice": {
             "ja": "Credits_VA_DBL_JA",
@@ -163,6 +181,8 @@
     },
     "bb": {
         "death": "SuperDeath_Bigband",
+        "outline": "BigBandOutline",
+        "super": "Super_BigBand",
         "name": "Char_BigBand_Name",
         "voice": {
             "ja": "Credits_VA_BIG_JA",
@@ -176,6 +196,8 @@
     },
     "pa": {
         "death": "SuperDeath_Parasoul",
+        "outline": "ParasoulOutline",
+        "super": "super_parasoul01",
         "name": "Char_Parasoul_Name",
         "voice": {
             "ja": "Credits_VA_PAR_JA",
@@ -189,6 +211,8 @@
     },
     "be": {
         "death": "SuperDeath_Beowulf",
+        "outline": "BeowulfOutline",
+        "super": "Super_Beowulf",
         "name": "Char_Beowulf_Name",
         "voice": {
             "ja": "Credits_VA_BEO_JA",
