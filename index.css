@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Cinema';
+    src: url('preprocessing/sgm_exports/Font/TBCinemaRGothic-M.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('preprocessing/sgm_exports/Font/Typo_DodamM.ttf') format('truetype');
+}
+
 body {
     position: relative;
     width: 100%;
@@ -6,6 +16,17 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 1fr;
+    font-family: 'Roboto';
+}
+
+.moniker {
+    font-family: 'Cinema';
+    font-variant: small-caps;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px #000;
 }
 
 .dock {
@@ -95,9 +116,6 @@ body {
     width: 140%;
     vertical-align: top;
     margin: -96% -20%;
-}
-.moniker {
-    background: #fee;
 }
 .signatures {
     background: #88f;

@@ -43,14 +43,28 @@ function initialize() {
 }
 
 function init() {
-    for (var key in variants) {
+    var keys = Object.keys(variants);
+    function fs(f) {
+        return (f.lifebar / 6 + f.attack) * 7 / 10;
+    }
+    keys.sort(function sortByHP(a, b) {
+        var varA = variants[a];
+        var varB = variants[b];
+        var A = varA.baseStats[varA.baseStats.length - 1];
+        var B = varB.baseStats[varB.baseStats.length - 1];
+        return fs(B) - fs(A);
+    });
+    for (var key of keys) {
     	var variant = variants[key];
     	var div = document.createElement("div");
     	div.style.background = "rgba(" + 256*variant.tint.r + "," + 256*variant.tint.g + "," + 256*variant.tint.b + "," + variant.tint.a + ")";
     	if (variant.name in corpus) {
     		div.innerHTML += "<img src=\"data/images/" + fighters[variant.base].super + ".png\" width=\"100%\">";
     		div.innerHTML += "<br>";
-    		div.innerHTML += corpus[fighters[variant.base].name] + " - " + corpus[variant.name];
+            var moniker = document.createElement("div");
+                moniker.className = "moniker";
+                moniker.innerHTML = corpus[fighters[variant.base].name] + "<br>" + corpus[variant.name];
+            div.appendChild(moniker);
     		div.innerHTML += "<br>";
     		div.innerHTML += corpus[variant.quote];
             div.innerHTML += "<br>";
