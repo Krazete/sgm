@@ -48,7 +48,7 @@ function init() {
     	var div = document.createElement("div");
     	div.style.background = "rgba(" + 256*variant.tint.r + "," + 256*variant.tint.g + "," + 256*variant.tint.b + "," + variant.tint.a + ")";
     	if (variant.name in corpus) {
-    		div.innerHTML += "<img src=\"../preprocessing/sgm_exports/Texture2D/" + fighters[variant.base].super + ".png\" width=\"100%\">";
+    		div.innerHTML += "<img src=\"data/images/" + fighters[variant.base].super + ".png\" width=\"100%\">";
     		div.innerHTML += "<br>";
     		div.innerHTML += corpus[fighters[variant.base].name] + " - " + corpus[variant.name];
     		div.innerHTML += "<br>";

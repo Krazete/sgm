@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from shutil import copyfile
 
 def iter_json_dir(directory, show_error=False):
     'Generate all valid JSON files in given directory.'
@@ -35,3 +36,11 @@ def save(obj, path, pretty=True):
             json.dump(obj, file, indent=4, separators=(',', ': '))
         else:
             json.dump(obj, file)
+
+def copy(src, dst, show_error=False):
+    'Copy a file.'
+    try:
+        copyfile(src, dst)
+    except FileNotFoundError:
+        if show_error:
+            print('FileNotFoundError:', src, ' to ', dst)

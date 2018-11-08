@@ -89,9 +89,13 @@ def build_data(monolith, mono_char_keys):
         key = str(ref['m_PathID'])
         return monolith[key]
 
-    def get_image(ref):
-        'Format and return the URL of an image reference object.'
-        return ref['resourcePath'].split("/")[-1]
+    def forge(ref):
+        'Return the name of an image reference and copy the image file.'
+        stem = ref['resourcePath'].split("/")[-1]
+        src = 'preprocessing/sgm_exports/Texture2D/{}.png'.format(stem)
+        dst = 'data/images/{}.png'.format(stem)
+        file.copy(src, dst)
+        return stem
 
     def record(key):
         'Record corpus key and return it.'
@@ -111,11 +115,11 @@ def build_data(monolith, mono_char_keys):
             # 'dataName': base['dataName'],
             'name': record(base['displayName']),
             # 'role': record(base['roleDescription']),
-            'outline': get_image(base['gachaRewardOutline']),
-            'loading': get_image(base['loadingTexture']),
-            'super': get_image(base['blockbusterTexture']),
-            'death': get_image(base['superDeathTexture']),
-            # 'portrait': get_image(monoref(base['hudPortraitPalettizedImage'])['dynamicSprite']),
+            'outline': forge(base['gachaRewardOutline']),
+            'loading': forge(base['loadingTexture']),
+            'super': forge(base['blockbusterTexture']),
+            'death': forge(base['superDeathTexture']),
+            # 'portrait': forge(monoref(base['hudPortraitPalettizedImage'])['dynamicSprite']),
             'voice': {
                 'en': base['englishVoArtist'],
                 'ja': base['japaneseVoArtist']
@@ -151,7 +155,7 @@ def build_data(monolith, mono_char_keys):
             'element': mono['elementAffiliation'],
             'baseStats': mono['baseScaledValuesByTier'],
             # 'palette': mono['paletteIndex'],
-            # 'paletteURL': get_image(monoref(mono['cardPortraitPalettizedImage'])['dynamicSprite']),
+            # 'paletteURL': forge(monoref(mono['cardPortraitPalettizedImage'])['dynamicSprite']),
             'tint': mono['tintColor'],
             # 'signature': {
             #     'title': monoref(mono['signatureAbility'])['title'],
