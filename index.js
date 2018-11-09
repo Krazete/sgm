@@ -78,10 +78,16 @@ function init() {
             div.innerHTML += "<br>";
             div.innerHTML += corpus[fighters[variant.base].marquee.title];
             div.innerHTML += "<br>";
-            div.innerHTML += corpus[fighters[variant.base].marquee.features[0].description].replace(/:.*?}/g, "}").formatUnicorn(fighters[variant.base].marquee.features[0].tiers[0]);
-            div.innerHTML += "<br>";
-            div.innerHTML += corpus[fighters[variant.base].marquee.features[1].description].replace(/:.*?}/g, "}").formatUnicorn(fighters[variant.base].marquee.features[1].tiers[0]);
-            div.innerHTML += "<br>";
+            if (fighters[variant.base].marquee.features.length > 0) {
+                div.innerHTML += corpus[fighters[variant.base].marquee.features[0].title];
+                div.innerHTML += "<br>";
+                div.innerHTML += corpus[fighters[variant.base].marquee.features[0].description].replace(/:.*?}/g, "}").formatUnicorn(fighters[variant.base].marquee.features[0].tiers[0]);
+                div.innerHTML += "<br>";
+                div.innerHTML += corpus[fighters[variant.base].marquee.features[1].title];
+                div.innerHTML += "<br>";
+                div.innerHTML += corpus[fighters[variant.base].marquee.features[1].description].replace(/:.*?}/g, "}").formatUnicorn(fighters[variant.base].marquee.features[1].tiers[0]);
+                div.innerHTML += "<br>";
+            }
             div.innerHTML += "<br>";
             div.innerHTML += corpus[variant.signature.title];
             div.innerHTML += "<br>";

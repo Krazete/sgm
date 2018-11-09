@@ -44,13 +44,21 @@ def compile_mono(obj, is_root=True):
     else:
         return obj
 
-def study_sample(monolith, mono_char_keys):
-    from random import sample
-    for key in sample(mono_char_keys, 1):
-        mono = monolith[key]
-        study_dictionary(mono)
-        monostudy = compile_mono(mono)
-        file.save(monostudy, 'preprocessing/study.json')
+def study_sample(monolith, mono_char_keys, hrid=None):
+    if hrid:
+        for key in mono_char_keys:
+            mono = monolith[key]
+            if hrid == mono['humanReadableGuid']:
+                study_dictionary(mono)
+                monostudy = compile_mono(mono)
+                file.save(monostudy, 'preprocessing/study.json')
+    else:
+        from random import sample
+        for key in sample(mono_char_keys, 1):
+            mono = monolith[key]
+            study_dictionary(mono)
+            monostudy = compile_mono(mono)
+            file.save(monostudy, 'preprocessing/study.json')
 
 # Get Character Keys
 
@@ -108,25 +116,25 @@ def build_data(monolith, mono_char_keys):
             corpus_keys.add(key)
         return key
 
-    def build_subs(m_substitutions):
-        subs = {}
-        for i, sub in enumerate(m_substitutions):
+    def build_subs(m_substitutions): # currently {KEY: (0, value)}; futurely [(key, value)]
+        subs = []
+        for sub in m_substitutions:
             key, value = sub.split('.')
             key = key.upper()
             value = value[0].lower() + value[1:]
-            subs.setdefault(key, (i, value))
+            subs.append((key, value))
         return subs
 
     def build_tier(m_feature, m_tier, subs):
-        tier = [None] * (max([subs[x][0] for x in subs]) + 1)
+        tier = [None] * len(subs)
         for obj in iter_object(m_tier):
-            if obj['id'].upper() in subs:
-                sub = subs[obj['id']]
-                tier[sub[0]] = obj[sub[1]]
+            for i, sub in enumerate(subs):
+                if obj['id'].upper() == sub[0]:
+                    tier[i] = obj[sub[1]]
         for obj in iter_object(m_feature, ['tiers']):
-            if obj['id'].upper() in subs:
-                sub = subs[obj['id']]
-                tier[sub[0]] = obj[sub[1]]
+            for i, sub in enumerate(subs):
+                if obj['id'].upper() == sub[0]:
+                    tier[i] = obj[sub[1]]
         return tier
 
     def iter_object(obj, skip_keys=[]):
@@ -150,16 +158,16 @@ def build_data(monolith, mono_char_keys):
         features = []
         for feature_ref in monoref(obj)['features']:
             m_feature = monoref(feature_ref)
+            subtitle = record(m_feature['title'])
             description = record(m_feature['description'])
             subs = build_subs(m_feature['substitutions'])
             tiers = []
-            if title == 'Char_BigB_SA_MasterBlock_Title':
-                print(title, m_feature)
             for tier_ref in m_feature['tiers']:
                 m_tier = monoref(tier_ref)
                 tier = build_tier(m_feature, m_tier, subs)
                 tiers.append(tier)
             features.append({
+                'title': subtitle, # TODO: only for marquee
                 'description': description,
                 'tiers': tiers
             })
@@ -235,7 +243,7 @@ if __name__ =='__main__':
     mono_char_keys = get_monolith_character_keys(monolith)
     corp_char_keys = get_corpus_character_keys(corpus)
 
-    # study_sample(monolith, mono_char_keys)
+    # study_sample(monolith, mono_char_keys, 'gJazz')
 
     fighters, variants, corpus_keys = build_data(monolith, mono_char_keys)
 
