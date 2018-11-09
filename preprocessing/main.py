@@ -87,7 +87,9 @@ def build_data(monolith, mono_char_keys):
     def monoref(ref):
         'Return the monolith object referenced to by the reference object.'
         key = str(ref['m_PathID'])
-        return monolith[key]
+        if key in monolith:
+            return monolith[key]
+        return {'title': None, 'features': []}
 
     def forge(ref):
         'Return the name of an image reference and copy the image file.'
@@ -105,6 +107,66 @@ def build_data(monolith, mono_char_keys):
         else:
             corpus_keys.add(key)
         return key
+
+    def build_subs(m_substitutions):
+        subs = {}
+        for i, sub in enumerate(m_substitutions):
+            key, value = sub.split('.')
+            key = key.upper()
+            value = value[0].lower() + value[1:]
+            subs.setdefault(key, (i, value))
+        return subs
+
+    def build_tier(m_feature, m_tier, subs):
+        tier = [None] * (max([subs[x][0] for x in subs]) + 1)
+        for obj in iter_object(m_tier):
+            if obj['id'].upper() in subs:
+                sub = subs[obj['id']]
+                tier[sub[0]] = obj[sub[1]]
+        for obj in iter_object(m_feature, ['tiers']):
+            if obj['id'].upper() in subs:
+                sub = subs[obj['id']]
+                tier[sub[0]] = obj[sub[1]]
+        return tier
+
+    def iter_object(obj, skip_keys=[]):
+        if isinstance(obj, dict):
+            if 'm_PathID' in obj:
+                obj = monoref(obj)
+            if 'id' in obj:
+                yield obj
+            for key in obj:
+                if key not in skip_keys:
+                    for subobj in iter_object(obj[key], skip_keys):
+                        yield subobj
+        elif isinstance(obj, list):
+            for item in obj:
+                for subobj in iter_object(item, skip_keys):
+                    yield subobj
+
+    def build_features(obj):
+        'Format an ability object.'
+        title = record(monoref(obj)['title'])
+        features = []
+        for feature_ref in monoref(obj)['features']:
+            m_feature = monoref(feature_ref)
+            description = record(m_feature['description'])
+            subs = build_subs(m_feature['substitutions'])
+            tiers = []
+            if title == 'Char_BigB_SA_MasterBlock_Title':
+                print(title, m_feature)
+            for tier_ref in m_feature['tiers']:
+                m_tier = monoref(tier_ref)
+                tier = build_tier(m_feature, m_tier, subs)
+                tiers.append(tier)
+            features.append({
+                'description': description,
+                'tiers': tiers
+            })
+        return {
+            'title': title,
+            'features': features
+        }
 
     def build_fighter(mono):
         base = monoref(mono['baseCharacter'])
@@ -127,10 +189,7 @@ def build_data(monolith, mono_char_keys):
             # 'blockbusters': [monoref(x) for x in base['blockbusters']], # TODO: add this in
             # 'specialmoves': {}, # TODO: add this in
             'characterability': record(monoref(base['characterAbility'])),
-            # 'marquee': {
-            #     'title': monoref(mono['superAbility'])['title'],
-            #     'features': [monoref(feature) for feature in monoref(mono['superAbility'])['features']] # TODO: fix this
-            # }
+            'marquee': build_features(mono['superAbility'])
         }
         fighters.setdefault(f_key, f_value)
 
@@ -157,10 +216,7 @@ def build_data(monolith, mono_char_keys):
             # 'palette': mono['paletteIndex'],
             # 'paletteURL': forge(monoref(mono['cardPortraitPalettizedImage'])['dynamicSprite']),
             'tint': mono['tintColor'],
-            # 'signature': {
-            #     'title': monoref(mono['signatureAbility'])['title'],
-            #     'features': [monoref(feature) for feature in monoref(mono['signatureAbility'])['features']] # TODO: fix this
-            # },
+            'signature': build_features(mono['signatureAbility']),
             'enabled': v_key == hrid
         }
         variants.setdefault(v_key, v_value)
@@ -172,9 +228,9 @@ def build_data(monolith, mono_char_keys):
 
     return fighters, variants, corpus_keys
 
-if __name__ == '__main__':
-    monolith = file.load('preprocessing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
-    corpus = file.load('preprocessing/sgm_exports/TextAsset')
+if __name__ =='__main__':
+    # monolith = file.load('preprocessing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
+    # corpus = file.load('preprocessing/sgm_exports/TextAsset')
 
     mono_char_keys = get_monolith_character_keys(monolith)
     corp_char_keys = get_corpus_character_keys(corpus)

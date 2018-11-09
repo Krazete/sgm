@@ -59,13 +59,15 @@ function init() {
     	var div = document.createElement("div");
     	div.style.background = "rgba(" + 256*variant.tint.r + "," + 256*variant.tint.g + "," + 256*variant.tint.b + "," + variant.tint.a + ")";
     	if (variant.name in corpus) {
-    		div.innerHTML += "<img src=\"data/images/" + fighters[variant.base].super + ".png\" width=\"100%\">";
-    		div.innerHTML += "<br>";
+    		div.innerHTML += "<img src=\"data/images/" + fighters[variant.base].loading + ".png\" width=\"100%\">";
+            div.innerHTML += "<br>";
+            div.innerHTML += "<br>";
             var moniker = document.createElement("div");
                 moniker.className = "moniker";
                 moniker.innerHTML = corpus[fighters[variant.base].name] + "<br>" + corpus[variant.name];
             div.appendChild(moniker);
-    		div.innerHTML += "<br>";
+            div.innerHTML += "<br>";
+            div.innerHTML += "<br>";
     		div.innerHTML += corpus[variant.quote];
             div.innerHTML += "<br>";
             div.innerHTML += "<br>";
@@ -74,9 +76,26 @@ function init() {
             div.innerHTML += corpus[fighters[variant.base].characterability.description];
             div.innerHTML += "<br>";
             div.innerHTML += "<br>";
+            div.innerHTML += corpus[fighters[variant.base].marquee.title];
+            div.innerHTML += "<br>";
+            div.innerHTML += corpus[fighters[variant.base].marquee.features[0].description].replace(/:.*?}/g, "}").formatUnicorn(fighters[variant.base].marquee.features[0].tiers[0]);
+            div.innerHTML += "<br>";
+            div.innerHTML += corpus[fighters[variant.base].marquee.features[1].description].replace(/:.*?}/g, "}").formatUnicorn(fighters[variant.base].marquee.features[1].tiers[0]);
+            div.innerHTML += "<br>";
+            div.innerHTML += "<br>";
+            div.innerHTML += corpus[variant.signature.title];
+            div.innerHTML += "<br>";
+            if (variant.signature.features.length > 0) {
+                div.innerHTML += corpus[variant.signature.features[0].description].replace(/:.*?}/g, "}").formatUnicorn(variant.signature.features[0].tiers[0]);
+                div.innerHTML += "<br>";
+                div.innerHTML += corpus[variant.signature.features[1].description].replace(/:.*?}/g, "}").formatUnicorn(variant.signature.features[1].tiers[0]);
+                div.innerHTML += "<br>";
+            }
+            div.innerHTML += "<br>";
             div.innerHTML += ["Neutral", "Fire", "Water", "Wind", "Dark", "Light"][variant.element];
             div.innerHTML += "<br>";
             div.innerHTML += ["Bronze", "Silver", "Gold", "Diamond"][variant.tier];
+            div.innerHTML += "<br>";
             for (var stat of variant.baseStats) {
                 div.innerHTML += "<br>";
                 div.innerHTML += "HP: " + stat.lifebar + " / ATK: " + stat.attack;
@@ -90,3 +109,23 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
+
+
+
+
+
+
+
+
+
+
+String.prototype.formatUnicorn = function() {
+    var e = this.toString();
+    if (!arguments.length)
+        return e;
+    var t = typeof arguments[0]
+      , n = "string" == t || "number" == t ? Array.prototype.slice.call(arguments) : arguments[0];
+    for (var i in n)
+        e = e.replace(new RegExp("\\{" + i + "\\}","gi"), n[i]);
+    return e
+}
