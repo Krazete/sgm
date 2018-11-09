@@ -61,7 +61,15 @@ function newString(string, className) {
 }
 
 function formatDescription(feature) {
-    return format(corpus[feature.description], feature.tiers[0]);
+    return format(fix(corpus[feature.description]), feature.tiers[0]);
+}
+
+function fix(string) {
+    var matches = string.match(/\W([A-Z]+)\W/g);
+    if (matches) {
+        console.log(matches);
+    }
+    return string;
 }
 
 function sort(method) {
@@ -119,7 +127,7 @@ function init() {
             div.appendChild(newString(corpus[variant.name], "variant"));
             div.appendChild(newString(corpus[variant.quote], "quote"));
             div.appendChild(newString(corpus[fighters[variant.base].characterability.title], "ability"));
-            div.appendChild(newString(corpus[fighters[variant.base].characterability.description], "description"));
+            div.appendChild(newString(fix(corpus[fighters[variant.base].characterability.description]), "description"));
 
             div.appendChild(newString(corpus[variant.signature.title], "ability"));
             for (var feature of variant.signature.features) {

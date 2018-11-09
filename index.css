@@ -30,7 +30,7 @@ body {
 }
 
 .fighter, .variant, .ability {
-    font-family: 'Cinema';
+    font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
     text-transform: uppercase;
 }
 .fighter, .variant {
