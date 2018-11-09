@@ -1,11 +1,19 @@
 var corpus, fighters, variants;
 
+var collection, order;
+
 function loadLanguage() {
     return window.localStorage.getItem("language") || "en";
 }
 
 function saveLanguage(language) {
     window.localStorage.setItem("language", language);
+}
+
+function changeLanguage(language) {
+    saveLanguage(language);
+    collection.innerHTML = "";
+    initialize();
 }
 
 function load(path) {
@@ -26,13 +34,16 @@ function load(path) {
 }
 
 function initialize() {
+    collection = document.getElementById("collection");
     var language = loadLanguage();
+    order = byFS;
 
     function callback(responses) {
         corpus = responses[0];
         fighters = responses[1];
         variants = responses[2];
         init();
+        sort(order);
     }
 
     Promise.all([
@@ -44,8 +55,8 @@ function initialize() {
 
 function newString(string, className) {
     var title = document.createElement("div");
-        title.className = className;
-        title.innerHTML = string;
+    title.className = className;
+    title.innerHTML = string;
     return title;
 }
 
@@ -53,21 +64,52 @@ function formatDescription(feature) {
     return format(corpus[feature.description], feature.tiers[0]);
 }
 
-function init() {
-    var keys = Object.keys(variants);
-    function fs(f) {
-        return (f.lifebar / 6 + f.attack) * 7 / 10;
+function sort(method) {
+    var sorted = Object.keys(variants).sort(method);
+    for (var id of sorted) {
+        var card = document.getElementById(id);
+        collection.appendChild(card);
     }
-    keys.sort(function sortByHP(a, b) {
-        var varA = variants[a];
-        var varB = variants[b];
-        var A = varA.baseStats[varA.baseStats.length - 1];
-        var B = varB.baseStats[varB.baseStats.length - 1];
-        return fs(B) - fs(A);
-    });
-    for (var key of keys) {
+}
+
+function fs(f) {
+    return (f.lifebar / 6 + f.attack) * 7 / 10;
+}
+
+function byFS(a, b) {
+    var varA = variants[a];
+    var varB = variants[b];
+    var A = varA.baseStats[varA.baseStats.length - 1];
+    var B = varB.baseStats[varB.baseStats.length - 1];
+    return fs(B) - fs(A);
+}
+function byHP(a, b) {
+    var varA = variants[a];
+    var varB = variants[b];
+    var A = varA.baseStats[varA.baseStats.length - 1];
+    var B = varB.baseStats[varB.baseStats.length - 1];
+    return B.lifebar - A.lifebar;
+}
+function byAttack(a, b) {
+    var varA = variants[a];
+    var varB = variants[b];
+    var A = varA.baseStats[varA.baseStats.length - 1];
+    var B = varB.baseStats[varB.baseStats.length - 1];
+    return B.attack - A.attack;
+}
+function byAlpha(a, b) {
+    var varA = variants[a];
+    var varB = variants[b];
+    var A = fighters[varA.base].name + varA.name;
+    var B = fighters[varB.base].name + varB.name;
+    return A > B ? 1 : A < B ? -1 : 0;
+}
+
+function init() {
+    for (var key in variants) {
     	var variant = variants[key];
     	var div = document.createElement("div");
+        div.id = key;
     	div.style.background = "rgba(" + 256*variant.tint.r + "," + 256*variant.tint.g + "," + 256*variant.tint.b + "," + variant.tint.a + ")";
     	if (variant.name in corpus) {
     		div.innerHTML += "<img src=\"data/image/" + fighters[variant.base].loading + ".png\" width=\"100%\">";
@@ -94,15 +136,18 @@ function init() {
             div.innerHTML += "<br>";
             div.appendChild(newString(["Bronze", "Silver", "Gold", "Diamond"][variant.tier], "ability"));
             div.appendChild(newString(["Neutral", "Fire", "Water", "Wind", "Dark", "Light"][variant.element], "ability"));
+            div.innerHTML += "<br>";
+            div.appendChild(newString("Base Stats", "ability"));
+            var i = variant.tier;
             for (var stat of variant.baseStats) {
-                div.innerHTML += "<br>";
-                div.innerHTML += "HP: " + stat.lifebar + " / ATK: " + stat.attack;
+                div.appendChild(newString("[" + ["Bronze", "Silver", "Gold", "Diamond"][i] + "] HP: " + stat.lifebar + " / ATK: " + stat.attack, "description"));
+                i++;
             }
         }
         if (!variant.enabled) {
             div.style.opacity = 0.5;
         }
-    	document.body.appendChild(div);
+    	collection.appendChild(div);
     }
 }
 
@@ -118,7 +163,6 @@ document.addEventListener("DOMContentLoaded", initialize);
 
 function format(template, substitutions) {
     var matches = template.match(/{.*?}/g);
-    console.log(matches);
     var string = template;
     for (var match of matches) {
         var parts = match.slice(1, -1).split(":");
@@ -130,7 +174,6 @@ function format(template, substitutions) {
             substitute = Math.floor(substitute);
             substitute += "%";
         }
-        console.log(match, parts);
         string = string.replace(match, substitute);
     }
     return string;
