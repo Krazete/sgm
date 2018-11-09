@@ -199,6 +199,8 @@ def build_data(monolith, mono_char_keys):
             'characterability': record(monoref(base['characterAbility'])),
             'marquee': build_features(mono['superAbility'])
         }
+        if f_value['marquee']['title'] == None:
+            return
         fighters.setdefault(f_key, f_value)
 
     def build_variant(mono):
@@ -237,13 +239,13 @@ def build_data(monolith, mono_char_keys):
     return fighters, variants, corpus_keys
 
 if __name__ =='__main__':
-    # monolith = file.load('preprocessing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
-    # corpus = file.load('preprocessing/sgm_exports/TextAsset')
+    monolith = file.load('preprocessing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
+    corpus = file.load('preprocessing/sgm_exports/TextAsset')
 
     mono_char_keys = get_monolith_character_keys(monolith)
     corp_char_keys = get_corpus_character_keys(corpus)
 
-    # study_sample(monolith, mono_char_keys, 'gJazz')
+    # study_sample(monolith, mono_char_keys, 'oMai')
 
     fighters, variants, corpus_keys = build_data(monolith, mono_char_keys)
 

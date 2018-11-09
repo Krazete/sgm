@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Cinema';
-    src: url('preprocessing/sgm_exports/Font/TBCinemaRGothic-M.ttf') format('truetype');
+    src: url('data/font/TBCinemaRGothic-M.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('preprocessing/sgm_exports/Font/Typo_DodamM.ttf') format('truetype');
+    src: url('data/font/RobotoCondensed-Regular.ttf') format('truetype');
 }
 
 body {
@@ -16,18 +16,41 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
-    font-family: 'Roboto';
 }
 
-.moniker {
+.fighter, .variant, .ability {
     font-family: 'Cinema';
-    font-variant: small-caps;
-    font-size: 24px;
     text-transform: uppercase;
-    text-align: center;
+}
+.fighter, .variant {
     color: #fff;
     text-shadow: 1px 1px #000;
+    text-align: center;
 }
+.fighter, .ability {
+    font-size: 24px;
+}
+.variant {
+    font-size: 32px;
+}
+
+.quote, .description {
+    font-family: 'Roboto';
+}
+.quote {
+    text-align: center;
+}
+.quote:before {
+    content: '\201C';
+}
+.quote:after {
+    content: '\201D';
+}
+
+
+
+
+
 
 .dock {
     background: #000;

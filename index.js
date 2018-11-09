@@ -13,7 +13,7 @@ function load(path) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", path, true);
         xhr.onload = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) { // xhr.onload
+            if (xhr.readyState == 4 && xhr.status == 200) {
                 resolve(JSON.parse(this.response));
     		}
     	};
@@ -42,6 +42,17 @@ function initialize() {
     ]).then(callback);
 }
 
+function newString(string, className) {
+    var title = document.createElement("div");
+        title.className = className;
+        title.innerHTML = string;
+    return title;
+}
+
+function formatDescription(feature) {
+    return format(corpus[feature.description], feature.tiers[0]);
+}
+
 function init() {
     var keys = Object.keys(variants);
     function fs(f) {
@@ -59,49 +70,30 @@ function init() {
     	var div = document.createElement("div");
     	div.style.background = "rgba(" + 256*variant.tint.r + "," + 256*variant.tint.g + "," + 256*variant.tint.b + "," + variant.tint.a + ")";
     	if (variant.name in corpus) {
-    		div.innerHTML += "<img src=\"data/images/" + fighters[variant.base].loading + ".png\" width=\"100%\">";
+    		div.innerHTML += "<img src=\"data/image/" + fighters[variant.base].loading + ".png\" width=\"100%\">";
             div.innerHTML += "<br>";
             div.innerHTML += "<br>";
-            var moniker = document.createElement("div");
-                moniker.className = "moniker";
-                moniker.innerHTML = corpus[fighters[variant.base].name] + "<br>" + corpus[variant.name];
-            div.appendChild(moniker);
-            div.innerHTML += "<br>";
-            div.innerHTML += "<br>";
-    		div.innerHTML += corpus[variant.quote];
-            div.innerHTML += "<br>";
-            div.innerHTML += "<br>";
-            div.innerHTML += corpus[fighters[variant.base].characterability.title];
-            div.innerHTML += "<br>";
-            div.innerHTML += corpus[fighters[variant.base].characterability.description];
-            div.innerHTML += "<br>";
-            div.innerHTML += "<br>";
-            div.innerHTML += corpus[fighters[variant.base].marquee.title];
-            div.innerHTML += "<br>";
-            if (fighters[variant.base].marquee.features.length > 0) {
-                div.innerHTML += corpus[fighters[variant.base].marquee.features[0].title];
-                div.innerHTML += "<br>";
-                div.innerHTML += corpus[fighters[variant.base].marquee.features[0].description].replace(/:.*?}/g, "}").formatUnicorn(fighters[variant.base].marquee.features[0].tiers[0]);
-                div.innerHTML += "<br>";
-                div.innerHTML += corpus[fighters[variant.base].marquee.features[1].title];
-                div.innerHTML += "<br>";
-                div.innerHTML += corpus[fighters[variant.base].marquee.features[1].description].replace(/:.*?}/g, "}").formatUnicorn(fighters[variant.base].marquee.features[1].tiers[0]);
-                div.innerHTML += "<br>";
+            div.appendChild(newString(corpus[fighters[variant.base].name], "fighter"));
+            div.appendChild(newString(corpus[variant.name], "variant"));
+            div.appendChild(newString(corpus[variant.quote], "quote"));
+            div.appendChild(newString(corpus[fighters[variant.base].characterability.title], "ability"));
+            div.appendChild(newString(corpus[fighters[variant.base].characterability.description], "description"));
+
+            div.appendChild(newString(corpus[variant.signature.title], "ability"));
+            for (var feature of variant.signature.features) {
+                div.appendChild(newString(formatDescription(feature), "description"));
             }
-            div.innerHTML += "<br>";
-            div.innerHTML += corpus[variant.signature.title];
-            div.innerHTML += "<br>";
-            if (variant.signature.features.length > 0) {
-                div.innerHTML += corpus[variant.signature.features[0].description].replace(/:.*?}/g, "}").formatUnicorn(variant.signature.features[0].tiers[0]);
-                div.innerHTML += "<br>";
-                div.innerHTML += corpus[variant.signature.features[1].description].replace(/:.*?}/g, "}").formatUnicorn(variant.signature.features[1].tiers[0]);
-                div.innerHTML += "<br>";
+
+            div.appendChild(newString(corpus[fighters[variant.base].marquee.title], "ability"));
+            for (var feature of fighters[variant.base].marquee.features) {
+                div.appendChild(newString([
+                    corpus[feature.title], formatDescription(feature)
+                ].join(" - "), "description"));
             }
+
             div.innerHTML += "<br>";
-            div.innerHTML += ["Neutral", "Fire", "Water", "Wind", "Dark", "Light"][variant.element];
-            div.innerHTML += "<br>";
-            div.innerHTML += ["Bronze", "Silver", "Gold", "Diamond"][variant.tier];
-            div.innerHTML += "<br>";
+            div.appendChild(newString(["Bronze", "Silver", "Gold", "Diamond"][variant.tier], "ability"));
+            div.appendChild(newString(["Neutral", "Fire", "Water", "Wind", "Dark", "Light"][variant.element], "ability"));
             for (var stat of variant.baseStats) {
                 div.innerHTML += "<br>";
                 div.innerHTML += "HP: " + stat.lifebar + " / ATK: " + stat.attack;
@@ -124,14 +116,22 @@ document.addEventListener("DOMContentLoaded", initialize);
 
 
 
-
-String.prototype.formatUnicorn = function() {
-    var e = this.toString();
-    if (!arguments.length)
-        return e;
-    var t = typeof arguments[0]
-      , n = "string" == t || "number" == t ? Array.prototype.slice.call(arguments) : arguments[0];
-    for (var i in n)
-        e = e.replace(new RegExp("\\{" + i + "\\}","gi"), n[i]);
-    return e
+function format(template, substitutions) {
+    var matches = template.match(/{.*?}/g);
+    console.log(matches);
+    var string = template;
+    for (var match of matches) {
+        var parts = match.slice(1, -1).split(":");
+        var substitute = Math.abs(substitutions[parseInt(parts[0])]);
+        if (parts.length > 1) {
+            if (parts[1].includes("%")) {
+                substitute *= 100;
+            }
+            substitute = Math.floor(substitute);
+            substitute += "%";
+        }
+        console.log(match, parts);
+        string = string.replace(match, substitute);
+    }
+    return string;
 }
