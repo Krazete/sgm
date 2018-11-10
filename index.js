@@ -1,6 +1,6 @@
 var corpus, fighters, variants;
 
-var collection, order, sa, ma;
+var collection, order, sa, ma, red;
 
 function loadLanguage() {
     return window.localStorage.getItem("language") || "en";
@@ -41,6 +41,7 @@ function initialize() {
     collection = document.getElementById("collection");
     sa = document.getElementById("sa");
     ma = document.getElementById("ma");
+    red = document.getElementById("red");
     var language = loadLanguage();
     if (typeof order == "undefined") {
         order = byAlpha;
@@ -50,7 +51,7 @@ function initialize() {
         corpus = responses[0];
         fighters = responses[1];
         variants = responses[2];
-        init(sa.value, ma.value);
+        init(sa.value, ma.value, red.checked);
         sort(order);
     }
 
@@ -114,7 +115,7 @@ function byAlpha(a, b) {
     return A > B ? 1 : A < B ? -1 : 0;
 }
 
-function init(sa, ma) {
+function init(sa, ma, sig_only) {
     for (var key in variants) {
     	var variant = variants[key];
     	var div = document.createElement("div");
@@ -135,21 +136,22 @@ function init(sa, ma) {
             div.appendChild(newString(corpus[fighters[variant.base].name], "fighter"));
             div.appendChild(newString(corpus[variant.name], "variant"));
             div.appendChild(newString(corpus[variant.quote], "quote"));
-            div.appendChild(newString(corpus[fighters[variant.base].characterability.title], "ability"));
-            div.appendChild(newString(corpus[fighters[variant.base].characterability.description], "description"));
-
+            if (!sig_only) {
+                div.appendChild(newString(corpus[fighters[variant.base].characterability.title], "ability"));
+                div.appendChild(newString(corpus[fighters[variant.base].characterability.description], "description"));
+            }
             div.appendChild(newString(corpus[variant.signature.title], "ability"));
             for (var feature of variant.signature.features) {
                 div.appendChild(newString(formatDescription(feature, sa, "sa"), "description"));
             }
-
-            div.appendChild(newString(corpus[fighters[variant.base].marquee.title], "ability"));
-            for (var feature of fighters[variant.base].marquee.features) {
-                div.appendChild(newString([
-                    "<b>" + corpus[feature.title] + "</b>", formatDescription(feature, ma, "ma")
-                ].join(" - "), "description"));
+            if (!sig_only) {
+                div.appendChild(newString(corpus[fighters[variant.base].marquee.title], "ability"));
+                for (var feature of fighters[variant.base].marquee.features) {
+                    div.appendChild(newString([
+                        "<b>" + corpus[feature.title] + "</b>", formatDescription(feature, ma, "ma")
+                    ].join(" - "), "description"));
+                }
             }
-
             div.innerHTML += "<br>";
             div.appendChild(newString(["Bronze", "Silver", "Gold", "Diamond"][variant.tier], "ability"));
             div.appendChild(newString(["Neutral", "Fire", "Water", "Wind", "Dark", "Light"][variant.element], "ability"));
