@@ -17,11 +17,6 @@
 </head>
 <body>
     <div id="menu">
-        <button onclick="sort(byFS)">Sort by Fighter Score</button>
-        <button onclick="sort(byHP)">Sort by HP</button>
-        <button onclick="sort(byAttack)">Sort by Attack</button>
-        <button onclick="sort(byAlpha)">Sort Alphabetically</button>
-        <span>-</span>
         <button onclick="changeLanguage('de')">German</button>
         <button onclick="changeLanguage('en')">English</button>
         <button onclick="changeLanguage('es')">Spanish</button>
@@ -30,12 +25,18 @@
         <button onclick="changeLanguage('ko')">Korean</button>
         <button onclick="changeLanguage('pt-br')">Portuguese</button>
         <button onclick="changeLanguage('ru')">Russian</button>
+        <br>
+        <button onclick="sort(byFS)">Sort by Fighter Score</button>
+        <button onclick="sort(byHP)">Sort by HP</button>
+        <button onclick="sort(byAttack)">Sort by Attack</button>
+        <button onclick="sort(byAlpha)">Sort Alphabetically</button>
     </div>
     <div id="collection">
     </div>
     <div id="foot">
-        <label class="description">Signature Level<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(this.value,ma.value);sort(order)"></label>
-        <label class="description">Marquee Level<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,this.value);sort(order)"></label>
+        <label class="description">Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(this.value,ma.value);sort(order)"></label>
+        <br>
+        <label class="description">Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,this.value);sort(order)"></label>
     </div>
 </body>
 </html>

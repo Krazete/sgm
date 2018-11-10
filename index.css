@@ -21,7 +21,8 @@ body {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background: rgba(255, 255, 255, 0.5);
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.8);
     z-index: 1;
 }
 #menu {
