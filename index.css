@@ -103,3 +103,16 @@ body {
 .quote:after {
     content: '\201D';
 }
+
+.number {
+    animation: highlight-fade 2s;
+}
+
+@keyframes highlight-fade {
+    0% {
+        background: white;
+    }
+    100% {
+        background: transparent;
+    }
+}
