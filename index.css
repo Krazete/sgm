@@ -18,6 +18,10 @@ body {
 #menu {
     position: -webkit-sticky;
     position: sticky;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    left: 0;
     top: 0;
     z-index: 1;
 }
@@ -26,7 +30,39 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
-    max-width: 100%;
+}
+@media (max-width: 1250px) {
+    #collection {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 1000px) {
+    #collection {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 750px) {
+    #collection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    #collection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.card {
+}
+
+.loadingBack {
+    background: black;
+    width: 100%;
+    text-align: center;
+}
+.loading {
+    width: 100%;
+    max-width: 500px;
 }
 
 .fighter, .variant, .ability {
@@ -34,8 +70,8 @@ body {
     text-transform: uppercase;
 }
 .fighter, .variant {
-    color: #fff;
-    text-shadow: 1px 1px #000;
+    color: white;
+    text-shadow: 1px 1px black;
     text-align: center;
 }
 .fighter, .ability {
@@ -56,17 +92,4 @@ body {
 }
 .quote:after {
     content: '\201D';
-}
-
-
-
-
-
-
-.dock {
-    background: #000;
-}
-
-.display {
-    background: #123;
 }

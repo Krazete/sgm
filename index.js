@@ -36,7 +36,9 @@ function load(path) {
 function initialize() {
     collection = document.getElementById("collection");
     var language = loadLanguage();
-    order = byFS;
+    if (typeof order == "undefined") {
+        order = byAlpha;
+    }
 
     function callback(responses) {
         corpus = responses[0];
@@ -61,15 +63,7 @@ function newString(string, className) {
 }
 
 function formatDescription(feature) {
-    return format(fix(corpus[feature.description]), feature.tiers[0]);
-}
-
-function fix(string) {
-    var matches = string.match(/\W([A-Z]+)\W/g);
-    if (matches) {
-        console.log(matches);
-    }
-    return string;
+    return format(corpus[feature.description], feature.tiers.slice(-1)[0]);
 }
 
 function sort(method) {
@@ -78,6 +72,7 @@ function sort(method) {
         var card = document.getElementById(id);
         collection.appendChild(card);
     }
+    order = method;
 }
 
 function fs(f) {
@@ -117,17 +112,25 @@ function init() {
     for (var key in variants) {
     	var variant = variants[key];
     	var div = document.createElement("div");
+        div.className = "card";
         div.id = key;
-    	div.style.background = "rgba(" + 256*variant.tint.r + "," + 256*variant.tint.g + "," + 256*variant.tint.b + "," + variant.tint.a + ")";
+    	div.style.background = "rgba(" +
+            Math.floor(256 * variant.tint.r) + "," +
+            Math.floor(256 * variant.tint.g) + "," +
+            Math.floor(256 * variant.tint.b) + "," +
+            variant.tint.a +
+        ")";
     	if (variant.name in corpus) {
-    		div.innerHTML += "<img src=\"data/image/" + fighters[variant.base].loading + ".png\" width=\"100%\">";
-            div.innerHTML += "<br>";
-            div.innerHTML += "<br>";
+            var loadingBack = div.appendChild(document.createElement("div"));
+            loadingBack.className = "loadingBack";
+            var loading = loadingBack.appendChild(document.createElement("img"));
+            loading.className = "loading";
+            loading.src = "data/image/" + fighters[variant.base].loading + ".png";
             div.appendChild(newString(corpus[fighters[variant.base].name], "fighter"));
             div.appendChild(newString(corpus[variant.name], "variant"));
             div.appendChild(newString(corpus[variant.quote], "quote"));
             div.appendChild(newString(corpus[fighters[variant.base].characterability.title], "ability"));
-            div.appendChild(newString(fix(corpus[fighters[variant.base].characterability.description]), "description"));
+            div.appendChild(newString(corpus[fighters[variant.base].characterability.description], "description"));
 
             div.appendChild(newString(corpus[variant.signature.title], "ability"));
             for (var feature of variant.signature.features) {
@@ -137,7 +140,7 @@ function init() {
             div.appendChild(newString(corpus[fighters[variant.base].marquee.title], "ability"));
             for (var feature of fighters[variant.base].marquee.features) {
                 div.appendChild(newString([
-                    corpus[feature.title], formatDescription(feature)
+                    "<b>" + corpus[feature.title] + "</b>", formatDescription(feature)
                 ].join(" - "), "description"));
             }
 
