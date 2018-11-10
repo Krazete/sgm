@@ -183,12 +183,12 @@ function format(template, substitutions, id) {
     var string = template;
     for (var match of matches) {
         var parts = match.slice(1, -1).split(":");
-        var substitute = Math.abs(substitutions[parseInt(parts[0])]);
+        var substitute = Math.abs(substitutions[Math.round(parts[0])]);
         if (parts.length > 1) {
             if (parts[1].includes("%")) {
                 substitute *= 100;
             }
-            substitute = Math.floor(substitute);
+            substitute = Math.round(substitute);
             substitute += "%";
         }
         string = string.replace(match, "<span id=\"" + id + "\">" + substitute + "</span>");
