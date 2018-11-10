@@ -1,6 +1,6 @@
 var corpus, fighters, variants;
 
-var collection, order;
+var collection, order, sa, ma;
 
 function loadLanguage() {
     return window.localStorage.getItem("language") || "en";
@@ -10,9 +10,13 @@ function saveLanguage(language) {
     window.localStorage.setItem("language", language);
 }
 
+function resetCollection() {
+    collection.innerHTML = "";
+}
+
 function changeLanguage(language) {
     saveLanguage(language);
-    collection.innerHTML = "";
+    resetCollection();
     initialize();
 }
 
@@ -35,6 +39,8 @@ function load(path) {
 
 function initialize() {
     collection = document.getElementById("collection");
+    sa = document.getElementById("sa");
+    ma = document.getElementById("ma");
     var language = loadLanguage();
     if (typeof order == "undefined") {
         order = byAlpha;
@@ -44,7 +50,7 @@ function initialize() {
         corpus = responses[0];
         fighters = responses[1];
         variants = responses[2];
-        init();
+        init(sa.value, ma.value);
         sort(order);
     }
 
@@ -62,8 +68,8 @@ function newString(string, className) {
     return title;
 }
 
-function formatDescription(feature) {
-    return format(corpus[feature.description], feature.tiers.slice(-1)[0]);
+function formatDescription(feature, i, id) {
+    return format(corpus[feature.description], feature.tiers.slice(i)[0], id);
 }
 
 function sort(method) {
@@ -108,7 +114,7 @@ function byAlpha(a, b) {
     return A > B ? 1 : A < B ? -1 : 0;
 }
 
-function init() {
+function init(sa, ma) {
     for (var key in variants) {
     	var variant = variants[key];
     	var div = document.createElement("div");
@@ -134,13 +140,13 @@ function init() {
 
             div.appendChild(newString(corpus[variant.signature.title], "ability"));
             for (var feature of variant.signature.features) {
-                div.appendChild(newString(formatDescription(feature), "description"));
+                div.appendChild(newString(formatDescription(feature, sa, "sa"), "description"));
             }
 
             div.appendChild(newString(corpus[fighters[variant.base].marquee.title], "ability"));
             for (var feature of fighters[variant.base].marquee.features) {
                 div.appendChild(newString([
-                    "<b>" + corpus[feature.title] + "</b>", formatDescription(feature)
+                    "<b>" + corpus[feature.title] + "</b>", formatDescription(feature, ma, "ma")
                 ].join(" - "), "description"));
             }
 
@@ -172,7 +178,7 @@ document.addEventListener("DOMContentLoaded", initialize);
 
 
 
-function format(template, substitutions) {
+function format(template, substitutions, id) {
     var matches = template.match(/{.*?}/g);
     var string = template;
     for (var match of matches) {
@@ -185,7 +191,7 @@ function format(template, substitutions) {
             substitute = Math.floor(substitute);
             substitute += "%";
         }
-        string = string.replace(match, substitute);
+        string = string.replace(match, "<span id=\"" + id + "\">" + substitute + "</span>");
     }
     return string;
 }

@@ -15,15 +15,22 @@ body {
     margin: 0;
 }
 
-#menu {
+#menu, #foot {
     position: -webkit-sticky;
     position: sticky;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+#menu {
     left: 0;
     top: 0;
-    z-index: 1;
+}
+#foot {
+    right: 0;
+    bottom: 0;
 }
 
 #collection {
@@ -83,6 +90,8 @@ body {
 
 .quote, .description {
     font-family: 'Roboto';
+    text-indent: -12px;
+    padding-left: 12px;
 }
 .quote {
     text-align: center;
