@@ -34,6 +34,21 @@ body {
     bottom: 0;
 }
 
+#element, #mastery input, #element input {
+    display: none;
+}
+
+.icon {
+    width: 24px;
+    opacity: 0.5;
+    filter: saturate(0);
+    cursor: pointer;
+}
+input:checked + .icon {
+    opacity: 1;
+    filter: drop-shadow(0 0 3px #fd0);
+}
+
 #collection {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -61,6 +76,9 @@ body {
 }
 
 .card {
+}
+.hidden {
+    display: none;
 }
 
 .loadingBack {

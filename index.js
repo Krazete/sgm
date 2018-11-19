@@ -1,11 +1,14 @@
 var corpus, fighters, variants;
 var collection, order, sa, ma, red;
+var mastery, element;
 
 function initialize() {
     collection = document.getElementById("collection");
     sa = document.getElementById("sa");
     ma = document.getElementById("ma");
     red = document.getElementById("red");
+    mastery = document.getElementById("mastery");
+    element = document.getElementById("element");
     var language = loadLanguage();
     if (typeof order == "undefined") {
         order = byAlpha;
@@ -17,6 +20,8 @@ function initialize() {
         variants = responses[2];
         init(sa.value, ma.value, red.checked);
         sort(order);
+        toggle(mastery, "blah");
+        toggle(element, "blah");
     }
 
     Promise.all([
@@ -65,7 +70,7 @@ function init(sa, ma, sig_only) {
     for (var key in variants) {
     	var variant = variants[key];
     	var div = document.createElement("div");
-        div.className = "card";
+        div.className = "card " + variant.base + " " + variant.element;
         div.id = key;
     	div.style.background = "rgba(" +
             Math.floor(256 * variant.tint.r) + "," +
@@ -185,6 +190,41 @@ function byFS(a, b) {
 
 function fightScore(f) {
     return (f.lifebar / 6 + f.attack) * 7 / 10;
+}
+
+function toggle(e, blah) {
+    var noneChecked = true;
+    var hideList = new Set();
+    var option = e.id;
+    var labels = e.children;
+    var cards = document.getElementsByClassName("card");
+
+    for (var label of labels) {
+        var input = label.children[0];
+        if (input.checked) {
+            noneChecked = false;
+        }
+        else {
+            hideList.add(input.value);
+        }
+    }
+    if (noneChecked) {
+        hideList.clear();
+    }
+
+    for (var card of cards) {
+        var hid = false;
+        for (var fid of hideList) {
+            if (card.classList.contains(fid)) {
+                card.classList.add("hidden");
+                hid = true;
+                break;
+            }
+        }
+        if (!hid && typeof blah == "undefined") {
+            card.classList.remove("hidden");
+        }
+    }
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
