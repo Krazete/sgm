@@ -33,7 +33,7 @@
         <button onclick="sort(byAttack)">Sort by ♢ Attack</button>
         <button onclick="sort(byAlpha)">Sort Alphabetically</button>
         <br>
-        <div id="element">
+        <div id="element"><!-- doesn't really work right -->
             <label><input type="checkbox" value="0" onclick="toggle(this.parentNode.parentNode)"><img class="icon" alt="Neutral" src="official/element/Neutral.png"></label>
             <label><input type="checkbox" value="1" onclick="toggle(this.parentNode.parentNode)"><img class="icon" alt="Fire" src="official/element/Fire.png"></label>
             <label><input type="checkbox" value="2" onclick="toggle(this.parentNode.parentNode)"><img class="icon" alt="Water" src="official/element/Water.png"></label>
@@ -59,10 +59,10 @@
     <div id="collection">
     </div>
     <div id="foot">
-        <label class="description">Show Signatures Only<input type="checkbox" id="red" onclick="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);toggle(element);"></label>
+        <label class="description">Show Signatures Only<input type="checkbox" id="red" onclick="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></label>
         <br>
-        <label class="description">Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);toggle(element);"></label>
-        <label class="description">Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);toggle(element);"></label>
+        <label class="description">Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></label>
+        <label class="description">Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></label>
     </div>
 </body>
 </html>
