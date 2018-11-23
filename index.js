@@ -93,7 +93,7 @@ function init(sa, ma, sig_only) {
                 "aqua",
                 "lime",
                 "fuchsia",
-                "yellow"
+                "khaki"
             ][variant.element] + ", transparent 64px)";
             div.appendChild(newStringDiv(corpus[fighters[variant.base].name], "fighter"));
             div.appendChild(newStringDiv(corpus[variant.name], "variant"));
