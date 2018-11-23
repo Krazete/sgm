@@ -81,15 +81,26 @@ input:checked + .icon {
     display: none;
 }
 
+.portrait {
+    position: relative;
+    height: 128px;
+    margin: auto;
+    margin-top: -128px;
+    padding: 0 auto 0 auto;
+    display: block;
+}
+
 .loadingBack {
+    height: 128px;
     background: black;
-    width: 100%;
-    text-align: center;
 }
 .loading {
-    width: 100%;
+    height: 128px;
     max-width: 500px;
+    margin: auto;
+    display: block;
 }
+
 
 .fighter, .variant, .ability {
     font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';

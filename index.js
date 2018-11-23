@@ -84,6 +84,17 @@ function init(sa, ma, sig_only) {
             var loading = loadingBack.appendChild(document.createElement("img"));
             loading.className = "loading";
             loading.src = "data/image/" + fighters[variant.base].loading + ".png";
+            var portrait = loadingBack.appendChild(document.createElement("img"));
+            portrait.className = "portrait";
+            portrait.src = "character/" + variant.base + "/" + key + ".png";
+            portrait.style.background = "radial-gradient(circle at bottom, " + [
+                "white",
+                "orangered",
+                "aqua",
+                "lime",
+                "fuchsia",
+                "yellow"
+            ][variant.element] + ", transparent 64px)";
             div.appendChild(newStringDiv(corpus[fighters[variant.base].name], "fighter"));
             div.appendChild(newStringDiv(corpus[variant.name], "variant"));
             div.appendChild(newStringDiv(corpus[variant.quote], "quote"));

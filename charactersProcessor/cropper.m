@@ -3,23 +3,23 @@
 % with images for each character variant
 
 % copy raw directory
-if exist('crops', 'dir')
-    rmdir('crops', 's');
+if exist('crop', 'dir')
+    rmdir('crop', 's');
 end
-copyfile('raw', 'crops');
+copyfile('raw', 'crop');
 
 % make mask directories
-if exist('masksShadowRaw', 'dir')
-    rmdir('masksShadowRaw', 's');
+if exist('shadowRaw', 'dir')
+    rmdir('shadowRaw', 's');
 end
-mkdir('masksShadowRaw');
-if exist('masksColorRaw', 'dir')
-    rmdir('masksColorRaw', 's');
+mkdir('shadowRaw');
+if exist('maskRaw', 'dir')
+    rmdir('maskRaw', 's');
 end
-mkdir('masksColorRaw');
+mkdir('maskRaw');
 
 % for each character folder
-cd('crops');
+cd('crop');
 characters = dir();
 N = length(characters);
 for n = 1:N
@@ -39,11 +39,7 @@ for n = 1:N
             if contains(variant.name, '.png')
                 % crop image
                 im = imread(variant.name);
-                crop = im(21:213, 621:757, :);
-                % erase info bar
-                crop(1:53, 1:137, 1) = 24;
-                crop(1:53, 1:137, 2) = 42;
-                crop(1:53, 1:137, 3) = 67;
+                crop = im(1:195, 483:654, :);
                 % overwrite image
                 imwrite(crop, variant.name);
                 
@@ -87,9 +83,9 @@ for n = 1:N
         end
 %         deltas = max(deltas, maxdelta);
         maskShadowRaw = 255 * backgrounds - deltas;
-        imwrite(maskShadowRaw, ['../../masksShadowRaw/', character.name, '.png']);
+        imwrite(maskShadowRaw, ['../../shadowRaw/', character.name, '.png']);
         maskColorRaw = maxdelta .^ 2;
-        imwrite(maskColorRaw, ['../../masksColorRaw/', character.name, '.png']);
+        imwrite(maskColorRaw, ['../../maskRaw/', character.name, '.png']);
         cd('..');
     end
 end
