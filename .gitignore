@@ -2,6 +2,7 @@ __pycache__
 preprocessing/sgm_exports
 preprocessing/study.json
 charactersProcessor/*/bb/gJazz.png
+charactersProcessor/*/bb/hMetal.png
 charactersProcessor/*/bb/mSonic.png
 charactersProcessor/*/bb/rEvil.png
 charactersProcessor/*/be/dBrawl.png
@@ -11,6 +12,7 @@ charactersProcessor/*/be/wWarr.png
 charactersProcessor/*/ce/bFreeze.png
 charactersProcessor/*/ce/hHanded.png
 charactersProcessor/*/do/fColor.png
+charactersProcessor/*/do/jBreaker.png
 charactersProcessor/*/do/rBlight_0.png
 charactersProcessor/*/do/rBlight_1.png
 charactersProcessor/*/do/rBlight_2.png
