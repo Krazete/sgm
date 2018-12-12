@@ -76,6 +76,7 @@ input:checked + .icon {
 }
 
 .card {
+    background: gray;
 }
 .hidden {
     display: none;
