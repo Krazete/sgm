@@ -60,7 +60,7 @@ Note for the following that Variant files are the ones that have `_B_`, `_S_`, `
 4. Manually update all Variant files, including the path ID embedded in the filename.
 5. Use old Variant files to create new files for new Variants that didn't exist in 2.6.1.
 
-The directory `preprocessing/__FAKE_Variant_MonoBehaviour` and the script `faker.py` within this repository were created to ease this process, recreating only the data which is necessary for the website.
+The directory `preprocessing/__FAKE_Variant_MonoBehaviour` and the script `preprocessing/faker.py` within this repository were created to ease this process, recreating only the data which is necessary for the website. The `sgm_exports` folder must be within the `preprocessing` folder to run `faker.py`.
 
 This removes the APK 2.6.1 steps, but still requires the DevX steps to update the `faker.py` data.
 
