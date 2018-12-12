@@ -185,10 +185,10 @@ def build_data(monolith, mono_char_keys):
             # 'dataName': base['dataName'],
             'name': record(base['displayName']),
             # 'role': record(base['roleDescription']),
-            'outline': forge(base['gachaRewardOutline']),
-            'loading': forge(base['loadingTexture']),
-            'super': forge(base['blockbusterTexture']),
-            'death': forge(base['superDeathTexture']),
+            # 'outline': forge(base['gachaRewardOutline']),
+            # 'loading': forge(base['loadingTexture']),
+            # 'super': forge(base['blockbusterTexture']),
+            # 'death': forge(base['superDeathTexture']),
             'voice': {
                 'en': base['englishVoArtist'],
                 'ja': base['japaneseVoArtist']
@@ -215,6 +215,7 @@ def build_data(monolith, mono_char_keys):
         if v_key in variants: # skip copies (except '' or 'dummy')
             return
         v_value = {
+            # 'enabled': v_key == hrid,
             'base': f_key,
             'name': record(mono['displayVariantName']),
             # 'role': record(mono['variantDescription']),
@@ -222,8 +223,7 @@ def build_data(monolith, mono_char_keys):
             'tier': mono['initialTier'],
             'element': mono['elementAffiliation'],
             'baseStats': mono['baseScaledValuesByTier'],
-            'signature': build_features(mono['signatureAbility']),
-            'enabled': v_key == hrid
+            'signature': build_features(mono['signatureAbility'])
         }
         variants.setdefault(v_key, v_value)
 
