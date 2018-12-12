@@ -11,9 +11,9 @@ def iter_json_dir(directory, show_error=False):
                 stem = os.path.splitext(filename)[0]
                 content = json.load(file)
                 yield stem, content
-            except json.JSONDecodeError:
+            except Exception as message:
                 if show_error:
-                    print('JSONDecodeError:', filename)
+                    print('Error opening {}: {}.'.format(filename, message))
 
 def load(directory, key_pattern=None):
     'Build python object from JSON file directory.'

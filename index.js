@@ -72,12 +72,6 @@ function init(sa, ma, sig_only) {
     	var div = document.createElement("div");
         div.className = "card " + variant.base + " " + variant.element;
         div.id = key;
-    	div.style.background = "rgba(" +
-            Math.floor(256 * variant.tint.r) + "," +
-            Math.floor(256 * variant.tint.g) + "," +
-            Math.floor(256 * variant.tint.b) + "," +
-            variant.tint.a +
-        ")";
     	if (variant.name in corpus) {
             var loadingBack = div.appendChild(document.createElement("div"));
             loadingBack.className = "loadingBack";

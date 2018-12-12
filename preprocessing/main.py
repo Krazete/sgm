@@ -189,7 +189,6 @@ def build_data(monolith, mono_char_keys):
             'loading': forge(base['loadingTexture']),
             'super': forge(base['blockbusterTexture']),
             'death': forge(base['superDeathTexture']),
-            # 'portrait': forge(monoref(base['hudPortraitPalettizedImage'])['dynamicSprite']),
             'voice': {
                 'en': base['englishVoArtist'],
                 'ja': base['japaneseVoArtist']
@@ -223,9 +222,6 @@ def build_data(monolith, mono_char_keys):
             'tier': mono['initialTier'],
             'element': mono['elementAffiliation'],
             'baseStats': mono['baseScaledValuesByTier'],
-            # 'palette': mono['paletteIndex'],
-            # 'paletteURL': forge(monoref(mono['cardPortraitPalettizedImage'])['dynamicSprite']),
-            'tint': mono['tintColor'],
             'signature': build_features(mono['signatureAbility']),
             'enabled': v_key == hrid
         }
