@@ -1,0 +1,29 @@
+{
+    "guid": "a63ee91b-e724-42fd-a89a-444509783b07",
+    "humanReadableGuid": "lHope",
+    "displayVariantName": "Char_Valentine_G_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Healing",
+    "variantQuote": "Variant_Description_Valentine_Hope",
+    "paletteIndex": 7,
+    "initialTier": 2,
+    "elementAffiliation": 5,
+    "baseCharacter": {
+        "m_PathID": 17780
+    },
+    "signatureAbility": {
+        "m_PathID": 22889
+    },
+    "superAbility": {
+        "m_PathID": 27094
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 218,
+            "lifebar": 1940
+        },
+        {
+            "attack": 392,
+            "lifebar": 3492
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "guid": "70ab2241-94da-4603-9a1c-56f0bfafc6a3",
+    "humanReadableGuid": "sSalt",
+    "displayVariantName": "Char_Parasoul_D_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_Parasoul_SummerSalt",
+    "paletteIndex": 19,
+    "initialTier": 3,
+    "elementAffiliation": 5,
+    "baseCharacter": {
+        "m_PathID": 17503
+    },
+    "signatureAbility": {
+        "m_PathID": 22868
+    },
+    "superAbility": {
+        "m_PathID": 27042
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 706,
+            "lifebar": 3335
+        }
+    ]
+}

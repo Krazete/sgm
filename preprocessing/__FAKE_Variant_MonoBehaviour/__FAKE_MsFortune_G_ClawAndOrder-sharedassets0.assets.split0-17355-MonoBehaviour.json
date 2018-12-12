@@ -1,0 +1,29 @@
+{
+    "guid": "1389d7a2-dd82-464d-8d0c-c08c13ad1d35",
+    "humanReadableGuid": "claw",
+    "displayVariantName": "Char_MsFortune_G_V3_Name",
+    "variantDescription": "<DESCRIPTION>",
+    "variantQuote": "Variant_Description_MsFortune_ClawAndOrder",
+    "paletteIndex": 10,
+    "initialTier": 2,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 17361
+    },
+    "signatureAbility": {
+        "m_PathID": 22869
+    },
+    "superAbility": {
+        "m_PathID": 27011
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 362,
+            "lifebar": 1544
+        },
+        {
+            "attack": 652,
+            "lifebar": 2779
+        }
+    ]
+}

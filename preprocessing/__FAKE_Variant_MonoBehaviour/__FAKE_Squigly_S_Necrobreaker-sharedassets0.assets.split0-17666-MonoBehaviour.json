@@ -1,0 +1,33 @@
+{
+    "guid": "10c463d2-1dd4-4dc2-8be3-fbef4e6fb7d4",
+    "humanReadableGuid": "necroB",
+    "displayVariantName": "Char_Squigly_S_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Survival",
+    "variantQuote": "Variant_Description_Squigly_Necrobreaker",
+    "paletteIndex": 21,
+    "initialTier": 1,
+    "elementAffiliation": 5,
+    "baseCharacter": {
+        "m_PathID": 17691
+    },
+    "signatureAbility": {
+        "m_PathID": 22874
+    },
+    "superAbility": {
+        "m_PathID": 27080
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 104,
+            "lifebar": 1040
+        },
+        {
+            "attack": 187,
+            "lifebar": 1872
+        },
+        {
+            "attack": 337,
+            "lifebar": 3370
+        }
+    ]
+}

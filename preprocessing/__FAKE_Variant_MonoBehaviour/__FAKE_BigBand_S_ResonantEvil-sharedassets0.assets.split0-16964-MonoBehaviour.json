@@ -1,0 +1,33 @@
+{
+    "guid": "915ffa38-5655-4e49-96dc-f90c81ae4f2e",
+    "humanReadableGuid": "rEvil",
+    "displayVariantName": "Char_BigBand_S_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Counter",
+    "variantQuote": "Variant_Description_BigBand_Resonant",
+    "paletteIndex": 8,
+    "initialTier": 1,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 16937
+    },
+    "signatureAbility": {
+        "m_PathID": 26912
+    },
+    "superAbility": {
+        "m_PathID": 26908
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 104,
+            "lifebar": 1155
+        },
+        {
+            "attack": 187,
+            "lifebar": 2079
+        },
+        {
+            "attack": 337,
+            "lifebar": 3742
+        }
+    ]
+}

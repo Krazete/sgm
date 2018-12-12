@@ -1,0 +1,29 @@
+{
+    "guid": "ed6490f4-bde5-4eda-a4a0-b3520077c149",
+    "humanReadableGuid": "sKill",
+    "displayVariantName": "Char_Valentine_G_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_Valentine_Silent",
+    "paletteIndex": 8,
+    "initialTier": 2,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 17780
+    },
+    "signatureAbility": {
+        "m_PathID": 22884
+    },
+    "superAbility": {
+        "m_PathID": 27094
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 256,
+            "lifebar": 1764
+        },
+        {
+            "attack": 461,
+            "lifebar": 3175
+        }
+    ]
+}

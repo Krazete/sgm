@@ -1,0 +1,25 @@
+{
+    "guid": "6cf803a9-1669-435e-b568-5c57bc7d84e1",
+    "humanReadableGuid": "lCrafted",
+    "displayVariantName": "Char_Squigly_D_V1_Name",
+    "variantDescription": "Variant_Role_Generic_DOT",
+    "variantQuote": "Variant_Description_Squigly_LoveCrafted",
+    "paletteIndex": 14,
+    "initialTier": 3,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 17691
+    },
+    "signatureAbility": {
+        "m_PathID": 22877
+    },
+    "superAbility": {
+        "m_PathID": 27080
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 617,
+            "lifebar": 3753
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "guid": "049db147-98d6-4fe8-9965-31bf07dca235",
+    "humanReadableGuid": "pDark",
+    "displayVariantName": "Char_MsFortune_S_V2_Name",
+    "variantDescription": "<DESCRIPTION>",
+    "variantQuote": "Variant_Description_MsFortune_PurrfectDark",
+    "paletteIndex": 9,
+    "initialTier": 1,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 17361
+    },
+    "signatureAbility": {
+        "m_PathID": 22863
+    },
+    "superAbility": {
+        "m_PathID": 27011
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 198,
+            "lifebar": 662
+        },
+        {
+            "attack": 356,
+            "lifebar": 1192
+        },
+        {
+            "attack": 642,
+            "lifebar": 2145
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "guid": "56155217-cff0-4838-9f5e-09d2d9b4bde5",
+    "humanReadableGuid": "bHDay",
+    "displayVariantName": "Char_Filia_B_V1_Name",
+    "variantDescription": "Variant_Role_Generic_DOT",
+    "variantQuote": "Variant_Description_Filia_BadHair",
+    "paletteIndex": 0,
+    "initialTier": 0,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 17285
+    },
+    "signatureAbility": {
+        "m_PathID": 26998
+    },
+    "superAbility": {
+        "m_PathID": 26991
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 66,
+            "lifebar": 350
+        },
+        {
+            "attack": 119,
+            "lifebar": 630
+        },
+        {
+            "attack": 214,
+            "lifebar": 1134
+        },
+        {
+            "attack": 385,
+            "lifebar": 2041
+        }
+    ]
+}

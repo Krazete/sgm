@@ -1,0 +1,29 @@
+{
+    "guid": "76fec1c0-d113-4cf4-9000-f47ee708bb84",
+    "humanReadableGuid": "pDick",
+    "displayVariantName": "Char_BigBand_G_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_BigBand_Private",
+    "paletteIndex": 7,
+    "initialTier": 2,
+    "elementAffiliation": 1,
+    "baseCharacter": {
+        "m_PathID": 16937
+    },
+    "signatureAbility": {
+        "m_PathID": 26914
+    },
+    "superAbility": {
+        "m_PathID": 26908
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 256,
+            "lifebar": 2205
+        },
+        {
+            "attack": 461,
+            "lifebar": 3969
+        }
+    ]
+}

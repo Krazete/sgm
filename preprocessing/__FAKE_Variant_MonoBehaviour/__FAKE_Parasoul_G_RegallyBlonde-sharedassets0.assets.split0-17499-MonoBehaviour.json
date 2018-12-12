@@ -1,0 +1,29 @@
+{
+    "guid": "a5f2baa1-2e90-4ab6-bddc-a27c3c05853a",
+    "humanReadableGuid": "rBlonde",
+    "displayVariantName": "Char_Parasoul_G_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_Parasoul_RegallyBlonde",
+    "paletteIndex": 11,
+    "initialTier": 2,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 17503
+    },
+    "signatureAbility": {
+        "m_PathID": 27045
+    },
+    "superAbility": {
+        "m_PathID": 27042
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 292,
+            "lifebar": 1764
+        },
+        {
+            "attack": 526,
+            "lifebar": 3175
+        }
+    ]
+}

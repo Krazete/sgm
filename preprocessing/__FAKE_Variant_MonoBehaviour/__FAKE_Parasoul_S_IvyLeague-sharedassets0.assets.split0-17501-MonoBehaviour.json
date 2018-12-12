@@ -1,0 +1,33 @@
+{
+    "guid": "0699361e-0dce-49ec-94ac-24445cafdac7",
+    "humanReadableGuid": "iLeague",
+    "displayVariantName": "Char_Parasoul_S_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_Parasoul_Ivy",
+    "paletteIndex": 18,
+    "initialTier": 1,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 17503
+    },
+    "signatureAbility": {
+        "m_PathID": 27043
+    },
+    "superAbility": {
+        "m_PathID": 27042
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 160,
+            "lifebar": 756
+        },
+        {
+            "attack": 288,
+            "lifebar": 1361
+        },
+        {
+            "attack": 518,
+            "lifebar": 2449
+        }
+    ]
+}

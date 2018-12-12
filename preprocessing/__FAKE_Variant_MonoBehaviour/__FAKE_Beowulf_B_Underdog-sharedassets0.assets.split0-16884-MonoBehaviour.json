@@ -1,0 +1,37 @@
+{
+    "guid": "8ba65138-d586-4f99-97ed-b41391fa4186",
+    "humanReadableGuid": "uDog",
+    "displayVariantName": "Char_Beowulf_B_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Survival",
+    "variantQuote": "Variant_Description_Beowulf_Underdog",
+    "paletteIndex": 0,
+    "initialTier": 0,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 16863
+    },
+    "signatureAbility": {
+        "m_PathID": 22845
+    },
+    "superAbility": {
+        "m_PathID": 27171
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 74,
+            "lifebar": 400
+        },
+        {
+            "attack": 133,
+            "lifebar": 720
+        },
+        {
+            "attack": 240,
+            "lifebar": 1296
+        },
+        {
+            "attack": 432,
+            "lifebar": 2333
+        }
+    ]
+}

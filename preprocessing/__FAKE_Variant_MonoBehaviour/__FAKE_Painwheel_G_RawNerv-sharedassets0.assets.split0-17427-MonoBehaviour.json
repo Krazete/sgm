@@ -1,0 +1,29 @@
+{
+    "guid": "0391e21c-46d0-4864-a855-06ebd0cd4342",
+    "humanReadableGuid": "rNerv",
+    "displayVariantName": "Char_Painwheel_G_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_Painwheel_Nerv",
+    "paletteIndex": 15,
+    "initialTier": 2,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 17430
+    },
+    "signatureAbility": {
+        "m_PathID": 27027
+    },
+    "superAbility": {
+        "m_PathID": 27024
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 361,
+            "lifebar": 1323
+        },
+        {
+            "attack": 650,
+            "lifebar": 2381
+        }
+    ]
+}

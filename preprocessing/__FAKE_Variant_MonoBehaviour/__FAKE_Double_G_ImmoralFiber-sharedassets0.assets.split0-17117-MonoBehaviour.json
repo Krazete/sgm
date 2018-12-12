@@ -1,0 +1,29 @@
+{
+    "guid": "0d16934c-99c1-4a1c-85ec-1cc4442eb219",
+    "humanReadableGuid": "iFiber",
+    "displayVariantName": "Char_Double_G_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_Double_ImmoralFiber",
+    "paletteIndex": 23,
+    "initialTier": 2,
+    "elementAffiliation": 1,
+    "baseCharacter": {
+        "m_PathID": 17123
+    },
+    "signatureAbility": {
+        "m_PathID": 26953
+    },
+    "superAbility": {
+        "m_PathID": 26947
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 297,
+            "lifebar": 1455
+        },
+        {
+            "attack": 535,
+            "lifebar": 2619
+        }
+    ]
+}

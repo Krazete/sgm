@@ -1,0 +1,33 @@
+{
+    "guid": "b97ebe89-f523-4134-9f64-d2f9425e26d0",
+    "humanReadableGuid": "rCopy",
+    "displayVariantName": "Char_BigBand_S_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Survival",
+    "variantQuote": "Variant_Description_BigBand_Robocopy",
+    "paletteIndex": 15,
+    "initialTier": 1,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 16937
+    },
+    "signatureAbility": {
+        "m_PathID": 26911
+    },
+    "superAbility": {
+        "m_PathID": 26908
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 140,
+            "lifebar": 945
+        },
+        {
+            "attack": 252,
+            "lifebar": 1701
+        },
+        {
+            "attack": 454,
+            "lifebar": 3062
+        }
+    ]
+}

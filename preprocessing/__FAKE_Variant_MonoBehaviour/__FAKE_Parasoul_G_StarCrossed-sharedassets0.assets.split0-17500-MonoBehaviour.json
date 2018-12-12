@@ -1,0 +1,29 @@
+{
+    "guid": "e849d0e8-f8fe-468a-b3e5-e7f79ede471c",
+    "humanReadableGuid": "sCross",
+    "displayVariantName": "Char_Parasoul_G_V4_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_Parasoul_StarCrossed",
+    "paletteIndex": 24,
+    "initialTier": 2,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 17503
+    },
+    "signatureAbility": {
+        "m_PathID": 27048
+    },
+    "superAbility": {
+        "m_PathID": 27042
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 292,
+            "lifebar": 1764
+        },
+        {
+            "attack": 526,
+            "lifebar": 3175
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "guid": "1c2ffe67-dafd-4287-a9be-5ec518b0dcda",
+    "humanReadableGuid": "cStones",
+    "displayVariantName": "Char_Beowulf_B_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_Beowulf_ColdStones",
+    "paletteIndex": 1,
+    "initialTier": 0,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 16863
+    },
+    "signatureAbility": {
+        "m_PathID": 22846
+    },
+    "superAbility": {
+        "m_PathID": 27171
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 94,
+            "lifebar": 396
+        },
+        {
+            "attack": 169,
+            "lifebar": 713
+        },
+        {
+            "attack": 305,
+            "lifebar": 1283
+        },
+        {
+            "attack": 548,
+            "lifebar": 2309
+        }
+    ]
+}

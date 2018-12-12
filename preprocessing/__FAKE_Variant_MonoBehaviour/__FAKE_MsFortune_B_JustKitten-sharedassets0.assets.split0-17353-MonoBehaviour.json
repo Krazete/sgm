@@ -1,0 +1,37 @@
+{
+    "guid": "df9625b3-1582-45a5-a419-b44f548b94f5",
+    "humanReadableGuid": "jKit",
+    "displayVariantName": "Char_MsFortune_B_V1_Name",
+    "variantDescription": "<DESCRIPTION>",
+    "variantQuote": "Variant_Description_MsFortune_JustKitten",
+    "paletteIndex": 0,
+    "initialTier": 0,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 17361
+    },
+    "signatureAbility": {
+        "m_PathID": 22859
+    },
+    "superAbility": {
+        "m_PathID": 27011
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 82,
+            "lifebar": 350
+        },
+        {
+            "attack": 148,
+            "lifebar": 630
+        },
+        {
+            "attack": 266,
+            "lifebar": 1134
+        },
+        {
+            "attack": 478,
+            "lifebar": 2041
+        }
+    ]
+}

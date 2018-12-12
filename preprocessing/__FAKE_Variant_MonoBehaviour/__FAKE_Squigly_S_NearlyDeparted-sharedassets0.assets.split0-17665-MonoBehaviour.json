@@ -1,0 +1,33 @@
+{
+    "guid": "78009c6f-b99f-4477-bb4e-28e943e691d5",
+    "humanReadableGuid": "nDepart",
+    "displayVariantName": "Char_Squigly_S_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Healing",
+    "variantQuote": "Variant_Description_Squigly_NearlyDeparted",
+    "paletteIndex": 11,
+    "initialTier": 1,
+    "elementAffiliation": 5,
+    "baseCharacter": {
+        "m_PathID": 17691
+    },
+    "signatureAbility": {
+        "m_PathID": 22871
+    },
+    "superAbility": {
+        "m_PathID": 27080
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 122,
+            "lifebar": 945
+        },
+        {
+            "attack": 220,
+            "lifebar": 1701
+        },
+        {
+            "attack": 396,
+            "lifebar": 3062
+        }
+    ]
+}

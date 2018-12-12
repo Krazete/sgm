@@ -1,0 +1,33 @@
+{
+    "guid": "2ca5a58d-296a-4587-8f00-4fcb4895b2aa",
+    "humanReadableGuid": "wresX",
+    "displayVariantName": "Char_Beowulf_S_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Counter",
+    "variantQuote": "Variant_Description_Beowulf_WrestlerX",
+    "paletteIndex": 11,
+    "initialTier": 1,
+    "elementAffiliation": 5,
+    "baseCharacter": {
+        "m_PathID": 16863
+    },
+    "signatureAbility": {
+        "m_PathID": 22849
+    },
+    "superAbility": {
+        "m_PathID": 27171
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 178,
+            "lifebar": 756
+        },
+        {
+            "attack": 320,
+            "lifebar": 1361
+        },
+        {
+            "attack": 577,
+            "lifebar": 2449
+        }
+    ]
+}

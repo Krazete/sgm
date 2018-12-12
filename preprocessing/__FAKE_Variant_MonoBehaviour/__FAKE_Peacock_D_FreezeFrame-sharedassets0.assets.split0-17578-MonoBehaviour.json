@@ -1,0 +1,25 @@
+{
+    "guid": "4d896847-bbc1-4ef9-8fd5-fd0342861bee",
+    "humanReadableGuid": "fFrame",
+    "displayVariantName": "Char_Peacock_D_V1_Name",
+    "variantDescription": "Variant_Description_Peacock_FreezeFrame",
+    "variantQuote": "Variant_Description_Peacock_FreezeFrame",
+    "paletteIndex": 8,
+    "initialTier": 3,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 17585
+    },
+    "signatureAbility": {
+        "m_PathID": 27180
+    },
+    "superAbility": {
+        "m_PathID": 27064
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 624,
+            "lifebar": 3566
+        }
+    ]
+}

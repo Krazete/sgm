@@ -1,0 +1,29 @@
+{
+    "guid": "fe134db5-8cee-4d57-95c1-7a79064f7d82",
+    "humanReadableGuid": "xMorph",
+    "displayVariantName": "Char_Double_G_V2_Name",
+    "variantDescription": "Variant_Role_Generic_DOT",
+    "variantQuote": "Variant_Description_Double_Xenomorph",
+    "paletteIndex": 8,
+    "initialTier": 2,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 17123
+    },
+    "signatureAbility": {
+        "m_PathID": 26949
+    },
+    "superAbility": {
+        "m_PathID": 26947
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 375,
+            "lifebar": 1191
+        },
+        {
+            "attack": 675,
+            "lifebar": 2144
+        }
+    ]
+}

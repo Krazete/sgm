@@ -1,0 +1,29 @@
+{
+    "guid": "e9d895c3-b9ca-4928-b8ab-85c20e96e8a9",
+    "humanReadableGuid": "fFly",
+    "displayVariantName": "Char_Painwheel_G_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Survival",
+    "variantQuote": "Variant_Description_Painwheel_Firefly",
+    "paletteIndex": 12,
+    "initialTier": 2,
+    "elementAffiliation": 1,
+    "baseCharacter": {
+        "m_PathID": 17430
+    },
+    "signatureAbility": {
+        "m_PathID": 27029
+    },
+    "superAbility": {
+        "m_PathID": 27024
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 307,
+            "lifebar": 1455
+        },
+        {
+            "attack": 553,
+            "lifebar": 2619
+        }
+    ]
+}

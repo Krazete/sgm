@@ -1,0 +1,33 @@
+{
+    "guid": "b834c853-e5f9-4d7a-a50e-4d0647d70745",
+    "humanReadableGuid": "nEgrets",
+    "displayVariantName": "Char_Parasoul_S_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_Parasoul_Egrets",
+    "paletteIndex": 3,
+    "initialTier": 1,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 17503
+    },
+    "signatureAbility": {
+        "m_PathID": 27044
+    },
+    "superAbility": {
+        "m_PathID": 27042
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 139,
+            "lifebar": 840
+        },
+        {
+            "attack": 250,
+            "lifebar": 1512
+        },
+        {
+            "attack": 450,
+            "lifebar": 2722
+        }
+    ]
+}
