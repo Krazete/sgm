@@ -17,7 +17,7 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <span class="description">VERSION: 2.6.1</span>
+    <span class="description">VERSION: 3.0.0</span>
     <div id="menu">
         <button onclick="changeLanguage('de')">German</button>
         <button onclick="changeLanguage('en')">English</button>
@@ -57,6 +57,9 @@
         </div>
     </div>
     <div id="collection">
+        <div id="loading">
+            <img id="kinucakes" src="loading/loading.gif" alt="loading">
+        </div>
     </div>
     <div id="foot">
         <label class="description">Show Signatures Only<input type="checkbox" id="red" onclick="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></label>

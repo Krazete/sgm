@@ -9,6 +9,8 @@
 }
 
 body {
+    background: black;
+    color: white;
     position: relative;
     width: 100%;
     height: 100%;
@@ -49,89 +51,299 @@ input:checked + .icon {
     filter: drop-shadow(0 0 3px #fd0);
 }
 
+
+
+
+
+#loading {
+    grid-column: 1 / 5;
+    margin: auto;
+}
+#kinucakes {
+    width: 256px;
+    display: block;
+}
+#loading:after {
+    content: 'Loading';
+    font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
+}
+
+
+
+
 #collection {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 6px;
+    padding: 6px;
 }
-@media (max-width: 1250px) {
-    #collection {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
     #collection {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-@media (max-width: 750px) {
+@media (max-width: 1250px) {
     #collection {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
     #collection {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
 .card {
-    background: gray;
+    background: #234;
+    border: 3px double gold;
+    color: #fff;
+    text-shadow: 1px 1px black;
+    display: grid;
+    grid-template-areas:
+        "img qt qt"
+        "img atk hp"
+        "img fs fs"
+        "ca ca ca"
+        "sa sa sa"
+        "ma ma ma";
+    grid-template-rows: repeat(6, min-content);
+    grid-gap: 10px;
+    padding: 10px;
 }
-.hidden {
-    display: none;
+
+/* PORTRAIT */
+
+.composition {
+    width: 100px;
+    min-width: max-content;
+    grid-area: img;
+    margin: 10px auto;
+}
+
+.realframe {
+    width: 85px;
+    height: 85px;
+    padding: 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 1px #000;
+    margin: auto;
+    margin-bottom: -15px;
+}
+.bronze .realframe {
+    background: linear-gradient(#621 10%, #b76 20%, #843 40%, #b76 60%, #621 90%);
+}
+.silver .realframe {
+    background: linear-gradient(#889 10%, #eef 20%, #9ab 40%, #eef 60%, #889 90%);
+}
+.gold .realframe {
+    background: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
+}
+.diamond.neutral .realframe {
+    background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%);
+}
+.diamond.fire .realframe {
+    background: linear-gradient(#d33 10%, #fff 20%, #f99 40%, #fee 60%, #d33 90%);
+}
+.diamond.water .realframe {
+    background: linear-gradient(#6be 10%, #fff 20%, #ace 40%, #eff 60%, #6be 90%);
+}
+.diamond.wind .realframe {
+    background: linear-gradient(#8b3 10%, #fff 20%, #de9 40%, #efe 60%, #8b3 90%);
+}
+.diamond.dark .realframe {
+    background: linear-gradient(#95f 10%, #fff 20%, #caf 40%, #fef 60%, #95f 90%);
+}
+.diamond.light .realframe {
+    background: linear-gradient(#dd6 10%, #fff 20%, #ffb 40%, #ffe 60%, #dd6 90%);
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px 1px #000;
+}
+.neutral .frame {
+    background: radial-gradient(#ccc, #888);
+}
+.fire .frame {
+    background: radial-gradient(#fb7, #d00);
+}
+.water .frame {
+    background: radial-gradient(#5ff, #06c);
+}
+.wind .frame {
+    background: radial-gradient(#9f8, #082);
+}
+.dark .frame {
+    background: radial-gradient(#eae, #525);
+}
+.light .frame {
+    background: radial-gradient(#fff, #ec5);
 }
 
 .portrait {
-    position: relative;
-    height: 128px;
-    margin: auto;
-    margin-top: -128px;
-    padding: 0 auto 0 auto;
-    display: block;
+    width: 135%;
+    margin-top: -64%;
+    margin-left: -18%;
+    filter: drop-shadow(0 0 1px #000);
 }
 
-.loadingBack {
-    height: 128px;
+.moniker {
+    position: relative;
+    background: #3e2c29;
+    font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    text-transform: uppercase;
+    width: max-content;
+    padding: 2px 4px;
+    margin: auto;
+    border: 3px double #80584b;
+    box-shadow: 0 1px 1px 1px black;
+    text-align: center;
+}
+.bronze .m1 {
+    background: linear-gradient(white, chocolate);
+    -webkit-background-clip: text;
+}
+.silver .m1 {
+    background: linear-gradient(white, gray);
+    -webkit-background-clip: text;
+}
+.gold .m1 {
+    background: linear-gradient(white, gold);
+    -webkit-background-clip: text;
+}
+.diamond .m1 {
+    background: linear-gradient(white, pink);
+    -webkit-background-clip: text;
+}
+.m1 {
+    font-size: 20px;
+    color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(1px 1px black);
+}
+.m2 {
+    font-size: 14px;
+}
+
+.moniker:before {
+    content: '';
+    background: url(sgm_exports/Sprite/ButtonFrame.png);
+    width: 10px;
+    height: 10px;
+}
+
+/* QUOTE */
+
+.quote {
+    font-family: 'Roboto';
+    text-align: center;
+    margin-top: auto;
+    grid-area: qt;
+}
+.quote:before, .quote:after {
+    content: '"';
+}
+
+/* STATS */
+
+.stat {
+    font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
+    margin: auto;
+    text-align: center;
+    margin: auto;
+}
+
+.attack {
+    grid-area: atk;
+}
+.attack:before {
+    background: url(official/PowerIcon.png);
+}
+.lifebar {
+    grid-area: hp;
+}
+.lifebar:before {
+    background: url(official/HealthIcon.png);
+}
+.fs {
+    grid-area: fs;
+    margin: 0 auto;
+}
+.bb .fs:before {background: url(official/mastery/BigBand.png);}
+.be .fs:before {background: url(official/mastery/Beowulf.png);}
+.ce .fs:before {background: url(official/mastery/Cerebella.png);}
+.do .fs:before {background: url(official/mastery/Double.png);}
+.el .fs:before {background: url(official/mastery/Eliza.png);}
+.fi .fs:before {background: url(official/mastery/Filia.png);}
+.mf .fs:before {background: url(official/mastery/MsFortune.png);}
+.pw .fs:before {background: url(official/mastery/Painwheel.png);}
+.pa .fs:before {background: url(official/mastery/Parasoul.png);}
+.pe .fs:before {background: url(official/mastery/Peacock.png);}
+.sq .fs:before {background: url(official/mastery/Squigly.png);}
+.va .fs:before {background: url(official/mastery/Valentine.png);}
+
+.neutral .fs:before {background: url(official/element/Neutral.png);}
+.fire .fs:before {background: url(official/element/Fire.png);}
+.water .fs:before {background: url(official/element/Water.png);}
+.wind .fs:before {background: url(official/element/Wind.png);}
+.light .fs:before {background: url(official/element/Light.png);}
+.dark .fs:before {background: url(official/element/Dark.png);}
+
+.stat:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-size: 20px !important;
+    vertical-align: sub;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+/* ABILITIES */
+
+.box {
     background: black;
 }
-.loading {
-    height: 128px;
-    max-width: 500px;
-    margin: auto;
-    display: block;
+
+.ability {
+    background: #246;
+    box-shadow: 0 0 1px 1px #000;
+    padding: 6px;
+}
+.character {
+    grid-area: ca;
+}
+.signature {
+    grid-area: sa;
+}
+.marquee {
+    grid-area: ma;
 }
 
-
-.fighter, .variant, .ability {
+.title {
     font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
-    text-transform: uppercase;
+    font-size: 20px;
 }
-.fighter, .variant {
-    color: white;
-    text-shadow: 1px 1px black;
-    text-align: center;
-}
-.fighter, .ability {
-    font-size: 24px;
-}
-.variant {
-    font-size: 32px;
+.description {
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
+    font-size: 14px;
 }
 
-.quote, .description {
-    font-family: 'Roboto';
-    text-indent: -12px;
-    padding-left: 12px;
-}
-.quote {
-    text-align: center;
-}
-.quote:before {
-    content: '\201C';
-}
-.quote:after {
-    content: '\201D';
+
+
+
+
+
+
+
+
+
+.hidden {
+    display: none;
 }
 
 .number {
