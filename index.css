@@ -108,8 +108,8 @@ input:checked + .icon {
 }
 
 .card {
-    background: #234;
-    border: 3px double gold;
+    background: #1b2a41;
+    border: 3px double #ccb55a;
     color: #fff;
     text-shadow: 1px 1px black;
     display: grid;
@@ -213,7 +213,7 @@ input:checked + .icon {
     width: max-content;
     padding: 2px 4px;
     margin: auto;
-    border: 3px double #80584b;
+    border: 3px double #8f6151;
     box-shadow: 0 1px 1px 1px black;
     text-align: center;
 }
@@ -241,13 +241,6 @@ input:checked + .icon {
 }
 .fighter-name {
     font-size: 14px;
-}
-
-.nameplate:before {
-    content: '';
-    background: url(sgm_exports/Sprite/ButtonFrame.png);
-    width: 10px;
-    height: 10px;
 }
 
 /* QUOTE */
@@ -313,8 +306,8 @@ input:checked + .icon {
 /* ABILITIES */
 
 .ability {
-    background: #246;
-    box-shadow: 0 0 1px 1px #000;
+    background: #263b5a;
+    box-shadow: 0 0 1px #000;
     padding: 6px;
     display: grid;
     grid-gap: 6px;
@@ -329,9 +322,14 @@ input:checked + .icon {
     grid-area: ma;
 }
 
+.number {
+    color: #00ff00;
+}
+
 .title {
     font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
     font-size: 20px;
+    cursor: pointer;
 }
 .title:before {
     background: linear-gradient(white, gold);
@@ -356,8 +354,8 @@ input:checked + .icon {
 .description {
     font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
     font-size: 14px;
-    background: #468;
-    box-shadow: 0 0 1px 1px black;
+    background: #314c73;
+    box-shadow: 0 0 1px black;
     padding: 4px;
 }
 
@@ -372,19 +370,6 @@ input:checked + .icon {
 
 .hidden {
     display: none;
-}
-
-.number {
-    animation: highlight-fade 2s;
-}
-
-@keyframes highlight-fade {
-    0% {
-        background: white;
-    }
-    100% {
-        background: transparent;
-    }
 }
 
 #rBlight .portrait {
