@@ -40,7 +40,7 @@ body {
     display: none;
 }
 
-.icon {
+.icon2 {
     width: 24px;
     opacity: 0.5;
     filter: saturate(0);
@@ -58,14 +58,28 @@ input:checked + .icon {
 #loading {
     grid-column: 1 / 5;
     margin: auto;
+    text-align: center;
+    font-size: 30px;
 }
 #kinucakes {
     width: 256px;
     display: block;
 }
 #loading:after {
-    content: 'Loading';
+    content: 'LOADING...';
     font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
+    animation: 0.7s infinite fader;
+}
+@keyframes fader {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -113,14 +127,14 @@ input:checked + .icon {
 
 /* PORTRAIT */
 
-.composition {
+.icon {
     width: 100px;
     min-width: max-content;
     grid-area: img;
     margin: 10px auto;
 }
 
-.realframe {
+.frame {
     width: 85px;
     height: 85px;
     padding: 6px;
@@ -129,56 +143,56 @@ input:checked + .icon {
     margin: auto;
     margin-bottom: -15px;
 }
-.bronze .realframe {
+.bronze .frame {
     background: linear-gradient(#621 10%, #b76 20%, #843 40%, #b76 60%, #621 90%);
 }
-.silver .realframe {
+.silver .frame {
     background: linear-gradient(#889 10%, #eef 20%, #9ab 40%, #eef 60%, #889 90%);
 }
-.gold .realframe {
+.gold .frame {
     background: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
 }
-.diamond.neutral .realframe {
+.diamond.neutral .frame {
     background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%);
 }
-.diamond.fire .realframe {
+.diamond.fire .frame {
     background: linear-gradient(#d33 10%, #fff 20%, #f99 40%, #fee 60%, #d33 90%);
 }
-.diamond.water .realframe {
+.diamond.water .frame {
     background: linear-gradient(#6be 10%, #fff 20%, #ace 40%, #eff 60%, #6be 90%);
 }
-.diamond.wind .realframe {
+.diamond.wind .frame {
     background: linear-gradient(#8b3 10%, #fff 20%, #de9 40%, #efe 60%, #8b3 90%);
 }
-.diamond.dark .realframe {
+.diamond.dark .frame {
     background: linear-gradient(#95f 10%, #fff 20%, #caf 40%, #fef 60%, #95f 90%);
 }
-.diamond.light .realframe {
+.diamond.light .frame {
     background: linear-gradient(#dd6 10%, #fff 20%, #ffb 40%, #ffe 60%, #dd6 90%);
 }
 
-.frame {
+.backdrop {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     box-shadow: inset 0 0 2px 1px #000;
 }
-.neutral .frame {
+.neutral .backdrop {
     background: radial-gradient(#ccc, #888);
 }
-.fire .frame {
+.fire .backdrop {
     background: radial-gradient(#fb7, #d00);
 }
-.water .frame {
+.water .backdrop {
     background: radial-gradient(#5ff, #06c);
 }
-.wind .frame {
+.wind .backdrop {
     background: radial-gradient(#9f8, #082);
 }
-.dark .frame {
+.dark .backdrop {
     background: radial-gradient(#eae, #525);
 }
-.light .frame {
+.light .backdrop {
     background: radial-gradient(#fff, #ec5);
 }
 
@@ -189,7 +203,7 @@ input:checked + .icon {
     filter: drop-shadow(0 0 1px #000);
 }
 
-.moniker {
+.nameplate {
     position: relative;
     background: #3e2c29;
     font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
@@ -203,33 +217,33 @@ input:checked + .icon {
     box-shadow: 0 1px 1px 1px black;
     text-align: center;
 }
-.bronze .m1 {
+.bronze .variant-name {
     background: linear-gradient(white, chocolate);
     -webkit-background-clip: text;
 }
-.silver .m1 {
+.silver .variant-name {
     background: linear-gradient(white, gray);
     -webkit-background-clip: text;
 }
-.gold .m1 {
+.gold .variant-name {
     background: linear-gradient(white, gold);
     -webkit-background-clip: text;
 }
-.diamond .m1 {
+.diamond .variant-name {
     background: linear-gradient(white, pink);
     -webkit-background-clip: text;
 }
-.m1 {
+.variant-name {
     font-size: 20px;
     color: transparent;
     text-shadow: none;
     filter: drop-shadow(1px 1px black);
 }
-.m2 {
+.fighter-name {
     font-size: 14px;
 }
 
-.moniker:before {
+.nameplate:before {
     content: '';
     background: url(sgm_exports/Sprite/ButtonFrame.png);
     width: 10px;
@@ -257,34 +271,27 @@ input:checked + .icon {
     margin: auto;
 }
 
-.attack {
+.atk {
     grid-area: atk;
 }
-.attack:before {
+.atk:before {
+    content: 'ATK';
     background: url(official/PowerIcon.png);
 }
-.lifebar {
+.hp {
     grid-area: hp;
 }
-.lifebar:before {
+.hp:before {
+    content: 'HP';
     background: url(official/HealthIcon.png);
 }
 .fs {
     grid-area: fs;
     margin: 0 auto;
 }
-.bb .fs:before {background: url(official/mastery/BigBand.png);}
-.be .fs:before {background: url(official/mastery/Beowulf.png);}
-.ce .fs:before {background: url(official/mastery/Cerebella.png);}
-.do .fs:before {background: url(official/mastery/Double.png);}
-.el .fs:before {background: url(official/mastery/Eliza.png);}
-.fi .fs:before {background: url(official/mastery/Filia.png);}
-.mf .fs:before {background: url(official/mastery/MsFortune.png);}
-.pw .fs:before {background: url(official/mastery/Painwheel.png);}
-.pa .fs:before {background: url(official/mastery/Parasoul.png);}
-.pe .fs:before {background: url(official/mastery/Peacock.png);}
-.sq .fs:before {background: url(official/mastery/Squigly.png);}
-.va .fs:before {background: url(official/mastery/Valentine.png);}
+.fs:before {
+    content: 'FS';
+}
 
 .neutral .fs:before {background: url(official/element/Neutral.png);}
 .fire .fs:before {background: url(official/element/Fire.png);}
@@ -294,33 +301,31 @@ input:checked + .icon {
 .dark .fs:before {background: url(official/element/Dark.png);}
 
 .stat:before {
-    content: '';
-    width: 20px;
+    text-indent: 25px;
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
     height: 20px;
+    background-repeat: no-repeat;
     background-size: 20px !important;
-    vertical-align: sub;
     display: inline-block;
-    margin-right: 4px;
+    margin-right: 5px;
 }
 
 /* ABILITIES */
-
-.box {
-    background: black;
-}
 
 .ability {
     background: #246;
     box-shadow: 0 0 1px 1px #000;
     padding: 6px;
+    display: grid;
+    grid-gap: 6px;
 }
-.character {
+.ca {
     grid-area: ca;
 }
-.signature {
+.sa {
     grid-area: sa;
 }
-.marquee {
+.ma {
     grid-area: ma;
 }
 
@@ -328,9 +333,32 @@ input:checked + .icon {
     font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
     font-size: 20px;
 }
+.title:before {
+    background: linear-gradient(white, gold);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(1px 1px black);
+    margin-right: 1em;
+}
+.ca .title:before {
+    content: 'CHARACTER ABILITY';
+}
+.sa .title:before {
+    content: 'SIGNATURE ABILITY';
+}
+.ma .title:before {
+    content: 'MARQUEE ABILITY';
+}
+
+
+
 .description {
     font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
     font-size: 14px;
+    background: #468;
+    box-shadow: 0 0 1px 1px black;
+    padding: 4px;
 }
 
 
@@ -356,5 +384,17 @@ input:checked + .icon {
     }
     100% {
         background: transparent;
+    }
+}
+
+#rBlight .portrait {
+    animation: 10s infinite linear rainbow;
+}
+@keyframes rainbow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
     }
 }

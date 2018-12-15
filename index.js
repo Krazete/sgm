@@ -71,134 +71,130 @@ function load(path) {
     return new Promise(request);
 }
 
-function createPortrait(key) {
-    var variant = variants[key];
-    var composition = document.createElement("div");
-        composition.className = "composition";
-        var realframe = document.createElement("div");
-            realframe.className = "realframe";
-            var frame = document.createElement("div");
-                frame.className = "frame";
+
+
+
+
+
+
+
+
+function createIcon(key) {
+    var icon = document.createElement("div");
+        icon.className = "icon";
+        var frame = document.createElement("div");
+            frame.className = "frame";
+            var backdrop = document.createElement("div");
+                backdrop.className = "backdrop";
                 var portrait = document.createElement("img");
                     portrait.className = "portrait";
-                    var stem = "character/" + variant.base + "/" + key
+                    var stem = ["character", variants[key].base, key].join("/");
                     if (key == "rBlight") {
                         var r = Math.floor(Math.random() * 7);
                         stem += "_" + r;
                     }
                     portrait.src = stem + ".png";
-                frame.appendChild(portrait);
-            realframe.appendChild(frame);
-        composition.appendChild(realframe);
-        var moniker = document.createElement("div");
-            moniker.className = "moniker";
-            var m1 = document.createElement("div");
-                m1.className = "m1";
-                m1.innerHTML = corpus[variant.name];
-            moniker.appendChild(m1);
-            var m2 = document.createElement("div");
-                m2.className = "m2";
-                m2.innerHTML = corpus[fighters[variant.base].name];
-            moniker.appendChild(m2);
-        composition.appendChild(moniker);
-    return composition;
-}
-
-function createStat1(key, i) {
-    var variant = variants[key];
-    var fs = document.createElement("div");
-        fs.className = "stat fs";
-        fs.innerHTML = ["FS", Math.ceil((variant.baseStats[i].attack + variant.baseStats[i].lifebar / 6) * 7 / 10)].join(" ");
-    return fs;
-}
-
-function createStat2(key, i) {
-    var variant = variants[key];
-    var attack = document.createElement("div");
-        attack.className = "stat attack";
-        attack.innerHTML = ["ATK", variant.baseStats[i].attack].join(" ");
-    return attack;
-}
-
-function createStat3(key, i) {
-    var variant = variants[key];
-    var lifebar = document.createElement("div");
-        lifebar.className = "stat lifebar";
-        lifebar.innerHTML = ["HP", variant.baseStats[i].lifebar].join(" ");
-    return lifebar;
+                backdrop.appendChild(portrait);
+            frame.appendChild(backdrop);
+        icon.appendChild(frame);
+        var nameplate = document.createElement("div");
+            nameplate.className = "nameplate";
+            var variantName = document.createElement("div");
+                variantName.className = "variant-name";
+                variantName.innerHTML = corpus[variants[key].name];
+            nameplate.appendChild(variantName);
+            var fighterName = document.createElement("div");
+                fighterName.className = "fighter-name";
+                fighterName.innerHTML = corpus[fighters[variants[key].base].name];
+            nameplate.appendChild(fighterName);
+        icon.appendChild(nameplate);
+    return icon;
 }
 
 function createQuote(key) {
-    var variant = variants[key];
     var quote = document.createElement("div");
         quote.className = "quote";
-        quote.innerHTML = corpus[variant.quote];
+        quote.innerHTML = corpus[variants[key].quote];
     return quote;
 }
 
-function createCharacter(key) {
-    var variant = variants[key];
-    var box = document.createElement("div");
-        box.className = "ability character";
-        var title = document.createElement("div");
-            title.className = "title";
-            title.innerHTML = corpus[fighters[variant.base].characterability.title];
-        box.appendChild(title);
-        var description = document.createElement("div");
-            description.className = "description";
-            description.innerHTML = corpus[fighters[variant.base].characterability.description];
-        box.appendChild(description);
-    return box;
+function createStat(type, value) {
+    var stat = document.createElement("div");
+        stat.className = ["stat", type].join(" ");
+        stat.innerHTML = value.toLocaleString();
+    return stat;
 }
 
-function createSignature(key) {
-    var variant = variants[key];
-    var box = document.createElement("div");
-        box.className = "ability signature";
+function createAbility(acronym, titleText, descriptionTexts) {
+    var ability = document.createElement("div");
+        ability.className = ["ability", acronym].join(" ");
         var title = document.createElement("div");
             title.className = "title";
-            title.innerHTML = corpus[variant.signature.title];
-        box.appendChild(title);
-        var description = document.createElement("div");
-            description.className = "description";
-            for (var feature of variant.signature.features) {
-                description.innerHTML += corpus[feature.description];
-            }
-        box.appendChild(description);
-    return box;
+            title.innerHTML = titleText;
+        ability.appendChild(title);
+        for (var descriptionText of descriptionTexts) {
+            var description = document.createElement("div");
+                description.className = "description";
+                description.innerHTML = descriptionText;
+            ability.appendChild(description);
+        }
+    return ability;
 }
 
-function createMarquee(key) {
-    var variant = variants[key];
-    var box = document.createElement("div");
-        box.className = "ability marquee";
-        var title = document.createElement("div");
-            title.className = "title";
-            title.innerHTML = corpus[fighters[variant.base].marquee.title];
-        box.appendChild(title);
-        var description = document.createElement("div");
-            description.className = "description";
-            for (var feature of fighters[variant.base].marquee.features) {
-                description.innerHTML += corpus[feature.description];
-            }
-        box.appendChild(description);
-    return box;
+
+function createCA(key) {
+    var titleText = corpus[fighters[variants[key].base].characterability.title];
+    var descriptionTexts = [
+        corpus[fighters[variants[key].base].characterability.description]
+    ];
+    var ability = createAbility("ca", titleText, descriptionTexts);
+    return ability;
+}
+
+function createSA(key) {
+    var titleText = corpus[variants[key].signature.title];
+    var descriptionTexts = [];
+    for (var feature of variants[key].signature.features) {
+        descriptionTexts.push(corpus[feature.description]);
+    }
+    var ability = createAbility("sa", titleText, descriptionTexts);
+    return ability;
+}
+
+function createMA(key) {
+    var titleText = corpus[fighters[variants[key].base].marquee.title];
+    var descriptionTexts = [];
+    for (var feature of fighters[variants[key].base].marquee.features) {
+        descriptionTexts.push([
+            corpus[feature.title],
+            corpus[feature.description]
+        ].join(" - "));
+    }
+    var ability = createAbility("ma", titleText, descriptionTexts);
+    return ability;
 }
 
 function init(sa, ma, sig_only) {
     for (var key in variants) {
-        var variant = variants[key];
+        var atk = variants[key].baseStats[0].attack;
+        var hp = variants[key].baseStats[0].lifebar;
+        var fs = Math.ceil((atk + hp / 6) * 7 / 10);
         var card = document.createElement("div");
-            card.className = ["card", variant.base, tiers[variant.tier], elements[variant.element]].join(" ");
+            card.className = [
+                "card",
+                variants[key].base,
+                tiers[variants[key].tier],
+                elements[variants[key].element]
+            ].join(" ");
             card.id = key;
-            card.appendChild(createPortrait(key));
+            card.appendChild(createIcon(key));
             card.appendChild(createQuote(key));
-            card.appendChild(createStat1(key, 0));
-            card.appendChild(createStat2(key, 0));
-            card.appendChild(createStat3(key, 0));
-            card.appendChild(createCharacter(key));
-            card.appendChild(createSignature(key));
-            card.appendChild(createMarquee(key));
+            card.appendChild(createStat("atk", atk));
+            card.appendChild(createStat("hp", hp));
+            card.appendChild(createStat("fs", fs));
+            card.appendChild(createCA(key));
+            card.appendChild(createSA(key));
+            card.appendChild(createMA(key));
         collection.appendChild(card);
     	// if (variant.name in corpus) {
         //     if (!sig_only) {
