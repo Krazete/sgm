@@ -77,7 +77,7 @@ function load(path) {
 
 
 
-
+/* COMPLETE */
 
 function createIcon(key) {
     var icon = document.createElement("div");
@@ -125,9 +125,9 @@ function createStat(type, value) {
     return stat;
 }
 
-function createAbility(acronym, titleText, descriptionTexts) {
+function createAbility(type, titleText, descriptionTexts) {
     var ability = document.createElement("div");
-        ability.className = ["ability", acronym].join(" ");
+        ability.className = ["ability", type].join(" ");
         var title = document.createElement("div");
             title.className = "title";
             title.innerHTML = titleText;
@@ -141,37 +141,63 @@ function createAbility(acronym, titleText, descriptionTexts) {
     return ability;
 }
 
+function format(template, substitutions) {
+    var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
+    var formatted = template;
+    for (var match of matches) {
+        var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
+        var substitute = Math.abs(substitutions[index]);
+        if (match.includes("%}")) {
+            substitute *= 100;
+        }
+        substitute = Math.round(substitute * 10) / 10;
+        if (match.includes("%")) {
+            substitute += "%";
+        }
+        formatted = formatted.replace(match, substitute);
+    }
+    return markedNumbers(formatted);
+}
+
+function markedNumbers(text) {
+    return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
+}
+
+/* UNDER CONSTRUCTION */
 
 function createCA(key) {
     var titleText = corpus[fighters[variants[key].base].characterability.title];
     var descriptionTexts = [
-        corpus[fighters[variants[key].base].characterability.description]
+        markedNumbers(corpus[fighters[variants[key].base].characterability.description])
     ];
-    var ability = createAbility("ca", titleText, descriptionTexts);
-    return ability;
+    return createAbility("ca", titleText, descriptionTexts);
 }
 
-function createSA(key) {
+function createSA(key, n) {
     var titleText = corpus[variants[key].signature.title];
     var descriptionTexts = [];
     for (var feature of variants[key].signature.features) {
-        descriptionTexts.push(corpus[feature.description]);
+        var template = corpus[feature.description];
+        var substitutions = feature.tiers.slice(n)[0];
+        var descriptionText = format(template, substitutions);
+        descriptionTexts.push(descriptionText);
     }
-    var ability = createAbility("sa", titleText, descriptionTexts);
-    return ability;
+    return createAbility("sa", titleText, descriptionTexts);
 }
 
-function createMA(key) {
+function createMA(key, n) {
     var titleText = corpus[fighters[variants[key].base].marquee.title];
     var descriptionTexts = [];
     for (var feature of fighters[variants[key].base].marquee.features) {
-        descriptionTexts.push([
+        var template = corpus[feature.description];
+        var substitutions = feature.tiers.slice(n)[0];
+        var descriptionText = [
             corpus[feature.title],
-            corpus[feature.description]
-        ].join(" - "));
+            format(template, substitutions)
+        ].join(" - ");
+        descriptionTexts.push(descriptionText);
     }
-    var ability = createAbility("ma", titleText, descriptionTexts);
-    return ability;
+    return createAbility("ma", titleText, descriptionTexts);
 }
 
 function init(sa, ma, sig_only) {
@@ -196,69 +222,21 @@ function init(sa, ma, sig_only) {
             card.appendChild(createSA(key));
             card.appendChild(createMA(key));
         collection.appendChild(card);
-    	// if (variant.name in corpus) {
-        //     if (!sig_only) {
-        //         div.appendChild(newStringDiv(corpus[fighters[variant.base].characterability.title], "ability"));
-        //         div.appendChild(newStringDiv(corpus[fighters[variant.base].characterability.description], "description"));
-        //     }
-        //     div.appendChild(newStringDiv(corpus[variant.signature.title], "ability"));
-        //     for (var feature of variant.signature.features) {
-        //         div.appendChild(newStringDiv(formatDescription(feature, sa), "description"));
-        //     }
-        //     if (!sig_only) {
-        //         div.appendChild(newStringDiv(corpus[fighters[variant.base].marquee.title], "ability"));
-        //         for (var feature of fighters[variant.base].marquee.features) {
-        //             div.appendChild(newStringDiv([
-        //                 "<b>" + corpus[feature.title] + "</b>", formatDescription(feature, ma)
-        //             ].join(" - "), "description"));
-        //         }
-        //     }
-        //     div.innerHTML += "<br>";
-        //     div.appendChild(newStringDiv(["Bronze", "Silver", "Gold", "Diamond"][variant.tier], "ability"));
-        //     div.appendChild(newStringDiv(["Neutral", "Fire", "Water", "Wind", "Dark", "Light"][variant.element], "ability"));
-        //     div.innerHTML += "<br>";
-        //     div.appendChild(newStringDiv("Base Stats", "ability"));
-        //     var i = variant.tier;
-        //     for (var stat of variant.baseStats) {
-        //         div.appendChild(newStringDiv("[" + ["Bronze", "Silver", "Gold", "Diamond"][i] + "] HP: " + stat.lifebar + " / ATK: " + stat.attack, "description"));
-        //         i++;
-        //     }
-        // }
-        // if (!variant.enabled) {
-        //     div.style.opacity = 0.5;
-        // }
-    	// collection.appendChild(div);
     }
 }
 
-function newStringDiv(string, className) {
-    var div = document.createElement("div");
-    div.className = className;
-    div.innerHTML = string;
-    return div;
-}
 
-function formatDescription(feature, i) {
-    return format(corpus[feature.description], feature.tiers.slice(i)[0]);
-}
 
-function format(template, substitutions) { // a bit hacky
-    var matches = template.match(/{.*?}/g);
-    var string = template;
-    for (var match of matches) {
-        var parts = match.slice(1, -1).split(":");
-        var substitute = Math.abs(substitutions[Math.round(parts[0])]);
-        if (parts.length > 1) {
-            if (parts[1].includes("%")) {
-                substitute *= 100;
-            }
-            substitute = Math.round(substitute);
-            substitute += "%";
-        }
-        string = string.replace(match, "<span class=\"number\">" + substitute + "</span>");
-    }
-    return string;
-}
+
+
+
+
+
+
+
+
+
+
 
 function sort(method) {
     var sorted = Object.keys(variants).sort(method);
