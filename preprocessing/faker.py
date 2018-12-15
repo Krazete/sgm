@@ -98,7 +98,7 @@ variants = {
     'hellcat':          {'signatureAbility': 22862, 'm_PathID': 17352},
     'justkitten':       {'signatureAbility': 22859, 'm_PathID': 17353},
     'furryfury':        {'signatureAbility': 22864, 'm_PathID': 17354},
-    'clawandorder':     {'signatureAbility': 22869, 'm_PathID': 17355},
+    'clawandorder':     {'signatureAbility': 22860, 'm_PathID': 17355},
     'hacknsplash':      {'signatureAbility': 22865, 'm_PathID': 17356},
     'meowandfurever':   {'signatureAbility': 22858, 'm_PathID': 17357},
     'felinelucky':      {'signatureAbility': 22861, 'm_PathID': 17358},

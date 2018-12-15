@@ -1,15 +1,638 @@
 {
-    "va": {
-        "name": "Char_Valentine_Name",
-        "characterability": {
-            "redLifeMultiplier": 0.5,
-            "title": "Char_Valentine_CA2_Title",
-            "lifeStealPercentage": 0.75,
-            "description": "Char_Valentine_CA2_Desc"
-        },
+    "ce": {
         "marquee": {
+            "title": "Char_Cerebella_SUP_CenterStage_Title",
             "features": [
                 {
+                    "description": "Char_Cerebella_SUP_CenterStage_Feat1_Desc",
+                    "title": "Char_Cerebella_SUP_CenterStage_Feat1_Title",
+                    "tiers": [
+                        [
+                            -20
+                        ],
+                        [
+                            -21
+                        ],
+                        [
+                            -22
+                        ],
+                        [
+                            -23
+                        ],
+                        [
+                            -24
+                        ],
+                        [
+                            -25
+                        ],
+                        [
+                            -26
+                        ],
+                        [
+                            -27
+                        ],
+                        [
+                            -28
+                        ],
+                        [
+                            -29
+                        ],
+                        [
+                            -30
+                        ]
+                    ]
+                },
+                {
+                    "description": "Char_Cerebella_SUP_CenterStage_Feat2_Desc",
+                    "title": "Char_Cerebella_SUP_CenterStage_Feat2_Title",
+                    "tiers": [
+                        [
+                            5
+                        ],
+                        [
+                            6
+                        ],
+                        [
+                            7
+                        ],
+                        [
+                            8
+                        ],
+                        [
+                            9
+                        ],
+                        [
+                            10
+                        ],
+                        [
+                            11
+                        ],
+                        [
+                            12
+                        ],
+                        [
+                            13
+                        ],
+                        [
+                            14
+                        ],
+                        [
+                            15
+                        ]
+                    ]
+                }
+            ]
+        },
+        "name": "Char_Cerebella_Name",
+        "characterability": {
+            "description": "Char_Cerebella_CA_Desc",
+            "title": "Char_Cerebella_CA_Title"
+        },
+        "voice": {
+            "ja": "Credits_VA_CER_JA",
+            "en": "Credits_VA_CER_EN"
+        }
+    },
+    "bb": {
+        "marquee": {
+            "title": "Char_BigBand_SUP_Maestro_Title",
+            "features": [
+                {
+                    "description": "Char_BigBand_SUP_Maestro_Feat1_Desc",
+                    "title": "Char_BigBand_SUP_Maestro_Feat1_Title",
+                    "tiers": [
+                        [
+                            5
+                        ],
+                        [
+                            6
+                        ],
+                        [
+                            7
+                        ],
+                        [
+                            8
+                        ],
+                        [
+                            9
+                        ],
+                        [
+                            10
+                        ],
+                        [
+                            11
+                        ],
+                        [
+                            12
+                        ],
+                        [
+                            13
+                        ],
+                        [
+                            14
+                        ],
+                        [
+                            15
+                        ]
+                    ]
+                },
+                {
+                    "description": "Char_BigBand_SUP_Maestro_Feat2_Desc",
+                    "title": "Char_BigBand_SUP_Maestro_Feat2_Title",
+                    "tiers": [
+                        [
+                            5
+                        ],
+                        [
+                            6
+                        ],
+                        [
+                            7
+                        ],
+                        [
+                            8
+                        ],
+                        [
+                            9
+                        ],
+                        [
+                            10
+                        ],
+                        [
+                            11
+                        ],
+                        [
+                            12
+                        ],
+                        [
+                            13
+                        ],
+                        [
+                            14
+                        ],
+                        [
+                            15
+                        ]
+                    ]
+                }
+            ]
+        },
+        "name": "Char_BigBand_Name",
+        "characterability": {
+            "description": "Char_BigBand_CA_Desc",
+            "title": "Char_BigBand_CA_Title"
+        },
+        "voice": {
+            "ja": "Credits_VA_BIG_JA",
+            "en": "Credits_VA_BIG_EN"
+        }
+    },
+    "sq": {
+        "marquee": {
+            "title": "Char_Squigly_SUP_FrightNight_Title",
+            "features": [
+                {
+                    "description": "Char_Squigly_SUP_FrightNight_Feat1_Desc",
+                    "title": "Char_Squigly_SUP_FrightNight_Feat1_Title",
+                    "tiers": [
+                        [
+                            5
+                        ],
+                        [
+                            6
+                        ],
+                        [
+                            7
+                        ],
+                        [
+                            8
+                        ],
+                        [
+                            9
+                        ],
+                        [
+                            10
+                        ],
+                        [
+                            11
+                        ],
+                        [
+                            12
+                        ],
+                        [
+                            13
+                        ],
+                        [
+                            14
+                        ],
+                        [
+                            15
+                        ]
+                    ]
+                },
+                {
+                    "description": "Char_Squigly_SUP_FrightNight_Feat2_Desc",
+                    "title": "Char_Squigly_SUP_FrightNight_Feat2_Title",
+                    "tiers": [
+                        [
+                            5
+                        ],
+                        [
+                            6
+                        ],
+                        [
+                            7
+                        ],
+                        [
+                            8
+                        ],
+                        [
+                            9
+                        ],
+                        [
+                            10
+                        ],
+                        [
+                            11
+                        ],
+                        [
+                            12
+                        ],
+                        [
+                            13
+                        ],
+                        [
+                            14
+                        ],
+                        [
+                            15
+                        ]
+                    ]
+                }
+            ]
+        },
+        "name": "Char_Squigly_Name",
+        "characterability": {
+            "description": "Char_Squigly_CA_Desc",
+            "chargeTimeInFrames": 35,
+            "abilityIcon": {
+                "m_PathID": 26668,
+                "m_FileID": 0
+            },
+            "title": "Char_Squigly_CA_Title",
+            "debug": 0,
+            "squiglyImage": {
+                "m_PathID": 17632,
+                "m_FileID": 0
+            }
+        },
+        "voice": {
+            "ja": "Credits_VA_SQI_JA",
+            "en": "Credits_VA_SQI_EN"
+        }
+    },
+    "pe": {
+        "marquee": {
+            "title": "Char_Peacock_SUP_ToonTime_Title",
+            "features": [
+                {
+                    "description": "Char_Peacock_SUP_ToonTime_Feat1_Desc",
+                    "title": "Char_Peacock_SUP_ToonTime_Feat1_Title",
+                    "tiers": [
+                        [
+                            0.100000001
+                        ],
+                        [
+                            0.119999997
+                        ],
+                        [
+                            0.140000001
+                        ],
+                        [
+                            0.159999996
+                        ],
+                        [
+                            0.180000007
+                        ],
+                        [
+                            0.200000003
+                        ],
+                        [
+                            0.219999999
+                        ],
+                        [
+                            0.239999995
+                        ],
+                        [
+                            0.25999999
+                        ],
+                        [
+                            0.280000001
+                        ],
+                        [
+                            0.300000012
+                        ]
+                    ]
+                },
+                {
+                    "description": "Char_Peacock_SUP_ToonTime_Feat2_Desc",
+                    "title": "Char_Peacock_SUP_ToonTime_Feat2_Title",
+                    "tiers": [
+                        [
+                            0.300000012
+                        ],
+                        [
+                            0.319999993
+                        ],
+                        [
+                            0.340000004
+                        ],
+                        [
+                            0.360000014
+                        ],
+                        [
+                            0.379999995
+                        ],
+                        [
+                            0.400000006
+                        ],
+                        [
+                            0.419999987
+                        ],
+                        [
+                            0.439999998
+                        ],
+                        [
+                            0.460000008
+                        ],
+                        [
+                            0.479999989
+                        ],
+                        [
+                            0.5
+                        ]
+                    ]
+                }
+            ]
+        },
+        "name": "Char_Peacock_Name",
+        "characterability": {
+            "description": "Char_Peacock_CA_Desc",
+            "title": "Char_Peacock_CA_Title"
+        },
+        "voice": {
+            "ja": "Credits_VA_PEA_JA",
+            "en": "Credits_VA_PEA_EN"
+        }
+    },
+    "mf": {
+        "marquee": {
+            "title": "Char_MsFortune_SUP_ICanHasBuff_Title",
+            "features": [
+                {
+                    "description": "Char_MsFortune_SUP_ICanHasBuff_Feat1_Desc",
+                    "title": "Char_MsFortune_SUP_ICanHasBuff_Feat1_Title",
+                    "tiers": [
+                        [
+                            10,
+                            10
+                        ],
+                        [
+                            11,
+                            10
+                        ],
+                        [
+                            12,
+                            10
+                        ],
+                        [
+                            13,
+                            10
+                        ],
+                        [
+                            14,
+                            10
+                        ],
+                        [
+                            15,
+                            10
+                        ],
+                        [
+                            16,
+                            10
+                        ],
+                        [
+                            17,
+                            10
+                        ],
+                        [
+                            18,
+                            10
+                        ],
+                        [
+                            19,
+                            10
+                        ],
+                        [
+                            20,
+                            10
+                        ]
+                    ]
+                },
+                {
+                    "description": "Char_MsFortune_SUP_ICanHasBuff_Feat2_Desc",
+                    "title": "Char_MsFortune_SUP_ICanHasBuff_Feat2_Title",
+                    "tiers": [
+                        [
+                            10,
+                            10
+                        ],
+                        [
+                            11,
+                            10
+                        ],
+                        [
+                            12,
+                            10
+                        ],
+                        [
+                            13,
+                            10
+                        ],
+                        [
+                            14,
+                            10
+                        ],
+                        [
+                            15,
+                            10
+                        ],
+                        [
+                            16,
+                            10
+                        ],
+                        [
+                            17,
+                            10
+                        ],
+                        [
+                            18,
+                            10
+                        ],
+                        [
+                            19,
+                            10
+                        ],
+                        [
+                            20,
+                            10
+                        ]
+                    ]
+                }
+            ]
+        },
+        "name": "Char_MsFortune_Name",
+        "characterability": {
+            "description": "Char_MsFortune_CA_Desc",
+            "zoomImage": {
+                "m_PathID": 17327,
+                "m_FileID": 0
+            },
+            "headbuttImage": {
+                "m_PathID": 17324,
+                "m_FileID": 0
+            },
+            "msFortuneImage": {
+                "m_PathID": 17323,
+                "m_FileID": 0
+            },
+            "recallImage": {
+                "m_PathID": 17325,
+                "m_FileID": 0
+            },
+            "felineAllergiesImage": {
+                "m_PathID": 17326,
+                "m_FileID": 0
+            },
+            "title": "Char_MsFortune_CA_Title"
+        },
+        "voice": {
+            "ja": "Kana Hanazawa",
+            "en": "Kimlinh Tran"
+        }
+    },
+    "be": {
+        "marquee": {
+            "title": "Char_Beowulf_SUP_TitleFight_Title",
+            "features": [
+                {
+                    "description": "Char_Beowulf_SUP_TitleFight_Feat1_Desc",
+                    "title": "Char_Beowulf_SUP_TitleFight_Feat1_Title",
+                    "tiers": [
+                        [
+                            5
+                        ],
+                        [
+                            6
+                        ],
+                        [
+                            7
+                        ],
+                        [
+                            8
+                        ],
+                        [
+                            9
+                        ],
+                        [
+                            10
+                        ],
+                        [
+                            11
+                        ],
+                        [
+                            12
+                        ],
+                        [
+                            13
+                        ],
+                        [
+                            14
+                        ],
+                        [
+                            15
+                        ]
+                    ]
+                },
+                {
+                    "description": "Char_Beowulf_SUP_TitleFight_Feat2_Desc",
+                    "title": "Char_Beowulf_SUP_TitleFight_Feat2_Title",
+                    "tiers": [
+                        [
+                            5
+                        ],
+                        [
+                            6
+                        ],
+                        [
+                            7
+                        ],
+                        [
+                            8
+                        ],
+                        [
+                            9
+                        ],
+                        [
+                            10
+                        ],
+                        [
+                            11
+                        ],
+                        [
+                            12
+                        ],
+                        [
+                            13
+                        ],
+                        [
+                            14
+                        ],
+                        [
+                            15
+                        ]
+                    ]
+                }
+            ]
+        },
+        "name": "Char_Beowulf_Name",
+        "characterability": {
+            "description": "Char_Beowulf_CA_Desc",
+            "secondsUntilFreeHypeLevel": 30,
+            "beowulfImage": {
+                "m_PathID": 16862,
+                "m_FileID": 0
+            },
+            "hypeIcon": {
+                "m_PathID": 26666,
+                "m_FileID": 0
+            },
+            "title": "Char_Beowulf_CA_Title",
+            "debug": 1,
+            "hypeTime": 10
+        },
+        "voice": {
+            "ja": "Credits_VA_BEO_JA",
+            "en": "Credits_VA_BEO_EN"
+        }
+    },
+    "va": {
+        "marquee": {
+            "title": "Char_Valentine_SUP_CombatClinic_Title",
+            "features": [
+                {
+                    "description": "Char_Valentine_SUP_CombatClinic_Feat1_Desc",
+                    "title": "Char_Valentine_SUP_CombatClinic_Feat1_Title",
                     "tiers": [
                         [
                             5,
@@ -55,11 +678,11 @@
                             15,
                             10
                         ]
-                    ],
-                    "title": "Char_Valentine_SUP_CombatClinic_Feat1_Title",
-                    "description": "Char_Valentine_SUP_CombatClinic_Feat1_Desc"
+                    ]
                 },
                 {
+                    "description": "Char_Valentine_SUP_CombatClinic_Feat2_Desc",
+                    "title": "Char_Valentine_SUP_CombatClinic_Feat2_Title",
                     "tiers": [
                         [
                             10
@@ -94,38 +717,29 @@
                         [
                             20
                         ]
-                    ],
-                    "title": "Char_Valentine_SUP_CombatClinic_Feat2_Title",
-                    "description": "Char_Valentine_SUP_CombatClinic_Feat2_Desc"
+                    ]
                 }
-            ],
-            "title": "Char_Valentine_SUP_CombatClinic_Title"
+            ]
+        },
+        "name": "Char_Valentine_Name",
+        "characterability": {
+            "description": "Char_Valentine_CA2_Desc",
+            "redLifeMultiplier": 0.5,
+            "title": "Char_Valentine_CA2_Title",
+            "lifeStealPercentage": 0.75
         },
         "voice": {
             "ja": "Credits_VA_VAL_JA",
             "en": "Credits_VA_VAL_EN"
         }
     },
-    "be": {
-        "name": "Char_Beowulf_Name",
-        "characterability": {
-            "hypeTime": 10,
-            "hypeIcon": {
-                "m_PathID": 26666,
-                "m_FileID": 0
-            },
-            "debug": 1,
-            "description": "Char_Beowulf_CA_Desc",
-            "secondsUntilFreeHypeLevel": 30,
-            "beowulfImage": {
-                "m_PathID": 16862,
-                "m_FileID": 0
-            },
-            "title": "Char_Beowulf_CA_Title"
-        },
+    "pa": {
         "marquee": {
+            "title": "Char_Parasoul_SUP_HyperCritical_Title",
             "features": [
                 {
+                    "description": "Char_Parasoul_SUP_HyperCritical_Feat1_Desc",
+                    "title": "Char_Parasoul_SUP_HyperCritical_Feat1_Title",
                     "tiers": [
                         [
                             5
@@ -160,66 +774,66 @@
                         [
                             15
                         ]
-                    ],
-                    "title": "Char_Beowulf_SUP_TitleFight_Feat1_Title",
-                    "description": "Char_Beowulf_SUP_TitleFight_Feat1_Desc"
+                    ]
                 },
                 {
+                    "description": "Char_Parasoul_SUP_HyperCritical_Feat2_Desc",
+                    "title": "Char_Parasoul_SUP_HyperCritical_Feat2_Title",
                     "tiers": [
                         [
-                            5
+                            20
                         ],
                         [
-                            6
+                            22
                         ],
                         [
-                            7
+                            24
                         ],
                         [
-                            8
+                            26
                         ],
                         [
-                            9
+                            28
                         ],
                         [
-                            10
+                            30
                         ],
                         [
-                            11
+                            32
                         ],
                         [
-                            12
+                            34
                         ],
                         [
-                            13
+                            36
                         ],
                         [
-                            14
+                            38
                         ],
                         [
-                            15
+                            40
                         ]
-                    ],
-                    "title": "Char_Beowulf_SUP_TitleFight_Feat2_Title",
-                    "description": "Char_Beowulf_SUP_TitleFight_Feat2_Desc"
+                    ]
                 }
-            ],
-            "title": "Char_Beowulf_SUP_TitleFight_Title"
+            ]
+        },
+        "name": "Char_Parasoul_Name",
+        "characterability": {
+            "description": "Char_Parasoul_CA_Desc",
+            "title": "Char_Parasoul_CA_Title"
         },
         "voice": {
-            "ja": "Credits_VA_BEO_JA",
-            "en": "Credits_VA_BEO_EN"
+            "ja": "Credits_VA_PAR_JA",
+            "en": "Credits_VA_PAR_EN"
         }
     },
     "pw": {
-        "name": "Char_Painwheel_Name",
-        "characterability": {
-            "title": "Char_Painwheel_CA_Title",
-            "description": "Char_Painwheel_CA_Desc"
-        },
         "marquee": {
+            "title": "Char_PainWheel_SUP_TorturedSoul_Title",
             "features": [
                 {
+                    "description": "Char_PainWheel_SUP_TorturedSoul_Feat1_Desc",
+                    "title": "Char_PainWheel_SUP_TorturedSoul_Feat1_Title",
                     "tiers": [
                         [
                             50
@@ -254,11 +868,11 @@
                         [
                             100
                         ]
-                    ],
-                    "title": "Char_PainWheel_SUP_TorturedSoul_Feat1_Title",
-                    "description": "Char_PainWheel_SUP_TorturedSoul_Feat1_Desc"
+                    ]
                 },
                 {
+                    "description": "Char_PainWheel_SUP_TorturedSoul_Feat2_Desc",
+                    "title": "Char_PainWheel_SUP_TorturedSoul_Feat2_Title",
                     "tiers": [
                         [
                             10,
@@ -304,12 +918,14 @@
                             20,
                             5
                         ]
-                    ],
-                    "title": "Char_PainWheel_SUP_TorturedSoul_Feat2_Title",
-                    "description": "Char_PainWheel_SUP_TorturedSoul_Feat2_Desc"
+                    ]
                 }
-            ],
-            "title": "Char_PainWheel_SUP_TorturedSoul_Title"
+            ]
+        },
+        "name": "Char_Painwheel_Name",
+        "characterability": {
+            "description": "Char_Painwheel_CA_Desc",
+            "title": "Char_Painwheel_CA_Title"
         },
         "voice": {
             "ja": "Credits_VA_PAI_JA",
@@ -317,14 +933,12 @@
         }
     },
     "fi": {
-        "name": "Char_Filia_Name",
-        "characterability": {
-            "title": "Char_Filia_CA_Title",
-            "description": "Char_Filia_CA_Desc"
-        },
         "marquee": {
+            "title": "Char_Filia_SUP_Bloodletting_Title",
             "features": [
                 {
+                    "description": "Char_Filia_SUP_Bloodletting_Feat1_Desc",
+                    "title": "Char_Filia_SUP_Bloodletting_Feat1_Title",
                     "tiers": [
                         [
                             5
@@ -359,11 +973,11 @@
                         [
                             15
                         ]
-                    ],
-                    "title": "Char_Filia_SUP_Bloodletting_Feat1_Title",
-                    "description": "Char_Filia_SUP_Bloodletting_Feat1_Desc"
+                    ]
                 },
                 {
+                    "description": "Char_Filia_SUP_Bloodletting_Feat2_Desc",
+                    "title": "Char_Filia_SUP_Bloodletting_Feat2_Title",
                     "tiers": [
                         [
                             0.0500000007
@@ -398,417 +1012,27 @@
                         [
                             0.150000006
                         ]
-                    ],
-                    "title": "Char_Filia_SUP_Bloodletting_Feat2_Title",
-                    "description": "Char_Filia_SUP_Bloodletting_Feat2_Desc"
+                    ]
                 }
-            ],
-            "title": "Char_Filia_SUP_Bloodletting_Title"
+            ]
+        },
+        "name": "Char_Filia_Name",
+        "characterability": {
+            "description": "Char_Filia_CA_Desc",
+            "title": "Char_Filia_CA_Title"
         },
         "voice": {
             "ja": "Credits_VA_FIL_JA",
             "en": "Credits_VA_FIL_EN"
         }
     },
-    "bb": {
-        "name": "Char_BigBand_Name",
-        "characterability": {
-            "title": "Char_BigBand_CA_Title",
-            "description": "Char_BigBand_CA_Desc"
-        },
-        "marquee": {
-            "features": [
-                {
-                    "tiers": [
-                        [
-                            5
-                        ],
-                        [
-                            6
-                        ],
-                        [
-                            7
-                        ],
-                        [
-                            8
-                        ],
-                        [
-                            9
-                        ],
-                        [
-                            10
-                        ],
-                        [
-                            11
-                        ],
-                        [
-                            12
-                        ],
-                        [
-                            13
-                        ],
-                        [
-                            14
-                        ],
-                        [
-                            15
-                        ]
-                    ],
-                    "title": "Char_BigBand_SUP_Maestro_Feat1_Title",
-                    "description": "Char_BigBand_SUP_Maestro_Feat1_Desc"
-                },
-                {
-                    "tiers": [
-                        [
-                            5
-                        ],
-                        [
-                            6
-                        ],
-                        [
-                            7
-                        ],
-                        [
-                            8
-                        ],
-                        [
-                            9
-                        ],
-                        [
-                            10
-                        ],
-                        [
-                            11
-                        ],
-                        [
-                            12
-                        ],
-                        [
-                            13
-                        ],
-                        [
-                            14
-                        ],
-                        [
-                            15
-                        ]
-                    ],
-                    "title": "Char_BigBand_SUP_Maestro_Feat2_Title",
-                    "description": "Char_BigBand_SUP_Maestro_Feat2_Desc"
-                }
-            ],
-            "title": "Char_BigBand_SUP_Maestro_Title"
-        },
-        "voice": {
-            "ja": "Credits_VA_BIG_JA",
-            "en": "Credits_VA_BIG_EN"
-        }
-    },
-    "ce": {
-        "name": "Char_Cerebella_Name",
-        "characterability": {
-            "title": "Char_Cerebella_CA_Title",
-            "description": "Char_Cerebella_CA_Desc"
-        },
-        "marquee": {
-            "features": [
-                {
-                    "tiers": [
-                        [
-                            -20
-                        ],
-                        [
-                            -21
-                        ],
-                        [
-                            -22
-                        ],
-                        [
-                            -23
-                        ],
-                        [
-                            -24
-                        ],
-                        [
-                            -25
-                        ],
-                        [
-                            -26
-                        ],
-                        [
-                            -27
-                        ],
-                        [
-                            -28
-                        ],
-                        [
-                            -29
-                        ],
-                        [
-                            -30
-                        ]
-                    ],
-                    "title": "Char_Cerebella_SUP_CenterStage_Feat1_Title",
-                    "description": "Char_Cerebella_SUP_CenterStage_Feat1_Desc"
-                },
-                {
-                    "tiers": [
-                        [
-                            5
-                        ],
-                        [
-                            6
-                        ],
-                        [
-                            7
-                        ],
-                        [
-                            8
-                        ],
-                        [
-                            9
-                        ],
-                        [
-                            10
-                        ],
-                        [
-                            11
-                        ],
-                        [
-                            12
-                        ],
-                        [
-                            13
-                        ],
-                        [
-                            14
-                        ],
-                        [
-                            15
-                        ]
-                    ],
-                    "title": "Char_Cerebella_SUP_CenterStage_Feat2_Title",
-                    "description": "Char_Cerebella_SUP_CenterStage_Feat2_Desc"
-                }
-            ],
-            "title": "Char_Cerebella_SUP_CenterStage_Title"
-        },
-        "voice": {
-            "ja": "Credits_VA_CER_JA",
-            "en": "Credits_VA_CER_EN"
-        }
-    },
-    "sq": {
-        "name": "Char_Squigly_Name",
-        "characterability": {
-            "squiglyImage": {
-                "m_PathID": 17632,
-                "m_FileID": 0
-            },
-            "debug": 0,
-            "description": "Char_Squigly_CA_Desc",
-            "abilityIcon": {
-                "m_PathID": 26668,
-                "m_FileID": 0
-            },
-            "chargeTimeInFrames": 35,
-            "title": "Char_Squigly_CA_Title"
-        },
-        "marquee": {
-            "features": [
-                {
-                    "tiers": [
-                        [
-                            5
-                        ],
-                        [
-                            6
-                        ],
-                        [
-                            7
-                        ],
-                        [
-                            8
-                        ],
-                        [
-                            9
-                        ],
-                        [
-                            10
-                        ],
-                        [
-                            11
-                        ],
-                        [
-                            12
-                        ],
-                        [
-                            13
-                        ],
-                        [
-                            14
-                        ],
-                        [
-                            15
-                        ]
-                    ],
-                    "title": "Char_Squigly_SUP_FrightNight_Feat1_Title",
-                    "description": "Char_Squigly_SUP_FrightNight_Feat1_Desc"
-                },
-                {
-                    "tiers": [
-                        [
-                            5
-                        ],
-                        [
-                            6
-                        ],
-                        [
-                            7
-                        ],
-                        [
-                            8
-                        ],
-                        [
-                            9
-                        ],
-                        [
-                            10
-                        ],
-                        [
-                            11
-                        ],
-                        [
-                            12
-                        ],
-                        [
-                            13
-                        ],
-                        [
-                            14
-                        ],
-                        [
-                            15
-                        ]
-                    ],
-                    "title": "Char_Squigly_SUP_FrightNight_Feat2_Title",
-                    "description": "Char_Squigly_SUP_FrightNight_Feat2_Desc"
-                }
-            ],
-            "title": "Char_Squigly_SUP_FrightNight_Title"
-        },
-        "voice": {
-            "ja": "Credits_VA_SQI_JA",
-            "en": "Credits_VA_SQI_EN"
-        }
-    },
-    "pa": {
-        "name": "Char_Parasoul_Name",
-        "characterability": {
-            "title": "Char_Parasoul_CA_Title",
-            "description": "Char_Parasoul_CA_Desc"
-        },
-        "marquee": {
-            "features": [
-                {
-                    "tiers": [
-                        [
-                            5
-                        ],
-                        [
-                            6
-                        ],
-                        [
-                            7
-                        ],
-                        [
-                            8
-                        ],
-                        [
-                            9
-                        ],
-                        [
-                            10
-                        ],
-                        [
-                            11
-                        ],
-                        [
-                            12
-                        ],
-                        [
-                            13
-                        ],
-                        [
-                            14
-                        ],
-                        [
-                            15
-                        ]
-                    ],
-                    "title": "Char_Parasoul_SUP_HyperCritical_Feat1_Title",
-                    "description": "Char_Parasoul_SUP_HyperCritical_Feat1_Desc"
-                },
-                {
-                    "tiers": [
-                        [
-                            20
-                        ],
-                        [
-                            22
-                        ],
-                        [
-                            24
-                        ],
-                        [
-                            26
-                        ],
-                        [
-                            28
-                        ],
-                        [
-                            30
-                        ],
-                        [
-                            32
-                        ],
-                        [
-                            34
-                        ],
-                        [
-                            36
-                        ],
-                        [
-                            38
-                        ],
-                        [
-                            40
-                        ]
-                    ],
-                    "title": "Char_Parasoul_SUP_HyperCritical_Feat2_Title",
-                    "description": "Char_Parasoul_SUP_HyperCritical_Feat2_Desc"
-                }
-            ],
-            "title": "Char_Parasoul_SUP_HyperCritical_Title"
-        },
-        "voice": {
-            "ja": "Credits_VA_PAR_JA",
-            "en": "Credits_VA_PAR_EN"
-        }
-    },
     "do": {
-        "name": "Char_Double_Name",
-        "characterability": {
-            "linearElementChoice": 0,
-            "blockTime": 1,
-            "resetOnBlockstun": 1,
-            "description": "Char_Double_CA_Desc",
-            "elementalBonus": 0.100000001,
-            "title": "Char_Double_CA_Title"
-        },
         "marquee": {
+            "title": "Char_Double_SUP_Entropy_Title",
             "features": [
                 {
+                    "description": "Char_Double_SUP_Entropy_Feat1_Desc",
+                    "title": "Char_Double_SUP_Entropy_Feat1_Title",
                     "tiers": [
                         [
                             10
@@ -843,11 +1067,11 @@
                         [
                             20
                         ]
-                    ],
-                    "title": "Char_Double_SUP_Entropy_Feat1_Title",
-                    "description": "Char_Double_SUP_Entropy_Feat1_Desc"
+                    ]
                 },
                 {
+                    "description": "Char_Double_SUP_Entropy_Feat2_Desc",
+                    "title": "Char_Double_SUP_Entropy_Feat2_Title",
                     "tiers": [
                         [
                             30,
@@ -893,130 +1117,31 @@
                             20,
                             10
                         ]
-                    ],
-                    "title": "Char_Double_SUP_Entropy_Feat2_Title",
-                    "description": "Char_Double_SUP_Entropy_Feat2_Desc"
+                    ]
                 }
-            ],
-            "title": "Char_Double_SUP_Entropy_Title"
+            ]
+        },
+        "name": "Char_Double_Name",
+        "characterability": {
+            "description": "Char_Double_CA_Desc",
+            "elementalBonus": 0.100000001,
+            "resetOnBlockstun": 1,
+            "title": "Char_Double_CA_Title",
+            "blockTime": 1,
+            "linearElementChoice": 0
         },
         "voice": {
             "ja": "Credits_VA_DBL_JA",
             "en": "Credits_VA_DBL_EN"
         }
     },
-    "pe": {
-        "name": "Char_Peacock_Name",
-        "characterability": {
-            "title": "Char_Peacock_CA_Title",
-            "description": "Char_Peacock_CA_Desc"
-        },
-        "marquee": {
-            "features": [
-                {
-                    "tiers": [
-                        [
-                            0.100000001
-                        ],
-                        [
-                            0.119999997
-                        ],
-                        [
-                            0.140000001
-                        ],
-                        [
-                            0.159999996
-                        ],
-                        [
-                            0.180000007
-                        ],
-                        [
-                            0.200000003
-                        ],
-                        [
-                            0.219999999
-                        ],
-                        [
-                            0.239999995
-                        ],
-                        [
-                            0.25999999
-                        ],
-                        [
-                            0.280000001
-                        ],
-                        [
-                            0.300000012
-                        ]
-                    ],
-                    "title": "Char_Peacock_SUP_ToonTime_Feat1_Title",
-                    "description": "Char_Peacock_SUP_ToonTime_Feat1_Desc"
-                },
-                {
-                    "tiers": [
-                        [
-                            0.300000012
-                        ],
-                        [
-                            0.319999993
-                        ],
-                        [
-                            0.340000004
-                        ],
-                        [
-                            0.360000014
-                        ],
-                        [
-                            0.379999995
-                        ],
-                        [
-                            0.400000006
-                        ],
-                        [
-                            0.419999987
-                        ],
-                        [
-                            0.439999998
-                        ],
-                        [
-                            0.460000008
-                        ],
-                        [
-                            0.479999989
-                        ],
-                        [
-                            0.5
-                        ]
-                    ],
-                    "title": "Char_Peacock_SUP_ToonTime_Feat2_Title",
-                    "description": "Char_Peacock_SUP_ToonTime_Feat2_Desc"
-                }
-            ],
-            "title": "Char_Peacock_SUP_ToonTime_Title"
-        },
-        "voice": {
-            "ja": "Credits_VA_PEA_JA",
-            "en": "Credits_VA_PEA_EN"
-        }
-    },
     "el": {
-        "name": "Char_Eliza_Name",
-        "characterability": {
-            "timeInSekhmet": 5,
-            "elizaImage": {
-                "m_PathID": 17167,
-                "m_FileID": 0
-            },
-            "title": "Char_Eliza_CA_Title",
-            "sekhmetIcon": {
-                "m_PathID": 26667,
-                "m_FileID": 0
-            },
-            "description": "Char_Eliza_CA_Desc"
-        },
         "marquee": {
+            "title": "Char_Eliza_SUP_Bloodline_Title",
             "features": [
                 {
+                    "description": "Char_Eliza_SUP_Bloodline_Feat1_Desc",
+                    "title": "Char_Eliza_SUP_Bloodline_Feat1_Title",
                     "tiers": [
                         [
                             30
@@ -1051,11 +1176,11 @@
                         [
                             50
                         ]
-                    ],
-                    "title": "Char_Eliza_SUP_Bloodline_Feat1_Title",
-                    "description": "Char_Eliza_SUP_Bloodline_Feat1_Desc"
+                    ]
                 },
                 {
+                    "description": "Char_Eliza_SUP_Bloodline_Feat2_Desc",
+                    "title": "Char_Eliza_SUP_Bloodline_Feat2_Title",
                     "tiers": [
                         [
                             50
@@ -1090,152 +1215,27 @@
                         [
                             100
                         ]
-                    ],
-                    "title": "Char_Eliza_SUP_Bloodline_Feat2_Title",
-                    "description": "Char_Eliza_SUP_Bloodline_Feat2_Desc"
+                    ]
                 }
-            ],
-            "title": "Char_Eliza_SUP_Bloodline_Title"
+            ]
+        },
+        "name": "Char_Eliza_Name",
+        "characterability": {
+            "description": "Char_Eliza_CA_Desc",
+            "title": "Char_Eliza_CA_Title",
+            "sekhmetIcon": {
+                "m_PathID": 26667,
+                "m_FileID": 0
+            },
+            "elizaImage": {
+                "m_PathID": 17167,
+                "m_FileID": 0
+            },
+            "timeInSekhmet": 5
         },
         "voice": {
             "ja": "Credits_VA_ELI_JA",
             "en": "Credits_VA_ELI_EN"
-        }
-    },
-    "mf": {
-        "name": "Char_MsFortune_Name",
-        "characterability": {
-            "headbuttImage": {
-                "m_PathID": 17324,
-                "m_FileID": 0
-            },
-            "msFortuneImage": {
-                "m_PathID": 17323,
-                "m_FileID": 0
-            },
-            "description": "Char_MsFortune_CA_Desc",
-            "recallImage": {
-                "m_PathID": 17325,
-                "m_FileID": 0
-            },
-            "zoomImage": {
-                "m_PathID": 17327,
-                "m_FileID": 0
-            },
-            "felineAllergiesImage": {
-                "m_PathID": 17326,
-                "m_FileID": 0
-            },
-            "title": "Char_MsFortune_CA_Title"
-        },
-        "marquee": {
-            "features": [
-                {
-                    "tiers": [
-                        [
-                            10,
-                            10
-                        ],
-                        [
-                            11,
-                            10
-                        ],
-                        [
-                            12,
-                            10
-                        ],
-                        [
-                            13,
-                            10
-                        ],
-                        [
-                            14,
-                            10
-                        ],
-                        [
-                            15,
-                            10
-                        ],
-                        [
-                            16,
-                            10
-                        ],
-                        [
-                            17,
-                            10
-                        ],
-                        [
-                            18,
-                            10
-                        ],
-                        [
-                            19,
-                            10
-                        ],
-                        [
-                            20,
-                            10
-                        ]
-                    ],
-                    "title": "Char_MsFortune_SUP_ICanHasBuff_Feat1_Title",
-                    "description": "Char_MsFortune_SUP_ICanHasBuff_Feat1_Desc"
-                },
-                {
-                    "tiers": [
-                        [
-                            10,
-                            10
-                        ],
-                        [
-                            11,
-                            10
-                        ],
-                        [
-                            12,
-                            10
-                        ],
-                        [
-                            13,
-                            10
-                        ],
-                        [
-                            14,
-                            10
-                        ],
-                        [
-                            15,
-                            10
-                        ],
-                        [
-                            16,
-                            10
-                        ],
-                        [
-                            17,
-                            10
-                        ],
-                        [
-                            18,
-                            10
-                        ],
-                        [
-                            19,
-                            10
-                        ],
-                        [
-                            20,
-                            10
-                        ]
-                    ],
-                    "title": "Char_MsFortune_SUP_ICanHasBuff_Feat2_Title",
-                    "description": "Char_MsFortune_SUP_ICanHasBuff_Feat2_Desc"
-                }
-            ],
-            "title": "Char_MsFortune_SUP_ICanHasBuff_Title"
-        },
-        "voice": {
-            "ja": "Kana Hanazawa",
-            "en": "Kimlinh Tran"
         }
     }
 }
