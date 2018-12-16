@@ -18,43 +18,53 @@
 </head>
 <body>
     <span id="version">3.0.0</span>
-    <div id="menu">
-        <button onclick="changeLanguage('de')">German</button>
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('es')">Spanish</button>
-        <button onclick="changeLanguage('fr')">French</button>
-        <button onclick="changeLanguage('ja')">Japanese</button>
-        <button onclick="changeLanguage('ko')">Korean</button>
-        <button onclick="changeLanguage('pt-br')">Portuguese</button>
-        <button onclick="changeLanguage('ru')">Russian</button>
-        <br>
-        <button onclick="sort(byFS)">Sort by ♢ Fighter Score</button>
-        <button onclick="sort(byHP)">Sort by ♢ HP</button>
-        <button onclick="sort(byAttack)">Sort by ♢ Attack</button>
-        <button onclick="sort(byAlpha)">Sort Alphabetically</button>
-        <br>
-        <div id="element"><!-- doesn't really work right -->
-            <label><input type="checkbox" value="0" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Neutral" src="official/element/Neutral.png"></label>
-            <label><input type="checkbox" value="1" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Fire" src="official/element/Fire.png"></label>
-            <label><input type="checkbox" value="2" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Water" src="official/element/Water.png"></label>
-            <label><input type="checkbox" value="3" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Wind" src="official/element/Wind.png"></label>
-            <label><input type="checkbox" value="4" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Dark" src="official/element/Dark.png"></label>
-            <label><input type="checkbox" value="5" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Light" src="official/element/Light.png"></label>
+    <div id="filter">
+        <div id="medals">
+            <label><input type="checkbox"><img class="icon" src="official/constraints_bronze.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/constraints_silver.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/constraints_gold.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/constraints_diamond.png"></label>
+        </div>
+        <div id="elements">
+            <label><input type="checkbox"><img class="icon" src="official/ElementalFireBackless.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/ElementalWaterBackless.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/ElementalWindBackless.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/ElementalLightBackless.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/ElementalDarkBackless.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
         </div>
         <div id="mastery">
-            <label><input type="checkbox" value="be" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Beowulf" src="official/mastery/Beowulf.png"></label>
-            <label><input type="checkbox" value="bb" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Big Band" src="official/mastery/BigBand.png"></label>
-            <label><input type="checkbox" value="ce" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Cerebella" src="official/mastery/Cerebella.png"></label>
-            <label><input type="checkbox" value="do" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Double" src="official/mastery/Double.png"></label>
-            <label><input type="checkbox" value="el" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Eliza" src="official/mastery/Eliza.png"></label>
-            <label><input type="checkbox" value="fi" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Filia" src="official/mastery/Filia.png"></label>
-            <label><input type="checkbox" value="pw" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Painwheel" src="official/mastery/Painwheel.png"></label>
-            <label><input type="checkbox" value="pa" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Parasoul" src="official/mastery/Parasoul.png"></label>
-            <label><input type="checkbox" value="pe" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Peacock" src="official/mastery/Peacock.png"></label>
-            <label><input type="checkbox" value="mf" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Ms Fortune" src="official/mastery/MsFortune.png"></label>
-            <label><input type="checkbox" value="sq" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Squigly" src="official/mastery/Squigly.png"></label>
-            <label><input type="checkbox" value="va" onclick="toggle(this.parentNode.parentNode)"><img class="icon2" alt="Valentine" src="official/mastery/Valentine.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/BigBand_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Cerebella_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Double_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Eliza_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Filia_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Painwheel_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Parasoul_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Peacock_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/MsFortune_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Squigly_MasteryIcon.png"></label>
+            <label><input type="checkbox"><img class="icon" src="official/Valentine_MasteryIcon.png"></label>
         </div>
+    </div>
+    <div id="sort">
+        <label><input type="radio" class="icon"><span>Alphabetical</span></label>
+        <label><input type="radio" class="icon"><span>Fighter Score</span></label>
+        <label><input type="radio" class="icon"><span>ATK</span></label>
+        <label><input type="radio" class="icon"><span>HP</span></label>
+        <label><input type="radio" class="icon"><span>Element</span></label>
+        <label><input type="radio" class="icon"><span>Tier</span></label>
+    </div>
+    <div id="flags">
+        <label><input type="radio" id="en"><img src="official/flag_en.png">English</label>
+        <label><input type="radio" id="fr"><img src="official/flag_fr.png">Français</label>
+        <label><input type="radio" id="es"><img src="official/flag_es.png">Español</label>
+        <label><input type="radio" id="ru"><img src="official/flag_ru.png">Pусский</label>
+        <label><input type="radio" id="jp"><img src="official/flag_jp.png">日本語</label>
+        <label><input type="radio" id="de"><img src="official/flag_de.png">Deutsch</label>
+        <label><input type="radio" id="ko"><img src="official/flag_ko.png">한국어</label>
+        <label><input type="radio" id="pt"><img src="official/flag_pt.png">Português</label>
     </div>
     <div id="collection">
         <div id="loading">
