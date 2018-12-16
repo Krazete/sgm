@@ -57,8 +57,6 @@ input:checked + .icon {
 
 
 
-
-
 /* COLLECTION */
 
 #collection {
@@ -199,6 +197,18 @@ input:checked + .icon {
     filter: drop-shadow(0 0 1px black);
     margin: -64% 0 0 -18%;
 }
+#rBlight .portrait {
+    animation: 7s infinite linear rainbow;
+}
+
+@keyframes rainbow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
 
 .nameplate {
     position: relative;
@@ -300,10 +310,6 @@ input:checked + .icon {
 .light .fs:before {background: url(official/ElementalIconLight.png);}
 .dark .fs:before {background: url(official/ElementalIconDark.png);}
 
-.stat-value {
-    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
-}
-
 /* ABILITIES */
 
 .ability {
@@ -312,6 +318,9 @@ input:checked + .icon {
     display: grid;
     grid-gap: 6px;
     padding: 6px;
+}
+.ability.collapsed {
+    background: #0f1824;
 }
 
 .ca {
@@ -326,46 +335,30 @@ input:checked + .icon {
     grid-area: ma;
 }
 
-.title {
-    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+.ability-name {
     font-size: 20px;
-    text-transform: uppercase;
     cursor: pointer;
 }
-
+.ability.collapsed .ability-name {
+    opacity: 0.5;
+}
 
 .description {
-    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
-    font-size: 14px;
     background: #314c73;
+    font-size: 14px;
     box-shadow: 0 0 1px black;
-    padding: 4px;
+    padding: 6px;
 }
-
-.number {
-    color: #00ff00;
-}
-
-
-
-
-
-
-
-
-
-.hidden {
+.ability.collapsed .description {
     display: none;
 }
 
-#rBlight .portrait {
-    animation: 10s infinite linear rainbow;
+.number {
+    color: #0f0; /* TODO: standardize color format */
 }
-@keyframes rainbow {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-    }
+
+/* GENERAL */
+
+.hidden {
+    display: none;
 }

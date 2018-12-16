@@ -129,20 +129,30 @@ function createStat(type, label, value) {
     return stat;
 }
 
+function collapse() {
+    if (this.parentElement.classList.contains("collapsed")) {
+        this.parentElement.classList.remove("collapsed");
+    }
+    else {
+        this.parentElement.classList.add("collapsed");
+    }
+}
+
 function createAbility(type, categoryText, titleText, descriptionTexts) {
     var ability = document.createElement("div");
         ability.className = ["ability", type].join(" ");
-        var title = document.createElement("div");
-            title.className = "title";
+        var abilityName = document.createElement("div");
+            abilityName.className = "ability-name";
             var span1 = document.createElement("span");
                 span1.className = "fancy gold-tint";
                 span1.innerHTML = corpus[categoryText];
-            title.appendChild(span1);
+            abilityName.appendChild(span1);
             var span2 = document.createElement("span");
                 span2.className = "fancy silver-tint";
                 span2.innerHTML = titleText;
-            title.appendChild(span2);
-        ability.appendChild(title);
+            abilityName.appendChild(span2);
+            abilityName.addEventListener("click", collapse);
+        ability.appendChild(abilityName);
         for (var descriptionText of descriptionTexts) {
             var description = document.createElement("div");
                 description.className = "description";
@@ -181,7 +191,7 @@ function createCA(key) {
     var descriptionTexts = [
         markedNumbers(corpus[fighters[variants[key].base].characterability.description])
     ];
-    return createAbility("ca", "SkillTree_CharacterAbility_Title", titleText, descriptionTexts);
+    return createAbility("ca collapsed", "SkillTree_CharacterAbility_Title", titleText, descriptionTexts);
 }
 
 function createSA(key, n) {
@@ -208,7 +218,7 @@ function createMA(key, n) {
         ].join(" - ");
         descriptionTexts.push(descriptionText);
     }
-    return createAbility("ma", "SkillTree_SuperAbility_Title", titleText, descriptionTexts);
+    return createAbility("ma collapsed", "SkillTree_SuperAbility_Title", titleText, descriptionTexts);
 }
 
 function init(sa, ma, sig_only) {
