@@ -43,7 +43,9 @@ function changeLanguage(language) {
 }
 
 function loadLanguage() {
-    return window.localStorage.getItem("language") || "en";
+    var lang = window.localStorage.getItem("language") || "en";
+    document.body.parentElement.lang = lang;
+    return lang;
 }
 
 function saveLanguage(language) {
@@ -129,15 +131,6 @@ function createStat(type, label, value) {
     return stat;
 }
 
-function collapse() {
-    if (this.parentElement.classList.contains("collapsed")) {
-        this.parentElement.classList.remove("collapsed");
-    }
-    else {
-        this.parentElement.classList.add("collapsed");
-    }
-}
-
 function createAbility(type, categoryText, titleText, descriptionTexts) {
     var ability = document.createElement("div");
         ability.className = ["ability", type].join(" ");
@@ -160,6 +153,15 @@ function createAbility(type, categoryText, titleText, descriptionTexts) {
             ability.appendChild(description);
         }
     return ability;
+}
+
+function collapse() {
+    if (this.parentElement.classList.contains("collapsed")) {
+        this.parentElement.classList.remove("collapsed");
+    }
+    else {
+        this.parentElement.classList.add("collapsed");
+    }
 }
 
 function format(template, substitutions) {

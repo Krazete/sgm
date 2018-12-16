@@ -86,13 +86,21 @@ input:checked + .icon {
 }
 
 #loading:after {
-    content: 'LOADING'; /* NOTE: can't use corpus to change language here */
+    content: 'LOADING...';
     font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
     font-size: 30px;
     text-align: center;
     display: block;
     animation: 0.7s infinite fader;
 }
+html[lang='de'] #loading:after {content: 'LADE...';}
+html[lang='en'] #loading:after {content: 'LOADING...';}
+html[lang='es'] #loading:after {content: 'CARGANDO...';}
+html[lang='fr'] #loading:after {content: 'CHARGEMENT...';}
+html[lang='ja'] #loading:after {content: '\30ed\30fc\30c9\4e2d...';}
+html[lang='ko'] #loading:after {content: '\b85c\b529\c911\2026';}
+html[lang='pt-br'] #loading:after {content: 'CARREGANDO...';}
+html[lang='ru'] #loading:after {content: '\0417\0410\0413\0420\0423\0417\041a\0410...';}
 
 @keyframes fader {
     0% {
