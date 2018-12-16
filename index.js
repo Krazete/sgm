@@ -81,9 +81,9 @@ function load(path) {
 
 /* COMPLETE */
 
-function createIcon(key) {
-    var icon = document.createElement("div");
-        icon.className = "icon";
+function createAvatar(key) {
+    var avatar = document.createElement("div");
+        avatar.className = "avatar";
         var frame = document.createElement("div");
             frame.className = "frame";
             var backdrop = document.createElement("div");
@@ -98,7 +98,7 @@ function createIcon(key) {
                     portrait.src = stem + ".png";
                 backdrop.appendChild(portrait);
             frame.appendChild(backdrop);
-        icon.appendChild(frame);
+        avatar.appendChild(frame);
         var nameplate = document.createElement("div");
             nameplate.className = "nameplate";
             var variantName = document.createElement("div");
@@ -109,8 +109,8 @@ function createIcon(key) {
                 fighterName.className = "fighter-name";
                 fighterName.innerHTML = corpus[fighters[variants[key].base].name];
             nameplate.appendChild(fighterName);
-        icon.appendChild(nameplate);
-    return icon;
+        avatar.appendChild(nameplate);
+    return avatar;
 }
 
 function createQuote(key) {
@@ -120,30 +120,28 @@ function createQuote(key) {
     return quote;
 }
 
-function createStat(type, label, value) {
+function createStat(type, value) {
     var stat = document.createElement("div");
         stat.className = ["stat", type].join(" ");
-        stat.innerHTML = corpus[label];
         var span = document.createElement("span");
             span.className = "fancy silver-tint";
             span.innerHTML = value.toLocaleString();
-        stat.appendChild(span);span
+        stat.appendChild(span);
     return stat;
 }
 
-function createAbility(type, categoryText, titleText, descriptionTexts) {
+function createAbility(type, titleText, descriptionTexts) {
     var ability = document.createElement("div");
         ability.className = ["ability", type].join(" ");
         var abilityName = document.createElement("div");
             abilityName.className = "ability-name";
-            var span1 = document.createElement("span");
-                span1.className = "fancy gold-tint";
-                span1.innerHTML = corpus[categoryText];
-            abilityName.appendChild(span1);
-            var span2 = document.createElement("span");
-                span2.className = "fancy silver-tint";
-                span2.innerHTML = titleText;
-            abilityName.appendChild(span2);
+            var label = document.createElement("span");
+                label.className = "label fancy gold-tint";
+            abilityName.appendChild(label);
+            var span = document.createElement("span");
+                span.className = "fancy silver-tint";
+                span.innerHTML = titleText;
+            abilityName.appendChild(span);
             abilityName.addEventListener("click", collapse);
         ability.appendChild(abilityName);
         for (var descriptionText of descriptionTexts) {
@@ -189,14 +187,16 @@ function markedNumbers(text) {
 /* UNDER CONSTRUCTION */
 
 function createCA(key) {
+    var type = "ca collapsed";
     var titleText = corpus[fighters[variants[key].base].characterability.title];
     var descriptionTexts = [
         markedNumbers(corpus[fighters[variants[key].base].characterability.description])
     ];
-    return createAbility("ca collapsed", "SkillTree_CharacterAbility_Title", titleText, descriptionTexts);
+    return createAbility(type, titleText, descriptionTexts);
 }
 
 function createSA(key, n) {
+    var type = "sa";
     var titleText = corpus[variants[key].signature.title];
     var descriptionTexts = [];
     for (var feature of variants[key].signature.features) {
@@ -205,10 +205,11 @@ function createSA(key, n) {
         var descriptionText = format(template, substitutions);
         descriptionTexts.push(descriptionText);
     }
-    return createAbility("sa", "CharacterDetails_SA", titleText, descriptionTexts);
+    return createAbility(type, titleText, descriptionTexts);
 }
 
 function createMA(key, n) {
+    var type = "ma collapsed";
     var titleText = corpus[fighters[variants[key].base].marquee.title];
     var descriptionTexts = [];
     for (var feature of fighters[variants[key].base].marquee.features) {
@@ -220,7 +221,7 @@ function createMA(key, n) {
         ].join(" - ");
         descriptionTexts.push(descriptionText);
     }
-    return createAbility("ma collapsed", "SkillTree_SuperAbility_Title", titleText, descriptionTexts);
+    return createAbility(type, titleText, descriptionTexts);
 }
 
 function init(sa, ma, sig_only) {
@@ -236,11 +237,11 @@ function init(sa, ma, sig_only) {
                 elements[variants[key].element]
             ].join(" ");
             card.id = key;
-            card.appendChild(createIcon(key));
+            card.appendChild(createAvatar(key));
             card.appendChild(createQuote(key));
-            card.appendChild(createStat("atk", "Stat_AttackFlat_Label", atk));
-            card.appendChild(createStat("hp", "Stat_HealthFlat_Label", hp));
-            card.appendChild(createStat("fs", "Sort_FS", fs));
+            card.appendChild(createStat("atk", atk));
+            card.appendChild(createStat("hp", hp));
+            card.appendChild(createStat("fs", fs));
             card.appendChild(createCA(key));
             card.appendChild(createSA(key, sa));
             card.appendChild(createMA(key, ma));
