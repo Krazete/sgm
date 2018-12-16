@@ -1,16 +1,18 @@
 @font-face {
     font-family: 'Cinema';
-    src: url('data/font/TBCinemaRGothic-M.ttf') format('truetype');
+    src: url('data/font/TBCinemaRGothic-M.ttf');
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('data/font/RobotoCondensed-Regular.ttf') format('truetype');
+    src: url('data/font/RobotoCondensed-Regular.ttf');
 }
 
 body {
     background: black;
     color: white;
+    font-family: 'Roboto'; /* TODO: add backup fonts */
+    text-shadow: 1px 1px black;
     position: relative;
     width: 100%;
     height: 100%;
@@ -55,21 +57,45 @@ input:checked + .icon {
 
 
 
+
+
+/* COLLECTION */
+
+#collection {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 6px;
+    padding: 6px;
+}
+@media (max-width: 3150px) {#collection {grid-template-columns: repeat(8, 1fr);}}
+@media (max-width: 2800px) {#collection {grid-template-columns: repeat(7, 1fr);}}
+@media (max-width: 2450px) {#collection {grid-template-columns: repeat(6, 1fr);}}
+@media (max-width: 2100px) {#collection {grid-template-columns: repeat(5, 1fr);}}
+@media (max-width: 1750px) {#collection {grid-template-columns: repeat(4, 1fr);}}
+@media (max-width: 1400px) {#collection {grid-template-columns: repeat(3, 1fr);}}
+@media (max-width: 1050px) {#collection {grid-template-columns: repeat(2, 1fr);}}
+@media (max-width: 700px) {#collection {grid-template-columns: repeat(1, 1fr);}}
+
+/* LOADING */
+
 #loading {
-    grid-column: 1 / 5;
+    grid-column: 1 / -1;
     margin: auto;
-    text-align: center;
-    font-size: 30px;
 }
-#kinucakes {
+
+#loading img {
     width: 256px;
-    display: block;
 }
+
 #loading:after {
-    content: 'LOADING...';
-    font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
+    content: 'LOADING'; /* NOTE: can't use corpus to change language here */
+    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    display: block;
     animation: 0.7s infinite fader;
 }
+
 @keyframes fader {
     0% {
         opacity: 0;
@@ -82,36 +108,11 @@ input:checked + .icon {
     }
 }
 
-
-
-
-#collection {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 6px;
-    padding: 6px;
-}
-@media (max-width: 1500px) {
-    #collection {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 1250px) {
-    #collection {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 1000px) {
-    #collection {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
+/* CARD */
 
 .card {
     background: #1b2a41;
     border: 3px double #ccb55a;
-    color: #fff;
-    text-shadow: 1px 1px black;
     display: grid;
     grid-template-areas:
         "img qt qt"
@@ -120,28 +121,25 @@ input:checked + .icon {
         "ca ca ca"
         "sa sa sa"
         "ma ma ma";
-    grid-template-rows: repeat(6, min-content);
+    grid-template-rows: repeat(6, min-content); /* TODO: maybe change 6 to 3 */
     grid-gap: 10px;
     padding: 10px;
 }
 
-/* PORTRAIT */
+/* ICON */
 
 .icon {
-    width: 100px;
-    min-width: max-content;
     grid-area: img;
-    margin: 10px auto;
+    margin: 10px auto; /* TODO: maybe append ` 0 auto` */
 }
 
 .frame {
     width: 85px;
     height: 85px;
-    padding: 6px;
     border-radius: 50%;
-    box-shadow: 0 0 2px 1px #000;
-    margin: auto;
-    margin-bottom: -15px;
+    box-shadow: 0 0 2px 1px black;
+    padding: 6px;
+    margin: 0 auto -15px auto;
 }
 .bronze .frame {
     background: linear-gradient(#621 10%, #b76 20%, #843 40%, #b76 60%, #621 90%);
@@ -153,7 +151,7 @@ input:checked + .icon {
     background: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
 }
 .diamond.neutral .frame {
-    background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%);
+    background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%); /* TODO: confirm colors */
 }
 .diamond.fire .frame {
     background: linear-gradient(#d33 10%, #fff 20%, #f99 40%, #fee 60%, #d33 90%);
@@ -175,7 +173,7 @@ input:checked + .icon {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    box-shadow: inset 0 0 2px 1px #000;
+    box-shadow: inset 0 0 2px 1px black;
 }
 .neutral .backdrop {
     background: radial-gradient(#ccc, #888);
@@ -198,157 +196,142 @@ input:checked + .icon {
 
 .portrait {
     width: 135%;
-    margin-top: -64%;
-    margin-left: -18%;
-    filter: drop-shadow(0 0 1px #000);
+    filter: drop-shadow(0 0 1px black);
+    margin: -64% 0 0 -18%;
 }
 
 .nameplate {
     position: relative;
-    background: #3e2c29;
-    font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
-    color: #fff;
-    text-shadow: 1px 1px #000;
-    text-transform: uppercase;
     width: max-content;
-    padding: 2px 4px;
-    margin: auto;
+    background: #3e2c29;
+    text-align: center;
     border: 3px double #8f6151;
     box-shadow: 0 1px 1px 1px black;
-    text-align: center;
+    padding: 2px;
+    margin: auto;
 }
-.bronze .variant-name {
-    background: linear-gradient(white, chocolate);
-    -webkit-background-clip: text;
-}
-.silver .variant-name {
-    background: linear-gradient(white, gray);
-    -webkit-background-clip: text;
-}
-.gold .variant-name {
-    background: linear-gradient(white, gold);
-    -webkit-background-clip: text;
-}
-.diamond .variant-name {
-    background: linear-gradient(white, pink);
-    -webkit-background-clip: text;
-}
-.variant-name {
-    font-size: 20px;
-    color: transparent;
+
+.variant-name, .fancy { /* NOTE: there might be some compatibility issues */
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
     text-shadow: none;
     filter: drop-shadow(1px 1px black);
+    padding: 0 0.25em;
 }
+.bronze .variant-name, .fancy.bronze-tint {
+    background: -webkit-linear-gradient(white, chocolate);
+    background: -o-linear-gradient(transparent, transparent); /* for opera */
+    color: chocolate;
+}
+.silver .variant-name, .fancy.silver-tint {
+    background: -webkit-linear-gradient(white, gray);
+    background: -o-linear-gradient(transparent, transparent); /* for opera */
+    color: gray;
+}
+.gold .variant-name, .fancy.gold-tint {
+    background: -webkit-linear-gradient(white, gold);
+    background: -o-linear-gradient(transparent, transparent); /* for opera */
+    color: gold;
+}
+.diamond .variant-name, .fancy.diamond-tint {
+    background: -webkit-linear-gradient(white, pink);
+    background: -o-linear-gradient(transparent, transparent); /* for opera */
+    color: pink;
+}
+
+.variant-name {
+    font-size: 20px;
+}
+
 .fighter-name {
+    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 /* QUOTE */
 
 .quote {
-    font-family: 'Roboto';
     text-align: center;
-    margin-top: auto;
     grid-area: qt;
-}
-.quote:before, .quote:after {
-    content: '"';
+    margin-top: auto;
 }
 
 /* STATS */
 
-.stat {
-    font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
-    margin: auto;
+.stat { /* TODO: EVERYTHING ABOUT STATS */
     text-align: center;
     margin: auto;
+}
+.stat:before {
+    content: '\00a0';
+    width: 20px;
+    height: 20px;
+    text-indent: 25px;
+    background-size: 20px !important;
+    display: inline-block;
+    margin-right: 0.25em;
 }
 
 .atk {
     grid-area: atk;
 }
 .atk:before {
-    content: 'ATK';
     background: url(official/PowerIcon.png);
 }
+
 .hp {
     grid-area: hp;
 }
 .hp:before {
-    content: 'HP';
     background: url(official/HealthIcon.png);
 }
+
 .fs {
     grid-area: fs;
-    margin: 0 auto;
+    margin-top: 0;
 }
-.fs:before {
-    content: 'FS';
-}
+.neutral .fs:before {background: url(official/ElementalIconNeutral.png);}
+.fire .fs:before {background: url(official/ElementalIconFire.png);}
+.water .fs:before {background: url(official/ElementalIconWater.png);}
+.wind .fs:before {background: url(official/ElementalIconWind.png);}
+.light .fs:before {background: url(official/ElementalIconLight.png);}
+.dark .fs:before {background: url(official/ElementalIconDark.png);}
 
-.neutral .fs:before {background: url(official/element/Neutral.png);}
-.fire .fs:before {background: url(official/element/Fire.png);}
-.water .fs:before {background: url(official/element/Water.png);}
-.wind .fs:before {background: url(official/element/Wind.png);}
-.light .fs:before {background: url(official/element/Light.png);}
-.dark .fs:before {background: url(official/element/Dark.png);}
-
-.stat:before {
-    text-indent: 25px;
-    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: 20px !important;
-    display: inline-block;
-    margin-right: 5px;
+.stat-value {
+    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 /* ABILITIES */
 
 .ability {
     background: #263b5a;
-    box-shadow: 0 0 1px #000;
-    padding: 6px;
+    box-shadow: 0 0 1px black;
     display: grid;
     grid-gap: 6px;
+    padding: 6px;
 }
+
 .ca {
     grid-area: ca;
 }
+
 .sa {
     grid-area: sa;
 }
+
 .ma {
     grid-area: ma;
 }
 
-.number {
-    color: #00ff00;
-}
-
 .title {
-    font-family: 'Cinema', 'Trebuchet MS', 'Lucida Sans', 'Arial Narrow';
+    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
     font-size: 20px;
+    text-transform: uppercase;
     cursor: pointer;
 }
-.title:before {
-    background: linear-gradient(white, gold);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: none;
-    filter: drop-shadow(1px 1px black);
-    margin-right: 1em;
-}
-.ca .title:before {
-    content: 'CHARACTER ABILITY';
-}
-.sa .title:before {
-    content: 'SIGNATURE ABILITY';
-}
-.ma .title:before {
-    content: 'MARQUEE ABILITY';
-}
-
 
 
 .description {
@@ -359,6 +342,9 @@ input:checked + .icon {
     padding: 4px;
 }
 
+.number {
+    color: #00ff00;
+}
 
 
 
