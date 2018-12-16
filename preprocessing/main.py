@@ -14,6 +14,7 @@ common = [
     'Key_Alphabetical',
     'Key_Element',
     'Sort_Tier',
+    # 'Loading_Status_Loading', # useless after corpus loads
 
     'Stat_Lvl',
     'Key_Fighter',
