@@ -1,5 +1,6 @@
 __pycache__
 preprocessing/sgm_exports
+preprocessing/common.json
 preprocessing/study.json
 
 charactersProcessor/*/bb/gJazz.png
