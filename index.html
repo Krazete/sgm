@@ -20,19 +20,32 @@
     <span id="version">3.0.0</span>
     UNDER CONSTRUCTION (none of the buttons work yet)
     <div id="filter">
+        <div id="cancel-filter">
+            <img class="icon" src="official/constraints_no.png">
+        </div>
         <div id="medals">
-            <label><input type="checkbox"><img class="icon" src="official/constraints_bronze.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/constraints_silver.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/constraints_gold.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/constraints_diamond.png"></label>
+            <input type="checkbox" id="bronze">
+            <label for="bronze"><img class="icon" src="official/constraints_bronze.png"></label>
+            <input type="checkbox" id="silver">
+            <label for="silver"><img class="icon" src="official/constraints_silver.png"></label>
+            <input type="checkbox" id="gold">
+            <label for="gold"><img class="icon" src="official/constraints_gold.png"></label>
+            <input type="checkbox" id="diamond">
+            <label for="diamond"><img class="icon" src="official/constraints_diamond.png"></label>
         </div>
         <div id="elements">
-            <label><input type="checkbox"><img class="icon" src="official/ElementalFireBackless.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/ElementalWaterBackless.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/ElementalWindBackless.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/ElementalLightBackless.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/ElementalDarkBackless.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
+            <input type="checkbox" id="fire">
+            <label for="fire"><img class="icon" src="official/ElementalFireBackless.png"></label>
+            <input type="checkbox" id="water">
+            <label for="water"><img class="icon" src="official/ElementalWaterBackless.png"></label>
+            <input type="checkbox" id="wind">
+            <label for="wind"><img class="icon" src="official/ElementalWindBackless.png"></label>
+            <input type="checkbox" id="light">
+            <label for="light"><img class="icon" src="official/ElementalLightBackless.png"></label>
+            <input type="checkbox" id="dark">
+            <label for="dark"><img class="icon" src="official/ElementalDarkBackless.png"></label>
+            <input type="checkbox" id="neutral">
+            <label for="neutral"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
         </div>
         <div id="mastery">
             <input type="checkbox" id="be">
@@ -62,22 +75,36 @@
         </div>
     </div>
     <div id="sort">
-        <label><input type="radio" class="icon"><span id="filter-abc"></span></label>
-        <label><input type="radio" class="icon"><span id="filter-fs"></span></label>
-        <label><input type="radio" class="icon"><span id="filter-atk"></span></label>
-        <label><input type="radio" class="icon"><span id="filter-hp"></span></label>
-        <label><input type="radio" class="icon"><span id="filter-element"></span></label>
-        <label><input type="radio" class="icon"><span id="filter-tier"></span></label>
+        <input type="radio" id="abc" name="sort">
+        <label for="abc"><span id="filter-abc"></span></label>
+        <input type="radio" id="fs" name="sort">
+        <label for="fs"><span id="filter-fs"></span></label>
+        <input type="radio" id="atk" name="sort">
+        <label for="atk"><span id="filter-atk"></span></label>
+        <input type="radio" id="hp" name="sort">
+        <label for="hp"><span id="filter-hp"></span></label>
+        <input type="radio" id="element" name="sort">
+        <label for="element"><span id="filter-element"></span></label>
+        <input type="radio" id="tier" name="sort">
+        <label for="tier"><span id="filter-tier"></span></label>
     </div>
     <div id="flags">
-        <label><input type="radio" id="en"><img src="official/flag_en.png">English</label>
-        <label><input type="radio" id="fr"><img src="official/flag_fr.png">Français</label>
-        <label><input type="radio" id="es"><img src="official/flag_es.png">Español</label>
-        <label><input type="radio" id="ru"><img src="official/flag_ru.png">Pусский</label>
-        <label><input type="radio" id="jp"><img src="official/flag_jp.png">日本語</label>
-        <label><input type="radio" id="de"><img src="official/flag_de.png">Deutsch</label>
-        <label><input type="radio" id="ko"><img src="official/flag_ko.png">한국어</label>
-        <label><input type="radio" id="pt"><img src="official/flag_pt.png">Português</label>
+        <input type="radio" id="en" name="language">
+        <label for="en"><img class="icon" src="official/flag_en.png"><span class="icon">English</span></label>
+        <input type="radio" id="fr" name="language">
+        <label for="fr"><img class="icon" src="official/flag_fr.png"><span class="icon">Français</span></label>
+        <input type="radio" id="es" name="language">
+        <label for="es"><img class="icon" src="official/flag_es.png"><span class="icon">Español</span></label>
+        <input type="radio" id="ru" name="language">
+        <label for="ru"><img class="icon" src="official/flag_ru.png"><span class="icon">Pусский</span></label>
+        <input type="radio" id="jp" name="language">
+        <label for="jp"><img class="icon" src="official/flag_jp.png"><span class="icon">日本語</span></label>
+        <input type="radio" id="de" name="language">
+        <label for="de"><img class="icon" src="official/flag_de.png"><span class="icon">Deutsch</span></label>
+        <input type="radio" id="ko" name="language">
+        <label for="ko"><img class="icon" src="official/flag_ko.png"><span class="icon">한국어</span></label>
+        <input type="radio" id="pt" name="language">
+        <label for="pt"><img class="icon" src="official/flag_pt.png"><span class="icon">Português</span></label>
     </div>
     <div id="collection">
         <div id="loading">

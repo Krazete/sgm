@@ -6,6 +6,7 @@ common = [
 
     'TeamSelect_Filter',
     'TeamSelect_Sort',
+    'Language',
     'Key_Alphabetical',
     'Sort_FS',
     'SkillTree_AtkNode_Title',

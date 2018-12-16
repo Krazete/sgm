@@ -20,6 +20,10 @@ body {
     display: grid;
 }
 
+#filter, #sort, #flags {
+    z-index: 1;
+}
+
 label {
     min-width: 24px;
     height: 24px;
@@ -28,23 +32,27 @@ label {
     border: 1px solid #263b5a;
     padding: 4px;
     border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 input:checked + label {
     background: linear-gradient(#1b2a41, #314c73);
     border-color: #314c73;
 }
-input:checked + label img {
-    filter: drop-shadow(0 0 3px gold);
-}
 
 input[type='radio'], input[type='checkbox'] {
     display: none;
 }
 
-label img {
+.icon {
     max-width: 24px;
     max-height: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.r {
+    vertical-align: middle;
 }
 
 input:checked + .icon {
@@ -91,6 +99,65 @@ html[lang='de'] #version:before {content: 'VERSION: ';}
 
 /* SORT */
 
+html[lang='ja'] #flags:before {content: '\8a00\8a9e';}
+html[lang='ru'] #flags:before {content: '\042f\0417\042b\041a';}
+html[lang='en'] #flags:before {content: 'LANGUAGE';}
+html[lang='pt-br'] #flags:before {content: 'IDIOMA';}
+html[lang='fr'] #flags:before {content: 'LANGUE';}
+html[lang='es'] #flags:before {content: 'IDIOMA';}
+html[lang='ko'] #flags:before {content: '\c5b8\c5b4';}
+html[lang='de'] #flags:before {content: 'SPRACHE';}
+
+#flags:before {
+    background-size: 24px !important;
+    background-repeat: no-repeat !important;
+    height: 24px;
+    display: inline-block;
+    text-indent: 25px;
+}
+html[lang='ja'] #flags:before {
+    background: url('official/flag_en.png');
+}
+html[lang='ru'] #flags:before {
+    background: url('official/flag_fr.png');
+}
+html[lang='en'] #flags:before {
+    background: url('official/flag_es.png');
+}
+html[lang='pt-br'] #flags:before {
+    background: url('official/flag_ru.png');
+}
+html[lang='fr'] #flags:before {
+    background: url('official/flag_jp.png');
+}
+html[lang='es'] #flags:before {
+    background: url('official/flag_de.png');
+}
+html[lang='ko'] #flags:before {
+    background: url('official/flag_ko.png');
+}
+html[lang='de'] #flags:before {
+    background: url('official/flag_pt.png');
+}
+
+#sort:before {
+    background: url('official/icon_sort.png');
+    background-size: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+    display: inline-block;
+}
+
+#filter:before {
+    background: url('official/icon_filter.png');
+    background-size: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+    display: inline-block;
+}
+
 html[lang='ja'] #sort:before {content: '\4e26\3073\66ff\3048';}
 html[lang='ru'] #sort:before {content: '\0423\041f\041e\0420\042f\0414.';}
 html[lang='en'] #sort:before {content: 'SORT';}
@@ -99,6 +166,15 @@ html[lang='fr'] #sort:before {content: 'TRIER';}
 html[lang='es'] #sort:before {content: 'ORDENAR';}
 html[lang='ko'] #sort:before {content: '\c815\b82c';}
 html[lang='de'] #sort:before {content: 'SORTIEREN';}
+
+html[lang='ja'] #filter:before {content: '\30d5\30a3\30eb\30bf\30fc';}
+html[lang='ru'] #filter:before {content: '\0424\0418\041b\042c\0422\0420';}
+html[lang='en'] #filter:before {content: 'FILTER';}
+html[lang='pt-br'] #filter:before {content: 'FILTRAR';}
+html[lang='fr'] #filter:before {content: 'FILTRER';}
+html[lang='es'] #filter:before {content: 'FILTRAR';}
+html[lang='ko'] #filter:before {content: '\d544\d130';}
+html[lang='de'] #filter:before {content: 'FILTER';}
 
 html[lang='ja'] #filter-abc:before {content: '\30a2\30eb\30d5\30a1\30d9\30c3\30c8\9806';}
 html[lang='ru'] #filter-abc:before {content: '\041f\043e \0430\043b\0444\0430\0432\0438\0442\0443';}
