@@ -54,8 +54,16 @@ input:checked + .icon {
 }
 
 
+/* VERSION */
 
-
+html[lang='de'] #version:before {content: 'VERSION: ';}
+html[lang='en'] #version:before {content: 'VERSION: ';}
+html[lang='es'] #version:before {content: 'VERSI\00d3N: ';}
+html[lang='fr'] #version:before {content: 'VERSION: ';}
+html[lang='ja'] #version:before {content: '\30d0\30fc\30b8\30e7\30f3: ';}
+html[lang='ko'] #version:before {content: '\bc84\c804: ';}
+html[lang='pt-br'] #version:before {content: 'VERS\00c3O: ';}
+html[lang='ru'] #version:before {content: '\0412\0415\0420\0421\0418\042f: ';}
 
 /* COLLECTION */
 
@@ -267,6 +275,10 @@ html[lang='ru'] #loading:after {content: '\0417\0410\0413\0420\0423\0417\041a\04
     font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+html[lang='ru'] .variant-name, html[lang='ru'] .fighter-name, html[lang='ru'] .fancy {
+    font-family: 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 /* QUOTE */
