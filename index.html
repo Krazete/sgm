@@ -18,6 +18,7 @@
 </head>
 <body>
     <span id="version">3.0.0</span>
+    UNDER CONSTRUCTION (none of the buttons work yet)
     <div id="filter">
         <div id="medals">
             <label><input type="checkbox"><img class="icon" src="official/constraints_bronze.png"></label>
@@ -34,27 +35,39 @@
             <label><input type="checkbox"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
         </div>
         <div id="mastery">
-            <label><input type="checkbox"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/BigBand_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Cerebella_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Double_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Eliza_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Filia_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Painwheel_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Parasoul_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Peacock_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/MsFortune_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Squigly_MasteryIcon.png"></label>
-            <label><input type="checkbox"><img class="icon" src="official/Valentine_MasteryIcon.png"></label>
+            <input type="checkbox" id="be">
+            <label for="be"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
+            <input type="checkbox" id="bb">
+            <label for="bb"><img class="icon" src="official/BigBand_MasteryIcon.png"></label>
+            <input type="checkbox" id="ce">
+            <label for="ce"><img class="icon" src="official/Cerebella_MasteryIcon.png"></label>
+            <input type="checkbox" id="do">
+            <label for="do"><img class="icon" src="official/Double_MasteryIcon.png"></label>
+            <input type="checkbox" id="el">
+            <label for="el"><img class="icon" src="official/Eliza_MasteryIcon.png"></label>
+            <input type="checkbox" id="fi">
+            <label for="fi"><img class="icon" src="official/Filia_MasteryIcon.png"></label>
+            <input type="checkbox" id="pw">
+            <label for="pw"><img class="icon" src="official/Painwheel_MasteryIcon.png"></label>
+            <input type="checkbox" id="pa">
+            <label for="pa"><img class="icon" src="official/Parasoul_MasteryIcon.png"></label>
+            <input type="checkbox" id="pe">
+            <label for="pe"><img class="icon" src="official/Peacock_MasteryIcon.png"></label>
+            <input type="checkbox" id="mf">
+            <label for="mf"><img class="icon" src="official/MsFortune_MasteryIcon.png"></label>
+            <input type="checkbox" id="sq">
+            <label for="sq"><img class="icon" src="official/Squigly_MasteryIcon.png"></label>
+            <input type="checkbox" id="va">
+            <label for="va"><img class="icon" src="official/Valentine_MasteryIcon.png"></label>
         </div>
     </div>
     <div id="sort">
-        <label><input type="radio" class="icon"><span>Alphabetical</span></label>
-        <label><input type="radio" class="icon"><span>Fighter Score</span></label>
-        <label><input type="radio" class="icon"><span>ATK</span></label>
-        <label><input type="radio" class="icon"><span>HP</span></label>
-        <label><input type="radio" class="icon"><span>Element</span></label>
-        <label><input type="radio" class="icon"><span>Tier</span></label>
+        <label><input type="radio" class="icon"><span id="filter-abc"></span></label>
+        <label><input type="radio" class="icon"><span id="filter-fs"></span></label>
+        <label><input type="radio" class="icon"><span id="filter-atk"></span></label>
+        <label><input type="radio" class="icon"><span id="filter-hp"></span></label>
+        <label><input type="radio" class="icon"><span id="filter-element"></span></label>
+        <label><input type="radio" class="icon"><span id="filter-tier"></span></label>
     </div>
     <div id="flags">
         <label><input type="radio" id="en"><img src="official/flag_en.png">English</label>

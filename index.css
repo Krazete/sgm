@@ -23,14 +23,22 @@ body {
 label {
     min-width: 24px;
     height: 24px;
-    background: goldenrod;
+    background: #0f1824;
     text-align: center;
-    border: 1px solid gold;
+    border: 1px solid #263b5a;
     padding: 4px;
     border-radius: 4px;
 }
 
-label input {
+input:checked + label {
+    background: linear-gradient(#1b2a41, #314c73);
+    border-color: #314c73;
+}
+input:checked + label img {
+    filter: drop-shadow(0 0 3px gold);
+}
+
+input[type='radio'], input[type='checkbox'] {
     display: none;
 }
 
@@ -70,25 +78,81 @@ input:checked + .icon {
 
 /* VERSION */
 
-html[lang='de'] #version:before {content: 'VERSION: ';}
-html[lang='en'] #version:before {content: 'VERSION: ';}
-html[lang='es'] #version:before {content: 'VERSI\00d3N: ';}
-html[lang='fr'] #version:before {content: 'VERSION: ';}
 html[lang='ja'] #version:before {content: '\30d0\30fc\30b8\30e7\30f3: ';}
-html[lang='ko'] #version:before {content: '\bc84\c804: ';}
-html[lang='pt-br'] #version:before {content: 'VERS\00c3O: ';}
 html[lang='ru'] #version:before {content: '\0412\0415\0420\0421\0418\042f: ';}
+html[lang='en'] #version:before {content: 'VERSION: ';}
+html[lang='pt-br'] #version:before {content: 'VERS\00c3O: ';}
+html[lang='fr'] #version:before {content: 'VERSION: ';}
+html[lang='es'] #version:before {content: 'VERSI\00d3N: ';}
+html[lang='ko'] #version:before {content: '\bc84\c804: ';}
+html[lang='de'] #version:before {content: 'VERSION: ';}
 
-/* MENU */
+/* FILTER */
 
-html[lang='de'] #abc:before,
-html[lang='en'] #abc:before,
-html[lang='es'] #abc:before,
-html[lang='fr'] #abc:before,
-html[lang='pt-br'] #abc:before {content: 'ABC';}
-html[lang='ja'] #abc:before {content: '文字';}
-html[lang='ko'] #abc:before {content: '문자';}
-html[lang='ru'] #abc:before {content: 'Aa';} /* TODO: maybe only do the first letter of the alphabet */
+/* SORT */
+
+html[lang='ja'] #sort:before {content: '\4e26\3073\66ff\3048';}
+html[lang='ru'] #sort:before {content: '\0423\041f\041e\0420\042f\0414.';}
+html[lang='en'] #sort:before {content: 'SORT';}
+html[lang='pt-br'] #sort:before {content: 'ORGANIZAR';}
+html[lang='fr'] #sort:before {content: 'TRIER';}
+html[lang='es'] #sort:before {content: 'ORDENAR';}
+html[lang='ko'] #sort:before {content: '\c815\b82c';}
+html[lang='de'] #sort:before {content: 'SORTIEREN';}
+
+html[lang='ja'] #filter-abc:before {content: '\30a2\30eb\30d5\30a1\30d9\30c3\30c8\9806';}
+html[lang='ru'] #filter-abc:before {content: '\041f\043e \0430\043b\0444\0430\0432\0438\0442\0443';}
+html[lang='en'] #filter-abc:before {content: 'Alphabetical';}
+html[lang='pt-br'] #filter-abc:before {content: 'Ordem alfab\00e9tica';}
+html[lang='fr'] #filter-abc:before {content: 'Alphab\00e9tique';}
+html[lang='es'] #filter-abc:before {content: 'Orden alfab\00e9tico';}
+html[lang='ko'] #filter-abc:before {content: '\c54c\d30c\bcb3\c21c';}
+html[lang='de'] #filter-abc:before {content: 'Alphabetisch';}
+
+html[lang='ja'] #filter-fs:before {content: '\30d5\30a1\30a4\30bf\30fc\30fb\30b9\30b3\30a2';}
+html[lang='ru'] #filter-fs:before {content: '\0411\041e\0415\0412\041e\0419 \0421\0427\0415\0422';}
+html[lang='en'] #filter-fs:before {content: 'FIGHTER SCORE';}
+html[lang='pt-br'] #filter-fs:before {content: 'PONTUA\00c7\00c3O';}
+html[lang='fr'] #filter-fs:before {content: 'SCORE';}
+html[lang='es'] #filter-fs:before {content: 'PUNTUACI\00d3N ';}
+html[lang='ko'] #filter-fs:before {content: '\c804\d22c\b825';}
+html[lang='de'] #filter-fs:before {content: 'KAMPFPUNKTE';}
+
+html[lang='ja'] #filter-atk:before {content: '\653b\6483\30c0\30e1\30fc\30b8';}
+html[lang='ru'] #filter-atk:before {content: '\0423\0420\041e\041d \043e\0442 \0410\0422\0410\041a\0418';}
+html[lang='en'] #filter-atk:before {content: 'ATTACK DAMAGE';}
+html[lang='pt-br'] #filter-atk:before {content: 'DANO DOS GOLPES';}
+html[lang='fr'] #filter-atk:before {content: 'D\00c9G\00c2TS D\'ATTAQUE';}
+html[lang='es'] #filter-atk:before {content: 'DA\00d1O POR ATAQUE';}
+html[lang='ko'] #filter-atk:before {content: '\acf5\aca9 \d53c\d574';}
+html[lang='de'] #filter-atk:before {content: 'SCHADENSBOOST';}
+
+html[lang='ja'] #filter-hp:before {content: '\4f53\529b';}
+html[lang='ru'] #filter-hp:before {content: '\0417\0414\041e\0420\041e\0412\042c\0415';}
+html[lang='en'] #filter-hp:before {content: 'HEALTH';}
+html[lang='pt-br'] #filter-hp:before {content: 'VIDA';}
+html[lang='fr'] #filter-hp:before {content: 'SANT\00c9';}
+html[lang='es'] #filter-hp:before {content: 'SALUD';}
+html[lang='ko'] #filter-hp:before {content: '\ccb4\b825';}
+html[lang='de'] #filter-hp:before {content: 'GESUNDHEIT';}
+
+html[lang='ja'] #filter-element:before {content: '\5c5e\6027';}
+html[lang='ru'] #filter-element:before {content: '\0421\0442\0438\0445\0438\044f';}
+html[lang='en'] #filter-element:before {content: 'Element';}
+html[lang='pt-br'] #filter-element:before {content: 'Elemento';}
+html[lang='fr'] #filter-element:before {content: '\00c9l\00e9ment';}
+html[lang='es'] #filter-element:before {content: 'Elemento';}
+html[lang='ko'] #filter-element:before {content: '\c18d\c131';}
+html[lang='de'] #filter-element:before {content: 'Element';}
+
+html[lang='ja'] #filter-tier:before {content: '\30e9\30f3\30af';}
+html[lang='ru'] #filter-tier:before {content: '\0420\0410\041d\0413';}
+html[lang='en'] #filter-tier:before {content: 'TIER';}
+html[lang='pt-br'] #filter-tier:before {content: 'CATEGORIA';}
+html[lang='fr'] #filter-tier:before {content: 'RANG';}
+html[lang='es'] #filter-tier:before {content: 'GRADO';}
+html[lang='ko'] #filter-tier:before {content: '\b4f1\ae09';}
+html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 
 /* COLLECTION */
 
@@ -126,14 +190,14 @@ html[lang='ru'] #abc:before {content: 'Aa';} /* TODO: maybe only do the first le
     display: block;
     animation: 0.7s infinite fader;
 }
-html[lang='de'] #loading:after {content: 'LADE...';}
-html[lang='en'] #loading:after {content: 'LOADING...';}
-html[lang='es'] #loading:after {content: 'CARGANDO...';}
-html[lang='fr'] #loading:after {content: 'CHARGEMENT...';}
 html[lang='ja'] #loading:after {content: '\30ed\30fc\30c9\4e2d...';}
-html[lang='ko'] #loading:after {content: '\b85c\b529\c911\2026';}
-html[lang='pt-br'] #loading:after {content: 'CARREGANDO...';}
 html[lang='ru'] #loading:after {content: '\0417\0410\0413\0420\0423\0417\041a\0410...';}
+html[lang='en'] #loading:after {content: 'LOADING...';}
+html[lang='pt-br'] #loading:after {content: 'CARREGANDO...';}
+html[lang='fr'] #loading:after {content: 'CHARGEMENT...';}
+html[lang='es'] #loading:after {content: 'CARGANDO...';}
+html[lang='ko'] #loading:after {content: '\b85c\b529 \c911\2026';}
+html[lang='de'] #loading:after {content: 'LADE ...';}
 
 @keyframes fader {
     0% {
