@@ -2,6 +2,24 @@ from preprocessing import file
 from collections import namedtuple
 import re
 
+common = [
+    'Stat_AttackFlat_Label',
+    'Stat_HealthFlat_Label',
+    'SkillTree_CharacterAbility_Title',
+    'CharacterDetails_SA',
+    'SkillTree_SuperAbility_Title',
+    'TeamSelect_Filter',
+    'TeamSelect_Sort',
+    'Sort_FS',
+    'Key_Alphabetical',
+    'Key_Element',
+    'Sort_Tier',
+
+    'Stat_Lvl',
+    'Key_Fighter',
+    'MainMenu_Collection'
+]
+
 Character = namedtuple('Character', ('fighter', 'tier', 'variant_id', 'variant')) # TODO: eliminate unnecessary attributes
 
 # Study Monolith Structure
@@ -247,6 +265,8 @@ if __name__ =='__main__':
 
     for language in corpus:
         primcorpus = {key: corpus[language][key] for key in corpus_keys if key in corpus[language]}
+        for key in common:
+            primcorpus.setdefault(key, corpus[language][key])
         file.save(primcorpus, 'data/{}.json'.format(language))
     file.save(fighters, 'data/fighters.json')
     file.save(variants, 'data/variants.json')
