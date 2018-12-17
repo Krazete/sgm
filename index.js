@@ -23,7 +23,7 @@ function initialize() {
         corpus = responses[0];
         fighters = responses[1];
         variants = responses[2];
-        init(sa.value, ma.value, red.checked);
+        init(sa.value, ma.value);
         sort(order);
         toggle(mastery, "blah");
         toggle(element, "blah");
@@ -73,10 +73,6 @@ function load(path) {
     return new Promise(request);
 }
 
-function addTapListener(e, f) {
-    e.addEventListener("click", f);
-    e.addEventListener("touchstart", function () {});
-}
 
 
 
@@ -146,7 +142,7 @@ function createAbility(type, titleText, descriptionTexts) {
                 span.className = "fancy silver-tint";
                 span.innerHTML = titleText;
             abilityName.appendChild(span);
-            addTapListener(abilityName, collapse);
+            abilityName.addEventListener("click", collapse);
         ability.appendChild(abilityName);
         for (var descriptionText of descriptionTexts) {
             var description = document.createElement("div");
@@ -228,7 +224,7 @@ function createMA(key, n) {
     return createAbility(type, titleText, descriptionTexts);
 }
 
-function init(sa, ma, sig_only) {
+function init(sa, ma) {
     for (var key in variants) {
         var atk = variants[key].baseStats[0].attack;
         var hp = variants[key].baseStats[0].lifebar;

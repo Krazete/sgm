@@ -17,8 +17,37 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <span id="version">3.0.0</span>
-    UNDER CONSTRUCTION (none of the buttons work yet)
+    <!-- UNDER CONSTRUCTION (none of the buttons work yet) -->
+    <div id="header">
+        <div id="language"></div>
+        <div id="version">
+            3.0.0
+            <img class="icon" src="official/IconInfo.png">
+        </div>
+    </div>
+    <div>
+        <input type="radio" id="en" name="language">
+        <label for="en"><img class="icon" src="official/flag_en.png"><span class="icon">English</span></label>
+        <input type="radio" id="fr" name="language">
+        <label for="fr"><img class="icon" src="official/flag_fr.png"><span class="icon">Français</span></label>
+        <input type="radio" id="es" name="language">
+        <label for="es"><img class="icon" src="official/flag_es.png"><span class="icon">Español</span></label>
+        <input type="radio" id="ru" name="language">
+        <label for="ru"><img class="icon" src="official/flag_ru.png"><span class="icon">Pусский</span></label>
+        <input type="radio" id="jp" name="language">
+        <label for="jp"><img class="icon" src="official/flag_jp.png"><span class="icon">日本語</span></label>
+        <input type="radio" id="de" name="language">
+        <label for="de"><img class="icon" src="official/flag_de.png"><span class="icon">Deutsch</span></label>
+        <input type="radio" id="ko" name="language">
+        <label for="ko"><img class="icon" src="official/flag_ko.png"><span class="icon">한국어</span></label>
+        <input type="radio" id="pt" name="language">
+        <label for="pt"><img class="icon" src="official/flag_pt.png"><span class="icon">Português</span></label>
+    </div>
+    <div id="collection">
+        <div id="loading">
+            <img src="loading/loading.gif" alt="loading">
+        </div>
+    </div>
     <div id="filter">
         <div id="cancel-filter">
             <img class="icon" src="official/constraints_no.png">
@@ -88,34 +117,15 @@
         <input type="radio" id="tier" name="sort">
         <label for="tier"><span id="filter-tier"></span></label>
     </div>
-    <div id="flags">
-        <input type="radio" id="en" name="language">
-        <label for="en"><img class="icon" src="official/flag_en.png"><span class="icon">English</span></label>
-        <input type="radio" id="fr" name="language">
-        <label for="fr"><img class="icon" src="official/flag_fr.png"><span class="icon">Français</span></label>
-        <input type="radio" id="es" name="language">
-        <label for="es"><img class="icon" src="official/flag_es.png"><span class="icon">Español</span></label>
-        <input type="radio" id="ru" name="language">
-        <label for="ru"><img class="icon" src="official/flag_ru.png"><span class="icon">Pусский</span></label>
-        <input type="radio" id="jp" name="language">
-        <label for="jp"><img class="icon" src="official/flag_jp.png"><span class="icon">日本語</span></label>
-        <input type="radio" id="de" name="language">
-        <label for="de"><img class="icon" src="official/flag_de.png"><span class="icon">Deutsch</span></label>
-        <input type="radio" id="ko" name="language">
-        <label for="ko"><img class="icon" src="official/flag_ko.png"><span class="icon">한국어</span></label>
-        <input type="radio" id="pt" name="language">
-        <label for="pt"><img class="icon" src="official/flag_pt.png"><span class="icon">Português</span></label>
-    </div>
-    <div id="collection">
-        <div id="loading">
-            <img src="loading/loading.gif" alt="loading">
+    <div>Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
+    <div>Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
+    <div id="footer">
+        <div id="zoom">
+            <img class="button" src="official/ZoomOut.png" id="zoom-out">
+            <img class="button" src="official/ZoomIn.png" id="zoom-in">
         </div>
-    </div>
-    <div id="foot">
-        <label class="description">Show Signatures Only<input type="checkbox" id="red" onclick="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></label>
-        <br>
-        <label class="description">Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></label>
-        <label class="description">Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></label>
+        <img class="button" src="official/WinsToggleIcon.png" id="fighter-settings">
+        <img class="icon" src="official/icon_filter.png" id="filter-sort">
     </div>
 </body>
 </html>

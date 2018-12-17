@@ -9,7 +9,7 @@
 }
 
 body {
-    background: black;
+    background: #1b2a41;
     color: white;
     font-family: 'Roboto'; /* TODO: add backup fonts */
     text-shadow: 1px 1px black;
@@ -17,10 +17,9 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    display: grid;
 }
 
-#filter, #sort, #flags {
+#filter, #sort, #language {
     z-index: 1;
 }
 
@@ -60,6 +59,12 @@ input:checked + .icon {
     filter: drop-shadow(0 0 3px #fd0);
 }
 
+.button {
+    max-width: 36px;
+    max-height: 36px;
+    cursor: pointer;
+    border-radius: 50%;
+}
 
 
 #filter {
@@ -99,48 +104,54 @@ html[lang='de'] #version:before {content: 'VERSION: ';}
 
 /* SORT */
 
-html[lang='ja'] #flags:before {content: '\8a00\8a9e';}
-html[lang='ru'] #flags:before {content: '\042f\0417\042b\041a';}
-html[lang='en'] #flags:before {content: 'LANGUAGE';}
-html[lang='pt-br'] #flags:before {content: 'IDIOMA';}
-html[lang='fr'] #flags:before {content: 'LANGUE';}
-html[lang='es'] #flags:before {content: 'IDIOMA';}
-html[lang='ko'] #flags:before {content: '\c5b8\c5b4';}
-html[lang='de'] #flags:before {content: 'SPRACHE';}
-
-#flags:before {
-    background-size: 24px !important;
-    background-repeat: no-repeat !important;
+#language:before {
+    /* font-family: 'Cinema'; */
     height: 24px;
     display: inline-block;
-    text-indent: 25px;
 }
-html[lang='ja'] #flags:before {
+html[lang='ja'] #language:before {content: '\8a00\8a9e: ';}
+html[lang='ru'] #language:before {content: '\042f\0417\042b\041a: ';}
+html[lang='en'] #language:before {content: 'LANGUAGE: ';}
+html[lang='pt-br'] #language:before {content: 'IDIOMA: ';}
+html[lang='fr'] #language:before {content: 'LANGUE: ';}
+html[lang='es'] #language:before {content: 'IDIOMA: ';}
+html[lang='ko'] #language:before {content: '\c5b8\c5b4: ';}
+html[lang='de'] #language:before {content: 'SPRACHE: ';}
+
+#language:after {
+    content: '\00a0';
+    display: inline-block;
+    background-size: 24px !important;
+    background-repeat: no-repeat !important;
+    width: 24px;
+}
+html[lang='ja'] #language:after {
     background: url('official/flag_en.png');
 }
-html[lang='ru'] #flags:before {
+html[lang='ru'] #language:after {
     background: url('official/flag_fr.png');
 }
-html[lang='en'] #flags:before {
+html[lang='en'] #language:after {
     background: url('official/flag_es.png');
 }
-html[lang='pt-br'] #flags:before {
+html[lang='pt-br'] #language:after {
     background: url('official/flag_ru.png');
 }
-html[lang='fr'] #flags:before {
+html[lang='fr'] #language:after {
     background: url('official/flag_jp.png');
 }
-html[lang='es'] #flags:before {
+html[lang='es'] #language:after {
     background: url('official/flag_de.png');
 }
-html[lang='ko'] #flags:before {
+html[lang='ko'] #language:after {
     background: url('official/flag_ko.png');
 }
-html[lang='de'] #flags:before {
+html[lang='de'] #language:after {
     background: url('official/flag_pt.png');
 }
 
 #sort:before {
+    font-family: 'Cinema';
     background: url('official/icon_sort.png');
     background-size: 24px;
     height: 24px;
@@ -150,6 +161,7 @@ html[lang='de'] #flags:before {
 }
 
 #filter:before {
+    font-family: 'Cinema';
     background: url('official/icon_filter.png');
     background-size: 24px;
     height: 24px;
@@ -230,9 +242,63 @@ html[lang='es'] #filter-tier:before {content: 'GRADO';}
 html[lang='ko'] #filter-tier:before {content: '\b4f1\ae09';}
 html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MENUS */
+
+#header *:first-child, #footer *:first-child {
+    margin: auto 0;
+}
+
+#header *:nth-child(2), #footer *:nth-child(2) {
+    margin: auto;
+}
+
+#header *:last-child, #footer *:last-child {
+    margin: auto 0 auto auto;
+}
+
+/* HEADER */
+
+#header {
+    background: #1b2a41;
+    box-shadow: 0 3px 3px black;
+    border-bottom: 1px solid #ccb55a;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 3px 6px;
+}
+
+/* FOOTER */
+
+#footer {
+    position: sticky;
+    bottom: -1px;
+    background: linear-gradient(#314c73, #1b2a41);
+    box-shadow: 0 -3px 3px black;
+    border-top: 1px solid #ccb55a;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3px 6px;
+}
+
 /* COLLECTION */
 
 #collection {
+    background: black;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-gap: 6px;
