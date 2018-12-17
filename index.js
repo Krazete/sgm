@@ -224,6 +224,128 @@ function createMA(key, n) {
     return createAbility(type, titleText, descriptionTexts);
 }
 
+function createWikia(key) {
+    var wikia = document.createElement("a");
+        wikia.className = "wikia";
+        wikia.target = "_blank";
+        wikia.href = [
+            "https://skullgirlsmobile.wikia.com/wiki",
+            wikia_paths[key]
+        ].join("/");
+    return wikia;
+}
+
+/* TODO: review all these links */
+var wikia_paths = { /* from English corpus */
+    "nEgrets": "No Egrets",
+    "tAFolks": "That's All Folks!",
+    "nSense": "Nunsense",
+    "meow": "Meow & Furever",
+    "tTyrant": "Temple Tyrant",
+    "gMatt": "Gray Matter",
+    "necroB": "Necrobreaker",
+    "dMight": "Dark Might",
+    "splash": "Hack n' Splash",
+    "hHanded": "Heavy Handed",
+    "toad": "Toad Warrior",
+    "fEnds": "Frayed Ends",
+    "bBath": "Bloodbath",
+    "gShift": "Graveyard Shift",
+    "gloom": "Tomb & Gloom",
+    "mTrial": "Ms. Trial",
+    "dHeat": "Dead Heat",
+    "hCat": "Hellcat",
+    "wBane": "Wulfsbane",
+    "rBlight": "Rainbow Blight",
+    "polter": "Poltergust",
+    "sketch": "Sketchy",
+    "bFreeze": "Brain Freeze",
+    "rerun": "Rerun",
+    "rNerv": "Raw Nerv",
+    "xMorph": "Xenomorph",
+    "nDepart": "Nearly Departed",
+    "dLicious": "Doublicious",
+    "nOne": "Number One",
+    "sSalt": "Summer Salt",
+    "claw": "Claw & Order",
+    "bValen": "Bloody Valentine",
+    "rCopy": "Robocopy",
+    "pTech": "Pyro-Technique",
+    "bTop": "Big Top",
+    "fFrame": "Freeze Frame",
+    "uStudy": "Understudy",
+    "iThreat": "Idol Threat",
+    "wresX": "Wrestler X",
+    "dInterv": "Diva Intervention",
+    "pDark": "Purrfect Dark",
+    "rBlonde": "Regally Blonde",
+    "eSax": "Epic Sax",
+    "pDick": "Private Dick",
+    "hAppar": "Hair Apparent",
+    "fTrap": "Fly Trap",
+    "sGeneral": "Surgeon General",
+    "aForce": "Armed Forces",
+    "pShoot": "Pea Shooter",
+    "lHope": "Last Hope",
+    "sStiff": "Scared Stiff",
+    "hMan": "Hype Man",
+    "rusty": "Rusty",
+    "oMai": "Oh Mai",
+    "sViper": "Scarlet Viper",
+    "hReign": "Heavy Reign",
+    "hStrong": "Headstrong",
+    "rEvil": "Resonant Evil",
+    "inDeni": "In Denile",
+    "fFly": "Firefly",
+    "bMFrosty": "Bad Ms Frosty",
+    "jKit": "Just Kitten",
+    "hMetal": "Heavy Metal",
+    "cStones": "Cold Stones",
+    "scrub": "Scrub",
+    "dLocks": "Dread Locks",
+    "sFright": "Stage Fright",
+    "uTouch": "Untouchable",
+    "bExor": "Bio-Exorcist",
+    "wSwept": "Windswept",
+    "dBrawl": "Dragon Brawler",
+    "uViolent": "Ultraviolent",
+    "bLine": "Bassline",
+    "gFan": "Grim Fan",
+    "gJazz": "G.I. Jazz",
+    "bHDay": "Bad Hair Day",
+    "fFury": "Furry Fury",
+    "shelt": "Sheltered",
+    "fColor": "Myst-Match",
+    "lucky": "Feline Lucky",
+    "pWeave": "Parasite Weave",
+    "bBox": "Beat Box",
+    "bDrive": "Blood Drive",
+    "jBreaker": "Jawbreaker",
+    "lCrafted": "Love Crafted",
+    "prime": "Primed",
+    "wWarr": "Weekend Warrior",
+    "iHot": "Icy Hot",
+    "hQuin": "Harlequin",
+    "bKill": "Buzzkill",
+    "uDog": "Underdog",
+    "sSchool": "Sundae School",
+    "iFiber": "Immoral Fiber",
+    "aGreed": "Assassin's Greed",
+    "tMett": "Twisted Mettle",
+    "dOWint": "Dead of Winter",
+    "rAppr": "Rage Appropriate",
+    "mSonic": "Megasonic",
+    "cCutter": "Class Cutter",
+    "dCrypt": "Decrypted",
+    "pPride": "Princess Pride",
+    "rVelvet": "Red Velvet",
+    "sKill": "Silent Kill",
+    "sCross": "Star-Crossed",
+    "ink": "Inkling",
+    "iLeague": "Ivy League",
+    "sOut": "Stand Out"
+};
+
 function init(sa, ma) {
     for (var key in variants) {
         var atk = variants[key].baseStats[0].attack;
@@ -245,6 +367,7 @@ function init(sa, ma) {
             card.appendChild(createCA(key));
             card.appendChild(createSA(key, sa));
             card.appendChild(createMA(key, ma));
+            card.appendChild(createWikia(key));
         collection.appendChild(card);
     }
 }

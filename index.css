@@ -278,7 +278,7 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
     box-shadow: 0 3px 3px black;
     border-bottom: 1px solid #ccb55a;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 3px 6px;
 }
 
@@ -356,6 +356,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 /* CARD */
 
 .card {
+    position: relative;
     background: #1b2a41;
     border: 3px double #ccb55a;
     display: grid;
@@ -647,6 +648,24 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 
 .number {
     color: #0f0; /* TODO: standardize color format */
+}
+
+/* WIKIA */
+
+.wikia {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 6px;
+}
+
+.wikia:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: url('official/icon_externalsite.png');
+    background-size: 12px;
+    display: block;
 }
 
 /* GENERAL */
