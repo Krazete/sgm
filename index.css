@@ -48,6 +48,16 @@ html[lang='ru'] .cinema {
     grid-gap: 4px;
 }
 
+.half {
+    min-width: 45%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.half > div {
+    display: inline-grid;
+}
+
 .hidden {
     display: none;
 }
@@ -165,14 +175,14 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 /* SORT */
 
 /* unused */
-html[lang='ja'] #language:before {background: url('official/flag_jp.png');}
-html[lang='ru'] #language:before {background: url('official/flag_ru.png');}
-html[lang='en'] #language:before {background: url('official/flag_en.png');}
-html[lang='pt-br'] #language:before {background: url('official/flag_pt.png');}
-html[lang='fr'] #language:before {background: url('official/flag_fr.png');}
-html[lang='es'] #language:before {background: url('official/flag_es.png');}
-html[lang='ko'] #language:before {background: url('official/flag_ko.png');}
-html[lang='de'] #language:before {background: url('official/flag_de.png');}
+(#jp + label):before {background: url('official/flag_jp.png');}
+(#ru + label):before {background: url('official/flag_ru.png');}
+(#en + label):before {background: url('official/flag_en.png');}
+(#pt + label):before {background: url('official/flag_pt.png');}
+(#fr + label):before {background: url('official/flag_fr.png');}
+(#es + label):before {background: url('official/flag_es.png');}
+(#ko + label):before {background: url('official/flag_ko.png');}
+(#de + label):before {background: url('official/flag_de.png');}
 
 #sort:before {
     background: url('official/icon_sort.png');
@@ -316,13 +326,6 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
     padding: 3px 6px;
 }
 
-#menu {
-    background: linear-gradient(#1b2a41, #0f1824);
-    box-shadow: 0 -3px 3px black;
-    border-top: 1px solid #ccb55a;
-    padding: 6px;
-}
-
 #zoom {
     margin: auto 0;
 }
@@ -333,6 +336,14 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 
 #filter-sort {
     margin: auto 0 auto auto;
+}
+
+#menu {
+    background: linear-gradient(#1b2a41, #0f1824);
+    text-align: center;
+    box-shadow: 0 -3px 3px black;
+    border-top: 1px solid #ccb55a;
+    padding: 6px;
 }
 
 /* COLLECTION */
@@ -699,9 +710,9 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 
 .wikia:after {
     content: '';
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background: url('official/icon_externalsite.png');
-    background-size: 12px;
+    background-size: 14px;
     display: block;
 }
