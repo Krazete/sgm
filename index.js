@@ -100,7 +100,7 @@ function createAvatar(key) {
             frame.appendChild(backdrop);
         avatar.appendChild(frame);
         var nameplate = document.createElement("div");
-            nameplate.className = "nameplate";
+            nameplate.className = "nameplate cinema";
             var variantName = document.createElement("div");
                 variantName.className = "variant-name";
                 variantName.innerHTML = corpus[variants[key].name];
@@ -124,7 +124,7 @@ function createStat(type, value) {
     var stat = document.createElement("div");
         stat.className = ["stat", type].join(" ");
         var span = document.createElement("span");
-            span.className = "fancy silver-tint";
+            span.className = "cinema fancy silver-tint";
             span.innerHTML = value.toLocaleString();
         stat.appendChild(span);
     return stat;
@@ -134,7 +134,7 @@ function createAbility(type, titleText, descriptionTexts) {
     var ability = document.createElement("div");
         ability.className = ["ability", type].join(" ");
         var abilityName = document.createElement("div");
-            abilityName.className = "ability-name";
+            abilityName.className = "ability-name cinema";
             var label = document.createElement("span");
                 label.className = "label fancy gold-tint";
             abilityName.appendChild(label);

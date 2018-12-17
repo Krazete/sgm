@@ -26,6 +26,13 @@ a {
     text-decoration: inherit;
 }
 
+.cinema {
+    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+html[lang='ru'] .cinema {
+    font-family: 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+
 .scroller {
     width: max-content;
     max-width: 100%;
@@ -168,7 +175,6 @@ html[lang='ko'] #language:before {background: url('official/flag_ko.png');}
 html[lang='de'] #language:before {background: url('official/flag_de.png');}
 
 #sort:before {
-    font-family: 'Cinema';
     background: url('official/icon_sort.png');
     background-size: 24px;
     height: 24px;
@@ -178,7 +184,6 @@ html[lang='de'] #language:before {background: url('official/flag_de.png');}
 }
 
 #filter:before {
-    font-family: 'Cinema';
     background: url('official/icon_filter.png');
     background-size: 24px;
     height: 24px;
@@ -297,6 +302,7 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 /* FOOTER */
 
 #footer {
+    position: -webkit-sticky;
     position: sticky;
     bottom: -1px;
 }
@@ -311,7 +317,7 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 }
 
 #menu {
-    background: #0f1824;
+    background: linear-gradient(#1b2a41, #0f1824);
     box-shadow: 0 -3px 3px black;
     border-top: 1px solid #ccb55a;
     padding: 6px;
@@ -360,7 +366,6 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 
 #loading:after {
     content: 'LOADING...';
-    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
     font-size: 30px;
     text-align: center;
     display: block;
@@ -495,7 +500,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .variant-name, .fancy { /* NOTE: there might be some compatibility issues */
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
-    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
     text-transform: uppercase;
     text-shadow: none;
     filter: drop-shadow(1px 1px black);
@@ -527,7 +531,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 }
 
 .fighter-name {
-    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
 }
