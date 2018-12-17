@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108437510-3"></script>
@@ -19,31 +19,33 @@
 <body>
     <!-- UNDER CONSTRUCTION (none of the buttons work yet) -->
     <div id="header">
-        <div id="language">: </div>
-        <div class="fancy gold-tint" style="font-size:30px">
-            SKULLGIRLS MOBILE FIGHTER GALLERY
-        </div>
-        <div class="butt">
+        <span class="banner fancy gold-tint">SKULLGIRLS MOBILE</span>
+        <span class="banner fancy diamond-tint">FIGHTER GALLERY</span>
+        <div class="ribbon">
             <a id="version" target="_blank" href="https://github.com/Krazete/sgm#readme">3.0.0</a>
+        </div>
+        <div class="scroller">
+            <div>
+                <input type="button" id="en" name="language">
+                <label for="en"><img class="icon" src="official/flag_en.png"><span class="icon">English</span></label>
+                <input type="button" id="fr" name="language">
+                <label for="fr"><img class="icon" src="official/flag_fr.png"><span class="icon">Français</span></label>
+                <input type="button" id="es" name="language">
+                <label for="es"><img class="icon" src="official/flag_es.png"><span class="icon">Español</span></label>
+                <input type="button" id="ru" name="language">
+                <label for="ru"><img class="icon" src="official/flag_ru.png"><span class="icon">Pусский</span></label>
+                <input type="button" id="jp" name="language">
+                <label for="jp"><img class="icon" src="official/flag_jp.png"><span class="icon">日本語</span></label>
+                <input type="button" id="de" name="language">
+                <label for="de"><img class="icon" src="official/flag_de.png"><span class="icon">Deutsch</span></label>
+                <input type="button" id="ko" name="language">
+                <label for="ko"><img class="icon" src="official/flag_ko.png"><span class="icon">한국어</span></label>
+                <input type="button" id="pt" name="language">
+                <label for="pt"><img class="icon" src="official/flag_pt.png"><span class="icon">Português</span></label>
+            </div>
         </div>
     </div>
     <div>
-        <input type="radio" id="en" name="language">
-        <label for="en"><img class="icon" src="official/flag_en.png"><span class="icon">English</span></label>
-        <input type="radio" id="fr" name="language">
-        <label for="fr"><img class="icon" src="official/flag_fr.png"><span class="icon">Français</span></label>
-        <input type="radio" id="es" name="language">
-        <label for="es"><img class="icon" src="official/flag_es.png"><span class="icon">Español</span></label>
-        <input type="radio" id="ru" name="language">
-        <label for="ru"><img class="icon" src="official/flag_ru.png"><span class="icon">Pусский</span></label>
-        <input type="radio" id="jp" name="language">
-        <label for="jp"><img class="icon" src="official/flag_jp.png"><span class="icon">日本語</span></label>
-        <input type="radio" id="de" name="language">
-        <label for="de"><img class="icon" src="official/flag_de.png"><span class="icon">Deutsch</span></label>
-        <input type="radio" id="ko" name="language">
-        <label for="ko"><img class="icon" src="official/flag_ko.png"><span class="icon">한국어</span></label>
-        <input type="radio" id="pt" name="language">
-        <label for="pt"><img class="icon" src="official/flag_pt.png"><span class="icon">Português</span></label>
     </div>
     <div id="collection">
         <div id="loading">
@@ -64,6 +66,7 @@
             <input type="checkbox" id="diamond">
             <label for="diamond"><img class="icon" src="official/constraints_diamond.png"></label>
         </div>
+        <div class="line"></div>
         <div id="elements">
             <input type="checkbox" id="fire">
             <label for="fire"><img class="icon" src="official/ElementalFireBackless.png"></label>
@@ -78,6 +81,7 @@
             <input type="checkbox" id="neutral">
             <label for="neutral"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
         </div>
+        <div class="line"></div>
         <div id="mastery">
             <input type="checkbox" id="be">
             <label for="be"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
