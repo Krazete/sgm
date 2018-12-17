@@ -48,7 +48,6 @@ input[type='radio'], input[type='checkbox'] {
     max-width: 24px;
     max-height: 24px;
     vertical-align: middle;
-    cursor: pointer;
 }
 .r {
     vertical-align: middle;
@@ -91,14 +90,30 @@ input:checked + .icon {
 
 /* VERSION */
 
-html[lang='ja'] #version:before {content: '\30d0\30fc\30b8\30e7\30f3: ';}
-html[lang='ru'] #version:before {content: '\0412\0415\0420\0421\0418\042f: ';}
-html[lang='en'] #version:before {content: 'VERSION: ';}
-html[lang='pt-br'] #version:before {content: 'VERS\00c3O: ';}
-html[lang='fr'] #version:before {content: 'VERSION: ';}
-html[lang='es'] #version:before {content: 'VERSI\00d3N: ';}
-html[lang='ko'] #version:before {content: '\bc84\c804: ';}
-html[lang='de'] #version:before {content: 'VERSION: ';}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#version:before {
+    content: '\00a0';
+    background: url('official/IconInfo.png');
+    height: 20px;
+    text-indent: 23px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 0.25em;
+
+}
+html[lang='ja'] #version:before {content: '\30d0\30fc\30b8\30e7\30f3:';}
+html[lang='ru'] #version:before {content: '\0412\0415\0420\0421\0418\042f:';}
+html[lang='en'] #version:before {content: 'VERSION:';}
+html[lang='pt-br'] #version:before {content: 'VERS\00c3O:';}
+html[lang='fr'] #version:before {content: 'VERSION:';}
+html[lang='es'] #version:before {content: 'VERSI\00d3N:';}
+html[lang='ko'] #version:before {content: '\bc84\c804:';}
+html[lang='de'] #version:before {content: 'VERSION:';}
 
 /* FILTER */
 
@@ -109,14 +124,14 @@ html[lang='de'] #version:before {content: 'VERSION: ';}
     height: 24px;
     display: inline-block;
 }
-html[lang='ja'] #language:before {content: '\8a00\8a9e: ';}
-html[lang='ru'] #language:before {content: '\042f\0417\042b\041a: ';}
-html[lang='en'] #language:before {content: 'LANGUAGE: ';}
-html[lang='pt-br'] #language:before {content: 'IDIOMA: ';}
-html[lang='fr'] #language:before {content: 'LANGUE: ';}
-html[lang='es'] #language:before {content: 'IDIOMA: ';}
-html[lang='ko'] #language:before {content: '\c5b8\c5b4: ';}
-html[lang='de'] #language:before {content: 'SPRACHE: ';}
+html[lang='ja'] #language:before {content: '\8a00\8a9e';}
+html[lang='ru'] #language:before {content: '\042f\0417\042b\041a';}
+html[lang='en'] #language:before {content: 'LANGUAGE';}
+html[lang='pt-br'] #language:before {content: 'IDIOMA';}
+html[lang='fr'] #language:before {content: 'LANGUE';}
+html[lang='es'] #language:before {content: 'IDIOMA';}
+html[lang='ko'] #language:before {content: '\c5b8\c5b4';}
+html[lang='de'] #language:before {content: 'SPRACHE';}
 
 #language:after {
     content: '\00a0';
@@ -656,6 +671,7 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
     position: absolute;
     top: 0;
     right: 0;
+    opacity: 0.5;
     margin: 6px;
 }
 
