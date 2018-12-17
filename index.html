@@ -26,112 +26,116 @@
         </div>
         <div class="scroller">
             <div>
-                <input type="button" id="en" name="language">
+                <input type="radio" id="en" name="language">
                 <label for="en"><img class="icon" src="official/flag_en.png"><span class="icon">English</span></label>
-                <input type="button" id="fr" name="language">
+                <input type="radio" id="fr" name="language">
                 <label for="fr"><img class="icon" src="official/flag_fr.png"><span class="icon">Français</span></label>
-                <input type="button" id="es" name="language">
+                <input type="radio" id="es" name="language">
                 <label for="es"><img class="icon" src="official/flag_es.png"><span class="icon">Español</span></label>
-                <input type="button" id="ru" name="language">
+                <input type="radio" id="ru" name="language">
                 <label for="ru"><img class="icon" src="official/flag_ru.png"><span class="icon">Pусский</span></label>
-                <input type="button" id="jp" name="language">
+                <input type="radio" id="jp" name="language">
                 <label for="jp"><img class="icon" src="official/flag_jp.png"><span class="icon">日本語</span></label>
-                <input type="button" id="de" name="language">
+                <input type="radio" id="de" name="language">
                 <label for="de"><img class="icon" src="official/flag_de.png"><span class="icon">Deutsch</span></label>
-                <input type="button" id="ko" name="language">
+                <input type="radio" id="ko" name="language">
                 <label for="ko"><img class="icon" src="official/flag_ko.png"><span class="icon">한국어</span></label>
-                <input type="button" id="pt" name="language">
+                <input type="radio" id="pt" name="language">
                 <label for="pt"><img class="icon" src="official/flag_pt.png"><span class="icon">Português</span></label>
             </div>
         </div>
-    </div>
-    <div>
     </div>
     <div id="collection">
         <div id="loading">
             <img src="loading/loading.gif" alt="loading">
         </div>
     </div>
-    <div id="filter">
-        <div id="cancel-filter">
-            <img class="icon" src="official/constraints_no.png">
-        </div>
-        <div id="medals">
-            <input type="checkbox" id="bronze">
-            <label for="bronze"><img class="icon" src="official/constraints_bronze.png"></label>
-            <input type="checkbox" id="silver">
-            <label for="silver"><img class="icon" src="official/constraints_silver.png"></label>
-            <input type="checkbox" id="gold">
-            <label for="gold"><img class="icon" src="official/constraints_gold.png"></label>
-            <input type="checkbox" id="diamond">
-            <label for="diamond"><img class="icon" src="official/constraints_diamond.png"></label>
-        </div>
-        <div class="line"></div>
-        <div id="elements">
-            <input type="checkbox" id="fire">
-            <label for="fire"><img class="icon" src="official/ElementalFireBackless.png"></label>
-            <input type="checkbox" id="water">
-            <label for="water"><img class="icon" src="official/ElementalWaterBackless.png"></label>
-            <input type="checkbox" id="wind">
-            <label for="wind"><img class="icon" src="official/ElementalWindBackless.png"></label>
-            <input type="checkbox" id="light">
-            <label for="light"><img class="icon" src="official/ElementalLightBackless.png"></label>
-            <input type="checkbox" id="dark">
-            <label for="dark"><img class="icon" src="official/ElementalDarkBackless.png"></label>
-            <input type="checkbox" id="neutral">
-            <label for="neutral"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
-        </div>
-        <div class="line"></div>
-        <div id="mastery">
-            <input type="checkbox" id="be">
-            <label for="be"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
-            <input type="checkbox" id="bb">
-            <label for="bb"><img class="icon" src="official/BigBand_MasteryIcon.png"></label>
-            <input type="checkbox" id="ce">
-            <label for="ce"><img class="icon" src="official/Cerebella_MasteryIcon.png"></label>
-            <input type="checkbox" id="do">
-            <label for="do"><img class="icon" src="official/Double_MasteryIcon.png"></label>
-            <input type="checkbox" id="el">
-            <label for="el"><img class="icon" src="official/Eliza_MasteryIcon.png"></label>
-            <input type="checkbox" id="fi">
-            <label for="fi"><img class="icon" src="official/Filia_MasteryIcon.png"></label>
-            <input type="checkbox" id="pw">
-            <label for="pw"><img class="icon" src="official/Painwheel_MasteryIcon.png"></label>
-            <input type="checkbox" id="pa">
-            <label for="pa"><img class="icon" src="official/Parasoul_MasteryIcon.png"></label>
-            <input type="checkbox" id="pe">
-            <label for="pe"><img class="icon" src="official/Peacock_MasteryIcon.png"></label>
-            <input type="checkbox" id="mf">
-            <label for="mf"><img class="icon" src="official/MsFortune_MasteryIcon.png"></label>
-            <input type="checkbox" id="sq">
-            <label for="sq"><img class="icon" src="official/Squigly_MasteryIcon.png"></label>
-            <input type="checkbox" id="va">
-            <label for="va"><img class="icon" src="official/Valentine_MasteryIcon.png"></label>
-        </div>
-    </div>
-    <div id="sort">
-        <input type="radio" id="abc" name="sort">
-        <label for="abc"><span id="filter-abc"></span></label>
-        <input type="radio" id="fs" name="sort">
-        <label for="fs"><span id="filter-fs"></span></label>
-        <input type="radio" id="atk" name="sort">
-        <label for="atk"><span id="filter-atk"></span></label>
-        <input type="radio" id="hp" name="sort">
-        <label for="hp"><span id="filter-hp"></span></label>
-        <input type="radio" id="element" name="sort">
-        <label for="element"><span id="filter-element"></span></label>
-        <input type="radio" id="tier" name="sort">
-        <label for="tier"><span id="filter-tier"></span></label>
-    </div>
-    <div>Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
-    <div>Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
     <div id="footer">
-        <div id="zoom">
-            <img class="button" src="official/ZoomOut.png" id="zoom-out">
-            <img class="button" src="official/ZoomIn.png" id="zoom-in">
+        <div id="menu">
+            <div id="idk">
+                <div>Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
+                <div>Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
+            </div>
+            <div id="filter">
+                <div id="cancel-filter">
+                    <img class="icon" src="official/constraints_no.png">
+                </div>
+                <div id="medals">
+                    <input type="checkbox" id="bronze">
+                    <label for="bronze"><img class="icon" src="official/constraints_bronze.png"></label>
+                    <input type="checkbox" id="silver">
+                    <label for="silver"><img class="icon" src="official/constraints_silver.png"></label>
+                    <input type="checkbox" id="gold">
+                    <label for="gold"><img class="icon" src="official/constraints_gold.png"></label>
+                    <input type="checkbox" id="diamond">
+                    <label for="diamond"><img class="icon" src="official/constraints_diamond.png"></label>
+                </div>
+                <div class="line"></div>
+                <div id="elements">
+                    <input type="checkbox" id="fire">
+                    <label for="fire"><img class="icon" src="official/ElementalFireBackless.png"></label>
+                    <input type="checkbox" id="water">
+                    <label for="water"><img class="icon" src="official/ElementalWaterBackless.png"></label>
+                    <input type="checkbox" id="wind">
+                    <label for="wind"><img class="icon" src="official/ElementalWindBackless.png"></label>
+                    <input type="checkbox" id="light">
+                    <label for="light"><img class="icon" src="official/ElementalLightBackless.png"></label>
+                    <input type="checkbox" id="dark">
+                    <label for="dark"><img class="icon" src="official/ElementalDarkBackless.png"></label>
+                    <input type="checkbox" id="neutral">
+                    <label for="neutral"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
+                </div>
+                <div class="line"></div>
+                <div id="mastery">
+                    <input type="checkbox" id="be">
+                    <label for="be"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
+                    <input type="checkbox" id="bb">
+                    <label for="bb"><img class="icon" src="official/BigBand_MasteryIcon.png"></label>
+                    <input type="checkbox" id="ce">
+                    <label for="ce"><img class="icon" src="official/Cerebella_MasteryIcon.png"></label>
+                    <input type="checkbox" id="do">
+                    <label for="do"><img class="icon" src="official/Double_MasteryIcon.png"></label>
+                    <input type="checkbox" id="el">
+                    <label for="el"><img class="icon" src="official/Eliza_MasteryIcon.png"></label>
+                    <input type="checkbox" id="fi">
+                    <label for="fi"><img class="icon" src="official/Filia_MasteryIcon.png"></label>
+                    <input type="checkbox" id="pw">
+                    <label for="pw"><img class="icon" src="official/Painwheel_MasteryIcon.png"></label>
+                    <input type="checkbox" id="pa">
+                    <label for="pa"><img class="icon" src="official/Parasoul_MasteryIcon.png"></label>
+                    <input type="checkbox" id="pe">
+                    <label for="pe"><img class="icon" src="official/Peacock_MasteryIcon.png"></label>
+                    <input type="checkbox" id="mf">
+                    <label for="mf"><img class="icon" src="official/MsFortune_MasteryIcon.png"></label>
+                    <input type="checkbox" id="sq">
+                    <label for="sq"><img class="icon" src="official/Squigly_MasteryIcon.png"></label>
+                    <input type="checkbox" id="va">
+                    <label for="va"><img class="icon" src="official/Valentine_MasteryIcon.png"></label>
+                </div>
+            </div>
+            <div id="sort">
+                <input type="radio" id="abc" name="sort">
+                <label for="abc"><span id="filter-abc"></span></label>
+                <input type="radio" id="fs" name="sort">
+                <label for="fs"><span id="filter-fs"></span></label>
+                <input type="radio" id="atk" name="sort">
+                <label for="atk"><span id="filter-atk"></span></label>
+                <input type="radio" id="hp" name="sort">
+                <label for="hp"><span id="filter-hp"></span></label>
+                <input type="radio" id="element" name="sort">
+                <label for="element"><span id="filter-element"></span></label>
+                <input type="radio" id="tier" name="sort">
+                <label for="tier"><span id="filter-tier"></span></label>
+            </div>
         </div>
-        <img class="button" src="official/WinsToggleIcon.png" id="fighter-settings">
-        <img class="icon" src="official/icon_filter.png" id="filter-sort">
+        <div id="dock">
+            <div id="zoom">
+                <img class="button" src="official/ZoomOut.png" id="zoom-out">
+                <img class="button" src="official/ZoomIn.png" id="zoom-in">
+            </div>
+            <img class="button" src="official/WinsToggleIcon.png" id="fighter-settings">
+            <img class="icon" src="official/icon_filter.png" id="filter-sort">
+        </div>
     </div>
 </body>
 </html>

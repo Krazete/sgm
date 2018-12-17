@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #1b2a41;
+    background: #0f1824;
     color: white;
     font-family: 'Roboto'; /* TODO: add backup fonts */
     text-shadow: 1px 1px black;
@@ -83,7 +83,7 @@ input:checked + label {
     border-color: #314c73;
 }
 
-input[type='radio'], input[type='checkbox'], input[type='button'] {
+input[type='radio'], input[type='checkbox'] {
     display: none;
 }
 
@@ -277,7 +277,7 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 /* HEADER */
 
 #header {
-    background: #1b2a41;
+    background: linear-gradient(#0f1824, #1b2a41);
     text-align: center;
     box-shadow: 0 3px 3px black;
     border-bottom: 1px solid #ccb55a;
@@ -290,7 +290,7 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 }
 
 .ribbon {
-    background: #314c73;
+    background: #263b5a;
     margin: 6px auto;
 }
 
@@ -299,12 +299,22 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 #footer {
     position: sticky;
     bottom: -1px;
-    background: linear-gradient(#314c73, #1b2a41);
+}
+
+#dock {
+    background: linear-gradient(#263b5a, #0f1824);
     box-shadow: 0 -3px 3px black;
     border-top: 1px solid #ccb55a;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 3px 6px;
+}
+
+#menu {
+    background: #0f1824;
+    box-shadow: 0 -3px 3px black;
+    border-top: 1px solid #ccb55a;
+    padding: 6px;
 }
 
 #zoom {
@@ -326,7 +336,7 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-gap: 6px;
-    padding: 6px;
+    padding: 20px 6px;
 }
 @media (max-width: 3150px) {#collection {grid-template-columns: repeat(8, 1fr);}}
 @media (max-width: 2800px) {#collection {grid-template-columns: repeat(7, 1fr);}}
