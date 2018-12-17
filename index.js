@@ -73,6 +73,10 @@ function load(path) {
     return new Promise(request);
 }
 
+function addTapListener(e, f) {
+    e.addEventListener("click", f);
+    e.addEventListener("touchstart", function () {});
+}
 
 
 
@@ -142,7 +146,7 @@ function createAbility(type, titleText, descriptionTexts) {
                 span.className = "fancy silver-tint";
                 span.innerHTML = titleText;
             abilityName.appendChild(span);
-            abilityName.addEventListener("click", collapse);
+            addTapListener(abilityName, collapse);
         ability.appendChild(abilityName);
         for (var descriptionText of descriptionTexts) {
             var description = document.createElement("div");
