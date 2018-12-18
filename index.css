@@ -118,6 +118,7 @@ label:before {
 
 .pressed {
     filter: brightness(0.5); /* TODO: change to opacity: 0.5 */
+    pointer-events: none;
 }
 
 .icon {
@@ -129,7 +130,6 @@ label:before {
 
 .glowing {
     filter: drop-shadow(0 0 6px white);
-    -webkit-transform: translateZ(0);
 }
 
 /* HEADER */
@@ -538,7 +538,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .portrait {
     width: 135%;
     filter: drop-shadow(0 0 1px black);
-    -webkit-transform: translateZ(0);
     margin: -64% 0 0 -18%;
 }
 #rBlight .portrait {
@@ -570,7 +569,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     -webkit-text-fill-color: transparent;
     text-shadow: none;
     filter: drop-shadow(1px 1px black);
-    -webkit-transform: translateZ(0);
     padding: 0 0.25em;
 }
 .bronze .variant-name, .fancy.bronze-tint {
@@ -771,4 +769,19 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
     background: url('official/icon_externalsite.png');
     background-size: 14px;
     display: block;
+}
+
+/* LOCK */
+
+.lock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.locked .lock {
+    opacity: 1;
 }

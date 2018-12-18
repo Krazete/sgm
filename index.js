@@ -313,6 +313,13 @@ function createWikia(key) {
     return wikia;
 }
 
+function createLock() {
+    var lock = document.createElement("img");
+        lock.className = "lock icon";
+        lock.src = "official/Lock.png";
+    return lock;
+}
+
 /* TODO: review all these links */
 var wikia_paths = { /* from English corpus */
     "nEgrets": "No Egrets",
@@ -446,6 +453,7 @@ function init(sa, ma) {
             card.appendChild(createSA(key, sa));
             card.appendChild(createMA(key, ma));
             card.appendChild(createWikia(key));
+            card.appendChild(createLock());
         collection.appendChild(card);
     }
 }
