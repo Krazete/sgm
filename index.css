@@ -18,10 +18,17 @@ body {
     background: #0f1824;
     color: white;
     font-family: 'Roboto'; /* TODO: add backup fonts */
+    font-size: medium;
     text-shadow: 1px 1px black;
     display: flex;
     flex-direction: column;
     margin: 0;
+}
+body.smaller {
+    font-size: small;
+}
+body.larger {
+    font-size: large;
 }
 
 ::-webkit-scrollbar {
@@ -144,8 +151,8 @@ label:before {
 
 /* TODO: add language differences for .banner */
 
-.banner {
-    font-size: 30px;
+.cinema.banner {
+    font-size: xx-large;
     white-space: nowrap;
 }
 
@@ -220,24 +227,24 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 
 /* FIGHTER SETTINGS */
 
-#settings > div {
+#options > div {
     display: grid;
     grid-template-areas:
         'sa ma';
 }
 
-#options:before {
+#options-label:before {
     background: url(official/GearIcon.png);
     padding-left: 1.25em;
 }
-html[lang='ja'] #options:before {content: '\u30aa\u30d7\u30b7\u30e7\u30f3';}
-html[lang='es'] #options:before {content: 'OPCIONES';}
-html[lang='pt-br'] #options:before {content: 'OP\u00c7\u00d5ES';}
-html[lang='ru'] #options:before {content: '\u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418';}
-html[lang='fr'] #options:before {content: 'OPTIONS';}
-html[lang='en'] #options:before {content: 'OPTIONS';}
-html[lang='de'] #options:before {content: 'EINSTELLUNGEN';}
-html[lang='ko'] #options:before {content: '\uc124\uc815';}
+html[lang='ja'] #options-label:before {content: '\u30aa\u30d7\u30b7\u30e7\u30f3';}
+html[lang='es'] #options-label:before {content: 'OPCIONES';}
+html[lang='pt-br'] #options-label:before {content: 'OP\u00c7\u00d5ES';}
+html[lang='ru'] #options-label:before {content: '\u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418';}
+html[lang='fr'] #options-label:before {content: 'OPTIONS';}
+html[lang='en'] #options-label:before {content: 'OPTIONS';}
+html[lang='de'] #options-label:before {content: 'EINSTELLUNGEN';}
+html[lang='ko'] #options-label:before {content: '\uc124\uc815';}
 
 html[lang='ja'] #evolve:before {content: '\u9032\u5316';}
 html[lang='es'] #evolve:before {content: 'EVOLUCIONAR';}
@@ -283,7 +290,6 @@ html[lang='ko'] .lvl:before {content: '\b808\bca8';}
 
 #filter-label:before {
     background: url('official/icon_filter.png');
-    font-size: 20px;
     padding-left: 1.25em;
 }
 html[lang='ja'] #filter-label:before {content: '\30d5\30a3\30eb\30bf\30fc';}
@@ -323,7 +329,6 @@ html[lang='de'] #filter-label:before {content: 'FILTER';}
 
 #sort-label:before {
     background: url('official/icon_sort.png');
-    font-size: 20px;
     padding-left: 1.75em;
 }
 html[lang='ja'] #sort-label:before {content: '\4e26\3073\66ff\3048';}
@@ -397,8 +402,18 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     flex: 1;
     grid-template-columns: repeat(9, 1fr);
     grid-gap: 6px;
-    padding: 20px 6px;
+    padding: 6px;
 }
+
+@media (max-width: 3600px) {.larger #collection {grid-template-columns: repeat(8, 1fr);}}
+@media (max-width: 3200px) {.larger #collection {grid-template-columns: repeat(7, 1fr);}}
+@media (max-width: 2800px) {.larger #collection {grid-template-columns: repeat(6, 1fr);}}
+@media (max-width: 2400px) {.larger #collection {grid-template-columns: repeat(5, 1fr);}}
+@media (max-width: 2000px) {.larger #collection {grid-template-columns: repeat(4, 1fr);}}
+@media (max-width: 1600px) {.larger #collection {grid-template-columns: repeat(3, 1fr);}}
+@media (max-width: 1200px) {.larger #collection {grid-template-columns: repeat(2, 1fr);}}
+@media (max-width: 800px) {.larger #collection {grid-template-columns: repeat(1, 1fr);}}
+
 @media (max-width: 3150px) {#collection {grid-template-columns: repeat(8, 1fr);}}
 @media (max-width: 2800px) {#collection {grid-template-columns: repeat(7, 1fr);}}
 @media (max-width: 2450px) {#collection {grid-template-columns: repeat(6, 1fr);}}
@@ -407,6 +422,28 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
 @media (max-width: 1400px) {#collection {grid-template-columns: repeat(3, 1fr);}}
 @media (max-width: 1050px) {#collection {grid-template-columns: repeat(2, 1fr);}}
 @media (max-width: 700px) {#collection {grid-template-columns: repeat(1, 1fr);}}
+
+@media (max-width: 2700px) {.smaller #collection {grid-template-columns: repeat(8, 1fr);}}
+@media (max-width: 2400px) {.smaller #collection {grid-template-columns: repeat(7, 1fr);}}
+@media (max-width: 2100px) {.smaller #collection {grid-template-columns: repeat(6, 1fr);}}
+@media (max-width: 1800px) {.smaller #collection {grid-template-columns: repeat(5, 1fr);}}
+@media (max-width: 1500px) {.smaller #collection {grid-template-columns: repeat(4, 1fr);}}
+@media (max-width: 1200px) {.smaller #collection {grid-template-columns: repeat(3, 1fr);}}
+@media (max-width: 900px) {.smaller #collection {grid-template-columns: repeat(2, 1fr);}}
+@media (max-width: 600px) {.smaller #collection {grid-template-columns: repeat(1, 1fr);}}
+
+/* SEARCH */
+
+#searcher {
+    grid-column: 1 / -1;
+    z-index: 1;
+    margin: 6px 0;
+}
+
+#searcherer {
+    width: 100%;
+    text-align: center;
+}
 
 /* LOADING */
 
@@ -421,7 +458,7 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
 
 #loading:after {
     content: 'LOADING...';
-    font-size: 30px;
+    font-size: xx-large;
     text-align: center;
     display: block;
     animation: 0.7s infinite fader;
@@ -445,18 +482,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     100% {
         opacity: 0;
     }
-}
-
-/* SEARCH */
-
-#searcher {
-    grid-column: 1 / -1;
-    z-index: 1;
-}
-
-#searcherer {
-    width: 100%;
-    text-align: center;
 }
 
 /* CARD */
@@ -566,10 +591,12 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 
 .variant-name, .fancy { /* NOTE: there might be some compatibility issues */
     -webkit-background-clip: text !important;
+    font-size: larger;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
-    /* filter: drop-shadow(1px 1px black); */ /* disabled because it causes problems in ios */
-    padding: 0 0.25em;
+    filter: drop-shadow(1px 1px black); /* disabled because it causes problems in ios */
+    padding: 0 0.1em;
+    margin: 0.1em;
 }
 .bronze .variant-name, .fancy.bronze-tint {
     background: -webkit-linear-gradient(white, chocolate);
@@ -590,20 +617,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     background: -webkit-linear-gradient(white, pink);
     background: -o-linear-gradient(transparent, transparent); /* for opera */
     color: pink;
-}
-
-.variant-name {
-    font-size: 20px;
-}
-
-.fighter-name {
-    font-size: 14px;
-}
-
-html[lang='ru'] .variant-name,
-html[lang='ru'] .fighter-name,
-html[lang='ru'] .fancy {
-    font-family: 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 /* QUOTE */
@@ -731,7 +744,6 @@ html[lang='ko'] .ma .label:before {content: '\ad81\adf9 \b2a5\b825';}
 html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 
 .ability-name {
-    font-size: 20px;
     cursor: pointer;
 }
 .ability.collapsed .ability-name {
@@ -740,7 +752,7 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 
 .description {
     background: #314c73;
-    font-size: 14px;
+    font-size: smaller;
     box-shadow: 0 0 1px black;
     padding: 6px;
 }

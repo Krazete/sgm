@@ -98,7 +98,7 @@ function load(path) {
 
 function initDock() {
     var menu = document.getElementById("menu");
-    var settings = document.getElementById("settings");
+    var settings = document.getElementById("options");
     var filter = document.getElementById("filter");
     var sort = document.getElementById("sort");
 
@@ -108,12 +108,14 @@ function initDock() {
     var filterSort = document.getElementById("filter-sort");
 
     function zoom() {
-        this.classList.add("pressed");
-        if (this.id == "zoom-in") {
-            document.body.classList.add("ssss");
+        // this.classList.add("pressed");
+        if (this.id == "zoom-out") {
+            document.body.classList.add("smaller");
+            document.body.classList.remove("larger");
         }
         else {
-            document.body.classList.add("ssss");
+            document.body.classList.remove("smaller");
+            document.body.classList.add("larger");
         }
     }
 
