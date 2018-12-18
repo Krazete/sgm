@@ -17,7 +17,6 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <!-- UNDER CONSTRUCTION (none of the buttons work yet) -->
     <div id="header">
         <span class="banner cinema fancy gold-tint">SKULLGIRLS MOBILE</span>
         <span class="banner cinema fancy diamond-tint">FIGHTER GALLERY</span>
@@ -52,13 +51,34 @@
     </div>
     <div id="footer">
         <div id="menu">
-            <div id="idk" style="display:none">
-                <div>Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
-                <div>Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
+            <div class="scroller">
+                <div id="settings">
+                    <div class="cinema">Minimum Tier</div>
+                    <div class="cinema">Signature</div>
+                    <div class="cinema">Signature</div>
+                    p
+                    <div class="sa">
+                        <div class="cinema label"></div>
+                        <div>
+                            <span class="lvl"></span>
+                            <span class="cinema fancy silver-tint">0</span>
+                        </div>
+                        <input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);">
+                    </div>
+                    <div class="ma">
+                        <div class="cinema label"></div>
+                        <div>
+                            <span class="lvl"></span>
+                            <span class="cinema fancy silver-tint">0</span>
+                        </div>
+                        <input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);">
+                    </div>
+                </div>
             </div>
-            <div class="scroller half">
+            <div class="scroller half hidden">
                 <div id="filter">
-                    <div class="tagged cinema" id="filter-label">
+                    <div>
+                        <span class="tagged cinema fancy silver-tint" id="filter-label"></span>
                         <input type="checkbox" id="filter-cancel">
                         <label for="filter-cancel"><img class="icon" src="official/constraints_no.png"></label>
                     </div>
@@ -117,9 +137,11 @@
                     </div>
                 </div>
             </div>
-            <div class="scroller half">
+            <div class="scroller half hidden">
                 <div id="sort">
-                    <div class="tagged cinema" id="sort-label"></div>
+                    <div>
+                        <span class="tagged cinema fancy silver-tint" id="sort-label"></span>
+                    </div>
                     <div class="divider"></div>
                     <input type="radio" id="abc" name="sort">
                     <label for="abc"></label>

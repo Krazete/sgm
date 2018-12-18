@@ -28,6 +28,7 @@ a {
 
 .cinema {
     font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
 }
 html[lang='ru'] .cinema {
     font-family: 'Trebuchet MS', 'Arial Narrow', sans-serif;
@@ -38,12 +39,12 @@ html[lang='ru'] .cinema {
     height: auto;
     background-size: contain !important;
     background-repeat: no-repeat !important;
-    text-indent: 1em; /* typically too small */
-    display: inline-block;
+    display: inline;
+    padding-left: 1em; /* typically too small */
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* HEADER AND FOOTER */
@@ -111,6 +112,10 @@ label:before {
     margin: auto;
 }
 
+.glowing {
+    filter: drop-shadow(0 0 6px white);
+}
+
 /* HEADER */
 
 #header {
@@ -133,7 +138,7 @@ label:before {
 
 #version:before {
     background: url('official/IconInfo.png');
-    text-indent: 1.25em;
+    padding-left: 1.25em;
     margin-right: 0.25em;
 }
 html[lang='ja'] #version:before {content: '\30d0\30fc\30b8\30e7\30f3:';}
@@ -146,7 +151,7 @@ html[lang='ko'] #version:before {content: '\bc84\c804:';}
 html[lang='de'] #version:before {content: 'VERSION:';}
 
 #language-set label:before {
-    text-indent: 1.75em;
+    padding-left: 1.75em;
 }
 #jp + .tagged:before {content: '日本語'; background: url('official/flag_jp.png');}
 #ru + .tagged:before {content: 'Pусский'; background: url('official/flag_ru.png');}
@@ -200,7 +205,7 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 #filter-label:before {
     background: url('official/icon_filter.png');
     font-size: 20px;
-    text-indent: 1.25em;
+    padding-left: 1.25em;
 }
 html[lang='ja'] #filter-label:before {content: '\30d5\30a3\30eb\30bf\30fc';}
 html[lang='ru'] #filter-label:before {content: '\0424\0418\041b\042c\0422\0420';}
@@ -240,7 +245,7 @@ html[lang='de'] #filter-label:before {content: 'FILTER';}
 #sort-label:before {
     background: url('official/icon_sort.png');
     font-size: 20px;
-    text-indent: 1.75em;
+    padding-left: 1.75em;
 }
 html[lang='ja'] #sort-label:before {content: '\4e26\3073\66ff\3048';}
 html[lang='ru'] #sort-label:before {content: '\0423\041f\041e\0420\042f\0414.';}
@@ -306,6 +311,23 @@ html[lang='fr'] #tier + label:before {content: 'RANG';}
 html[lang='es'] #tier + label:before {content: 'GRADO';}
 html[lang='ko'] #tier + label:before {content: '\b4f1\ae09';}
 html[lang='de'] #tier + label:before {content: 'KLASSE';}
+
+/* FIGHTER SETTINGS */
+
+#settings {
+    display: grid;
+    grid-template-areas:
+        'sa ma';
+}
+
+html[lang='ja'] .lvl:before {content: '\30ec\30d9\30eb';}
+html[lang='es'] .lvl:before {content: 'NVL';}
+html[lang='pt-br'] .lvl:before {content: 'N\00cdV';}
+html[lang='ru'] .lvl:before {content: '\0423\0420';}
+html[lang='fr'] .lvl:before {content: 'NIV';}
+html[lang='en'] .lvl:before {content: 'LVL';}
+html[lang='de'] .lvl:before {content: 'ST';}
+html[lang='ko'] .lvl:before {content: '\b808\bca8';}
 
 /* COLLECTION */
 
@@ -472,7 +494,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .variant-name, .fancy { /* NOTE: there might be some compatibility issues */
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
     text-shadow: none;
     filter: drop-shadow(1px 1px black);
     padding: 0 0.25em;
@@ -480,7 +501,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .bronze .variant-name, .fancy.bronze-tint {
     background: -webkit-linear-gradient(white, chocolate);
     background: -o-linear-gradient(transparent, transparent); /* for opera */
-    color: chocolate;
+    color: chocolate; /* TODO: check if these backup colors look okay */
 }
 .silver .variant-name, .fancy.silver-tint {
     background: -webkit-linear-gradient(white, gray);
@@ -504,7 +525,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 
 .fighter-name {
     font-size: 14px;
-    text-transform: uppercase;
 }
 
 html[lang='ru'] .variant-name,
@@ -530,10 +550,10 @@ html[lang='ru'] .fancy {
 .stat:before {
     content: '\00a0';
     height: 20px;
-    text-indent: 25px;
     background-size: 20px !important;
     background-repeat: no-repeat !important;
     display: inline-block;
+    padding-left: 25px;
 }
 
 .atk {
@@ -602,14 +622,6 @@ html[lang='de'] .fs:before {content: 'KAMPFPUNKTE';}
     grid-area: ca;
 }
 
-.sa {
-    grid-area: sa;
-}
-
-.ma {
-    grid-area: ma;
-}
-
 html[lang='ja'] .ca .label:before {content: '\30ad\30e3\30e9\30af\30bf\30fc\306e\30a2\30d3\30ea\30c6\30a3';}
 html[lang='ru'] .ca .label:before {content: '\0423\041c\0415\041d\0418\0415 \041f\0415\0420\0421\041e\041d\0410\0416\0410';}
 html[lang='en'] .ca .label:before {content: 'CHARACTER ABILITY';}
@@ -619,6 +631,10 @@ html[lang='es'] .ca .label:before {content: 'HABILIDAD DE PERSONAJE';}
 html[lang='ko'] .ca .label:before {content: '\ce90\b9ad\d130 \b2a5\b825';}
 html[lang='de'] .ca .label:before {content: 'CHARAKTER-FERTIGKEIT';}
 
+.sa {
+    grid-area: sa;
+}
+
 html[lang='ja'] .sa .label:before {content: '\56fa\6709\80fd\529b';}
 html[lang='ru'] .sa .label:before {content: '\041a\043b\044e\0447\0435\0432\043e\0435 \0443\043c\0435\043d\0438\0435';}
 html[lang='en'] .sa .label:before {content: 'Signature Ability';}
@@ -627,6 +643,10 @@ html[lang='fr'] .sa .label:before {content: 'Aptitude Signature';}
 html[lang='es'] .sa .label:before {content: 'Habilidad caracter\00edstica';}
 html[lang='ko'] .sa .label:before {content: '\ace0\c720 \b2a5\b825';}
 html[lang='de'] .sa .label:before {content: 'Markenzeichen';}
+
+.ma {
+    grid-area: ma;
+}
 
 html[lang='ja'] .ma .label:before {content: '\30b9\30bf\30fc\30fb\30d1\30ef\30fc';}
 html[lang='ru'] .ma .label:before {content: '\0423\041d\0418\041a. \0421\041f\041e\0421\041e\0411\041d.';}
