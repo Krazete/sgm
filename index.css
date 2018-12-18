@@ -116,6 +116,10 @@ label:before {
     cursor: pointer;
 }
 
+.pressed {
+    filter: brightness(0.5); /* TODO: change to opacity: 0.5 */
+}
+
 .icon {
     max-width: 24px;
     max-height: 24px;
@@ -221,11 +225,36 @@ html[lang='de'] #version:before {content: 'VERSION:';}
         'sa ma';
 }
 
-#settingspopo:before {
-    content: 'settings';
+#options:before {
     background: url(official/GearIcon.png);
     padding-left: 1.25em;
 }
+html[lang='ja'] #options:before {content: '\u30aa\u30d7\u30b7\u30e7\u30f3';}
+html[lang='es'] #options:before {content: 'OPCIONES';}
+html[lang='pt-br'] #options:before {content: 'OP\u00c7\u00d5ES';}
+html[lang='ru'] #options:before {content: '\u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418';}
+html[lang='fr'] #options:before {content: 'OPTIONS';}
+html[lang='en'] #options:before {content: 'OPTIONS';}
+html[lang='de'] #options:before {content: 'EINSTELLUNGEN';}
+html[lang='ko'] #options:before {content: '\uc124\uc815';}
+
+html[lang='ja'] #evolve:before {content: '\u9032\u5316';}
+html[lang='es'] #evolve:before {content: 'EVOLUCIONAR';}
+html[lang='pt-br'] #evolve:before {content: 'EVOLUIR';}
+html[lang='ru'] #evolve:before {content: '\u0420\u0410\u0417\u0412\u0418\u0422\u0418\u0415';}
+html[lang='fr'] #evolve:before {content: 'EVOLUTION';}
+html[lang='en'] #evolve:before {content: 'EVOLVE';}
+html[lang='de'] #evolve:before {content: 'ENTWICKLUNG';}
+html[lang='ko'] #evolve:before {content: '\uc9c4\ud654\ud558\uae30';}
+
+html[lang='ja'] #level:before {content: '\u30ec\u30d9\u30eb';}
+html[lang='es'] #level:before {content: 'Level';}
+html[lang='pt-br'] #level:before {content: 'N\u00edvel';}
+html[lang='ru'] #level:before {content: '\u0423\u0440\u043e\u0432\u0435\u043d\u044c';}
+html[lang='fr'] #level:before {content: 'Niveau';}
+html[lang='en'] #level:before {content: 'Level';}
+html[lang='de'] #level:before {content: 'Stufe';}
+html[lang='ko'] #level:before {content: '\ub808\ubca8';}
 
 html[lang='ja'] .lvl:before {content: '\30ec\30d9\30eb';}
 html[lang='es'] .lvl:before {content: 'NVL';}
@@ -236,7 +265,9 @@ html[lang='en'] .lvl:before {content: 'LVL';}
 html[lang='de'] .lvl:before {content: 'ST';}
 html[lang='ko'] .lvl:before {content: '\b808\bca8';}
 
-
+#dia {
+    filter: sepia(1) hue-rotate(270deg);
+}
 
 
 
@@ -577,7 +608,7 @@ html[lang='ru'] .fancy {
     margin: auto;
 }
 .stat:before {
-    content: '\00a0';
+    content: '\00a0'; /* TODO: is this needed? */
     height: 20px;
     background-size: 20px !important;
     background-repeat: no-repeat !important;

@@ -108,6 +108,7 @@ function initDock() {
     var filterSort = document.getElementById("filter-sort");
 
     function zoom() {
+        this.classList.add("pressed");
         if (this.id == "zoom-in") {
             document.body.classList.add("ssss");
         }
