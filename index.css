@@ -502,22 +502,22 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .gold .frame {
     background: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
 }
-.diamond.neutral .frame {
+.diamond.neutral .frame, .diamond .neutral .frame {
     background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%); /* TODO: confirm colors */
 }
-.diamond.fire .frame {
+.diamond.fire .frame, .diamond .fire .frame {
     background: linear-gradient(#d33 10%, #fff 20%, #f99 40%, #fee 60%, #d33 90%);
 }
-.diamond.water .frame {
+.diamond.water .frame, .diamond .water .frame {
     background: linear-gradient(#6be 10%, #fff 20%, #ace 40%, #eff 60%, #6be 90%);
 }
-.diamond.wind .frame {
+.diamond.wind .frame, .diamond .wind .frame {
     background: linear-gradient(#8b3 10%, #fff 20%, #de9 40%, #efe 60%, #8b3 90%);
 }
-.diamond.dark .frame {
+.diamond.dark .frame, .diamond .dark .frame {
     background: linear-gradient(#95f 10%, #fff 20%, #caf 40%, #fef 60%, #95f 90%);
 }
-.diamond.light .frame {
+.diamond.light .frame, .diamond .light .frame {
     background: linear-gradient(#dd6 10%, #fff 20%, #ffb 40%, #ffe 60%, #dd6 90%);
 }
 
