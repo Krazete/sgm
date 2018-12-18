@@ -117,7 +117,7 @@ label:before {
 }
 
 .pressed {
-    filter: brightness(0.5); /* TODO: change to opacity: 0.5 */
+    opacity: 0.5;
     pointer-events: none;
 }
 
@@ -267,7 +267,7 @@ html[lang='de'] .lvl:before {content: 'ST';}
 html[lang='ko'] .lvl:before {content: '\b808\bca8';}
 
 #dia {
-    filter: sepia(1) hue-rotate(270deg);
+    filter: sepia(1) hue-rotate(270deg); /* makes gray into pink */
 }
 
 
@@ -537,7 +537,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 
 .portrait {
     width: 135%;
-    /* filter: drop-shadow(0 0 1px black); */
+    /* filter: drop-shadow(0 0 1px black); */ /* disabled because it causes problems in ios */
     margin: -64% 0 0 -18%;
 }
 #rBlight .portrait {
@@ -568,7 +568,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
-    /* filter: drop-shadow(1px 1px black); */
+    /* filter: drop-shadow(1px 1px black); */ /* disabled because it causes problems in ios */
     padding: 0 0.25em;
 }
 .bronze .variant-name, .fancy.bronze-tint {
