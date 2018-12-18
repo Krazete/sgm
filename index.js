@@ -41,8 +41,8 @@ function initialize() {
 }
 
 function initLanguage() {
-    for (var button of document.getElementById("language-set").children) {
-        button.addEventListener("input", function () {
+    for (var button of document.getElementById("language-set").getElementsByTagName("input")) {
+        button.addEventListener("change", function () {
             changeLanguage(this.id);
         });
     }
