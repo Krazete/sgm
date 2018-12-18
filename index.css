@@ -24,6 +24,11 @@ body {
     margin: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 /* GENERAL */
 
 a {
@@ -67,6 +72,7 @@ html[lang='ru'] .cinema {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     grid-gap: 4px;
+    padding: 4px 0;
 }
 
 .scroller.half {
@@ -213,6 +219,12 @@ html[lang='de'] #version:before {content: 'VERSION:';}
     display: grid;
     grid-template-areas:
         'sa ma';
+}
+
+#settingspopo:before {
+    content: 'settings';
+    background: url(official/GearIcon.png);
+    padding-left: 1.25em;
 }
 
 html[lang='ja'] .lvl:before {content: '\30ec\30d9\30eb';}
