@@ -23,12 +23,13 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    -webkit-text-size-adjust: none; /* for ios */
 }
 body.smaller {
     font-size: small;
 }
 body.larger {
-    font-size: large;
+    font-size: x-large;
 }
 
 ::-webkit-scrollbar {
@@ -400,37 +401,37 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     background: black;
     display: grid;
     flex: 1;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(9, minmax(0, 1fr));
     grid-gap: 6px;
     padding: 6px;
 }
 
-@media (max-width: 3600px) {.larger #collection {grid-template-columns: repeat(8, 1fr);}}
-@media (max-width: 3200px) {.larger #collection {grid-template-columns: repeat(7, 1fr);}}
-@media (max-width: 2800px) {.larger #collection {grid-template-columns: repeat(6, 1fr);}}
-@media (max-width: 2400px) {.larger #collection {grid-template-columns: repeat(5, 1fr);}}
-@media (max-width: 2000px) {.larger #collection {grid-template-columns: repeat(4, 1fr);}}
-@media (max-width: 1600px) {.larger #collection {grid-template-columns: repeat(3, 1fr);}}
-@media (max-width: 1200px) {.larger #collection {grid-template-columns: repeat(2, 1fr);}}
-@media (max-width: 800px) {.larger #collection {grid-template-columns: repeat(1, 1fr);}}
+@media (max-width: 4050px) {.larger #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
+@media (max-width: 3600px) {.larger #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
+@media (max-width: 3150px) {.larger #collection {grid-template-columns: repeat(6, minmax(0, 1fr));}}
+@media (max-width: 2700px) {.larger #collection {grid-template-columns: repeat(5, minmax(0, 1fr));}}
+@media (max-width: 2250px) {.larger #collection {grid-template-columns: repeat(4, minmax(0, 1fr));}}
+@media (max-width: 1800px) {.larger #collection {grid-template-columns: repeat(3, minmax(0, 1fr));}}
+@media (max-width: 1350px) {.larger #collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
+@media (max-width: 900px) {.larger #collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
 
-@media (max-width: 3150px) {#collection {grid-template-columns: repeat(8, 1fr);}}
-@media (max-width: 2800px) {#collection {grid-template-columns: repeat(7, 1fr);}}
-@media (max-width: 2450px) {#collection {grid-template-columns: repeat(6, 1fr);}}
-@media (max-width: 2100px) {#collection {grid-template-columns: repeat(5, 1fr);}}
-@media (max-width: 1750px) {#collection {grid-template-columns: repeat(4, 1fr);}}
-@media (max-width: 1400px) {#collection {grid-template-columns: repeat(3, 1fr);}}
-@media (max-width: 1050px) {#collection {grid-template-columns: repeat(2, 1fr);}}
-@media (max-width: 700px) {#collection {grid-template-columns: repeat(1, 1fr);}}
+@media (max-width: 3150px) {#collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
+@media (max-width: 2800px) {#collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
+@media (max-width: 2450px) {#collection {grid-template-columns: repeat(6, minmax(0, 1fr));}}
+@media (max-width: 2100px) {#collection {grid-template-columns: repeat(5, minmax(0, 1fr));}}
+@media (max-width: 1750px) {#collection {grid-template-columns: repeat(4, minmax(0, 1fr));}}
+@media (max-width: 1400px) {#collection {grid-template-columns: repeat(3, minmax(0, 1fr));}}
+@media (max-width: 1050px) {#collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
+@media (max-width: 700px) {#collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
 
-@media (max-width: 2700px) {.smaller #collection {grid-template-columns: repeat(8, 1fr);}}
-@media (max-width: 2400px) {.smaller #collection {grid-template-columns: repeat(7, 1fr);}}
-@media (max-width: 2100px) {.smaller #collection {grid-template-columns: repeat(6, 1fr);}}
-@media (max-width: 1800px) {.smaller #collection {grid-template-columns: repeat(5, 1fr);}}
-@media (max-width: 1500px) {.smaller #collection {grid-template-columns: repeat(4, 1fr);}}
-@media (max-width: 1200px) {.smaller #collection {grid-template-columns: repeat(3, 1fr);}}
-@media (max-width: 900px) {.smaller #collection {grid-template-columns: repeat(2, 1fr);}}
-@media (max-width: 600px) {.smaller #collection {grid-template-columns: repeat(1, 1fr);}}
+@media (max-width: 2250px) {.smaller #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
+@media (max-width: 2000px) {.smaller #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
+@media (max-width: 1750px) {.smaller #collection {grid-template-columns: repeat(6, minmax(0, 1fr));}}
+@media (max-width: 1500px) {.smaller #collection {grid-template-columns: repeat(5, minmax(0, 1fr));}}
+@media (max-width: 1250px) {.smaller #collection {grid-template-columns: repeat(4, minmax(0, 1fr));}}
+@media (max-width: 1000px) {.smaller #collection {grid-template-columns: repeat(3, minmax(0, 1fr));}}
+@media (max-width: 750px) {.smaller #collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
+@media (max-width: 500px) {.smaller #collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
 
 /* SEARCH */
 
@@ -518,6 +519,16 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     box-shadow: 0 0 2px 1px black;
     padding: 6px;
     margin: 0 auto -15px auto;
+}
+.smaller .frame {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+}
+.larger .frame {
+    width: 100px;
+    height: 100px;
+    padding: 6px;
 }
 .bronze .frame {
     background: linear-gradient(#621 10%, #b76 20%, #843 40%, #b76 60%, #621 90%);
@@ -617,6 +628,10 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     background: -webkit-linear-gradient(white, pink);
     background: -o-linear-gradient(transparent, transparent); /* for opera */
     color: pink;
+}
+
+.fighter-name {
+    font-size: smaller;
 }
 
 /* QUOTE */
