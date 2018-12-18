@@ -446,6 +446,18 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     }
 }
 
+/* SEARCH */
+
+#searcher {
+    grid-column: 1 / -1;
+    z-index: 1;
+}
+
+#searcherer {
+    width: 100%;
+    text-align: center;
+}
+
 /* CARD */
 
 .card {
