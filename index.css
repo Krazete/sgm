@@ -8,14 +8,19 @@
     src: url('data/font/RobotoCondensed-Regular.ttf');
 }
 
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background: #0f1824;
     color: white;
     font-family: 'Roboto'; /* TODO: add backup fonts */
     text-shadow: 1px 1px black;
-    position: relative;
-    width: 100%;
-    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     margin: 0;
 }
 
@@ -200,6 +205,34 @@ html[lang='de'] #version:before {content: 'VERSION:';}
     padding: 10px;
 }
 
+/* FIGHTER SETTINGS */
+
+#settings > div {
+    display: grid;
+    grid-template-areas:
+        'sa ma';
+}
+
+html[lang='ja'] .lvl:before {content: '\30ec\30d9\30eb';}
+html[lang='es'] .lvl:before {content: 'NVL';}
+html[lang='pt-br'] .lvl:before {content: 'N\00cdV';}
+html[lang='ru'] .lvl:before {content: '\0423\0420';}
+html[lang='fr'] .lvl:before {content: 'NIV';}
+html[lang='en'] .lvl:before {content: 'LVL';}
+html[lang='de'] .lvl:before {content: 'ST';}
+html[lang='ko'] .lvl:before {content: '\b808\bca8';}
+
+
+
+
+
+
+
+
+
+
+
+
 /* FILTER */
 
 #filter-label:before {
@@ -256,8 +289,6 @@ html[lang='es'] #sort-label:before {content: 'ORDENAR';}
 html[lang='ko'] #sort-label:before {content: '\c815\b82c';}
 html[lang='de'] #sort-label:before {content: 'SORTIEREN';}
 
-
-
 html[lang='ja'] #abc + label:before {content: '\30a2\30eb\30d5\30a1\30d9\30c3\30c8\9806';}
 html[lang='ru'] #abc + label:before {content: '\041f\043e \0430\043b\0444\0430\0432\0438\0442\0443';}
 html[lang='en'] #abc + label:before {content: 'Alphabetical';}
@@ -311,23 +342,6 @@ html[lang='fr'] #tier + label:before {content: 'RANG';}
 html[lang='es'] #tier + label:before {content: 'GRADO';}
 html[lang='ko'] #tier + label:before {content: '\b4f1\ae09';}
 html[lang='de'] #tier + label:before {content: 'KLASSE';}
-
-/* FIGHTER SETTINGS */
-
-#settings {
-    display: grid;
-    grid-template-areas:
-        'sa ma';
-}
-
-html[lang='ja'] .lvl:before {content: '\30ec\30d9\30eb';}
-html[lang='es'] .lvl:before {content: 'NVL';}
-html[lang='pt-br'] .lvl:before {content: 'N\00cdV';}
-html[lang='ru'] .lvl:before {content: '\0423\0420';}
-html[lang='fr'] .lvl:before {content: 'NIV';}
-html[lang='en'] .lvl:before {content: 'LVL';}
-html[lang='de'] .lvl:before {content: 'ST';}
-html[lang='ko'] .lvl:before {content: '\b808\bca8';}
 
 /* COLLECTION */
 

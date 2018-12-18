@@ -6,7 +6,9 @@ var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 
 function initialize() {
-    collection = document.getElementById("collection");
+    initDock();
+
+    collection = document.getElementBId("collection");
     sa = document.getElementById("sa");
     ma = document.getElementById("ma");
     red = document.getElementById("red");
@@ -74,6 +76,69 @@ function load(path) {
 }
 
 
+
+
+
+
+
+
+/* DOCK */
+
+function initDock() {
+    var menu = document.getElementById("menu");
+    var settings = document.getElementById("settings");
+    var filter = document.getElementById("filter");
+    var sort = document.getElementById("sort");
+
+    var zoomIn = document.getElementById("zoom-in");
+    var zoomOut = document.getElementById("zoom-out");
+    var fighterSettings = document.getElementById("fighter-settings");
+    var filterSort = document.getElementById("filter-sort");
+
+    function zoom() {
+        if (this.id == "zoom-in") {
+            document.body.classList.add("ssss");
+        }
+        else {
+            document.body.classList.add("ssss");
+        }
+    }
+
+    function toggleFighterSettings() {
+        if (this.classList.contains("glowing")) {
+            this.classList.remove("glowing");
+            menu.classList.add("hidden");
+        }
+        else {
+            this.classList.add("glowing");
+            filterSort.classList.remove("glowing");
+            menu.classList.remove("hidden");
+            settings.classList.remove("hidden");
+            filter.classList.add("hidden");
+            sort.classList.add("hidden");
+        }
+    }
+
+    function toggleFilterSort() {
+        if (this.classList.contains("glowing")) {
+            this.classList.remove("glowing");
+            menu.classList.add("hidden");
+        }
+        else {
+            this.classList.add("glowing");
+            fighterSettings.classList.remove("glowing");
+            menu.classList.remove("hidden");
+            settings.classList.add("hidden");
+            filter.classList.remove("hidden");
+            sort.classList.remove("hidden");
+        }
+    }
+
+    zoomIn.addEventListener("click", zoom);
+    zoomOut.addEventListener("click", zoom);
+    fighterSettings.addEventListener("click", toggleFighterSettings);
+    filterSort.addEventListener("click", toggleFilterSort);
+}
 
 
 
