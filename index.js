@@ -1,20 +1,22 @@
 var corpus, fighters, variants;
 var collection, order, sa, ma, red;
 var mastery, element;
+var loading;
 
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 
 function initialize() {
+    initLanguage();
     initDock();
 
-    collection = document.getElementBId("collection");
+    collection = document.getElementById("collection");
     sa = document.getElementById("sa");
     ma = document.getElementById("ma");
     red = document.getElementById("red");
     mastery = document.getElementById("mastery");
     element = document.getElementById("element");
-    var loading = document.getElementById("loading");
+    loading = document.getElementById("loading");
     var language = loadLanguage();
     if (typeof order == "undefined") {
         order = byAlpha;
@@ -27,8 +29,8 @@ function initialize() {
         variants = responses[2];
         init(sa.value, ma.value);
         sort(order);
-        toggle(mastery, "blah");
-        toggle(element, "blah");
+        // toggle(mastery, "blah");
+        // toggle(element, "blah");
     }
 
     Promise.all([
@@ -36,6 +38,14 @@ function initialize() {
         load("./data/fighters.json"),
         load("./data/variants.json")
     ]).then(callback);
+}
+
+function initLanguage() {
+    for (var button of document.getElementById("language-set").children) {
+        button.addEventListener("input", function () {
+            changeLanguage(this.id);
+        });
+    }
 }
 
 function changeLanguage(language) {
@@ -55,7 +65,9 @@ function saveLanguage(language) {
 }
 
 function resetCollection() {
-    collection.innerHTML = "";
+    // collection.innerHTML = "";
+    collection.appendChild(loading);
+    loading.classList.remove("hidden");
 }
 
 function load(path) {

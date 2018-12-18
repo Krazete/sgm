@@ -131,6 +131,8 @@ label:before {
     padding: 6px 0;
 }
 
+/* TODO: add language differences for .banner */
+
 .banner {
     font-size: 30px;
     white-space: nowrap;
@@ -158,10 +160,10 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 #language-set label:before {
     padding-left: 1.75em;
 }
-#jp + .tagged:before {content: '日本語'; background: url('official/flag_jp.png');}
+#ja + .tagged:before {content: '日本語'; background: url('official/flag_jp.png');}
 #ru + .tagged:before {content: 'Pусский'; background: url('official/flag_ru.png');}
 #en + .tagged:before {content: 'English'; background: url('official/flag_en.png');}
-#pt + .tagged:before {content: 'Português'; background: url('official/flag_pt.png');}
+#pt-br + .tagged:before {content: 'Português'; background: url('official/flag_pt.png');}
 #fr + .tagged:before {content: 'Français'; background: url('official/flag_fr.png');}
 #es + .tagged:before {content: 'Español'; background: url('official/flag_es.png');}
 #ko + .tagged:before {content: '한국어'; background: url('official/flag_ko.png');}
