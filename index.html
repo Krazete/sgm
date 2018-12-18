@@ -22,26 +22,26 @@
         <span class="banner cinema fancy gold-tint">SKULLGIRLS MOBILE</span>
         <span class="banner cinema fancy diamond-tint">FIGHTER GALLERY</span>
         <div class="ribbon">
-            <a id="version" target="_blank" href="https://github.com/Krazete/sgm#readme">3.0.0</a>
+            <a class="tagged" id="version" target="_blank" href="https://github.com/Krazete/sgm#readme">3.0.0</a>
         </div>
         <div class="scroller">
-            <div>
+            <div id="language-set">
                 <input type="radio" id="en" name="language">
-                <label for="en"><img class="icon" src="official/flag_en.png"><span class="icon">English</span></label>
+                <label class="tagged" for="en"></label>
                 <input type="radio" id="fr" name="language">
-                <label for="fr"><img class="icon" src="official/flag_fr.png"><span class="icon">Français</span></label>
+                <label class="tagged" for="fr"></label>
                 <input type="radio" id="es" name="language">
-                <label for="es"><img class="icon" src="official/flag_es.png"><span class="icon">Español</span></label>
+                <label class="tagged" for="es"></label>
                 <input type="radio" id="ru" name="language">
-                <label for="ru"><img class="icon" src="official/flag_ru.png"><span class="icon">Pусский</span></label>
+                <label class="tagged" for="ru"></label>
                 <input type="radio" id="jp" name="language">
-                <label for="jp"><img class="icon" src="official/flag_jp.png"><span class="icon">日本語</span></label>
+                <label class="tagged" for="jp"></label>
                 <input type="radio" id="de" name="language">
-                <label for="de"><img class="icon" src="official/flag_de.png"><span class="icon">Deutsch</span></label>
+                <label class="tagged" for="de"></label>
                 <input type="radio" id="ko" name="language">
-                <label for="ko"><img class="icon" src="official/flag_ko.png"><span class="icon">한국어</span></label>
+                <label class="tagged" for="ko"></label>
                 <input type="radio" id="pt" name="language">
-                <label for="pt"><img class="icon" src="official/flag_pt.png"><span class="icon">Português</span></label>
+                <label class="tagged" for="pt"></label>
             </div>
         </div>
     </div>
@@ -52,17 +52,18 @@
     </div>
     <div id="footer">
         <div id="menu">
-            <div id="idk">
+            <div id="idk" style="display:none">
                 <div>Signature<input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
                 <div>Marquee<input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);"></div>
             </div>
             <div class="scroller half">
                 <div id="filter">
-                    <div id="filter-label"></div>
-                    <div id="cancel-filter">
-                        <img class="icon" src="official/constraints_no.png">
+                    <div class="tagged cinema" id="filter-label">
+                        <input type="checkbox" id="filter-cancel">
+                        <label for="filter-cancel"><img class="icon" src="official/constraints_no.png"></label>
                     </div>
-                    <div id="medals">
+                    <div class="divider"></div>
+                    <div class="subset" id="medals">
                         <input type="checkbox" id="bronze">
                         <label for="bronze"><img class="icon" src="official/constraints_bronze.png"></label>
                         <input type="checkbox" id="silver">
@@ -72,8 +73,8 @@
                         <input type="checkbox" id="diamond">
                         <label for="diamond"><img class="icon" src="official/constraints_diamond.png"></label>
                     </div>
-                    <div class="line"></div>
-                    <div id="elements">
+                    <div class="divider"></div>
+                    <div class="subset" id="elements">
                         <input type="checkbox" id="fire">
                         <label for="fire"><img class="icon" src="official/ElementalFireBackless.png"></label>
                         <input type="checkbox" id="water">
@@ -87,8 +88,8 @@
                         <input type="checkbox" id="neutral">
                         <label for="neutral"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
                     </div>
-                    <div class="line"></div>
-                    <div id="mastery">
+                    <div class="divider"></div>
+                    <div class="subset" id="mastery">
                         <input type="checkbox" id="be">
                         <label for="be"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
                         <input type="checkbox" id="bb">
@@ -118,18 +119,20 @@
             </div>
             <div class="scroller half">
                 <div id="sort">
+                    <div class="tagged cinema" id="sort-label"></div>
+                    <div class="divider"></div>
                     <input type="radio" id="abc" name="sort">
-                    <label for="abc"><span id="filter-abc"></span></label>
+                    <label for="abc"></label>
                     <input type="radio" id="fs" name="sort">
-                    <label for="fs"><span id="filter-fs"></span></label>
+                    <label for="fs"></label>
                     <input type="radio" id="atk" name="sort">
-                    <label for="atk"><span id="filter-atk"></span></label>
+                    <label for="atk"></label>
                     <input type="radio" id="hp" name="sort">
-                    <label for="hp"><span id="filter-hp"></span></label>
+                    <label for="hp"></label>
                     <input type="radio" id="element" name="sort">
-                    <label for="element"><span id="filter-element"></span></label>
+                    <label for="element"></label>
                     <input type="radio" id="tier" name="sort">
-                    <label for="tier"><span id="filter-tier"></span></label>
+                    <label for="tier"></label>
                 </div>
             </div>
         </div>

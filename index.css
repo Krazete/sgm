@@ -33,6 +33,21 @@ html[lang='ru'] .cinema {
     font-family: 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
+.tagged:before {
+    content: '\00a0'; /* placeholder */
+    height: auto;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    text-indent: 1em; /* typically too small */
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* HEADER AND FOOTER */
+
 .scroller {
     width: max-content;
     max-width: 100%;
@@ -48,246 +63,53 @@ html[lang='ru'] .cinema {
     grid-gap: 4px;
 }
 
-.half {
+.scroller.half {
     min-width: 45%;
     vertical-align: top;
     display: inline-block;
 }
 
-.half > div {
+.scroller.half > div {
     display: inline-grid;
-}
-
-.hidden {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-.line {
-    min-width: 1px;
-    min-height: 1px;
-    background: black;
-}
-
-#filter, #sort, #language {
-    z-index: 1;
-}
-
-label {
-    min-width: 24px;
-    height: 24px;
-    background: #0f1824;
-    text-align: center;
-    border: 1px solid #263b5a;
-    padding: 4px;
-    border-radius: 4px;
-    cursor: pointer;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-input:checked + label {
-    background: linear-gradient(#1b2a41, #314c73);
-    border-color: #314c73;
 }
 
 input[type='radio'], input[type='checkbox'] {
     display: none;
 }
 
-.icon {
-    max-width: 24px;
-    max-height: 24px;
-    vertical-align: middle;
+label {
+    min-width: 24px;
+    min-height: 24px;
+    background: #0f1824;
+    text-transform: uppercase;
+    border: 1px solid #263b5a;
+    border-radius: 4px;
+    display: block;
+    padding: 4px;
+    cursor: pointer;
 }
-.r {
-    vertical-align: middle;
+input:checked + label {
+    background: linear-gradient(#1b2a41, #314c73);
+    border-color: #314c73;
 }
 
-input:checked + .icon {
-    opacity: 1;
-    filter: drop-shadow(0 0 3px #fd0);
+label:before {
+    vertical-align: middle;
 }
 
 .button {
     max-width: 36px;
     max-height: 36px;
-    cursor: pointer;
     border-radius: 50%;
+    cursor: pointer;
 }
 
-
-#filter {
-    padding: 4px;
+.icon {
+    max-width: 24px;
+    max-height: 24px;
+    display: block;
+    margin: auto;
 }
-#filter div {
-    display: inline-grid;
-    grid-gap: 4px;
-    margin-left: 4px;
-}
-#medals {
-    grid-template-columns: repeat(2, 1fr);
-}
-#elements {
-    grid-template-columns: repeat(3, 1fr);
-}
-#mastery {
-    grid-template-columns: repeat(6, 1fr);
-}
-
-
-
-
-
-/* VERSION */
-
-#version:before {
-    content: '\00a0';
-    background: url('official/IconInfo.png');
-    height: 20px;
-    text-indent: 23px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    margin-right: 0.25em;
-
-}
-html[lang='ja'] #version:before {content: '\30d0\30fc\30b8\30e7\30f3:';}
-html[lang='ru'] #version:before {content: '\0412\0415\0420\0421\0418\042f:';}
-html[lang='en'] #version:before {content: 'VERSION:';}
-html[lang='pt-br'] #version:before {content: 'VERS\00c3O:';}
-html[lang='fr'] #version:before {content: 'VERSION:';}
-html[lang='es'] #version:before {content: 'VERSI\00d3N:';}
-html[lang='ko'] #version:before {content: '\bc84\c804:';}
-html[lang='de'] #version:before {content: 'VERSION:';}
-
-/* FILTER */
-
-/* SORT */
-
-/* unused */
-(#jp + label):before {background: url('official/flag_jp.png');}
-(#ru + label):before {background: url('official/flag_ru.png');}
-(#en + label):before {background: url('official/flag_en.png');}
-(#pt + label):before {background: url('official/flag_pt.png');}
-(#fr + label):before {background: url('official/flag_fr.png');}
-(#es + label):before {background: url('official/flag_es.png');}
-(#ko + label):before {background: url('official/flag_ko.png');}
-(#de + label):before {background: url('official/flag_de.png');}
-
-#sort:before {
-    background: url('official/icon_sort.png');
-    background-size: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    text-indent: 25px;
-    display: inline-block;
-}
-
-#filter:before {
-    background: url('official/icon_filter.png');
-    background-size: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    text-indent: 25px;
-    display: inline-block;
-}
-
-html[lang='ja'] #sort:before {content: '\4e26\3073\66ff\3048';}
-html[lang='ru'] #sort:before {content: '\0423\041f\041e\0420\042f\0414.';}
-html[lang='en'] #sort:before {content: 'SORT';}
-html[lang='pt-br'] #sort:before {content: 'ORGANIZAR';}
-html[lang='fr'] #sort:before {content: 'TRIER';}
-html[lang='es'] #sort:before {content: 'ORDENAR';}
-html[lang='ko'] #sort:before {content: '\c815\b82c';}
-html[lang='de'] #sort:before {content: 'SORTIEREN';}
-
-html[lang='ja'] #filter:before {content: '\30d5\30a3\30eb\30bf\30fc';}
-html[lang='ru'] #filter:before {content: '\0424\0418\041b\042c\0422\0420';}
-html[lang='en'] #filter:before {content: 'FILTER';}
-html[lang='pt-br'] #filter:before {content: 'FILTRAR';}
-html[lang='fr'] #filter:before {content: 'FILTRER';}
-html[lang='es'] #filter:before {content: 'FILTRAR';}
-html[lang='ko'] #filter:before {content: '\d544\d130';}
-html[lang='de'] #filter:before {content: 'FILTER';}
-
-html[lang='ja'] #filter-abc:before {content: '\30a2\30eb\30d5\30a1\30d9\30c3\30c8\9806';}
-html[lang='ru'] #filter-abc:before {content: '\041f\043e \0430\043b\0444\0430\0432\0438\0442\0443';}
-html[lang='en'] #filter-abc:before {content: 'Alphabetical';}
-html[lang='pt-br'] #filter-abc:before {content: 'Ordem alfab\00e9tica';}
-html[lang='fr'] #filter-abc:before {content: 'Alphab\00e9tique';}
-html[lang='es'] #filter-abc:before {content: 'Orden alfab\00e9tico';}
-html[lang='ko'] #filter-abc:before {content: '\c54c\d30c\bcb3\c21c';}
-html[lang='de'] #filter-abc:before {content: 'Alphabetisch';}
-
-html[lang='ja'] #filter-fs:before {content: '\30d5\30a1\30a4\30bf\30fc\30fb\30b9\30b3\30a2';}
-html[lang='ru'] #filter-fs:before {content: '\0411\041e\0415\0412\041e\0419 \0421\0427\0415\0422';}
-html[lang='en'] #filter-fs:before {content: 'FIGHTER SCORE';}
-html[lang='pt-br'] #filter-fs:before {content: 'PONTUA\00c7\00c3O';}
-html[lang='fr'] #filter-fs:before {content: 'SCORE';}
-html[lang='es'] #filter-fs:before {content: 'PUNTUACI\00d3N ';}
-html[lang='ko'] #filter-fs:before {content: '\c804\d22c\b825';}
-html[lang='de'] #filter-fs:before {content: 'KAMPFPUNKTE';}
-
-html[lang='ja'] #filter-atk:before {content: '\653b\6483\30c0\30e1\30fc\30b8';}
-html[lang='ru'] #filter-atk:before {content: '\0423\0420\041e\041d \043e\0442 \0410\0422\0410\041a\0418';}
-html[lang='en'] #filter-atk:before {content: 'ATTACK DAMAGE';}
-html[lang='pt-br'] #filter-atk:before {content: 'DANO DOS GOLPES';}
-html[lang='fr'] #filter-atk:before {content: 'D\00c9G\00c2TS D\'ATTAQUE';}
-html[lang='es'] #filter-atk:before {content: 'DA\00d1O POR ATAQUE';}
-html[lang='ko'] #filter-atk:before {content: '\acf5\aca9 \d53c\d574';}
-html[lang='de'] #filter-atk:before {content: 'SCHADENSBOOST';}
-
-html[lang='ja'] #filter-hp:before {content: '\4f53\529b';}
-html[lang='ru'] #filter-hp:before {content: '\0417\0414\041e\0420\041e\0412\042c\0415';}
-html[lang='en'] #filter-hp:before {content: 'HEALTH';}
-html[lang='pt-br'] #filter-hp:before {content: 'VIDA';}
-html[lang='fr'] #filter-hp:before {content: 'SANT\00c9';}
-html[lang='es'] #filter-hp:before {content: 'SALUD';}
-html[lang='ko'] #filter-hp:before {content: '\ccb4\b825';}
-html[lang='de'] #filter-hp:before {content: 'GESUNDHEIT';}
-
-html[lang='ja'] #filter-element:before {content: '\5c5e\6027';}
-html[lang='ru'] #filter-element:before {content: '\0421\0442\0438\0445\0438\044f';}
-html[lang='en'] #filter-element:before {content: 'Element';}
-html[lang='pt-br'] #filter-element:before {content: 'Elemento';}
-html[lang='fr'] #filter-element:before {content: '\00c9l\00e9ment';}
-html[lang='es'] #filter-element:before {content: 'Elemento';}
-html[lang='ko'] #filter-element:before {content: '\c18d\c131';}
-html[lang='de'] #filter-element:before {content: 'Element';}
-
-html[lang='ja'] #filter-tier:before {content: '\30e9\30f3\30af';}
-html[lang='ru'] #filter-tier:before {content: '\0420\0410\041d\0413';}
-html[lang='en'] #filter-tier:before {content: 'TIER';}
-html[lang='pt-br'] #filter-tier:before {content: 'CATEGORIA';}
-html[lang='fr'] #filter-tier:before {content: 'RANG';}
-html[lang='es'] #filter-tier:before {content: 'GRADO';}
-html[lang='ko'] #filter-tier:before {content: '\b4f1\ae09';}
-html[lang='de'] #filter-tier:before {content: 'KLASSE';}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* HEADER */
 
@@ -309,12 +131,38 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
     margin: 6px auto;
 }
 
+#version:before {
+    background: url('official/IconInfo.png');
+    text-indent: 1.25em;
+    margin-right: 0.25em;
+}
+html[lang='ja'] #version:before {content: '\30d0\30fc\30b8\30e7\30f3:';}
+html[lang='ru'] #version:before {content: '\0412\0415\0420\0421\0418\042f:';}
+html[lang='en'] #version:before {content: 'VERSION:';}
+html[lang='pt-br'] #version:before {content: 'VERS\00c3O:';}
+html[lang='fr'] #version:before {content: 'VERSION:';}
+html[lang='es'] #version:before {content: 'VERSI\00d3N:';}
+html[lang='ko'] #version:before {content: '\bc84\c804:';}
+html[lang='de'] #version:before {content: 'VERSION:';}
+
+#language-set label:before {
+    text-indent: 1.75em;
+}
+#jp + .tagged:before {content: '日本語'; background: url('official/flag_jp.png');}
+#ru + .tagged:before {content: 'Pусский'; background: url('official/flag_ru.png');}
+#en + .tagged:before {content: 'English'; background: url('official/flag_en.png');}
+#pt + .tagged:before {content: 'Português'; background: url('official/flag_pt.png');}
+#fr + .tagged:before {content: 'Français'; background: url('official/flag_fr.png');}
+#es + .tagged:before {content: 'Español'; background: url('official/flag_es.png');}
+#ko + .tagged:before {content: '한국어'; background: url('official/flag_ko.png');}
+#de + .tagged:before {content: 'Deutsch'; background: url('official/flag_de.png');}
+
 /* FOOTER */
 
 #footer {
     position: -webkit-sticky;
     position: sticky;
-    bottom: -1px;
+    bottom: -1px; /* just in case */
 }
 
 #dock {
@@ -336,6 +184,7 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
 
 #filter-sort {
     margin: auto 0 auto auto;
+    cursor: pointer;
 }
 
 #menu {
@@ -343,8 +192,120 @@ html[lang='de'] #filter-tier:before {content: 'KLASSE';}
     text-align: center;
     box-shadow: 0 -3px 3px black;
     border-top: 1px solid #ccb55a;
-    padding: 6px;
+    padding: 10px;
 }
+
+/* FILTER */
+
+#filter-label:before {
+    background: url('official/icon_filter.png');
+    font-size: 20px;
+    text-indent: 1.25em;
+}
+html[lang='ja'] #filter-label:before {content: '\30d5\30a3\30eb\30bf\30fc';}
+html[lang='ru'] #filter-label:before {content: '\0424\0418\041b\042c\0422\0420';}
+html[lang='en'] #filter-label:before {content: 'FILTER';}
+html[lang='pt-br'] #filter-label:before {content: 'FILTRAR';}
+html[lang='fr'] #filter-label:before {content: 'FILTRER';}
+html[lang='es'] #filter-label:before {content: 'FILTRAR';}
+html[lang='ko'] #filter-label:before {content: '\d544\d130';}
+html[lang='de'] #filter-label:before {content: 'FILTER';}
+
+#filter-cancel + label { /* TODO: find a better way to create space */
+    margin-top: 10px;
+}
+
+.divider {
+    width: 1px;
+    background: #263b5a;
+    margin: 8px 4px;
+}
+
+.subset {
+    display: grid;
+    grid-gap: 4px;
+}
+#medals {
+    grid-template-columns: repeat(2, 1fr);
+}
+#elements {
+    grid-template-columns: repeat(3, 1fr);
+}
+#mastery {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* SORT */
+
+#sort-label:before {
+    background: url('official/icon_sort.png');
+    font-size: 20px;
+    text-indent: 1.75em;
+}
+html[lang='ja'] #sort-label:before {content: '\4e26\3073\66ff\3048';}
+html[lang='ru'] #sort-label:before {content: '\0423\041f\041e\0420\042f\0414.';}
+html[lang='en'] #sort-label:before {content: 'SORT';}
+html[lang='pt-br'] #sort-label:before {content: 'ORGANIZAR';}
+html[lang='fr'] #sort-label:before {content: 'TRIER';}
+html[lang='es'] #sort-label:before {content: 'ORDENAR';}
+html[lang='ko'] #sort-label:before {content: '\c815\b82c';}
+html[lang='de'] #sort-label:before {content: 'SORTIEREN';}
+
+
+
+html[lang='ja'] #abc + label:before {content: '\30a2\30eb\30d5\30a1\30d9\30c3\30c8\9806';}
+html[lang='ru'] #abc + label:before {content: '\041f\043e \0430\043b\0444\0430\0432\0438\0442\0443';}
+html[lang='en'] #abc + label:before {content: 'Alphabetical';}
+html[lang='pt-br'] #abc + label:before {content: 'Ordem alfab\00e9tica';}
+html[lang='fr'] #abc + label:before {content: 'Alphab\00e9tique';}
+html[lang='es'] #abc + label:before {content: 'Orden alfab\00e9tico';}
+html[lang='ko'] #abc + label:before {content: '\c54c\d30c\bcb3\c21c';}
+html[lang='de'] #abc + label:before {content: 'Alphabetisch';}
+
+html[lang='ja'] #fs + label:before {content: '\30d5\30a1\30a4\30bf\30fc\30fb\30b9\30b3\30a2';}
+html[lang='ru'] #fs + label:before {content: '\0411\041e\0415\0412\041e\0419 \0421\0427\0415\0422';}
+html[lang='en'] #fs + label:before {content: 'FIGHTER SCORE';}
+html[lang='pt-br'] #fs + label:before {content: 'PONTUA\00c7\00c3O';}
+html[lang='fr'] #fs + label:before {content: 'SCORE';}
+html[lang='es'] #fs + label:before {content: 'PUNTUACI\00d3N ';}
+html[lang='ko'] #fs + label:before {content: '\c804\d22c\b825';}
+html[lang='de'] #fs + label:before {content: 'KAMPFPUNKTE';}
+
+html[lang='ja'] #atk + label:before {content: '\653b\6483\30c0\30e1\30fc\30b8';}
+html[lang='ru'] #atk + label:before {content: '\0423\0420\041e\041d \043e\0442 \0410\0422\0410\041a\0418';}
+html[lang='en'] #atk + label:before {content: 'ATTACK DAMAGE';}
+html[lang='pt-br'] #atk + label:before {content: 'DANO DOS GOLPES';}
+html[lang='fr'] #atk + label:before {content: 'D\00c9G\00c2TS D\'ATTAQUE';}
+html[lang='es'] #atk + label:before {content: 'DA\00d1O POR ATAQUE';}
+html[lang='ko'] #atk + label:before {content: '\acf5\aca9 \d53c\d574';}
+html[lang='de'] #atk + label:before {content: 'SCHADENSBOOST';}
+
+html[lang='ja'] #hp + label:before {content: '\4f53\529b';}
+html[lang='ru'] #hp + label:before {content: '\0417\0414\041e\0420\041e\0412\042c\0415';}
+html[lang='en'] #hp + label:before {content: 'HEALTH';}
+html[lang='pt-br'] #hp + label:before {content: 'VIDA';}
+html[lang='fr'] #hp + label:before {content: 'SANT\00c9';}
+html[lang='es'] #hp + label:before {content: 'SALUD';}
+html[lang='ko'] #hp + label:before {content: '\ccb4\b825';}
+html[lang='de'] #hp + label:before {content: 'GESUNDHEIT';}
+
+html[lang='ja'] #element + label:before {content: '\5c5e\6027';}
+html[lang='ru'] #element + label:before {content: '\0421\0442\0438\0445\0438\044f';}
+html[lang='en'] #element + label:before {content: 'Element';}
+html[lang='pt-br'] #element + label:before {content: 'Elemento';}
+html[lang='fr'] #element + label:before {content: '\00c9l\00e9ment';}
+html[lang='es'] #element + label:before {content: 'Elemento';}
+html[lang='ko'] #element + label:before {content: '\c18d\c131';}
+html[lang='de'] #element + label:before {content: 'Element';}
+
+html[lang='ja'] #tier + label:before {content: '\30e9\30f3\30af';}
+html[lang='ru'] #tier + label:before {content: '\0420\0410\041d\0413';}
+html[lang='en'] #tier + label:before {content: 'TIER';}
+html[lang='pt-br'] #tier + label:before {content: 'CATEGORIA';}
+html[lang='fr'] #tier + label:before {content: 'RANG';}
+html[lang='es'] #tier + label:before {content: 'GRADO';}
+html[lang='ko'] #tier + label:before {content: '\b4f1\ae09';}
+html[lang='de'] #tier + label:before {content: 'KLASSE';}
 
 /* COLLECTION */
 

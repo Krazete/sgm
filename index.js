@@ -122,7 +122,7 @@ function createQuote(key) {
 
 function createStat(type, value) {
     var stat = document.createElement("div");
-        stat.className = ["stat", type].join(" ");
+        stat.className = ["tagged", "stat", type].join(" ");
         var span = document.createElement("span");
             span.className = "cinema fancy silver-tint";
             span.innerHTML = value.toLocaleString();
