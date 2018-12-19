@@ -171,6 +171,14 @@ function initDock() {
 
 /* COMPLETE */
 
+function handleUnknownPortrait() {
+    this.classList.add("hidden");
+    this.parentElement.addEventListener("click", function () {
+        open("https://github.com/Krazete/sgm#readme"); /* TODO: add a image section to the readme */
+    });
+    this.parentElement.parentElement.parentElement.classList.add("unknown");
+}
+
 function createAvatar(key) {
     var avatar = document.createElement("div");
         avatar.className = "avatar";
@@ -186,6 +194,7 @@ function createAvatar(key) {
                         stem += "_" + r;
                     }
                     portrait.src = stem + ".png";
+                    portrait.addEventListener("error", handleUnknownPortrait);
                 backdrop.appendChild(portrait);
             frame.appendChild(backdrop);
         avatar.appendChild(frame);

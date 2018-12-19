@@ -193,7 +193,7 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 #footer {
     position: -webkit-sticky;
     position: sticky;
-    bottom: 0;
+    bottom: -1px;
 }
 
 #dock {
@@ -513,7 +513,6 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
 }
 
 #loading:after {
-    content: 'LOADING...';
     font-size: xx-large;
     text-align: center;
     display: block;
@@ -555,7 +554,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
         'sa sa sa'
         'ma ma ma';
     grid-template-rows: repeat(6, min-content);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr repeat(2, minmax(0, 1fr));
     grid-gap: 10px;
     padding: 10px;
 }
@@ -633,6 +632,11 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .wind .backdrop {background: radial-gradient(#9f8, #082);}
 .dark .backdrop {background: radial-gradient(#eae, #525);}
 .light .backdrop {background: radial-gradient(#fff, #ec5);}
+.unknown .backdrop {
+    background: url(official/RandomBackground.png);
+    background-size: contain;
+    cursor: pointer;
+}
 
 .portrait { /* drop-shadow disabled because ios glitch */
     width: 135%;
