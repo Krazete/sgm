@@ -17,7 +17,7 @@ html, body {
 body {
     background: #0f1824;
     color: white;
-    font-family: 'Roboto'; /* TODO: add backup fonts */
+    font-family: 'Roboto', 'Arial Narrow', sans-serif;
     font-size: medium;
     text-shadow: 1px 1px black;
     display: flex;
@@ -53,12 +53,12 @@ html[lang='ru'] .cinema {
 }
 
 .tagged:before {
-    content: '\00a0'; /* placeholder */
+    content: '\00a0';
     height: auto;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     display: inline;
-    padding-left: 1em; /* typically too small */
+    padding-left: 1em;
 }
 
 .hidden {
@@ -93,10 +93,6 @@ html[lang='ru'] .cinema {
     display: inline-grid;
 }
 
-.scroller.hidden { /* force hide */
-    display: none;
-}
-
 input[type='radio'], input[type='checkbox'] {
     display: none;
 }
@@ -107,7 +103,7 @@ label {
     background: #0f1824;
     text-transform: uppercase;
     border: 1px solid #263b5a;
-    border-radius: 4px;
+    border-radius: 5px;
     display: block;
     padding: 4px;
     cursor: pointer;
@@ -197,7 +193,7 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 #footer {
     position: -webkit-sticky;
     position: sticky;
-    bottom: -1px; /* just in case */
+    bottom: 0;
 }
 
 #dock {
@@ -232,7 +228,7 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 
 /* FIGHTER SETTINGS */
 
-#idk {
+#idk { /* TODO: this whole section */
     display: grid;
     grid-template-areas:
         'ol ol ol ol ol ol ol ol ol ol'
@@ -287,7 +283,7 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 
 #options-label:before {
     background: url(official/GearIcon.png);
-    padding-left: 1.25em;
+    padding-left: 1.1em;
 }
 html[lang='ja'] #options-label:before {content: '\30aa\30d7\30b7\30e7\30f3';}
 html[lang='es'] #options-label:before {content: 'OPCIONES';}
@@ -340,9 +336,14 @@ html[lang='ko'] .lvl:before {content: '\b808\bca8';}
 
 /* FILTER */
 
+#filter-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
 #filter-label:before {
     background: url(official/icon_filter.png);
-    padding-left: 1.25em;
+    padding-left: 1.2em;
 }
 html[lang='ja'] #filter-label:before {content: '\30d5\30a3\30eb\30bf\30fc';}
 html[lang='ru'] #filter-label:before {content: '\0424\0418\041b\042c\0422\0420';}
@@ -353,8 +354,8 @@ html[lang='es'] #filter-label:before {content: 'FILTRAR';}
 html[lang='ko'] #filter-label:before {content: '\d544\d130';}
 html[lang='de'] #filter-label:before {content: 'FILTER';}
 
-#filter-cancel + label { /* TODO: find a better way to create space */
-    margin-top: 10px;
+#filter-cancel + label {
+    margin: auto;
 }
 
 .divider {
@@ -381,7 +382,7 @@ html[lang='de'] #filter-label:before {content: 'FILTER';}
 
 #sort-label:before {
     background: url(official/icon_sort.png);
-    padding-left: 1.75em;
+    padding-left: 1.6em;
 }
 html[lang='ja'] #sort-label:before {content: '\4e26\3073\66ff\3048';}
 html[lang='ru'] #sort-label:before {content: '\0423\041f\041e\0420\042f\0414.';}
@@ -492,10 +493,10 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     font-size: larger;
     text-align: center;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     box-shadow: inset 0 0 10px 1px black;
     grid-column: 1 / -1;
-    padding: 6px 0;
+    padding: 4px 0;
     z-index: 1;
 }
 
@@ -557,11 +558,9 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     grid-gap: 10px;
     padding: 10px;
 }
-
-.card.hidden { /* force hide */
+.card.hidden {
     display: none;
 }
-
 .card.locked {
     display: grid;
 }
@@ -585,11 +584,13 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     width: 70px;
     height: 70px;
     padding: 5px;
+    margin: 0 auto -13px auto;
 }
 .larger .frame {
     width: 100px;
     height: 100px;
-    padding: 6px;
+    padding: 7px;
+    margin: 0 auto -18px auto;
 }
 .bronze .frame {
     background: linear-gradient(#621 10%, #b76 20%, #843 40%, #b76 60%, #621 90%);
@@ -601,7 +602,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     background: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
 }
 .diamond.neutral .frame, .diamond .neutral .frame {
-    background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%); /* TODO: confirm colors */
+    background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%);
 }
 .diamond.fire .frame, .diamond .fire .frame {
     background: linear-gradient(#d33 10%, #fff 20%, #f99 40%, #fee 60%, #d33 90%);
@@ -632,9 +633,9 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .dark .backdrop {background: radial-gradient(#eae, #525);}
 .light .backdrop {background: radial-gradient(#fff, #ec5);}
 
-.portrait {
+.portrait { /* drop-shadow disabled because ios glitch */
     width: 135%;
-    /* filter: drop-shadow(0 0 1px black); */ /* disabled because it causes problems in ios */
+    /* filter: drop-shadow(0 0 1px black); */
     margin: -64% 0 0 -18%;
 }
 #rBlight .portrait {
@@ -661,33 +662,30 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     margin: auto;
 }
 
-.variant-name, .fancy { /* NOTE: there might be some compatibility issues */
+.variant-name, .fancy { /* drop-shadow disabled because ios glitch */
+    background: -o-linear-gradient(transparent, transparent) !important; /* for opera; TODO: check if this is necessary */
     -webkit-background-clip: text !important;
     font-size: larger;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
-    /* filter: drop-shadow(1px 1px black); */ /* disabled because it causes problems in ios */
+    /* filter: drop-shadow(1px 1px black); */
     padding: 0 0.25em;
 }
 .bronze .variant-name, .fancy.bronze-tint {
-    background: -webkit-linear-gradient(white, chocolate);
-    background: -o-linear-gradient(transparent, transparent); /* for opera */
-    color: chocolate; /* TODO: check if these backup colors look okay */
+    background: -webkit-linear-gradient(white, #621);
+    color: #843;
 }
 .silver .variant-name, .fancy.silver-tint {
-    background: -webkit-linear-gradient(white, gray);
-    background: -o-linear-gradient(transparent, transparent); /* for opera */
-    color: gray;
+    background: -webkit-linear-gradient(white, #889);
+    color: #9ab;
 }
 .gold .variant-name, .fancy.gold-tint {
-    background: -webkit-linear-gradient(white, gold);
-    background: -o-linear-gradient(transparent, transparent); /* for opera */
-    color: gold;
+    background: -webkit-linear-gradient(white, #da2);
+    color: #fd8;
 }
 .diamond .variant-name, .fancy.diamond-tint {
-    background: -webkit-linear-gradient(white, pink);
-    background: -o-linear-gradient(transparent, transparent); /* for opera */
-    color: pink;
+    background: -webkit-linear-gradient(white, #d9d);
+    color: #fcf;
 }
 
 .fighter-name {
@@ -704,21 +702,16 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 
 /* STATS */
 
-.stat { /* TODO: EVERYTHING ABOUT STATS */
-    text-align: center;
-    margin: auto;
+.atk span, .hp span, .fs span {
+    font-size: inherit;
 }
-.stat:before {
-    content: '\00a0'; /* TODO: is this needed? */
-    height: 20px;
-    background-size: 20px !important;
-    background-repeat: no-repeat !important;
-    display: inline-block;
-    padding-left: 25px;
+.atk:before, .hp:before, .fs:before {
+    padding-left: 1.4em;
 }
 
 .atk {
     grid-area: atk;
+    margin: auto;
 }
 .atk:before {
     background: url(official/PowerIcon.png);
@@ -734,6 +727,7 @@ html[lang='de'] .atk:before {content: 'ATK';}
 
 .hp {
     grid-area: hp;
+    margin: auto;
 }
 .hp:before {
     background: url(official/HealthIcon.png);
@@ -749,7 +743,7 @@ html[lang='de'] .hp:before {content: 'GES';}
 
 .fs {
     grid-area: fs;
-    margin-top: 0;
+    margin: 0 auto;
 }
 .neutral .fs:before {background: url(official/ElementalIconNeutral.png);}
 .fire .fs:before {background: url(official/ElementalIconFire.png);}
@@ -836,7 +830,7 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 }
 
 .number {
-    color: #0f0; /* TODO: standardize color format */
+    color: lime;
 }
 
 /* WIKIA */

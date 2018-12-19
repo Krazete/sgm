@@ -212,12 +212,24 @@ function createQuote(key) {
 
 function createStat(type, value) {
     var stat = document.createElement("div");
-        stat.className = ["tagged", "stat", type].join(" ");
+        stat.className = ["tagged", type].join(" ");
         var span = document.createElement("span");
             span.className = "cinema fancy silver-tint";
             span.innerHTML = value.toLocaleString();
         stat.appendChild(span);
     return stat;
+}
+
+function filterCards(condition) {
+    var cards = document.getElementsByClassName("card");
+    for (var card of cards) {
+        if (condition(card.id)) {
+            card.classList.remove("hidden");
+        }
+        else {
+            card.classList.add("hidden");
+        }
+    }
 }
 
 function createAbility(type, titleText, descriptionTexts) {
