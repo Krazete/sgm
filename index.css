@@ -62,7 +62,7 @@ html[lang='ru'] .cinema {
 }
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 /* HEADER AND FOOTER */
@@ -91,6 +91,10 @@ html[lang='ru'] .cinema {
 
 .scroller.half > div {
     display: inline-grid;
+}
+
+.scroller.hidden { /* force hide */
+    display: none;
 }
 
 input[type='radio'], input[type='checkbox'] {
@@ -505,6 +509,14 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     padding: 10px;
 }
 
+.card.hidden { /* force hide */
+    display: none;
+}
+
+.card.locked {
+    display: grid;
+}
+
 /* AVATAR */
 
 .avatar {
@@ -812,7 +824,6 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 .larger .lock {
     width: 22px;
 }
-
 .locked .lock {
     opacity: 1;
 }

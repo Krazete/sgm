@@ -334,7 +334,6 @@ function createLock() {
 }
 
 function lockCard() {
-    console.log(this);
     var card = this.parentElement;
     if (card.classList.contains("locked")) {
         card.classList.remove("locked");
