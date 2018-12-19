@@ -99,14 +99,6 @@ def build_data(monolith, mono_char_keys):
             return monolith[key]
         return {'title': None, 'features': []}
 
-    def forge(ref):
-        'Return the name of an image reference and copy the image file.'
-        stem = ref['resourcePath'].split("/")[-1]
-        src = 'preprocessing/sgm_exports/Texture2D/{}.png'.format(stem)
-        dst = 'data/images/{}.png'.format(stem)
-        file.copy(src, dst)
-        return stem
-
     def record(key):
         'Record corpus key and return it.'
         if isinstance(key, dict):
@@ -185,10 +177,6 @@ def build_data(monolith, mono_char_keys):
             # 'dataName': base['dataName'],
             'name': record(base['displayName']),
             # 'role': record(base['roleDescription']),
-            # 'outline': forge(base['gachaRewardOutline']),
-            # 'loading': forge(base['loadingTexture']),
-            # 'super': forge(base['blockbusterTexture']),
-            # 'death': forge(base['superDeathTexture']),
             'voice': {
                 'en': base['englishVoArtist'],
                 'ja': base['japaneseVoArtist']
