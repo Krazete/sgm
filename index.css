@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Cinema';
-    src: url('data/font/TBCinemaRGothic-M.ttf');
+    src: url(data/font/TBCinemaRGothic-M.ttf);
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('data/font/RobotoCondensed-Regular.ttf');
+    src: url(data/font/RobotoCondensed-Regular.ttf);
 }
 
 html, body {
@@ -163,7 +163,7 @@ label:before {
 }
 
 #version:before {
-    background: url('official/IconInfo.png');
+    background: url(official/IconInfo.png);
     padding-left: 1.25em;
     margin-right: 0.25em;
 }
@@ -179,14 +179,14 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 #language-set label:before {
     padding-left: 1.75em;
 }
-#ja + .tagged:before {content: '日本語'; background: url('official/flag_jp.png');}
-#ru + .tagged:before {content: 'Pусский'; background: url('official/flag_ru.png');}
-#en + .tagged:before {content: 'English'; background: url('official/flag_en.png');}
-#pt-br + .tagged:before {content: 'Português'; background: url('official/flag_pt.png');}
-#fr + .tagged:before {content: 'Français'; background: url('official/flag_fr.png');}
-#es + .tagged:before {content: 'Español'; background: url('official/flag_es.png');}
-#ko + .tagged:before {content: '한국어'; background: url('official/flag_ko.png');}
-#de + .tagged:before {content: 'Deutsch'; background: url('official/flag_de.png');}
+#ja + .tagged:before {content: '日本語'; background: url(official/flag_jp.png);}
+#ru + .tagged:before {content: 'Pусский'; background: url(official/flag_ru.png);}
+#en + .tagged:before {content: 'English'; background: url(official/flag_en.png);}
+#pt-br + .tagged:before {content: 'Português'; background: url(official/flag_pt.png);}
+#fr + .tagged:before {content: 'Français'; background: url(official/flag_fr.png);}
+#es + .tagged:before {content: 'Español'; background: url(official/flag_es.png);}
+#ko + .tagged:before {content: '한국어'; background: url(official/flag_ko.png);}
+#de + .tagged:before {content: 'Deutsch'; background: url(official/flag_de.png);}
 
 /* FOOTER */
 
@@ -290,7 +290,7 @@ html[lang='ko'] .lvl:before {content: '\b808\bca8';}
 /* FILTER */
 
 #filter-label:before {
-    background: url('official/icon_filter.png');
+    background: url(official/icon_filter.png);
     padding-left: 1.25em;
 }
 html[lang='ja'] #filter-label:before {content: '\30d5\30a3\30eb\30bf\30fc';}
@@ -329,7 +329,7 @@ html[lang='de'] #filter-label:before {content: 'FILTER';}
 /* SORT */
 
 #sort-label:before {
-    background: url('official/icon_sort.png');
+    background: url(official/icon_sort.png);
     padding-left: 1.75em;
 }
 html[lang='ja'] #sort-label:before {content: '\4e26\3073\66ff\3048';}
@@ -606,8 +606,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     -webkit-text-fill-color: transparent;
     text-shadow: none;
     filter: drop-shadow(1px 1px black); /* disabled because it causes problems in ios */
-    padding: 0 0.1em;
-    margin: 0.1em;
+    padding: 0 0.25em;
 }
 .bronze .variant-name, .fancy.bronze-tint {
     background: -webkit-linear-gradient(white, chocolate);
@@ -793,7 +792,7 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
     content: '';
     width: 14px;
     height: 14px;
-    background: url('official/icon_externalsite.png');
+    background: url(official/icon_externalsite.png);
     background-size: 14px;
     display: block;
 }
@@ -802,11 +801,16 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 
 .lock {
     position: absolute;
-    top: 0;
-    left: 0;
+    width: 18px;
     opacity: 0.5;
     margin: 6px;
     cursor: pointer;
+}
+.smaller .lock {
+    width: 14px;
+}
+.larger .lock {
+    width: 22px;
 }
 
 .locked .lock {

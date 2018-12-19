@@ -316,7 +316,7 @@ function createMA(key, n) {
 
 function createWikia(key) {
     var wikia = document.createElement("a");
-        wikia.className = "wikia";
+        wikia.className = "wikia icon";
         wikia.target = "_blank";
         wikia.href = [
             "https://skullgirlsmobile.wikia.com/wiki",
@@ -327,9 +327,21 @@ function createWikia(key) {
 
 function createLock() {
     var lock = document.createElement("img");
-        lock.className = "lock icon";
+        lock.className = "lock";
         lock.src = "official/Lock.png";
+        lock.addEventListener("click", lockCard);
     return lock;
+}
+
+function lockCard() {
+    console.log(this);
+    var card = this.parentElement;
+    if (card.classList.contains("locked")) {
+        card.classList.remove("locked");
+    }
+    else {
+        card.classList.add("locked");
+    }
 }
 
 /* TODO: review all these links */
