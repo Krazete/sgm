@@ -100,7 +100,8 @@ function load(path) {
 function initDock() {
     var menu = document.getElementById("menu");
     var settings = document.getElementById("options");
-    var filterSortMenu = document.getElementById("filter-sort-menu");
+    var filterMenu = document.getElementById("filter-menu");
+    var sortMenu = document.getElementById("sort-menu");
 
     var zoomIn = document.getElementById("zoom-in");
     var zoomOut = document.getElementById("zoom-out");
@@ -139,7 +140,8 @@ function initDock() {
             filterSort.classList.remove("glowing");
             menu.classList.remove("hidden");
             settings.classList.remove("hidden");
-            filterSortMenu.classList.add("hidden");
+            filterMenu.classList.add("hidden");
+            sortMenu.classList.add("hidden");
             settings.scrollLeft = 0;
         }
     }
@@ -154,8 +156,10 @@ function initDock() {
             fighterSettings.classList.remove("glowing");
             menu.classList.remove("hidden");
             settings.classList.add("hidden");
-            filterSortMenu.classList.remove("hidden");
-            filterSortMenu.children[0].scrollLeft = 0;
+            filterMenu.classList.remove("hidden");
+            sortMenu.classList.remove("hidden");
+            filterMenu.children[0].scrollLeft = 0;
+            sortMenu.children[0].scrollLeft = 0;
         }
     }
 
@@ -223,7 +227,7 @@ function createStat(type, value) {
     var stat = document.createElement("div");
         stat.className = ["tagged", type].join(" ");
         var span = document.createElement("span");
-            span.className = "cinema silver-gradient";
+            span.className = "cinema numeric silver-gradient";
             span.innerHTML = value.toLocaleString();
         stat.appendChild(span);
     return stat;
@@ -247,7 +251,7 @@ function createAbility(type, titleText, descriptionTexts) {
         var abilityName = document.createElement("div");
             abilityName.className = "ability-name cinema";
             var label = document.createElement("span");
-                label.className = "label gold-gradient";
+                label.className = "ability-label gold-gradient";
             abilityName.appendChild(label);
             var span = document.createElement("span");
                 span.className = "silver-gradient";

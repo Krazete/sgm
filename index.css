@@ -30,12 +30,6 @@ body {
     margin: 0;
     -webkit-text-size-adjust: none; /* for ios */
 }
-body.zoomed-out {
-    font-size: x-small;
-}
-body.zoomed-in {
-    font-size: x-large;
-}
 
 .hidden {
     display: none;
@@ -91,6 +85,10 @@ html[lang='ru'] .cinema {
     color: #fcf;
 }
 
+.numeric {
+    font-size: inherit;
+}
+
 .smaller {
     font-size: smaller;
 }
@@ -118,6 +116,9 @@ html[lang='ru'] .cinema {
     vertical-align: top;
     display: inline-block;
 }
+.scroller.half.hidden {
+    display: none;
+}
 
 .scroller.half > div {
     display: inline-grid;
@@ -132,6 +133,7 @@ label {
     min-height: 28px;
     background: #0f1824;
     text-transform: uppercase;
+    line-height: 28px;
     border: 1px solid #263b5a;
     border-radius: 5px;
     display: block;
@@ -143,8 +145,15 @@ input:checked + label {
     border-color: #314c73;
 }
 
-label:before {
-    line-height: 28px;
+.icon {
+    max-width: 28px;
+    max-height: 28px;
+    display: block;
+    margin: auto;
+}
+
+.glowing {
+    filter: drop-shadow(0 0 6px white);
 }
 
 .button {
@@ -157,17 +166,6 @@ label:before {
 .pressed {
     opacity: 0.5;
     pointer-events: none;
-}
-
-.icon {
-    max-width: 28px;
-    max-height: 28px;
-    display: block;
-    margin: auto;
-}
-
-.glowing {
-    filter: drop-shadow(0 0 6px white);
 }
 
 /* HEADER */
@@ -258,59 +256,13 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 
 /* FIGHTER SETTINGS */
 
-#idk { /* TODO: this whole section */
-    display: grid;
-    grid-template-areas:
-        'ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol'
-        'el el el el ll ll ll ll sa sa sa sa ma ma ma ma'
-        'eb es eg ed lb ls lg ld sa sa sa sa ma ma ma ma'
-        'ei ei ei ei li li li li sa sa sa sa ma ma ma ma';
-}
-#ol {
-    grid-area: ol;
-    margin-right: auto;
-}
-#ol > * {
-    vertical-align: top;
-}
-#evolve {
-    grid-area: el;
-}
-#level {
-    grid-area: ll;
-}
-#ei {
-    grid-area: ei;
-}
-#eb {
-    grid-area: eb;
-}
-#es {
-    grid-area: es;
-}
-#eg {
-    grid-area: eg;
-}
-#ed {
-    grid-area: ed;
-}
-#li {
-    grid-area: li;
-}
-#lb {
-    grid-area: lb;
-}
-#ls {
-    grid-area: ls;
-}
-#lg {
-    grid-area: lg;
-}
-#ld {
-    grid-area: ld;
-    filter: sepia(1) hue-rotate(270deg); /* makes gray into pink */
+#options.scroller {
+    min-width: 90%;
 }
 
+#options.scroller > div {
+    grid-auto-columns: 1fr;
+}
 
 #options-label:before {
     background: url(official/GearIcon.png);
@@ -325,6 +277,46 @@ html[lang='en'] #options-label:before {content: 'OPTIONS';}
 html[lang='de'] #options-label:before {content: 'EINSTELLUNGEN';}
 html[lang='ko'] #options-label:before {content: '\c124\c815';}
 
+#evolve {
+    grid-area: el;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#level-bronze, #level-silver, #level-gold, #level-diamond {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    border: none;
+    border-radius: 50%;
+    margin: auto auto -28px auto;
+    display: block;
+    z-index: 1;
+}
+#level-bronze[value='30'], #level-silver.maxed, #level-gold.maxed, #level-diamond.maxed {
+    color: skyblue;
+}
+#level-bronze:focus, #level-silver:focus, #level-gold:focus, #level-diamond:focus {
+    outline: none;
+}
+#level-bronze:focus + img, #level-silver:focus + img, #level-gold:focus + img, #level-diamond:focus + img {
+    filter: drop-shadow(0 0 6px white);
+}
+#level-diamond + img {
+    filter: sepia(1) hue-rotate(270deg);
+}
+#level-diamond:focus + img {
+    filter: sepia(1) hue-rotate(270deg) drop-shadow(0 0 6px white);
+}
+
 html[lang='ja'] #evolve:before {content: '\9032\5316';}
 html[lang='es'] #evolve:before {content: 'EVOLUCIONAR';}
 html[lang='pt-br'] #evolve:before {content: 'EVOLUIR';}
@@ -333,6 +325,10 @@ html[lang='fr'] #evolve:before {content: 'EVOLUTION';}
 html[lang='en'] #evolve:before {content: 'EVOLVE';}
 html[lang='de'] #evolve:before {content: 'ENTWICKLUNG';}
 html[lang='ko'] #evolve:before {content: '\c9c4\d654\d558\ae30';}
+
+#level {
+    grid-area: ll;
+}
 
 html[lang='ja'] #level:before {content: '\30ec\30d9\30eb';}
 html[lang='es'] #level:before {content: 'Level';}
@@ -485,6 +481,12 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     grid-gap: 6px;
     padding: 6px;
 }
+.zoomed-out .card {
+    font-size: x-small;
+}
+.zoomed-in .card {
+    font-size: x-large;
+}
 
 @media (max-width: 4050px) {.zoomed-in #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
 @media (max-width: 3600px) {.zoomed-in #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
@@ -517,7 +519,7 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
 
 #searcherer {
     width: 100%;
-    font-size: larger;
+    font-size: x-large;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -707,9 +709,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 
 /* STATS */
 
-.atk span, .hp span, .fs span {
-    font-size: inherit;
-}
 .atk:before, .hp:before, .fs:before {
     padding-left: 1.4em;
 }
@@ -778,44 +777,44 @@ html[lang='de'] .fs:before {content: 'KAMPFPUNKTE';}
     background: #0f1824;
 }
 
-.ca {
+.ability.ca {
     grid-area: ca;
 }
 
-html[lang='ja'] .ca .label:before {content: '\30ad\30e3\30e9\30af\30bf\30fc\306e\30a2\30d3\30ea\30c6\30a3';}
-html[lang='ru'] .ca .label:before {content: '\0423\041c\0415\041d\0418\0415 \041f\0415\0420\0421\041e\041d\0410\0416\0410';}
-html[lang='en'] .ca .label:before {content: 'CHARACTER ABILITY';}
-html[lang='pt-br'] .ca .label:before {content: 'HABILIDADE DO PERSONAGEM';}
-html[lang='fr'] .ca .label:before {content: 'CAPACIT\00c9 DU PERSONNAGE';}
-html[lang='es'] .ca .label:before {content: 'HABILIDAD DE PERSONAJE';}
-html[lang='ko'] .ca .label:before {content: '\ce90\b9ad\d130 \b2a5\b825';}
-html[lang='de'] .ca .label:before {content: 'CHARAKTER-FERTIGKEIT';}
+html[lang='ja'] .ca .ability-label:before {content: '\30ad\30e3\30e9\30af\30bf\30fc\306e\30a2\30d3\30ea\30c6\30a3';}
+html[lang='ru'] .ca .ability-label:before {content: '\0423\041c\0415\041d\0418\0415 \041f\0415\0420\0421\041e\041d\0410\0416\0410';}
+html[lang='en'] .ca .ability-label:before {content: 'CHARACTER ABILITY';}
+html[lang='pt-br'] .ca .ability-label:before {content: 'HABILIDADE DO PERSONAGEM';}
+html[lang='fr'] .ca .ability-label:before {content: 'CAPACIT\00c9 DU PERSONNAGE';}
+html[lang='es'] .ca .ability-label:before {content: 'HABILIDAD DE PERSONAJE';}
+html[lang='ko'] .ca .ability-label:before {content: '\ce90\b9ad\d130 \b2a5\b825';}
+html[lang='de'] .ca .ability-label:before {content: 'CHARAKTER-FERTIGKEIT';}
 
-.sa {
+.ability.sa {
     grid-area: sa;
 }
 
-html[lang='ja'] .sa .label:before {content: '\56fa\6709\80fd\529b';}
-html[lang='ru'] .sa .label:before {content: '\041a\043b\044e\0447\0435\0432\043e\0435 \0443\043c\0435\043d\0438\0435';}
-html[lang='en'] .sa .label:before {content: 'Signature Ability';}
-html[lang='pt-br'] .sa .label:before {content: 'Habilidade Caracter\00edstica';}
-html[lang='fr'] .sa .label:before {content: 'Aptitude Signature';}
-html[lang='es'] .sa .label:before {content: 'Habilidad caracter\00edstica';}
-html[lang='ko'] .sa .label:before {content: '\ace0\c720 \b2a5\b825';}
-html[lang='de'] .sa .label:before {content: 'Markenzeichen';}
+html[lang='ja'] .sa .ability-label:before {content: '\56fa\6709\80fd\529b';}
+html[lang='ru'] .sa .ability-label:before {content: '\041a\043b\044e\0447\0435\0432\043e\0435 \0443\043c\0435\043d\0438\0435';}
+html[lang='en'] .sa .ability-label:before {content: 'Signature Ability';}
+html[lang='pt-br'] .sa .ability-label:before {content: 'Habilidade Caracter\00edstica';}
+html[lang='fr'] .sa .ability-label:before {content: 'Aptitude Signature';}
+html[lang='es'] .sa .ability-label:before {content: 'Habilidad caracter\00edstica';}
+html[lang='ko'] .sa .ability-label:before {content: '\ace0\c720 \b2a5\b825';}
+html[lang='de'] .sa .ability-label:before {content: 'Markenzeichen';}
 
-.ma {
+.ability.ma {
     grid-area: ma;
 }
 
-html[lang='ja'] .ma .label:before {content: '\30b9\30bf\30fc\30fb\30d1\30ef\30fc';}
-html[lang='ru'] .ma .label:before {content: '\0423\041d\0418\041a. \0421\041f\041e\0421\041e\0411\041d.';}
-html[lang='en'] .ma .label:before {content: 'MARQUEE ABILITY';}
-html[lang='pt-br'] .ma .label:before {content: 'HABILIDADE SUPERIOR';}
-html[lang='fr'] .ma .label:before {content: 'APTITUDE R\00c9PUTATION';}
-html[lang='es'] .ma .label:before {content: 'CAPACIDAD DE CARTEL';}
-html[lang='ko'] .ma .label:before {content: '\ad81\adf9 \b2a5\b825';}
-html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
+html[lang='ja'] .ma .ability-label:before {content: '\30b9\30bf\30fc\30fb\30d1\30ef\30fc';}
+html[lang='ru'] .ma .ability-label:before {content: '\0423\041d\0418\041a. \0421\041f\041e\0421\041e\0411\041d.';}
+html[lang='en'] .ma .ability-label:before {content: 'MARQUEE ABILITY';}
+html[lang='pt-br'] .ma .ability-label:before {content: 'HABILIDADE SUPERIOR';}
+html[lang='fr'] .ma .ability-label:before {content: 'APTITUDE R\00c9PUTATION';}
+html[lang='es'] .ma .ability-label:before {content: 'CAPACIDAD DE CARTEL';}
+html[lang='ko'] .ma .ability-label:before {content: '\ad81\adf9 \b2a5\b825';}
+html[lang='de'] .ma .ability-label:before {content: 'PRUNKFERTIGKEIT';}
 
 .ability-name {
     cursor: pointer;
@@ -860,16 +859,16 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 
 .lock {
     position: absolute;
-    width: 18px;
+    width: 20px;
     opacity: 0.5;
     padding: 6px;
     cursor: pointer;
 }
 .zoomed-out .lock {
-    width: 14px;
+    width: 16px;
 }
 .zoomed-in .lock {
-    width: 22px;
+    width: 24px;
 }
 .locked .lock {
     opacity: 1;

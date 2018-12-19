@@ -52,110 +52,123 @@
     </div>
     <div id="footer">
         <div class="hidden" id="menu">
-            <div id="options">
-                <div class="scroller">
-                    <div id="idk">
-                        <div id="ol">
-                            <span class="tagged cinema dependent-gradient" id="options-label"></span>
-                            <img class="button" src="official/CloseButton.png">
-                            <img class="button" src="official/Button_Home.png">
-                            <img class="button" src="official/WinsToggleIcon.png">
-                        </div>
+            <div class="scroller" id="options">
+                <div>
+                    <div>
+                        <span class="tagged cinema dependent-gradient" id="options-label"></span>
+                        <img class="button" src="official/CloseButton.png">
+                        <img class="button" src="official/Button_Home.png">
+                        <img class="button" src="official/WinsToggleIcon.png">
+                    </div>
+                    <div>
                         <div class="cinema dependent-gradient" id="evolve"></div>
-                        <input type="range" min="0" max="3" value="0" id="ei">
-                        <img class="icon" src="official/constraints_bronze.png" id="eb">
-                        <img class="icon" src="official/constraints_silver.png" id="es">
-                        <img class="icon" src="official/constraints_gold.png" id="eg">
-                        <img class="icon" src="official/constraints_diamond.png" id="ed">
+                        <input type="range" min="0" max="3" value="0">
+                        <img class="icon" src="official/constraints_bronze.png" id="evolve-bronze">
+                        <img class="icon" src="official/constraints_silver.png" id="evolve-silver">
+                        <img class="icon" src="official/constraints_gold.png" id="evolve-gold">
+                        <img class="icon" src="official/constraints_diamond.png" id="evolve-diamond">
+                    </div>
+                    <div>
                         <div class="cinema dependent-gradient" id="level"></div>
-                        <input type="range" min="0" max="2" value="2" id="li">
-                        <img class="icon" src="official/BronzeLevel.png" id="lb">
-                        <img class="icon" src="official/SilverLevel.png" id="ls">
-                        <img class="icon" src="official/GoldLevel.png" id="lg">
-                        <img class="icon" src="official/DiamondLevel.png" id="ld">
-                        <div class="sa">
-                            <div class="label cinema dependent-gradient"></div>
-                            <div>
-                                <span class="lvl"></span>
-                                <span class="cinema silver-gradient">0</span>
-                            </div>
-                            <input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);">
+                        <input type="range" min="0" max="2" value="2">
+                        <div>
+                            <input type="number" pattern="\d*" min="1" max="30" value="1" class="cinema numeric" id="level-bronze">
+                            <img class="icon" src="official/BronzeLevel.png">
                         </div>
-                        <div class="ma">
-                            <div class="label cinema dependent-gradient"></div>
-                            <div>
-                                <span class="lvl"></span>
-                                <span class="cinema silver-gradient">0</span>
-                            </div>
-                            <input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);">
+                        <div>
+                            <input type="number" pattern="\d*" min="1" max="40" value="1" class="cinema numeric" id="level-silver">
+                            <img class="icon" src="official/SilverLevel.png">
                         </div>
+                        <div>
+                            <input type="number" pattern="\d*" min="1" max="50" value="1" class="cinema numeric" id="level-gold">
+                            <img class="icon" src="official/GoldLevel.png">
+                        </div>
+                        <div>
+                            <input type="number" pattern="\d*" min="1" max="60" value="1" class="cinema numeric" id="level-diamond">
+                            <img class="icon" src="official/DiamondLevel.png">
+                        </div>
+                    </div>
+                    <div class="sa">
+                        <div class="ability-label cinema dependent-gradient"></div>
+                        <div>
+                            <span class="lvl"></span>
+                            <span class="cinema numeric silver-gradient">0</span>
+                        </div>
+                        <input type="range" min="0" max="2" value="2" id="sa" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);">
+                    </div>
+                    <div class="ma">
+                        <div class="ability-label cinema dependent-gradient"></div>
+                        <div>
+                            <span class="lvl"></span>
+                            <span class="cinema numeric silver-gradient">0</span>
+                        </div>
+                        <input type="range" min="0" max="10" value="10" id="ma" oninput="resetCollection();init(sa.value,ma.value,red.checked);sort(order);toggle(mastery);">
                     </div>
                 </div>
             </div>
-            <div id="filter-sort-menu">
-                <div class="scroller half">
-                    <div>
-                        <div id="filter-flexbox">
-                            <span class="tagged cinema silver-gradient" id="filter-label"></span>
-                            <input type="checkbox" id="filter-cancel">
-                            <label for="filter-cancel"><img class="icon" src="official/constraints_no.png"></label>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="subset" id="medals">
-                            <input type="checkbox" id="bronze">
-                            <label for="bronze"><img class="icon" src="official/constraints_bronze.png"></label>
-                            <input type="checkbox" id="silver">
-                            <label for="silver"><img class="icon" src="official/constraints_silver.png"></label>
-                            <input type="checkbox" id="gold">
-                            <label for="gold"><img class="icon" src="official/constraints_gold.png"></label>
-                            <input type="checkbox" id="diamond">
-                            <label for="diamond"><img class="icon" src="official/constraints_diamond.png"></label>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="subset" id="elements">
-                            <input type="checkbox" id="fire">
-                            <label for="fire"><img class="icon" src="official/ElementalFireBackless.png"></label>
-                            <input type="checkbox" id="water">
-                            <label for="water"><img class="icon" src="official/ElementalWaterBackless.png"></label>
-                            <input type="checkbox" id="wind">
-                            <label for="wind"><img class="icon" src="official/ElementalWindBackless.png"></label>
-                            <input type="checkbox" id="light">
-                            <label for="light"><img class="icon" src="official/ElementalLightBackless.png"></label>
-                            <input type="checkbox" id="dark">
-                            <label for="dark"><img class="icon" src="official/ElementalDarkBackless.png"></label>
-                            <input type="checkbox" id="neutral">
-                            <label for="neutral"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="subset" id="mastery">
-                            <input type="checkbox" id="be">
-                            <label for="be"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
-                            <input type="checkbox" id="bb">
-                            <label for="bb"><img class="icon" src="official/BigBand_MasteryIcon.png"></label>
-                            <input type="checkbox" id="ce">
-                            <label for="ce"><img class="icon" src="official/Cerebella_MasteryIcon.png"></label>
-                            <input type="checkbox" id="do">
-                            <label for="do"><img class="icon" src="official/Double_MasteryIcon.png"></label>
-                            <input type="checkbox" id="el">
-                            <label for="el"><img class="icon" src="official/Eliza_MasteryIcon.png"></label>
-                            <input type="checkbox" id="fi">
-                            <label for="fi"><img class="icon" src="official/Filia_MasteryIcon.png"></label>
-                            <input type="checkbox" id="pw">
-                            <label for="pw"><img class="icon" src="official/Painwheel_MasteryIcon.png"></label>
-                            <input type="checkbox" id="pa">
-                            <label for="pa"><img class="icon" src="official/Parasoul_MasteryIcon.png"></label>
-                            <input type="checkbox" id="pe">
-                            <label for="pe"><img class="icon" src="official/Peacock_MasteryIcon.png"></label>
-                            <input type="checkbox" id="mf">
-                            <label for="mf"><img class="icon" src="official/MsFortune_MasteryIcon.png"></label>
-                            <input type="checkbox" id="sq">
-                            <label for="sq"><img class="icon" src="official/Squigly_MasteryIcon.png"></label>
-                            <input type="checkbox" id="va">
-                            <label for="va"><img class="icon" src="official/Valentine_MasteryIcon.png"></label>
-                        </div>
+            <div class="scroller half" id="filter-menu">
+                <div>
+                    <div id="filter-flexbox">
+                        <span class="tagged cinema silver-gradient" id="filter-label"></span>
+                        <input type="checkbox" id="filter-cancel">
+                        <label for="filter-cancel"><img class="icon" src="official/constraints_no.png"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="medals">
+                        <input type="checkbox" id="bronze">
+                        <label for="bronze"><img class="icon" src="official/constraints_bronze.png"></label>
+                        <input type="checkbox" id="silver">
+                        <label for="silver"><img class="icon" src="official/constraints_silver.png"></label>
+                        <input type="checkbox" id="gold">
+                        <label for="gold"><img class="icon" src="official/constraints_gold.png"></label>
+                        <input type="checkbox" id="diamond">
+                        <label for="diamond"><img class="icon" src="official/constraints_diamond.png"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="elements">
+                        <input type="checkbox" id="fire">
+                        <label for="fire"><img class="icon" src="official/ElementalFireBackless.png"></label>
+                        <input type="checkbox" id="water">
+                        <label for="water"><img class="icon" src="official/ElementalWaterBackless.png"></label>
+                        <input type="checkbox" id="wind">
+                        <label for="wind"><img class="icon" src="official/ElementalWindBackless.png"></label>
+                        <input type="checkbox" id="light">
+                        <label for="light"><img class="icon" src="official/ElementalLightBackless.png"></label>
+                        <input type="checkbox" id="dark">
+                        <label for="dark"><img class="icon" src="official/ElementalDarkBackless.png"></label>
+                        <input type="checkbox" id="neutral">
+                        <label for="neutral"><img class="icon" src="official/ElementalNeutralBackless.png"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="mastery">
+                        <input type="checkbox" id="be">
+                        <label for="be"><img class="icon" src="official/Beowulf_MasteryIcon.png"></label>
+                        <input type="checkbox" id="bb">
+                        <label for="bb"><img class="icon" src="official/BigBand_MasteryIcon.png"></label>
+                        <input type="checkbox" id="ce">
+                        <label for="ce"><img class="icon" src="official/Cerebella_MasteryIcon.png"></label>
+                        <input type="checkbox" id="do">
+                        <label for="do"><img class="icon" src="official/Double_MasteryIcon.png"></label>
+                        <input type="checkbox" id="el">
+                        <label for="el"><img class="icon" src="official/Eliza_MasteryIcon.png"></label>
+                        <input type="checkbox" id="fi">
+                        <label for="fi"><img class="icon" src="official/Filia_MasteryIcon.png"></label>
+                        <input type="checkbox" id="pw">
+                        <label for="pw"><img class="icon" src="official/Painwheel_MasteryIcon.png"></label>
+                        <input type="checkbox" id="pa">
+                        <label for="pa"><img class="icon" src="official/Parasoul_MasteryIcon.png"></label>
+                        <input type="checkbox" id="pe">
+                        <label for="pe"><img class="icon" src="official/Peacock_MasteryIcon.png"></label>
+                        <input type="checkbox" id="mf">
+                        <label for="mf"><img class="icon" src="official/MsFortune_MasteryIcon.png"></label>
+                        <input type="checkbox" id="sq">
+                        <label for="sq"><img class="icon" src="official/Squigly_MasteryIcon.png"></label>
+                        <input type="checkbox" id="va">
+                        <label for="va"><img class="icon" src="official/Valentine_MasteryIcon.png"></label>
                     </div>
                 </div>
-                <div class="scroller half">
+            </div>
+            <div class="scroller half" id="sort-menu">
                 <div>
                     <div>
                         <span class="tagged cinema silver-gradient" id="sort-label"></span>
@@ -174,7 +187,6 @@
                     <input type="radio" id="tier" name="sort">
                     <label for="tier"></label>
                 </div>
-            </div>
             </div>
         </div>
         <div id="dock">
