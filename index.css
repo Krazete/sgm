@@ -231,10 +231,10 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 #idk { /* TODO: this whole section */
     display: grid;
     grid-template-areas:
-        'ol ol ol ol ol ol ol ol ol ol'
-        'el el el el ll ll ll ll sa ma'
-        'eb es eg ed lb ls lg ld sa ma'
-        'ei ei ei ei li li li li sa ma';
+        'ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol'
+        'el el el el ll ll ll ll sa sa sa sa ma ma ma ma'
+        'eb es eg ed lb ls lg ld sa sa sa sa ma ma ma ma'
+        'ei ei ei ei li li li li sa sa sa sa ma ma ma ma';
 }
 #ol {
     grid-area: ol;
@@ -278,6 +278,7 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 }
 #ld {
     grid-area: ld;
+    filter: sepia(1) hue-rotate(270deg); /* makes gray into pink */
 }
 
 
@@ -320,10 +321,6 @@ html[lang='fr'] .lvl:before {content: 'NIV';}
 html[lang='en'] .lvl:before {content: 'LVL';}
 html[lang='de'] .lvl:before {content: 'ST';}
 html[lang='ko'] .lvl:before {content: '\b808\bca8';}
-
-#dia {
-    filter: sepia(1) hue-rotate(270deg); /* makes gray into pink */
-}
 
 
 
@@ -494,10 +491,14 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     text-align: center;
     border: none;
     border-radius: 5px;
-    box-shadow: inset 0 0 10px 1px black;
+    box-shadow: inset 0 0 5px 1px black;
     grid-column: 1 / -1;
     padding: 4px 0;
     z-index: 1;
+}
+#searcherer:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 /* LOADING */
@@ -596,7 +597,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     background: linear-gradient(#621 10%, #b76 20%, #843 40%, #b76 60%, #621 90%);
 }
 .silver .frame {
-    background: linear-gradient(#889 10%, #eef 20%, #9ab 40%, #eef 60%, #889 90%);
+    background: linear-gradient(#889 10%, #eef 20%, #aab 40%, #eef 60%, #889 90%);
 }
 .gold .frame {
     background: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
@@ -672,12 +673,12 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     padding: 0 0.25em;
 }
 .bronze .variant-name, .fancy.bronze-tint {
-    background: -webkit-linear-gradient(white, #621);
-    color: #843;
+    background: -webkit-linear-gradient(white, #843);
+    color: #b76;
 }
 .silver .variant-name, .fancy.silver-tint {
     background: -webkit-linear-gradient(white, #889);
-    color: #9ab;
+    color: #aab;
 }
 .gold .variant-name, .fancy.gold-tint {
     background: -webkit-linear-gradient(white, #da2);
