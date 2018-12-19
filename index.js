@@ -9,6 +9,7 @@ var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 function initialize() {
     initLanguage();
     initDock();
+    document.getElementById("fighter-settings").click();
 
     collection = document.getElementById("collection");
     sa = document.getElementById("sa");
@@ -99,8 +100,7 @@ function load(path) {
 function initDock() {
     var menu = document.getElementById("menu");
     var settings = document.getElementById("options");
-    var filter = document.getElementById("filter");
-    var sort = document.getElementById("sort");
+    var filterSortMenu = document.getElementById("filter-sort-menu");
 
     var zoomIn = document.getElementById("zoom-in");
     var zoomOut = document.getElementById("zoom-out");
@@ -139,8 +139,8 @@ function initDock() {
             filterSort.classList.remove("glowing");
             menu.classList.remove("hidden");
             settings.classList.remove("hidden");
-            filter.classList.add("hidden");
-            sort.classList.add("hidden");
+            filterSortMenu.classList.add("hidden");
+            settings.scrollLeft = 0;
         }
     }
 
@@ -154,8 +154,8 @@ function initDock() {
             fighterSettings.classList.remove("glowing");
             menu.classList.remove("hidden");
             settings.classList.add("hidden");
-            filter.classList.remove("hidden");
-            sort.classList.remove("hidden");
+            filterSortMenu.classList.remove("hidden");
+            filterSortMenu.children[0].scrollLeft = 0;
         }
     }
 
@@ -480,6 +480,16 @@ function init(sa, ma) {
         collection.appendChild(card);
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

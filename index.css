@@ -232,42 +232,89 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 
 /* FIGHTER SETTINGS */
 
-#options > div {
+#idk {
     display: grid;
     grid-template-areas:
-        'sa ma';
+        'ol ol ol ol ol ol ol ol ol ol'
+        'el el el el ll ll ll ll sa ma'
+        'eb es eg ed lb ls lg ld sa ma'
+        'ei ei ei ei li li li li sa ma';
 }
+#ol {
+    grid-area: ol;
+    margin-right: auto;
+}
+#ol > * {
+    vertical-align: top;
+}
+#evolve {
+    grid-area: el;
+}
+#level {
+    grid-area: ll;
+}
+#ei {
+    grid-area: ei;
+}
+#eb {
+    grid-area: eb;
+}
+#es {
+    grid-area: es;
+}
+#eg {
+    grid-area: eg;
+}
+#ed {
+    grid-area: ed;
+}
+#li {
+    grid-area: li;
+}
+#lb {
+    grid-area: lb;
+}
+#ls {
+    grid-area: ls;
+}
+#lg {
+    grid-area: lg;
+}
+#ld {
+    grid-area: ld;
+}
+
 
 #options-label:before {
     background: url(official/GearIcon.png);
     padding-left: 1.25em;
 }
-html[lang='ja'] #options-label:before {content: '\u30aa\u30d7\u30b7\u30e7\u30f3';}
+html[lang='ja'] #options-label:before {content: '\30aa\30d7\30b7\30e7\30f3';}
 html[lang='es'] #options-label:before {content: 'OPCIONES';}
-html[lang='pt-br'] #options-label:before {content: 'OP\u00c7\u00d5ES';}
-html[lang='ru'] #options-label:before {content: '\u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418';}
+html[lang='pt-br'] #options-label:before {content: 'OP\00c7\00d5ES';}
+html[lang='ru'] #options-label:before {content: '\041d\0410\0421\0422\0420\041e\0419\041a\0418';}
 html[lang='fr'] #options-label:before {content: 'OPTIONS';}
 html[lang='en'] #options-label:before {content: 'OPTIONS';}
 html[lang='de'] #options-label:before {content: 'EINSTELLUNGEN';}
-html[lang='ko'] #options-label:before {content: '\uc124\uc815';}
+html[lang='ko'] #options-label:before {content: '\c124\c815';}
 
-html[lang='ja'] #evolve:before {content: '\u9032\u5316';}
+html[lang='ja'] #evolve:before {content: '\9032\5316';}
 html[lang='es'] #evolve:before {content: 'EVOLUCIONAR';}
 html[lang='pt-br'] #evolve:before {content: 'EVOLUIR';}
-html[lang='ru'] #evolve:before {content: '\u0420\u0410\u0417\u0412\u0418\u0422\u0418\u0415';}
+html[lang='ru'] #evolve:before {content: '\0420\0410\0417\0412\0418\0422\0418\0415';}
 html[lang='fr'] #evolve:before {content: 'EVOLUTION';}
 html[lang='en'] #evolve:before {content: 'EVOLVE';}
 html[lang='de'] #evolve:before {content: 'ENTWICKLUNG';}
-html[lang='ko'] #evolve:before {content: '\uc9c4\ud654\ud558\uae30';}
+html[lang='ko'] #evolve:before {content: '\c9c4\d654\d558\ae30';}
 
-html[lang='ja'] #level:before {content: '\u30ec\u30d9\u30eb';}
+html[lang='ja'] #level:before {content: '\30ec\30d9\30eb';}
 html[lang='es'] #level:before {content: 'Level';}
-html[lang='pt-br'] #level:before {content: 'N\u00edvel';}
-html[lang='ru'] #level:before {content: '\u0423\u0440\u043e\u0432\u0435\u043d\u044c';}
+html[lang='pt-br'] #level:before {content: 'N\00edvel';}
+html[lang='ru'] #level:before {content: '\0423\0440\043e\0432\0435\043d\044c';}
 html[lang='fr'] #level:before {content: 'Niveau';}
 html[lang='en'] #level:before {content: 'Level';}
 html[lang='de'] #level:before {content: 'Stufe';}
-html[lang='ko'] #level:before {content: '\ub808\ubca8';}
+html[lang='ko'] #level:before {content: '\b808\bca8';}
 
 html[lang='ja'] .lvl:before {content: '\30ec\30d9\30eb';}
 html[lang='es'] .lvl:before {content: 'NVL';}
@@ -406,6 +453,7 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     display: grid;
     flex: 1;
     grid-template-columns: repeat(9, minmax(0, 1fr));
+    grid-template-rows: min-content;
     grid-gap: 6px;
     padding: 6px;
 }
@@ -439,15 +487,16 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
 
 /* SEARCH */
 
-#searcher {
-    grid-column: 1 / -1;
-    z-index: 1;
-    margin: 6px 0;
-}
-
 #searcherer {
     width: 100%;
+    font-size: larger;
     text-align: center;
+    border: none;
+    border-radius: 6px;
+    box-shadow: inset 0 0 10px 1px black;
+    grid-column: 1 / -1;
+    padding: 6px 0;
+    z-index: 1;
 }
 
 /* LOADING */
@@ -521,7 +570,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 
 .avatar {
     grid-area: img;
-    margin: 10px auto; /* TODO: maybe append ` 0 auto` */
+    margin: 10px auto 0 auto;
 }
 
 .frame {
