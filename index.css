@@ -26,7 +26,7 @@ body {
     -webkit-text-size-adjust: none; /* for ios */
 }
 body.smaller {
-    font-size: small;
+    font-size: x-small;
 }
 body.larger {
     font-size: x-large;
