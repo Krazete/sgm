@@ -8,6 +8,11 @@
     src: url(data/font/RobotoCondensed-Regular.ttf);
 }
 
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 html, body {
     position: relative;
     width: 100%;
@@ -25,19 +30,18 @@ body {
     margin: 0;
     -webkit-text-size-adjust: none; /* for ios */
 }
-body.smaller {
+body.zoomed-out {
     font-size: x-small;
 }
-body.larger {
+body.zoomed-in {
     font-size: x-large;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+.hidden {
+    display: none;
 }
 
-/* GENERAL */
+/* TEXT */
 
 a {
     color: #ccb55a;
@@ -61,8 +65,34 @@ html[lang='ru'] .cinema {
     padding-left: 1em;
 }
 
-.hidden {
-    display: none;
+.bronze-gradient, .silver-gradient, .gold-gradient, .diamond-gradient, .dependent-gradient { /* drop-shadow disabled because ios glitch */
+    background: -o-linear-gradient(transparent, transparent) !important; /* for opera; TODO: check if this is necessary */
+    -webkit-background-clip: text !important;
+    font-size: larger;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    /* filter: drop-shadow(1px 1px black); */
+    padding: 0 0.25em;
+}
+.bronze-gradient, .bronze .dependent-gradient {
+    background: -webkit-linear-gradient(white, #843);
+    color: #b76;
+}
+.silver-gradient, .silver .dependent-gradient {
+    background: -webkit-linear-gradient(white, #889);
+    color: #aab;
+}
+.gold-gradient, .gold .dependent-gradient {
+    background: -webkit-linear-gradient(white, #da2);
+    color: #fd8;
+}
+.diamond-gradient, .diamond .dependent-gradient {
+    background: -webkit-linear-gradient(white, #d9d);
+    color: #fcf;
+}
+
+.smaller {
+    font-size: smaller;
 }
 
 /* HEADER AND FOOTER */
@@ -456,14 +486,14 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     padding: 6px;
 }
 
-@media (max-width: 4050px) {.larger #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
-@media (max-width: 3600px) {.larger #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
-@media (max-width: 3150px) {.larger #collection {grid-template-columns: repeat(6, minmax(0, 1fr));}}
-@media (max-width: 2700px) {.larger #collection {grid-template-columns: repeat(5, minmax(0, 1fr));}}
-@media (max-width: 2250px) {.larger #collection {grid-template-columns: repeat(4, minmax(0, 1fr));}}
-@media (max-width: 1800px) {.larger #collection {grid-template-columns: repeat(3, minmax(0, 1fr));}}
-@media (max-width: 1350px) {.larger #collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
-@media (max-width: 900px) {.larger #collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
+@media (max-width: 4050px) {.zoomed-in #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
+@media (max-width: 3600px) {.zoomed-in #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
+@media (max-width: 3150px) {.zoomed-in #collection {grid-template-columns: repeat(6, minmax(0, 1fr));}}
+@media (max-width: 2700px) {.zoomed-in #collection {grid-template-columns: repeat(5, minmax(0, 1fr));}}
+@media (max-width: 2250px) {.zoomed-in #collection {grid-template-columns: repeat(4, minmax(0, 1fr));}}
+@media (max-width: 1800px) {.zoomed-in #collection {grid-template-columns: repeat(3, minmax(0, 1fr));}}
+@media (max-width: 1350px) {.zoomed-in #collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
+@media (max-width: 900px) {.zoomed-in #collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
 
 @media (max-width: 3150px) {#collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
 @media (max-width: 2800px) {#collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
@@ -474,14 +504,14 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
 @media (max-width: 1050px) {#collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
 @media (max-width: 700px) {#collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
 
-@media (max-width: 2250px) {.smaller #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
-@media (max-width: 2000px) {.smaller #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
-@media (max-width: 1750px) {.smaller #collection {grid-template-columns: repeat(6, minmax(0, 1fr));}}
-@media (max-width: 1500px) {.smaller #collection {grid-template-columns: repeat(5, minmax(0, 1fr));}}
-@media (max-width: 1250px) {.smaller #collection {grid-template-columns: repeat(4, minmax(0, 1fr));}}
-@media (max-width: 1000px) {.smaller #collection {grid-template-columns: repeat(3, minmax(0, 1fr));}}
-@media (max-width: 750px) {.smaller #collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
-@media (max-width: 500px) {.smaller #collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
+@media (max-width: 2250px) {.zoomed-out #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
+@media (max-width: 2000px) {.zoomed-out #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
+@media (max-width: 1750px) {.zoomed-out #collection {grid-template-columns: repeat(6, minmax(0, 1fr));}}
+@media (max-width: 1500px) {.zoomed-out #collection {grid-template-columns: repeat(5, minmax(0, 1fr));}}
+@media (max-width: 1250px) {.zoomed-out #collection {grid-template-columns: repeat(4, minmax(0, 1fr));}}
+@media (max-width: 1000px) {.zoomed-out #collection {grid-template-columns: repeat(3, minmax(0, 1fr));}}
+@media (max-width: 750px) {.zoomed-out #collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
+@media (max-width: 500px) {.zoomed-out #collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
 
 /* SEARCH */
 
@@ -580,13 +610,13 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     padding: 6px;
     margin: 0 auto -15px auto;
 }
-.smaller .frame {
+.zoomed-out .frame {
     width: 70px;
     height: 70px;
     padding: 5px;
     margin: 0 auto -13px auto;
 }
-.larger .frame {
+.zoomed-in .frame {
     width: 100px;
     height: 100px;
     padding: 7px;
@@ -665,36 +695,6 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     box-shadow: 0 1px 1px 1px black;
     padding: 2px;
     margin: auto;
-}
-
-.variant-name, .fancy { /* drop-shadow disabled because ios glitch */
-    background: -o-linear-gradient(transparent, transparent) !important; /* for opera; TODO: check if this is necessary */
-    -webkit-background-clip: text !important;
-    font-size: larger;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-    /* filter: drop-shadow(1px 1px black); */
-    padding: 0 0.25em;
-}
-.bronze .variant-name, .fancy.bronze-tint {
-    background: -webkit-linear-gradient(white, #843);
-    color: #b76;
-}
-.silver .variant-name, .fancy.silver-tint {
-    background: -webkit-linear-gradient(white, #889);
-    color: #aab;
-}
-.gold .variant-name, .fancy.gold-tint {
-    background: -webkit-linear-gradient(white, #da2);
-    color: #fd8;
-}
-.diamond .variant-name, .fancy.diamond-tint {
-    background: -webkit-linear-gradient(white, #d9d);
-    color: #fcf;
-}
-
-.fighter-name {
-    font-size: smaller;
 }
 
 /* QUOTE */
@@ -826,7 +826,6 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
 
 .description {
     background: #314c73;
-    font-size: smaller;
     box-shadow: 0 0 1px black;
     padding: 6px;
 }
@@ -863,13 +862,13 @@ html[lang='de'] .ma .label:before {content: 'PRUNKFERTIGKEIT';}
     position: absolute;
     width: 18px;
     opacity: 0.5;
-    margin: 6px;
+    padding: 6px;
     cursor: pointer;
 }
-.smaller .lock {
+.zoomed-out .lock {
     width: 14px;
 }
-.larger .lock {
+.zoomed-in .lock {
     width: 22px;
 }
 .locked .lock {

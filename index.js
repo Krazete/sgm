@@ -108,23 +108,23 @@ function initDock() {
     var filterSort = document.getElementById("filter-sort");
 
     function smallify() {
-        if (document.body.classList.contains("larger")) {
-            document.body.classList.remove("larger");
+        if (document.body.classList.contains("zoomed-in")) {
+            document.body.classList.remove("zoomed-in");
             zoomIn.classList.remove("pressed");
         }
         else {
-            document.body.classList.add("smaller");
+            document.body.classList.add("zoomed-out");
             zoomOut.classList.add("pressed");
         }
     }
 
     function largify() {
-        if (document.body.classList.contains("smaller")) {
-            document.body.classList.remove("smaller");
+        if (document.body.classList.contains("zoomed-out")) {
+            document.body.classList.remove("zoomed-out");
             zoomOut.classList.remove("pressed");
         }
         else {
-            document.body.classList.add("larger");
+            document.body.classList.add("zoomed-in");
             zoomIn.classList.add("pressed");
         }
     }
@@ -201,11 +201,11 @@ function createAvatar(key) {
         var nameplate = document.createElement("div");
             nameplate.className = "nameplate cinema";
             var variantName = document.createElement("div");
-                variantName.className = "variant-name";
+                variantName.className = "dependent-gradient";
                 variantName.innerHTML = corpus[variants[key].name];
             nameplate.appendChild(variantName);
             var fighterName = document.createElement("div");
-                fighterName.className = "fighter-name";
+                fighterName.className = "smaller";
                 fighterName.innerHTML = corpus[fighters[variants[key].base].name];
             nameplate.appendChild(fighterName);
         avatar.appendChild(nameplate);
@@ -223,7 +223,7 @@ function createStat(type, value) {
     var stat = document.createElement("div");
         stat.className = ["tagged", type].join(" ");
         var span = document.createElement("span");
-            span.className = "cinema fancy silver-tint";
+            span.className = "cinema silver-gradient";
             span.innerHTML = value.toLocaleString();
         stat.appendChild(span);
     return stat;
@@ -247,17 +247,17 @@ function createAbility(type, titleText, descriptionTexts) {
         var abilityName = document.createElement("div");
             abilityName.className = "ability-name cinema";
             var label = document.createElement("span");
-                label.className = "label fancy gold-tint";
+                label.className = "label gold-gradient";
             abilityName.appendChild(label);
             var span = document.createElement("span");
-                span.className = "fancy silver-tint";
+                span.className = "silver-gradient";
                 span.innerHTML = titleText;
             abilityName.appendChild(span);
             abilityName.addEventListener("click", collapse);
         ability.appendChild(abilityName);
         for (var descriptionText of descriptionTexts) {
             var description = document.createElement("div");
-                description.className = "description";
+                description.className = "description smaller";
                 description.innerHTML = descriptionText;
             ability.appendChild(description);
         }
