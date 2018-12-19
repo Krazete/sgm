@@ -107,15 +107,25 @@ function initDock() {
     var fighterSettings = document.getElementById("fighter-settings");
     var filterSort = document.getElementById("filter-sort");
 
-    function zoom() {
-        // this.classList.add("pressed");
-        if (this.id == "zoom-out") {
-            document.body.classList.add("smaller");
+    function smallify() {
+        if (document.body.classList.contains("larger")) {
             document.body.classList.remove("larger");
+            zoomIn.classList.remove("pressed");
         }
         else {
+            document.body.classList.add("smaller");
+            zoomOut.classList.add("pressed");
+        }
+    }
+
+    function largify() {
+        if (document.body.classList.contains("smaller")) {
             document.body.classList.remove("smaller");
+            zoomOut.classList.remove("pressed");
+        }
+        else {
             document.body.classList.add("larger");
+            zoomIn.classList.add("pressed");
         }
     }
 
@@ -149,8 +159,8 @@ function initDock() {
         }
     }
 
-    zoomIn.addEventListener("click", zoom);
-    zoomOut.addEventListener("click", zoom);
+    zoomOut.addEventListener("click", smallify);
+    zoomIn.addEventListener("click", largify);
     fighterSettings.addEventListener("click", toggleFighterSettings);
     filterSort.addEventListener("click", toggleFilterSort);
 }

@@ -98,8 +98,8 @@ input[type='radio'], input[type='checkbox'] {
 }
 
 label {
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 28px;
+    min-height: 28px;
     background: #0f1824;
     text-transform: uppercase;
     border: 1px solid #263b5a;
@@ -114,12 +114,12 @@ input:checked + label {
 }
 
 label:before {
-    vertical-align: middle;
+    line-height: 28px;
 }
 
 .button {
-    max-width: 36px;
-    max-height: 36px;
+    max-width: 42px;
+    max-height: 42px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -130,8 +130,8 @@ label:before {
 }
 
 .icon {
-    max-width: 24px;
-    max-height: 24px;
+    max-width: 28px;
+    max-height: 28px;
     display: block;
     margin: auto;
 }
