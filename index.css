@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    -webkit-text-size-adjust: none; /* for ios */
 }
 
 .fill-row {
@@ -80,6 +81,7 @@ html[lang='ru'] .cinema {
     /* filter: drop-shadow(1px 1px black); */
     /* excessive drop-shadow causes major visual glitches in ios */
     padding: 0 0.25em;
+    display: inline-block;
 }
 .bronze-gradient,
 .bronze .dependent-gradient {
@@ -496,12 +498,6 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     grid-gap: 6px;
     padding: 6px;
 }
-.zoomed-out .card {
-    font-size: x-small;
-}
-.zoomed-in .card {
-    font-size: x-large;
-}
 
 @media (max-width: 4050px) {.zoomed-in #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
 @media (max-width: 3600px) {.zoomed-in #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
@@ -610,9 +606,20 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     display: grid;
 }
 
+.zoomed-out .card {
+    font-size: x-small;
+}
+
+/* TODO: upon css-grid-2 release, change to `minmax(50%, 1fr) repeat(2, minmax(0, 1fr, min-wins))` */
+.zoomed-in .card {
+    font-size: x-large;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 /* AVATAR */
 
 .avatar {
+    width: 100%;
     grid-area: img;
     margin: 10px auto 0 auto;
 }
@@ -710,13 +717,20 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 
 .nameplate {
     position: relative;
+    min-width: min-content;
     width: max-content;
+    max-width: calc(100% - 10px);
+    left: 50%;
+    transform: translateX(-50%);
     background: #3e2c29;
     text-align: center;
     border: 3px double #8f6151;
     box-shadow: 0 1px 1px 1px black;
     padding: 2px;
-    margin: auto;
+}
+
+.zoomed-in .nameplate {
+    font-size: medium;
 }
 
 /* QUOTE */

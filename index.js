@@ -109,7 +109,7 @@ function initDock() {
 
     var headerHeight = header.scrollHeight;
 
-    function smallify() {
+    function smallify() { /* TODO: save zoom settings */
         var oldScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         var scrollPercent = window.scrollY / oldScrollHeight;
         if (document.body.classList.contains("zoomed-in")) {
