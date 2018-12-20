@@ -1,3 +1,5 @@
+% crops raw screenshots
+
 % requires a 'raw' directory
 % with subdirectories for each character
 % with images for each character variant
