@@ -1,6 +1,8 @@
 from preprocessing import file
 
 common = [
+    'Key_Fighter',
+    'MainMenu_Collection', # UNUSED
     'Version_Login',
     'Loading_Status_Loading',
 
@@ -22,18 +24,14 @@ common = [
     'SkillTree_AtkNode_Title',
     'SkillTree_HealthNode_Title',
     'Key_Element',
-    'Sort_Tier',
-
-    # UNUSED
-    'Key_Fighter',
-    'MainMenu_Collection'
+    'Sort_Tier'
 ]
 
 corpus = file.load('preprocessing/sgm_exports/TextAsset')
 commoncorpus = {key: {language: corpus[language][key] for language in corpus} for key in common}
 file.save(commoncorpus, 'preprocessing/common.json')
 
-# SEARCH FOR:
+# REGEX-SEARCH FOR:
 # "(.+?)": "(.+?)",?
 # REPLACE WITH:
 # html[lang='$1'] :before {content: '$2';}

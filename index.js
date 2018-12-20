@@ -223,9 +223,15 @@ function createQuote(key) {
     return quote;
 }
 
+function createWordBreak() {
+    var wbr = document.createElement("wbr");
+    return wbr;
+}
+
 function createStat(type, value) {
     var stat = document.createElement("div");
         stat.className = ["tagged", type].join(" ");
+        stat.appendChild(createWordBreak());
         var span = document.createElement("span");
             span.className = "cinema numeric silver-gradient";
             span.innerHTML = value.toLocaleString();
@@ -253,6 +259,7 @@ function createAbility(type, titleText, descriptionTexts) {
             var label = document.createElement("span");
                 label.className = "ability-label gold-gradient";
             abilityName.appendChild(label);
+            abilityName.appendChild(createWordBreak());
             var span = document.createElement("span");
                 span.className = "silver-gradient";
                 span.innerHTML = titleText;

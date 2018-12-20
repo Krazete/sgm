@@ -13,7 +13,8 @@
     height: 0;
 }
 
-html, body {
+html,
+body {
     position: relative;
     width: 100%;
     height: 100%;
@@ -50,6 +51,10 @@ html[lang='ru'] .cinema {
     font-family: 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
+.tagged {
+    text-align: center;
+}
+
 .tagged:before {
     content: '\00a0 ';
     height: auto;
@@ -59,28 +64,38 @@ html[lang='ru'] .cinema {
     padding-left: 1em;
 }
 
-.bronze-gradient, .silver-gradient, .gold-gradient, .diamond-gradient, .dependent-gradient { /* drop-shadow disabled because ios glitch */
-    background: -o-linear-gradient(transparent, transparent) !important; /* for opera; TODO: check if this is necessary */
+/* TODO: check if opera line is necessary */
+.bronze-gradient,
+.silver-gradient,
+.gold-gradient,
+.diamond-gradient,
+.dependent-gradient {
+    background: -o-linear-gradient(transparent, transparent) !important; /* for opera */
     -webkit-background-clip: text !important;
     font-size: larger;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
     /* filter: drop-shadow(1px 1px black); */
+    /* excessive drop-shadow causes major visual glitches in ios */
     padding: 0 0.25em;
 }
-.bronze-gradient, .bronze .dependent-gradient {
+.bronze-gradient,
+.bronze .dependent-gradient {
     background: -webkit-linear-gradient(white, #843);
     color: #b76;
 }
-.silver-gradient, .silver .dependent-gradient {
+.silver-gradient,
+.silver .dependent-gradient {
     background: -webkit-linear-gradient(white, #889);
     color: #aab;
 }
-.gold-gradient, .gold .dependent-gradient {
+.gold-gradient,
+.gold .dependent-gradient {
     background: -webkit-linear-gradient(white, #da2);
     color: #fd8;
 }
-.diamond-gradient, .diamond .dependent-gradient {
+.diamond-gradient,
+.diamond .dependent-gradient {
     background: -webkit-linear-gradient(white, #d9d);
     color: #fcf;
 }
@@ -124,7 +139,8 @@ html[lang='ru'] .cinema {
     display: inline-grid;
 }
 
-input[type='radio'], input[type='checkbox'] {
+input[type='radio'],
+input[type='checkbox'] {
     display: none;
 }
 
@@ -178,7 +194,7 @@ input:checked + label {
     padding: 6px 0;
 }
 
-/* TODO: check if translations for skullgirls mobile are needed */
+/* TODO: check if translations are needed here */
 #skullgirls-mobile:before {content: 'Skullgirls Mobile';}
 
 html[lang='ja'] #fighter-gallery:before {content: '\30ad \30e3 \30e9 \30af \30bf \30fc \30ae \30e3 \30e9 \30ea \30fc ';}
@@ -217,14 +233,14 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 #language-set label:before {
     padding-left: 1.75em;
 }
-#ja + .tagged:before {content: '日本語'; background: url(official/flag_jp.png);}
-#ru + .tagged:before {content: 'Pусский'; background: url(official/flag_ru.png);}
-#en + .tagged:before {content: 'English'; background: url(official/flag_en.png);}
-#pt-br + .tagged:before {content: 'Português'; background: url(official/flag_pt.png);}
-#fr + .tagged:before {content: 'Français'; background: url(official/flag_fr.png);}
-#es + .tagged:before {content: 'Español'; background: url(official/flag_es.png);}
-#ko + .tagged:before {content: '한국어'; background: url(official/flag_ko.png);}
-#de + .tagged:before {content: 'Deutsch'; background: url(official/flag_de.png);}
+#ja + label.tagged:before {content: '\65e5 \672c \8a9e '; background: url(official/flag_jp.png);}
+#ru + label.tagged:before {content: '\0050 \0443 \0441 \0441 \043a \0438 \0439 '; background: url(official/flag_ru.png);}
+#en + label.tagged:before {content: 'English'; background: url(official/flag_en.png);}
+#pt-br + label.tagged:before {content: 'Portugu\00ea s'; background: url(official/flag_pt.png);}
+#fr + label.tagged:before {content: 'Fran\00e7 ais'; background: url(official/flag_fr.png);}
+#es + label.tagged:before {content: 'Espa\00f1 ol'; background: url(official/flag_es.png);}
+#ko + label.tagged:before {content: '\d55c \ad6d \c5b4 '; background: url(official/flag_ko.png);}
+#de + label.tagged:before {content: 'Deutsch'; background: url(official/flag_de.png);}
 
 /* FOOTER */
 
@@ -261,7 +277,7 @@ html[lang='de'] #version:before {content: 'VERSION:';}
     text-align: center;
     box-shadow: 0 -3px 3px black;
     border-top: 1px solid #ccb55a;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 /* FIGHTER SETTINGS */
@@ -287,9 +303,16 @@ html[lang='en'] #options-label:before {content: 'OPTIONS';}
 html[lang='de'] #options-label:before {content: 'EINSTELLUNGEN';}
 html[lang='ko'] #options-label:before {content: '\c124 \c815 ';}
 
-#evolve {
-    grid-area: el;
-}
+
+
+
+
+
+
+
+
+
+/* CONSTRUCTION START */
 
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
@@ -297,7 +320,37 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-#level-bronze, #level-silver, #level-gold, #level-diamond {
+.gridthing {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fill-row {
+    grid-column: 1 / -1;
+}
+
+html[lang='ja'] #evolve-label:before {content: '\9032 \5316 ';}
+html[lang='es'] #evolve-label:before {content: 'EVOLUCIONAR';}
+html[lang='pt-br'] #evolve-label:before {content: 'EVOLUIR';}
+html[lang='ru'] #evolve-label:before {content: '\0420 \0410 \0417 \0412 \0418 \0422 \0418 \0415 ';}
+html[lang='fr'] #evolve-label:before {content: 'EVOLUTION';}
+html[lang='en'] #evolve-label:before {content: 'EVOLVE';}
+html[lang='de'] #evolve-label:before {content: 'ENTWICKLUNG';}
+html[lang='ko'] #evolve-label:before {content: '\c9c4 \d654 \d558 \ae30 ';}
+
+html[lang='ja'] #level-label:before {content: '\30ec \30d9 \30eb ';}
+html[lang='es'] #level-label:before {content: 'Level';}
+html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
+html[lang='ru'] #level-label:before {content: '\0423 \0440 \043e \0432 \0435 \043d \044c ';}
+html[lang='fr'] #level-label:before {content: 'Niveau';}
+html[lang='en'] #level-label:before {content: 'Level';}
+html[lang='de'] #level-label:before {content: 'Stufe';}
+html[lang='ko'] #level-label:before {content: '\b808 \bca8 ';}
+
+#level-bronze,
+#level-silver,
+#level-gold,
+#level-diamond {
     position: relative;
     width: 28px;
     height: 28px;
@@ -311,13 +364,22 @@ input[type='number']::-webkit-outer-spin-button {
     display: block;
     z-index: 1;
 }
-#level-bronze[value='30'], #level-silver.maxed, #level-gold.maxed, #level-diamond.maxed {
+#level-bronze[value='30'],
+#level-silver.maxed,
+#level-gold.maxed,
+#level-diamond.maxed {
     color: skyblue;
 }
-#level-bronze:focus, #level-silver:focus, #level-gold:focus, #level-diamond:focus {
+#level-bronze:focus,
+#level-silver:focus,
+#level-gold:focus,
+#level-diamond:focus {
     outline: none;
 }
-#level-bronze:focus + img, #level-silver:focus + img, #level-gold:focus + img, #level-diamond:focus + img {
+#level-bronze:focus + img,
+#level-silver:focus + img,
+#level-gold:focus + img,
+#level-diamond:focus + img {
     filter: drop-shadow(0 0 6px white);
 }
 #level-diamond + img {
@@ -327,28 +389,6 @@ input[type='number']::-webkit-outer-spin-button {
     filter: sepia(1) hue-rotate(270deg) drop-shadow(0 0 6px white);
 }
 
-html[lang='ja'] #evolve:before {content: '\9032 \5316 ';}
-html[lang='es'] #evolve:before {content: 'EVOLUCIONAR';}
-html[lang='pt-br'] #evolve:before {content: 'EVOLUIR';}
-html[lang='ru'] #evolve:before {content: '\0420 \0410 \0417 \0412 \0418 \0422 \0418 \0415 ';}
-html[lang='fr'] #evolve:before {content: 'EVOLUTION';}
-html[lang='en'] #evolve:before {content: 'EVOLVE';}
-html[lang='de'] #evolve:before {content: 'ENTWICKLUNG';}
-html[lang='ko'] #evolve:before {content: '\c9c4 \d654 \d558 \ae30 ';}
-
-#level {
-    grid-area: ll;
-}
-
-html[lang='ja'] #level:before {content: '\30ec \30d9 \30eb ';}
-html[lang='es'] #level:before {content: 'Level';}
-html[lang='pt-br'] #level:before {content: 'N\00ed vel';}
-html[lang='ru'] #level:before {content: '\0423 \0440 \043e \0432 \0435 \043d \044c ';}
-html[lang='fr'] #level:before {content: 'Niveau';}
-html[lang='en'] #level:before {content: 'Level';}
-html[lang='de'] #level:before {content: 'Stufe';}
-html[lang='ko'] #level:before {content: '\b808 \bca8 ';}
-
 html[lang='ja'] .lvl:before {content: '\30ec \30d9 \30eb ';}
 html[lang='es'] .lvl:before {content: 'NVL';}
 html[lang='pt-br'] .lvl:before {content: 'N\00cd V';}
@@ -357,6 +397,8 @@ html[lang='fr'] .lvl:before {content: 'NIV';}
 html[lang='en'] .lvl:before {content: 'LVL';}
 html[lang='de'] .lvl:before {content: 'ST';}
 html[lang='ko'] .lvl:before {content: '\b808 \bca8 ';}
+
+/* CONSTRUCTION END */
 
 
 
@@ -534,7 +576,6 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     border: none;
     border-radius: 5px;
     box-shadow: inset 0 0 5px 1px black;
-    grid-column: 1 / -1;
     padding: 4px 0;
     z-index: 1;
 }
@@ -546,7 +587,6 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
 /* LOADING */
 
 #loading {
-    grid-column: 1 / -1;
     margin: auto;
 }
 
@@ -643,22 +683,28 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .gold .frame {
     background: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
 }
-.diamond.neutral .frame, .diamond .neutral .frame {
+.diamond.neutral .frame,
+.diamond .neutral .frame {
     background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%);
 }
-.diamond.fire .frame, .diamond .fire .frame {
+.diamond.fire .frame,
+.diamond .fire .frame {
     background: linear-gradient(#d33 10%, #fff 20%, #f99 40%, #fee 60%, #d33 90%);
 }
-.diamond.water .frame, .diamond .water .frame {
+.diamond.water .frame,
+.diamond .water .frame {
     background: linear-gradient(#6be 10%, #fff 20%, #ace 40%, #eff 60%, #6be 90%);
 }
-.diamond.wind .frame, .diamond .wind .frame {
+.diamond.wind .frame,
+.diamond .wind .frame {
     background: linear-gradient(#8b3 10%, #fff 20%, #de9 40%, #efe 60%, #8b3 90%);
 }
-.diamond.dark .frame, .diamond .dark .frame {
+.diamond.dark .frame,
+.diamond .dark .frame {
     background: linear-gradient(#95f 10%, #fff 20%, #caf 40%, #fef 60%, #95f 90%);
 }
-.diamond.light .frame, .diamond .light .frame {
+.diamond.light .frame,
+.diamond .light .frame {
     background: linear-gradient(#dd6 10%, #fff 20%, #ffb 40%, #ffe 60%, #dd6 90%);
 }
 
@@ -680,9 +726,10 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     cursor: pointer;
 }
 
-.portrait { /* drop-shadow disabled because ios glitch */
+.portrait {
     width: 135%;
     /* filter: drop-shadow(0 0 1px black); */
+    /* excessive drop-shadow causes major visual glitches in ios */
     margin: -64% 0 0 -18%;
 }
 #rBlight .portrait {
@@ -719,7 +766,9 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 
 /* STATS */
 
-.atk:before, .hp:before, .fs:before {
+.atk:before,
+.hp:before,
+.fs:before {
     padding-left: 1.4em;
 }
 

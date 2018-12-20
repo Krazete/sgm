@@ -19,6 +19,7 @@
 <body class="bronze">
     <div id="header">
         <span class="banner cinema gold-gradient" id="skullgirls-mobile"></span>
+        <wbr>
         <span class="banner cinema diamond-gradient" id="fighter-gallery"></span>
         <div class="ribbon">
             <a class="tagged" id="version" target="_blank" href="https://github.com/Krazete/sgm#readme">3.0.0</a>
@@ -45,8 +46,8 @@
         </div>
     </div>
     <div id="collection">
-        <input type="text" class="cinema" id="searchbox">
-        <div class="cinema" id="loading">
+        <input type="text" class="fill-row cinema" id="searchbox">
+        <div class="fill-row cinema" id="loading">
             <img src="loading/loading.gif">
         </div>
     </div>
@@ -54,23 +55,23 @@
         <div class="hidden" id="menu">
             <div class="scroller" id="options">
                 <div>
-                    <div>
-                        <span class="tagged cinema dependent-gradient" id="options-label"></span>
+                    <div class="gridthing">
+                        <span class="fill-row tagged cinema dependent-gradient" id="options-label"></span>
                         <img class="button" src="official/CloseButton.png">
                         <img class="button" src="official/Button_Home.png">
                         <img class="button" src="official/WinsToggleIcon.png">
                     </div>
-                    <div>
-                        <div class="cinema dependent-gradient" id="evolve"></div>
-                        <input type="range" min="0" max="3" value="0">
+                    <div class="gridthing">
+                        <div class="fill-row cinema dependent-gradient" id="evolve-label"></div>
+                        <input type="range" min="0" max="3" value="0" class="fill-row" id="evolve">
                         <img class="icon" src="official/constraints_bronze.png" id="evolve-bronze">
                         <img class="icon" src="official/constraints_silver.png" id="evolve-silver">
                         <img class="icon" src="official/constraints_gold.png" id="evolve-gold">
                         <img class="icon" src="official/constraints_diamond.png" id="evolve-diamond">
                     </div>
-                    <div>
-                        <div class="cinema dependent-gradient" id="level"></div>
-                        <input type="range" min="0" max="2" value="2">
+                    <div class="gridthing">
+                        <div class="fill-row cinema dependent-gradient" id="level-label"></div>
+                        <input type="range" min="1" max="60" value="1" class="fill-row" id="level">
                         <div>
                             <input type="number" pattern="\d*" min="1" max="30" value="1" class="cinema numeric" id="level-bronze">
                             <img class="icon" src="official/BronzeLevel.png">
