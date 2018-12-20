@@ -1,4 +1,4 @@
-% requires a 'characters' directory
+% requires a 'raw' directory
 % with subdirectories for each character
 % with images for each character variant
 
@@ -29,7 +29,7 @@ for n = 1:N
         variantNames = cell(0);
         clear('backgrounds');
         clear('deltas');
-        
+
         % for each variant image
         cd(character.name);
         variants = dir();
@@ -42,7 +42,7 @@ for n = 1:N
                 crop = im(1:195, 483:654, :);
                 % overwrite image
                 imwrite(crop, variant.name);
-                
+
                 % keep track of valid variant names
                 variantNames(length(variantNames) + 1) = {variant.name};
                 % make mask for all background color
@@ -59,7 +59,7 @@ for n = 1:N
                 end
             end
         end
-        
+
         % for each pair of variants
         combos = nchoosek(variantNames, 2);
         M = length(combos);

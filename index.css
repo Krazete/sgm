@@ -197,7 +197,7 @@ html[lang='de'] #fighter-gallery:before {content: 'K\00e4 mpfergalerie';}
 }
 
 #version:before {
-    background: url(official/IconInfo.png);
+    background: url(image/official/IconInfo.png);
     padding-left: 1.25em;
     margin-right: 0.25em;
 }
@@ -213,14 +213,14 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 #language-set label:before {
     padding-left: 1.75em;
 }
-#ja + label.tagged:before {content: '\65e5 \672c \8a9e '; background: url(official/flag_jp.png);}
-#ru + label.tagged:before {content: '\0050 \0443 \0441 \0441 \043a \0438 \0439 '; background: url(official/flag_ru.png);}
-#en + label.tagged:before {content: 'English'; background: url(official/flag_en.png);}
-#pt-br + label.tagged:before {content: 'Portugu\00ea s'; background: url(official/flag_pt.png);}
-#fr + label.tagged:before {content: 'Fran\00e7 ais'; background: url(official/flag_fr.png);}
-#es + label.tagged:before {content: 'Espa\00f1 ol'; background: url(official/flag_es.png);}
-#ko + label.tagged:before {content: '\d55c \ad6d \c5b4 '; background: url(official/flag_ko.png);}
-#de + label.tagged:before {content: 'Deutsch'; background: url(official/flag_de.png);}
+#ja + label.tagged:before {content: '\65e5 \672c \8a9e '; background: url(image/official/flag_jp.png);}
+#ru + label.tagged:before {content: '\0050 \0443 \0441 \0441 \043a \0438 \0439 '; background: url(image/official/flag_ru.png);}
+#en + label.tagged:before {content: 'English'; background: url(image/official/flag_en.png);}
+#pt-br + label.tagged:before {content: 'Portugu\00ea s'; background: url(image/official/flag_pt.png);}
+#fr + label.tagged:before {content: 'Fran\00e7 ais'; background: url(image/official/flag_fr.png);}
+#es + label.tagged:before {content: 'Espa\00f1 ol'; background: url(image/official/flag_es.png);}
+#ko + label.tagged:before {content: '\d55c \ad6d \c5b4 '; background: url(image/official/flag_ko.png);}
+#de + label.tagged:before {content: 'Deutsch'; background: url(image/official/flag_de.png);}
 
 /* FOOTER */
 
@@ -315,7 +315,7 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 }
 
 #options-label:before {
-    background: url(official/GearIcon.png);
+    background: url(image/official/GearIcon.png);
     padding-left: 1.1em;
 }
 html[lang='ja'] #options-label:before {content: '\30aa \30d7 \30b7 \30e7 \30f3 ';}
@@ -394,7 +394,7 @@ input[type='number']:focus + img {
 /* FILTER */
 
 #filter-label:before {
-    background: url(official/icon_filter.png);
+    background: url(image/official/icon_filter.png);
     padding-left: 1.2em;
 }
 html[lang='ja'] #filter-label:before {content: '\30d5 \30a3 \30eb \30bf \30fc ';}
@@ -421,7 +421,7 @@ html[lang='de'] #filter-label:before {content: 'FILTER';}
 /* SORT */
 
 #sort-label:before {
-    background: url(official/icon_sort.png);
+    background: url(image/official/icon_sort.png);
     padding-left: 1.6em;
 }
 html[lang='ja'] #sort-label:before {content: '\4e26 \3073 \66ff \3048 ';}
@@ -534,7 +534,7 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
     text-align: center;
     border: none;
     border-radius: 5px;
-    box-shadow: inset 0 0 5px 1px black;
+    box-shadow: inset 0 0 10px 1px black;
     padding: 4px 0;
     z-index: 1;
 }
@@ -691,7 +691,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 .dark .backdrop {background: radial-gradient(#eae, #525);}
 .light .backdrop {background: radial-gradient(#fff, #ec5);}
 .unknown .backdrop {
-    background: url(official/RandomBackground.png);
+    background: url(image/official/RandomBackground.png);
     background-size: contain;
     cursor: pointer;
 }
@@ -754,7 +754,7 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
     margin: auto;
 }
 .atk:before {
-    background: url(official/PowerIcon.png);
+    background: url(image/official/PowerIcon.png);
 }
 html[lang='ja'] .atk:before {content: '\653b \6483 ';}
 html[lang='ru'] .atk:before {content: '\0410 \0422 ';}
@@ -770,7 +770,7 @@ html[lang='de'] .atk:before {content: 'ATK';}
     margin: auto;
 }
 .hp:before {
-    background: url(official/HealthIcon.png);
+    background: url(image/official/HealthIcon.png);
 }
 html[lang='ja'] .hp:before {content: '\4f53 \529b ';}
 html[lang='ru'] .hp:before {content: '\0417 \0414 ';}
@@ -785,12 +785,12 @@ html[lang='de'] .hp:before {content: 'GES';}
     grid-area: fs;
     margin: 0 auto;
 }
-.neutral .fs:before {background: url(official/ElementalIconNeutral.png);}
-.fire .fs:before {background: url(official/ElementalIconFire.png);}
-.water .fs:before {background: url(official/ElementalIconWater.png);}
-.wind .fs:before {background: url(official/ElementalIconWind.png);}
-.light .fs:before {background: url(official/ElementalIconLight.png);}
-.dark .fs:before {background: url(official/ElementalIconDark.png);}
+.neutral .fs:before {background: url(image/official/ElementalIconNeutral.png);}
+.fire .fs:before {background: url(image/official/ElementalIconFire.png);}
+.water .fs:before {background: url(image/official/ElementalIconWater.png);}
+.wind .fs:before {background: url(image/official/ElementalIconWind.png);}
+.light .fs:before {background: url(image/official/ElementalIconLight.png);}
+.dark .fs:before {background: url(image/official/ElementalIconDark.png);}
 html[lang='ja'] .fs:before {content: '\30d5 \30a1 \30a4 \30bf \30fc \30fb \30b9 \30b3 \30a2 ';}
 html[lang='ru'] .fs:before {content: '\0411 \041e \0415 \0412 \041e \0419  \0421 \0427 \0415 \0422 ';}
 html[lang='en'] .fs:before {content: 'FIGHTER SCORE';}
@@ -886,7 +886,7 @@ html[lang='de'] .ma .ability-label:before {content: 'PRUNKFERTIGKEIT';}
     content: '';
     width: 14px;
     height: 14px;
-    background: url(official/icon_externalsite.png);
+    background: url(image/official/icon_externalsite.png);
     background-size: 14px;
     display: block;
 }

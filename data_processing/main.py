@@ -1,4 +1,4 @@
-from preprocessing import file
+from data_processing import file
 from collections import namedtuple
 import re
 
@@ -51,14 +51,14 @@ def study_sample(monolith, mono_char_keys, hrid=None):
             if hrid == mono['humanReadableGuid']:
                 study_dictionary(mono)
                 monostudy = compile_mono(mono)
-                file.save(monostudy, 'preprocessing/study.json')
+                file.save(monostudy, 'data_processing/study.json')
     else:
         from random import sample
         for key in sample(mono_char_keys, 1):
             mono = monolith[key]
             study_dictionary(mono)
             monostudy = compile_mono(mono)
-            file.save(monostudy, 'preprocessing/study.json')
+            file.save(monostudy, 'data_processing/study.json')
 
 # Get Character Keys
 
@@ -223,8 +223,8 @@ def build_data(monolith, mono_char_keys):
     return fighters, variants, corpus_keys
 
 if __name__ =='__main__':
-    monolith = file.load('preprocessing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
-    corpus = file.load('preprocessing/sgm_exports/TextAsset')
+    monolith = file.load('data_processing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
+    corpus = file.load('data_processing/sgm_exports/TextAsset')
 
     mono_char_keys = get_monolith_character_keys(monolith)
     corp_char_keys = get_corpus_character_keys(corpus)

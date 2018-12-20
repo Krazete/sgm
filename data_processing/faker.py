@@ -1,8 +1,8 @@
-from preprocessing import file
+from data_processing import file
 from collections import namedtuple, OrderedDict
 import re
 
-fakes = file.load('preprocessing/__FAKE_Variant_MonoBehaviour')
+fakes = file.load('data_processing/__FAKE_Variant_MonoBehaviour')
 
 important_keys = [
     "guid", # maybe delete this
@@ -179,4 +179,4 @@ for key in fakes:
             r'\1-{}-\3'.format(variants[name]['m_PathID']),
             key
         )
-        file.save(forgery, 'preprocessing/sgm_exports/MonoBehaviour/' + new_key + '.json')
+        file.save(forgery, 'data_processing/sgm_exports/MonoBehaviour/' + new_key + '.json')

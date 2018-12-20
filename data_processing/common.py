@@ -1,4 +1,4 @@
-from preprocessing import file
+from data_processing import file
 
 common = [
     'Key_Fighter',
@@ -27,9 +27,9 @@ common = [
     'Sort_Tier'
 ]
 
-corpus = file.load('preprocessing/sgm_exports/TextAsset')
+corpus = file.load('data_processing/sgm_exports/TextAsset')
 commoncorpus = {key: {language: corpus[language][key] for language in corpus} for key in common}
-file.save(commoncorpus, 'preprocessing/common.json')
+file.save(commoncorpus, 'data_processing/common.json')
 
 # REGEX-SEARCH FOR:
 # "(.+?)": "(.+?)",?

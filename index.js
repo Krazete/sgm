@@ -201,7 +201,7 @@ function createAvatar(key) {
                 backdrop.className = "backdrop";
                 var portrait = document.createElement("img");
                     portrait.className = "portrait";
-                    var stem = ["character", variants[key].base, key].join("/");
+                    var stem = ["image/portrait", variants[key].base, key].join("/");
                     if (key == "rBlight") {
                         var r = Math.floor(Math.random() * 7);
                         stem += "_" + r;
@@ -369,7 +369,7 @@ function createWikia(key) {
 function createLock() {
     var lock = document.createElement("img");
         lock.className = "lock";
-        lock.src = "official/Lock.png";
+        lock.src = "image/official/Lock.png";
         lock.addEventListener("click", lockCard);
     return lock;
 }
