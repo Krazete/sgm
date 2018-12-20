@@ -29,7 +29,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    -webkit-text-size-adjust: none; /* for ios */
 }
 
 .fill-row {
@@ -338,6 +337,13 @@ html[lang='fr'] #evolve-label:before {content: 'EVOLUTION';}
 html[lang='en'] #evolve-label:before {content: 'EVOLVE';}
 html[lang='de'] #evolve-label:before {content: 'ENTWICKLUNG';}
 html[lang='ko'] #evolve-label:before {content: '\c9c4 \d654 \d558 \ae30 ';}
+
+#evolve-bronze,
+#evolve-silver,
+#evolve-gold,
+#evolve-diamond {
+    cursor: pointer;
+}
 
 html[lang='ja'] #level-label:before {content: '\30ec \30d9 \30eb ';}
 html[lang='es'] #level-label:before {content: 'Level';}

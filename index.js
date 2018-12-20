@@ -9,7 +9,6 @@ var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 function initialize() {
     initLanguage();
     initDock();
-    document.getElementById("fighter-options").click();
 
     collection = document.getElementById("collection");
     sa = document.getElementById("sa");
@@ -108,7 +107,11 @@ function initDock() {
     var fighterOptions = document.getElementById("fighter-options");
     var filterSort = document.getElementById("filter-sort");
 
+    var headerHeight = header.scrollHeight;
+
     function smallify() {
+        var oldScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var scrollPercent = window.scrollY / oldScrollHeight;
         if (document.body.classList.contains("zoomed-in")) {
             document.body.classList.remove("zoomed-in");
             zoomIn.classList.remove("pressed");
@@ -117,9 +120,13 @@ function initDock() {
             document.body.classList.add("zoomed-out");
             zoomOut.classList.add("pressed");
         }
+        var newScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        scrollTo(0, newScrollHeight * scrollPercent);
     }
 
     function largify() {
+        var oldScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var scrollPercent = window.scrollY / oldScrollHeight;
         if (document.body.classList.contains("zoomed-out")) {
             document.body.classList.remove("zoomed-out");
             zoomOut.classList.remove("pressed");
@@ -128,6 +135,8 @@ function initDock() {
             document.body.classList.add("zoomed-in");
             zoomIn.classList.add("pressed");
         }
+        var newScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        scrollTo(0, newScrollHeight * scrollPercent);
     }
 
     function toggleFighterOptions() {
