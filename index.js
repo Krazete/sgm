@@ -9,7 +9,7 @@ var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 function initialize() {
     initLanguage();
     initDock();
-    document.getElementById("fighter-settings").click();
+    document.getElementById("fighter-options").click();
 
     collection = document.getElementById("collection");
     sa = document.getElementById("sa");
@@ -28,7 +28,7 @@ function initialize() {
         corpus = responses[0];
         fighters = responses[1];
         variants = responses[2];
-        init(sa.value, ma.value);
+        init(sa.value - 1, ma.value - 1);
         sort(order);
         // toggle(mastery, "blah");
         // toggle(element, "blah");
@@ -99,13 +99,13 @@ function load(path) {
 
 function initDock() {
     var menu = document.getElementById("menu");
-    var settings = document.getElementById("options");
+    var options = document.getElementById("options");
     var filterMenu = document.getElementById("filter-menu");
     var sortMenu = document.getElementById("sort-menu");
 
     var zoomIn = document.getElementById("zoom-in");
     var zoomOut = document.getElementById("zoom-out");
-    var fighterSettings = document.getElementById("fighter-settings");
+    var fighterOptions = document.getElementById("fighter-options");
     var filterSort = document.getElementById("filter-sort");
 
     function smallify() {
@@ -130,7 +130,7 @@ function initDock() {
         }
     }
 
-    function toggleFighterSettings() {
+    function toggleFighterOptions() {
         if (this.classList.contains("glowing")) {
             this.classList.remove("glowing");
             menu.classList.add("hidden");
@@ -139,10 +139,10 @@ function initDock() {
             this.classList.add("glowing");
             filterSort.classList.remove("glowing");
             menu.classList.remove("hidden");
-            settings.classList.remove("hidden");
+            options.classList.remove("hidden");
             filterMenu.classList.add("hidden");
             sortMenu.classList.add("hidden");
-            settings.scrollLeft = 0;
+            options.scrollLeft = 0;
         }
     }
 
@@ -153,9 +153,9 @@ function initDock() {
         }
         else {
             this.classList.add("glowing");
-            fighterSettings.classList.remove("glowing");
+            fighterOptions.classList.remove("glowing");
             menu.classList.remove("hidden");
-            settings.classList.add("hidden");
+            options.classList.add("hidden");
             filterMenu.classList.remove("hidden");
             sortMenu.classList.remove("hidden");
             filterMenu.children[0].scrollLeft = 0;
@@ -165,7 +165,7 @@ function initDock() {
 
     zoomOut.addEventListener("click", smallify);
     zoomIn.addEventListener("click", largify);
-    fighterSettings.addEventListener("click", toggleFighterSettings);
+    fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
 }
 

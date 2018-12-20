@@ -14,7 +14,7 @@ common = [
     'SkillTree_SuperAbility_Title',
 
     'Key_Options',
-    'Stat_Lvl',
+    'Stat_Lvl', # UNUSED
     'Character_Evolve_Button',
     'Character_Sorting_Level',
 
