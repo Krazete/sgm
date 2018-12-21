@@ -7,8 +7,11 @@ var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 
 function initialize() {
-    initLanguage();
+    initLanguageMenu();
     initDock();
+    initOptionsMenu();
+    initFilterMenu();
+    initSortMenu();
 
     collection = document.getElementById("collection");
     sa = document.getElementById("sa");
@@ -23,7 +26,7 @@ function initialize() {
     }
 
     function callback(responses) {
-        loading.classList.add("hidden");
+        document.body.classList.remove("loading");
         corpus = responses[0];
         fighters = responses[1];
         variants = responses[2];
@@ -38,37 +41,10 @@ function initialize() {
         load("./data/fighters.json"),
         load("./data/variants.json")
     ]).then(callback);
+
+    window.addEventListener("beforeunload", e=>document.getElementById("zoom-out").click());
 }
 
-function initLanguage() {
-    for (var button of document.getElementById("language-set").getElementsByTagName("input")) {
-        button.addEventListener("change", function () {
-            changeLanguage(this.id);
-        });
-    }
-}
-
-function changeLanguage(language) {
-    saveLanguage(language);
-    resetCollection();
-    initialize();
-}
-
-function loadLanguage() {
-    var lang = window.localStorage.getItem("language") || "en";
-    document.body.parentElement.lang = lang;
-    return lang;
-}
-
-function saveLanguage(language) {
-    window.localStorage.setItem("language", language);
-}
-
-function resetCollection() {
-    // collection.innerHTML = "";
-    collection.appendChild(loading);
-    loading.classList.remove("hidden");
-}
 
 function load(path) {
     function request(resolve, reject) {
@@ -87,18 +63,26 @@ function load(path) {
     return new Promise(request);
 }
 
+function initLanguageMenu() {
+    var buttonSet = document.getElementById("language-menu");
+    var buttons = buttonSet.getElementsByTagName("input");
 
+    function setLanguage() {
+        var language = this.id;
+        load("data/" + language + ".json").then(e=>console.log(e));
+        document.body.classList.add("loading");
+        localStorage.setItem("language", language);
+        document.documentElement.lang = language;
+    }
 
-
-
-
-
-
-/* DOCK */
+    for (var button of buttons) {
+        button.addEventListener("change", setLanguage);
+    }
+}
 
 function initDock() {
     var menu = document.getElementById("menu");
-    var options = document.getElementById("options");
+    var optionsMenu = document.getElementById("options-menu");
     var filterMenu = document.getElementById("filter-menu");
     var sortMenu = document.getElementById("sort-menu");
 
@@ -107,11 +91,12 @@ function initDock() {
     var fighterOptions = document.getElementById("fighter-options");
     var filterSort = document.getElementById("filter-sort");
 
-    var headerHeight = header.scrollHeight;
+    function getScrollHeight() {
+        return document.documentElement.scrollHeight - innerHeight;
+    }
 
     function smallify() { /* TODO: save zoom settings */
-        var oldScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        var scrollPercent = window.scrollY / oldScrollHeight;
+        var scrollPercent = scrollY / getScrollHeight();
         if (document.body.classList.contains("zoomed-in")) {
             document.body.classList.remove("zoomed-in");
             zoomIn.classList.remove("pressed");
@@ -120,13 +105,11 @@ function initDock() {
             document.body.classList.add("zoomed-out");
             zoomOut.classList.add("pressed");
         }
-        var newScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollTo(0, newScrollHeight * scrollPercent);
+        scrollTo(0, scrollPercent * getScrollHeight());
     }
 
     function largify() {
-        var oldScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        var scrollPercent = window.scrollY / oldScrollHeight;
+        var scrollPercent = scrollY / getScrollHeight();
         if (document.body.classList.contains("zoomed-out")) {
             document.body.classList.remove("zoomed-out");
             zoomOut.classList.remove("pressed");
@@ -135,8 +118,7 @@ function initDock() {
             document.body.classList.add("zoomed-in");
             zoomIn.classList.add("pressed");
         }
-        var newScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollTo(0, newScrollHeight * scrollPercent);
+        scrollTo(0, scrollPercent * getScrollHeight());
     }
 
     function toggleFighterOptions() {
@@ -146,12 +128,13 @@ function initDock() {
         }
         else {
             this.classList.add("glowing");
+
             filterSort.classList.remove("glowing");
             menu.classList.remove("hidden");
-            options.classList.remove("hidden");
+            optionsMenu.classList.remove("hidden");
             filterMenu.classList.add("hidden");
             sortMenu.classList.add("hidden");
-            options.scrollLeft = 0;
+            optionsMenu.scrollLeft = 0;
         }
     }
 
@@ -162,9 +145,10 @@ function initDock() {
         }
         else {
             this.classList.add("glowing");
+
             fighterOptions.classList.remove("glowing");
             menu.classList.remove("hidden");
-            options.classList.add("hidden");
+            optionsMenu.classList.add("hidden");
             filterMenu.classList.remove("hidden");
             sortMenu.classList.remove("hidden");
             filterMenu.children[0].scrollLeft = 0;
@@ -177,6 +161,49 @@ function initDock() {
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
 }
+
+function initOptionsMenu() {
+}
+
+function initFilterMenu() {
+}
+
+function initSortMenu() {
+}
+
+
+
+
+
+
+
+
+
+
+function changeLanguage(language) {
+    saveLanguage(language);
+    resetCollection();
+    initialize();
+}
+
+function loadLanguage() {
+    var lang = localStorage.getItem("language") || "en";
+    document.body.parentElement.lang = lang;
+    return lang;
+}
+
+function saveLanguage(language) {
+    localStorage.setItem("language", language);
+}
+
+function resetCollection() {
+    // collection.innerHTML = "";
+    collection.appendChild(loading);
+}
+
+
+
+
 
 
 
@@ -212,13 +239,13 @@ function createAvatar(key) {
             frame.appendChild(backdrop);
         avatar.appendChild(frame);
         var nameplate = document.createElement("div");
-            nameplate.className = "nameplate cinema";
+            nameplate.className = "nameplate";
             var variantName = document.createElement("div");
-                variantName.className = "dependent-gradient";
+                variantName.className = "cinematic dependent-gradient";
                 variantName.innerHTML = corpus[variants[key].name];
             nameplate.appendChild(variantName);
             var fighterName = document.createElement("div");
-                fighterName.className = "smaller";
+                fighterName.className = "cinematic smaller";
                 fighterName.innerHTML = corpus[fighters[variants[key].base].name];
             nameplate.appendChild(fighterName);
         avatar.appendChild(nameplate);
@@ -242,7 +269,7 @@ function createStat(type, value) {
         stat.className = ["tagged", type].join(" ");
         stat.appendChild(createWordBreak());
         var span = document.createElement("span");
-            span.className = "cinema numeric silver-gradient";
+            span.className = "cinematic numeric silver-gradient";
             span.innerHTML = value.toLocaleString();
         stat.appendChild(span);
     return stat;
@@ -264,7 +291,7 @@ function createAbility(type, titleText, descriptionTexts) {
     var ability = document.createElement("div");
         ability.className = ["ability", type].join(" ");
         var abilityName = document.createElement("div");
-            abilityName.className = "ability-name cinema";
+            abilityName.className = "ability-name cinematic";
             var label = document.createElement("span");
                 label.className = "ability-label gold-gradient";
             abilityName.appendChild(label);
@@ -333,6 +360,7 @@ function createSA(key, n) {
     for (var feature of variants[key].signature.features) {
         var template = corpus[feature.description];
         var substitutions = feature.tiers.slice(n)[0];
+        console.log(key, template, substitutions);
         var descriptionText = format(template, substitutions);
         descriptionTexts.push(descriptionText);
     }

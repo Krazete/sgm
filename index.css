@@ -1,11 +1,21 @@
 @font-face {
+    font-family: 'Washington';
+    src: url(font/WashingtonBoldDynamic.otf);
+}
+
+@font-face {
     font-family: 'Cinema';
-    src: url(data/font/TBCinemaRGothic-M.ttf);
+    src: url(font/TBCinemaRGothic-M.ttf);
+}
+
+@font-face {
+    font-family: 'Dodam';
+    src: url(font/Typo_DodamM.ttf);
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url(data/font/RobotoCondensed-Regular.ttf);
+    src: url(font/RobotoCondensed-Regular.ttf);
 }
 
 ::-webkit-scrollbar {
@@ -47,12 +57,15 @@ a {
     text-decoration: inherit;
 }
 
-.cinema {
-    font-family: 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+.cinematic {
+    font-family: 'Washington', 'Trebuchet MS', 'Arial Narrow', sans-serif;
     text-transform: uppercase;
 }
-html[lang='ru'] .cinema {
-    font-family: 'Trebuchet MS', 'Arial Narrow', sans-serif;
+html[lang='ja'] .cinematic {
+    font-family: 'Washington', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+html[lang='ko'] .cinematic {
+    font-family: 'Washington', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 .tagged {
@@ -80,27 +93,29 @@ html[lang='ru'] .cinema {
     text-shadow: none;
     /* filter: drop-shadow(1px 1px black); */
     /* excessive drop-shadow causes major visual glitches in ios */
-    padding: 0 0.25em;
+    padding: 1em 0.25em;
+    margin-top: -0.8em;
+    margin-bottom: -1.2em;
     display: inline-block;
 }
 .bronze-gradient,
 .bronze .dependent-gradient {
-    background: -webkit-linear-gradient(white, #843);
+    background: -webkit-linear-gradient(white 30%, #843 60%);
     color: #b76;
 }
 .silver-gradient,
 .silver .dependent-gradient {
-    background: -webkit-linear-gradient(white, #889);
+    background: -webkit-linear-gradient(white 30%, #889 60%);
     color: #aab;
 }
 .gold-gradient,
 .gold .dependent-gradient {
-    background: -webkit-linear-gradient(white, #da2);
+    background: -webkit-linear-gradient(white 30%, #da2 60%);
     color: #fd8;
 }
 .diamond-gradient,
 .diamond .dependent-gradient {
-    background: -webkit-linear-gradient(white, #d9d);
+    background: -webkit-linear-gradient(white 30%, #d9d 60%);
     color: #fcf;
 }
 
@@ -165,6 +180,14 @@ input:checked + label {
     border-color: #314c73;
 }
 
+.loading input,
+.loading label,
+.loading .button,
+.loading .icon {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 /* HEADER */
 
 #header {
@@ -186,7 +209,7 @@ html[lang='es'] #fighter-gallery:before {content: 'Galer\00ed a de Personajes';}
 html[lang='ko'] #fighter-gallery:before {content: '\ce90 \b9ad \d130  \ac24 \b7ec \b9ac ';}
 html[lang='de'] #fighter-gallery:before {content: 'K\00e4 mpfergalerie';}
 
-.cinema.banner {
+.cinematic.banner {
     font-size: xx-large;
     white-space: nowrap;
 }
@@ -210,7 +233,7 @@ html[lang='es'] #version:before {content: 'VERSI\00d3 N:';}
 html[lang='ko'] #version:before {content: '\bc84 \c804 :';}
 html[lang='de'] #version:before {content: 'VERSION:';}
 
-#language-set label:before {
+#language-menu label:before {
     padding-left: 1.75em;
 }
 #ja + label.tagged:before {content: '\65e5 \672c \8a9e '; background: url(image/official/flag_jp.png);}
@@ -306,11 +329,11 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 
 /* FIGHTER OPTIONS */
 
-#options.scroller {
+#options-menu.scroller {
     min-width: 90%;
 }
 
-#options.scroller > div {
+#options-menu.scroller > div {
     grid-template-columns: max-content repeat(4, auto minmax(max-content, 1fr));
 }
 
@@ -327,7 +350,7 @@ html[lang='en'] #options-label:before {content: 'OPTIONS';}
 html[lang='de'] #options-label:before {content: 'EINSTELLUNGEN';}
 html[lang='ko'] #options-label:before {content: '\c124 \c815 ';}
 
-#options .subset {
+#options-menu .subset {
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -546,7 +569,12 @@ html[lang='de'] #tier + label:before {content: 'KLASSE';}
 /* LOADING */
 
 #loading {
+    display: none;
     margin: auto;
+}
+
+.loading #loading {
+    display: block;
 }
 
 #loading img {
@@ -604,6 +632,10 @@ html[lang='de'] #loading:after {content: 'LADE ...';}
 }
 .card.locked {
     display: grid;
+}
+
+.loading .card {
+    display: none;
 }
 
 .zoomed-out .card {
