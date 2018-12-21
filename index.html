@@ -58,15 +58,15 @@
                     <div class="label-flexbox">
                         <span class="tagged cinematic silver-gradient" id="options-label"></span>
                         <div>
-                            <img class="button" src="image/official/CloseButton.png">
-                            <img class="button" src="image/official/Button_Home.png">
-                            <img class="button" src="image/official/WinsToggleIcon.png">
+                            <img class="button" src="image/official/CloseButton.png" id="option-base">
+                            <img class="button" src="image/official/Button_Home.png" id="option-default">
+                            <img class="button" src="image/official/WinsToggleIcon.png" id="option-maximum">
                         </div>
                     </div>
                     <div class="divider"></div>
                     <div class="subset">
                         <div class="fill-row cinematic dependent-gradient" id="evolve-label"></div>
-                        <input type="range" min="0" max="3" value="0" class="fill-row" id="evolve">
+                        <input type="range" min="0" max="3" value="0" class="fill-row" id="evolve-range">
                         <img class="icon" src="image/official/constraints_bronze.png" id="evolve-bronze">
                         <img class="icon" src="image/official/constraints_silver.png" id="evolve-silver">
                         <img class="icon" src="image/official/constraints_gold.png" id="evolve-gold">
@@ -74,8 +74,8 @@
                     </div>
                     <div class="divider"></div>
                     <div class="subset">
-                        <div class="fill-row cinematic dependent-gradient" id="level-label"></div>
-                        <input type="range" min="1" max="60" value="1" class="fill-row" id="level">
+                        <div class="fill-row cinematic dependent-gradient" id="level-label"></div> <!-- TODO: organize all attributes -->
+                        <input type="range" min="1" max="60" value="1" class="fill-row" id="level-range">
                         <div>
                             <input type="number" pattern="\d*" min="1" max="30" value="1" class="cinematic numeric" id="level-bronze">
                             <img class="icon" src="image/official/BronzeLevel.png">
@@ -97,19 +97,19 @@
                     <div class="sa subset">
                         <div class="ability-label fill-row cinematic dependent-gradient"></div>
                         <div class="fill-row">
-                            <input type="number" pattern="\d*" min="1" max="3" value="3" class="cinematic numeric">
+                            <input type="number" pattern="\d*" min="1" max="3" value="3" class="cinematic numeric" id="sa-number">
                             <img class="icon" src="image/official/icon_middle.png">
                         </div>
-                        <input type="range" min="1" max="3" value="3" class="fill-row" id="sa">
+                        <input type="range" min="1" max="3" value="3" class="fill-row" id="sa-range">
                     </div>
                     <div class="divider"></div>
                     <div class="ma subset">
                         <div class="ability-label fill-row cinematic dependent-gradient"></div>
                         <div class="fill-row">
-                            <input type="number" pattern="\d*" min="1" max="11" value="11" class="cinematic numeric">
+                            <input type="number" pattern="\d*" min="1" max="11" value="11" class="cinematic numeric" id="ma-number">
                             <img class="icon" src="image/official/icon_middle.png">
                         </div>
-                        <input type="range" min="1" max="11" value="11" class="fill-row" id="ma">
+                        <input type="range" min="1" max="11" value="11" class="fill-row" id="ma-range">
                     </div>
                 </div>
             </div>
@@ -122,56 +122,56 @@
                     </div>
                     <div class="divider"></div>
                     <div class="subset" id="medals">
-                        <input type="checkbox" id="bronze">
-                        <label for="bronze"><img class="icon" src="image/official/constraints_bronze.png"></label>
-                        <input type="checkbox" id="silver">
-                        <label for="silver"><img class="icon" src="image/official/constraints_silver.png"></label>
-                        <input type="checkbox" id="gold">
-                        <label for="gold"><img class="icon" src="image/official/constraints_gold.png"></label>
-                        <input type="checkbox" id="diamond">
-                        <label for="diamond"><img class="icon" src="image/official/constraints_diamond.png"></label>
+                        <input type="checkbox" id="filter-bronze">
+                        <label for="filter-bronze"><img class="icon" src="image/official/constraints_bronze.png"></label>
+                        <input type="checkbox" id="filter-silver">
+                        <label for="filter-silver"><img class="icon" src="image/official/constraints_silver.png"></label>
+                        <input type="checkbox" id="filter-gold">
+                        <label for="filter-gold"><img class="icon" src="image/official/constraints_gold.png"></label>
+                        <input type="checkbox" id="filter-diamond">
+                        <label for="filter-diamond"><img class="icon" src="image/official/constraints_diamond.png"></label>
                     </div>
                     <div class="divider"></div>
                     <div class="subset" id="elements">
-                        <input type="checkbox" id="fire">
-                        <label for="fire"><img class="icon" src="image/official/ElementalFireBackless.png"></label>
-                        <input type="checkbox" id="water">
-                        <label for="water"><img class="icon" src="image/official/ElementalWaterBackless.png"></label>
-                        <input type="checkbox" id="wind">
-                        <label for="wind"><img class="icon" src="image/official/ElementalWindBackless.png"></label>
-                        <input type="checkbox" id="light">
-                        <label for="light"><img class="icon" src="image/official/ElementalLightBackless.png"></label>
-                        <input type="checkbox" id="dark">
-                        <label for="dark"><img class="icon" src="image/official/ElementalDarkBackless.png"></label>
-                        <input type="checkbox" id="neutral">
-                        <label for="neutral"><img class="icon" src="image/official/ElementalNeutralBackless.png"></label>
+                        <input type="checkbox" id="filter-fire">
+                        <label for="filter-fire"><img class="icon" src="image/official/ElementalFireBackless.png"></label>
+                        <input type="checkbox" id="filter-water">
+                        <label for="filter-water"><img class="icon" src="image/official/ElementalWaterBackless.png"></label>
+                        <input type="checkbox" id="filter-wind">
+                        <label for="filter-wind"><img class="icon" src="image/official/ElementalWindBackless.png"></label>
+                        <input type="checkbox" id="filter-light">
+                        <label for="filter-light"><img class="icon" src="image/official/ElementalLightBackless.png"></label>
+                        <input type="checkbox" id="filter-dark">
+                        <label for="filter-dark"><img class="icon" src="image/official/ElementalDarkBackless.png"></label>
+                        <input type="checkbox" id="filter-neutral">
+                        <label for="filter-neutral"><img class="icon" src="image/official/ElementalNeutralBackless.png"></label>
                     </div>
                     <div class="divider"></div>
                     <div class="subset" id="mastery">
-                        <input type="checkbox" id="be">
-                        <label for="be"><img class="icon" src="image/official/Beowulf_MasteryIcon.png"></label>
-                        <input type="checkbox" id="bb">
-                        <label for="bb"><img class="icon" src="image/official/BigBand_MasteryIcon.png"></label>
-                        <input type="checkbox" id="ce">
-                        <label for="ce"><img class="icon" src="image/official/Cerebella_MasteryIcon.png"></label>
-                        <input type="checkbox" id="do">
-                        <label for="do"><img class="icon" src="image/official/Double_MasteryIcon.png"></label>
-                        <input type="checkbox" id="el">
-                        <label for="el"><img class="icon" src="image/official/Eliza_MasteryIcon.png"></label>
-                        <input type="checkbox" id="fi">
-                        <label for="fi"><img class="icon" src="image/official/Filia_MasteryIcon.png"></label>
-                        <input type="checkbox" id="pw">
-                        <label for="pw"><img class="icon" src="image/official/Painwheel_MasteryIcon.png"></label>
-                        <input type="checkbox" id="pa">
-                        <label for="pa"><img class="icon" src="image/official/Parasoul_MasteryIcon.png"></label>
-                        <input type="checkbox" id="pe">
-                        <label for="pe"><img class="icon" src="image/official/Peacock_MasteryIcon.png"></label>
-                        <input type="checkbox" id="mf">
-                        <label for="mf"><img class="icon" src="image/official/MsFortune_MasteryIcon.png"></label>
-                        <input type="checkbox" id="sq">
-                        <label for="sq"><img class="icon" src="image/official/Squigly_MasteryIcon.png"></label>
-                        <input type="checkbox" id="va">
-                        <label for="va"><img class="icon" src="image/official/Valentine_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-be">
+                        <label for="filter-be"><img class="icon" src="image/official/Beowulf_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-bb">
+                        <label for="filter-bb"><img class="icon" src="image/official/BigBand_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-ce">
+                        <label for="filter-ce"><img class="icon" src="image/official/Cerebella_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-do">
+                        <label for="filter-do"><img class="icon" src="image/official/Double_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-el">
+                        <label for="filter-el"><img class="icon" src="image/official/Eliza_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-fi">
+                        <label for="filter-fi"><img class="icon" src="image/official/Filia_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-pw">
+                        <label for="filter-pw"><img class="icon" src="image/official/Painwheel_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-pa">
+                        <label for="filter-pa"><img class="icon" src="image/official/Parasoul_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-pe">
+                        <label for="filter-pe"><img class="icon" src="image/official/Peacock_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-mf">
+                        <label for="filter-mf"><img class="icon" src="image/official/MsFortune_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-sq">
+                        <label for="filter-sq"><img class="icon" src="image/official/Squigly_MasteryIcon.png"></label>
+                        <input type="checkbox" id="filter-va">
+                        <label for="filter-va"><img class="icon" src="image/official/Valentine_MasteryIcon.png"></label>
                     </div>
                 </div>
             </div>
@@ -181,18 +181,18 @@
                         <span class="tagged cinematic silver-gradient" id="sort-label"></span>
                     </div>
                     <div class="divider"></div>
-                    <input type="radio" id="abc" name="sort">
-                    <label for="abc"></label>
-                    <input type="radio" id="fs" name="sort">
-                    <label for="fs"></label>
-                    <input type="radio" id="atk" name="sort">
-                    <label for="atk"></label>
-                    <input type="radio" id="hp" name="sort">
-                    <label for="hp"></label>
-                    <input type="radio" id="element" name="sort">
-                    <label for="element"></label>
-                    <input type="radio" id="tier" name="sort">
-                    <label for="tier"></label>
+                    <input type="radio" name="sort" id="sort-abc">
+                    <label for="sort-abc"></label>
+                    <input type="radio" name="sort" id="sort-fs">
+                    <label for="sort-fs"></label>
+                    <input type="radio" name="sort" id="sort-atk">
+                    <label for="sort-atk"></label>
+                    <input type="radio" name="sort" id="sort-hp">
+                    <label for="sort-hp"></label>
+                    <input type="radio" name="sort" id="sort-element">
+                    <label for="sort-element"></label>
+                    <input type="radio" name="sort" id="sort-tier">
+                    <label for="sort-tier"></label>
                 </div>
             </div>
         </div>

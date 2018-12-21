@@ -251,6 +251,7 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
     position: -webkit-sticky;
     position: sticky;
     bottom: -1px;
+    z-index: 1;
 }
 
 #dock {
@@ -456,59 +457,59 @@ html[lang='de'] #sort-label:before {content: 'SORTIEREN';}
 html[lang='ko'] #sort-label:before {content: '\c815 \b82c ';}
 html[lang='pt-br'] #sort-label:before {content: 'ORGANIZAR';}
 
-html[lang='en'] #abc + label:before {content: 'Alphabetical';}
-html[lang='fr'] #abc + label:before {content: 'Alphab\00e9 tique';}
-html[lang='es'] #abc + label:before {content: 'Orden alfab\00e9 tico';}
-html[lang='ru'] #abc + label:before {content: '\041f \043e  \0430 \043b \0444 \0430 \0432 \0438 \0442 \0443 ';}
-html[lang='ja'] #abc + label:before {content: '\30a2 \30eb \30d5 \30a1 \30d9 \30c3 \30c8 \9806 ';}
-html[lang='de'] #abc + label:before {content: 'Alphabetisch';}
-html[lang='ko'] #abc + label:before {content: '\c54c \d30c \bcb3 \c21c ';}
-html[lang='pt-br'] #abc + label:before {content: 'Ordem alfab\00e9 tica';}
+html[lang='en'] #sort-abc + label:before {content: 'Alphabetical';}
+html[lang='fr'] #sort-abc + label:before {content: 'Alphab\00e9 tique';}
+html[lang='es'] #sort-abc + label:before {content: 'Orden alfab\00e9 tico';}
+html[lang='ru'] #sort-abc + label:before {content: '\041f \043e  \0430 \043b \0444 \0430 \0432 \0438 \0442 \0443 ';}
+html[lang='ja'] #sort-abc + label:before {content: '\30a2 \30eb \30d5 \30a1 \30d9 \30c3 \30c8 \9806 ';}
+html[lang='de'] #sort-abc + label:before {content: 'Alphabetisch';}
+html[lang='ko'] #sort-abc + label:before {content: '\c54c \d30c \bcb3 \c21c ';}
+html[lang='pt-br'] #sort-abc + label:before {content: 'Ordem alfab\00e9 tica';}
 
-html[lang='en'] #fs + label:before {content: 'FIGHTER SCORE';}
-html[lang='fr'] #fs + label:before {content: 'SCORE';}
-html[lang='es'] #fs + label:before {content: 'PUNTUACI\00d3 N ';}
-html[lang='ru'] #fs + label:before {content: '\0411 \041e \0415 \0412 \041e \0419  \0421 \0427 \0415 \0422 ';}
-html[lang='ja'] #fs + label:before {content: '\30d5 \30a1 \30a4 \30bf \30fc \30fb \30b9 \30b3 \30a2 ';}
-html[lang='de'] #fs + label:before {content: 'KAMPFPUNKTE';}
-html[lang='ko'] #fs + label:before {content: '\c804 \d22c \b825 ';}
-html[lang='pt-br'] #fs + label:before {content: 'PONTUA\00c7 \00c3 O';}
+html[lang='en'] #sort-fs + label:before {content: 'FIGHTER SCORE';}
+html[lang='fr'] #sort-fs + label:before {content: 'SCORE';}
+html[lang='es'] #sort-fs + label:before {content: 'PUNTUACI\00d3 N ';}
+html[lang='ru'] #sort-fs + label:before {content: '\0411 \041e \0415 \0412 \041e \0419  \0421 \0427 \0415 \0422 ';}
+html[lang='ja'] #sort-fs + label:before {content: '\30d5 \30a1 \30a4 \30bf \30fc \30fb \30b9 \30b3 \30a2 ';}
+html[lang='de'] #sort-fs + label:before {content: 'KAMPFPUNKTE';}
+html[lang='ko'] #sort-fs + label:before {content: '\c804 \d22c \b825 ';}
+html[lang='pt-br'] #sort-fs + label:before {content: 'PONTUA\00c7 \00c3 O';}
 
-html[lang='en'] #atk + label:before {content: 'ATTACK DAMAGE';}
-html[lang='fr'] #atk + label:before {content: 'D\00c9 G\00c2 TS D\'ATT AQUE';}
-html[lang='es'] #atk + label:before {content: 'DA\00d1 O POR ATAQUE';}
-html[lang='ru'] #atk + label:before {content: '\0423 \0420 \041e \041d  \043e \0442  \0410 \0422 \0410 \041a \0418 ';}
-html[lang='ja'] #atk + label:before {content: '\653b \6483 \30c0 \30e1 \30fc \30b8 ';}
-html[lang='de'] #atk + label:before {content: 'SCHADENSBOOST';}
-html[lang='ko'] #atk + label:before {content: '\acf5 \aca9  \d53c \d574 ';}
-html[lang='pt-br'] #atk + label:before {content: 'DANO DOS GOLPES';}
+html[lang='en'] #sort-atk + label:before {content: 'ATTACK DAMAGE';}
+html[lang='fr'] #sort-atk + label:before {content: 'D\00c9 G\00c2 TS D\'ATT AQUE';}
+html[lang='es'] #sort-atk + label:before {content: 'DA\00d1 O POR ATAQUE';}
+html[lang='ru'] #sort-atk + label:before {content: '\0423 \0420 \041e \041d  \043e \0442  \0410 \0422 \0410 \041a \0418 ';}
+html[lang='ja'] #sort-atk + label:before {content: '\653b \6483 \30c0 \30e1 \30fc \30b8 ';}
+html[lang='de'] #sort-atk + label:before {content: 'SCHADENSBOOST';}
+html[lang='ko'] #sort-atk + label:before {content: '\acf5 \aca9  \d53c \d574 ';}
+html[lang='pt-br'] #sort-atk + label:before {content: 'DANO DOS GOLPES';}
 
-html[lang='en'] #hp + label:before {content: 'HEALTH';}
-html[lang='fr'] #hp + label:before {content: 'SANT\00c9 ';}
-html[lang='es'] #hp + label:before {content: 'SALUD';}
-html[lang='ru'] #hp + label:before {content: '\0417 \0414 \041e \0420 \041e \0412 \042c \0415 ';}
-html[lang='ja'] #hp + label:before {content: '\4f53 \529b ';}
-html[lang='de'] #hp + label:before {content: 'GESUNDHEIT';}
-html[lang='ko'] #hp + label:before {content: '\ccb4 \b825 ';}
-html[lang='pt-br'] #hp + label:before {content: 'VIDA';}
+html[lang='en'] #sort-hp + label:before {content: 'HEALTH';}
+html[lang='fr'] #sort-hp + label:before {content: 'SANT\00c9 ';}
+html[lang='es'] #sort-hp + label:before {content: 'SALUD';}
+html[lang='ru'] #sort-hp + label:before {content: '\0417 \0414 \041e \0420 \041e \0412 \042c \0415 ';}
+html[lang='ja'] #sort-hp + label:before {content: '\4f53 \529b ';}
+html[lang='de'] #sort-hp + label:before {content: 'GESUNDHEIT';}
+html[lang='ko'] #sort-hp + label:before {content: '\ccb4 \b825 ';}
+html[lang='pt-br'] #sort-hp + label:before {content: 'VIDA';}
 
-html[lang='en'] #element + label:before {content: 'Element';}
-html[lang='fr'] #element + label:before {content: '\00c9 l\00e9 ment';}
-html[lang='es'] #element + label:before {content: 'Elemento';}
-html[lang='ru'] #element + label:before {content: '\0421 \0442 \0438 \0445 \0438 \044f ';}
-html[lang='ja'] #element + label:before {content: '\5c5e \6027 ';}
-html[lang='de'] #element + label:before {content: 'Element';}
-html[lang='ko'] #element + label:before {content: '\c18d \c131 ';}
-html[lang='pt-br'] #element + label:before {content: 'Elemento';}
+html[lang='en'] #sort-element + label:before {content: 'Element';}
+html[lang='fr'] #sort-element + label:before {content: '\00c9 l\00e9 ment';}
+html[lang='es'] #sort-element + label:before {content: 'Elemento';}
+html[lang='ru'] #sort-element + label:before {content: '\0421 \0442 \0438 \0445 \0438 \044f ';}
+html[lang='ja'] #sort-element + label:before {content: '\5c5e \6027 ';}
+html[lang='de'] #sort-element + label:before {content: 'Element';}
+html[lang='ko'] #sort-element + label:before {content: '\c18d \c131 ';}
+html[lang='pt-br'] #sort-element + label:before {content: 'Elemento';}
 
-html[lang='en'] #tier + label:before {content: 'TIER';}
-html[lang='fr'] #tier + label:before {content: 'RANG';}
-html[lang='es'] #tier + label:before {content: 'GRADO';}
-html[lang='ru'] #tier + label:before {content: '\0420 \0410 \041d \0413 ';}
-html[lang='ja'] #tier + label:before {content: '\30e9 \30f3 \30af ';}
-html[lang='de'] #tier + label:before {content: 'KLASSE';}
-html[lang='ko'] #tier + label:before {content: '\b4f1 \ae09 ';}
-html[lang='pt-br'] #tier + label:before {content: 'CATEGORIA';}
+html[lang='en'] #sort-tier + label:before {content: 'TIER';}
+html[lang='fr'] #sort-tier + label:before {content: 'RANG';}
+html[lang='es'] #sort-tier + label:before {content: 'GRADO';}
+html[lang='ru'] #sort-tier + label:before {content: '\0420 \0410 \041d \0413 ';}
+html[lang='ja'] #sort-tier + label:before {content: '\30e9 \30f3 \30af ';}
+html[lang='de'] #sort-tier + label:before {content: 'KLASSE';}
+html[lang='ko'] #sort-tier + label:before {content: '\b4f1 \ae09 ';}
+html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
 
 /* COLLECTION */
 

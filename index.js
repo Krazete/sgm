@@ -6,47 +6,8 @@ var loading;
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 
-function initialize() {
-    initLanguageMenu();
-    initDock();
-    initOptionsMenu();
-    initFilterMenu();
-    initSortMenu();
 
-    collection = document.getElementById("collection");
-    sa = document.getElementById("sa");
-    ma = document.getElementById("ma");
-    red = document.getElementById("red");
-    mastery = document.getElementById("mastery");
-    element = document.getElementById("element");
-    loading = document.getElementById("loading");
-    var language = loadLanguage();
-    if (typeof order == "undefined") {
-        order = byAlpha;
-    }
-
-    function callback(responses) {
-        document.body.classList.remove("loading");
-        corpus = responses[0];
-        fighters = responses[1];
-        variants = responses[2];
-        init(sa.value - 1, ma.value - 1);
-        sort(order);
-        // toggle(mastery, "blah");
-        // toggle(element, "blah");
-    }
-
-    Promise.all([
-        load("./data/" + language + ".json"),
-        load("./data/fighters.json"),
-        load("./data/variants.json")
-    ]).then(callback);
-
-    window.addEventListener("beforeunload", e=>document.getElementById("zoom-out").click());
-}
-
-
-function load(path) {
+function loadJSON(path) {
     function request(resolve, reject) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", path, true);
@@ -63,40 +24,121 @@ function load(path) {
     return new Promise(request);
 }
 
+function saveItem(key, item) {
+    try {
+        var itemJSON = JSON.stringify(item);
+        localStorage.setItem(key, itemJSON);
+    }
+    catch (e) {
+        console.log(e);
+    }
+}
+
+function loadItem(key, defaultItem) {
+    try {
+        var itemJSON = localStorage.getItem(key);
+        var item = JSON.parse(itemJSON);
+        if (item != null) {
+            return item;
+        }
+    }
+    catch (e) {
+        console.log(e);
+    }
+    return defaultItem;
+}
+
+function initialize() {
+    initLanguageMenu();
+    initDock();
+    initOptionsMenu();
+    initFilterMenu();
+    initSortMenu();
+
+    collection = document.getElementById("collection");
+    sa = document.getElementById("sa");
+    ma = document.getElementById("ma");
+    red = document.getElementById("red");
+    mastery = document.getElementById("mastery");
+    element = document.getElementById("element");
+    loading = document.getElementById("loading");
+    if (typeof order == "undefined") {
+        order = byAlpha;
+    }
+
+    function callback(responses) {
+        corpus = responses[0];
+        fighters = responses[1];
+        variants = responses[2];
+        init(sa.value - 1, ma.value - 1);
+        // sort(order);
+    }
+
+    Promise.all([
+        loadJSON("./data/fighters.json"),
+        loadJSON("./data/variants.json")
+    ]).then(callback);
+
+    addEventListener("beforeunload", e=>document.getElementById("zoom-out").click());
+}
+
+
+
+
+
+
 function initLanguageMenu() {
     var buttonSet = document.getElementById("language-menu");
     var buttons = buttonSet.getElementsByTagName("input");
+    var savedLanguage = loadItem("language", "en");
+    var savedButton = document.getElementById(savedLanguage);
 
     function setLanguage() {
         var language = this.id;
-        load("data/" + language + ".json").then(e=>console.log(e));
-        document.body.classList.add("loading");
-        localStorage.setItem("language", language);
         document.documentElement.lang = language;
+        document.body.classList.add("loading");
+        saveItem("language", language);
+        loadJSON("data/" + language + ".json").then(callback);
+    }
+
+    function callback() { /* TODO: figure out what to do about loading language data and loading character data */
+        document.body.classList.remove("loading");
+        initCards();
     }
 
     for (var button of buttons) {
         button.addEventListener("change", setLanguage);
     }
+    savedButton.click();
+}
+
+function initCards() {
+    init();
 }
 
 function initDock() {
-    var menu = document.getElementById("menu");
-    var optionsMenu = document.getElementById("options-menu");
-    var filterMenu = document.getElementById("filter-menu");
-    var sortMenu = document.getElementById("sort-menu");
-
     var zoomIn = document.getElementById("zoom-in");
     var zoomOut = document.getElementById("zoom-out");
     var fighterOptions = document.getElementById("fighter-options");
     var filterSort = document.getElementById("filter-sort");
 
-    function getScrollHeight() {
-        return document.documentElement.scrollHeight - innerHeight;
+    var menu = document.getElementById("menu");
+    var optionsMenu = document.getElementById("options-menu");
+    var filterMenu = document.getElementById("filter-menu");
+    var sortMenu = document.getElementById("sort-menu");
+
+    function getScrollRatio() {
+        var scrollHeight = document.documentElement.scrollHeight - innerHeight;
+        return scrollY / scrollHeight;
     }
 
-    function smallify() { /* TODO: save zoom settings */
-        var scrollPercent = scrollY / getScrollHeight();
+    function setScrollRatio(scrollRatio) {
+        var scrollHeight = document.documentElement.scrollHeight - innerHeight;
+        scrollTo(0, scrollHeight * scrollRatio);
+    }
+
+    function decreaseZoom() { /* TODO: save zoom settings */
+        var scrollRatio = getScrollRatio();
         if (document.body.classList.contains("zoomed-in")) {
             document.body.classList.remove("zoomed-in");
             zoomIn.classList.remove("pressed");
@@ -105,11 +147,11 @@ function initDock() {
             document.body.classList.add("zoomed-out");
             zoomOut.classList.add("pressed");
         }
-        scrollTo(0, scrollPercent * getScrollHeight());
+        setScrollRatio(scrollRatio);
     }
 
-    function largify() {
-        var scrollPercent = scrollY / getScrollHeight();
+    function increaseZoom() {
+        var scrollRatio = getScrollRatio();
         if (document.body.classList.contains("zoomed-out")) {
             document.body.classList.remove("zoomed-out");
             zoomOut.classList.remove("pressed");
@@ -118,7 +160,7 @@ function initDock() {
             document.body.classList.add("zoomed-in");
             zoomIn.classList.add("pressed");
         }
-        scrollTo(0, scrollPercent * getScrollHeight());
+        setScrollRatio(scrollRatio);
     }
 
     function toggleFighterOptions() {
@@ -128,13 +170,12 @@ function initDock() {
         }
         else {
             this.classList.add("glowing");
-
             filterSort.classList.remove("glowing");
             menu.classList.remove("hidden");
             optionsMenu.classList.remove("hidden");
             filterMenu.classList.add("hidden");
             sortMenu.classList.add("hidden");
-            optionsMenu.scrollLeft = 0;
+            optionsMenu.scrollTo(0, 0); /* TODO: check if this scroll method is okay */
         }
     }
 
@@ -144,31 +185,311 @@ function initDock() {
             menu.classList.add("hidden");
         }
         else {
-            this.classList.add("glowing");
-
             fighterOptions.classList.remove("glowing");
+            this.classList.add("glowing");
             menu.classList.remove("hidden");
             optionsMenu.classList.add("hidden");
             filterMenu.classList.remove("hidden");
             sortMenu.classList.remove("hidden");
-            filterMenu.children[0].scrollLeft = 0;
-            sortMenu.children[0].scrollLeft = 0;
+            filterMenu.scrollTo(0, 0);
+            sortMenu.scrollTo(0, 0);
         }
     }
 
-    zoomOut.addEventListener("click", smallify);
-    zoomIn.addEventListener("click", largify);
+    zoomOut.addEventListener("click", decreaseZoom);
+    zoomIn.addEventListener("click", increaseZoom);
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
 }
 
 function initOptionsMenu() {
+    var optionBase = document.getElementById("option-base");
+    var optionDefault = document.getElementById("option-default");
+    var optionMaximum = document.getElementById("option-maximum");
+
+    var evolveRange = document.getElementById("evolve-range");
+    var evolveBronze = document.getElementById("evolve-bronze");
+    var evolveSilver = document.getElementById("evolve-silver");
+    var evolveGold = document.getElementById("evolve-gold");
+    var evolveDiamond = document.getElementById("evolve-diamond");
+    var evolveTiers = [evolveBronze, evolveSilver, evolveGold, evolveDiamond];
+
+    var levelRange = document.getElementById("level-range");
+    var levelBronze = document.getElementById("level-bronze");
+    var levelSilver = document.getElementById("level-silver");
+    var levelGold = document.getElementById("level-gold");
+    var levelDiamond = document.getElementById("level-diamond");
+
+    var saNumber = document.getElementById("sa-number");
+    var saRange = document.getElementById("sa-range");
+
+    var maNumber = document.getElementById("ma-number");
+    var maRange = document.getElementById("ma-range");
+
+    function updateBatchButtons() {
+        if (
+            evolveRange.value == evolveRange.min &&
+            levelBronze.value == levelBronze.min &&
+            levelSilver.value == levelSilver.min &&
+            levelGold.value == levelGold.min &&
+            levelDiamond.value == levelDiamond.min &&
+            saRange.value == saRange.min &&
+            maRange.value == maRange.min
+        ) {
+            optionBase.classList.add("pressed");
+            optionDefault.classList.remove("pressed");
+            optionMaximum.classList.remove("pressed");
+        }
+        else if (
+            evolveRange.value == evolveRange.min &&
+            levelBronze.value == levelBronze.min &&
+            levelSilver.value == levelSilver.min &&
+            levelGold.value == levelGold.min &&
+            levelDiamond.value == levelDiamond.min &&
+            saRange.value == saRange.max &&
+            maRange.value == maRange.max
+        ) {
+            optionBase.classList.remove("pressed");
+            optionDefault.classList.add("pressed");
+            optionMaximum.classList.remove("pressed");
+        }
+        else if (
+            evolveRange.value == evolveRange.max &&
+            levelBronze.value == levelBronze.max &&
+            levelSilver.value == levelSilver.max &&
+            levelGold.value == levelGold.max &&
+            levelDiamond.value == levelDiamond.max &&
+            saRange.value == saRange.max &&
+            maRange.value == maRange.max
+        ) {
+            optionBase.classList.remove("pressed");
+            optionDefault.classList.remove("pressed");
+            optionMaximum.classList.add("pressed");
+        }
+        else {
+            optionBase.classList.remove("pressed");
+            optionDefault.classList.remove("pressed");
+            optionMaximum.classList.remove("pressed");
+        }
+    }
+
+    function setAllToBase() {
+        this.classList.add("pressed");
+        optionDefault.classList.remove("pressed");
+        optionMaximum.classList.remove("pressed");
+        evolveRange.value = evolveRange.min;
+        evolveBronze.classList.add("glowing");
+        evolveSilver.classList.remove("glowing");
+        evolveGold.classList.remove("glowing");
+        evolveDiamond.classList.remove("glowing");
+        levelRange.value = levelRange.min;
+        levelBronze.value = levelBronze.min;
+        levelSilver.value = levelSilver.min;
+        levelGold.value = levelGold.min;
+        levelDiamond.value = levelDiamond.min;
+        saNumber.value = saNumber.min;
+        saRange.value = saRange.min;
+        maNumber.value = maNumber.min;
+        maRange.value = maRange.min;
+    }
+
+    function setAllToDefault() {
+        optionBase.classList.remove("pressed");
+        this.classList.add("pressed");
+        optionMaximum.classList.remove("pressed");
+        evolveRange.value = evolveRange.min;
+        evolveBronze.classList.add("glowing");
+        evolveSilver.classList.remove("glowing");
+        evolveGold.classList.remove("glowing");
+        evolveDiamond.classList.remove("glowing");
+        levelRange.value = levelRange.min;
+        levelBronze.value = levelBronze.min;
+        levelSilver.value = levelSilver.min;
+        levelGold.value = levelGold.min;
+        levelDiamond.value = levelDiamond.min;
+        saNumber.value = saNumber.max;
+        saRange.value = saRange.max;
+        maNumber.value = maNumber.max;
+        maRange.value = maRange.max;
+    }
+
+    function setAllToMaximum() {
+        optionBase.classList.remove("pressed");
+        optionDefault.classList.remove("pressed");
+        this.classList.add("pressed");
+        evolveRange.value = evolveRange.max;
+        evolveBronze.classList.add("glowing");
+        evolveSilver.classList.add("glowing");
+        evolveGold.classList.add("glowing");
+        evolveDiamond.classList.add("glowing");
+        levelRange.value = levelRange.max;
+        levelBronze.value = levelBronze.max;
+        levelSilver.value = levelSilver.max;
+        levelGold.value = levelGold.max;
+        levelDiamond.value = levelDiamond.max;
+        saNumber.value = saNumber.max;
+        saRange.value = saRange.max;
+        maNumber.value = maNumber.max;
+        maRange.value = maRange.max;
+    }
+
+    function setEvolveViaRange() {
+        var value = parseInt(this.value);
+        for (var i = 0; i < value + 1; i++) {
+            evolveTiers[i].classList.add("glowing");
+        }
+        for (var i = value + 1; i < 4; i++) {
+            evolveTiers[i].classList.remove("glowing");
+        }
+        updateBatchButtons();
+    }
+
+    function setEvolveViaIcon() {
+        var value = evolveTiers.indexOf(this);
+        evolveRange.value = value;
+        for (var i = 0; i < value + 1; i++) {
+            evolveTiers[i].classList.add("glowing");
+        }
+        for (var i = value + 1; i < 4; i++) {
+            evolveTiers[i].classList.remove("glowing");
+        }
+        updateBatchButtons();
+    }
+
+    function setValidInput(input, value) {
+        input.value = Math.max(input.min, Math.min(value, input.max));
+    }
+
+    function setLevelViaRange() {
+        setValidInput(levelBronze, this.value);
+        setValidInput(levelSilver, this.value);
+        setValidInput(levelGold, this.value);
+        setValidInput(levelDiamond, this.value);
+        updateBatchButtons();
+    }
+
+    function setLevelViaNumber() {
+        setValidInput(this, this.value);
+        setValidInput(levelRange, Math.max(
+            levelBronze.value,
+            levelSilver.value,
+            levelGold.value,
+            levelDiamond.value
+        ));
+        updateBatchButtons();
+    }
+
+    function setSAViaNumber() {
+        setValidInput(this, this.value);
+        setValidInput(saRange, this.value);
+        updateBatchButtons();
+    }
+
+    function setSAViaRange() {
+        saNumber.value = this.value;
+        updateBatchButtons();
+    }
+
+    function setMAViaNumber() {
+        setValidInput(this, this.value);
+        maRange.value = this.value;
+        updateBatchButtons();
+    }
+
+    function setMAViaRange() {
+        maNumber.value = this.value;
+        updateBatchButtons();
+    }
+
+    optionBase.addEventListener("click", setAllToBase);
+    optionDefault.addEventListener("click", setAllToDefault);
+    optionMaximum.addEventListener("click", setAllToMaximum);
+
+    evolveRange.addEventListener("change", setEvolveViaRange);
+    evolveBronze.addEventListener("click", setEvolveViaIcon);
+    evolveSilver.addEventListener("click", setEvolveViaIcon);
+    evolveGold.addEventListener("click", setEvolveViaIcon);
+    evolveDiamond.addEventListener("click", setEvolveViaIcon);
+
+    levelRange.addEventListener("change", setLevelViaRange);
+    levelBronze.addEventListener("change", setLevelViaNumber);
+    levelSilver.addEventListener("change", setLevelViaNumber);
+    levelGold.addEventListener("change", setLevelViaNumber);
+    levelDiamond.addEventListener("change", setLevelViaNumber);
+
+    saNumber.addEventListener("change", setSAViaNumber);
+    saRange.addEventListener("change", setSAViaRange);
+
+    maNumber.addEventListener("change", setMAViaNumber);
+    maRange.addEventListener("change", setMAViaRange);
+
+    optionDefault.click();
 }
 
 function initFilterMenu() {
+    var filterCancel = document.getElementById("filter-cancel");
+
+    var filterBronze = document.getElementById("filter-bronze");
+    var filterSilver = document.getElementById("filter-silver");
+    var filterGold = document.getElementById("filter-gold");
+    var filterDiamond = document.getElementById("filter-diamond");
+
+    var filterFire = document.getElementById("filter-fire");
+    var filterWater = document.getElementById("filter-water");
+    var filterWind = document.getElementById("filter-wind");
+    var filterLight = document.getElementById("filter-light");
+    var filterDark = document.getElementById("filter-dark");
+    var filterNeutral = document.getElementById("filter-neutral");
+
+    var filterBE = document.getElementById("filter-be");
+    var filterBB = document.getElementById("filter-bb");
+    var filterCE = document.getElementById("filter-ce");
+    var filterDO = document.getElementById("filter-do");
+    var filterEL = document.getElementById("filter-el");
+    var filterFI = document.getElementById("filter-fi");
+    var filterPW = document.getElementById("filter-pw");
+    var filterPA = document.getElementById("filter-pa");
+    var filterPE = document.getElementById("filter-pe");
+    var filterMF = document.getElementById("filter-mf");
+    var filterSQ = document.getElementById("filter-sq");
+    var filterVA = document.getElementById("filter-va");
+
+    function idk() {
+        console.log(this);
+    }
+
+    filterCancel.addEventListener("change", idk);
+    filterBronze.addEventListener("change", idk);
+    filterSilver.addEventListener("change", idk);
+    filterGold.addEventListener("change", idk);
+    filterDiamond.addEventListener("change", idk);
+    filterFire.addEventListener("change", idk);
+    filterWater.addEventListener("change", idk);
+    filterWind.addEventListener("change", idk);
+    filterLight.addEventListener("change", idk);
+    filterDark.addEventListener("change", idk);
+    filterNeutral.addEventListener("change", idk);
+    filterBE.addEventListener("change", idk);
+    filterBB.addEventListener("change", idk);
+    filterCE.addEventListener("change", idk);
+    filterDO.addEventListener("change", idk);
+    filterEL.addEventListener("change", idk);
+    filterFI.addEventListener("change", idk);
+    filterPW.addEventListener("change", idk);
+    filterPA.addEventListener("change", idk);
+    filterPE.addEventListener("change", idk);
+    filterMF.addEventListener("change", idk);
+    filterSQ.addEventListener("change", idk);
+    filterVA.addEventListener("change", idk);
 }
 
 function initSortMenu() {
+    var sortAlphabetical = document.getElementById("sort-abc");
+    var sortFighterScore = document.getElementById("sort-fs");
+    var sortAttack = document.getElementById("sort-atk");
+    var sortHealth = document.getElementById("sort-hp");
+    var sortElement = document.getElementById("sort-element");
+    var sortTier = document.getElementById("sort-tier");
 }
 
 
@@ -184,12 +505,6 @@ function changeLanguage(language) {
     saveLanguage(language);
     resetCollection();
     initialize();
-}
-
-function loadLanguage() {
-    var lang = localStorage.getItem("language") || "en";
-    document.body.parentElement.lang = lang;
-    return lang;
 }
 
 function saveLanguage(language) {
@@ -323,17 +638,22 @@ function collapse() {
 function format(template, substitutions) {
     var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
     var formatted = template;
-    for (var match of matches) {
-        var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
-        var substitute = Math.abs(substitutions[index]);
-        if (match.includes("%}")) {
-            substitute *= 100;
+    if (matches) {
+        for (var match of matches) {
+            var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
+            var substitute = Math.abs(substitutions[index]);
+            if (match.includes("%}")) {
+                substitute *= 100;
+            }
+            substitute = Math.round(substitute * 10) / 10;
+            if (match.includes("%")) {
+                substitute += "%";
+            }
+            formatted = formatted.replace(match, substitute);
         }
-        substitute = Math.round(substitute * 10) / 10;
-        if (match.includes("%")) {
-            substitute += "%";
-        }
-        formatted = formatted.replace(match, substitute);
+    }
+    else {
+        console.log(template, substitutions);
     }
     return markedNumbers(formatted);
 }
@@ -360,7 +680,6 @@ function createSA(key, n) {
     for (var feature of variants[key].signature.features) {
         var template = corpus[feature.description];
         var substitutions = feature.tiers.slice(n)[0];
-        console.log(key, template, substitutions);
         var descriptionText = format(template, substitutions);
         descriptionTexts.push(descriptionText);
     }
