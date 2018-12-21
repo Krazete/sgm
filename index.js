@@ -219,6 +219,7 @@ function initOptionsMenu() {
     var levelSilver = document.getElementById("level-silver");
     var levelGold = document.getElementById("level-gold");
     var levelDiamond = document.getElementById("level-diamond");
+    var levelTiers = [levelBronze, levelSilver, levelGold, levelDiamond];
 
     var saNumber = document.getElementById("sa-number");
     var saRange = document.getElementById("sa-range");
@@ -255,9 +256,6 @@ function initOptionsMenu() {
         }
         else if (
             evolveRange.value == evolveRange.max &&
-            levelBronze.value == levelBronze.max &&
-            levelSilver.value == levelSilver.max &&
-            levelGold.value == levelGold.max &&
             levelDiamond.value == levelDiamond.max &&
             saRange.value == saRange.max &&
             maRange.value == maRange.max
@@ -277,60 +275,81 @@ function initOptionsMenu() {
         this.classList.add("pressed");
         optionDefault.classList.remove("pressed");
         optionMaximum.classList.remove("pressed");
-        evolveRange.value = evolveRange.min;
+        setValidInput(evolveRange, evolveRange.min);
         evolveBronze.classList.add("glowing");
         evolveSilver.classList.remove("glowing");
         evolveGold.classList.remove("glowing");
         evolveDiamond.classList.remove("glowing");
-        levelRange.value = levelRange.min;
-        levelBronze.value = levelBronze.min;
-        levelSilver.value = levelSilver.min;
-        levelGold.value = levelGold.min;
-        levelDiamond.value = levelDiamond.min;
-        saNumber.value = saNumber.min;
-        saRange.value = saRange.min;
-        maNumber.value = maNumber.min;
-        maRange.value = maRange.min;
+        setEvolve();
+        setValidInput(levelRange, levelRange.min);
+        setValidInput(levelBronze, levelBronze.min);
+        setValidInput(levelSilver, levelSilver.min);
+        setValidInput(levelGold, levelGold.min);
+        setValidInput(levelDiamond, levelDiamond.min);
+        setValidInput(saNumber, saNumber.min);
+        setValidInput(saRange, saRange.min);
+        setValidInput(maNumber, maNumber.min);
+        setValidInput(maRange, maRange.min);
     }
 
     function setAllToDefault() {
         optionBase.classList.remove("pressed");
         this.classList.add("pressed");
         optionMaximum.classList.remove("pressed");
-        evolveRange.value = evolveRange.min;
+        setValidInput(evolveRange, evolveRange.min);
         evolveBronze.classList.add("glowing");
         evolveSilver.classList.remove("glowing");
         evolveGold.classList.remove("glowing");
         evolveDiamond.classList.remove("glowing");
-        levelRange.value = levelRange.min;
-        levelBronze.value = levelBronze.min;
-        levelSilver.value = levelSilver.min;
-        levelGold.value = levelGold.min;
-        levelDiamond.value = levelDiamond.min;
-        saNumber.value = saNumber.max;
-        saRange.value = saRange.max;
-        maNumber.value = maNumber.max;
-        maRange.value = maRange.max;
+        setEvolve();
+        setValidInput(levelRange, levelRange.min);
+        setValidInput(levelBronze, levelBronze.min);
+        setValidInput(levelSilver, levelSilver.min);
+        setValidInput(levelGold, levelGold.min);
+        setValidInput(levelDiamond, levelDiamond.min);
+        setValidInput(saNumber, saNumber.max);
+        setValidInput(saRange, saRange.max);
+        setValidInput(maNumber, maNumber.max);
+        setValidInput(maRange, maRange.max);
     }
 
     function setAllToMaximum() {
         optionBase.classList.remove("pressed");
         optionDefault.classList.remove("pressed");
         this.classList.add("pressed");
-        evolveRange.value = evolveRange.max;
+        setValidInput(evolveRange, evolveRange.max);
         evolveBronze.classList.add("glowing");
         evolveSilver.classList.add("glowing");
         evolveGold.classList.add("glowing");
         evolveDiamond.classList.add("glowing");
-        levelRange.value = levelRange.max;
-        levelBronze.value = levelBronze.max;
-        levelSilver.value = levelSilver.max;
-        levelGold.value = levelGold.max;
-        levelDiamond.value = levelDiamond.max;
-        saNumber.value = saNumber.max;
-        saRange.value = saRange.max;
-        maNumber.value = maNumber.max;
-        maRange.value = maRange.max;
+        setEvolve();
+        setValidInput(levelRange, levelRange.max);
+        setValidInput(levelBronze, levelBronze.max);
+        setValidInput(levelSilver, levelSilver.max);
+        setValidInput(levelGold, levelGold.max);
+        setValidInput(levelDiamond, levelDiamond.max);
+        setValidInput(saNumber, saNumber.max);
+        setValidInput(saRange, saRange.max);
+        setValidInput(maNumber, maNumber.max);
+        setValidInput(maRange, maRange.max);
+    }
+
+    function setEvolve() {
+        for (var i = 0; i < 4; i++) {
+            if (i == evolveRange.value) {
+                document.body.classList.add(tiers[i]);
+            }
+            else {
+                document.body.classList.remove(tiers[i]);
+            }
+            if (i < evolveRange.value) {
+                levelTiers[i].classList.add("hidden");
+            }
+            else {
+                levelTiers[i].classList.remove("hidden");
+            }
+        }
+        setValidInput(levelRange, getMaxLevelNumber());
     }
 
     function setEvolveViaRange() {
@@ -342,6 +361,7 @@ function initOptionsMenu() {
             evolveTiers[i].classList.remove("glowing");
         }
         updateBatchButtons();
+        setEvolve();
     }
 
     function setEvolveViaIcon() {
@@ -354,10 +374,17 @@ function initOptionsMenu() {
             evolveTiers[i].classList.remove("glowing");
         }
         updateBatchButtons();
+        setEvolve();
     }
 
     function setValidInput(input, value) {
         input.value = Math.max(input.min, Math.min(value, input.max));
+        if (input.value == input.max) {
+            input.classList.add("maxed");
+        }
+        else {
+            input.classList.remove("maxed");
+        }
     }
 
     function setLevelViaRange() {
@@ -368,14 +395,26 @@ function initOptionsMenu() {
         updateBatchButtons();
     }
 
+    function getMaxLevelNumber() {
+        var max = 1;
+        if (evolveRange.value < 1 && max < parseInt(levelBronze.value)) {
+            max = levelBronze.value;
+        }
+        if (evolveRange.value < 2 && max < parseInt(levelSilver.value)) {
+            max = levelSilver.value;
+        }
+        if (evolveRange.value < 3 && max < parseInt(levelGold.value)) {
+            max = levelGold.value;
+        }
+        if (evolveRange.value < 4 && max < parseInt(levelDiamond.value)) {
+            max = levelDiamond.value;
+        }
+        return max;
+    }
+
     function setLevelViaNumber() {
         setValidInput(this, this.value);
-        setValidInput(levelRange, Math.max(
-            levelBronze.value,
-            levelSilver.value,
-            levelGold.value,
-            levelDiamond.value
-        ));
+        setValidInput(levelRange, getMaxLevelNumber());
         updateBatchButtons();
     }
 
@@ -386,18 +425,18 @@ function initOptionsMenu() {
     }
 
     function setSAViaRange() {
-        saNumber.value = this.value;
+        setValidInput(saNumber, this.value);
         updateBatchButtons();
     }
 
     function setMAViaNumber() {
         setValidInput(this, this.value);
-        maRange.value = this.value;
+        setValidInput(maRange, this.value);
         updateBatchButtons();
     }
 
     function setMAViaRange() {
-        maNumber.value = this.value;
+        setValidInput(maNumber, this.value);
         updateBatchButtons();
     }
 
@@ -454,8 +493,41 @@ function initFilterMenu() {
     var filterSQ = document.getElementById("filter-sq");
     var filterVA = document.getElementById("filter-va");
 
+    function updateFilterCancel() {
+        if (
+            filterBronze.checked ||
+            filterSilver.checked ||
+            filterGold.checked ||
+            filterDiamond.checked ||
+            filterFire.checked ||
+            filterWater.checked ||
+            filterWind.checked ||
+            filterLight.checked ||
+            filterDark.checked ||
+            filterNeutral.checked ||
+            filterBE.checked ||
+            filterBB.checked ||
+            filterCE.checked ||
+            filterDO.checked ||
+            filterEL.checked ||
+            filterFI.checked ||
+            filterPW.checked ||
+            filterPA.checked ||
+            filterPE.checked ||
+            filterMF.checked ||
+            filterSQ.checked ||
+            filterVA.checked
+        ) {
+            filterCancel.checked = false;
+        }
+        else {
+            filterCancel.checked = true;
+        }
+    }
+
     function idk() {
         console.log(this);
+        updateFilterCancel();
     }
 
     filterCancel.addEventListener("change", idk);
@@ -481,6 +553,8 @@ function initFilterMenu() {
     filterMF.addEventListener("change", idk);
     filterSQ.addEventListener("change", idk);
     filterVA.addEventListener("change", idk);
+
+    filterCancel.click();
 }
 
 function initSortMenu() {
@@ -490,6 +564,19 @@ function initSortMenu() {
     var sortHealth = document.getElementById("sort-hp");
     var sortElement = document.getElementById("sort-element");
     var sortTier = document.getElementById("sort-tier");
+
+    function idk() {
+        console.log(this);
+    }
+
+    sortAlphabetical.addEventListener("change", idk);
+    sortFighterScore.addEventListener("change", idk);
+    sortAttack.addEventListener("change", idk);
+    sortHealth.addEventListener("change", idk);
+    sortElement.addEventListener("change", idk);
+    sortTier.addEventListener("change", idk);
+
+    sortAlphabetical.click();
 }
 
 

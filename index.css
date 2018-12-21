@@ -398,7 +398,12 @@ input[type='number'] {
     border-radius: 50%;
     margin: auto auto -28px auto;
     display: block;
+    padding: 0;
     z-index: 1;
+}
+
+input[type='number'].hidden {
+    display: none;
 }
 
 input[type='number']:focus {
@@ -406,6 +411,10 @@ input[type='number']:focus {
 }
 input[type='number']:focus + img {
     filter: drop-shadow(0 0 6px white);
+}
+
+input[type='number'].maxed {
+    color: skyblue;
 }
 
 #level-diamond + img {
