@@ -93,29 +93,29 @@ html[lang='ko'] .cinematic {
     text-shadow: none;
     /* filter: drop-shadow(1px 1px black); */
     /* excessive drop-shadow causes major visual glitches in ios */
-    padding: 1em 0.25em;
-    margin-top: -0.8em;
-    margin-bottom: -1.2em;
+    padding: 0.5em 0.25em;
+    margin-top: -0.3em;
+    margin-bottom: -0.7em;
     display: inline-block;
 }
 .bronze-gradient,
 .bronze .dependent-gradient {
-    background: -webkit-linear-gradient(white 30%, #843 60%);
+    background: -webkit-linear-gradient(white 10%, #843 70%);
     color: #b76;
 }
 .silver-gradient,
 .silver .dependent-gradient {
-    background: -webkit-linear-gradient(white 30%, #889 60%);
+    background: -webkit-linear-gradient(white 10%, #889 70%);
     color: #aab;
 }
 .gold-gradient,
 .gold .dependent-gradient {
-    background: -webkit-linear-gradient(white 30%, #da2 60%);
+    background: -webkit-linear-gradient(white 10%, #da2 70%);
     color: #fd8;
 }
 .diamond-gradient,
 .diamond .dependent-gradient {
-    background: -webkit-linear-gradient(white 30%, #d9d 60%);
+    background: -webkit-linear-gradient(white 10%, #d9d 70%);
     color: #fcf;
 }
 

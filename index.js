@@ -239,13 +239,13 @@ function createAvatar(key) {
             frame.appendChild(backdrop);
         avatar.appendChild(frame);
         var nameplate = document.createElement("div");
-            nameplate.className = "nameplate";
+            nameplate.className = "nameplate cinematic";
             var variantName = document.createElement("div");
-                variantName.className = "cinematic dependent-gradient";
+                variantName.className = "dependent-gradient";
                 variantName.innerHTML = corpus[variants[key].name];
             nameplate.appendChild(variantName);
             var fighterName = document.createElement("div");
-                fighterName.className = "cinematic smaller";
+                fighterName.className = "smaller";
                 fighterName.innerHTML = corpus[fighters[variants[key].base].name];
             nameplate.appendChild(fighterName);
         avatar.appendChild(nameplate);
