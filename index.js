@@ -1,11 +1,118 @@
-var corpus, fighters, variants;
-var collection, order, sa, ma, red;
-var mastery, element;
-var loading;
-
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
+var wikia_paths = { /* from English corpus */
+    "nEgrets": "No Egrets",
+    "tAFolks": "That's All Folks!",
+    "nSense": "Nunsense",
+    "meow": "Meow & Furever",
+    "tTyrant": "Temple Tyrant",
+    "gMatt": "Gray Matter",
+    "necroB": "Necrobreaker",
+    "dMight": "Dark Might",
+    "splash": "Hack n' Splash",
+    "hHanded": "Heavy Handed",
+    "toad": "Toad Warrior",
+    "fEnds": "Frayed Ends",
+    "bBath": "Bloodbath",
+    "gShift": "Graveyard Shift",
+    "gloom": "Tomb & Gloom",
+    "mTrial": "Ms. Trial",
+    "dHeat": "Dead Heat",
+    "hCat": "Hellcat",
+    "wBane": "Wulfsbane",
+    "rBlight": "Rainbow Blight",
+    "polter": "Poltergust",
+    "sketch": "Sketchy",
+    "bFreeze": "Brain Freeze",
+    "rerun": "Rerun",
+    "rNerv": "Raw Nerv",
+    "xMorph": "Xenomorph",
+    "nDepart": "Nearly Departed",
+    "dLicious": "Doublicious",
+    "nOne": "Number One",
+    "sSalt": "Summer Salt",
+    "claw": "Claw & Order",
+    "bValen": "Bloody Valentine",
+    "rCopy": "Robocopy",
+    "pTech": "Pyro-Technique",
+    "bTop": "Big Top",
+    "fFrame": "Freeze Frame",
+    "uStudy": "Understudy",
+    "iThreat": "Idol Threat",
+    "wresX": "Wrestler X",
+    "dInterv": "Diva Intervention",
+    "pDark": "Purrfect Dark",
+    "rBlonde": "Regally Blonde",
+    "eSax": "Epic Sax",
+    "pDick": "Private Dick",
+    "hAppar": "Hair Apparent",
+    "fTrap": "Fly Trap",
+    "sGeneral": "Surgeon General",
+    "aForce": "Armed Forces",
+    "pShoot": "Pea Shooter",
+    "lHope": "Last Hope",
+    "sStiff": "Scared Stiff",
+    "hMan": "Hype Man",
+    "rusty": "Rusty",
+    "oMai": "Oh Mai",
+    "sViper": "Scarlet Viper",
+    "hReign": "Heavy Reign",
+    "hStrong": "Headstrong",
+    "rEvil": "Resonant Evil",
+    "inDeni": "In Denile",
+    "fFly": "Firefly",
+    "bMFrosty": "Bad Ms Frosty",
+    "jKit": "Just Kitten",
+    "hMetal": "Heavy Metal",
+    "cStones": "Cold Stones",
+    "scrub": "Scrub",
+    "dLocks": "Dread Locks",
+    "sFright": "Stage Fright",
+    "uTouch": "Untouchable",
+    "bExor": "Bio-Exorcist",
+    "wSwept": "Windswept",
+    "dBrawl": "Dragon Brawler",
+    "uViolent": "Ultraviolent",
+    "bLine": "Bassline",
+    "gFan": "Grim Fan",
+    "gJazz": "G.I. Jazz",
+    "bHDay": "Bad Hair Day",
+    "fFury": "Furry Fury",
+    "shelt": "Sheltered",
+    "fColor": "Myst-Match",
+    "lucky": "Feline Lucky",
+    "pWeave": "Parasite Weave",
+    "bBox": "Beat Box",
+    "bDrive": "Blood Drive",
+    "jBreaker": "Jawbreaker",
+    "lCrafted": "Love Crafted",
+    "prime": "Primed",
+    "wWarr": "Weekend Warrior",
+    "iHot": "Icy Hot",
+    "hQuin": "Harlequin",
+    "bKill": "Buzzkill",
+    "uDog": "Underdog",
+    "sSchool": "Sundae School",
+    "iFiber": "Immoral Fiber",
+    "aGreed": "Assassin's Greed",
+    "tMett": "Twisted Mettle",
+    "dOWint": "Dead of Winter",
+    "rAppr": "Rage Appropriate",
+    "mSonic": "Megasonic",
+    "cCutter": "Class Cutter",
+    "dCrypt": "Decrypted",
+    "pPride": "Princess Pride",
+    "rVelvet": "Red Velvet",
+    "sKill": "Silent Kill",
+    "sCross": "Star-Crossed",
+    "ink": "Inkling",
+    "iLeague": "Ivy League",
+    "sOut": "Stand Out"
+};
 
+var fighters, variants, corpus;
+
+var loading; /* todo: see if this is needed */
 
 function loadJSON(path) {
     function request(resolve, reject) {
@@ -54,32 +161,6 @@ function initialize() {
     initOptionsMenu();
     initFilterMenu();
     initSortMenu();
-
-    collection = document.getElementById("collection");
-    sa = document.getElementById("sa");
-    ma = document.getElementById("ma");
-    red = document.getElementById("red");
-    mastery = document.getElementById("mastery");
-    element = document.getElementById("element");
-    loading = document.getElementById("loading");
-    if (typeof order == "undefined") {
-        order = byAlpha;
-    }
-
-    function callback(responses) {
-        corpus = responses[0];
-        fighters = responses[1];
-        variants = responses[2];
-        init(sa.value - 1, ma.value - 1);
-        // sort(order);
-    }
-
-    Promise.all([
-        loadJSON("./data/fighters.json"),
-        loadJSON("./data/variants.json")
-    ]).then(callback);
-
-    addEventListener("beforeunload", e=>document.getElementById("zoom-out").click());
 }
 
 
@@ -87,7 +168,7 @@ function initialize() {
 
 
 
-function initLanguageMenu() {
+function initLanguageMenu() { /* todo: put this beneath initCollection and whatnot */
     var buttonSet = document.getElementById("language-menu");
     var buttons = buttonSet.getElementsByTagName("input");
     var savedLanguage = loadItem("language", "en");
@@ -95,15 +176,23 @@ function initLanguageMenu() {
 
     function setLanguage() {
         var language = this.id;
+        var languagePromise = loadJSON("data/" + language + ".json");
         document.documentElement.lang = language;
         document.body.classList.add("loading");
         saveItem("language", language);
-        loadJSON("data/" + language + ".json").then(callback);
+        if (!fighters || !variants) {
+            Promise.all([
+                loadJSON("data/fighters.json"),
+                loadJSON("data/variants.json")
+            ]).then(initCollection).then(languagePromise.then(initCards).then(stopLoading));
+        }
+        else {
+            languagePromise.then(initCards).then(stopLoading);
+        }
     }
 
-    function callback() { /* TODO: figure out what to do about loading language data and loading character data */
+    function stopLoading() { /* TODO: figure out what to do about loading language data and loading character data */
         document.body.classList.remove("loading");
-        initCards();
     }
 
     for (var button of buttons) {
@@ -112,9 +201,219 @@ function initLanguageMenu() {
     savedButton.click();
 }
 
-function initCards() {
-    init();
+function initCollection(responses) {
+    fighters = responses[0];
+    variants = responses[1];
+    var collection = document.getElementById("collection");
+
+    function openReadMePortrait() {
+        open("https://github.com/Krazete/sgm#portrait"); /* TODO: add a image section to the readme */
+    }
+
+    function handleMissingPortrait() {
+        var portrait = this;
+        var backdrop = portrait.parentElement;
+        var avatar = backdrop.parentElement.parentElement;
+
+        portrait.classList.add("hidden");
+        backdrop.addEventListener("click", openReadMePortrait);
+        avatar.classList.add("missing-portrait");
+    }
+
+    function createAvatar(key) {
+        var avatar = document.createElement("div");
+            avatar.className = "avatar";
+            var frame = document.createElement("div");
+                frame.className = "frame";
+                var backdrop = document.createElement("div");
+                    backdrop.className = "backdrop";
+                    var portrait = document.createElement("img");
+                        portrait.className = "portrait";
+                        var stem = [
+                            "image/portrait",
+                            variants[key].base,
+                            key
+                        ].join("/");
+                        if (key == "rBlight") {
+                            stem += "_" + Math.floor(Math.random() * 7);
+                        }
+                        portrait.src = stem + ".png";
+                        portrait.addEventListener("error", handleMissingPortrait);
+                    backdrop.appendChild(portrait);
+                frame.appendChild(backdrop);
+            avatar.appendChild(frame);
+            var nameplate = document.createElement("div");
+                nameplate.className = "nameplate cinematic";
+                var variantName = document.createElement("div");
+                    variantName.className = "variant-name dependent-gradient";
+                nameplate.appendChild(variantName);
+                var fighterName = document.createElement("div");
+                    fighterName.className = "fighter-name smaller";
+                nameplate.appendChild(fighterName);
+            avatar.appendChild(nameplate);
+        return avatar;
+    }
+
+    function createQuote() {
+        var quote = document.createElement("q");
+            quote.className = "quote";
+        return quote;
+    }
+
+    function createWordBreak() {
+        var wbr = document.createElement("wbr");
+        return wbr;
+    }
+
+    function createStat(type) {
+        var stat = document.createElement("div");
+            stat.className = [type, "tagged"].join(" ");
+            stat.appendChild(createWordBreak());
+            var span = document.createElement("span");
+                span.className = [
+                    type + "-value",
+                    "cinematic",
+                    "numeric",
+                    "silver-gradient"
+                ].join(" ");
+            stat.appendChild(span);
+        return stat;
+    }
+
+    function toggleAbility() {
+        var ability = this.parentElement;
+        if (ability.classList.contains("collapsed")) {
+            ability.classList.remove("collapsed");
+        }
+        else {
+            ability.classList.add("collapsed");
+        }
+    }
+
+    function createAbility(type, abilityData, collapsed) { /* todo: change variable names in main.py */
+        var ability = document.createElement("div");
+            ability.className = [
+                type,
+                "ability",
+                collapsed ? "collapsed" : "" /* todo: maybe replace all these join statements with simple +s */
+            ].join(" ");
+            var abilityTitle = document.createElement("div");
+                abilityTitle.className = "ability-title cinematic";
+                var abilityType = document.createElement("span");
+                    abilityType.className = "ability-type gold-gradient";
+                abilityTitle.appendChild(abilityType);
+                abilityTitle.appendChild(createWordBreak());
+                var abilityName = document.createElement("span");
+                    abilityName.className = [
+                        type + "-name",
+                        "silver-gradient"
+                    ].join(" ");
+                abilityTitle.appendChild(abilityName);
+                abilityTitle.addEventListener("click", toggleAbility);
+            ability.appendChild(abilityTitle);
+            if ('description' in abilityData) { /* TODO TODO TODO TODO */
+                var description = document.createElement("div");
+                    description.className = "description smaller";
+                ability.appendChild(description);
+            } /* todo: handle ca/sa/ma differences better somehow */
+            else {
+                for (var feature of abilityData.features) {
+                    var description = document.createElement("div");
+                        description.className = "description smaller";
+                    ability.appendChild(description);
+                }
+            }
+        return ability;
+    }
+
+    function createWikia(key) {
+        var wikia = document.createElement("a");
+            wikia.className = "wikia icon";
+            wikia.target = "_blank";
+            wikia.href = [
+                "https://skullgirlsmobile.wikia.com/wiki",
+                wikia_paths[key]
+            ].join("/");
+        return wikia;
+    }
+
+    function toggleLock() {
+        var card = this.parentElement;
+        if (card.classList.contains("locked")) {
+            card.classList.remove("locked");
+        }
+        else {
+            card.classList.add("locked");
+        }
+    }
+
+    function createLock() {
+        var lock = document.createElement("img");
+            lock.className = "lock";
+            lock.src = "image/official/Lock.png";
+            lock.addEventListener("click", toggleLock);
+        return lock;
+    }
+
+    function createCard(key) {
+        var card = document.createElement("div");
+            card.className = [
+                "card",
+                tiers[variants[key].tier],
+                elements[variants[key].element]
+            ].join(" ");
+            card.id = key;
+            card.appendChild(createAvatar(key));
+            card.appendChild(createQuote());
+            card.appendChild(createStat("atk"));
+            card.appendChild(createStat("hp"));
+            card.appendChild(createStat("fs"));
+            card.appendChild(createAbility("ca", fighters[variants[key].base].characterability, true));
+            card.appendChild(createAbility("sa", variants[key].signature));
+            card.appendChild(createAbility("ma", fighters[variants[key].base].marquee, true));
+            card.appendChild(createWikia(key));
+            card.appendChild(createLock());
+        return card;
+    }
+
+    for (var key in variants) {
+        collection.appendChild(createCard(key));
+    }
 }
+
+function initCards(response) {
+    corpus = response;
+    var cards = document.getElementsByClassName("card");
+
+    function initCard(card) {
+        var key = card.id;
+        var variantName = card.getElementsByClassName("variant-name")[0];
+        var fighterName = card.getElementsByClassName("fighter-name")[0];
+        var quote = card.getElementsByClassName("quote")[0];
+        var caName = card.getElementsByClassName("ca-name")[0];
+        var saName = card.getElementsByClassName("sa-name")[0];
+        var maName = card.getElementsByClassName("ma-name")[0];
+        variantName.innerHTML = corpus[variants[key].name];
+        fighterName.innerHTML = corpus[fighters[variants[key].base].name];
+        quote.innerHTML = corpus[variants[key].quote];
+        caName.innerHTML = corpus[fighters[variants[key].base].characterability.title];
+        saName.innerHTML = corpus[variants[key].signature.title];
+        maName.innerHTML = corpus[fighters[variants[key].base].marquee.title];
+    }
+
+    for (var card of cards) {
+        initCard(card);
+    }
+}
+
+
+// var atk = variants[key].baseStats[0].attack;
+// var hp = variants[key].baseStats[0].lifebar;
+// var fs = Math.ceil((atk + hp / 6) * 7 / 10);
+
+
+
+/* THE ACTUAL START */
 
 function initDock() {
     var zoomIn = document.getElementById("zoom-in");
@@ -137,7 +436,7 @@ function initDock() {
         scrollTo(0, scrollHeight * scrollRatio);
     }
 
-    function decreaseZoom() { /* TODO: save zoom settings */
+    function decreaseZoom() {
         var scrollRatio = getScrollRatio();
         if (document.body.classList.contains("zoomed-in")) {
             document.body.classList.remove("zoomed-in");
@@ -161,6 +460,15 @@ function initDock() {
             zoomIn.classList.add("pressed");
         }
         setScrollRatio(scrollRatio);
+    }
+
+    function resetZoom() {
+        if (document.body.classList.contains("zoomed-out")) {
+            increaseZoom();
+        }
+        else if (document.body.classList.contains("zoomed-in")) {
+            decreaseZoom();
+        }
     }
 
     function toggleFighterOptions() {
@@ -198,6 +506,8 @@ function initDock() {
 
     zoomOut.addEventListener("click", decreaseZoom);
     zoomIn.addEventListener("click", increaseZoom);
+    window.addEventListener("beforeunload", resetZoom);
+
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
 }
@@ -588,20 +898,6 @@ function initSortMenu() {
 
 
 
-function changeLanguage(language) {
-    saveLanguage(language);
-    resetCollection();
-    initialize();
-}
-
-function saveLanguage(language) {
-    localStorage.setItem("language", language);
-}
-
-function resetCollection() {
-    // collection.innerHTML = "";
-    collection.appendChild(loading);
-}
 
 
 
@@ -611,71 +907,14 @@ function resetCollection() {
 
 
 
-/* COMPLETE */
 
-function handleUnknownPortrait() {
-    this.classList.add("hidden");
-    this.parentElement.addEventListener("click", function () {
-        open("https://github.com/Krazete/sgm#readme"); /* TODO: add a image section to the readme */
-    });
-    this.parentElement.parentElement.parentElement.classList.add("unknown");
-}
 
-function createAvatar(key) {
-    var avatar = document.createElement("div");
-        avatar.className = "avatar";
-        var frame = document.createElement("div");
-            frame.className = "frame";
-            var backdrop = document.createElement("div");
-                backdrop.className = "backdrop";
-                var portrait = document.createElement("img");
-                    portrait.className = "portrait";
-                    var stem = ["image/portrait", variants[key].base, key].join("/");
-                    if (key == "rBlight") {
-                        var r = Math.floor(Math.random() * 7);
-                        stem += "_" + r;
-                    }
-                    portrait.src = stem + ".png";
-                    portrait.addEventListener("error", handleUnknownPortrait);
-                backdrop.appendChild(portrait);
-            frame.appendChild(backdrop);
-        avatar.appendChild(frame);
-        var nameplate = document.createElement("div");
-            nameplate.className = "nameplate cinematic";
-            var variantName = document.createElement("div");
-                variantName.className = "dependent-gradient";
-                variantName.innerHTML = corpus[variants[key].name];
-            nameplate.appendChild(variantName);
-            var fighterName = document.createElement("div");
-                fighterName.className = "smaller";
-                fighterName.innerHTML = corpus[fighters[variants[key].base].name];
-            nameplate.appendChild(fighterName);
-        avatar.appendChild(nameplate);
-    return avatar;
-}
 
-function createQuote(key) {
-    var quote = document.createElement("q");
-        quote.className = "quote";
-        quote.innerHTML = corpus[variants[key].quote];
-    return quote;
-}
 
-function createWordBreak() {
-    var wbr = document.createElement("wbr");
-    return wbr;
-}
 
-function createStat(type, value) {
-    var stat = document.createElement("div");
-        stat.className = ["tagged", type].join(" ");
-        stat.appendChild(createWordBreak());
-        var span = document.createElement("span");
-            span.className = "cinematic numeric silver-gradient";
-            span.innerHTML = value.toLocaleString();
-        stat.appendChild(span);
-    return stat;
-}
+
+
+
 
 function filterCards(condition) {
     var cards = document.getElementsByClassName("card");
@@ -686,39 +925,6 @@ function filterCards(condition) {
         else {
             card.classList.add("hidden");
         }
-    }
-}
-
-function createAbility(type, titleText, descriptionTexts) {
-    var ability = document.createElement("div");
-        ability.className = ["ability", type].join(" ");
-        var abilityName = document.createElement("div");
-            abilityName.className = "ability-name cinematic";
-            var label = document.createElement("span");
-                label.className = "ability-label gold-gradient";
-            abilityName.appendChild(label);
-            abilityName.appendChild(createWordBreak());
-            var span = document.createElement("span");
-                span.className = "silver-gradient";
-                span.innerHTML = titleText;
-            abilityName.appendChild(span);
-            abilityName.addEventListener("click", collapse);
-        ability.appendChild(abilityName);
-        for (var descriptionText of descriptionTexts) {
-            var description = document.createElement("div");
-                description.className = "description smaller";
-                description.innerHTML = descriptionText;
-            ability.appendChild(description);
-        }
-    return ability;
-}
-
-function collapse() {
-    if (this.parentElement.classList.contains("collapsed")) {
-        this.parentElement.classList.remove("collapsed");
-    }
-    else {
-        this.parentElement.classList.add("collapsed");
     }
 }
 
@@ -748,224 +954,6 @@ function format(template, substitutions) {
 function markedNumbers(text) {
     return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
 }
-
-/* UNDER CONSTRUCTION */
-
-function createCA(key) {
-    var type = "ca collapsed";
-    var titleText = corpus[fighters[variants[key].base].characterability.title];
-    var descriptionTexts = [
-        markedNumbers(corpus[fighters[variants[key].base].characterability.description])
-    ];
-    return createAbility(type, titleText, descriptionTexts);
-}
-
-function createSA(key, n) {
-    var type = "sa";
-    var titleText = corpus[variants[key].signature.title];
-    var descriptionTexts = [];
-    for (var feature of variants[key].signature.features) {
-        var template = corpus[feature.description];
-        var substitutions = feature.tiers.slice(n)[0];
-        var descriptionText = format(template, substitutions);
-        descriptionTexts.push(descriptionText);
-    }
-    return createAbility(type, titleText, descriptionTexts);
-}
-
-function createMA(key, n) {
-    var type = "ma collapsed";
-    var titleText = corpus[fighters[variants[key].base].marquee.title];
-    var descriptionTexts = [];
-    for (var feature of fighters[variants[key].base].marquee.features) {
-        var template = corpus[feature.description];
-        var substitutions = feature.tiers.slice(n)[0];
-        var descriptionText = [
-            corpus[feature.title],
-            format(template, substitutions)
-        ].join(" - ");
-        descriptionTexts.push(descriptionText);
-    }
-    return createAbility(type, titleText, descriptionTexts);
-}
-
-function createWikia(key) {
-    var wikia = document.createElement("a");
-        wikia.className = "wikia icon";
-        wikia.target = "_blank";
-        wikia.href = [
-            "https://skullgirlsmobile.wikia.com/wiki",
-            wikia_paths[key]
-        ].join("/");
-    return wikia;
-}
-
-function createLock() {
-    var lock = document.createElement("img");
-        lock.className = "lock";
-        lock.src = "image/official/Lock.png";
-        lock.addEventListener("click", lockCard);
-    return lock;
-}
-
-function lockCard() {
-    var card = this.parentElement;
-    if (card.classList.contains("locked")) {
-        card.classList.remove("locked");
-    }
-    else {
-        card.classList.add("locked");
-    }
-}
-
-/* TODO: review all these links */
-var wikia_paths = { /* from English corpus */
-    "nEgrets": "No Egrets",
-    "tAFolks": "That's All Folks!",
-    "nSense": "Nunsense",
-    "meow": "Meow & Furever",
-    "tTyrant": "Temple Tyrant",
-    "gMatt": "Gray Matter",
-    "necroB": "Necrobreaker",
-    "dMight": "Dark Might",
-    "splash": "Hack n' Splash",
-    "hHanded": "Heavy Handed",
-    "toad": "Toad Warrior",
-    "fEnds": "Frayed Ends",
-    "bBath": "Bloodbath",
-    "gShift": "Graveyard Shift",
-    "gloom": "Tomb & Gloom",
-    "mTrial": "Ms. Trial",
-    "dHeat": "Dead Heat",
-    "hCat": "Hellcat",
-    "wBane": "Wulfsbane",
-    "rBlight": "Rainbow Blight",
-    "polter": "Poltergust",
-    "sketch": "Sketchy",
-    "bFreeze": "Brain Freeze",
-    "rerun": "Rerun",
-    "rNerv": "Raw Nerv",
-    "xMorph": "Xenomorph",
-    "nDepart": "Nearly Departed",
-    "dLicious": "Doublicious",
-    "nOne": "Number One",
-    "sSalt": "Summer Salt",
-    "claw": "Claw & Order",
-    "bValen": "Bloody Valentine",
-    "rCopy": "Robocopy",
-    "pTech": "Pyro-Technique",
-    "bTop": "Big Top",
-    "fFrame": "Freeze Frame",
-    "uStudy": "Understudy",
-    "iThreat": "Idol Threat",
-    "wresX": "Wrestler X",
-    "dInterv": "Diva Intervention",
-    "pDark": "Purrfect Dark",
-    "rBlonde": "Regally Blonde",
-    "eSax": "Epic Sax",
-    "pDick": "Private Dick",
-    "hAppar": "Hair Apparent",
-    "fTrap": "Fly Trap",
-    "sGeneral": "Surgeon General",
-    "aForce": "Armed Forces",
-    "pShoot": "Pea Shooter",
-    "lHope": "Last Hope",
-    "sStiff": "Scared Stiff",
-    "hMan": "Hype Man",
-    "rusty": "Rusty",
-    "oMai": "Oh Mai",
-    "sViper": "Scarlet Viper",
-    "hReign": "Heavy Reign",
-    "hStrong": "Headstrong",
-    "rEvil": "Resonant Evil",
-    "inDeni": "In Denile",
-    "fFly": "Firefly",
-    "bMFrosty": "Bad Ms Frosty",
-    "jKit": "Just Kitten",
-    "hMetal": "Heavy Metal",
-    "cStones": "Cold Stones",
-    "scrub": "Scrub",
-    "dLocks": "Dread Locks",
-    "sFright": "Stage Fright",
-    "uTouch": "Untouchable",
-    "bExor": "Bio-Exorcist",
-    "wSwept": "Windswept",
-    "dBrawl": "Dragon Brawler",
-    "uViolent": "Ultraviolent",
-    "bLine": "Bassline",
-    "gFan": "Grim Fan",
-    "gJazz": "G.I. Jazz",
-    "bHDay": "Bad Hair Day",
-    "fFury": "Furry Fury",
-    "shelt": "Sheltered",
-    "fColor": "Myst-Match",
-    "lucky": "Feline Lucky",
-    "pWeave": "Parasite Weave",
-    "bBox": "Beat Box",
-    "bDrive": "Blood Drive",
-    "jBreaker": "Jawbreaker",
-    "lCrafted": "Love Crafted",
-    "prime": "Primed",
-    "wWarr": "Weekend Warrior",
-    "iHot": "Icy Hot",
-    "hQuin": "Harlequin",
-    "bKill": "Buzzkill",
-    "uDog": "Underdog",
-    "sSchool": "Sundae School",
-    "iFiber": "Immoral Fiber",
-    "aGreed": "Assassin's Greed",
-    "tMett": "Twisted Mettle",
-    "dOWint": "Dead of Winter",
-    "rAppr": "Rage Appropriate",
-    "mSonic": "Megasonic",
-    "cCutter": "Class Cutter",
-    "dCrypt": "Decrypted",
-    "pPride": "Princess Pride",
-    "rVelvet": "Red Velvet",
-    "sKill": "Silent Kill",
-    "sCross": "Star-Crossed",
-    "ink": "Inkling",
-    "iLeague": "Ivy League",
-    "sOut": "Stand Out"
-};
-
-function init(sa, ma) {
-    for (var key in variants) {
-        var atk = variants[key].baseStats[0].attack;
-        var hp = variants[key].baseStats[0].lifebar;
-        var fs = Math.ceil((atk + hp / 6) * 7 / 10);
-        var card = document.createElement("div");
-            card.className = [
-                "card",
-                variants[key].base,
-                tiers[variants[key].tier],
-                elements[variants[key].element]
-            ].join(" ");
-            card.id = key;
-            card.appendChild(createAvatar(key));
-            card.appendChild(createQuote(key));
-            card.appendChild(createStat("atk", atk));
-            card.appendChild(createStat("hp", hp));
-            card.appendChild(createStat("fs", fs));
-            card.appendChild(createCA(key));
-            card.appendChild(createSA(key, sa));
-            card.appendChild(createMA(key, ma));
-            card.appendChild(createWikia(key));
-            card.appendChild(createLock());
-        collection.appendChild(card);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
