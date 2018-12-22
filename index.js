@@ -349,7 +349,7 @@ function initLanguageMenu() {
         fighterName.innerHTML = corpus[fighters[variants[key].base].name];
         quote.innerHTML = corpus[variants[key].quote];
         caName.innerHTML = corpus[fighters[variants[key].base].ca.title];
-        ca0.innerHTML = markedNumbers(corpus[fighters[variants[key].base].ca.description]);
+        ca0.innerHTML = formatNumbers(corpus[fighters[variants[key].base].ca.description]);
         saName.innerHTML = corpus[variants[key].sa.title];
         maName.innerHTML = corpus[fighters[variants[key].base].ma.title];
     }
@@ -370,6 +370,7 @@ function initLanguageMenu() {
         loadJSON("data/" + language + ".json").then(updateCardConstants).then(updateCards).then(toggleLoadingScreen);
     }
 
+    document.documentElement.lang = savedLanguage;
     if (!savedButton) {
         savedLanguage = "en";
         savedButton = document.getElementById("en");
@@ -474,13 +475,13 @@ function initDock() {
 
     zoomOut.addEventListener("click", decreaseZoom);
     zoomIn.addEventListener("click", increaseZoom);
-    window.addEventListener("beforeunload", resetZoom);
+    window.addEventListener("beforeunload", resetZoom); /* todo: fix for ios */
 
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
 }
 
-function markedNumbers(text) {
+function formatNumbers(text) {
     return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
 }
 
@@ -504,7 +505,7 @@ function format(template, substitutions) {
     else {
         console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
     }
-    return markedNumbers(formatted);
+    return formatNumbers(formatted);
 }
 
 function initOptionsMenu() {
@@ -636,7 +637,12 @@ function initOptionsMenu() {
     }
 
     function setValidInput(input, value) {
-        input.value = Math.max(input.min, Math.min(value, input.max));
+        if (isNaN(value)) {
+            input.value = input.min;
+        }
+        else {
+            input.value = Math.max(input.min, Math.min(value, input.max));
+        }
         if (input.value == input.max) {
             input.classList.add("maxed");
         }
@@ -726,10 +732,10 @@ function initOptionsMenu() {
                 document.body.classList.remove(tiers[i]);
             }
             if (i < parseInt(evolveRange.value) + 1) {
-                evolveTiers[i].classList.add("glowing");
+                evolveTiers[i].classList.add("underlined");
             }
             else {
-                evolveTiers[i].classList.remove("glowing");
+                evolveTiers[i].classList.remove("underlined");
             }
             if (i < evolveRange.value) {
                 levelTiers[i].classList.add("hidden");
@@ -761,6 +767,10 @@ function initOptionsMenu() {
         setValidInput(levelDiamond, this.value);
         updateBatchButtons();
         updateCardStats();
+    }
+
+    function focusSelect() {
+        this.select();
     }
 
     function setLevelViaNumber() {
@@ -807,14 +817,20 @@ function initOptionsMenu() {
     evolveDiamond.addEventListener("click", setEvolveViaIcon);
 
     levelRange.addEventListener("change", setLevelViaRange);
+    levelBronze.addEventListener("focus", focusSelect);
+    levelSilver.addEventListener("focus", focusSelect);
+    levelGold.addEventListener("focus", focusSelect);
+    levelDiamond.addEventListener("focus", focusSelect);
     levelBronze.addEventListener("change", setLevelViaNumber);
     levelSilver.addEventListener("change", setLevelViaNumber);
     levelGold.addEventListener("change", setLevelViaNumber);
     levelDiamond.addEventListener("change", setLevelViaNumber);
 
+    saNumber.addEventListener("focus", focusSelect);
     saNumber.addEventListener("change", setSAViaNumber);
     saRange.addEventListener("change", setSAViaRange);
 
+    maNumber.addEventListener("focus", focusSelect);
     maNumber.addEventListener("change", setMAViaNumber);
     maRange.addEventListener("change", setMAViaRange);
 

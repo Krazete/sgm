@@ -267,17 +267,6 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
     padding: 3px 6px;
 }
 
-.icon {
-    max-width: 28px;
-    max-height: 28px;
-    display: block;
-    margin: auto;
-}
-
-.glowing {
-    filter: drop-shadow(0 0 6px white);
-}
-
 .button {
     max-width: 42px;
     max-height: 42px;
@@ -288,6 +277,24 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 .pressed {
     opacity: 0.5;
     pointer-events: none;
+}
+
+.icon {
+    max-width: 28px;
+    max-height: 28px;
+    display: block;
+    margin: auto;
+}
+
+.glowing {
+    filter: drop-shadow(0 0 6px white);
+    /* don't use this too much; excessive drop-shadow causes major visual glitches in ios */
+}
+
+.underlined {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 4px solid #314c73;
+    margin-bottom: -4px;
 }
 
 #zoom {
@@ -384,13 +391,7 @@ html[lang='de'] #level-label:before {content: 'Stufe';}
 html[lang='ko'] #level-label:before {content: '\b808 \bca8 ';}
 html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type='number'] {
+#menu input[type='text'] {
     position: relative;
     width: 28px;
     height: 28px;
@@ -407,26 +408,24 @@ input[type='number'] {
     z-index: 1;
 }
 
-input[type='number'].hidden {
+#menu input[type='text'].hidden {
     display: none;
 }
 
-input[type='number']:focus {
+#menu input[type='text']:focus {
     outline: none;
 }
-input[type='number']:focus + img {
-    filter: drop-shadow(0 0 6px white);
+#menu input[type='text']:focus + img {
+    border-radius: 50%;
+    box-shadow: 0 0 6px 1px white;
 }
 
-input[type='number'].maxed {
+#menu input[type='text'].maxed {
     color: skyblue;
 }
 
 #level-diamond + img {
     filter: sepia(1) hue-rotate(270deg);
-}
-#level-diamond:focus + img {
-    filter: sepia(1) hue-rotate(270deg) drop-shadow(0 0 6px white);
 }
 
 /* FILTER */
