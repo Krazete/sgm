@@ -134,11 +134,6 @@ function loadJSON(path) {
     return new Promise(request);
 }
 
-
-
-
-
-
 function setLoading(isLoading) {
     if (isLoading) {
         document.body.classList.add("loading");
@@ -260,13 +255,18 @@ function initCollection(responses) {
             ability.appendChild(abilityTitle);
             if ('description' in abilityData) { /* TODO TODO TODO TODO */
                 var description = document.createElement("div");
-                    description.className = "description smaller";
+                    description.className = "ca-0 description smaller";
                 ability.appendChild(description);
             } /* todo: handle ca/sa/ma differences better somehow */
             else {
-                for (var feature of abilityData.features) {
+                for (var i = 0; i < abilityData.features.length; i++) {
+                    var feature = abilityData.features[i];
                     var description = document.createElement("div");
-                        description.className = "description smaller";
+                        description.className = [
+                            type + "-" + i,
+                            "description",
+                            "smaller"
+                        ].join(" ");
                     ability.appendChild(description);
                 }
             }
@@ -327,139 +327,6 @@ function initCollection(responses) {
         collection.appendChild(createCard(key));
     }
 }
-
-function initStaticCardData(response) {
-    corpus = response;
-    var cards = document.getElementsByClassName("card");
-
-    function initCard(card) {
-        var key = card.id;
-        var variantName = card.getElementsByClassName("variant-name")[0];
-        var fighterName = card.getElementsByClassName("fighter-name")[0];
-        var quote = card.getElementsByClassName("quote")[0];
-        var caName = card.getElementsByClassName("ca-name")[0];
-        var saName = card.getElementsByClassName("sa-name")[0];
-        var maName = card.getElementsByClassName("ma-name")[0];
-        variantName.innerHTML = corpus[variants[key].name];
-        fighterName.innerHTML = corpus[fighters[variants[key].base].name];
-        quote.innerHTML = corpus[variants[key].quote];
-        caName.innerHTML = corpus[fighters[variants[key].base].characterability.title];
-        saName.innerHTML = corpus[variants[key].signature.title];
-        maName.innerHTML = corpus[fighters[variants[key].base].marquee.title];
-    }
-
-    for (var card of cards) {
-        initCard(card);
-    }
-}
-
-function initLanguageMenu() {
-    var buttonSet = document.getElementById("language-menu");
-    var buttons = buttonSet.getElementsByTagName("input");
-    var savedLanguage = loadItem("language", "en");
-    var savedButton = document.getElementById(savedLanguage);
-
-    function saveItem(key, item) {
-        try {
-            var itemJSON = JSON.stringify(item);
-            localStorage.setItem(key, itemJSON);
-        }
-        catch (e) {
-            console.log(e);
-        }
-    }
-
-    function loadItem(key, defaultItem) {
-        try {
-            var itemJSON = localStorage.getItem(key);
-            var item = JSON.parse(itemJSON);
-            if (item != null) {
-                return item;
-            }
-        }
-        catch (e) {
-            console.log(e);
-        }
-        return defaultItem;
-    }
-
-    function setLanguage() {
-        var language = this.id;
-        var languagePromise = loadJSON("data/" + language + ".json");
-        document.documentElement.lang = language;
-        document.body.classList.add("loading");
-        saveItem("language", language);
-        languagePromise.then(initStaticCardData).then(setLoading);
-    }
-
-    setLoading(true);
-    for (var button of buttons) {
-        button.addEventListener("change", setLanguage);
-    }
-    savedButton.click();
-}
-
-function initDynamicCardData() {
-    var cards = document.getElementsByClassName("card");
-    var evolveRange = document.getElementById("evolve-range");
-    var levelBronze = document.getElementById("level-bronze");
-    var levelSilver = document.getElementById("level-silver");
-    var levelGold = document.getElementById("level-gold");
-    var levelDiamond = document.getElementById("level-diamond");
-    var saRange = document.getElementById("sa-range");
-    var maRange = document.getElementById("ma-range");
-
-    function setStats(card) {
-        var key = card.id;
-        var atkValue = card.getElementsByClassName("atk-value")[0];
-        var hpValue = card.getElementsByClassName("hp-value")[0];
-        var fsValue = card.getElementsByClassName("fs-value")[0];
-        var atk = variants[key].baseStats[evolveRange.value].attack;
-        var hp = variants[key].baseStats[evolveRange.value].lifebar;
-        var fs = Math.ceil((atk + hp / 6) * 7 / 10);
-        atkValue.innerHTML = atk;
-        hpValue.innerHTML = hp;
-        fsValue.innerHTML = fs;
-    }
-
-    function setAbilities(card) {
-        var key = card.id;
-        var ca = card.getElementsByClassName("ca")[0];
-        var sa = card.getElementsByClassName("sa")[0];
-        var ma = card.getElementsByClassName("ma")[0];
-        var caDescriptions = ca.getElementsByClassName("description");
-        var saDescriptions = sa.getElementsByClassName("description");
-        var maDescriptions = ma.getElementsByClassName("description");
-        for (var i = 0; i < caDescriptions.length; i++) {
-            var caDescription = caDescriptions[i];
-            caDescription.innerHTML = fighters[variants[key].base].characterability.description;
-        }
-        for (var i = 0; i < saDescriptions.length; i++) {
-            var saDescription = saDescriptions[i];
-            saDescription.innerHTML = variants[key].signature.features[i].title;
-            saDescription.innerHTML += "<br>";
-            saDescription.innerHTML += variants[key].signature.features[i].description;
-        }
-        for (var i = 0; i < maDescriptions.length; i++) {
-            var maDescription = maDescriptions[i];
-            maDescription.innerHTML = fighters[variants[key].base].marquee.features[i].title;
-            maDescription.innerHTML += "<br>";
-            maDescription.innerHTML += fighters[variants[key].base].marquee.features[i].description;
-        }
-    }
-
-    for (var card of cards) {
-        setStats(card);
-        setAbilities(card);
-    }
-    // var atk = variants[key].baseStats[0].attack;
-    // var hp = variants[key].baseStats[0].lifebar;
-    // var fs = Math.ceil((atk + hp / 6) * 7 / 10);
-}
-
-
-
-/* THE ACTUAL START */
 
 function initDock() {
     var zoomIn = document.getElementById("zoom-in");
@@ -556,10 +423,38 @@ function initDock() {
 
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
-    initDynamicCardData(); /* todo: this probably belongs here, but check again anyway */
+}
+
+function markedNumbers(text) {
+    return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
+}
+
+function format(template, substitutions) { /* todo: check this */
+    var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
+    var formatted = template;
+    if (matches) {
+        for (var match of matches) {
+            var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
+            var substitute = Math.abs(substitutions[index]);
+            if (match.includes("%}")) {
+                substitute *= 100;
+            }
+            substitute = Math.round(substitute * 10) / 10;
+            if (match.includes("%")) {
+                substitute += "%";
+            }
+            formatted = formatted.replace(match, substitute);
+        }
+    }
+    else {
+        console.log(template, substitutions);
+    }
+    return markedNumbers(formatted);
 }
 
 function initOptionsMenu() {
+    var cards = document.getElementsByClassName("card");
+
     var optionBase = document.getElementById("option-base");
     var optionDefault = document.getElementById("option-default");
     var optionMaximum = document.getElementById("option-maximum");
@@ -583,6 +478,60 @@ function initOptionsMenu() {
 
     var maNumber = document.getElementById("ma-number");
     var maRange = document.getElementById("ma-range");
+
+    function setCardStats() {
+        for (var card of cards) {
+            var key = card.id;
+            var atkValue = card.getElementsByClassName("atk-value")[0];
+            var hpValue = card.getElementsByClassName("hp-value")[0];
+            var fsValue = card.getElementsByClassName("fs-value")[0];
+
+            var index = Math.max(0, evolveRange.value - variants[key].tier);
+            var baseATK = variants[key].baseStats[index].attack;
+            var baseHP = variants[key].baseStats[index].lifebar;
+
+            var index2 = Math.max(evolveRange.value, variants[key].tier);
+            if(key=="toad")console.log(index, variants[key].tier);
+            var atk = Math.ceil(baseATK + baseATK * (levelTiers[index2].value - 1) / 5); /* todo: check all these calculations */
+            var hp = Math.ceil(baseHP + baseHP * (levelTiers[index2].value - 1) / 5);
+            var fs = Math.ceil((atk + hp / 6) * 7 / 10);
+
+            atkValue.innerHTML = atk.toLocaleString();
+            hpValue.innerHTML = hp.toLocaleString();
+            fsValue.innerHTML = fs.toLocaleString();
+        }
+    }
+
+    function setCardSAs() {
+        for (var card of cards) {
+            var key = card.id;
+            var sa = card.getElementsByClassName("sa")[0];
+            var saDescriptions = sa.getElementsByClassName("description");
+            for (var i = 0; i < saDescriptions.length; i++) {
+                var saDescription = saDescriptions[i];
+                var template = corpus[variants[key].signature.features[i].description];
+                var substitutions = variants[key].signature.features[i].tiers[saRange.value - 1]; /* todo: check all these calculations */
+                saDescription.innerHTML = format(template, substitutions);
+            }
+        }
+    }
+
+    function setCardMAs() {
+        for (var card of cards) {
+            var key = card.id;
+            var ma = card.getElementsByClassName("ma")[0];
+            var maDescriptions = ma.getElementsByClassName("description");
+            for (var i = 0; i < maDescriptions.length; i++) {
+                var maDescription = maDescriptions[i];
+                var template = [
+                    corpus[fighters[variants[key].base].marquee.features[i].title],
+                    corpus[fighters[variants[key].base].marquee.features[i].description]
+                ].join(" - ");
+                var substitutions = fighters[variants[key].base].marquee.features[i].tiers[maRange.value - 1];
+                maDescription.innerHTML = format(template, substitutions);
+            }
+        }
+    }
 
     function updateBatchButtons() {
         if (
@@ -647,6 +596,9 @@ function initOptionsMenu() {
         setValidInput(saRange, saRange.min);
         setValidInput(maNumber, maNumber.min);
         setValidInput(maRange, maRange.min);
+        setCardStats();
+        setCardSAs();
+        setCardMAs();
     }
 
     function setAllToDefault() {
@@ -668,6 +620,9 @@ function initOptionsMenu() {
         setValidInput(saRange, saRange.max);
         setValidInput(maNumber, maNumber.max);
         setValidInput(maRange, maRange.max);
+        setCardStats();
+        setCardSAs();
+        setCardMAs();
     }
 
     function setAllToMaximum() {
@@ -689,6 +644,9 @@ function initOptionsMenu() {
         setValidInput(saRange, saRange.max);
         setValidInput(maNumber, maNumber.max);
         setValidInput(maRange, maRange.max);
+        setCardStats();
+        setCardSAs();
+        setCardMAs();
     }
 
     function setEvolve() {
@@ -719,6 +677,7 @@ function initOptionsMenu() {
         }
         updateBatchButtons();
         setEvolve();
+        setCardStats();
     }
 
     function setEvolveViaIcon() {
@@ -732,6 +691,7 @@ function initOptionsMenu() {
         }
         updateBatchButtons();
         setEvolve();
+        setCardStats();
     }
 
     function setValidInput(input, value) {
@@ -750,6 +710,7 @@ function initOptionsMenu() {
         setValidInput(levelGold, this.value);
         setValidInput(levelDiamond, this.value);
         updateBatchButtons();
+        setCardStats();
     }
 
     function getMaxLevelNumber() {
@@ -773,28 +734,33 @@ function initOptionsMenu() {
         setValidInput(this, this.value);
         setValidInput(levelRange, getMaxLevelNumber());
         updateBatchButtons();
+        setCardStats();
     }
 
     function setSAViaNumber() {
         setValidInput(this, this.value);
         setValidInput(saRange, this.value);
         updateBatchButtons();
+        setCardSAs();
     }
 
     function setSAViaRange() {
         setValidInput(saNumber, this.value);
         updateBatchButtons();
+        setCardSAs();
     }
 
     function setMAViaNumber() {
         setValidInput(this, this.value);
         setValidInput(maRange, this.value);
         updateBatchButtons();
+        setCardMAs();
     }
 
     function setMAViaRange() {
         setValidInput(maNumber, this.value);
         updateBatchButtons();
+        setCardMAs();
     }
 
     optionBase.addEventListener("click", setAllToBase);
@@ -936,7 +902,83 @@ function initSortMenu() {
     sortAlphabetical.click();
 }
 
+function initStaticCardData(response) {
+    corpus = response;
+    var cards = document.getElementsByClassName("card");
 
+    function initCard(card) {
+        var key = card.id;
+        var variantName = card.getElementsByClassName("variant-name")[0];
+        var fighterName = card.getElementsByClassName("fighter-name")[0];
+        var quote = card.getElementsByClassName("quote")[0];
+        var caName = card.getElementsByClassName("ca-name")[0];
+        var ca0 = card.getElementsByClassName("ca-0")[0];
+        var saName = card.getElementsByClassName("sa-name")[0];
+        var maName = card.getElementsByClassName("ma-name")[0];
+        variantName.innerHTML = corpus[variants[key].name];
+        fighterName.innerHTML = corpus[fighters[variants[key].base].name];
+        quote.innerHTML = corpus[variants[key].quote];
+        caName.innerHTML = corpus[fighters[variants[key].base].characterability.title];
+        ca0.innerHTML = markedNumbers(corpus[fighters[variants[key].base].characterability.description]);
+        saName.innerHTML = corpus[variants[key].signature.title];
+        maName.innerHTML = corpus[fighters[variants[key].base].marquee.title];
+    }
+
+    for (var card of cards) {
+        initCard(card);
+    }
+
+    initDock();
+    initOptionsMenu();
+    initFilterMenu();
+    initSortMenu();
+}
+
+function initLanguageMenu() {
+    var buttonSet = document.getElementById("language-menu");
+    var buttons = buttonSet.getElementsByTagName("input");
+    var savedLanguage = loadItem("language", "en");
+    var savedButton = document.getElementById(savedLanguage);
+
+    function saveItem(key, item) {
+        try {
+            var itemJSON = JSON.stringify(item);
+            localStorage.setItem(key, itemJSON);
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    function loadItem(key, defaultItem) {
+        try {
+            var itemJSON = localStorage.getItem(key);
+            var item = JSON.parse(itemJSON);
+            if (item != null) {
+                return item;
+            }
+        }
+        catch (e) {
+            console.log(e);
+        }
+        return defaultItem;
+    }
+
+    function setLanguage() {
+        var language = this.id;
+        var languagePromise = loadJSON("data/" + language + ".json");
+        document.documentElement.lang = language;
+        document.body.classList.add("loading");
+        saveItem("language", language);
+        languagePromise.then(initStaticCardData).then(setLoading);
+    }
+
+    setLoading(true);
+    for (var button of buttons) {
+        button.addEventListener("change", setLanguage);
+    }
+    savedButton.click();
+}
 
 
 
@@ -975,32 +1017,7 @@ function filterCards(condition) {
     }
 }
 
-function format(template, substitutions) {
-    var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
-    var formatted = template;
-    if (matches) {
-        for (var match of matches) {
-            var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
-            var substitute = Math.abs(substitutions[index]);
-            if (match.includes("%}")) {
-                substitute *= 100;
-            }
-            substitute = Math.round(substitute * 10) / 10;
-            if (match.includes("%")) {
-                substitute += "%";
-            }
-            formatted = formatted.replace(match, substitute);
-        }
-    }
-    else {
-        console.log(template, substitutions);
-    }
-    return markedNumbers(formatted);
-}
 
-function markedNumbers(text) {
-    return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
-}
 
 
 
@@ -1094,10 +1111,6 @@ function toggle(e, blah) {
 function initialize() {
     function afterCollectionIsLoaded() {
         initLanguageMenu();
-        initDock();
-        initOptionsMenu();
-        initFilterMenu();
-        initSortMenu();
     }
 
     Promise.all([
