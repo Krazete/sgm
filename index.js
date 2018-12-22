@@ -112,9 +112,10 @@ var wikia_paths = { /* from English corpus */
     "sOut": "Stand Out"
 };
 
+var cards = [];
 var updateCards;
 var filterList = []; /* todo: this comes later */
-var sortBasis; /* todo: this comes later */
+var sortBasis;
 
 function loadJSON(path) {
     function request(resolve, reject) {
@@ -233,10 +234,10 @@ function initCollection(responses) {
     function createAbility(type, abilityData, collapsed) {
         var ability = document.createElement("div");
             if (collapsed) {
-                ability.className = [type, "ability"].join(" ");
+                ability.className = [type, "ability", "collapsed"].join(" ");
             }
             else {
-                ability.className = [type, "ability", "collapsed"].join(" ");
+                ability.className = [type, "ability"].join(" ");
             }
             var abilityTitle = document.createElement("div");
                 abilityTitle.className = "ability-title cinematic";
@@ -323,7 +324,9 @@ function initCollection(responses) {
     }
 
     for (var key in variants) {
-        collection.appendChild(createCard(key));
+        var card = createCard(key)
+        collection.appendChild(card);
+        cards.push(card);
     }
 }
 
@@ -353,7 +356,6 @@ function initLanguageMenu() {
 
     function updateCardConstants(response) {
         corpus = response;
-        var cards = document.getElementsByClassName("card");
 
         for (var card of cards) {
             updateCardConstant(card);
@@ -506,8 +508,6 @@ function format(template, substitutions) {
 }
 
 function initOptionsMenu() {
-    var cards = document.getElementsByClassName("card");
-
     var optionBase = document.getElementById("option-base");
     var optionDefault = document.getElementById("option-default");
     var optionMaximum = document.getElementById("option-maximum");
@@ -881,33 +881,55 @@ function initFilterMenu() {
         }
     }
 
-    function idk() {
-        // console.log(this);
+    function cancelFilters() {
     }
 
-    filterCancel.addEventListener("change", idk);
-    filterBronze.addEventListener("change", idk);
-    filterSilver.addEventListener("change", idk);
-    filterGold.addEventListener("change", idk);
-    filterDiamond.addEventListener("change", idk);
-    filterFire.addEventListener("change", idk);
-    filterWater.addEventListener("change", idk);
-    filterWind.addEventListener("change", idk);
-    filterLight.addEventListener("change", idk);
-    filterDark.addEventListener("change", idk);
-    filterNeutral.addEventListener("change", idk);
-    filterBE.addEventListener("change", idk);
-    filterBB.addEventListener("change", idk);
-    filterCE.addEventListener("change", idk);
-    filterDO.addEventListener("change", idk);
-    filterEL.addEventListener("change", idk);
-    filterFI.addEventListener("change", idk);
-    filterPW.addEventListener("change", idk);
-    filterPA.addEventListener("change", idk);
-    filterPE.addEventListener("change", idk);
-    filterMF.addEventListener("change", idk);
-    filterSQ.addEventListener("change", idk);
-    filterVA.addEventListener("change", idk);
+    function filterByTier() {
+        for (var card of cards) {
+            var key = card.id;
+        }
+    }
+
+    function filterByElement() {
+    }
+
+    function filterByFighter() {
+    }
+
+    function filterCards(condition) {
+        for (var card of cards) {
+            if (condition(card.id)) {
+                card.classList.remove("hidden");
+            }
+            else {
+                card.classList.add("hidden");
+            }
+        }
+    }
+
+    filterCancel.addEventListener("change", updateFilterCancel);
+    filterBronze.addEventListener("change", updateFilterCancel);
+    filterSilver.addEventListener("change", updateFilterCancel);
+    filterGold.addEventListener("change", updateFilterCancel);
+    filterDiamond.addEventListener("change", updateFilterCancel);
+    filterFire.addEventListener("change", updateFilterCancel);
+    filterWater.addEventListener("change", updateFilterCancel);
+    filterWind.addEventListener("change", updateFilterCancel);
+    filterLight.addEventListener("change", updateFilterCancel);
+    filterDark.addEventListener("change", updateFilterCancel);
+    filterNeutral.addEventListener("change", updateFilterCancel);
+    filterBE.addEventListener("change", updateFilterCancel);
+    filterBB.addEventListener("change", updateFilterCancel);
+    filterCE.addEventListener("change", updateFilterCancel);
+    filterDO.addEventListener("change", updateFilterCancel);
+    filterEL.addEventListener("change", updateFilterCancel);
+    filterFI.addEventListener("change", updateFilterCancel);
+    filterPW.addEventListener("change", updateFilterCancel);
+    filterPA.addEventListener("change", updateFilterCancel);
+    filterPE.addEventListener("change", updateFilterCancel);
+    filterMF.addEventListener("change", updateFilterCancel);
+    filterSQ.addEventListener("change", updateFilterCancel);
+    filterVA.addEventListener("change", updateFilterCancel);
 
     filterCancel.click();
 }
@@ -920,16 +942,75 @@ function initSortMenu() {
     var sortElement = document.getElementById("sort-element");
     var sortTier = document.getElementById("sort-tier");
 
-    function idk() {
-        // console.log(this);
+    function alphabeticalBasis(a, b) {
+        var varA = variants[a];
+        var varB = variants[b];
+        var A = fighters[varA.base].name + varA.name;
+        var B = fighters[varB.base].name + varB.name;
+        return A > B ? 1 : A < B ? -1 : 0;
     }
 
-    sortAlphabetical.addEventListener("change", idk);
-    sortFighterScore.addEventListener("change", idk);
-    sortAttack.addEventListener("change", idk);
-    sortHealth.addEventListener("change", idk);
-    sortElement.addEventListener("change", idk);
-    sortTier.addEventListener("change", idk);
+    function attackBasis(a, b) {
+        var varA = variants[a];
+        var varB = variants[b];
+        var A = varA.stats[varA.stats.length - 1];
+        var B = varB.stats[varB.stats.length - 1];
+        return B.attack - A.attack;
+    }
+
+    function healthBasis(a, b) {
+        var varA = variants[a];
+        var varB = variants[b];
+        var A = varA.stats[varA.stats.length - 1];
+        var B = varB.stats[varB.stats.length - 1];
+        return B.lifebar - A.lifebar;
+    }
+
+    function fighterScore(f) {
+        return (f.lifebar / 6 + f.attack) * 7 / 10;
+    }
+
+    function fighterScoreBasis(a, b) {
+        var varA = variants[a];
+        var varB = variants[b];
+        var A = varA.stats[varA.stats.length - 1];
+        var B = varB.stats[varB.stats.length - 1];
+        return fighterScore(B) - fighterScore(A);
+    }
+
+    function elementBasis(a, b) {
+        var aElement = variants[a].element;
+        var bElement = variants[b].element;
+        return bElement - aElement;
+    }
+
+    function tierBasis(a, b) {
+        var aTier = variants[a].tier;
+        var bTier = variants[b].tier;
+        return bTier - aTier;
+    }
+
+    function sort(basis) {
+        var sorted = Object.keys(variants);
+        sorted.sort(basis);
+        for (var key of sorted) {
+            var card = document.getElementById(key);
+            card.parentElement.appendChild(card);
+        }
+    }
+
+    function sortBy(basis) {
+        return function () {
+            sort(basis);
+        }
+    }
+
+    sortAlphabetical.addEventListener("change", sortBy(alphabeticalBasis));
+    sortFighterScore.addEventListener("change", sortBy(fighterScoreBasis));
+    sortAttack.addEventListener("change", sortBy(attackBasis));
+    sortHealth.addEventListener("change", sortBy(healthBasis));
+    sortElement.addEventListener("change", sortBy(elementBasis));
+    sortTier.addEventListener("change", sortBy(tierBasis));
 
     sortAlphabetical.click();
 }
@@ -951,105 +1032,3 @@ function initialize() {
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function filterCards(condition) {
-    var cards = document.getElementsByClassName("card");
-    for (var card of cards) {
-        if (condition(card.id)) {
-            card.classList.remove("hidden");
-        }
-        else {
-            card.classList.add("hidden");
-        }
-    }
-}
-
-function sort(method) {
-    var sorted = Object.keys(variants).sort(method);
-    for (var id of sorted) {
-        var card = document.getElementById(id);
-        collection.appendChild(card);
-    }
-    order = method;
-}
-
-function byAlpha(a, b) {
-    var varA = variants[a];
-    var varB = variants[b];
-    var A = fighters[varA.base].name + varA.name;
-    var B = fighters[varB.base].name + varB.name;
-    return A > B ? 1 : A < B ? -1 : 0;
-}
-function byHP(a, b) {
-    var varA = variants[a];
-    var varB = variants[b];
-    var A = varA.stats[varA.stats.length - 1];
-    var B = varB.stats[varB.stats.length - 1];
-    return B.lifebar - A.lifebar;
-}
-function byAttack(a, b) {
-    var varA = variants[a];
-    var varB = variants[b];
-    var A = varA.stats[varA.stats.length - 1];
-    var B = varB.stats[varB.stats.length - 1];
-    return B.attack - A.attack;
-}
-function byFS(a, b) {
-    var varA = variants[a];
-    var varB = variants[b];
-    var A = varA.stats[varA.stats.length - 1];
-    var B = varB.stats[varB.stats.length - 1];
-    return fighterScore(B) - fighterScore(A);
-}
-
-function fighterScore(f) {
-    return (f.lifebar / 6 + f.attack) * 7 / 10;
-}
-
-function toggle(e, blah) {
-    var noneChecked = true;
-    var hideList = new Set();
-    var option = e.id;
-    var labels = e.children;
-    var cards = document.getElementsByClassName("card");
-
-    for (var label of labels) {
-        var input = label.children[0];
-        if (input.checked) {
-            noneChecked = false;
-        }
-        else {
-            hideList.add(input.value);
-        }
-    }
-    if (noneChecked) {
-        hideList.clear();
-    }
-
-    for (var card of cards) {
-        var hid = false;
-        for (var fid of hideList) {
-            if (card.classList.contains(fid)) {
-                card.classList.add("hidden");
-                hid = true;
-                break;
-            }
-        }
-        if (!hid && typeof blah == "undefined") {
-            card.classList.remove("hidden");
-        }
-    }
-}
