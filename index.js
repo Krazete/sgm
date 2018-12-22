@@ -1,3 +1,5 @@
+var fighters, variants, corpus;
+
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 var wikia_paths = { /* from English corpus */
@@ -110,12 +112,9 @@ var wikia_paths = { /* from English corpus */
     "sOut": "Stand Out"
 };
 
-var fighters, variants, corpus;
-
-var loading; /* todo: see if this is needed */
-
-var filterList = [];
-var sortBasis;
+var updateCards;
+var filterList = []; /* todo: this comes later */
+var sortBasis; /* todo: this comes later */
 
 function loadJSON(path) {
     function request(resolve, reject) {
@@ -127,15 +126,15 @@ function loadJSON(path) {
     		}
     	};
         xhr.onerror = function() {
-            reject(new Error("Could not load '" + path + "'."));
+            reject(new Error("Could not load \"" + path + "\"."));
         };
         xhr.send();
     }
     return new Promise(request);
 }
 
-function setLoading(isLoading) {
-    if (isLoading) {
+function toggleLoadingScreen(loading) {
+    if (loading) {
         document.body.classList.add("loading");
     }
     else {
@@ -148,8 +147,8 @@ function initCollection(responses) {
     variants = responses[1];
     var collection = document.getElementById("collection");
 
-    function openReadMePortrait() {
-        open("https://github.com/Krazete/sgm#portrait"); /* TODO: add a image section to the readme */
+    function openReadMe() {
+        open("https://github.com/Krazete/sgm#missing-portraits");
     }
 
     function handleMissingPortrait() {
@@ -158,7 +157,7 @@ function initCollection(responses) {
         var avatar = backdrop.parentElement.parentElement;
 
         portrait.classList.add("hidden");
-        backdrop.addEventListener("click", openReadMePortrait);
+        backdrop.addEventListener("click", openReadMe);
         avatar.classList.add("missing-portrait");
     }
 
@@ -215,7 +214,6 @@ function initCollection(responses) {
                 span.className = [
                     type + "-value",
                     "cinematic",
-                    "numeric",
                     "silver-gradient"
                 ].join(" ");
             stat.appendChild(span);
@@ -232,13 +230,14 @@ function initCollection(responses) {
         }
     }
 
-    function createAbility(type, abilityData, collapsed) { /* todo: change variable names in main.py */
+    function createAbility(type, abilityData, collapsed) {
         var ability = document.createElement("div");
-            ability.className = [
-                type,
-                "ability",
-                collapsed ? "collapsed" : "" /* todo: maybe replace all these join statements with simple +s */
-            ].join(" ");
+            if (collapsed) {
+                ability.className = [type, "ability"].join(" ");
+            }
+            else {
+                ability.className = [type, "ability", "collapsed"].join(" ");
+            }
             var abilityTitle = document.createElement("div");
                 abilityTitle.className = "ability-title cinematic";
                 var abilityType = document.createElement("span");
@@ -253,12 +252,12 @@ function initCollection(responses) {
                 abilityTitle.appendChild(abilityName);
                 abilityTitle.addEventListener("click", toggleAbility);
             ability.appendChild(abilityTitle);
-            if ('description' in abilityData) { /* TODO TODO TODO TODO */
+            if ('description' in abilityData) { /* character ability */
                 var description = document.createElement("div");
                     description.className = "ca-0 description smaller";
                 ability.appendChild(description);
-            } /* todo: handle ca/sa/ma differences better somehow */
-            else {
+            }
+            else { /* signature and marquee abilities */
                 for (var i = 0; i < abilityData.features.length; i++) {
                     var feature = abilityData.features[i];
                     var description = document.createElement("div");
@@ -315,9 +314,9 @@ function initCollection(responses) {
             card.appendChild(createStat("atk"));
             card.appendChild(createStat("hp"));
             card.appendChild(createStat("fs"));
-            card.appendChild(createAbility("ca", fighters[variants[key].base].characterability, true));
-            card.appendChild(createAbility("sa", variants[key].signature));
-            card.appendChild(createAbility("ma", fighters[variants[key].base].marquee, true));
+            card.appendChild(createAbility("ca", fighters[variants[key].base].ca, true));
+            card.appendChild(createAbility("sa", variants[key].sa));
+            card.appendChild(createAbility("ma", fighters[variants[key].base].ma, true));
             card.appendChild(createWikia(key));
             card.appendChild(createLock());
         return card;
@@ -326,6 +325,60 @@ function initCollection(responses) {
     for (var key in variants) {
         collection.appendChild(createCard(key));
     }
+}
+
+function initLanguageMenu() {
+    var buttonSet = document.getElementById("language-menu");
+    var buttons = buttonSet.getElementsByTagName("input");
+    var savedLanguage = localStorage.getItem("language") || "en";
+    var savedButton = document.getElementById(savedLanguage);
+
+    function updateCardConstant(card) {
+        var key = card.id;
+        var variantName = card.getElementsByClassName("variant-name")[0];
+        var fighterName = card.getElementsByClassName("fighter-name")[0];
+        var quote = card.getElementsByClassName("quote")[0];
+        var caName = card.getElementsByClassName("ca-name")[0];
+        var ca0 = card.getElementsByClassName("ca-0")[0];
+        var saName = card.getElementsByClassName("sa-name")[0];
+        var maName = card.getElementsByClassName("ma-name")[0];
+        variantName.innerHTML = corpus[variants[key].name];
+        fighterName.innerHTML = corpus[fighters[variants[key].base].name];
+        quote.innerHTML = corpus[variants[key].quote];
+        caName.innerHTML = corpus[fighters[variants[key].base].ca.title];
+        ca0.innerHTML = markedNumbers(corpus[fighters[variants[key].base].ca.description]);
+        saName.innerHTML = corpus[variants[key].sa.title];
+        maName.innerHTML = corpus[fighters[variants[key].base].ma.title];
+    }
+
+    function updateCardConstants(response) {
+        corpus = response;
+        var cards = document.getElementsByClassName("card");
+
+        for (var card of cards) {
+            updateCardConstant(card);
+        }
+    }
+
+    function setLanguage() {
+        var language = this.id;
+        document.documentElement.lang = language;
+        localStorage.setItem("language", language);
+        toggleLoadingScreen(true);
+        loadJSON("data/" + language + ".json").then(updateCardConstants).then(updateCards).then(toggleLoadingScreen);
+    }
+
+    if (!savedButton) {
+        savedLanguage = "en";
+        savedButton = document.getElementById("en");
+    }
+    savedButton.checked = true;
+
+    for (var button of buttons) {
+        button.addEventListener("change", setLanguage);
+    }
+
+    return loadJSON("data/" + savedLanguage + ".json").then(updateCardConstants);
 }
 
 function initDock() {
@@ -396,7 +449,7 @@ function initDock() {
             optionsMenu.classList.remove("hidden");
             filterMenu.classList.add("hidden");
             sortMenu.classList.add("hidden");
-            optionsMenu.scrollTo(0, 0); /* TODO: check if this scroll method is okay */
+            optionsMenu.scrollTo(0, 0);
         }
     }
 
@@ -429,7 +482,7 @@ function markedNumbers(text) {
     return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
 }
 
-function format(template, substitutions) { /* todo: check this */
+function format(template, substitutions) {
     var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
     var formatted = template;
     if (matches) {
@@ -439,7 +492,7 @@ function format(template, substitutions) { /* todo: check this */
             if (match.includes("%}")) {
                 substitute *= 100;
             }
-            substitute = Math.round(substitute * 10) / 10;
+            substitute = Math.round(substitute * 100) / 100; /* round to nearest 100th */
             if (match.includes("%")) {
                 substitute += "%";
             }
@@ -447,7 +500,7 @@ function format(template, substitutions) { /* todo: check this */
         }
     }
     else {
-        console.log(template, substitutions);
+        console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
     }
     return markedNumbers(formatted);
 }
@@ -479,21 +532,20 @@ function initOptionsMenu() {
     var maNumber = document.getElementById("ma-number");
     var maRange = document.getElementById("ma-range");
 
-    function setCardStats() {
+    function updateCardStats() {
         for (var card of cards) {
             var key = card.id;
             var atkValue = card.getElementsByClassName("atk-value")[0];
             var hpValue = card.getElementsByClassName("hp-value")[0];
             var fsValue = card.getElementsByClassName("fs-value")[0];
 
-            var index = Math.max(0, evolveRange.value - variants[key].tier);
-            var baseATK = variants[key].baseStats[index].attack;
-            var baseHP = variants[key].baseStats[index].lifebar;
+            var i = Math.max(0, evolveRange.value - variants[key].tier);
+            var baseATK = variants[key].stats[i].attack;
+            var baseHP = variants[key].stats[i].lifebar;
 
-            var index2 = Math.max(evolveRange.value, variants[key].tier);
-            if(key=="toad")console.log(index, variants[key].tier);
-            var atk = Math.ceil(baseATK + baseATK * (levelTiers[index2].value - 1) / 5); /* todo: check all these calculations */
-            var hp = Math.ceil(baseHP + baseHP * (levelTiers[index2].value - 1) / 5);
+            var j = Math.max(evolveRange.value, variants[key].tier);
+            var atk = Math.ceil(baseATK + baseATK * (levelTiers[j].value - 1) / 5);
+            var hp = Math.ceil(baseHP + baseHP * (levelTiers[j].value - 1) / 5);
             var fs = Math.ceil((atk + hp / 6) * 7 / 10);
 
             atkValue.innerHTML = atk.toLocaleString();
@@ -502,21 +554,21 @@ function initOptionsMenu() {
         }
     }
 
-    function setCardSAs() {
+    function updateCardSAs() {
         for (var card of cards) {
             var key = card.id;
             var sa = card.getElementsByClassName("sa")[0];
             var saDescriptions = sa.getElementsByClassName("description");
             for (var i = 0; i < saDescriptions.length; i++) {
                 var saDescription = saDescriptions[i];
-                var template = corpus[variants[key].signature.features[i].description];
-                var substitutions = variants[key].signature.features[i].tiers[saRange.value - 1]; /* todo: check all these calculations */
+                var template = corpus[variants[key].sa.features[i].description];
+                var substitutions = variants[key].sa.features[i].tiers[saRange.value - 1];
                 saDescription.innerHTML = format(template, substitutions);
             }
         }
     }
 
-    function setCardMAs() {
+    function updateCardMAs() {
         for (var card of cards) {
             var key = card.id;
             var ma = card.getElementsByClassName("ma")[0];
@@ -524,13 +576,19 @@ function initOptionsMenu() {
             for (var i = 0; i < maDescriptions.length; i++) {
                 var maDescription = maDescriptions[i];
                 var template = [
-                    corpus[fighters[variants[key].base].marquee.features[i].title],
-                    corpus[fighters[variants[key].base].marquee.features[i].description]
+                    corpus[fighters[variants[key].base].ma.features[i].title],
+                    corpus[fighters[variants[key].base].ma.features[i].description]
                 ].join(" - ");
-                var substitutions = fighters[variants[key].base].marquee.features[i].tiers[maRange.value - 1];
+                var substitutions = fighters[variants[key].base].ma.features[i].tiers[maRange.value - 1];
                 maDescription.innerHTML = format(template, substitutions);
             }
         }
+    }
+
+    updateCards = function () {
+        updateCardStats();
+        updateCardSAs();
+        updateCardMAs();
     }
 
     function updateBatchButtons() {
@@ -577,123 +635,6 @@ function initOptionsMenu() {
         }
     }
 
-    function setAllToBase() {
-        this.classList.add("pressed");
-        optionDefault.classList.remove("pressed");
-        optionMaximum.classList.remove("pressed");
-        setValidInput(evolveRange, evolveRange.min);
-        evolveBronze.classList.add("glowing");
-        evolveSilver.classList.remove("glowing");
-        evolveGold.classList.remove("glowing");
-        evolveDiamond.classList.remove("glowing");
-        setEvolve();
-        setValidInput(levelRange, levelRange.min);
-        setValidInput(levelBronze, levelBronze.min);
-        setValidInput(levelSilver, levelSilver.min);
-        setValidInput(levelGold, levelGold.min);
-        setValidInput(levelDiamond, levelDiamond.min);
-        setValidInput(saNumber, saNumber.min);
-        setValidInput(saRange, saRange.min);
-        setValidInput(maNumber, maNumber.min);
-        setValidInput(maRange, maRange.min);
-        setCardStats();
-        setCardSAs();
-        setCardMAs();
-    }
-
-    function setAllToDefault() {
-        optionBase.classList.remove("pressed");
-        this.classList.add("pressed");
-        optionMaximum.classList.remove("pressed");
-        setValidInput(evolveRange, evolveRange.min);
-        evolveBronze.classList.add("glowing");
-        evolveSilver.classList.remove("glowing");
-        evolveGold.classList.remove("glowing");
-        evolveDiamond.classList.remove("glowing");
-        setEvolve();
-        setValidInput(levelRange, levelRange.min);
-        setValidInput(levelBronze, levelBronze.min);
-        setValidInput(levelSilver, levelSilver.min);
-        setValidInput(levelGold, levelGold.min);
-        setValidInput(levelDiamond, levelDiamond.min);
-        setValidInput(saNumber, saNumber.max);
-        setValidInput(saRange, saRange.max);
-        setValidInput(maNumber, maNumber.max);
-        setValidInput(maRange, maRange.max);
-        setCardStats();
-        setCardSAs();
-        setCardMAs();
-    }
-
-    function setAllToMaximum() {
-        optionBase.classList.remove("pressed");
-        optionDefault.classList.remove("pressed");
-        this.classList.add("pressed");
-        setValidInput(evolveRange, evolveRange.max);
-        evolveBronze.classList.add("glowing");
-        evolveSilver.classList.add("glowing");
-        evolveGold.classList.add("glowing");
-        evolveDiamond.classList.add("glowing");
-        setEvolve();
-        setValidInput(levelRange, levelRange.max);
-        setValidInput(levelBronze, levelBronze.max);
-        setValidInput(levelSilver, levelSilver.max);
-        setValidInput(levelGold, levelGold.max);
-        setValidInput(levelDiamond, levelDiamond.max);
-        setValidInput(saNumber, saNumber.max);
-        setValidInput(saRange, saRange.max);
-        setValidInput(maNumber, maNumber.max);
-        setValidInput(maRange, maRange.max);
-        setCardStats();
-        setCardSAs();
-        setCardMAs();
-    }
-
-    function setEvolve() {
-        for (var i = 0; i < 4; i++) {
-            if (i == evolveRange.value) {
-                document.body.classList.add(tiers[i]);
-            }
-            else {
-                document.body.classList.remove(tiers[i]);
-            }
-            if (i < evolveRange.value) {
-                levelTiers[i].classList.add("hidden");
-            }
-            else {
-                levelTiers[i].classList.remove("hidden");
-            }
-        }
-        setValidInput(levelRange, getMaxLevelNumber());
-    }
-
-    function setEvolveViaRange() {
-        var value = parseInt(this.value);
-        for (var i = 0; i < value + 1; i++) {
-            evolveTiers[i].classList.add("glowing");
-        }
-        for (var i = value + 1; i < 4; i++) {
-            evolveTiers[i].classList.remove("glowing");
-        }
-        updateBatchButtons();
-        setEvolve();
-        setCardStats();
-    }
-
-    function setEvolveViaIcon() {
-        var value = evolveTiers.indexOf(this);
-        evolveRange.value = value;
-        for (var i = 0; i < value + 1; i++) {
-            evolveTiers[i].classList.add("glowing");
-        }
-        for (var i = value + 1; i < 4; i++) {
-            evolveTiers[i].classList.remove("glowing");
-        }
-        updateBatchButtons();
-        setEvolve();
-        setCardStats();
-    }
-
     function setValidInput(input, value) {
         input.value = Math.max(input.min, Math.min(value, input.max));
         if (input.value == input.max) {
@@ -704,63 +645,155 @@ function initOptionsMenu() {
         }
     }
 
+    function setAllToBase() {
+        this.classList.add("pressed");
+        optionDefault.classList.remove("pressed");
+        optionMaximum.classList.remove("pressed");
+        setValidInput(evolveRange, evolveRange.min);
+        updateEvolve();
+        setValidInput(levelRange, levelRange.min);
+        setValidInput(levelBronze, levelBronze.min);
+        setValidInput(levelSilver, levelSilver.min);
+        setValidInput(levelGold, levelGold.min);
+        setValidInput(levelDiamond, levelDiamond.min);
+        setValidInput(saNumber, saNumber.min);
+        setValidInput(saRange, saRange.min);
+        setValidInput(maNumber, maNumber.min);
+        setValidInput(maRange, maRange.min);
+        updateCards();
+    }
+
+    function setAllToDefault() {
+        optionBase.classList.remove("pressed");
+        this.classList.add("pressed");
+        optionMaximum.classList.remove("pressed");
+        setValidInput(evolveRange, evolveRange.min);
+        updateEvolve();
+        setValidInput(levelRange, levelRange.min);
+        setValidInput(levelBronze, levelBronze.min);
+        setValidInput(levelSilver, levelSilver.min);
+        setValidInput(levelGold, levelGold.min);
+        setValidInput(levelDiamond, levelDiamond.min);
+        setValidInput(saNumber, saNumber.max);
+        setValidInput(saRange, saRange.max);
+        setValidInput(maNumber, maNumber.max);
+        setValidInput(maRange, maRange.max);
+        updateCards();
+    }
+
+    function setAllToMaximum() {
+        optionBase.classList.remove("pressed");
+        optionDefault.classList.remove("pressed");
+        this.classList.add("pressed");
+        setValidInput(evolveRange, evolveRange.max);
+        updateEvolve();
+        setValidInput(levelRange, levelRange.max);
+        setValidInput(levelBronze, levelBronze.max);
+        setValidInput(levelSilver, levelSilver.max);
+        setValidInput(levelGold, levelGold.max);
+        setValidInput(levelDiamond, levelDiamond.max);
+        setValidInput(saNumber, saNumber.max);
+        setValidInput(saRange, saRange.max);
+        setValidInput(maNumber, maNumber.max);
+        setValidInput(maRange, maRange.max);
+        updateCards();
+    }
+
+    function getMaximumLevel() {
+        var max = 1;
+        Math.max()
+        if (evolveRange.value < 1 && max < levelBronze.value) {
+            max = parseInt(levelBronze.value);
+        }
+        if (evolveRange.value < 2 && max < levelSilver.value) {
+            max = parseInt(levelSilver.value);
+        }
+        if (evolveRange.value < 3 && max < levelGold.value) {
+            max = parseInt(levelGold.value);
+        }
+        if (evolveRange.value < 4 && max < levelDiamond.value) {
+            max = parseInt(levelDiamond.value);
+        }
+        return max;
+    }
+
+    function updateEvolve() {
+        for (var i = 0; i < 4; i++) {
+            if (i == evolveRange.value) {
+                document.body.classList.add(tiers[i]);
+            }
+            else {
+                document.body.classList.remove(tiers[i]);
+            }
+            if (i < parseInt(evolveRange.value) + 1) {
+                evolveTiers[i].classList.add("glowing");
+            }
+            else {
+                evolveTiers[i].classList.remove("glowing");
+            }
+            if (i < evolveRange.value) {
+                levelTiers[i].classList.add("hidden");
+            }
+            else {
+                levelTiers[i].classList.remove("hidden");
+            }
+        }
+        setValidInput(levelRange, getMaximumLevel());
+    }
+
+    function setEvolveViaRange() {
+        updateEvolve();
+        updateBatchButtons();
+        updateCardStats();
+    }
+
+    function setEvolveViaIcon() {
+        evolveRange.value = evolveTiers.indexOf(this);
+        updateEvolve();
+        updateBatchButtons();
+        updateCardStats();
+    }
+
     function setLevelViaRange() {
         setValidInput(levelBronze, this.value);
         setValidInput(levelSilver, this.value);
         setValidInput(levelGold, this.value);
         setValidInput(levelDiamond, this.value);
         updateBatchButtons();
-        setCardStats();
-    }
-
-    function getMaxLevelNumber() {
-        var max = 1;
-        if (evolveRange.value < 1 && max < parseInt(levelBronze.value)) {
-            max = levelBronze.value;
-        }
-        if (evolveRange.value < 2 && max < parseInt(levelSilver.value)) {
-            max = levelSilver.value;
-        }
-        if (evolveRange.value < 3 && max < parseInt(levelGold.value)) {
-            max = levelGold.value;
-        }
-        if (evolveRange.value < 4 && max < parseInt(levelDiamond.value)) {
-            max = levelDiamond.value;
-        }
-        return max;
+        updateCardStats();
     }
 
     function setLevelViaNumber() {
         setValidInput(this, this.value);
-        setValidInput(levelRange, getMaxLevelNumber());
+        setValidInput(levelRange, getMaximumLevel());
         updateBatchButtons();
-        setCardStats();
+        updateCardStats();
     }
 
     function setSAViaNumber() {
         setValidInput(this, this.value);
         setValidInput(saRange, this.value);
         updateBatchButtons();
-        setCardSAs();
+        updateCardSAs();
     }
 
     function setSAViaRange() {
         setValidInput(saNumber, this.value);
         updateBatchButtons();
-        setCardSAs();
+        updateCardSAs();
     }
 
     function setMAViaNumber() {
         setValidInput(this, this.value);
         setValidInput(maRange, this.value);
         updateBatchButtons();
-        setCardMAs();
+        updateCardMAs();
     }
 
     function setMAViaRange() {
         setValidInput(maNumber, this.value);
         updateBatchButtons();
-        setCardMAs();
+        updateCardMAs();
     }
 
     optionBase.addEventListener("click", setAllToBase);
@@ -849,8 +882,7 @@ function initFilterMenu() {
     }
 
     function idk() {
-        console.log(this);
-        updateFilterCancel();
+        // console.log(this);
     }
 
     filterCancel.addEventListener("change", idk);
@@ -889,7 +921,7 @@ function initSortMenu() {
     var sortTier = document.getElementById("sort-tier");
 
     function idk() {
-        console.log(this);
+        // console.log(this);
     }
 
     sortAlphabetical.addEventListener("change", idk);
@@ -902,95 +934,23 @@ function initSortMenu() {
     sortAlphabetical.click();
 }
 
-function initStaticCardData(response) {
-    corpus = response;
-    var cards = document.getElementsByClassName("card");
-
-    function initCard(card) {
-        var key = card.id;
-        var variantName = card.getElementsByClassName("variant-name")[0];
-        var fighterName = card.getElementsByClassName("fighter-name")[0];
-        var quote = card.getElementsByClassName("quote")[0];
-        var caName = card.getElementsByClassName("ca-name")[0];
-        var ca0 = card.getElementsByClassName("ca-0")[0];
-        var saName = card.getElementsByClassName("sa-name")[0];
-        var maName = card.getElementsByClassName("ma-name")[0];
-        variantName.innerHTML = corpus[variants[key].name];
-        fighterName.innerHTML = corpus[fighters[variants[key].base].name];
-        quote.innerHTML = corpus[variants[key].quote];
-        caName.innerHTML = corpus[fighters[variants[key].base].characterability.title];
-        ca0.innerHTML = markedNumbers(corpus[fighters[variants[key].base].characterability.description]);
-        saName.innerHTML = corpus[variants[key].signature.title];
-        maName.innerHTML = corpus[fighters[variants[key].base].marquee.title];
+function initialize() {
+    function initFooter() {
+        initDock();
+        initOptionsMenu();
+        initFilterMenu();
+        initSortMenu();
     }
 
-    for (var card of cards) {
-        initCard(card);
-    }
+    toggleLoadingScreen(true);
+    Promise.all([
+        loadJSON("data/fighters.json"),
+        loadJSON("data/variants.json")
+    ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(toggleLoadingScreen);
 
-    initDock();
-    initOptionsMenu();
-    initFilterMenu();
-    initSortMenu();
 }
 
-function initLanguageMenu() {
-    var buttonSet = document.getElementById("language-menu");
-    var buttons = buttonSet.getElementsByTagName("input");
-    var savedLanguage = loadItem("language", "en");
-    var savedButton = document.getElementById(savedLanguage);
-
-    function saveItem(key, item) {
-        try {
-            var itemJSON = JSON.stringify(item);
-            localStorage.setItem(key, itemJSON);
-        }
-        catch (e) {
-            console.log(e);
-        }
-    }
-
-    function loadItem(key, defaultItem) {
-        try {
-            var itemJSON = localStorage.getItem(key);
-            var item = JSON.parse(itemJSON);
-            if (item != null) {
-                return item;
-            }
-        }
-        catch (e) {
-            console.log(e);
-        }
-        return defaultItem;
-    }
-
-    function setLanguage() {
-        var language = this.id;
-        var languagePromise = loadJSON("data/" + language + ".json");
-        document.documentElement.lang = language;
-        document.body.classList.add("loading");
-        saveItem("language", language);
-        languagePromise.then(initStaticCardData).then(setLoading);
-    }
-
-    setLoading(true);
-    for (var button of buttons) {
-        button.addEventListener("change", setLanguage);
-    }
-    savedButton.click();
-}
-
-
-
-
-
-
-
-
-
-
-
-
+document.addEventListener("DOMContentLoaded", initialize);
 
 
 
@@ -1017,20 +977,6 @@ function filterCards(condition) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function sort(method) {
     var sorted = Object.keys(variants).sort(method);
     for (var id of sorted) {
@@ -1050,22 +996,22 @@ function byAlpha(a, b) {
 function byHP(a, b) {
     var varA = variants[a];
     var varB = variants[b];
-    var A = varA.baseStats[varA.baseStats.length - 1];
-    var B = varB.baseStats[varB.baseStats.length - 1];
+    var A = varA.stats[varA.stats.length - 1];
+    var B = varB.stats[varB.stats.length - 1];
     return B.lifebar - A.lifebar;
 }
 function byAttack(a, b) {
     var varA = variants[a];
     var varB = variants[b];
-    var A = varA.baseStats[varA.baseStats.length - 1];
-    var B = varB.baseStats[varB.baseStats.length - 1];
+    var A = varA.stats[varA.stats.length - 1];
+    var B = varB.stats[varB.stats.length - 1];
     return B.attack - A.attack;
 }
 function byFS(a, b) {
     var varA = variants[a];
     var varB = variants[b];
-    var A = varA.baseStats[varA.baseStats.length - 1];
-    var B = varB.baseStats[varB.baseStats.length - 1];
+    var A = varA.stats[varA.stats.length - 1];
+    var B = varB.stats[varB.stats.length - 1];
     return fighterScore(B) - fighterScore(A);
 }
 
@@ -1107,17 +1053,3 @@ function toggle(e, blah) {
         }
     }
 }
-
-function initialize() {
-    function afterCollectionIsLoaded() {
-        initLanguageMenu();
-    }
-
-    Promise.all([
-        loadJSON("data/fighters.json"),
-        loadJSON("data/variants.json")
-    ]).then(initCollection).then(afterCollectionIsLoaded);
-
-}
-
-document.addEventListener("DOMContentLoaded", initialize);

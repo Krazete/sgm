@@ -2,8 +2,6 @@ from data_processing import file
 from collections import namedtuple
 import re
 
-Character = namedtuple('Character', ('fighter', 'tier', 'variant_id', 'variant')) # TODO: eliminate unnecessary attributes
-
 # Study Monolith Structure
 
 def study_dictionary(dictionary):
@@ -45,6 +43,7 @@ def compile_mono(obj, is_root=True):
         return obj
 
 def study_sample(monolith, mono_char_keys, hrid=None):
+    'Print a monolith object and output more detailed results in study.json.'
     if hrid:
         for key in mono_char_keys:
             mono = monolith[key]
@@ -71,19 +70,6 @@ def get_monolith_character_keys(monolith):
             character_keys.add(key)
     return character_keys
 
-def get_corpus_character_keys(corpus): # TODO: change dict to set if Character is unnecessary
-    'Extract character identifiers {corpus key: Character} from corpus.'
-    name_pattern = re.compile('Char_([A-Za-z]+)_(\w)_V(\d+)_Name')
-    character_keys = {}
-    for key in corpus['en']:
-        matches = re.findall(name_pattern, key)
-        for match in matches:
-            fighter, tier, variant_id = match
-            variant = corpus['en'][key]
-            character = Character(fighter, tier, variant_id, variant)
-            character_keys.setdefault(key, character)
-    return character_keys
-
 # Build Data from Monolith
 
 def build_data(monolith, mono_char_keys):
@@ -108,7 +94,8 @@ def build_data(monolith, mono_char_keys):
             corpus_keys.add(key)
         return key
 
-    def build_subs(m_substitutions): # currently {KEY: (0, value)}; futurely [(key, value)]
+    def build_subs(m_substitutions):
+        'Get keys of substitutions to use in ability description templates.'
         subs = []
         for sub in m_substitutions:
             key, value = sub.split('.')
@@ -118,6 +105,7 @@ def build_data(monolith, mono_char_keys):
         return subs
 
     def build_tier(m_feature, m_tier, subs):
+        'Get substitution values to be used in ability description templates.'
         tier = [None] * len(subs)
         for obj in iter_object(m_tier):
             for i, sub in enumerate(subs):
@@ -130,6 +118,7 @@ def build_data(monolith, mono_char_keys):
         return tier
 
     def iter_object(obj, skip_keys=[]):
+        'Iterate through all substitution objects nested within an object.'
         if isinstance(obj, dict):
             if 'm_PathID' in obj:
                 obj = monoref(obj)
@@ -158,11 +147,17 @@ def build_data(monolith, mono_char_keys):
                 m_tier = monoref(tier_ref)
                 tier = build_tier(m_feature, m_tier, subs)
                 tiers.append(tier)
-            features.append({
-                'title': subtitle, # TODO: only for marquee
-                'description': description,
-                'tiers': tiers
-            })
+            if subtitle == '': # signature ability
+                features.append({
+                    'description': description,
+                    'tiers': tiers
+                })
+            else: # marquee ability
+                features.append({
+                    'title': subtitle,
+                    'description': description,
+                    'tiers': tiers
+                })
         return {
             'title': title,
             'features': features
@@ -183,10 +178,10 @@ def build_data(monolith, mono_char_keys):
             },
             # 'blockbusters': [monoref(x) for x in base['blockbusters']], # TODO: add this in
             # 'specialmoves': {}, # TODO: add this in
-            'characterability': record(monoref(base['characterAbility'])),
-            'marquee': build_features(mono['superAbility'])
+            'ca': record(monoref(base['characterAbility'])),
+            'ma': build_features(mono['superAbility'])
         }
-        if f_value['marquee']['title'] == None:
+        if f_value['ma']['title'] == None:
             return
         fighters.setdefault(f_key, f_value)
 
@@ -210,8 +205,8 @@ def build_data(monolith, mono_char_keys):
             'quote': record(mono['variantQuote']),
             'tier': mono['initialTier'],
             'element': mono['elementAffiliation'],
-            'baseStats': mono['baseScaledValuesByTier'],
-            'signature': build_features(mono['signatureAbility'])
+            'stats': mono['baseScaledValuesByTier'],
+            'sa': build_features(mono['signatureAbility'])
         }
         variants.setdefault(v_key, v_value)
 
@@ -227,7 +222,6 @@ if __name__ =='__main__':
     corpus = file.load('data_processing/sgm_exports/TextAsset')
 
     mono_char_keys = get_monolith_character_keys(monolith)
-    corp_char_keys = get_corpus_character_keys(corpus)
 
     # study_sample(monolith, mono_char_keys, 'oMai')
 
