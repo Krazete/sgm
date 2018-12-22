@@ -114,6 +114,9 @@ var fighters, variants, corpus;
 
 var loading; /* todo: see if this is needed */
 
+var filterList = [];
+var sortBasis;
+
 function loadJSON(path) {
     function request(resolve, reject) {
         var xhr = new XMLHttpRequest();
@@ -131,74 +134,18 @@ function loadJSON(path) {
     return new Promise(request);
 }
 
-function saveItem(key, item) {
-    try {
-        var itemJSON = JSON.stringify(item);
-        localStorage.setItem(key, itemJSON);
-    }
-    catch (e) {
-        console.log(e);
-    }
-}
-
-function loadItem(key, defaultItem) {
-    try {
-        var itemJSON = localStorage.getItem(key);
-        var item = JSON.parse(itemJSON);
-        if (item != null) {
-            return item;
-        }
-    }
-    catch (e) {
-        console.log(e);
-    }
-    return defaultItem;
-}
-
-function initialize() {
-    initLanguageMenu();
-    initDock();
-    initOptionsMenu();
-    initFilterMenu();
-    initSortMenu();
-}
 
 
 
 
 
-
-function initLanguageMenu() { /* todo: put this beneath initCollection and whatnot */
-    var buttonSet = document.getElementById("language-menu");
-    var buttons = buttonSet.getElementsByTagName("input");
-    var savedLanguage = loadItem("language", "en");
-    var savedButton = document.getElementById(savedLanguage);
-
-    function setLanguage() {
-        var language = this.id;
-        var languagePromise = loadJSON("data/" + language + ".json");
-        document.documentElement.lang = language;
+function setLoading(isLoading) {
+    if (isLoading) {
         document.body.classList.add("loading");
-        saveItem("language", language);
-        if (!fighters || !variants) {
-            Promise.all([
-                loadJSON("data/fighters.json"),
-                loadJSON("data/variants.json")
-            ]).then(initCollection).then(languagePromise.then(initCards).then(stopLoading));
-        }
-        else {
-            languagePromise.then(initCards).then(stopLoading);
-        }
     }
-
-    function stopLoading() { /* TODO: figure out what to do about loading language data and loading character data */
+    else {
         document.body.classList.remove("loading");
     }
-
-    for (var button of buttons) {
-        button.addEventListener("change", setLanguage);
-    }
-    savedButton.click();
 }
 
 function initCollection(responses) {
@@ -381,7 +328,7 @@ function initCollection(responses) {
     }
 }
 
-function initCards(response) {
+function initStaticCardData(response) {
     corpus = response;
     var cards = document.getElementsByClassName("card");
 
@@ -406,10 +353,109 @@ function initCards(response) {
     }
 }
 
+function initLanguageMenu() {
+    var buttonSet = document.getElementById("language-menu");
+    var buttons = buttonSet.getElementsByTagName("input");
+    var savedLanguage = loadItem("language", "en");
+    var savedButton = document.getElementById(savedLanguage);
 
-// var atk = variants[key].baseStats[0].attack;
-// var hp = variants[key].baseStats[0].lifebar;
-// var fs = Math.ceil((atk + hp / 6) * 7 / 10);
+    function saveItem(key, item) {
+        try {
+            var itemJSON = JSON.stringify(item);
+            localStorage.setItem(key, itemJSON);
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    function loadItem(key, defaultItem) {
+        try {
+            var itemJSON = localStorage.getItem(key);
+            var item = JSON.parse(itemJSON);
+            if (item != null) {
+                return item;
+            }
+        }
+        catch (e) {
+            console.log(e);
+        }
+        return defaultItem;
+    }
+
+    function setLanguage() {
+        var language = this.id;
+        var languagePromise = loadJSON("data/" + language + ".json");
+        document.documentElement.lang = language;
+        document.body.classList.add("loading");
+        saveItem("language", language);
+        languagePromise.then(initStaticCardData).then(setLoading);
+    }
+
+    setLoading(true);
+    for (var button of buttons) {
+        button.addEventListener("change", setLanguage);
+    }
+    savedButton.click();
+}
+
+function initDynamicCardData() {
+    var cards = document.getElementsByClassName("card");
+    var evolveRange = document.getElementById("evolve-range");
+    var levelBronze = document.getElementById("level-bronze");
+    var levelSilver = document.getElementById("level-silver");
+    var levelGold = document.getElementById("level-gold");
+    var levelDiamond = document.getElementById("level-diamond");
+    var saRange = document.getElementById("sa-range");
+    var maRange = document.getElementById("ma-range");
+
+    function setStats(card) {
+        var key = card.id;
+        var atkValue = card.getElementsByClassName("atk-value")[0];
+        var hpValue = card.getElementsByClassName("hp-value")[0];
+        var fsValue = card.getElementsByClassName("fs-value")[0];
+        var atk = variants[key].baseStats[evolveRange.value].attack;
+        var hp = variants[key].baseStats[evolveRange.value].lifebar;
+        var fs = Math.ceil((atk + hp / 6) * 7 / 10);
+        atkValue.innerHTML = atk;
+        hpValue.innerHTML = hp;
+        fsValue.innerHTML = fs;
+    }
+
+    function setAbilities(card) {
+        var key = card.id;
+        var ca = card.getElementsByClassName("ca")[0];
+        var sa = card.getElementsByClassName("sa")[0];
+        var ma = card.getElementsByClassName("ma")[0];
+        var caDescriptions = ca.getElementsByClassName("description");
+        var saDescriptions = sa.getElementsByClassName("description");
+        var maDescriptions = ma.getElementsByClassName("description");
+        for (var i = 0; i < caDescriptions.length; i++) {
+            var caDescription = caDescriptions[i];
+            caDescription.innerHTML = fighters[variants[key].base].characterability.description;
+        }
+        for (var i = 0; i < saDescriptions.length; i++) {
+            var saDescription = saDescriptions[i];
+            saDescription.innerHTML = variants[key].signature.features[i].title;
+            saDescription.innerHTML += "<br>";
+            saDescription.innerHTML += variants[key].signature.features[i].description;
+        }
+        for (var i = 0; i < maDescriptions.length; i++) {
+            var maDescription = maDescriptions[i];
+            maDescription.innerHTML = fighters[variants[key].base].marquee.features[i].title;
+            maDescription.innerHTML += "<br>";
+            maDescription.innerHTML += fighters[variants[key].base].marquee.features[i].description;
+        }
+    }
+
+    for (var card of cards) {
+        setStats(card);
+        setAbilities(card);
+    }
+    // var atk = variants[key].baseStats[0].attack;
+    // var hp = variants[key].baseStats[0].lifebar;
+    // var fs = Math.ceil((atk + hp / 6) * 7 / 10);
+}
 
 
 
@@ -510,6 +556,7 @@ function initDock() {
 
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
+    initDynamicCardData(); /* todo: this probably belongs here, but check again anyway */
 }
 
 function initOptionsMenu() {
@@ -1002,10 +1049,10 @@ function byFS(a, b) {
     var varB = variants[b];
     var A = varA.baseStats[varA.baseStats.length - 1];
     var B = varB.baseStats[varB.baseStats.length - 1];
-    return fightScore(B) - fightScore(A);
+    return fighterScore(B) - fighterScore(A);
 }
 
-function fightScore(f) {
+function fighterScore(f) {
     return (f.lifebar / 6 + f.attack) * 7 / 10;
 }
 
@@ -1042,6 +1089,22 @@ function toggle(e, blah) {
             card.classList.remove("hidden");
         }
     }
+}
+
+function initialize() {
+    function afterCollectionIsLoaded() {
+        initLanguageMenu();
+        initDock();
+        initOptionsMenu();
+        initFilterMenu();
+        initSortMenu();
+    }
+
+    Promise.all([
+        loadJSON("data/fighters.json"),
+        loadJSON("data/variants.json")
+    ]).then(initCollection).then(afterCollectionIsLoaded);
+
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
