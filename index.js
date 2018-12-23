@@ -115,7 +115,7 @@ var wikiaPaths = { /* from English corpus */
 var cards = [];
 var updateCards;
 var filterList = []; /* todo: this comes later */
-var sortBasis;
+var fighterScoreBasis, attackBasis, healthBasis, sortBasis;
 
 function loadJSON(path) {
     function request(resolve, reject) {
@@ -333,6 +333,7 @@ function initCollection(responses) {
 function initLanguageMenu() {
     var buttonSet = document.getElementById("language-menu");
     var buttons = buttonSet.getElementsByTagName("input");
+
     var savedLanguage = localStorage.getItem("language") || "en";
     var savedButton = document.getElementById(savedLanguage);
 
@@ -364,8 +365,8 @@ function initLanguageMenu() {
 
     function setLanguage() {
         var language = this.id;
-        document.documentElement.lang = language;
         localStorage.setItem("language", language);
+        document.documentElement.lang = language;
         toggleLoadingScreen(true);
         loadJSON("data/" + language + ".json").then(updateCardConstants).then(updateCards).then(toggleLoadingScreen);
     }
@@ -508,6 +509,14 @@ function format(template, substitutions) {
     return formatNumbers(formatted);
 }
 
+function sortCards(basis) {
+    cards.sort(basis);
+    for (var card of cards) {
+        card.parentElement.appendChild(card);
+    }
+    sortBasis = basis;
+}
+
 function initOptionsMenu() {
     var optionBase = document.getElementById("option-base");
     var optionDefault = document.getElementById("option-default");
@@ -552,6 +561,13 @@ function initOptionsMenu() {
             atkValue.innerHTML = atk.toLocaleString();
             hpValue.innerHTML = hp.toLocaleString();
             fsValue.innerHTML = fs.toLocaleString();
+        }
+        if (
+            sortBasis == fighterScoreBasis ||
+            sortBasis == attackBasis ||
+            sortBasis == healthBasis
+        ) {
+            sortCards(sortBasis);
         }
     }
 
@@ -951,84 +967,93 @@ function initFilterMenu() {
 }
 
 function initSortMenu() {
-    var sortAlphabetical = document.getElementById("sort-abc");
     var sortFighterScore = document.getElementById("sort-fs");
     var sortAttack = document.getElementById("sort-atk");
     var sortHealth = document.getElementById("sort-hp");
+    var sortAlphabetical = document.getElementById("sort-abc");
     var sortElement = document.getElementById("sort-element");
     var sortTier = document.getElementById("sort-tier");
 
+    var savedBasis = localStorage.getItem("basis") || "sort-abc";
+    var savedButton = document.getElementById(savedBasis);
+
     function alphabeticalBasis(a, b) {
-        var varA = variants[a];
-        var varB = variants[b];
-        var A = fighters[varA.base].name + varA.name;
-        var B = fighters[varB.base].name + varB.name;
+        var A = fighters[variants[a.id].base].name + variants[a.id].name;
+        var B = fighters[variants[b.id].base].name + variants[b.id].name;
         return A > B ? 1 : A < B ? -1 : 0;
     }
 
-    function attackBasis(a, b) {
-        var varA = variants[a];
-        var varB = variants[b];
-        var A = varA.stats[varA.stats.length - 1];
-        var B = varB.stats[varB.stats.length - 1];
-        return B.attack - A.attack;
+    function getStatValue(card, type) {
+        var statValue = card.getElementsByClassName(type + "-value")[0];
+        return statValue.innerText.replace(/\D/g, "");
     }
 
-    function healthBasis(a, b) {
-        var varA = variants[a];
-        var varB = variants[b];
-        var A = varA.stats[varA.stats.length - 1];
-        var B = varB.stats[varB.stats.length - 1];
-        return B.lifebar - A.lifebar;
+    fighterScoreBasis = function (a, b) {
+        var A = getStatValue(a, "fs");
+        var B = getStatValue(b, "fs");
+        var C = B - A;
+        if (C == 0) {
+            return alphabeticalBasis(a, b);
+        }
+        return C;
     }
 
-    function fighterScore(f) {
-        return (f.lifebar / 6 + f.attack) * 7 / 10;
+    attackBasis = function (a, b) {
+        var A = getStatValue(a, "atk");
+        var B = getStatValue(b, "atk");
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
+        }
+        return C;
     }
 
-    function fighterScoreBasis(a, b) {
-        var varA = variants[a];
-        var varB = variants[b];
-        var A = varA.stats[varA.stats.length - 1];
-        var B = varB.stats[varB.stats.length - 1];
-        return fighterScore(B) - fighterScore(A);
+    healthBasis = function (a, b) {
+        var A = getStatValue(a, "hp");
+        var B = getStatValue(b, "hp");
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
+        }
+        return C;
     }
 
     function elementBasis(a, b) {
-        var aElement = variants[a].element;
-        var bElement = variants[b].element;
-        return bElement - aElement;
+        var elementMap = [0, 5, 3, 4, 1, 2];
+        var A = elementMap[variants[a.id].element];
+        var B = elementMap[variants[b.id].element];
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
+        }
+        return C;
     }
 
     function tierBasis(a, b) {
-        var aTier = variants[a].tier;
-        var bTier = variants[b].tier;
-        return bTier - aTier;
-    }
-
-    function sort(basis) {
-        var sorted = Object.keys(variants);
-        sorted.sort(basis);
-        for (var key of sorted) {
-            var card = document.getElementById(key);
-            card.parentElement.appendChild(card);
+        var A = variants[a.id].tier;
+        var B = variants[b.id].tier;
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
         }
+        return C;
     }
 
-    function sortBy(basis) {
+    function sorter(basis) {
         return function () {
-            sort(basis);
+            localStorage.setItem("basis", this.id);
+            sortCards(basis);
         }
     }
 
-    sortAlphabetical.addEventListener("change", sortBy(alphabeticalBasis));
-    sortFighterScore.addEventListener("change", sortBy(fighterScoreBasis));
-    sortAttack.addEventListener("change", sortBy(attackBasis));
-    sortHealth.addEventListener("change", sortBy(healthBasis));
-    sortElement.addEventListener("change", sortBy(elementBasis));
-    sortTier.addEventListener("change", sortBy(tierBasis));
+    sortFighterScore.addEventListener("change", sorter(fighterScoreBasis));
+    sortAttack.addEventListener("change", sorter(attackBasis));
+    sortHealth.addEventListener("change", sorter(healthBasis));
+    sortAlphabetical.addEventListener("change", sorter(alphabeticalBasis));
+    sortElement.addEventListener("change", sorter(elementBasis));
+    sortTier.addEventListener("change", sorter(tierBasis));
 
-    sortAlphabetical.click();
+    savedButton.click();
 }
 
 function initialize() {

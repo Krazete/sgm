@@ -9,6 +9,10 @@ A character gallery for Skullgirls Mobile.
 
 You can set the language to any of the in-game optinos.
 
+#### Wikia
+
+While the cards offer basic info, the wikia can be useful for strategizing.
+
 #### Options (Fighter Settings)
 
 The stats shown are only base levels, as if the Attack Damage and Health sides of the skill tree are completely empty and the Marquee Ability isn't activate.
