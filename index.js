@@ -114,7 +114,6 @@ var wikiaPaths = { /* from English corpus */
 
 var cards = [];
 var updateCards;
-var filterList = []; /* todo: this comes later */
 var sortBasis;
 
 function loadJSON(path) {
@@ -481,6 +480,13 @@ function initDock() {
     savedButton.click();
 }
 
+function sortCards() {
+    cards.sort(sortBasis);
+    for (var card of cards) {
+        card.parentElement.appendChild(card);
+    }
+}
+
 function formatNumbers(text) {
     return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
 }
@@ -506,13 +512,6 @@ function format(template, substitutions) {
         console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
     }
     return formatNumbers(formatted);
-}
-
-function sortCards() {
-    cards.sort(sortBasis);
-    for (var card of cards) {
-        card.parentElement.appendChild(card);
-    }
 }
 
 function initOptionsMenu() {
@@ -906,54 +905,144 @@ function initFilterMenu() {
     }
 
     function cancelFilters() {
+        filterBronze.checked = false;
+        filterSilver.checked = false;
+        filterGold.checked = false;
+        filterDiamond.checked = false;
+        filterFire.checked = false;
+        filterWater.checked = false;
+        filterWind.checked = false;
+        filterLight.checked = false;
+        filterDark.checked = false;
+        filterNeutral.checked = false;
+        filterBE.checked = false;
+        filterBB.checked = false;
+        filterCE.checked = false;
+        filterDO.checked = false;
+        filterEL.checked = false;
+        filterFI.checked = false;
+        filterPW.checked = false;
+        filterPA.checked = false;
+        filterPE.checked = false;
+        filterMF.checked = false;
+        filterSQ.checked = false;
+        filterVA.checked = false;
+        filterCards();
     }
 
-    function filterByTier() {
-        for (var card of cards) {
-            var key = card.id;
+    function tierCondition(card) {
+        if (
+            !filterBronze.checked &&
+            !filterSilver.checked &&
+            !filterGold.checked &&
+            !filterDiamond.checked
+        ) {
+            return true;
         }
+        var key = card.id;
+        return (
+            (filterBronze.checked && variants[key].tier == 0) ||
+            (filterSilver.checked && variants[key].tier == 1) ||
+            (filterGold.checked && variants[key].tier == 2) ||
+            (filterDiamond.checked && variants[key].tier == 3)
+        );
     }
 
-    function filterByElement() {
+    function elementCondition(card) {
+        if (
+            !filterFire.checked &&
+            !filterWater.checked &&
+            !filterWind.checked &&
+            !filterLight.checked &&
+            !filterDark.checked &&
+            !filterNeutral.checked
+        ) {
+            return true;
+        }
+        var key = card.id;
+        return (
+            (filterFire.checked && variants[key].element == 1) ||
+            (filterWater.checked && variants[key].element == 2) ||
+            (filterWind.checked && variants[key].element == 3) ||
+            (filterLight.checked && variants[key].element == 5) ||
+            (filterDark.checked && variants[key].element == 4) ||
+            (filterNeutral.checked && variants[key].element == 0)
+        );
     }
 
-    function filterByFighter() {
+    function fighterCondition(card) {
+        if (
+            !filterBE.checked &&
+            !filterBB.checked &&
+            !filterCE.checked &&
+            !filterDO.checked &&
+            !filterEL.checked &&
+            !filterFI.checked &&
+            !filterPW.checked &&
+            !filterPA.checked &&
+            !filterPE.checked &&
+            !filterMF.checked &&
+            !filterSQ.checked &&
+            !filterVA.checked
+        ) {
+            return true;
+        }
+        var key = card.id;
+        return (
+            (filterBE.checked && variants[key].base == "be") ||
+            (filterBB.checked && variants[key].base == "bb") ||
+            (filterCE.checked && variants[key].base == "ce") ||
+            (filterDO.checked && variants[key].base == "do") ||
+            (filterEL.checked && variants[key].base == "el") ||
+            (filterFI.checked && variants[key].base == "fi") ||
+            (filterPW.checked && variants[key].base == "pw") ||
+            (filterPA.checked && variants[key].base == "pa") ||
+            (filterPE.checked && variants[key].base == "pe") ||
+            (filterMF.checked && variants[key].base == "mf") ||
+            (filterSQ.checked && variants[key].base == "sq") ||
+            (filterVA.checked && variants[key].base == "va")
+        );
     }
 
-    function filterCards(condition) {
+    function filterCards() {
         for (var card of cards) {
-            if (condition(card.id)) {
+            if (
+                tierCondition(card) &&
+                elementCondition(card) &&
+                fighterCondition(card)
+            ) {
                 card.classList.remove("hidden");
             }
             else {
                 card.classList.add("hidden");
             }
         }
+        updateFilterCancel();
     }
 
-    filterCancel.addEventListener("change", updateFilterCancel);
-    filterBronze.addEventListener("change", updateFilterCancel);
-    filterSilver.addEventListener("change", updateFilterCancel);
-    filterGold.addEventListener("change", updateFilterCancel);
-    filterDiamond.addEventListener("change", updateFilterCancel);
-    filterFire.addEventListener("change", updateFilterCancel);
-    filterWater.addEventListener("change", updateFilterCancel);
-    filterWind.addEventListener("change", updateFilterCancel);
-    filterLight.addEventListener("change", updateFilterCancel);
-    filterDark.addEventListener("change", updateFilterCancel);
-    filterNeutral.addEventListener("change", updateFilterCancel);
-    filterBE.addEventListener("change", updateFilterCancel);
-    filterBB.addEventListener("change", updateFilterCancel);
-    filterCE.addEventListener("change", updateFilterCancel);
-    filterDO.addEventListener("change", updateFilterCancel);
-    filterEL.addEventListener("change", updateFilterCancel);
-    filterFI.addEventListener("change", updateFilterCancel);
-    filterPW.addEventListener("change", updateFilterCancel);
-    filterPA.addEventListener("change", updateFilterCancel);
-    filterPE.addEventListener("change", updateFilterCancel);
-    filterMF.addEventListener("change", updateFilterCancel);
-    filterSQ.addEventListener("change", updateFilterCancel);
-    filterVA.addEventListener("change", updateFilterCancel);
+    filterCancel.addEventListener("change", cancelFilters);
+    filterBronze.addEventListener("change", filterCards);
+    filterSilver.addEventListener("change", filterCards);
+    filterGold.addEventListener("change", filterCards);
+    filterDiamond.addEventListener("change", filterCards);
+    filterFire.addEventListener("change", filterCards);
+    filterWater.addEventListener("change", filterCards);
+    filterWind.addEventListener("change", filterCards);
+    filterLight.addEventListener("change", filterCards);
+    filterDark.addEventListener("change", filterCards);
+    filterNeutral.addEventListener("change", filterCards);
+    filterBE.addEventListener("change", filterCards);
+    filterBB.addEventListener("change", filterCards);
+    filterCE.addEventListener("change", filterCards);
+    filterDO.addEventListener("change", filterCards);
+    filterEL.addEventListener("change", filterCards);
+    filterFI.addEventListener("change", filterCards);
+    filterPW.addEventListener("change", filterCards);
+    filterPA.addEventListener("change", filterCards);
+    filterPE.addEventListener("change", filterCards);
+    filterMF.addEventListener("change", filterCards);
+    filterSQ.addEventListener("change", filterCards);
+    filterVA.addEventListener("change", filterCards);
 
     filterCancel.click();
 }
@@ -1046,7 +1135,7 @@ function initSortMenu() {
     sortElement.addEventListener("change", sorter(elementBasis));
     sortTier.addEventListener("change", sorter(tierBasis));
 
-    savedButton.checked = false; /* because radio button state is saved */
+    savedButton.checked = false; /* resets radio so change event can be triggered */
     savedButton.click();
 }
 
