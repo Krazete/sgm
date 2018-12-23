@@ -148,7 +148,7 @@ function initCollection(responses) {
     var collection = document.getElementById("collection");
 
     function openReadMe() {
-        open("https://github.com/Krazete/sgm#missing-portraits");
+        open("https://github.com/Krazete/sgm#portraits");
     }
 
     function handleMissingPortrait() {
@@ -1055,7 +1055,7 @@ function initSortMenu() {
     var sortElement = document.getElementById("sort-element");
     var sortTier = document.getElementById("sort-tier");
 
-    var savedBasis = localStorage.getItem("basis") || "sort-abc";
+    var savedBasis = localStorage.getItem("basis") || "sort-fs";
     var savedButton = document.getElementById(savedBasis);
 
     function alphabeticalBasis(a, b) {

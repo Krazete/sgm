@@ -29,7 +29,7 @@ Sorting Fighter Score, Attack, or Health is based on the Options menu settings.
 
 ## Faults
 
-#### Missing Portraits
+#### Portraits
 
 Unlike most of the data and assets used on the website, fighter variant portrait images are not in the APK. The portraits are instead taken from in-game screenshots, cropped and masked with the help of MATLAB.
 

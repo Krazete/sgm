@@ -201,7 +201,6 @@ input:checked + label {
     padding: 6px 0;
 }
 
-/* TODO: check if translations are needed here */
 #skullgirls-mobile:before {content: 'Skullgirls Mobile';}
 
 html[lang='en'] #fighter-gallery:before {content: 'Fighter Gallery';}
@@ -531,9 +530,12 @@ html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
     display: grid;
     flex: 1;
     grid-template-columns: repeat(9, minmax(0, 1fr));
-    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
     grid-gap: 6px;
     padding: 6px;
+}
+.loading #collection {
+    grid-template-rows: min-content 1fr;
 }
 
 @media (max-width: 4050px) {.zoomed-in #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
