@@ -23,14 +23,16 @@
     height: 0;
 }
 
-html,
-body {
+html {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
 body {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
     background: #0f1824;
     color: white;
     font-family: 'Roboto', 'Arial Narrow', sans-serif;
@@ -127,10 +129,6 @@ html[lang='ko'] .cinematic {
     font-size: inherit;
 }
 
-.smaller {
-    font-size: smaller;
-}
-
 /* HEADER AND FOOTER */
 
 .scroller {
@@ -214,7 +212,6 @@ html[lang='pt-br'] #fighter-gallery:before {content: 'Galeria de Personagens';}
 
 .cinematic.banner {
     font-size: xx-large;
-    white-space: nowrap;
 }
 
 .ribbon {
@@ -534,9 +531,6 @@ html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
     grid-gap: 6px;
     padding: 6px;
 }
-.loading #collection {
-    grid-template-rows: min-content 1fr;
-}
 
 @media (max-width: 4050px) {.zoomed-in #collection {grid-template-columns: repeat(8, minmax(0, 1fr));}}
 @media (max-width: 3600px) {.zoomed-in #collection {grid-template-columns: repeat(7, minmax(0, 1fr));}}
@@ -568,7 +562,6 @@ html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
 /* SEARCH */
 
 #searchbox {
-    width: 100%;
     font-size: x-large;
     text-align: center;
     line-height: 1.3em;
@@ -586,8 +579,8 @@ html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
 /* LOADING */
 
 #loading {
+    text-align: center;
     display: none;
-    margin: auto;
 }
 
 .loading #loading {
@@ -595,12 +588,12 @@ html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
 }
 
 #loading img {
-    width: 256px;
+    max-width: 90vw;
+    max-height: 33vh;
 }
 
 #loading:after {
     font-size: xx-large;
-    text-align: center;
     display: block;
     animation: 0.7s infinite fader;
 }
@@ -782,6 +775,10 @@ html[lang='pt-br'] #loading:after {content: 'CARREGANDO...';}
     font-size: medium;
 }
 
+.fighter-name {
+    font-size: smaller;
+}
+
 /* QUOTE */
 
 .quote {
@@ -915,6 +912,10 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 }
 .ability.collapsed .description {
     display: none;
+}
+
+.description {
+    font-size: smaller;
 }
 
 .number {

@@ -189,7 +189,7 @@ function initCollection(responses) {
                     variantName.className = "variant-name dependent-gradient";
                 nameplate.appendChild(variantName);
                 var fighterName = document.createElement("div");
-                    fighterName.className = "fighter-name smaller";
+                    fighterName.className = "fighter-name";
                 nameplate.appendChild(fighterName);
             avatar.appendChild(nameplate);
         return avatar;
@@ -254,7 +254,7 @@ function initCollection(responses) {
             ability.appendChild(abilityTitle);
             if ('description' in abilityData) { /* character ability */
                 var description = document.createElement("div");
-                    description.className = "ca-0 description smaller";
+                    description.className = "ca-0 description";
                 ability.appendChild(description);
             }
             else { /* signature and marquee abilities */
@@ -263,8 +263,7 @@ function initCollection(responses) {
                     var description = document.createElement("div");
                         description.className = [
                             type + "-" + i,
-                            "description",
-                            "smaller"
+                            "description"
                         ].join(" ");
                     ability.appendChild(description);
                 }
@@ -278,7 +277,7 @@ function initCollection(responses) {
             wikia.target = "_blank";
             wikia.href = [
                 "https://skullgirlsmobile.wikia.com/wiki",
-                wikiaPaths[key]
+                wikiaPaths[key] + "#Tips_and_Tricks"
             ].join("/");
         return wikia;
     }
