@@ -113,8 +113,9 @@ var wikiaPaths = { /* from English corpus */
 };
 
 var cards = [];
-var updateCards;
+var filterCards;
 var sortBasis;
+var updateCards;
 
 function loadJSON(path) {
     function request(resolve, reject) {
@@ -328,6 +329,33 @@ function initCollection(responses) {
     }
 }
 
+function formatNumbers(text) {
+    return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
+}
+
+function format(template, substitutions) {
+    var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
+    var formatted = template;
+    if (matches) {
+        for (var match of matches) {
+            var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
+            var substitute = Math.abs(substitutions[index]);
+            if (match.includes("%}")) {
+                substitute *= 100;
+            }
+            substitute = Math.round(substitute * 100) / 100; /* round to nearest 100th */
+            if (match.includes("%")) {
+                substitute += "%";
+            }
+            formatted = formatted.replace(match, substitute);
+        }
+    }
+    else {
+        console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
+    }
+    return formatNumbers(formatted);
+}
+
 function initLanguageMenu() {
     var buttonSet = document.getElementById("language-menu");
     var buttons = buttonSet.getElementsByTagName("input");
@@ -479,6 +507,260 @@ function initDock() {
     savedButton.click();
 }
 
+function initFilterMenu() {
+    var searchbox = document.getElementById("searchbox");
+    var searchVN = document.getElementById("search-vn");
+    var searchCA = document.getElementById("search-ca");
+    var searchSA = document.getElementById("search-sa");
+    var searchMA = document.getElementById("search-ma");
+
+    var filterCancel = document.getElementById("filter-cancel");
+
+    var filterBronze = document.getElementById("filter-bronze");
+    var filterSilver = document.getElementById("filter-silver");
+    var filterGold = document.getElementById("filter-gold");
+    var filterDiamond = document.getElementById("filter-diamond");
+
+    var filterFire = document.getElementById("filter-fire");
+    var filterWater = document.getElementById("filter-water");
+    var filterWind = document.getElementById("filter-wind");
+    var filterLight = document.getElementById("filter-light");
+    var filterDark = document.getElementById("filter-dark");
+    var filterNeutral = document.getElementById("filter-neutral");
+
+    var filterBE = document.getElementById("filter-be");
+    var filterBB = document.getElementById("filter-bb");
+    var filterCE = document.getElementById("filter-ce");
+    var filterDO = document.getElementById("filter-do");
+    var filterEL = document.getElementById("filter-el");
+    var filterFI = document.getElementById("filter-fi");
+    var filterPW = document.getElementById("filter-pw");
+    var filterPA = document.getElementById("filter-pa");
+    var filterPE = document.getElementById("filter-pe");
+    var filterMF = document.getElementById("filter-mf");
+    var filterSQ = document.getElementById("filter-sq");
+    var filterVA = document.getElementById("filter-va");
+
+    function updateFilterCancel() {
+        if (
+            filterBronze.checked ||
+            filterSilver.checked ||
+            filterGold.checked ||
+            filterDiamond.checked ||
+            filterFire.checked ||
+            filterWater.checked ||
+            filterWind.checked ||
+            filterLight.checked ||
+            filterDark.checked ||
+            filterNeutral.checked ||
+            filterBE.checked ||
+            filterBB.checked ||
+            filterCE.checked ||
+            filterDO.checked ||
+            filterEL.checked ||
+            filterFI.checked ||
+            filterPW.checked ||
+            filterPA.checked ||
+            filterPE.checked ||
+            filterMF.checked ||
+            filterSQ.checked ||
+            filterVA.checked
+        ) {
+            filterCancel.checked = false;
+        }
+        else {
+            filterCancel.checked = true;
+        }
+    }
+
+    function sanitize(text) {
+        return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/, " ");
+    }
+
+    function removePlaceholders(template) {
+        return template.replace(/{\d+(?::\d+)?%?}%?/g, "");
+    }
+
+    function searchCondition(card) {
+        if (!searchbox.value) {
+            return true;
+        }
+        var key = card.id;
+        var query = sanitize(searchbox.value);
+        if (searchVN.checked) {
+            return sanitize(corpus[variants[key].name]).includes(query);
+        }
+        else if (searchCA.checked) {
+            return removePlaceholders(sanitize(corpus[fighters[variants[key].base].ca.description])).includes(query);
+        }
+        else if (searchSA.checked) {
+            var satisfiedSA = false;
+            for (var feature of variants[key].sa.features) {
+                satisfiedSA |= removePlaceholders(sanitize(corpus[feature.description])).includes(query);
+            }
+            return satisfiedSA;
+        }
+        else if (searchMA.checked) {
+            var satisfiedMA = false;
+            for (var feature of fighters[variants[key].base].ma.features) {
+                satisfiedMA |= removePlaceholders(sanitize(corpus[feature.description])).includes(query);
+            }
+            return satisfiedMA;
+        }
+        return false;
+    }
+
+    function tierCondition(card) {
+        if (
+            !filterBronze.checked &&
+            !filterSilver.checked &&
+            !filterGold.checked &&
+            !filterDiamond.checked
+        ) {
+            return true;
+        }
+        var key = card.id;
+        return (
+            (filterBronze.checked && variants[key].tier == 0) ||
+            (filterSilver.checked && variants[key].tier == 1) ||
+            (filterGold.checked && variants[key].tier == 2) ||
+            (filterDiamond.checked && variants[key].tier == 3)
+        );
+    }
+
+    function elementCondition(card) {
+        if (
+            !filterFire.checked &&
+            !filterWater.checked &&
+            !filterWind.checked &&
+            !filterLight.checked &&
+            !filterDark.checked &&
+            !filterNeutral.checked
+        ) {
+            return true;
+        }
+        var key = card.id;
+        return (
+            (filterFire.checked && variants[key].element == 1) ||
+            (filterWater.checked && variants[key].element == 2) ||
+            (filterWind.checked && variants[key].element == 3) ||
+            (filterLight.checked && variants[key].element == 5) ||
+            (filterDark.checked && variants[key].element == 4) ||
+            (filterNeutral.checked && variants[key].element == 0)
+        );
+    }
+
+    function fighterCondition(card) {
+        if (
+            !filterBE.checked &&
+            !filterBB.checked &&
+            !filterCE.checked &&
+            !filterDO.checked &&
+            !filterEL.checked &&
+            !filterFI.checked &&
+            !filterPW.checked &&
+            !filterPA.checked &&
+            !filterPE.checked &&
+            !filterMF.checked &&
+            !filterSQ.checked &&
+            !filterVA.checked
+        ) {
+            return true;
+        }
+        var key = card.id;
+        return (
+            (filterBE.checked && variants[key].base == "be") ||
+            (filterBB.checked && variants[key].base == "bb") ||
+            (filterCE.checked && variants[key].base == "ce") ||
+            (filterDO.checked && variants[key].base == "do") ||
+            (filterEL.checked && variants[key].base == "el") ||
+            (filterFI.checked && variants[key].base == "fi") ||
+            (filterPW.checked && variants[key].base == "pw") ||
+            (filterPA.checked && variants[key].base == "pa") ||
+            (filterPE.checked && variants[key].base == "pe") ||
+            (filterMF.checked && variants[key].base == "mf") ||
+            (filterSQ.checked && variants[key].base == "sq") ||
+            (filterVA.checked && variants[key].base == "va")
+        );
+    }
+
+    filterCards = function () {
+        for (var card of cards) {
+            if (
+                searchCondition(card) &&
+                tierCondition(card) &&
+                elementCondition(card) &&
+                fighterCondition(card)
+            ) {
+                card.classList.remove("hidden");
+            }
+            else {
+                card.classList.add("hidden");
+            }
+        }
+        updateFilterCancel();
+    }
+
+    function cancelFilters() {
+        filterBronze.checked = false;
+        filterSilver.checked = false;
+        filterGold.checked = false;
+        filterDiamond.checked = false;
+        filterFire.checked = false;
+        filterWater.checked = false;
+        filterWind.checked = false;
+        filterLight.checked = false;
+        filterDark.checked = false;
+        filterNeutral.checked = false;
+        filterBE.checked = false;
+        filterBB.checked = false;
+        filterCE.checked = false;
+        filterDO.checked = false;
+        filterEL.checked = false;
+        filterFI.checked = false;
+        filterPW.checked = false;
+        filterPA.checked = false;
+        filterPE.checked = false;
+        filterMF.checked = false;
+        filterSQ.checked = false;
+        filterVA.checked = false;
+        filterCards();
+    }
+
+    searchbox.addEventListener("input", filterCards);
+    searchVN.addEventListener("change", filterCards);
+    searchCA.addEventListener("change", filterCards);
+    searchSA.addEventListener("change", filterCards);
+    searchMA.addEventListener("change", filterCards);
+
+    filterCancel.addEventListener("change", cancelFilters);
+    filterBronze.addEventListener("change", filterCards);
+    filterSilver.addEventListener("change", filterCards);
+    filterGold.addEventListener("change", filterCards);
+    filterDiamond.addEventListener("change", filterCards);
+    filterFire.addEventListener("change", filterCards);
+    filterWater.addEventListener("change", filterCards);
+    filterWind.addEventListener("change", filterCards);
+    filterLight.addEventListener("change", filterCards);
+    filterDark.addEventListener("change", filterCards);
+    filterNeutral.addEventListener("change", filterCards);
+    filterBE.addEventListener("change", filterCards);
+    filterBB.addEventListener("change", filterCards);
+    filterCE.addEventListener("change", filterCards);
+    filterDO.addEventListener("change", filterCards);
+    filterEL.addEventListener("change", filterCards);
+    filterFI.addEventListener("change", filterCards);
+    filterPW.addEventListener("change", filterCards);
+    filterPA.addEventListener("change", filterCards);
+    filterPE.addEventListener("change", filterCards);
+    filterMF.addEventListener("change", filterCards);
+    filterSQ.addEventListener("change", filterCards);
+    filterVA.addEventListener("change", filterCards);
+
+    searchVN.checked = true;
+    filterCancel.click();
+}
+
 function sortCards() {
     cards.sort(sortBasis);
     for (var card of cards) {
@@ -486,31 +768,96 @@ function sortCards() {
     }
 }
 
-function formatNumbers(text) {
-    return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
-}
+function initSortMenu() {
+    var sortFighterScore = document.getElementById("sort-fs");
+    var sortAttack = document.getElementById("sort-atk");
+    var sortHealth = document.getElementById("sort-hp");
+    var sortAlphabetical = document.getElementById("sort-abc");
+    var sortElement = document.getElementById("sort-element");
+    var sortTier = document.getElementById("sort-tier");
 
-function format(template, substitutions) {
-    var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
-    var formatted = template;
-    if (matches) {
-        for (var match of matches) {
-            var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
-            var substitute = Math.abs(substitutions[index]);
-            if (match.includes("%}")) {
-                substitute *= 100;
-            }
-            substitute = Math.round(substitute * 100) / 100; /* round to nearest 100th */
-            if (match.includes("%")) {
-                substitute += "%";
-            }
-            formatted = formatted.replace(match, substitute);
+    var savedBasis = localStorage.getItem("basis") || "sort-fs";
+    var savedButton = document.getElementById(savedBasis);
+
+    function alphabeticalBasis(a, b) {
+        var A = corpus[fighters[variants[a.id].base].name] + corpus[variants[a.id].name];
+        var B = corpus[fighters[variants[b.id].base].name] + corpus[variants[b.id].name];
+        return A > B ? 1 : A < B ? -1 : 0;
+    }
+
+    function getStatValue(card, type) {
+        var statValue = card.getElementsByClassName(type + "-value")[0];
+        return statValue.dataset.value;
+    }
+
+    function fighterScoreBasis(a, b) {
+        var A = getStatValue(a, "fs");
+        var B = getStatValue(b, "fs");
+        var C = B - A;
+        if (C == 0) {
+            return alphabeticalBasis(a, b);
+        }
+        return C;
+    }
+
+    function attackBasis(a, b) {
+        var A = getStatValue(a, "atk");
+        var B = getStatValue(b, "atk");
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
+        }
+        return C;
+    }
+
+    function healthBasis(a, b) {
+        var A = getStatValue(a, "hp");
+        var B = getStatValue(b, "hp");
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
+        }
+        return C;
+    }
+
+    function elementBasis(a, b) {
+        var elementMap = [0, 5, 3, 4, 1, 2];
+        var A = elementMap[variants[a.id].element];
+        var B = elementMap[variants[b.id].element];
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
+        }
+        return C;
+    }
+
+    function tierBasis(a, b) {
+        var A = variants[a.id].tier;
+        var B = variants[b.id].tier;
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
+        }
+        return C;
+    }
+
+    function sorter(basis) {
+        return function () {
+            sortBasis = basis;
+            sortCards();
+            localStorage.setItem("basis", this.id);
         }
     }
-    else {
-        console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
-    }
-    return formatNumbers(formatted);
+
+    sortFighterScore.addEventListener("change", sorter(fighterScoreBasis));
+    sortAttack.addEventListener("change", sorter(attackBasis));
+    sortHealth.addEventListener("change", sorter(healthBasis));
+    sortAlphabetical.addEventListener("change", sorter(alphabeticalBasis));
+    sortElement.addEventListener("change", sorter(elementBasis));
+    sortTier.addEventListener("change", sorter(tierBasis));
+
+    savedButton.checked = false; /* resets radio so change event can be triggered */
+    savedButton.click();
 }
 
 function initOptionsMenu() {
@@ -554,10 +901,15 @@ function initOptionsMenu() {
             var hp = Math.ceil(baseHP + baseHP * (levelTiers[j].value - 1) / 5);
             var fs = Math.ceil((atk + hp / 6) * 7 / 10);
 
-            atkValue.innerHTML = atk.toLocaleString();
-            hpValue.innerHTML = hp.toLocaleString();
-            fsValue.innerHTML = fs.toLocaleString();
+            atkValue.dataset.value = atk;
+            hpValue.dataset.value = hp;
+            fsValue.dataset.value = fs;
+
+            atkValue.innerHTML = atk.toLocaleString("en-US");
+            hpValue.innerHTML = hp.toLocaleString("en-US");
+            fsValue.innerHTML = fs.toLocaleString("en-US");
         }
+        filterCards(); /* for the searchbox filter when language changes*/
         sortCards();
     }
 
@@ -843,307 +1195,12 @@ function initOptionsMenu() {
     optionDefault.click();
 }
 
-function initFilterMenu() {
-    var filterCancel = document.getElementById("filter-cancel");
-
-    var filterBronze = document.getElementById("filter-bronze");
-    var filterSilver = document.getElementById("filter-silver");
-    var filterGold = document.getElementById("filter-gold");
-    var filterDiamond = document.getElementById("filter-diamond");
-
-    var filterFire = document.getElementById("filter-fire");
-    var filterWater = document.getElementById("filter-water");
-    var filterWind = document.getElementById("filter-wind");
-    var filterLight = document.getElementById("filter-light");
-    var filterDark = document.getElementById("filter-dark");
-    var filterNeutral = document.getElementById("filter-neutral");
-
-    var filterBE = document.getElementById("filter-be");
-    var filterBB = document.getElementById("filter-bb");
-    var filterCE = document.getElementById("filter-ce");
-    var filterDO = document.getElementById("filter-do");
-    var filterEL = document.getElementById("filter-el");
-    var filterFI = document.getElementById("filter-fi");
-    var filterPW = document.getElementById("filter-pw");
-    var filterPA = document.getElementById("filter-pa");
-    var filterPE = document.getElementById("filter-pe");
-    var filterMF = document.getElementById("filter-mf");
-    var filterSQ = document.getElementById("filter-sq");
-    var filterVA = document.getElementById("filter-va");
-
-    function updateFilterCancel() {
-        if (
-            filterBronze.checked ||
-            filterSilver.checked ||
-            filterGold.checked ||
-            filterDiamond.checked ||
-            filterFire.checked ||
-            filterWater.checked ||
-            filterWind.checked ||
-            filterLight.checked ||
-            filterDark.checked ||
-            filterNeutral.checked ||
-            filterBE.checked ||
-            filterBB.checked ||
-            filterCE.checked ||
-            filterDO.checked ||
-            filterEL.checked ||
-            filterFI.checked ||
-            filterPW.checked ||
-            filterPA.checked ||
-            filterPE.checked ||
-            filterMF.checked ||
-            filterSQ.checked ||
-            filterVA.checked
-        ) {
-            filterCancel.checked = false;
-        }
-        else {
-            filterCancel.checked = true;
-        }
-    }
-
-    function cancelFilters() {
-        filterBronze.checked = false;
-        filterSilver.checked = false;
-        filterGold.checked = false;
-        filterDiamond.checked = false;
-        filterFire.checked = false;
-        filterWater.checked = false;
-        filterWind.checked = false;
-        filterLight.checked = false;
-        filterDark.checked = false;
-        filterNeutral.checked = false;
-        filterBE.checked = false;
-        filterBB.checked = false;
-        filterCE.checked = false;
-        filterDO.checked = false;
-        filterEL.checked = false;
-        filterFI.checked = false;
-        filterPW.checked = false;
-        filterPA.checked = false;
-        filterPE.checked = false;
-        filterMF.checked = false;
-        filterSQ.checked = false;
-        filterVA.checked = false;
-        filterCards();
-    }
-
-    function tierCondition(card) {
-        if (
-            !filterBronze.checked &&
-            !filterSilver.checked &&
-            !filterGold.checked &&
-            !filterDiamond.checked
-        ) {
-            return true;
-        }
-        var key = card.id;
-        return (
-            (filterBronze.checked && variants[key].tier == 0) ||
-            (filterSilver.checked && variants[key].tier == 1) ||
-            (filterGold.checked && variants[key].tier == 2) ||
-            (filterDiamond.checked && variants[key].tier == 3)
-        );
-    }
-
-    function elementCondition(card) {
-        if (
-            !filterFire.checked &&
-            !filterWater.checked &&
-            !filterWind.checked &&
-            !filterLight.checked &&
-            !filterDark.checked &&
-            !filterNeutral.checked
-        ) {
-            return true;
-        }
-        var key = card.id;
-        return (
-            (filterFire.checked && variants[key].element == 1) ||
-            (filterWater.checked && variants[key].element == 2) ||
-            (filterWind.checked && variants[key].element == 3) ||
-            (filterLight.checked && variants[key].element == 5) ||
-            (filterDark.checked && variants[key].element == 4) ||
-            (filterNeutral.checked && variants[key].element == 0)
-        );
-    }
-
-    function fighterCondition(card) {
-        if (
-            !filterBE.checked &&
-            !filterBB.checked &&
-            !filterCE.checked &&
-            !filterDO.checked &&
-            !filterEL.checked &&
-            !filterFI.checked &&
-            !filterPW.checked &&
-            !filterPA.checked &&
-            !filterPE.checked &&
-            !filterMF.checked &&
-            !filterSQ.checked &&
-            !filterVA.checked
-        ) {
-            return true;
-        }
-        var key = card.id;
-        return (
-            (filterBE.checked && variants[key].base == "be") ||
-            (filterBB.checked && variants[key].base == "bb") ||
-            (filterCE.checked && variants[key].base == "ce") ||
-            (filterDO.checked && variants[key].base == "do") ||
-            (filterEL.checked && variants[key].base == "el") ||
-            (filterFI.checked && variants[key].base == "fi") ||
-            (filterPW.checked && variants[key].base == "pw") ||
-            (filterPA.checked && variants[key].base == "pa") ||
-            (filterPE.checked && variants[key].base == "pe") ||
-            (filterMF.checked && variants[key].base == "mf") ||
-            (filterSQ.checked && variants[key].base == "sq") ||
-            (filterVA.checked && variants[key].base == "va")
-        );
-    }
-
-    function filterCards() {
-        for (var card of cards) {
-            if (
-                tierCondition(card) &&
-                elementCondition(card) &&
-                fighterCondition(card)
-            ) {
-                card.classList.remove("hidden");
-            }
-            else {
-                card.classList.add("hidden");
-            }
-        }
-        updateFilterCancel();
-    }
-
-    filterCancel.addEventListener("change", cancelFilters);
-    filterBronze.addEventListener("change", filterCards);
-    filterSilver.addEventListener("change", filterCards);
-    filterGold.addEventListener("change", filterCards);
-    filterDiamond.addEventListener("change", filterCards);
-    filterFire.addEventListener("change", filterCards);
-    filterWater.addEventListener("change", filterCards);
-    filterWind.addEventListener("change", filterCards);
-    filterLight.addEventListener("change", filterCards);
-    filterDark.addEventListener("change", filterCards);
-    filterNeutral.addEventListener("change", filterCards);
-    filterBE.addEventListener("change", filterCards);
-    filterBB.addEventListener("change", filterCards);
-    filterCE.addEventListener("change", filterCards);
-    filterDO.addEventListener("change", filterCards);
-    filterEL.addEventListener("change", filterCards);
-    filterFI.addEventListener("change", filterCards);
-    filterPW.addEventListener("change", filterCards);
-    filterPA.addEventListener("change", filterCards);
-    filterPE.addEventListener("change", filterCards);
-    filterMF.addEventListener("change", filterCards);
-    filterSQ.addEventListener("change", filterCards);
-    filterVA.addEventListener("change", filterCards);
-
-    filterCancel.click();
-}
-
-function initSortMenu() {
-    var sortFighterScore = document.getElementById("sort-fs");
-    var sortAttack = document.getElementById("sort-atk");
-    var sortHealth = document.getElementById("sort-hp");
-    var sortAlphabetical = document.getElementById("sort-abc");
-    var sortElement = document.getElementById("sort-element");
-    var sortTier = document.getElementById("sort-tier");
-
-    var savedBasis = localStorage.getItem("basis") || "sort-fs";
-    var savedButton = document.getElementById(savedBasis);
-
-    function alphabeticalBasis(a, b) {
-        var A = corpus[fighters[variants[a.id].base].name] + corpus[variants[a.id].name];
-        var B = corpus[fighters[variants[b.id].base].name] + corpus[variants[b.id].name];
-        return A > B ? 1 : A < B ? -1 : 0;
-    }
-
-    function getStatValue(card, type) {
-        var statValue = card.getElementsByClassName(type + "-value")[0];
-        return statValue.innerText.replace(/\D/g, "");
-    }
-
-    function fighterScoreBasis(a, b) {
-        var A = getStatValue(a, "fs");
-        var B = getStatValue(b, "fs");
-        var C = B - A;
-        if (C == 0) {
-            return alphabeticalBasis(a, b);
-        }
-        return C;
-    }
-
-    function attackBasis(a, b) {
-        var A = getStatValue(a, "atk");
-        var B = getStatValue(b, "atk");
-        var C = B - A;
-        if (C == 0) {
-            return fighterScoreBasis(a, b);
-        }
-        return C;
-    }
-
-    function healthBasis(a, b) {
-        var A = getStatValue(a, "hp");
-        var B = getStatValue(b, "hp");
-        var C = B - A;
-        if (C == 0) {
-            return fighterScoreBasis(a, b);
-        }
-        return C;
-    }
-
-    function elementBasis(a, b) {
-        var elementMap = [0, 5, 3, 4, 1, 2];
-        var A = elementMap[variants[a.id].element];
-        var B = elementMap[variants[b.id].element];
-        var C = B - A;
-        if (C == 0) {
-            return fighterScoreBasis(a, b);
-        }
-        return C;
-    }
-
-    function tierBasis(a, b) {
-        var A = variants[a.id].tier;
-        var B = variants[b.id].tier;
-        var C = B - A;
-        if (C == 0) {
-            return fighterScoreBasis(a, b);
-        }
-        return C;
-    }
-
-    function sorter(basis) {
-        return function () {
-            sortBasis = basis;
-            sortCards();
-            localStorage.setItem("basis", this.id);
-        }
-    }
-
-    sortFighterScore.addEventListener("change", sorter(fighterScoreBasis));
-    sortAttack.addEventListener("change", sorter(attackBasis));
-    sortHealth.addEventListener("change", sorter(healthBasis));
-    sortAlphabetical.addEventListener("change", sorter(alphabeticalBasis));
-    sortElement.addEventListener("change", sorter(elementBasis));
-    sortTier.addEventListener("change", sorter(tierBasis));
-
-    savedButton.checked = false; /* resets radio so change event can be triggered */
-    savedButton.click();
-}
-
 function initialize() {
     function initFooter() {
         initDock();
-        initOptionsMenu();
         initFilterMenu();
         initSortMenu();
+        initOptionsMenu();
     }
 
     toggleLoadingScreen(true);
