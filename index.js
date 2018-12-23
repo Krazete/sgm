@@ -1046,6 +1046,7 @@ function initSortMenu() {
     sortElement.addEventListener("change", sorter(elementBasis));
     sortTier.addEventListener("change", sorter(tierBasis));
 
+    savedButton.checked = false; /* because radio button state is saved */
     savedButton.click();
 }
 

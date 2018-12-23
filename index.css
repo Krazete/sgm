@@ -288,7 +288,7 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 
 .glowing {
     filter: drop-shadow(0 0 6px white);
-    /* don't use this too much; excessive drop-shadow causes major visual glitches in ios */
+    /* use sparingly; excessive drop-shadow causes major visual glitches in ios */
 }
 
 .underlined {
