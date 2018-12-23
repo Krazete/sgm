@@ -2,7 +2,7 @@ var fighters, variants, corpus;
 
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
-var wikia_paths = { /* from English corpus */
+var wikiaPaths = { /* from English corpus */
     "nEgrets": "No Egrets",
     "tAFolks": "That's All Folks!",
     "nSense": "Nunsense",
@@ -279,7 +279,7 @@ function initCollection(responses) {
             wikia.target = "_blank";
             wikia.href = [
                 "https://skullgirlsmobile.wikia.com/wiki",
-                wikia_paths[key]
+                wikiaPaths[key]
             ].join("/");
         return wikia;
     }

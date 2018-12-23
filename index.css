@@ -569,10 +569,11 @@ html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
     width: 100%;
     font-size: x-large;
     text-align: center;
+    line-height: 1.3em;
     border: none;
     border-radius: 5px;
     box-shadow: inset 0 0 10px 1px black;
-    padding: 4px 0;
+    padding-top: 0.2em;
     z-index: 1;
 }
 #searchbox:focus {
