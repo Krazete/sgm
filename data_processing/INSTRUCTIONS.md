@@ -28,7 +28,7 @@
 5. Click `Filtered assets` in the `Export` menu. Save to a new folder named `sgm_exports`.
 
 ## Extract Scripts
-1. Run Il2CppDumper and open `sgm_decoded/lib/x86/libil2cpp.so` and then `sgm_decoded/assets/bin/Data/Managed/Metadata/global-metadata.dat` when prompted. Select mode 4 and note the new `DummyDll` folder created in the same directory as the Il2CppDumper program.
+1. Run Il2CppDumper and open `sgm_decoded/lib/x86/libil2cpp.so` and then `sgm_decoded/assets/bin/Data/Managed/Metadata/global-metadata.dat` when prompted. Select mode 4 and note the new `DummyDll` folder, created in the same directory as the Il2CppDumper program.
 2. Run UABE and open `sgm_decoded/assets/bin/data/sharedassets0.assets.split0`.
 3. Click `Get script information` in the `Tools` menu. Several windows will appear sequentially.
 4. Navigate to the `DummyDll` folder and select the file that appears (if no file appears, click Cancel). Repeat. Afterwards, there will be a window detailing errors; click OK.
@@ -60,11 +60,13 @@ Note for the following that Variant files are the ones that have `_B_`, `_S_`, `
 4. Manually update all Variant files, including the path ID embedded in the filename.
 5. Use old Variant files to create new files for new Variants that didn't exist in 2.6.1.
 
-The directory `data_processing/__FAKE_Variant_MonoBehaviour` and the script `data_processing/faker.py` within this repository were created to ease this process, recreating only the data which is necessary for the website. The `sgm_exports` folder must be within the `data_processing` folder to run `faker.py`.
+The directory `__FAKE_Variant_MonoBehaviour` and the script `faker.py` within this folder were created to ease this process, recreating only the data which is necessary for the website. The `sgm_exports` folder must be within this folder to run `faker.py`.
 
-This removes the APK 2.6.1 steps, but still requires the DevX steps to update the `faker.py` data.
+This removes the APK 2.6.1 steps, but still requires the DevX steps to manually update the `faker.py` reference data.
+
+The scripts within this folder must have this folder's parent directory set as the working directory in order to run. The `data` folder located in this folder's parent directory must also be created before running `main.py`.
 
 #### Notes
 - AssetStudio is used for extracting most files because it's easier to use and exports assets in a nicely structured way.
-- UABE is used for extracting scripts because AssetStudio always misses important scripts for some reason.
+- UABE is used for extracting scripts because AssetStudio exports scripts with missing data.
 - The palletized portraits don't appear to be within the APK.
