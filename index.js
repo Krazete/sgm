@@ -358,7 +358,7 @@ function format(template, substitutions) {
 
 function initLanguageMenu() {
     var buttonSet = document.getElementById("language-menu");
-    var buttons = buttonSet.getElementsByTagName("input");
+    var buttons = Array.from(buttonSet.getElementsByTagName("input"));
 
     var savedLanguage = localStorage.getItem("language") || "en";
     var savedButton = document.getElementById(savedLanguage);
@@ -397,11 +397,11 @@ function initLanguageMenu() {
         localStorage.setItem("language", language);
     }
 
-    document.documentElement.lang = savedLanguage;
-    if (!savedButton) {
+    if (!buttons.includes(savedButton)) {
         savedLanguage = "en";
         savedButton = document.getElementById("en");
     }
+    document.documentElement.lang = savedLanguage;
     savedButton.checked = true;
 
     for (var button of buttons) {
@@ -422,7 +422,7 @@ function initDock() {
     var filterMenu = document.getElementById("filter-menu");
     var sortMenu = document.getElementById("sort-menu");
 
-    var savedZoom = localStorage.getItem("zoom") || "dock";
+    var savedZoom = localStorage.getItem("zoom");
     var savedButton = document.getElementById(savedZoom);
 
     function getScrollRatio() {
@@ -440,7 +440,7 @@ function initDock() {
         if (document.body.classList.contains("zoomed-in")) {
             document.body.classList.remove("zoomed-in");
             zoomIn.classList.remove("pressed");
-            localStorage.setItem("zoom", "dock");
+            localStorage.removeItem("zoom");
         }
         else {
             document.body.classList.add("zoomed-out");
@@ -455,7 +455,7 @@ function initDock() {
         if (document.body.classList.contains("zoomed-out")) {
             document.body.classList.remove("zoomed-out");
             zoomOut.classList.remove("pressed");
-            localStorage.setItem("zoom", "dock");
+            localStorage.removeItem("zoom");
         }
         else {
             document.body.classList.add("zoomed-in");
@@ -504,7 +504,9 @@ function initDock() {
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
 
-    savedButton.click();
+    if (savedButton == zoomOut || savedButton == zoomIn) {
+        savedButton.click();
+    }
 }
 
 function initFilterMenu() {
@@ -856,6 +858,16 @@ function initSortMenu() {
     sortElement.addEventListener("change", sorter(elementBasis));
     sortTier.addEventListener("change", sorter(tierBasis));
 
+    if (![
+        sortFighterScore,
+        sortAttack,
+        sortHealth,
+        sortAlphabetical,
+        sortElement,
+        sortTier
+    ].includes(savedButton)) {
+        savedButton = sortFighterScore;
+    }
     savedButton.checked = false; /* resets radio so change event can be triggered */
     savedButton.click();
 }
