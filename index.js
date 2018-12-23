@@ -115,7 +115,7 @@ var wikiaPaths = { /* from English corpus */
 var cards = [];
 var updateCards;
 var filterList = []; /* todo: this comes later */
-var fighterScoreBasis, attackBasis, healthBasis, sortBasis;
+var sortBasis;
 
 function loadJSON(path) {
     function request(resolve, reject) {
@@ -365,10 +365,10 @@ function initLanguageMenu() {
 
     function setLanguage() {
         var language = this.id;
-        localStorage.setItem("language", language);
         document.documentElement.lang = language;
         toggleLoadingScreen(true);
         loadJSON("data/" + language + ".json").then(updateCardConstants).then(updateCards).then(toggleLoadingScreen);
+        localStorage.setItem("language", language);
     }
 
     document.documentElement.lang = savedLanguage;
@@ -396,6 +396,9 @@ function initDock() {
     var filterMenu = document.getElementById("filter-menu");
     var sortMenu = document.getElementById("sort-menu");
 
+    var savedZoom = localStorage.getItem("zoom") || "dock";
+    var savedButton = document.getElementById(savedZoom);
+
     function getScrollRatio() {
         var scrollHeight = document.documentElement.scrollHeight - innerHeight;
         return scrollY / scrollHeight;
@@ -411,10 +414,12 @@ function initDock() {
         if (document.body.classList.contains("zoomed-in")) {
             document.body.classList.remove("zoomed-in");
             zoomIn.classList.remove("pressed");
+            localStorage.setItem("zoom", "dock");
         }
         else {
             document.body.classList.add("zoomed-out");
             zoomOut.classList.add("pressed");
+            localStorage.setItem("zoom", this.id);
         }
         setScrollRatio(scrollRatio);
     }
@@ -424,21 +429,14 @@ function initDock() {
         if (document.body.classList.contains("zoomed-out")) {
             document.body.classList.remove("zoomed-out");
             zoomOut.classList.remove("pressed");
+            localStorage.setItem("zoom", "dock");
         }
         else {
             document.body.classList.add("zoomed-in");
             zoomIn.classList.add("pressed");
+            localStorage.setItem("zoom", this.id);
         }
         setScrollRatio(scrollRatio);
-    }
-
-    function resetZoom() {
-        if (document.body.classList.contains("zoomed-out")) {
-            increaseZoom();
-        }
-        else if (document.body.classList.contains("zoomed-in")) {
-            decreaseZoom();
-        }
     }
 
     function toggleFighterOptions() {
@@ -476,10 +474,11 @@ function initDock() {
 
     zoomOut.addEventListener("click", decreaseZoom);
     zoomIn.addEventListener("click", increaseZoom);
-    window.addEventListener("beforeunload", resetZoom); /* todo: fix for ios */
 
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
+
+    savedButton.click();
 }
 
 function formatNumbers(text) {
@@ -509,12 +508,11 @@ function format(template, substitutions) {
     return formatNumbers(formatted);
 }
 
-function sortCards(basis) {
-    cards.sort(basis);
+function sortCards() {
+    cards.sort(sortBasis);
     for (var card of cards) {
         card.parentElement.appendChild(card);
     }
-    sortBasis = basis;
 }
 
 function initOptionsMenu() {
@@ -562,13 +560,7 @@ function initOptionsMenu() {
             hpValue.innerHTML = hp.toLocaleString();
             fsValue.innerHTML = fs.toLocaleString();
         }
-        if (
-            sortBasis == fighterScoreBasis ||
-            sortBasis == attackBasis ||
-            sortBasis == healthBasis
-        ) {
-            sortCards(sortBasis);
-        }
+        sortCards();
     }
 
     function updateCardSAs() {
@@ -978,8 +970,8 @@ function initSortMenu() {
     var savedButton = document.getElementById(savedBasis);
 
     function alphabeticalBasis(a, b) {
-        var A = fighters[variants[a.id].base].name + variants[a.id].name;
-        var B = fighters[variants[b.id].base].name + variants[b.id].name;
+        var A = corpus[fighters[variants[a.id].base].name] + corpus[variants[a.id].name];
+        var B = corpus[fighters[variants[b.id].base].name] + corpus[variants[b.id].name];
         return A > B ? 1 : A < B ? -1 : 0;
     }
 
@@ -988,7 +980,7 @@ function initSortMenu() {
         return statValue.innerText.replace(/\D/g, "");
     }
 
-    fighterScoreBasis = function (a, b) {
+    function fighterScoreBasis(a, b) {
         var A = getStatValue(a, "fs");
         var B = getStatValue(b, "fs");
         var C = B - A;
@@ -998,7 +990,7 @@ function initSortMenu() {
         return C;
     }
 
-    attackBasis = function (a, b) {
+    function attackBasis(a, b) {
         var A = getStatValue(a, "atk");
         var B = getStatValue(b, "atk");
         var C = B - A;
@@ -1008,7 +1000,7 @@ function initSortMenu() {
         return C;
     }
 
-    healthBasis = function (a, b) {
+    function healthBasis(a, b) {
         var A = getStatValue(a, "hp");
         var B = getStatValue(b, "hp");
         var C = B - A;
@@ -1041,8 +1033,9 @@ function initSortMenu() {
 
     function sorter(basis) {
         return function () {
+            sortBasis = basis;
+            sortCards();
             localStorage.setItem("basis", this.id);
-            sortCards(basis);
         }
     }
 
