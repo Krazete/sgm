@@ -17,6 +17,8 @@ common = [
     'Stat_Lvl', # UNUSED
     'Character_Evolve_Button',
     'Character_Sorting_Level',
+    'None',
+    'Gear_Filter_All',
 
     'TeamSelect_Filter',
     'TeamSelect_Sort',
