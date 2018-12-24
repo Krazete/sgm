@@ -26,8 +26,8 @@ You can modify the tier, level, and ability levels of the displayed fighters fro
 When the tier or level settings are changed, the attack, health, and fighter score values on each card are recalculated.
 The formulas used in these calculations are as follows:
 
-* `ATK = CEIL(BASE_ATK + BASE_ATK * (TIER - 1) / 5)`
-* `HP = CEIL(BASE_HP + BASE_HP * (TIER - 1) / 5)`
+* `ATK = CEIL(BASE_ATK + BASE_ATK * (LVL - 1) / 5)`
+* `HP = CEIL(BASE_HP + BASE_HP * (LVL - 1) / 5)`
 * `FS = CEIL(ATK + HP / 6) * 7 / 10)`
 
 All `BASE_` values are hard-coded for every tier of every fighter.
