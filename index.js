@@ -260,7 +260,6 @@ function initCollection(responses) {
             }
             else { /* signature and marquee abilities */
                 for (var i = 0; i < abilityData.features.length; i++) {
-                    var feature = abilityData.features[i];
                     var description = document.createElement("div");
                         description.className = [
                             type + "-" + i,
@@ -323,7 +322,7 @@ function initCollection(responses) {
     }
 
     for (var key in variants) {
-        var card = createCard(key)
+        var card = createCard(key);
         collection.appendChild(card);
         cards.push(card);
     }
@@ -596,18 +595,18 @@ function initFilterMenu() {
             return removePlaceholders(sanitize(corpus[fighters[variants[key].base].ca.description])).includes(query);
         }
         else if (searchSA.checked) {
-            var satisfiedSA = false;
             for (var feature of variants[key].sa.features) {
-                satisfiedSA |= removePlaceholders(sanitize(corpus[feature.description])).includes(query);
+                if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+                    return true;
+                }
             }
-            return satisfiedSA;
         }
         else if (searchMA.checked) {
-            var satisfiedMA = false;
             for (var feature of fighters[variants[key].base].ma.features) {
-                satisfiedMA |= removePlaceholders(sanitize(corpus[feature.description])).includes(query);
+                if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+                    return true;
+                }
             }
-            return satisfiedMA;
         }
         return false;
     }
@@ -701,7 +700,7 @@ function initFilterMenu() {
             }
         }
         updateFilterCancel();
-    }
+    };
 
     function cancelFilters() {
         filterBronze.checked = false;
@@ -848,7 +847,7 @@ function initSortMenu() {
             sortBasis = basis;
             sortCards();
             localStorage.setItem("basis", this.id);
-        }
+        };
     }
 
     sortFighterScore.addEventListener("change", sorter(fighterScoreBasis));
@@ -960,7 +959,7 @@ function initOptionsMenu() {
         updateCardStats();
         updateCardSAs();
         updateCardMAs();
-    }
+    };
 
     function updatePresetButtons() {
         if (
@@ -1077,7 +1076,6 @@ function initOptionsMenu() {
 
     function getMaximumLevel() {
         var max = 1;
-        Math.max()
         if (evolveRange.value < 1 && max < levelBronze.value) {
             max = parseInt(levelBronze.value);
         }
