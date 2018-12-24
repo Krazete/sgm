@@ -25,6 +25,7 @@ You can modify the tier, level, and ability levels of the displayed fighters fro
 
 When the tier or level settings are changed, the attack, health, and fighter score values on each card are recalculated.
 The formulas used in these calculations are as follows:
+
 * `ATK = CEIL(BASE_ATK + BASE_ATK * (TIER - 1) / 5)`
 * `HP = CEIL(BASE_HP + BASE_HP * (TIER - 1) / 5)`
 * `FS = CEIL(ATK + HP / 6) * 7 / 10)`
@@ -61,6 +62,29 @@ You can search for characters based on their variant names or their ability desc
 Base fighter names, quotes, stats, and ability names are not included in these searches.
 The search query processing method is also very basic, simply removing extra spaces and converting to lowercase instead of separating the query into individual terms.
 
+##### Shorthand
+
+The variant data object keys are included in variant name searches because keys often include common shorthand.
+For example, the abbreviation BHD refers to Bad Hair Day Filia, whose data is stored with the key `bHDay`. The exceptions to this rule are as follows:
+
+* `wresX`: Wrestler X
+* `gJazz`: G.I. Jazz
+* `toad`: Toad Warrior
+* `fColor`: Myst-Match
+* `inDeni`: In Denile
+* `gloom`: Tomb & Gloom
+* `claw`: Claw & Order
+* `lucky`: Feline Lucky
+* `splash`: Hack n' Splash
+* `meow`: Meow & Furever
+* `rerun`: Rerun
+* `necroB`: Necrobreaker
+* `polter`: Poltergust
+
+Moreover, the natural diamonds do not have any officially defined IDs.
+I made up my own keys to use for them, consistent in format with most other official variant IDs.
+I have considered renaming the exceptions listed above to make searching easier, but I want to keep the data close to the original as possible.
+
 #### Locks
 
 The lock that appears on the top left corner of each card prevents the filters from hiding that card.
@@ -90,6 +114,11 @@ Your chosen zoom level is saved in your browser's local storage for future visit
 ### Wikia Links
 
 Every fighter variant has has a link on the top right corner of their card which redirects to the Tips and Tricks section of their official [Wikia](https://skullgirlsmobile.wikia.com/) page.
+
+This is possible because the Wikia contributors nearly always name the variant pages consistent with the official capitalization and punctuation.
+The only exception was the [Hack n' Splash](https://skullgirlsmobile.wikia.com/wiki/Hack_N%27_Splash) page, which had an erroneous uppercase "N" until I renamed it.
+
+If you notice a link is redirecting to a nonexistent Wikia page, please try to fix the page title or [notify me about it](#contact).
 
 ### Loading
 

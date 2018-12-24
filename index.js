@@ -589,7 +589,7 @@ function initFilterMenu() {
         var key = card.id;
         var query = sanitize(searchbox.value);
         if (searchVN.checked) {
-            return sanitize(corpus[variants[key].name]).includes(query);
+            return sanitize(key).includes(query) || sanitize(corpus[variants[key].name]).includes(query);
         }
         else if (searchCA.checked) {
             return removePlaceholders(sanitize(corpus[fighters[variants[key].base].ca.description])).includes(query);
