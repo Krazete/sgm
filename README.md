@@ -19,11 +19,11 @@ The translations are an exact copy of the text used in the corresponding version
 
 ### Options (Fighter Settings)
 
-You can modify the tier, level, and ability levels of the displayed fighters from this menu.
+You can modify the tier, level, still tree, and ability levels of the displayed fighters from this menu.
 
 #### Stats
 
-When the tier or level settings are changed, the attack, health, and fighter score values on each card are recalculated.
+When the tier, level, or skill tree settings are changed, the attack, health, and fighter score values on each card are recalculated.
 The formulas used in these calculations are as follows:
 
 * `ATK_BOOST = {NO_ATK_NODES: 1, ALL_ATK_NODES: 1.5}`
@@ -44,7 +44,7 @@ I then modified them until the results perfectly matched in-game stats.
 #### Abilities
 
 The Signature Ability and Marquee Ability settings allow you to preview fighters' abilities at each ability level.
-These settings do not affect the tier or level settings and are not considered in the calculation of fighters' stats.
+These settings do not affect the tier, level, or skill tree settings and are not considered in the calculation of fighters' stats.
 
 #### Preset Buttons
 The `X` button sets tier, level, signature, and marquee to the minimum level.  
