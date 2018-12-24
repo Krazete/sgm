@@ -13,7 +13,7 @@ If the website version is 3.0.0 but the latest game version is 3.0.2, the websit
 ### Language
 
 All of the language options available in the game are available on the website.
-The translations are an exact copy of the text used in the corresponding version of the game.
+Except for the terms `Fighter Gallery` and `Variant Name`, the translations are an exact copy of the text used in the corresponding version of the game.
 
 *Your chosen language option is saved in your browser's local storage for future visits.*
 

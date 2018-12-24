@@ -291,8 +291,8 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 
 .underlined {
     border-radius: 0 0 4px 4px;
+    border-top: 4px solid transparent;
     border-bottom: 4px solid #314c73;
-    margin-bottom: -4px;
 }
 
 #zoom {
