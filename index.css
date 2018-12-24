@@ -83,6 +83,7 @@ html[lang='ko'] .cinematic {
 }
 
 /* TODO: check if opera line is necessary */
+/* thanks to Divya Manian for help with this (http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html) */
 .bronze-gradient,
 .silver-gradient,
 .gold-gradient,
