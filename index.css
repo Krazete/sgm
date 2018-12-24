@@ -344,7 +344,7 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 }
 
 #options-menu.scroller > div {
-    grid-template-columns: max-content repeat(4, auto minmax(max-content, 1fr));
+    grid-template-columns: max-content repeat(5, auto minmax(max-content, 1fr));
 }
 
 #options-label:before {
@@ -431,26 +431,26 @@ html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
 }
 
 html[lang='en'] .none-label:before {content: 'NONE';}
-html[lang='pt-br'] .none-label:before {content: 'NENHUM';}
-html[lang='es'] .none-label:before {content: 'NADA';}
-html[lang='de'] .none-label:before {content: 'KEINER';}
-html[lang='ja'] .none-label:before {content: '\306a \3057 ';}
-html[lang='ko'] .none-label:before {content: '\c5c6 \c74c ';}
-html[lang='ru'] .none-label:before {content: '\041e \0422 \0421 \0423 \0422 \0421 \0422 \0412 \0423 \0415 \0422 ';}
 html[lang='fr'] .none-label:before {content: 'VIDE';}
+html[lang='es'] .none-label:before {content: 'NADA';}
+html[lang='ru'] .none-label:before {content: '\041e \0422 \0421 \0423 \0422 \0421 \0422 \0412 \0423 \0415 \0422 ';}
+html[lang='ja'] .none-label:before {content: '\306a \3057 ';}
+html[lang='de'] .none-label:before {content: 'KEINER';}
+html[lang='ko'] .none-label:before {content: '\c5c6 \c74c ';}
+html[lang='pt-br'] .none-label:before {content: 'NENHUM';}
 
 #tree-all + label {
     grid-column: 3 / -1;
 }
 
 html[lang='en'] .all-label:before {content: 'ALL';}
-html[lang='pt-br'] .all-label:before {content: 'TODOS';}
-html[lang='es'] .all-label:before {content: 'TODOS';}
-html[lang='de'] .all-label:before {content: 'ALLE';}
-html[lang='ja'] .all-label:before {content: '\3059 \3079 \3066 ';}
-html[lang='ko'] .all-label:before {content: '\c804 \ccb4 ';}
-html[lang='ru'] .all-label:before {content: '\0412 \0421 \0415 ';}
 html[lang='fr'] .all-label:before {content: 'TOUT';}
+html[lang='es'] .all-label:before {content: 'TODOS';}
+html[lang='ru'] .all-label:before {content: '\0412 \0421 \0415 ';}
+html[lang='ja'] .all-label:before {content: '\3059 \3079 \3066 ';}
+html[lang='de'] .all-label:before {content: 'ALLE';}
+html[lang='ko'] .all-label:before {content: '\c804 \ccb4 ';}
+html[lang='pt-br'] .all-label:before {content: 'TODOS';}
 
 /* FILTER */
 

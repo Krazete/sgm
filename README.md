@@ -26,16 +26,20 @@ You can modify the tier, level, and ability levels of the displayed fighters fro
 When the tier or level settings are changed, the attack, health, and fighter score values on each card are recalculated.
 The formulas used in these calculations are as follows:
 
-* `ATK = CEIL(BASE_ATK + BASE_ATK * (LVL - 1) / 5)`
-* `HP = CEIL(BASE_HP + BASE_HP * (LVL - 1) / 5)`
-* `FS = CEIL(ATK + HP / 6) * 7 / 10)`
+* `ATK_BOOST = {NO_ATK_NODES: 1, ALL_ATK_NODES: 1.5}`
+* `HP_BOOST = {NO_HP_NODES: 1, ALL_HP_NODES: 1.5}`
+* `FS_BOOST = {NO_ABILITY_NODES: 0, ALL_ABILITY_NODES: 1.46, MAXED_MARQUEE: 1.57}`
+* `LVL1_ATK = ATK_BOOST * BASE_ATK`
+* `LVL1_HP = HP_BOOST * BASE_HP`
+* `ATK = CEIL(LVL1_ATK + LVL1_ATK * (LVL - 1) / 5)`
+* `HP = CEIL(LVL1_HP + LVL1_HP * (LVL - 1) / 5)`
+* `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
 
 All `BASE_` values are hard-coded for every tier of every fighter.
-These formulas seem to be extremely accurate when comparing the results to my own fighter collection, but I do not know if the game uses the exact same formulas.
+While I cannot confirm if the game uses these same formulas, the results appear to exactly match the stats of fighters that I have on my own account.
 
-The calculations assume that the skill tree is completely empty.
-For (slightly inaccurate but) more detailed stats, see the [Skullgirls Mobile Fighter Data](https://docs.google.com/spreadsheets/d/1goYXai7QUu4IJp76POP1IWyc2_6fEqEmxt9e74qyIgw) spreadsheet [created by Raidriar and currently maintained by Takio](https://forum.skullgirlsmobile.com/threads/calculated-fighter-stats.392/).
-This spreadsheet is where I got my initial formulas from, which I then modified until the results matched the stats seen in-game.
+The [Skullgirls Mobile Fighter Data](https://docs.google.com/spreadsheets/d/1goYXai7QUu4IJp76POP1IWyc2_6fEqEmxt9e74qyIgw) spreadsheet, [created by Raidriar and currently maintained by Takio](https://forum.skullgirlsmobile.com/threads/calculated-fighter-stats.392/), is the origin of the initial version of these formulas.
+I then modified them until the results perfectly matched in-game stats.
 
 #### Abilities
 

@@ -890,6 +890,10 @@ function initOptionsMenu() {
     var levelDiamond = document.getElementById("level-diamond");
     var levelTiers = [levelBronze, levelSilver, levelGold, levelDiamond];
 
+    var treeNone = document.getElementById("tree-none");
+    var treeAll = document.getElementById("tree-all");
+    var treeMarquee = document.getElementById("tree-marquee");
+
     var saNumber = document.getElementById("sa-number");
     var saRange = document.getElementById("sa-range");
 
@@ -903,14 +907,17 @@ function initOptionsMenu() {
             var hpValue = card.getElementsByClassName("hp-value")[0];
             var fsValue = card.getElementsByClassName("fs-value")[0];
 
+            var baseBoost = treeNone.checked ? 1 : 1.5;
+            var abilityBoost = treeNone.checked ? 1 : treeAll.checked ? 1.46 : treeMarquee.checked ? 1.57 : NaN;
+
             var i = Math.max(0, evolveRange.value - variants[key].tier);
-            var baseATK = variants[key].stats[i].attack;
-            var baseHP = variants[key].stats[i].lifebar;
+            var baseATK = baseBoost * variants[key].stats[i].attack;
+            var baseHP = baseBoost * variants[key].stats[i].lifebar;
 
             var j = Math.max(evolveRange.value, variants[key].tier);
             var atk = Math.ceil(baseATK + baseATK * (levelTiers[j].value - 1) / 5);
             var hp = Math.ceil(baseHP + baseHP * (levelTiers[j].value - 1) / 5);
-            var fs = Math.ceil((atk + hp / 6) * 7 / 10);
+            var fs = Math.ceil(abilityBoost * (atk + hp / 6) * 7 / 10);
 
             atkValue.dataset.value = atk;
             hpValue.dataset.value = hp;
@@ -968,6 +975,7 @@ function initOptionsMenu() {
             levelSilver.value == levelSilver.min &&
             levelGold.value == levelGold.min &&
             levelDiamond.value == levelDiamond.min &&
+            treeNone.checked &&
             saRange.value == saRange.min &&
             maRange.value == maRange.min
         ) {
@@ -981,6 +989,7 @@ function initOptionsMenu() {
             levelSilver.value == levelSilver.min &&
             levelGold.value == levelGold.min &&
             levelDiamond.value == levelDiamond.min &&
+            treeNone.checked &&
             saRange.value == saRange.max &&
             maRange.value == maRange.max
         ) {
@@ -991,6 +1000,7 @@ function initOptionsMenu() {
         else if (
             evolveRange.value == evolveRange.max &&
             levelDiamond.value == levelDiamond.max &&
+            treeMarquee.checked &&
             saRange.value == saRange.max &&
             maRange.value == maRange.max
         ) {
@@ -1031,6 +1041,7 @@ function initOptionsMenu() {
         setValidInput(levelSilver, levelSilver.min);
         setValidInput(levelGold, levelGold.min);
         setValidInput(levelDiamond, levelDiamond.min);
+        treeNone.checked = true;
         setValidInput(saNumber, saNumber.min);
         setValidInput(saRange, saRange.min);
         setValidInput(maNumber, maNumber.min);
@@ -1049,6 +1060,7 @@ function initOptionsMenu() {
         setValidInput(levelSilver, levelSilver.min);
         setValidInput(levelGold, levelGold.min);
         setValidInput(levelDiamond, levelDiamond.min);
+        treeNone.checked = true;
         setValidInput(saNumber, saNumber.max);
         setValidInput(saRange, saRange.max);
         setValidInput(maNumber, maNumber.max);
@@ -1067,6 +1079,7 @@ function initOptionsMenu() {
         setValidInput(levelSilver, levelSilver.max);
         setValidInput(levelGold, levelGold.max);
         setValidInput(levelDiamond, levelDiamond.max);
+        treeMarquee.checked = true;
         setValidInput(saNumber, saNumber.max);
         setValidInput(saRange, saRange.max);
         setValidInput(maNumber, maNumber.max);
@@ -1148,6 +1161,11 @@ function initOptionsMenu() {
         updateCardStats();
     }
 
+    function setTree() {
+        updatePresetButtons();
+        updateCardStats();
+    }
+
     function setSAViaNumber() {
         setValidInput(this, this.value);
         setValidInput(saRange, this.value);
@@ -1193,6 +1211,10 @@ function initOptionsMenu() {
     levelSilver.addEventListener("change", setLevelViaNumber);
     levelGold.addEventListener("change", setLevelViaNumber);
     levelDiamond.addEventListener("change", setLevelViaNumber);
+
+    treeNone.addEventListener("change", setTree);
+    treeAll.addEventListener("change", setTree);
+    treeMarquee.addEventListener("change", setTree);
 
     saNumber.addEventListener("focus", focusSelect);
     saNumber.addEventListener("change", setSAViaNumber);
