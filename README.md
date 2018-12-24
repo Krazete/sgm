@@ -15,7 +15,7 @@ If the website version is 3.0.0 but the latest game version is 3.0.2, the websit
 All of the language options available in the game are available on the website.
 The translations are an exact copy of the text used in the corresponding version of the game.
 
-Your chosen language option is saved in your browser's local storage for future visits.
+*Your chosen language option is saved in your browser's local storage for future visits.*
 
 ### Options (Fighter Settings)
 
@@ -47,7 +47,7 @@ The `X` button sets tier, level, signature, and marquee to the minimum level.
 The `Home` button sets tier and level to the minimum level and sets signature and marquee to the maximum level.  
 The `Crown` button sets tier, level, signature, and marquee to the maximum level.
 
-Your fighter settings are not saved and will be reset on every visit.
+*Your fighter settings are not saved and will be reset on every visit.*
 
 ### Filter
 
@@ -57,15 +57,16 @@ Filtering by tier filters by natural tier, not by the tier set in the Fighter Se
 
 #### Search Box
 
-The search box is also included in the filtering process.
-You can search for characters based on their variant names or their ability descriptions.
+You can also filter characters based on their variant names or their ability descriptions.
+The query processing method is very basic, simply searching for an exact match (ignoring capitalization and extra spaces) instead of separating the query into individual terms.
+
 Base fighter names, quotes, stats, and ability names are not included in these searches.
-The search query processing method is also very basic, simply removing extra spaces and converting to lowercase instead of separating the query into individual terms.
 
 ##### Shorthand
 
 The variant data object keys are included in variant name searches because keys often include common shorthand.
-For example, the abbreviation BHD refers to Bad Hair Day Filia, whose data is stored with the key `bHDay`. The exceptions to this rule are as follows:
+For example, the abbreviation BHD refers to Bad Hair Day Filia, whose data is stored with the key `bHDay`.
+The exceptions to this rule are as follows:
 
 * `wresX`: Wrestler X
 * `gJazz`: G.I. Jazz
@@ -87,29 +88,29 @@ I have considered renaming the exceptions listed above to make searching easier,
 
 #### Locks
 
-The lock that appears on the top left corner of each card prevents the filters from hiding that card.
+The lock on the top left corner of each card prevents filters from hiding that card.
 This is to ease the process of searching for and comparing between different fighters.
 
-Your filter settings are not saved and will be cleared on every visit.
+*Your filter settings are not saved and will be cleared on every visit.*
 
 ### Sort
 
 The website allows you to sort fighters alphabetically or based on fighter score, attack, health, element, or tier.
-The game's energy and level sorting options have not been included since they are useless in this context.
+The game's energy and level sorting options have not been included since they are not useful in this context.
 
 The website's sorting behavior mimics the game's sorting behavior for the most part.
-It even follows the game's `[Fire, Wind, Water, Light, Dark, Neutral]` element sort, which oddly differs the game's filter button order.
+It even follows the game's `[Fire, Wind, Water, Light, Dark, Neutral]` element sort, which oddly differs the game's filter button order of `[Fire, Water, Wind, Light, Dark, Neutral]`.
 
 The only two differences in sorting behavior are: you cannot reverse sorting order, and sorting by tier sorts by natural tier, not by the tier set in the Fighter Settings menu.
 
-Your chosen sorting option is saved in your browser's local storage for future visits.
+*Your chosen sorting option is saved in your browser's local storage for future visits.*
 
 ### Zoom
 
-The zoom buttons allow you to increase or decrease the size of the cards.
+The zoom buttons allow you to increase or decrease card size.
 Like the game, there are only three zoom levels.
 
-Your chosen zoom level is saved in your browser's local storage for future visits.
+*Your chosen zoom level is saved in your browser's local storage for future visits.*
 
 ### Wikia Links
 

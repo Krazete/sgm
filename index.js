@@ -149,7 +149,7 @@ function initCollection(responses) {
     var collection = document.getElementById("collection");
 
     function openReadMe() {
-        open("https://github.com/Krazete/sgm#portraits");
+        open("https://github.com/Krazete/sgm/blob/master/README.md#portraits");
     }
 
     function handleMissingPortrait() {
