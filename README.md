@@ -93,16 +93,16 @@ Every fighter variant has has a link on the top right corner of their card which
 
 ### Loading
 
-The [loading gif featuring Squigly](image_processing/what.gif) appears whenever a JSON file is being loaded.
+The [loading animation featuring Squigly](image_processing/what.gif) appears whenever a JSON file is being loaded.
 
-I think this animation was taken from a live stream a few years ago.
+I think this was taken from a live stream a few years ago.
 I don't quite remember, and I can't find the image anywhere else online.
 I know that the artist is one of the members of [Mecha Fetus](http://www.mechafetus.com/) and worked as an artist on Skullgirls.
 I think.
 It's probably Mariel "Kinuko" Cartwright's artwork.
 Probably.
 
-If you recognize where the art is from, please [let me know] so I can update this section and properly credit the artist.
+If you recognize where the art is from, please [let me know](#contact) so I can update this section and properly credit the artist.
 
 ## Issues
 
