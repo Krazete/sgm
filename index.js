@@ -576,7 +576,7 @@ function initFilterMenu() {
     }
 
     function sanitize(text) {
-        return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/, " ");
+        return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/g, " ").trim();
     }
 
     function removePlaceholders(template) {
@@ -962,7 +962,7 @@ function initOptionsMenu() {
         updateCardMAs();
     }
 
-    function updateBatchButtons() {
+    function updatePresetButtons() {
         if (
             evolveRange.value == evolveRange.min &&
             levelBronze.value == levelBronze.min &&
@@ -1119,14 +1119,14 @@ function initOptionsMenu() {
 
     function setEvolveViaRange() {
         updateEvolve();
-        updateBatchButtons();
+        updatePresetButtons();
         updateCardStats();
     }
 
     function setEvolveViaIcon() {
         evolveRange.value = evolveTiers.indexOf(this);
         updateEvolve();
-        updateBatchButtons();
+        updatePresetButtons();
         updateCardStats();
     }
 
@@ -1135,7 +1135,7 @@ function initOptionsMenu() {
         setValidInput(levelSilver, this.value);
         setValidInput(levelGold, this.value);
         setValidInput(levelDiamond, this.value);
-        updateBatchButtons();
+        updatePresetButtons();
         updateCardStats();
     }
 
@@ -1146,33 +1146,33 @@ function initOptionsMenu() {
     function setLevelViaNumber() {
         setValidInput(this, this.value);
         setValidInput(levelRange, getMaximumLevel());
-        updateBatchButtons();
+        updatePresetButtons();
         updateCardStats();
     }
 
     function setSAViaNumber() {
         setValidInput(this, this.value);
         setValidInput(saRange, this.value);
-        updateBatchButtons();
+        updatePresetButtons();
         updateCardSAs();
     }
 
     function setSAViaRange() {
         setValidInput(saNumber, this.value);
-        updateBatchButtons();
+        updatePresetButtons();
         updateCardSAs();
     }
 
     function setMAViaNumber() {
         setValidInput(this, this.value);
         setValidInput(maRange, this.value);
-        updateBatchButtons();
+        updatePresetButtons();
         updateCardMAs();
     }
 
     function setMAViaRange() {
         setValidInput(maNumber, this.value);
-        updateBatchButtons();
+        updatePresetButtons();
         updateCardMAs();
     }
 
