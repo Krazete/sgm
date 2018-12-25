@@ -117,6 +117,28 @@ var filterCards;
 var sortBasis;
 var updateCards;
 
+var dormant = true;
+
+function fearTheRainbow() {
+    for (var card of cards) {
+        for (var tier of tiers) {
+            card.classList.remove(tier);
+        }
+        for (var element of elements) {
+            card.classList.remove(element);
+        }
+        if (dormant) {
+            card.classList.add(tiers[Math.floor(Math.random() * 4)]);
+            card.classList.add(elements[Math.floor(Math.random() * 6)]);
+        }
+        else {
+            card.classList.add(tiers[variants[card.id].tier]);
+            card.classList.add(elements[variants[card.id].element]);
+        }
+    }
+    dormant = !dormant;
+}
+
 function loadJSON(path) {
     function request(resolve, reject) {
         var xhr = new XMLHttpRequest();
@@ -588,7 +610,12 @@ function initFilterMenu() {
         }
         var key = card.id;
         var query = sanitize(searchbox.value);
-        if (searchVN.checked) {
+        if (query.includes("fear the rainbow")) {
+            searchbox.value = "";
+            fearTheRainbow();
+            return true;
+        }
+        else if (searchVN.checked) {
             return sanitize(key).includes(query) || sanitize(corpus[variants[key].name]).includes(query);
         }
         else if (searchCA.checked) {
