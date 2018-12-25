@@ -758,6 +758,9 @@ function initFilterMenu() {
     filterSQ.addEventListener("change", filterCards);
     filterVA.addEventListener("change", filterCards);
 
+    if (location.hash) {
+        searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
+    }
     searchVN.checked = true;
     filterCancel.click();
 }

@@ -66,6 +66,9 @@ The query processing method is very basic, simply searching for an exact match (
 
 Base fighter names, quotes, stats, and ability names are not included in these searches.
 
+If you include a hash property in the URL, the website will initialize with the hash property in the search box.
+For example, opening https://sgm.netlify.com/#Bad%20Hair%20Day will only show Bad Hair Day's card upon page load.
+
 ##### Shorthand
 
 The variant data object keys are included in variant name searches because keys often include common shorthand.
