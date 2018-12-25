@@ -47,9 +47,9 @@ The Signature Ability and Marquee Ability settings allow you to preview fighters
 These settings do not affect the tier, level, or skill tree settings and are not considered in the calculation of fighters' stats.
 
 #### Preset Buttons
-The `X` button sets tier, level, signature, and marquee to the minimum level.  
-The `Home` button sets tier and level to the minimum level and sets signature and marquee to the maximum level.  
-The `Crown` button sets tier, level, signature, and marquee to the maximum level.
+The `X` button sets tier, level, skill tree, signature, and marquee to the minimum level.  
+The `Home` button sets tier, level, and skill tree to the minimum level and sets signature and marquee to the maximum level.  
+The `Crown` button sets tier, level, skill tree, signature, and marquee to the maximum level.
 
 *Your fighter settings are not saved and will be reset on every visit.*
 
