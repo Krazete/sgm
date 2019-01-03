@@ -13,13 +13,13 @@ If the website version is 3.0.0 but the latest game version is 3.0.2, the websit
 ### Language
 
 All of the language options available in the game are available on the website.
-Except for the terms `Fighter Gallery` and `Variant Name`, the translations are an exact copy of the text used in the corresponding version of the game.
+Except for the terms `Fighter Gallery` and `Variant Name`, which Google Translate helped with, all translations are an exact copy of the text used in the corresponding version of the game.
 
 *Your chosen language option is saved in your browser's local storage for future visits.*
 
 ### Options (Fighter Settings)
 
-You can modify the tier, level, still tree, and ability levels of the displayed fighters from this menu.
+You can modify the tier, level, skill tree, and ability levels of the displayed fighters from this menu.
 
 #### Stats
 
@@ -35,7 +35,7 @@ The formulas used in these calculations are as follows:
 * `HP = CEIL(LVL1_HP + LVL1_HP * (LVL - 1) / 5)`
 * `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
 
-All `BASE_` values are hard-coded for every tier of every fighter.
+All `LVL1_` values are hard-coded for every tier of every fighter.
 While I cannot confirm if the game uses these same formulas, the results appear to exactly match the stats of fighters that I have on my own account.
 See my [SGM Fighter Score Analysis](https://docs.google.com/spreadsheets/d/1CotgKsKzSIA5siRAMplX7e5k7KRT63a3GSY1XRg-hgc/edit?usp=sharing) spreadsheet for more detailed information.
 
@@ -122,7 +122,7 @@ Like the game, there are only three zoom levels.
 
 ### Wikia Links
 
-Every fighter variant has has a link on the top right corner of their card which redirects to the Tips and Tricks section of their official [Wikia](https://skullgirlsmobile.wikia.com/) page.
+Every fighter variant has a link on the top right corner of their card which redirects to the Tips and Tricks section of their official [Wikia](https://skullgirlsmobile.wikia.com/) page.
 
 This is possible because the Wikia contributors nearly always name the variant pages consistent with the official capitalization and punctuation.
 The only exception was the [Hack n' Splash](https://skullgirlsmobile.wikia.com/wiki/Hack_N%27_Splash) page, which had an erroneous uppercase "N" until I renamed it.
