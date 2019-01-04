@@ -1,0 +1,29 @@
+{
+    "guid": "2f6083e5-31e6-4631-8e78-3a3a3bea052d",
+    "humanReadableGuid": "rVelvet",
+    "displayVariantName": "Char_Eliza_G_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_Eliza_RedVelvet",
+    "paletteIndex": 16,
+    "initialTier": 2,
+    "elementAffiliation": 1,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 248,
+            "lifebar": 2184
+        },
+        {
+            "attack": 446,
+            "lifebar": 3931
+        }
+    ]
+}

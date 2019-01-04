@@ -1,0 +1,37 @@
+{
+    "guid": "8942d82e-713f-4325-88dd-9b6d9f21f7a9",
+    "humanReadableGuid": "hReign",
+    "displayVariantName": "Char_Parasoul_B_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_Parasoul_FeintOfHeart",
+    "paletteIndex": 7,
+    "initialTier": 0,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 62,
+            "lifebar": 484
+        },
+        {
+            "attack": 112,
+            "lifebar": 871
+        },
+        {
+            "attack": 201,
+            "lifebar": 1568
+        },
+        {
+            "attack": 362,
+            "lifebar": 2823
+        }
+    ]
+}

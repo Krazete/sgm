@@ -1,0 +1,25 @@
+{
+    "guid": "20ee30eb-9dc1-4c58-96a3-0a60b94ae068",
+    "humanReadableGuid": "aGreed",
+    "displayVariantName": "Char_Valentine_D_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Healing",
+    "variantQuote": "Variant_Description_Valentine_PettyInPink",
+    "paletteIndex": 9,
+    "initialTier": 3,
+    "elementAffiliation": 5,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 458,
+            "lifebar": 4074
+        }
+    ]
+}

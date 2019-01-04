@@ -1,0 +1,29 @@
+{
+    "guid": "508f2ca5-e58f-49ea-8fbe-9f0dfcf8eb27",
+    "humanReadableGuid": "bFreeze",
+    "displayVariantName": "Char_Cerebella_G_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_Cerebella_BrainFreeze",
+    "paletteIndex": 1,
+    "initialTier": 2,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 326,
+            "lifebar": 1985
+        },
+        {
+            "attack": 587,
+            "lifebar": 3573
+        }
+    ]
+}

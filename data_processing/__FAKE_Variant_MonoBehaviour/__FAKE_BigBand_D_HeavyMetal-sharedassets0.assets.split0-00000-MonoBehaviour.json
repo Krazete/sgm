@@ -1,0 +1,25 @@
+{
+    "guid": "3a9990eb-c790-4916-be55-b12b0bec739a",
+    "humanReadableGuid": "hMetal",
+    "displayVariantName": "Char_BigBand_D_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_BigBand_HeavyMetal",
+    "paletteIndex": 25,
+    "initialTier": 3,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 538,
+            "lifebar": 4631
+        }
+    ]
+}

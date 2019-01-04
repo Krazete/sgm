@@ -1,0 +1,33 @@
+{
+    "guid": "1f2a4e8e-7c09-4f8b-b4e5-3de9ecd3d93c",
+    "humanReadableGuid": "hMan",
+    "displayVariantName": "Char_Beowulf_S_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_Beowulf_HypeMan",
+    "paletteIndex": 9,
+    "initialTier": 1,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 155,
+            "lifebar": 840
+        },
+        {
+            "attack": 279,
+            "lifebar": 1512
+        },
+        {
+            "attack": 502,
+            "lifebar": 2722
+        }
+    ]
+}

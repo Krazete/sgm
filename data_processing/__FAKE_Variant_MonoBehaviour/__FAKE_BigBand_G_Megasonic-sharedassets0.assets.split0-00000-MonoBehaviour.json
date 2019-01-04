@@ -1,0 +1,29 @@
+{
+    "guid": "7776470c-97d9-4de3-842b-f058c7c228c3",
+    "humanReadableGuid": "mSonic",
+    "displayVariantName": "Char_BigBand_G_V4_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_BigBand_Megasonic",
+    "paletteIndex": 11,
+    "initialTier": 2,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 294,
+            "lifebar": 1985
+        },
+        {
+            "attack": 529,
+            "lifebar": 3573
+        }
+    ]
+}

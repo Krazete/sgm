@@ -1,0 +1,29 @@
+{
+    "guid": "e44c6020-8d29-4e71-af0e-ad7b5843272e",
+    "humanReadableGuid": "sGeneral",
+    "displayVariantName": "Char_Valentine_G_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_Valentine_SurgeonGeneral",
+    "paletteIndex": 23,
+    "initialTier": 2,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 294,
+            "lifebar": 1588
+        },
+        {
+            "attack": 529,
+            "lifebar": 2858
+        }
+    ]
+}

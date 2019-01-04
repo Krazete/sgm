@@ -1,0 +1,29 @@
+{
+    "guid": "792108cc-c51d-442d-8ad8-6b62fc32d51f",
+    "humanReadableGuid": "prime",
+    "displayVariantName": "Char_Parasoul_G_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Damage",
+    "variantQuote": "Variant_Description_Parasoul_Primed",
+    "paletteIndex": 17,
+    "initialTier": 2,
+    "elementAffiliation": 4,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 336,
+            "lifebar": 1588
+        },
+        {
+            "attack": 605,
+            "lifebar": 2858
+        }
+    ]
+}

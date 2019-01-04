@@ -1,0 +1,25 @@
+{
+    "guid": "39489ba5-8a77-4e33-a2a7-deb2cbd3ddd6",
+    "humanReadableGuid": "fTrap",
+    "displayVariantName": "Char_Painwheel_D_V1_Name",
+    "variantDescription": "Variant_Role_Generic_DOT",
+    "variantQuote": "Variant_Description_Painwheel_FlyTrap",
+    "paletteIndex": 5,
+    "initialTier": 3,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 872,
+            "lifebar": 2501
+        }
+    ]
+}

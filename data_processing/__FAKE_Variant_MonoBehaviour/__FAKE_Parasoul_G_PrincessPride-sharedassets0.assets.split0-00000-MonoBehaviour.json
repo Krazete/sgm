@@ -1,0 +1,29 @@
+{
+    "guid": "58355e56-72be-48fd-bc25-6e6f7eccf1ff",
+    "humanReadableGuid": "pPride",
+    "displayVariantName": "Char_Parasoul_G_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Healing",
+    "variantQuote": "Variant_Description_Parasoul_Princess",
+    "paletteIndex": 4,
+    "initialTier": 2,
+    "elementAffiliation": 5,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 248,
+            "lifebar": 1940
+        },
+        {
+            "attack": 446,
+            "lifebar": 3492
+        }
+    ]
+}

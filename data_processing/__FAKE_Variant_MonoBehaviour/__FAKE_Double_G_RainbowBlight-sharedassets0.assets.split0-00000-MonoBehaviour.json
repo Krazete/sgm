@@ -1,0 +1,29 @@
+{
+    "guid": "1afb3841-5c40-450d-9d5e-28816060713b",
+    "humanReadableGuid": "rBlight",
+    "displayVariantName": "Char_Double_G_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Control",
+    "variantQuote": "Variant_Description_Double_RainbowBlight",
+    "paletteIndex": 18,
+    "initialTier": 2,
+    "elementAffiliation": 0,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 326,
+            "lifebar": 1323
+        },
+        {
+            "attack": 587,
+            "lifebar": 2381
+        }
+    ]
+}

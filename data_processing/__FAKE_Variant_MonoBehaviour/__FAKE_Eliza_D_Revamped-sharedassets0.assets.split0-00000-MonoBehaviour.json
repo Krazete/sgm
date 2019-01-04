@@ -1,0 +1,25 @@
+{
+    "guid": "742bb7c2-b53d-4a31-83c8-7e48048870b3",
+    "humanReadableGuid": "sOut",
+    "displayVariantName": "Char_Eliza_D_V1_Name",
+    "variantDescription": "Variant_Role_Generic_DOT",
+    "variantQuote": "Variant_Description_Eliza_Revamped",
+    "paletteIndex": 14,
+    "initialTier": 3,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 613,
+            "lifebar": 4169
+        }
+    ]
+}

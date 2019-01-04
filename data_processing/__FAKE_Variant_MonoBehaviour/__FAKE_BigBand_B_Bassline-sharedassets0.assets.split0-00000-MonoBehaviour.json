@@ -1,0 +1,37 @@
+{
+    "guid": "1222ec66-cbee-4ccb-8c98-990ca13bfc80",
+    "humanReadableGuid": "bLine",
+    "displayVariantName": "Char_BigBand_B_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Healing",
+    "variantQuote": "Variant_Description_BigBand_Flat",
+    "paletteIndex": 0,
+    "initialTier": 0,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 58,
+            "lifebar": 500
+        },
+        {
+            "attack": 104,
+            "lifebar": 900
+        },
+        {
+            "attack": 188,
+            "lifebar": 1620
+        },
+        {
+            "attack": 338,
+            "lifebar": 2916
+        }
+    ]
+}

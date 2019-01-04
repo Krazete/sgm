@@ -1,0 +1,29 @@
+{
+    "guid": "85e484ca-ea53-4eb9-928d-7811f34366cd",
+    "humanReadableGuid": "hQuin",
+    "displayVariantName": "Char_Cerebella_G_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Assist",
+    "variantQuote": "Variant_Description_Cerebella_Harlequin",
+    "paletteIndex": 2,
+    "initialTier": 2,
+    "elementAffiliation": 1,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 375,
+            "lifebar": 1786
+        },
+        {
+            "attack": 675,
+            "lifebar": 3215
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "guid": "aecc54c4-d96f-4587-b8fb-5b568308d28a",
+    "humanReadableGuid": "tTyrant",
+    "displayVariantName": "Char_Double_S_V1_Name",
+    "variantDescription": "Variant_Role_Generic_Survival",
+    "variantQuote": "Variant_Description_Double_TempleTyrant",
+    "paletteIndex": 12,
+    "initialTier": 1,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 132,
+            "lifebar": 693
+        },
+        {
+            "attack": 238,
+            "lifebar": 1247
+        },
+        {
+            "attack": 428,
+            "lifebar": 2245
+        }
+    ]
+}

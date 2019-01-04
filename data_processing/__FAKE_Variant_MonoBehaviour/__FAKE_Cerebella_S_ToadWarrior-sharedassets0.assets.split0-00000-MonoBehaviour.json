@@ -1,0 +1,33 @@
+{
+    "guid": "acdc5c20-29d6-4806-afda-033bf11b54d0",
+    "humanReadableGuid": "toad",
+    "displayVariantName": "Char_Cerebella_S_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Assist",
+    "variantQuote": "Variant_Description_Cerebella_ToadWarrior",
+    "paletteIndex": 8,
+    "initialTier": 1,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 178,
+            "lifebar": 851
+        },
+        {
+            "attack": 320,
+            "lifebar": 1532
+        },
+        {
+            "attack": 577,
+            "lifebar": 2757
+        }
+    ]
+}

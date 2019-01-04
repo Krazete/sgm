@@ -1,0 +1,29 @@
+{
+    "guid": "bf1c3982-545b-4794-96d3-37615f969ad5",
+    "humanReadableGuid": "bKill",
+    "displayVariantName": "Char_Painwheel_G_V1_Name",
+    "variantDescription": "Variant_Role_Generic_DOT",
+    "variantQuote": "Variant_Description_Painwheel_Buzz",
+    "paletteIndex": 4,
+    "initialTier": 2,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 415,
+            "lifebar": 1191
+        },
+        {
+            "attack": 747,
+            "lifebar": 2144
+        }
+    ]
+}

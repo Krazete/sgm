@@ -1,0 +1,29 @@
+{
+    "guid": "4ed26b9e-eb0d-47cf-a271-af14f5c77a18",
+    "humanReadableGuid": "gJazz",
+    "displayVariantName": "Char_BigBand_G_V3_Name",
+    "variantDescription": "Variant_Role_Generic_Survival",
+    "variantQuote": "Variant_Description_BigBand_GIJazz",
+    "paletteIndex": 5,
+    "initialTier": 2,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 218,
+            "lifebar": 2426
+        },
+        {
+            "attack": 392,
+            "lifebar": 4367
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "guid": "97d349b6-d472-40c4-914b-53acffe7adfa",
+    "humanReadableGuid": "iThreat",
+    "displayVariantName": "Char_Filia_G_V4_Name",
+    "variantDescription": "Variant_Role_Generic_Counter",
+    "variantQuote": "Variant_Description_Filia_IdolThreat",
+    "paletteIndex": 8,
+    "initialTier": 2,
+    "elementAffiliation": 2,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 336,
+            "lifebar": 1390
+        },
+        {
+            "attack": 605,
+            "lifebar": 2502
+        }
+    ]
+}

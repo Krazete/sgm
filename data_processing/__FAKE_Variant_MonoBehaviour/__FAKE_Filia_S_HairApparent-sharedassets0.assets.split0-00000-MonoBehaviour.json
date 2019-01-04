@@ -1,0 +1,33 @@
+{
+    "guid": "862443b5-cf36-4d37-bf57-5f71eabedf31",
+    "humanReadableGuid": "hAppar",
+    "displayVariantName": "Char_Filia_S_V2_Name",
+    "variantDescription": "Variant_Role_Generic_Assist",
+    "variantQuote": "Variant_Description_Filia_Apparent",
+    "paletteIndex": 6,
+    "initialTier": 1,
+    "elementAffiliation": 3,
+    "baseCharacter": {
+        "m_PathID": 0
+    },
+    "signatureAbility": {
+        "m_PathID": 0
+    },
+    "superAbility": {
+        "m_PathID": 0
+    },
+    "baseScaledValuesByTier": [
+        {
+            "attack": 160,
+            "lifebar": 661
+        },
+        {
+            "attack": 288,
+            "lifebar": 1190
+        },
+        {
+            "attack": 518,
+            "lifebar": 2142
+        }
+    ]
+}
