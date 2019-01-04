@@ -52,6 +52,7 @@ var wikiaPaths = { /* from English corpus */
     "sGeneral": "Surgeon General",
     "aForce": "Armed Forces",
     "pShoot": "Pea Shooter",
+    "wCard": "Wildcard",
     "lHope": "Last Hope",
     "sStiff": "Scared Stiff",
     "hMan": "Hype Man",
