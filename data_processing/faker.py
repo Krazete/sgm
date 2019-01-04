@@ -111,7 +111,7 @@ variants = {
     'buzzkill':         {'signatureAbility': 27028, 'm_PathID': 17424},
     'firefly':          {'signatureAbility': 27029, 'm_PathID': 17425},
     'grimfan':          {'signatureAbility': 27030, 'm_PathID': 17426},
-    'rawnerv':         {'signatureAbility': 27027, 'm_PathID': 17427},
+    'rawnerv':          {'signatureAbility': 27027, 'm_PathID': 17427},
     'blooddrive':       {'signatureAbility': 27032, 'm_PathID': 17428},
     'rageappropriate':  {'signatureAbility': 27031, 'm_PathID': 17429},
 
@@ -133,6 +133,7 @@ variants = {
     'untouchable':      {'signatureAbility': 27065, 'm_PathID': 17581},
     'inkling':          {'signatureAbility': 27181, 'm_PathID': 17582},
     'peashooter':       {'signatureAbility': 27185, 'm_PathID': 17583},
+    'wildcard':         {'signatureAbility': 27182, 'm_PathID': 17584},
 
     'scaredstiff':      {'signatureAbility': 22876, 'm_PathID': 17658},
     'stagefright':      {'signatureAbility': 22875, 'm_PathID': 17659},
@@ -156,27 +157,26 @@ variants = {
 }
 
 for key in fakes:
-    if '_0' not in key:
-        forgery = OrderedDict()
-        for subkey in important_keys:
-            forgery.setdefault(subkey, fakes[key][subkey])
+    forgery = OrderedDict()
+    for subkey in important_keys:
+        forgery.setdefault(subkey, fakes[key][subkey])
 
-        split_key = re.split('_|-', key)
-        base = split_key[3].lower()
-        name = split_key[5].lower()
-        forgery['baseCharacter'] = {
-            'm_PathID': fighters[base]['baseCharacter']
-        }
-        forgery['superAbility'] = {
-            'm_PathID': fighters[base]['superAbility']
-        }
-        forgery['signatureAbility'] = {
-            'm_PathID': variants[name]['signatureAbility']
-        }
+    split_key = re.split('_|-', key)
+    base = split_key[3].lower()
+    name = split_key[5].lower()
+    forgery['baseCharacter'] = {
+        'm_PathID': fighters[base]['baseCharacter']
+    }
+    forgery['superAbility'] = {
+        'm_PathID': fighters[base]['superAbility']
+    }
+    forgery['signatureAbility'] = {
+        'm_PathID': variants[name]['signatureAbility']
+    }
 
-        new_key = re.sub(
-            r'(split\d)-(\d+)-(Mono)',
-            r'\1-{}-\3'.format(variants[name]['m_PathID']),
-            key
-        )
-        file.save(forgery, 'data_processing/sgm_exports/MonoBehaviour/' + new_key + '.json')
+    new_key = re.sub(
+        r'(split\d)-(\d+)-(Mono)',
+        r'\1-{:05d}-\3'.format(variants[name]['m_PathID']),
+        key
+    )
+    file.save(forgery, 'data_processing/sgm_exports/MonoBehaviour/' + new_key + '.json')
