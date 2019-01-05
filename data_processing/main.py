@@ -76,6 +76,8 @@ def build_data(monolith, mono_char_keys):
     'Generate database to be used on the website.'
     fighters = {}
     variants = {}
+    sm_set = {}
+    bb_set = {}
     corpus_keys = set()
 
     def monoref(ref):
@@ -184,6 +186,8 @@ def build_data(monolith, mono_char_keys):
         if f_value['ma']['title'] == None:
             return
         fighters.setdefault(f_key, f_value)
+        build_sm(f_key, base)
+        build_bb(f_key, base)
 
     def build_variant(mono):
         base = monoref(mono['baseCharacter'])
@@ -210,12 +214,59 @@ def build_data(monolith, mono_char_keys):
         }
         variants.setdefault(v_key, v_value)
 
+    def build_sm(f_key, base):
+        for sm_mono in base['specialMoves']:
+            sm = monoref(sm_mono)
+            sm_key = sm['humanReadableGuid']
+            if sm_key == '': # skip tutorial(?) moves
+                return
+            sm_value = {
+                'base': f_key,
+                'title': record(sm['title']),
+                'description': record(sm['description']),
+                # 'gear': sm['gearDamageTier'],
+                'superbar': sm['superbarCost'],
+                'damage': sm['damageIndicatorLevels'],
+                'cooldown': sm['cooldownTimes'],
+                'substitutions': []
+            }
+            for tier_mono in monoref(sm['signatureAbility'])['features']:
+                tier = monoref(tier_mono)
+                sm_value['substitutions'].append({
+                    'hi': record(tier['description'])
+                })
+            sm_set.setdefault(sm_key, sm_value)
+
+    def build_bb(f_key, base):
+        for bb_mono in base['blockbusters']:
+            bb = monoref(bb_mono)
+            bb_key = bb['humanReadableGuid']
+            if bb_key == '': # skip tutorial(?) moves
+                return
+            bb_value = {
+                'base': f_key,
+                'tier': bb['tier'],
+                'title': record(bb['title']),
+                'description': record(bb['description']),
+                # 'gear': bb['gearDamageTier'],
+                'superbar': bb['superbarCost'],
+                'attack': bb['attackDamageMultipliers'],
+                'damage': bb['damageIndicatorLevels'],
+                'substitutions': []
+            }
+            for tier_mono in monoref(bb['signatureAbility'])['features']:
+                tier = monoref(tier_mono)
+                bb_value['substitutions'].append({
+                    'hi': record(tier['description'])
+                })
+            bb_set.setdefault(bb_key, bb_value)
+
     for key in mono_char_keys:
         mono = monolith[key]
         build_fighter(mono)
         build_variant(mono)
 
-    return fighters, variants, corpus_keys
+    return fighters, variants, sm_set, bb_set, corpus_keys
 
 if __name__ =='__main__':
     monolith = file.load('data_processing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
@@ -225,10 +276,12 @@ if __name__ =='__main__':
 
     # study_sample(monolith, mono_char_keys, 'oMai')
 
-    fighters, variants, corpus_keys = build_data(monolith, mono_char_keys)
+    fighters, variants, sm_set, bb_set, corpus_keys = build_data(monolith, mono_char_keys)
 
     for language in corpus:
         primcorpus = {key: corpus[language][key] for key in corpus_keys if key in corpus[language]}
         file.save(primcorpus, 'data/{}.json'.format(language))
     file.save(fighters, 'data/fighters.json')
     file.save(variants, 'data/variants.json')
+    file.save(sm_set, 'data/sms.json')
+    file.save(bb_set, 'data/bbs.json')
