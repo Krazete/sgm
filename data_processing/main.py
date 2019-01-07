@@ -219,13 +219,14 @@ def build_data(monolith, mono_char_keys):
             sm = monoref(sm_mono)
             sm_key = sm['humanReadableGuid']
             if sm_key == '': # skip tutorial(?) moves
-                return
+                continue
             sm_value = {
                 'base': f_key,
                 'title': record(sm['title']),
                 'description': record(sm['description']),
-                # 'gear': sm['gearDamageTier'],
-                'superbar': sm['superbarCost'],
+                # 'superbar': sm['superbarCost'],
+                'attack': sm['attackDamageMultipliers'],
+                'gear': sm['gearDamageTier'],
                 'damage': sm['damageIndicatorLevels'],
                 'cooldown': sm['cooldownTimes'],
                 'substitutions': []
@@ -242,15 +243,15 @@ def build_data(monolith, mono_char_keys):
             bb = monoref(bb_mono)
             bb_key = bb['humanReadableGuid']
             if bb_key == '': # skip tutorial(?) moves
-                return
+                continue
             bb_value = {
                 'base': f_key,
                 'tier': bb['tier'],
                 'title': record(bb['title']),
                 'description': record(bb['description']),
-                # 'gear': bb['gearDamageTier'],
-                'superbar': bb['superbarCost'],
+                # 'superbar': bb['superbarCost'],
                 'attack': bb['attackDamageMultipliers'],
+                'gear': bb['gearDamageTier'],
                 'damage': bb['damageIndicatorLevels'],
                 'substitutions': []
             }
