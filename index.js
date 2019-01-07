@@ -120,6 +120,10 @@ var updateCards;
 
 var dormant = true;
 
+function randomInt(a, b) {
+    return a + Math.floor(Math.random() * (b - a));
+}
+
 function fearTheRainbow() {
     for (var card of cards) {
         for (var tier of tiers) {
@@ -129,8 +133,8 @@ function fearTheRainbow() {
             card.classList.remove(element);
         }
         if (dormant) {
-            card.classList.add(tiers[Math.floor(Math.random() * 4)]);
-            card.classList.add(elements[Math.floor(Math.random() * 6)]);
+            card.classList.add(tiers[randomInt(0, tiers.length)]);
+            card.classList.add(elements[randomInt(0, elements.length)]);
         }
         else {
             card.classList.add(tiers[variants[card.id].tier]);
@@ -198,8 +202,7 @@ function initCollection(responses) {
                 var backdrop = document.createElement("div");
                     backdrop.className = "backdrop";
                     if (month == 10 && day == 31 || weekday == 5 && day == 13) {
-                        var r = Math.floor(Math.random() * 3) + 1;
-                        backdrop.classList.add("hallow" + r);
+                        backdrop.classList.add("hallow" + randomInt(1, 4));
                     }
                     var portrait = document.createElement("img");
                         portrait.className = "portrait";
@@ -209,7 +212,7 @@ function initCollection(responses) {
                             key
                         ].join("/");
                         if (key == "rBlight") {
-                            stem += "_" + Math.floor(Math.random() * 7);
+                            stem += "_" + randomInt(0, 7);
                         }
                         portrait.src = stem + ".png";
                         portrait.addEventListener("error", handleMissingPortrait);
