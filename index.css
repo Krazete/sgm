@@ -790,6 +790,27 @@ html[lang='pt-br'] #loading:after {content: 'CARREGANDO...';}
     cursor: pointer;
 }
 
+.backdrop.hallow1:after {
+    background: url(image/official/Blood1.png);
+}
+.backdrop.hallow2:after {
+    background: url(image/official/Blood2.png);
+}
+.backdrop.hallow3:after {
+    background: url(image/official/Blood3.png);
+}
+.backdrop.hallow1:after, .backdrop.hallow2:after, .backdrop.hallow3:after {
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin-top: -95%;
+}
+
 .portrait {
     width: 135%;
     /* filter: drop-shadow(0 0 1px black); */

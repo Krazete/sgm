@@ -171,6 +171,11 @@ function initCollection(responses) {
     variants = responses[1];
     var collection = document.getElementById("collection");
 
+    var date = new Date();
+    var month = date.getMonth() + 1;
+    var weekday = date.getDay();
+    var day = date.getDate();
+
     function openReadMe() {
         open("https://github.com/Krazete/sgm/blob/master/README.md#portraits");
     }
@@ -192,6 +197,10 @@ function initCollection(responses) {
                 frame.className = "frame";
                 var backdrop = document.createElement("div");
                     backdrop.className = "backdrop";
+                    if (month == 10 && day == 31 || weekday == 5 && day = 13) {
+                        var r = Math.floor(Math.random() * 3) + 1;
+                        backdrop.classList.add("hallow" + r);
+                    }
                     var portrait = document.createElement("img");
                         portrait.className = "portrait";
                         var stem = [
