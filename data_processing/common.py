@@ -1,7 +1,9 @@
 from data_processing import file
 
 common = [
+    'Key_DisplayName',
     'Key_Fighter',
+    'SkillTree_Gear',
     'MainMenu_Collection', # UNUSED
     'Version_Login',
     'Loading_Status_Loading',

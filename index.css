@@ -636,6 +636,24 @@ html[lang='de'] #search-vn + label:before {content: 'Variantenname';}
 html[lang='ko'] #search-vn + label:before {content: '\bcc0 \d615  \c774 \b984 ';}
 html[lang='pt-br'] #search-vn + label:before {content: 'Nome da Variante';}
 
+html[lang='en'] #search-mn + label:before {content: 'Move Name';}
+html[lang='fr'] #search-mn + label:before {content: 'Nom de Coup';}
+html[lang='es'] #search-mn + label:before {content: 'Nombre del Movimiento';}
+html[lang='ru'] #search-mn + label:before {content: '\041d \0430 \0437 \0432 \0430 \043d \0438 \0435  \041f \0440 \0438 \0435 \043c \0430 ';}
+html[lang='ja'] #search-mn + label:before {content: '\5fc5 \6bba \6280 \540d ';}
+html[lang='de'] #search-mn + label:before {content: 'Angriffsname';}
+html[lang='ko'] #search-mn + label:before {content: '\ae30 \c220  \c774 \b984 ';}
+html[lang='pt-br'] #search-mn + label:before {content: 'Nome do Golpe';}
+
+html[lang='en'] #search-d + label:before {content: 'Description';}
+html[lang='fr'] #search-d + label:before {content: 'Description';}
+html[lang='es'] #search-d + label:before {content: 'Descripci\00f3 n';}
+html[lang='ru'] #search-d + label:before {content: '\041e \043f \0438 \0441 \0430 \043d \0438 \0435 ';}
+html[lang='ja'] #search-d + label:before {content: '\8aac \660e ';}
+html[lang='de'] #search-d + label:before {content: 'Beschreibung';}
+html[lang='ko'] #search-d + label:before {content: '\c124 \ba85 ';}
+html[lang='pt-br'] #search-d + label:before {content: 'Descri\00e7 \00e3 o';}
+
 /* LOADING */
 
 #loading {
