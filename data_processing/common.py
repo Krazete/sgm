@@ -7,6 +7,7 @@ common = [
     'MainMenu_Collection', # UNUSED
     'Version_Login',
     'Loading_Status_Loading',
+    'Popup_Error_Header',
 
     'Stat_AttackFlat_Label',
     'Stat_HealthFlat_Label',

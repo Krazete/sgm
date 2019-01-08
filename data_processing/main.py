@@ -222,6 +222,8 @@ def build_data(monolith, mono_char_keys):
                 continue
             sm_value = {
                 'base': f_key,
+                'type': 0,
+                'tier': sm['tier'],
                 'title': record(sm['title']),
                 'description': record(sm['description']),
                 # 'superbar': sm['superbarCost'],
@@ -229,13 +231,8 @@ def build_data(monolith, mono_char_keys):
                 'gear': sm['gearDamageTier'],
                 'damage': sm['damageIndicatorLevels'],
                 'cooldown': sm['cooldownTimes'],
-                'substitutions': []
+                'ability': build_features(sm['signatureAbility'])
             }
-            for tier_mono in monoref(sm['signatureAbility'])['features']:
-                tier = monoref(tier_mono)
-                sm_value['substitutions'].append({
-                    'hi': record(tier['description'])
-                })
             sm_set.setdefault(sm_key, sm_value)
 
     def build_bb(f_key, base):
@@ -246,6 +243,7 @@ def build_data(monolith, mono_char_keys):
                 continue
             bb_value = {
                 'base': f_key,
+                'type': 1,
                 'tier': bb['tier'],
                 'title': record(bb['title']),
                 'description': record(bb['description']),
@@ -253,13 +251,9 @@ def build_data(monolith, mono_char_keys):
                 'attack': bb['attackDamageMultipliers'],
                 'gear': bb['gearDamageTier'],
                 'damage': bb['damageIndicatorLevels'],
-                'substitutions': []
+                'strength': bb['strengthLevel'],
+                'ability': build_features(bb['signatureAbility'])
             }
-            for tier_mono in monoref(bb['signatureAbility'])['features']:
-                tier = monoref(tier_mono)
-                bb_value['substitutions'].append({
-                    'hi': record(tier['description'])
-                })
             bb_set.setdefault(bb_key, bb_value)
 
     for key in mono_char_keys:

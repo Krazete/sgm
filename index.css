@@ -696,6 +696,18 @@ html[lang='pt-br'] #loading:after {content: 'CARREGANDO...';}
     }
 }
 
+.error #loading:after {
+    animation: none;
+}
+html[lang='en'] .error #loading:after {content: 'ERROR';}
+html[lang='fr'] .error #loading:after {content: 'ERREUR';}
+html[lang='es'] .error #loading:after {content: 'ERROR';}
+html[lang='ru'] .error #loading:after {content: '\041e \0428 \0418 \0411 \041a \0410 ';}
+html[lang='ja'] .error #loading:after {content: '\30a8 \30e9 \30fc ';}
+html[lang='de'] .error #loading:after {content: 'FEHLER';}
+html[lang='ko'] .error #loading:after {content: '\c624 \b958 ';}
+html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
+
 /* CARD */
 
 .card {
