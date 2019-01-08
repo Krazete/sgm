@@ -715,6 +715,12 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     background: #1b2a41;
     border: 3px double #ccb55a;
     display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: 1fr repeat(2, minmax(0, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+}
+.fighter.card {
     grid-template-areas:
         'img qt qt'
         'img atk hp'
@@ -722,10 +728,13 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
         'ca ca ca'
         'sa sa sa'
         'ma ma ma';
-    grid-template-rows: repeat(6, min-content);
-    grid-template-columns: 1fr repeat(2, minmax(0, 1fr));
-    grid-gap: 10px;
-    padding: 10px;
+}
+.move.card {
+    grid-template-areas:
+        'img mn mn'
+        /* 'img qt qt' */
+        'img tb tb'
+        'des des des';
 }
 .card.hidden {
     display: none;
@@ -891,12 +900,60 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     font-size: smaller;
 }
 
+/* BADGE */
+
+.badge {
+    text-align: center;
+    grid-area: img;
+}
+
+.symbol {
+    position: relative;
+    height: 112px;
+    display: block;
+    margin: auto;
+    margin-bottom: -112px;
+    z-index: 1;
+}
+
+.shell {
+    max-width: 112px;
+    max-height: 112px;
+    display: block;
+    margin: auto;
+}
+.sm .badge .shell img:first-child {
+    width: 50%;
+}
+.sm .badge .shell img:last-child {
+    width: 50%;
+    transform: scaleX(-1);
+}
+
+.title {
+    text-align: center;
+    grid-area: mn;
+    margin: auto;
+}
+.title .icon {
+    vertical-align: middle;
+    display: initial;
+}
+.tag {
+    vertical-align: middle;
+}
+
 /* QUOTE */
 
 .quote {
     text-align: center;
     grid-area: qt;
     margin-top: auto;
+}
+
+.move .quote {
+    font-size: smaller;
+    margin-top: 0;
 }
 
 /* STATS */
@@ -957,6 +1014,132 @@ html[lang='ja'] .fs:before {content: '\30d5 \30a1 \30a4 \30bf \30fc \30fb \30b9 
 html[lang='de'] .fs:before {content: 'KAMPFPUNKTE';}
 html[lang='ko'] .fs:before {content: '\c804 \d22c \b825 ';}
 html[lang='pt-br'] .fs:before {content: 'PONTUA\00c7 \00c3 O';}
+
+/* TABLE */
+
+.table {
+    box-shadow: 0 0 1px black;
+    grid-area: tb;
+}
+.table tr:nth-child(2n) {
+    background: #314c73;
+}
+.table tr:nth-child(2n + 1) {
+    background: #263b5a;
+}
+.table td {
+    padding: 2px 4px;
+}
+
+html[lang='en'] .unblockable:before {content: 'UNBLOCKABLE';}
+html[lang='fr'] .unblockable:before {content: 'INBLOCABLE';}
+html[lang='es'] .unblockable:before {content: 'IMBLOQUEABLE';}
+html[lang='ru'] .unblockable:before {content: '\041d \0415 \0411 \041b \041e \041a \0418 \0420 \0423 \0415 \041c \042b \0419 ';}
+html[lang='ja'] .unblockable:before {content: '\30ac \30fc \30c9 \4e0d \53ef ';}
+html[lang='de'] .unblockable:before {content: 'UNAUFHALTSAM';}
+html[lang='ko'] .unblockable:before {content: '\bc29 \c5b4  \bd88 \ac00 ';}
+html[lang='pt-br'] .unblockable:before {content: 'INDEFENSAVEL';}
+
+html[lang='en'] .damage:before {content: 'DAMAGE';}
+html[lang='fr'] .damage:before {content: 'D\00c9 G\00c2 TS';}
+html[lang='es'] .damage:before {content: 'DA\00d1 O';}
+html[lang='ru'] .damage:before {content: '\0423 \0420 \041e \041d ';}
+html[lang='ja'] .damage:before {content: '\30c0 \30e1 \30fc \30b8 :';}
+html[lang='de'] .damage:before {content: 'SCHADEN';}
+html[lang='ko'] .damage:before {content: '\d53c \d574 \b7c9 ';}
+html[lang='pt-br'] .damage:before {content: 'DANO';}
+
+html[lang='en'] .none:before {content: 'NONE';}
+html[lang='fr'] .none:before {content: 'VIDE';}
+html[lang='es'] .none:before {content: 'NADA';}
+html[lang='ru'] .none:before {content: '\041e \0422 \0421 \0423 \0422 \0421 \0422 \0412 \0423 \0415 \0422 ';}
+html[lang='ja'] .none:before {content: '\306a \3057 ';}
+html[lang='de'] .none:before {content: 'KEINER';}
+html[lang='ko'] .none:before {content: '\c5c6 \c74c ';}
+html[lang='pt-br'] .none:before {content: 'NENHUM';}
+
+html[lang='en'] .very-low:before {content: 'VERY LOW';}
+html[lang='fr'] .very-low:before {content: 'TR\00c8 S FAIBLE';}
+html[lang='es'] .very-low:before {content: 'MUY BAJO';}
+html[lang='ru'] .very-low:before {content: '\041e \0427 \0415 \041d \042c  \041d \0418 \0417 \041a \041e \0415 ';}
+html[lang='ja'] .very-low:before {content: '\3068 \3066 \3082 \4f4e \3044 ';}
+html[lang='de'] .very-low:before {content: 'MINIMAL';}
+html[lang='ko'] .very-low:before {content: '\c544 \c8fc  \b0ae \c74c ';}
+html[lang='pt-br'] .very-low:before {content: 'MUITO FRACO';}
+
+html[lang='en'] .low:before {content: 'LOW';}
+html[lang='fr'] .low:before {content: 'FAIBLE';}
+html[lang='es'] .low:before {content: 'BAJO';}
+html[lang='ru'] .low:before {content: '\041d \0418 \0417 \041a \041e \0415 ';}
+html[lang='ja'] .low:before {content: '\4f4e \3044 ';}
+html[lang='de'] .low:before {content: 'GERING';}
+html[lang='ko'] .low:before {content: '\c57d \d568 ';}
+html[lang='pt-br'] .low:before {content: 'FRACO';}
+
+html[lang='en'] .medium:before {content: 'MED';}
+html[lang='fr'] .medium:before {content: 'MOYEN';}
+html[lang='es'] .medium:before {content: 'MEDIO';}
+html[lang='ru'] .medium:before {content: '\0421 \0420 \0415 \0414 \041d \0415 \0415 ';}
+html[lang='ja'] .medium:before {content: '\4e2d \7a0b \5ea6 ';}
+html[lang='de'] .medium:before {content: 'MITTEL';}
+html[lang='ko'] .medium:before {content: '\bcf4 \d1b5 ';}
+html[lang='pt-br'] .medium:before {content: 'M\00c9 DIO';}
+
+html[lang='en'] .high:before {content: 'HIGH';}
+html[lang='fr'] .high:before {content: 'HAUT';}
+html[lang='es'] .high:before {content: 'ALTO';}
+html[lang='ru'] .high:before {content: '\0412 \042b \0421 \041e \041a \041e \0415 ';}
+html[lang='ja'] .high:before {content: '\9ad8 \3044 ';}
+html[lang='de'] .high:before {content: 'HOCH';}
+html[lang='ko'] .high:before {content: '\ac15 \d568 ';}
+html[lang='pt-br'] .high:before {content: 'FORTE';}
+
+html[lang='en'] .very-high:before {content: 'VERY HIGH';}
+html[lang='fr'] .very-high:before {content: 'TR\00c8 S HAUT';}
+html[lang='es'] .very-high:before {content: 'MUY ALTO';}
+html[lang='ru'] .very-high:before {content: '\041e \0427 \0415 \041d \042c  \0412 \042b \0421 \041e \041a \041e \0415 ';}
+html[lang='ja'] .very-high:before {content: '\3068 \3066 \3082 \9ad8 \3044 ';}
+html[lang='de'] .very-high:before {content: 'EXTREM';}
+html[lang='ko'] .very-high:before {content: '\b9e4 \c6b0  \ac15 \d568 ';}
+html[lang='pt-br'] .very-high:before {content: 'MUITO FORTE';}
+
+html[lang='en'] .cooldown:before {content: 'COOLDOWN';}
+html[lang='fr'] .cooldown:before {content: 'REFROIDISSEMENT';}
+html[lang='es'] .cooldown:before {content: 'RECARGA';}
+html[lang='ru'] .cooldown:before {content: '\041f \0415 \0420 \0415 \0417 \0410 \0420 \042f \0414 \041a \0410 ';}
+html[lang='ja'] .cooldown:before {content: '\30af \30fc \30eb \30c0 \30a6 \30f3 :';}
+html[lang='de'] .cooldown:before {content: 'ABKLINGZEIT';}
+html[lang='ko'] .cooldown:before {content: '\c7ac \c0ac \c6a9  \b300 \ae30  \c2dc \ac04 ';}
+html[lang='pt-br'] .cooldown:before {content: 'REATIVA\00c7 \00c3 O';}
+
+html[lang='en'] .seconds:before {content: 'seconds';}
+html[lang='fr'] .seconds:before {content: 'secondes';}
+html[lang='es'] .seconds:before {content: 'segundos';}
+html[lang='ru'] .seconds:before {content: '\0441 \0435 \043a \0443 \043d \0434 ';}
+html[lang='ja'] .seconds:before {content: '\79d2 ';}
+html[lang='de'] .seconds:before {content: 'sekunden';}
+html[lang='ko'] .seconds:before {content: '\cd08 ';}
+html[lang='pt-br'] .seconds:before {content: 'segundos';}
+
+/*
+html[lang='en'] .upgrade-price:before {content: 'UPGRADE';}
+html[lang='fr'] .upgrade-price:before {content: 'AM\00c9 LIORER';}
+html[lang='es'] .upgrade-price:before {content: 'MEJORAR';}
+html[lang='ru'] .upgrade-price:before {content: '\0423 \041b \0423 \0427 \0428 \0415 \041d \0418 \0415 ';}
+html[lang='ja'] .upgrade-price:before {content: '\30a2 \30c3 \30d7 \30b0 \30ec \30fc \30c9 ';}
+html[lang='de'] .upgrade-price:before {content: 'VERBESSERN';}
+html[lang='ko'] .upgrade-price:before {content: '\c5c5 \adf8 \b808 \c774 \b4dc ';}
+html[lang='pt-br'] .upgrade-price:before {content: 'MELHORAR';}
+
+html[lang='en'] .sell-price:before {content: 'SELL';}
+html[lang='fr'] .sell-price:before {content: 'VENDRE';}
+html[lang='es'] .sell-price:before {content: 'VENDER';}
+html[lang='ru'] .sell-price:before {content: '\041f \0420 \041e \0414 \0410 \0422 \042c ';}
+html[lang='ja'] .sell-price:before {content: '\58f2 \308b ';}
+html[lang='de'] .sell-price:before {content: 'VERKAUFEN';}
+html[lang='ko'] .sell-price:before {content: '\d314 \ae30 ';}
+html[lang='pt-br'] .sell-price:before {content: 'VENDER';}
+*/
 
 /* ABILITIES */
 
@@ -1019,15 +1202,15 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 
 .description {
     background: #314c73;
+    font-size: smaller;
     box-shadow: 0 0 1px black;
     padding: 6px;
 }
 .ability.collapsed .description {
     display: none;
 }
-
-.description {
-    font-size: smaller;
+.move .description {
+    grid-area: des;
 }
 
 .number {

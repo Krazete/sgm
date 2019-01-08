@@ -16,6 +16,21 @@ common = [
     'CharacterDetails_SA',
     'SkillTree_SuperAbility_Title',
 
+    'Status_Unblockable',
+    'SM_Damage',
+    'None',
+    'Dmg_00_VeryLow',
+    'Dmg_01_Low',
+    'Dmg_02_Medium',
+    'Dmg_03_High',
+    'Dmg_04_VeryHigh',
+    'Dmg_05_Ultra',
+    'SM_Cooldown',
+    'Stat_Seconds_Full',
+    'Stat_Seconds_Short', # UNUSED
+    'SM_Upgrade',
+    'Sell',
+
     'Key_Options',
     'Stat_Lvl', # UNUSED
     'Character_Evolve_Button',
