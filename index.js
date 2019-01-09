@@ -237,6 +237,80 @@ function initCollection(responses) {
         return quote;
     }
 
+    function rate() {
+        var key = this.parentElement.parentElement.id;
+        var value = parseInt(this.dataset.value);
+        firebase.database().ref([
+            key,
+            userIP.replace(/\./g, "-")
+        ].join("/")).set({
+            "vote": value
+        });
+        updateRating(key, value);
+    }
+
+    function updateRating(key) {
+        var card = document.getElementById(key);
+        var stars = card.getElementsByClassName("star");
+        var starValue = card.getElementsByClassName("star-value")[0];
+
+        firebase.database().ref(key).once('value').then(function (snapshot) {
+            var snapshot = snapshot.val();
+            var total = 0;
+            var count = 0;
+            var userVote = 0;
+            for (var ip in snapshot) {
+                total += snapshot[ip].vote;
+                count++;
+                if (ip == userIP.replace(/\./g, "-")) {
+                    userVote = snapshot[ip].vote;
+                }
+            }
+            if (userVote > 0) {
+                var passed = false;
+                for (var star of stars) {
+                    if (passed) {
+                        star.classList.remove("burst");
+                    }
+                    else {
+                        star.classList.add("burst");
+                    }
+                    if (star.dataset.value == userVote) {
+                        passed = true;
+                    }
+                }
+            }
+            if (count <= 0) {
+                starValue.dataset.value = "-";
+            }
+            else {
+                starValue.dataset.value = total / count;
+            }
+        });
+    }
+
+    function createRating(key) {
+        var rating = document.createElement("div");
+            rating.className = "rating";
+            for (var i = 0; i < 5; i++) {
+                var star = document.createElement("div");
+                    star.className = "star";
+                    star.dataset.value = i + 1;
+                    var shadow = document.createElement("img");
+                        shadow.src = "image/official/star01.png";
+                    star.appendChild(shadow);
+                    var light = document.createElement("img");
+                        light.src = "image/official/star01.png";
+                    star.appendChild(light);
+                    star.addEventListener("click", rate);
+                rating.appendChild(star);
+            }
+            var starValue = document.createElement("div");
+                starValue.className = "star-value";
+            rating.appendChild(starValue);
+        return rating;
+    }
+
     function createWordBreak() {
         var wbr = document.createElement("wbr");
         return wbr;
@@ -345,6 +419,7 @@ function initCollection(responses) {
             card.id = key;
             card.appendChild(createAvatar(key));
             card.appendChild(createQuote());
+            card.appendChild(createRating(key));
             card.appendChild(createStat("atk"));
             card.appendChild(createStat("hp"));
             card.appendChild(createStat("fs"));
@@ -360,6 +435,7 @@ function initCollection(responses) {
         var card = createCard(key);
         collection.appendChild(card);
         cards.push(card);
+        updateRating(key);
     }
 }
 
@@ -819,6 +895,7 @@ function initSortMenu() {
     var sortAlphabetical = document.getElementById("sort-abc");
     var sortElement = document.getElementById("sort-element");
     var sortTier = document.getElementById("sort-tier");
+    var sortRating = document.getElementById("sort-rating");
 
     var savedBasis = localStorage.getItem("basis") || "sort-fs";
     var savedButton = document.getElementById(savedBasis);
@@ -885,6 +962,16 @@ function initSortMenu() {
         return C;
     }
 
+    function ratingBasis(a, b) {
+        var A = getStatValue(a, "star");
+        var B = getStatValue(b, "star");
+        var C = B - A;
+        if (C == 0) {
+            return fighterScoreBasis(a, b);
+        }
+        return C;
+    }
+
     function sorter(basis) {
         return function () {
             sortBasis = basis;
@@ -899,6 +986,7 @@ function initSortMenu() {
     sortAlphabetical.addEventListener("change", sorter(alphabeticalBasis));
     sortElement.addEventListener("change", sorter(elementBasis));
     sortTier.addEventListener("change", sorter(tierBasis));
+    sortRating.addEventListener("change", sorter(ratingBasis));
 
     if (![
         sortFighterScore,
@@ -906,7 +994,8 @@ function initSortMenu() {
         sortHealth,
         sortAlphabetical,
         sortElement,
-        sortTier
+        sortTier,
+        sortRating
     ].includes(savedButton)) {
         savedButton = sortFighterScore;
     }

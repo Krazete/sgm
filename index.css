@@ -585,6 +585,15 @@ html[lang='de'] #sort-type + label:before {content: 'TYP';}
 html[lang='ko'] #sort-type + label:before {content: '\ud0c0\uc785';}
 html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 
+html[lang='en'] #sort-rating + label:before {content: 'RATING';}
+html[lang='fr'] #sort-rating + label:before {content: '\u00c9VALUATION';}
+html[lang='es'] #sort-rating + label:before {content: 'CALIFICACI\u00d3N';}
+html[lang='ru'] #sort-rating + label:before {content: '\u0420\u0415\u0419\u0422\u0418\u041d\u0413';}
+html[lang='ja'] #sort-rating + label:before {content: '\u30ec\u30fc\u30c8';}
+html[lang='de'] #sort-rating + label:before {content: 'WERTUNG';}
+html[lang='ko'] #sort-rating + label:before {content: '\ub4f1\uae09';}
+html[lang='pt-br'] #sort-rating + label:before {content: 'CLASSIFICA\u00c7\u00c3O';}
+
 /* COLLECTION */
 
 #collection {
@@ -751,6 +760,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .fighter.card {
     grid-template-areas:
         'img qt qt'
+        'img rt rt'
         'img atk hp'
         'img fs fs'
         'ca ca ca'
@@ -986,6 +996,57 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     font-size: smaller;
     margin-top: 0;
     display: none; /* flavor text officially unfinished */
+}
+
+/* RATING */
+
+.rating {
+    text-align: center;
+    grid-area: rt;
+}
+
+.star {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+}
+.zoomed-out .star {
+    width: 20px;
+    height: 20px;
+}
+.zoomed-in .star {
+    width: 28px;
+    height: 28px;
+}
+
+.star img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+.star img:first-child {
+    filter: brightness(0);
+}
+
+.star.burst {
+    background: radial-gradient(white, transparent 70%);
+}
+
+.star-value {
+    color: gray;
+    font-size: xx-small;
+    margin-bottom: -1em;
+}
+.star-value:before {
+    content: attr(data-value);
+}
+.zoomed-in .star-value {
+    font-size: small;
 }
 
 /* STATS */
