@@ -758,9 +758,13 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
         'ma ma ma';
 }
 .move.card {
+    /* grid-template-areas:
+        'img mn mn'
+        'img qt qt'
+        'img tb tb'
+        'des des des'; */
     grid-template-areas:
         'img mn mn'
-        /* 'img qt qt' */
         'img tb tb'
         'des des des';
 }
