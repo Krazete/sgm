@@ -150,14 +150,24 @@ html[lang='ko'] .cinematic {
 
 .scroller.half {
     min-width: 45%;
+}
+.scroller.third {
+    min-width: 33%;
+}
+.scroller.third:first-child {
+    min-width: 24%;
+}
+
+.scroller.half, .scroller.third {
     vertical-align: top;
     display: inline-block;
 }
-.scroller.half.hidden {
+
+.scroller.half.hidden, .scroller.third.hidden {
     display: none;
 }
 
-.scroller.half > div {
+.scroller.half > div, .scroller.third > div {
     display: inline-grid;
 }
 
@@ -289,8 +299,17 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 .icon {
     max-width: 28px;
     max-height: 28px;
+    font-size: 0;
     display: block;
     margin: auto;
+}
+
+.half-subicon {
+    max-width: 50%;
+    max-height: 100%;
+}
+.half-subicon:last-child {
+    transform: scaleX(-1);
 }
 
 .glowing {
@@ -312,7 +331,7 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
     margin: auto;
 }
 
-#filter-sort {
+#filter-sort, #settings {
     margin: auto 0 auto auto;
     cursor: pointer;
 }
@@ -461,6 +480,12 @@ html[lang='de'] .all-label:before {content: 'ALLE';}
 html[lang='ko'] .all-label:before {content: '\c804 \ccb4 ';}
 html[lang='pt-br'] .all-label:before {content: 'TODOS';}
 
+/* MOVE LEVEL */
+
+#level-menu .subset {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 /* FILTER */
 
 #filter-label:before {
@@ -475,6 +500,10 @@ html[lang='ja'] #filter-label:before {content: '\30d5 \30a3 \30eb \30bf \30fc ';
 html[lang='de'] #filter-label:before {content: 'FILTER';}
 html[lang='ko'] #filter-label:before {content: '\d544 \d130 ';}
 html[lang='pt-br'] #filter-label:before {content: 'FILTRAR';}
+
+#filter-bb + label .icon {
+    margin: 5% auto -5% auto;
+}
 
 #medals {
     grid-template-columns: repeat(2, 1fr);
@@ -556,6 +585,15 @@ html[lang='ja'] #sort-tier + label:before {content: '\30e9 \30f3 \30af ';}
 html[lang='de'] #sort-tier + label:before {content: 'KLASSE';}
 html[lang='ko'] #sort-tier + label:before {content: '\b4f1 \ae09 ';}
 html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
+
+html[lang='en'] #sort-type + label:before {content: 'TYPE';}
+html[lang='fr'] #sort-type + label:before {content: 'TYPE';}
+html[lang='es'] #sort-type + label:before {content: 'TIPO';}
+html[lang='ru'] #sort-type + label:before {content: '\u0422\u0418\u041f';}
+html[lang='ja'] #sort-type + label:before {content: '\u30bf\u30a4\u30d7';}
+html[lang='de'] #sort-type + label:before {content: 'TYP';}
+html[lang='ko'] #sort-type + label:before {content: '\ud0c0\uc785';}
+html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 
 /* COLLECTION */
 
@@ -922,11 +960,10 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: block;
     margin: auto;
 }
-.sm .badge .shell img:first-child {
+.sm .badge .shell img {
     width: 50%;
 }
 .sm .badge .shell img:last-child {
-    width: 50%;
     transform: scaleX(-1);
 }
 
@@ -954,6 +991,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .move .quote {
     font-size: smaller;
     margin-top: 0;
+    display: none; /* flavor text officially unfinished */
 }
 
 /* STATS */

@@ -44,7 +44,8 @@ common = [
     'SkillTree_AtkNode_Title',
     'SkillTree_HealthNode_Title',
     'Key_Element',
-    'Sort_Tier'
+    'Sort_Tier',
+    'Sort_Type'
 ]
 
 corpus = file.load('data_processing/sgm_exports/TextAsset')

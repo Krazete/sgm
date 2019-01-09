@@ -338,7 +338,7 @@ function initCollection(responses) {
     function createCard(key) {
         var card = document.createElement("div");
             card.className = [
-                "card",
+                "fighter card",
                 tiers[variants[key].tier],
                 elements[variants[key].element]
             ].join(" ");
