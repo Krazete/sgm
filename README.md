@@ -144,6 +144,20 @@ If you recognize where the art is from, please [let me know](#contact) so I can 
 
 ## Issues
 
+### Move Gallery
+
+The [Move Gallery](https://sgm.netlify.com/sgm/index2.html) is currently incomplete, and it will remain that way for a while.
+The main issues with the Move Gallery are:
+
+* no images of each move
+* damage indicator lacks information
+* no upgrade or sell costs
+* no information about whether a move is a throw, grab, or projectile
+* some moves are missing
+* some move descriptions are missing key ability information (e.g. Rage of the Dragon)
+
+For these reasons, it is not prominently featured on this repository nor linked to by the Fighter Gallery.
+
 ### Portraits
 
 Unlike most of the data and assets used on the website, fighter variant portrait images are not in the APK.
