@@ -679,12 +679,14 @@ function initOptionsMenu() {
                 {"unlock": 15, "value": [0.25]}
             ];
         }
+        var fTierValue = 0;
         for (var fTier of fTiers) {
-            if (fTier.unlock <= levelTiers[moves[key].tier].value) {
-                return fTier.value;
+            if (fTier.unlock > levelTiers[moves[key].tier].value) {
+                break;
             }
+            fTierValue = fTier.value;
         }
-        return fTiers[0].value;
+        return fTierValue;
     }
 
     function updateCardDescriptions() {
