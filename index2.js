@@ -244,7 +244,7 @@ function initLanguageMenu() {
         if (corpus[moves[key].description]) {
             quote.innerHTML = corpus[moves[key].description];
         }
-        gear.dataset.value = moves[key].gear;
+        gear.dataset.value = moves[key].cost;
     }
 
     function updateCardConstants(response) {

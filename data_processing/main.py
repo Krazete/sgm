@@ -231,6 +231,7 @@ def build_data(monolith, mono_char_keys):
                 # 'superbar': sm['superbarCost'],
                 'attack': sm['attackDamageMultipliers'],
                 'gear': sm['gearDamageTier'],
+                'cost': sm['gearPointsCost'],
                 'damage': sm['damageIndicatorLevels'],
                 'cooldown': sm['cooldownTimes'],
                 'ability': build_features(sm['signatureAbility'])
@@ -252,6 +253,7 @@ def build_data(monolith, mono_char_keys):
                 # 'superbar': bb['superbarCost'],
                 'attack': bb['attackDamageMultipliers'],
                 'gear': bb['gearDamageTier'],
+                'cost': bb['gearPointsCost'],
                 'damage': bb['damageIndicatorLevels'],
                 'strength': bb['strengthLevel'],
                 'ability': build_features(bb['signatureAbility'])
