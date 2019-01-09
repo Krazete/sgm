@@ -7,7 +7,7 @@
     <link rel="shortcut icon" type="image/png" href="image/official/Button_Modifiers.png">
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Skullgirls Mobile Move Gallery</title>
-    <script type="application/javascript" src="index0.js"></script>
+    <script type="application/javascript" src="index2.js"></script>
 </head>
 <body>
     <div id="header">
@@ -47,7 +47,7 @@
                         <input type="radio" name="search" id="search-mn">
                         <label for="search-mn"></label>
                     </div>
-                    <div class="ca">
+                    <div>
                         <input type="radio" name="search" id="search-d">
                         <label for="search-d" class="ability-type"></label>
                     </div>
@@ -60,30 +60,7 @@
     </div>
     <div id="footer">
         <div class="hidden" id="menu">
-            <div class="scroller third" id="level-menu">
-                <div>
-                    <div class="label-flexbox">
-                        <span class="cinematic silver-gradient" id="level-label"></span>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="subset">
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="30" value="1" class="cinematic" id="level-bronze">
-                            <img src="image/official/BronzeLevel.png" class="icon">
-                        </div>
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="40" value="1" class="cinematic" id="level-silver">
-                            <img src="image/official/SilverLevel.png" class="icon">
-                        </div>
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="50" value="1" class="cinematic" id="level-gold">
-                            <img src="image/official/GoldLevel.png" class="icon">
-                        </div>
-                        <input type="range" min="1" max="60" value="1" class="fill-row" id="level-range">
-                    </div>
-                </div>
-            </div>
-            <div class="scroller third" id="filter-menu">
+            <div class="scroller half" id="filter-menu">
                 <div>
                     <div class="label-flexbox">
                         <span class="tagged cinematic silver-gradient" id="filter-label"></span>
@@ -92,15 +69,15 @@
                     </div>
                     <div class="divider"></div>
                     <div class="subset" id="badges">
-                        <input type="checkbox" id="filter-sm">
-                        <label for="filter-sm">
+                        <input type="checkbox" id="filter-sms">
+                        <label for="filter-sms">
                             <div class="icon">
                                 <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
                                 <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
                             </div>
                         </label>
-                        <input type="checkbox" id="filter-bb">
-                        <label for="filter-bb"><img src="image/official/BB-Frame1.png" class="icon"></label>
+                        <input type="checkbox" id="filter-bbs">
+                        <label for="filter-bbs"><img src="image/official/BB-Frame1.png" class="icon"></label>
                     </div>
                     <div class="divider"></div>
                     <div class="subset" id="medals">
@@ -140,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="scroller third" id="sort-menu">
+            <div class="scroller half" id="sort-menu">
                 <div>
                     <div>
                         <span class="tagged cinematic silver-gradient" id="sort-label"></span>
@@ -162,7 +139,29 @@
                 <img src="image/official/ZoomOut.png" class="button" id="zoom-out">
                 <img src="image/official/ZoomIn.png" class="button" id="zoom-in">
             </div>
-            <div></div>
+            <div class="scroller" id="level-menu">
+                <div>
+                    <div class="label-flexbox">
+                        <span class="cinematic silver-gradient" id="level-label"></span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset">
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="15" value="3" class="cinematic" id="level-bronze">
+                            <img src="image/official/BronzeLevel.png" class="icon">
+                        </div>
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="15" value="3" class="cinematic" id="level-silver">
+                            <img src="image/official/SilverLevel.png" class="icon">
+                        </div>
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="15" value="3" class="cinematic" id="level-gold">
+                            <img src="image/official/GoldLevel.png" class="icon">
+                        </div>
+                        <input type="range" min="1" max="15" value="3" class="fill-row" id="level-range">
+                    </div>
+                </div>
+            </div>
             <img src="image/official/Button_Settings.png" class="button" id="settings">
         </div>
     </div>

@@ -982,7 +982,7 @@ function initOptionsMenu() {
             for (var i = 0; i < saDescriptions.length; i++) {
                 var saDescription = saDescriptions[i];
                 var template = corpus[variants[key].sa.features[i].description];
-                var substitutions = variants[key].sa.features[i].tiers[saRange.value - 1];
+                var substitutions = variants[key].sa.features[i].tiers[saRange.value - 1].value;
                 saDescription.innerHTML = format(template, substitutions);
             }
         }
@@ -999,7 +999,7 @@ function initOptionsMenu() {
                     corpus[fighters[variants[key].base].ma.features[i].title],
                     corpus[fighters[variants[key].base].ma.features[i].description]
                 ].join(" - ");
-                var substitutions = fighters[variants[key].base].ma.features[i].tiers[maRange.value - 1];
+                var substitutions = fighters[variants[key].base].ma.features[i].tiers[maRange.value - 1].value;
                 maDescription.innerHTML = format(template, substitutions);
             }
         }

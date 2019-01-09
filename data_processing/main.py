@@ -108,15 +108,19 @@ def build_data(monolith, mono_char_keys):
 
     def build_tier(m_feature, m_tier, subs):
         'Get substitution values to be used in ability description templates.'
-        tier = [None] * len(subs)
+        tier = {
+            'unlock': 0,
+            'value': [None] * len(subs)
+        }
         for obj in iter_object(m_tier):
+            tier['unlock'] = m_tier['unlockAtLevel']
             for i, sub in enumerate(subs):
                 if obj['id'].upper() == sub[0]:
-                    tier[i] = obj[sub[1]]
+                    tier['value'][i] = obj[sub[1]]
         for obj in iter_object(m_feature, ['tiers']):
             for i, sub in enumerate(subs):
                 if obj['id'].upper() == sub[0]:
-                    tier[i] = obj[sub[1]]
+                    tier['value'][i] = obj[sub[1]]
         return tier
 
     def iter_object(obj, skip_keys=[]):
@@ -178,8 +182,6 @@ def build_data(monolith, mono_char_keys):
                 'en': base['englishVoArtist'],
                 'ja': base['japaneseVoArtist']
             },
-            # 'blockbusters': [monoref(x) for x in base['blockbusters']], # TODO: add this in
-            # 'specialmoves': {}, # TODO: add this in
             'ca': record(monoref(base['characterAbility'])),
             'ma': build_features(mono['superAbility'])
         }

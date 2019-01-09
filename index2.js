@@ -41,7 +41,7 @@ function loadJSON(path) {
 
 function toggleLoadingScreen(loading) {
     if (loading) {
-        // document.body.classList.add("loading");
+        document.body.classList.add("loading");
     }
     else {
         document.body.classList.remove("loading");
@@ -95,8 +95,7 @@ function initCollection(responses) {
                 badge.appendChild(shell);
                 if (moves[key].strength == 3) {
                     var unblockable = document.createElement("div");
-                        unblockable.className = "cinematic dependent-gradient";
-                        unblockable.innerHTML = "UNBLOCKABLE";
+                        unblockable.className = "unblockable cinematic dependent-gradient";
                     badge.appendChild(unblockable);
                 }
             }
@@ -125,6 +124,13 @@ function initCollection(responses) {
     function createTable(key) {
         var table = document.createElement("table");
             table.className = "table";
+            var row = table.insertRow();
+            var cell = row.insertCell();
+                cell.className = "damage";
+            var cell = row.insertCell();
+                var value = document.createElement("span");
+                    value.className = "damage-value";
+                cell.appendChild(value);
             if (moves[key].type == 0) {
                 var row = table.insertRow();
                 var cell = row.insertCell();
@@ -136,15 +142,6 @@ function initCollection(responses) {
                     var seconds = document.createElement("span");
                         seconds.className = "seconds";
                     cell.appendChild(seconds);
-            }
-            else {
-                var row = table.insertRow();
-                var cell = row.insertCell();
-                    cell.className = "damage";
-                var cell = row.insertCell();
-                    var value = document.createElement("span");
-                        value.className = "damage-value";
-                    cell.appendChild(value);
             }
         return table;
     }
@@ -163,6 +160,12 @@ function initCollection(responses) {
         else {
             card.classList.add("locked");
         }
+    }
+
+    function createGear() {
+        var gear = document.createElement("div");
+            gear.className = "gear cinematic";
+        return gear;
     }
 
     function createLock() {
@@ -186,6 +189,7 @@ function initCollection(responses) {
             card.appendChild(createFlavor());
             card.appendChild(createTable(key));
             card.appendChild(createDescription());
+            card.appendChild(createGear());
             card.appendChild(createLock());
         return card;
     }
@@ -235,24 +239,12 @@ function initLanguageMenu() {
         var key = card.id;
         var tag = card.getElementsByClassName("tag")[0];
         var quote = card.getElementsByClassName("quote")[0];
-        var description = card.getElementsByClassName("description")[0];
+        var gear = card.getElementsByClassName("gear")[0];
         tag.innerHTML = corpus[moves[key].title];
         if (corpus[moves[key].description]) {
             quote.innerHTML = corpus[moves[key].description];
         }
-        description.classList.add("hidden");
-        for (var feature of moves[key].ability.features) {
-            if (feature.description && corpus[feature.description]) {
-                var tiers = feature.tiers;
-                if (feature.description == "SA_Valentine_BB4") {
-                    console.log(feature);
-                    var tiers = [[0.15], [0.2], [0.25]];
-                    console.log(corpus[feature.description]);
-                }
-                description.innerHTML = format(corpus[feature.description], tiers[tiers.length - 1]);
-                description.classList.remove("hidden");
-            }
-        }
+        gear.dataset.value = moves[key].gear;
     }
 
     function updateCardConstants(response) {
@@ -346,7 +338,6 @@ function initDock() {
         else {
             this.classList.add("glowing");
             menu.classList.remove("hidden");
-            optionsMenu.scrollTo(0, 0);
             filterMenu.scrollTo(0, 0);
             sortMenu.scrollTo(0, 0);
         }
@@ -364,12 +355,13 @@ function initDock() {
 
 function initFilterMenu() {
     var searchbox = document.getElementById("searchbox");
-    var searchVN = document.getElementById("search-vn");
-    var searchCA = document.getElementById("search-ca");
-    var searchSA = document.getElementById("search-sa");
-    var searchMA = document.getElementById("search-ma");
+    var searchMN = document.getElementById("search-mn");
+    var searchD = document.getElementById("search-d");
 
     var filterCancel = document.getElementById("filter-cancel");
+
+    var filterSMs = document.getElementById("filter-sms");
+    var filterBBs = document.getElementById("filter-bbs");
 
     var filterBronze = document.getElementById("filter-bronze");
     var filterSilver = document.getElementById("filter-silver");
@@ -390,6 +382,8 @@ function initFilterMenu() {
 
     function updateFilterCancel() {
         if (
+            filterSMs.checked ||
+            filterBBs.checked ||
             filterBronze.checked ||
             filterSilver.checked ||
             filterGold.checked ||
@@ -414,11 +408,17 @@ function initFilterMenu() {
     }
 
     function sanitize(text) {
-        return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/g, " ").trim();
+        if (text) {
+            return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/g, " ").trim();
+        }
+        return "";
     }
 
     function removePlaceholders(template) {
-        return template.replace(/{\d+(?::\d+)?%?}%?/g, "");
+        if (template) {
+            return template.replace(/{\d+(?::\d+)?%?}%?/g, "");
+        }
+        return "";
     }
 
     function searchCondition(card) {
@@ -427,27 +427,31 @@ function initFilterMenu() {
         }
         var key = card.id;
         var query = sanitize(searchbox.value);
-        if (searchVN.checked) {
-            return sanitize(key).includes(query) || sanitize(corpus[moves[key].name]).includes(query);
+        if (searchMN.checked) {
+            return sanitize(key).includes(query) || sanitize(corpus[moves[key].title]).includes(query);
         }
-        else if (searchCA.checked) {
-            return removePlaceholders(sanitize(corpus[moves[moves[key].base].ca.description])).includes(query);
-        }
-        else if (searchSA.checked) {
-            for (var feature of moves[key].sa.features) {
-                if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
-                    return true;
-                }
-            }
-        }
-        else if (searchMA.checked) {
-            for (var feature of moves[moves[key].base].ma.features) {
+        else if (searchD.checked) {
+            for (var feature of moves[key].ability.features) {
                 if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
                     return true;
                 }
             }
         }
         return false;
+    }
+
+    function typeCondition(card) {
+        if (
+            !filterSMs.checked &&
+            !filterBBs.checked
+        ) {
+            return true;
+        }
+        var key = card.id;
+        return (
+            (filterSMs.checked && moves[key].type == 0) ||
+            (filterBBs.checked && moves[key].type == 1)
+        );
     }
 
     function tierCondition(card) {
@@ -504,6 +508,7 @@ function initFilterMenu() {
         for (var card of cards) {
             if (
                 searchCondition(card) &&
+                typeCondition(card) &&
                 tierCondition(card) &&
                 fighterCondition(card)
             ) {
@@ -517,6 +522,8 @@ function initFilterMenu() {
     };
 
     function cancelFilters() {
+        filterSMs.checked = false;
+        filterBBs.checked = false;
         filterBronze.checked = false;
         filterSilver.checked = false;
         filterGold.checked = false;
@@ -536,12 +543,12 @@ function initFilterMenu() {
     }
 
     searchbox.addEventListener("input", filterCards);
-    searchVN.addEventListener("change", filterCards);
-    searchCA.addEventListener("change", filterCards);
-    searchSA.addEventListener("change", filterCards);
-    searchMA.addEventListener("change", filterCards);
+    searchMN.addEventListener("change", filterCards);
+    searchD.addEventListener("change", filterCards);
 
     filterCancel.addEventListener("change", cancelFilters);
+    filterSMs.addEventListener("change", filterCards);
+    filterBBs.addEventListener("change", filterCards);
     filterBronze.addEventListener("change", filterCards);
     filterSilver.addEventListener("change", filterCards);
     filterGold.addEventListener("change", filterCards);
@@ -561,7 +568,7 @@ function initFilterMenu() {
     if (location.hash) {
         searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
     }
-    searchVN.checked = true;
+    searchMN.checked = true;
     filterCancel.click();
 }
 
@@ -573,29 +580,23 @@ function sortCards() {
 }
 
 function initSortMenu() {
-    var sortFighterScore = document.getElementById("sort-fs");
-    var sortAttack = document.getElementById("sort-atk");
-    var sortHealth = document.getElementById("sort-hp");
+    var sortDamage = document.getElementById("sort-damage");
     var sortAlphabetical = document.getElementById("sort-abc");
     var sortTier = document.getElementById("sort-tier");
+    var sortType = document.getElementById("sort-type");
 
-    var savedBasis = localStorage.getItem("basis") || "sort-fs";
+    var savedBasis = localStorage.getItem("basis2") || "sort-tier";
     var savedButton = document.getElementById(savedBasis);
 
     function alphabeticalBasis(a, b) {
-        var A = corpus[moves[bbs[a.id].base].name] + corpus[bbs[a.id].name];
-        var B = corpus[moves[bbs[b.id].base].name] + corpus[bbs[b.id].name];
+        var A = moves[a.id].base + corpus[moves[a.id].title];
+        var B = moves[b.id].base + corpus[moves[b.id].title];
         return A > B ? 1 : A < B ? -1 : 0;
     }
 
-    function getStatValue(card, type) {
-        var statValue = card.getElementsByClassName(type + "-value")[0];
-        return statValue.dataset.value;
-    }
-
-    function fighterScoreBasis(a, b) {
-        var A = getStatValue(a, "fs");
-        var B = getStatValue(b, "fs");
+    function damageBasis(a, b) {
+        var A = moves[a.id].damage[0];
+        var B = moves[b.id].damage[0];
         var C = B - A;
         if (C == 0) {
             return alphabeticalBasis(a, b);
@@ -603,32 +604,22 @@ function initSortMenu() {
         return C;
     }
 
-    function attackBasis(a, b) {
-        var A = getStatValue(a, "atk");
-        var B = getStatValue(b, "atk");
-        var C = B - A;
-        if (C == 0) {
-            return fighterScoreBasis(a, b);
-        }
-        return C;
-    }
-
-    function healthBasis(a, b) {
-        var A = getStatValue(a, "hp");
-        var B = getStatValue(b, "hp");
-        var C = B - A;
-        if (C == 0) {
-            return fighterScoreBasis(a, b);
-        }
-        return C;
-    }
-
     function tierBasis(a, b) {
-        var A = bbs[a.id].tier;
-        var B = bbs[b.id].tier;
+        var A = moves[a.id].tier;
+        var B = moves[b.id].tier;
         var C = B - A;
         if (C == 0) {
-            return fighterScoreBasis(a, b);
+            return alphabeticalBasis(a, b);
+        }
+        return C;
+    }
+
+    function typeBasis(a, b) {
+        var A = moves[a.id].type;
+        var B = moves[b.id].type;
+        var C = A - B;
+        if (C == 0) {
+            return tierBasis(a, b);
         }
         return C;
     }
@@ -637,141 +628,83 @@ function initSortMenu() {
         return function () {
             sortBasis = basis;
             sortCards();
-            localStorage.setItem("basis", this.id);
+            localStorage.setItem("basis2", this.id);
         };
     }
 
-    sortFighterScore.addEventListener("change", sorter(fighterScoreBasis));
-    sortAttack.addEventListener("change", sorter(attackBasis));
-    sortHealth.addEventListener("change", sorter(healthBasis));
+    sortDamage.addEventListener("change", sorter(damageBasis));
     sortAlphabetical.addEventListener("change", sorter(alphabeticalBasis));
     sortTier.addEventListener("change", sorter(tierBasis));
+    sortType.addEventListener("change", sorter(typeBasis));
 
     if (![
-        sortFighterScore,
-        sortAttack,
-        sortHealth,
+        sortDamage,
         sortAlphabetical,
-        sortTier
+        sortTier,
+        sortType
     ].includes(savedButton)) {
-        savedButton = sortFighterScore;
+        savedButton = sortTier;
     }
     savedButton.checked = false; /* resets radio so change event can be triggered */
     savedButton.click();
 }
 
 function initOptionsMenu() {
-    var optionBase = document.getElementById("option-base");
-    var optionDefault = document.getElementById("option-default");
-    var optionMaximum = document.getElementById("option-maximum");
-
     var levelRange = document.getElementById("level-range");
     var levelBronze = document.getElementById("level-bronze");
     var levelSilver = document.getElementById("level-silver");
     var levelGold = document.getElementById("level-gold");
     var levelTiers = [levelBronze, levelSilver, levelGold];
 
-    var treeNone = document.getElementById("tree-none");
-    var treeAll = document.getElementById("tree-all");
-    var treeMarquee = document.getElementById("tree-marquee");
-
-    var saNumber = document.getElementById("sa-number");
-    var saRange = document.getElementById("sa-range");
-
-    var maNumber = document.getElementById("ma-number");
-    var maRange = document.getElementById("ma-range");
-
     function updateCardStats() {
         for (var card of cards) {
             var key = card.id;
-            var atkValue = card.getElementsByClassName("atk-value")[0];
-            var hpValue = card.getElementsByClassName("hp-value")[0];
-            var fsValue = card.getElementsByClassName("fs-value")[0];
-
-            var baseBoost = treeNone.checked ? 1 : 1.5;
-            var abilityBoost = treeNone.checked ? 1 : treeAll.checked ? 1.46 : treeMarquee.checked ? 1.57 : NaN;
+            var damage = card.getElementsByClassName("damage-value")[0];
+            var cooldown = card.getElementsByClassName("cooldown-value")[0];
+            damage.innerHTML = moves[key].damage[levelTiers[moves[key].tier].value - 1];
+            if (moves[key].type == 0) {
+                cooldown.innerHTML = moves[key].cooldown[levelTiers[moves[key].tier].value - 1] + " ";
+            }
         }
         filterCards(); /* for the searchbox filter when language changes*/
         sortCards();
     }
 
-    function updateCardSAs() {
-        for (var card of cards) {
-            var key = card.id;
-            var sa = card.getElementsByClassName("sa")[0];
-            var saDescriptions = sa.getElementsByClassName("description");
-            for (var i = 0; i < saDescriptions.length; i++) {
-                var saDescription = saDescriptions[i];
-                var template = corpus[moves[key].sa.features[i].description];
-                var substitutions = moves[key].sa.features[i].tiers[saRange.value - 1];
-                saDescription.innerHTML = format(template, substitutions);
+    function getDescriptionTier(key, feature) {
+        var fTiers = feature.tiers;
+        if (feature.description == "SA_Valentine_BB4") {
+            var fTiers = [ /* apk doesn't have this data for some reason */
+                {"unlock": 1, "value": [0.15]},
+                {"unlock": 9, "value": [0.2]},
+                {"unlock": 15, "value": [0.25]}
+            ];
+        }
+        for (var fTier of fTiers) {
+            if (fTier.unlock <= levelTiers[moves[key].tier].value) {
+                return fTier.value;
             }
         }
+        return fTiers[0].value;
     }
 
-    function updateCardMAs() {
+    function updateCardDescriptions() {
         for (var card of cards) {
             var key = card.id;
-            var ma = card.getElementsByClassName("ma")[0];
-            var maDescriptions = ma.getElementsByClassName("description");
-            for (var i = 0; i < maDescriptions.length; i++) {
-                var maDescription = maDescriptions[i];
-                var template = [
-                    corpus[moves[moves[key].base].ma.features[i].title],
-                    corpus[moves[moves[key].base].ma.features[i].description]
-                ].join(" - ");
-                var substitutions = moves[moves[key].base].ma.features[i].tiers[maRange.value - 1];
-                maDescription.innerHTML = format(template, substitutions);
+            var description = card.getElementsByClassName("description")[0];
+            description.classList.add("hidden");
+            for (var feature of moves[key].ability.features) {
+                if (feature.description && corpus[feature.description]) {
+                    description.innerHTML = format(corpus[feature.description], getDescriptionTier(key, feature));
+                    description.classList.remove("hidden");
+                }
             }
         }
     }
 
     updateCards = function () {
         updateCardStats();
-        updateCardSAs();
-        updateCardMAs();
+        updateCardDescriptions();
     };
-
-    function updatePresetButtons() {
-        if (
-            levelBronze.value == levelBronze.min &&
-            levelSilver.value == levelSilver.min &&
-            levelGold.value == levelGold.min &&
-            treeNone.checked &&
-            saRange.value == saRange.min &&
-            maRange.value == maRange.min
-        ) {
-            optionBase.classList.add("pressed");
-            optionDefault.classList.remove("pressed");
-            optionMaximum.classList.remove("pressed");
-        }
-        else if (
-            levelBronze.value == levelBronze.min &&
-            levelSilver.value == levelSilver.min &&
-            levelGold.value == levelGold.min &&
-            treeNone.checked &&
-            saRange.value == saRange.max &&
-            maRange.value == maRange.max
-        ) {
-            optionBase.classList.remove("pressed");
-            optionDefault.classList.add("pressed");
-            optionMaximum.classList.remove("pressed");
-        }
-        else if (
-            treeMarquee.checked &&
-            saRange.value == saRange.max &&
-            maRange.value == maRange.max
-        ) {
-            optionBase.classList.remove("pressed");
-            optionDefault.classList.remove("pressed");
-            optionMaximum.classList.add("pressed");
-        }
-        else {
-            optionBase.classList.remove("pressed");
-            optionDefault.classList.remove("pressed");
-            optionMaximum.classList.remove("pressed");
-        }
-    }
 
     function setValidInput(input, value) {
         if (isNaN(value)) {
@@ -788,65 +721,11 @@ function initOptionsMenu() {
         }
     }
 
-    function setAllToBase() {
-        this.classList.add("pressed");
-        optionDefault.classList.remove("pressed");
-        optionMaximum.classList.remove("pressed");
-        setValidInput(levelRange, levelRange.min);
-        setValidInput(levelBronze, levelBronze.min);
-        setValidInput(levelSilver, levelSilver.min);
-        setValidInput(levelGold, levelGold.min);
-        treeNone.checked = true;
-        setValidInput(saNumber, saNumber.min);
-        setValidInput(saRange, saRange.min);
-        setValidInput(maNumber, maNumber.min);
-        setValidInput(maRange, maRange.min);
-        updateCards();
-    }
-
-    function setAllToDefault() {
-        optionBase.classList.remove("pressed");
-        this.classList.add("pressed");
-        optionMaximum.classList.remove("pressed");
-        setValidInput(levelRange, levelRange.min);
-        setValidInput(levelBronze, levelBronze.min);
-        setValidInput(levelSilver, levelSilver.min);
-        setValidInput(levelGold, levelGold.min);
-        treeNone.checked = true;
-        setValidInput(saNumber, saNumber.max);
-        setValidInput(saRange, saRange.max);
-        setValidInput(maNumber, maNumber.max);
-        setValidInput(maRange, maRange.max);
-        updateCards();
-    }
-
-    function setAllToMaximum() {
-        optionBase.classList.remove("pressed");
-        optionDefault.classList.remove("pressed");
-        this.classList.add("pressed");
-        setValidInput(levelRange, levelRange.max);
-        setValidInput(levelBronze, levelBronze.max);
-        setValidInput(levelSilver, levelSilver.max);
-        setValidInput(levelGold, levelGold.max);
-        treeMarquee.checked = true;
-        setValidInput(saNumber, saNumber.max);
-        setValidInput(saRange, saRange.max);
-        setValidInput(maNumber, maNumber.max);
-        setValidInput(maRange, maRange.max);
-        updateCards();
-    }
-
-    function getMaximumLevel() {
-        var max = 1;
-        return max;
-    }
-
     function setLevelViaRange() {
         setValidInput(levelBronze, this.value);
         setValidInput(levelSilver, this.value);
         setValidInput(levelGold, this.value);
-        updatePresetButtons();
-        updateCardStats();
+        updateCards();
     }
 
     function focusSelect() {
@@ -855,45 +734,13 @@ function initOptionsMenu() {
 
     function setLevelViaNumber() {
         setValidInput(this, this.value);
-        setValidInput(levelRange, getMaximumLevel());
-        updatePresetButtons();
-        updateCardStats();
+        setValidInput(levelRange, Math.max(
+            levelBronze.value,
+            levelSilver.value,
+            levelGold.value
+        ));
+        updateCards();
     }
-
-    function setTree() {
-        updatePresetButtons();
-        updateCardStats();
-    }
-
-    function setSAViaNumber() {
-        setValidInput(this, this.value);
-        setValidInput(saRange, this.value);
-        updatePresetButtons();
-        updateCardSAs();
-    }
-
-    function setSAViaRange() {
-        setValidInput(saNumber, this.value);
-        updatePresetButtons();
-        updateCardSAs();
-    }
-
-    function setMAViaNumber() {
-        setValidInput(this, this.value);
-        setValidInput(maRange, this.value);
-        updatePresetButtons();
-        updateCardMAs();
-    }
-
-    function setMAViaRange() {
-        setValidInput(maNumber, this.value);
-        updatePresetButtons();
-        updateCardMAs();
-    }
-
-    optionBase.addEventListener("click", setAllToBase);
-    optionDefault.addEventListener("click", setAllToDefault);
-    optionMaximum.addEventListener("click", setAllToMaximum);
 
     levelRange.addEventListener("change", setLevelViaRange);
     levelBronze.addEventListener("focus", focusSelect);
@@ -903,19 +750,7 @@ function initOptionsMenu() {
     levelSilver.addEventListener("change", setLevelViaNumber);
     levelGold.addEventListener("change", setLevelViaNumber);
 
-    treeNone.addEventListener("change", setTree);
-    treeAll.addEventListener("change", setTree);
-    treeMarquee.addEventListener("change", setTree);
-
-    saNumber.addEventListener("focus", focusSelect);
-    saNumber.addEventListener("change", setSAViaNumber);
-    saRange.addEventListener("change", setSAViaRange);
-
-    maNumber.addEventListener("focus", focusSelect);
-    maNumber.addEventListener("change", setMAViaNumber);
-    maRange.addEventListener("change", setMAViaRange);
-
-    optionDefault.click();
+    updateCards();
 }
 
 function initialize() {

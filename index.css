@@ -150,24 +150,14 @@ html[lang='ko'] .cinematic {
 
 .scroller.half {
     min-width: 45%;
-}
-.scroller.third {
-    min-width: 33%;
-}
-.scroller.third:first-child {
-    min-width: 24%;
-}
-
-.scroller.half, .scroller.third {
     vertical-align: top;
     display: inline-block;
 }
-
-.scroller.half.hidden, .scroller.third.hidden {
+.scroller.half.hidden {
     display: none;
 }
 
-.scroller.half > div, .scroller.third > div {
+.scroller.half > div {
     display: inline-grid;
 }
 
@@ -417,7 +407,7 @@ html[lang='de'] #level-label:before {content: 'Stufe';}
 html[lang='ko'] #level-label:before {content: '\b808 \bca8 ';}
 html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
 
-#menu input[type='text'] {
+#footer input[type='text'] {
     position: relative;
     width: 28px;
     height: 28px;
@@ -434,19 +424,19 @@ html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
     z-index: 1;
 }
 
-#menu input[type='text'].hidden {
+#footer input[type='text'].hidden {
     display: none;
 }
 
-#menu input[type='text']:focus {
+#footer input[type='text']:focus {
     outline: none;
 }
-#menu input[type='text']:focus + img {
+#footer input[type='text']:focus + img {
     border-radius: 50%;
     box-shadow: 0 0 6px 1px white;
 }
 
-#menu input[type='text'].maxed {
+#footer input[type='text'].maxed {
     color: skyblue;
 }
 
@@ -1259,7 +1249,6 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 
 .wikia {
     position: absolute;
-    top: 0;
     right: 0;
     opacity: 0.5;
     margin: 6px;
@@ -1270,8 +1259,27 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
     width: 14px;
     height: 14px;
     background: url(image/official/icon_externalsite.png);
-    background-size: 14px;
+    background-size: contain;
     display: block;
+}
+
+/* GEAR */
+
+.gear {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(image/official/GearIcon.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 6px;
+}
+
+.gear:after {
+    content: attr(data-value);
+    line-height: 40px;
 }
 
 /* LOCK */
@@ -1282,6 +1290,9 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
     opacity: 0.5;
     padding: 6px;
     cursor: pointer;
+}
+.move .lock {
+    right: 0;
 }
 .zoomed-out .lock {
     width: 16px;
