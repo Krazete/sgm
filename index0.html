@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta name="description" content="A move gallery for Skullgirls Mobile. View the stats and abilities of all special moves and blockbusters, translated in any language offered in the game.">
+    <link rel="shortcut icon" type="image/png" href="image/official/Button_Modifiers.png">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Skullgirls Mobile Move Gallery</title>
+    <script type="application/javascript" src="index0.js"></script>
+</head>
+<body>
+    <div id="header">
+        <span class="banner cinematic gold-gradient" id="skullgirls-mobile"></span>
+        <wbr>
+        <span class="banner cinematic silver-gradient" id="move-gallery"></span>
+        <div class="ribbon">
+            <a target="_blank" href="https://github.com/Krazete/sgm/blob/master/README.md" class="tagged" id="version">3.0.0</a>
+        </div>
+        <div class="scroller">
+            <div id="language-menu">
+                <input type="radio" name="language" id="en">
+                <label for="en" class="tagged"></label>
+                <input type="radio" name="language" id="fr">
+                <label for="fr" class="tagged"></label>
+                <input type="radio" name="language" id="es">
+                <label for="es" class="tagged"></label>
+                <input type="radio" name="language" id="ru">
+                <label for="ru" class="tagged"></label>
+                <input type="radio" name="language" id="ja">
+                <label for="ja" class="tagged"></label>
+                <input type="radio" name="language" id="de">
+                <label for="de" class="tagged"></label>
+                <input type="radio" name="language" id="ko">
+                <label for="ko" class="tagged"></label>
+                <input type="radio" name="language" id="pt-br">
+                <label for="pt-br" class="tagged"></label>
+            </div>
+        </div>
+    </div>
+    <div id="collection">
+        <div class="fill-row" id="search-menu">
+            <input type="text" class="cinematic" id="searchbox">
+            <div class="scroller">
+                <div>
+                    <div>
+                        <input type="radio" name="search" id="search-mn">
+                        <label for="search-mn"></label>
+                    </div>
+                    <div class="ca">
+                        <input type="radio" name="search" id="search-d">
+                        <label for="search-d" class="ability-type"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fill-row cinematic" id="loading">
+            <img src="image/loading.gif">
+        </div>
+    </div>
+    <div id="footer">
+        <div class="hidden" id="menu">
+            <div class="scroller third" id="level-menu">
+                <div>
+                    <div class="label-flexbox">
+                        <span class="cinematic silver-gradient" id="level-label"></span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset">
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="30" value="1" class="cinematic" id="level-bronze">
+                            <img src="image/official/BronzeLevel.png" class="icon">
+                        </div>
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="40" value="1" class="cinematic" id="level-silver">
+                            <img src="image/official/SilverLevel.png" class="icon">
+                        </div>
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="50" value="1" class="cinematic" id="level-gold">
+                            <img src="image/official/GoldLevel.png" class="icon">
+                        </div>
+                        <input type="range" min="1" max="60" value="1" class="fill-row" id="level-range">
+                    </div>
+                </div>
+            </div>
+            <div class="scroller third" id="filter-menu">
+                <div>
+                    <div class="label-flexbox">
+                        <span class="tagged cinematic silver-gradient" id="filter-label"></span>
+                        <input type="checkbox" id="filter-cancel">
+                        <label for="filter-cancel"><img src="image/official/constraints_no.png" class="icon"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="badges">
+                        <input type="checkbox" id="filter-sm">
+                        <label for="filter-sm">
+                            <div class="icon">
+                                <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
+                                <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
+                            </div>
+                        </label>
+                        <input type="checkbox" id="filter-bb">
+                        <label for="filter-bb"><img src="image/official/BB-Frame1.png" class="icon"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="medals">
+                        <input type="checkbox" id="filter-bronze">
+                        <label for="filter-bronze"><img src="image/official/constraints_bronze.png" class="icon"></label>
+                        <input type="checkbox" id="filter-silver">
+                        <label for="filter-silver"><img src="image/official/constraints_silver.png" class="icon"></label>
+                        <input type="checkbox" id="filter-gold">
+                        <label for="filter-gold"><img src="image/official/constraints_gold.png" class="icon"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="mastery">
+                        <input type="checkbox" id="filter-be">
+                        <label for="filter-be"><img src="image/official/Beowulf_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-bb">
+                        <label for="filter-bb"><img src="image/official/BigBand_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-ce">
+                        <label for="filter-ce"><img src="image/official/Cerebella_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-do">
+                        <label for="filter-do"><img src="image/official/Double_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-el">
+                        <label for="filter-el"><img src="image/official/Eliza_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-fi">
+                        <label for="filter-fi"><img src="image/official/Filia_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-pw">
+                        <label for="filter-pw"><img src="image/official/Painwheel_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-pa">
+                        <label for="filter-pa"><img src="image/official/Parasoul_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-pe">
+                        <label for="filter-pe"><img src="image/official/Peacock_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-mf">
+                        <label for="filter-mf"><img src="image/official/MsFortune_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-sq">
+                        <label for="filter-sq"><img src="image/official/Squigly_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-va">
+                        <label for="filter-va"><img src="image/official/Valentine_MasteryIcon.png" class="icon"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="scroller third" id="sort-menu">
+                <div>
+                    <div>
+                        <span class="tagged cinematic silver-gradient" id="sort-label"></span>
+                    </div>
+                    <div class="divider"></div>
+                    <input type="radio" name="sort" id="sort-damage">
+                    <label for="sort-damage" class="damage"></label>
+                    <input type="radio" name="sort" id="sort-abc">
+                    <label for="sort-abc"></label>
+                    <input type="radio" name="sort" id="sort-tier">
+                    <label for="sort-tier"></label>
+                    <input type="radio" name="sort" id="sort-type">
+                    <label for="sort-type"></label>
+                </div>
+            </div>
+        </div>
+        <div id="dock">
+            <div id="zoom">
+                <img src="image/official/ZoomOut.png" class="button" id="zoom-out">
+                <img src="image/official/ZoomIn.png" class="button" id="zoom-in">
+            </div>
+            <div></div>
+            <img src="image/official/Button_Settings.png" class="button" id="settings">
+        </div>
+    </div>
+</body>
+</html>
