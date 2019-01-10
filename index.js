@@ -298,6 +298,7 @@ function initCollection(responses) {
             }
             starValue.dataset.value = ratio;
             starValue.dataset.count = count;
+            /* do not sort cards on update because the rearrangement is obtrusive */
         });
     }
 
