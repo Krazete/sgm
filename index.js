@@ -290,7 +290,6 @@ function initCollection(responses) {
                 total += subvote * weight;
                 weightedCount += weight;
             }
-            console.log(ipVotes);
             if (userVote > 0) {
                 var passed = false;
                 for (var star of stars) {
