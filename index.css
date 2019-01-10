@@ -522,6 +522,12 @@ html[lang='de'] #sort-label:before {content: 'SORTIEREN';}
 html[lang='ko'] #sort-label:before {content: '\c815 \b82c ';}
 html[lang='pt-br'] #sort-label:before {content: 'ORGANIZAR';}
 
+#sort-menu .subset div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 4px;
+}
+
 html[lang='en'] #sort-abc + label:before {content: 'Alphabetical';}
 html[lang='fr'] #sort-abc + label:before {content: 'Alphab\00e9 tique';}
 html[lang='es'] #sort-abc + label:before {content: 'Orden alfab\00e9 tico';}
@@ -585,14 +591,22 @@ html[lang='de'] #sort-type + label:before {content: 'TYP';}
 html[lang='ko'] #sort-type + label:before {content: '\d0c0 \c785 ';}
 html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 
-html[lang='en'] #sort-rating + label:before {content: 'RATING';}
-html[lang='fr'] #sort-rating + label:before {content: '\00c9 VALUATION';}
-html[lang='es'] #sort-rating + label:before {content: 'CALIFICACI\00d3 N';}
-html[lang='ru'] #sort-rating + label:before {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 ';}
-html[lang='ja'] #sort-rating + label:before {content: '\30ec \30fc \30c8 ';}
-html[lang='de'] #sort-rating + label:before {content: 'WERTUNG';}
-html[lang='ko'] #sort-rating + label:before {content: '\b4f1 \ae09 ';}
-html[lang='pt-br'] #sort-rating + label:before {content: 'CLASSIFICA\00c7 \00c3 O';}
+html[lang='en'] #sort-offense + label:after,
+html[lang='en'] #sort-defense + label:after {content: 'RATING';}
+html[lang='fr'] #sort-offense + label:after,
+html[lang='fr'] #sort-defense + label:after {content: '\00c9 VALUATION';}
+html[lang='es'] #sort-offense + label:after,
+html[lang='es'] #sort-defense + label:after {content: 'CALIFICACI\00d3 N';}
+html[lang='ru'] #sort-offense + label:after,
+html[lang='ru'] #sort-defense + label:after {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 ';}
+html[lang='ja'] #sort-offense + label:after,
+html[lang='ja'] #sort-defense + label:after {content: '\30ec \30fc \30c8 ';}
+html[lang='de'] #sort-offense + label:after,
+html[lang='de'] #sort-defense + label:after {content: 'WERTUNG';}
+html[lang='ko'] #sort-offense + label:after,
+html[lang='ko'] #sort-defense + label:after {content: '\b4f1 \ae09 ';}
+html[lang='pt-br'] #sort-offense + label:after,
+html[lang='pt-br'] #sort-defense + label:after {content: 'CLASSIFICA\00c7 \00c3 O';}
 
 /* COLLECTION */
 
@@ -1013,23 +1027,39 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: block;
 }
 
-html[lang='en'] .offense:before {content: 'OFFENSE';}
-html[lang='fr'] .offense:before {content: 'ATTAQUE';}
-html[lang='es'] .offense:before {content: 'ATAQUE';}
-html[lang='ru'] .offense:before {content: '\041d \0410 \0421 \0422 \0423 \041f \041b \0415 \041d \0418 \0415 ';}
-html[lang='ja'] .offense:before {content: '\653b \6483 ';}
-html[lang='de'] .offense:before {content: 'OFFENSIVE';}
-html[lang='ko'] .offense:before {content: '\acf5 \aca9 ';}
-html[lang='pt-br'] .offense:before {content: 'ATAQUE';}
+html[lang='en'] .offense:before,
+html[lang='en'] #sort-offense + label:before {content: 'OFFENSE';}
+html[lang='fr'] .offense:before,
+html[lang='fr'] #sort-offense + label:before {content: 'ATTAQUE';}
+html[lang='es'] .offense:before,
+html[lang='es'] #sort-offense + label:before {content: 'ATAQUE';}
+html[lang='ru'] .offense:before,
+html[lang='ru'] #sort-offense + label:before {content: '\041d \0410 \0421 \0422 \0423 \041f \041b \0415 \041d \0418 \0415 ';}
+html[lang='ja'] .offense:before,
+html[lang='ja'] #sort-offense + label:before {content: '\653b \6483 ';}
+html[lang='de'] .offense:before,
+html[lang='de'] #sort-offense + label:before {content: 'OFFENSIVE';}
+html[lang='ko'] .offense:before,
+html[lang='ko'] #sort-offense + label:before {content: '\acf5 \aca9 ';}
+html[lang='pt-br'] .offense:before,
+html[lang='pt-br'] #sort-offense + label:before {content: 'ATAQUE';}
 
-html[lang='en'] .defense:before {content: 'DEFENSE';}
-html[lang='fr'] .defense:before {content: 'D\00c9 FENSE';}
-html[lang='es'] .defense:before {content: 'DEFENSA';}
-html[lang='ru'] .defense:before {content: '\041e \0411 \041e \0420 \041e \041d \0410 ';}
-html[lang='ja'] .defense:before {content: '\9632 \885b ';}
-html[lang='de'] .defense:before {content: 'DEFENSIVE';}
-html[lang='ko'] .defense:before {content: '\bc29 \c5b4 ';}
-html[lang='pt-br'] .defense:before {content: 'DEFESA';}
+html[lang='en'] .defense:before,
+html[lang='en'] #sort-defense + label:before {content: 'DEFENSE';}
+html[lang='fr'] .defense:before,
+html[lang='fr'] #sort-defense + label:before {content: 'D\00c9 FENSE';}
+html[lang='es'] .defense:before,
+html[lang='es'] #sort-defense + label:before {content: 'DEFENSA';}
+html[lang='ru'] .defense:before,
+html[lang='ru'] #sort-defense + label:before {content: '\041e \0411 \041e \0420 \041e \041d \0410 ';}
+html[lang='ja'] .defense:before,
+html[lang='ja'] #sort-defense + label:before {content: '\9632 \885b ';}
+html[lang='de'] .defense:before,
+html[lang='de'] #sort-defense + label:before {content: 'DEFENSIVE';}
+html[lang='ko'] .defense:before,
+html[lang='ko'] #sort-defense + label:before {content: '\bc29 \c5b4 ';}
+html[lang='pt-br'] .defense:before,
+html[lang='pt-br'] #sort-defense + label:before {content: 'DEFESA';}
 
 .star {
     position: relative;

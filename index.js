@@ -306,7 +306,7 @@ function initCollection(responses) {
                     ].join(";");
                 }
             }
-            starValue.dataset.value = ratio;
+            starValue.dataset.value = ratio || 0;
             starValue.dataset.count = count;
             /* do not sort cards on update because the rearrangement is obtrusive */
         });
@@ -926,7 +926,8 @@ function initSortMenu() {
     var sortAlphabetical = document.getElementById("sort-abc");
     var sortElement = document.getElementById("sort-element");
     var sortTier = document.getElementById("sort-tier");
-    var sortRating = document.getElementById("sort-rating");
+    var sortOffense = document.getElementById("sort-offense");
+    var sortDefense = document.getElementById("sort-defense");
 
     var savedBasis = localStorage.getItem("basis") || "sort-fs";
     var savedButton = document.getElementById(savedBasis);
@@ -993,12 +994,27 @@ function initSortMenu() {
         return C;
     }
 
-    function ratingBasis(a, b) {
-        var A = getStatValue(a, "star");
-        var B = getStatValue(b, "star");
+    function getRatingValue(card, category) {
+        var stars = card.getElementsByClassName(category)[0];
+        return getStatValue(stars, "star");
+    }
+
+    function offenseBasis(a, b) {
+        var A = getRatingValue(a, "offense");
+        var B = getRatingValue(b, "offense");
         var C = B - A;
         if (C == 0) {
-            return fighterScoreBasis(a, b);
+            return attackBasis(a, b);
+        }
+        return C;
+    }
+
+    function defenseBasis(a, b) {
+        var A = getRatingValue(a, "defense");
+        var B = getRatingValue(b, "defense");
+        var C = B - A;
+        if (C == 0) {
+            return healthBasis(a, b);
         }
         return C;
     }
@@ -1017,7 +1033,8 @@ function initSortMenu() {
     sortAlphabetical.addEventListener("change", sorter(alphabeticalBasis));
     sortElement.addEventListener("change", sorter(elementBasis));
     sortTier.addEventListener("change", sorter(tierBasis));
-    sortRating.addEventListener("change", sorter(ratingBasis));
+    sortOffense.addEventListener("change", sorter(offenseBasis));
+    sortDefense.addEventListener("change", sorter(defenseBasis));
 
     if (![
         sortFighterScore,
