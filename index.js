@@ -238,7 +238,6 @@ function initCollection(responses) {
     }
 
     function rate() {
-        console.log(this);
         var key = this.parentElement.parentElement.parentElement.id;
         var subkey = this.parentElement.dataset.category;
         var value = parseInt(this.dataset.value);
