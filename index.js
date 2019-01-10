@@ -246,6 +246,7 @@ function initCollection(responses) {
             subkey,
             userID
         ].join("/")).set({
+            "ip": userIP,
             "vote": value
         });
         updateRating(key, subkey);
@@ -263,15 +264,33 @@ function initCollection(responses) {
         ].join("/")).once('value').then(function (snapshot) {
             var snapshot = snapshot.val();
             var total = 0;
+            var weightedCount = 0;
             var count = 0;
             var userVote = 0;
+            var ipVotes = {};
             for (var id in snapshot) {
-                total += snapshot[id].vote;
+                if (snapshot[id].ip in ipVotes) {
+                    ipVotes[snapshot[id].ip].subtotal += snapshot[id].vote;
+                    ipVotes[snapshot[id].ip].subcount++;
+                }
+                else {
+                    ipVotes[snapshot[id].ip] = {
+                        "subtotal": snapshot[id].vote,
+                        "subcount": 1
+                    }
+                }
                 count++;
                 if (id == userID) {
                     userVote = snapshot[id].vote;
                 }
             }
+            for (var ip in ipVotes) {
+                var weight = Math.log(Math.E * ipVotes[ip].subcount);
+                var subvote = ipVotes[ip].subtotal / ipVotes[ip].subcount;
+                total += subvote * weight;
+                weightedCount += weight;
+            }
+            console.log(ipVotes);
             if (userVote > 0) {
                 var passed = false;
                 for (var star of stars) {
@@ -287,7 +306,7 @@ function initCollection(responses) {
                 }
             }
             var passed = count <= 0;
-            var ratio = total / count;
+            var ratio = total / weightedCount;
             var clipTop = 90 * (ratio % 1);
             var clipBot = 30 + 30 * (ratio % 1);
             for (var star of stars) {

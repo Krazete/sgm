@@ -27,3 +27,9 @@ firebase.auth().signInAnonymously().catch(function (error) {
 });
 
 var database = firebase.database();
+
+var userIP = 0;
+
+function getIP(json) {
+    userIP = json.ip;
+}
