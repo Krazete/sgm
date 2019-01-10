@@ -17,6 +17,14 @@ Except for the terms `Fighter Gallery` and `Variant Name`, which Google Translat
 
 *Your chosen language option is saved in your browser's local storage for future visits.*
 
+### Rating System
+
+At the developers' request, I have implemented a rudimentary rating system to show the community's opinion on each fighter variant.
+The rating system uses Firebase to keep track of votes.
+One vote is allowed per browser session, and all votes are weighted by how many votes were made at the same IP address.
+
+If you prefer to view the Fighter Gallery without ratings, go to https://sgm.netlify.com/clean.
+
 ### Options (Fighter Settings)
 
 You can modify the tier, level, skill tree, and ability levels of the displayed fighters from this menu.
@@ -103,8 +111,9 @@ This is to ease the process of searching for and comparing between different fig
 
 ### Sort
 
-The website allows you to sort fighters alphabetically or based on fighter score, attack, health, element, or tier.
+The website allows you to sort fighters by in-game options like alphabetically or based on fighter score, element, or tier.
 The game's energy and level sorting options have not been included since they are not useful in this context.
+You can additionally sort by attack, health, offense rating, and defense rating.
 
 The website's sorting behavior mimics the game's sorting behavior for the most part.
 It even follows the game's `[Fire, Wind, Water, Light, Dark, Neutral]` element sort, which oddly differs the game's filter button order of `[Fire, Water, Wind, Light, Dark, Neutral]`.
