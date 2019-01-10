@@ -258,75 +258,80 @@ function initCollection(responses) {
         var stars = category.getElementsByClassName("star");
         var starValue = category.getElementsByClassName("star-value")[0];
 
-        firebase.database().ref([
-            key,
-            subkey
-        ].join("/")).once('value').then(function (snapshot) {
-            var snapshot = snapshot.val();
-            var total = 0;
-            var weightedCount = 0;
-            var count = 0;
-            var userVote = 0;
-            var ipVotes = {};
-            for (var id in snapshot) {
-                if (snapshot[id].ip in ipVotes) {
-                    ipVotes[snapshot[id].ip].subtotal += snapshot[id].vote;
-                    ipVotes[snapshot[id].ip].subcount++;
-                }
-                else {
-                    ipVotes[snapshot[id].ip] = {
-                        "subtotal": snapshot[id].vote,
-                        "subcount": 1
-                    }
-                }
-                count++;
-                if (id == userID) {
-                    userVote = snapshot[id].vote;
-                }
-            }
-            for (var ip in ipVotes) {
-                var weight = Math.log(Math.E * ipVotes[ip].subcount);
-                var subvote = ipVotes[ip].subtotal / ipVotes[ip].subcount;
-                total += subvote * weight;
-                weightedCount += weight;
-            }
-            if (userVote > 0) {
-                var passed = false;
-                for (var star of stars) {
-                    if (passed) {
-                        star.classList.remove("underlined");
+        try {
+            firebase.database().ref([
+                key,
+                subkey
+            ].join("/")).once('value').then(function (snapshot) {
+                var snapshot = snapshot.val();
+                var total = 0;
+                var weightedCount = 0;
+                var count = 0;
+                var userVote = 0;
+                var ipVotes = {};
+                for (var id in snapshot) {
+                    if (snapshot[id].ip in ipVotes) {
+                        ipVotes[snapshot[id].ip].subtotal += snapshot[id].vote;
+                        ipVotes[snapshot[id].ip].subcount++;
                     }
                     else {
-                        star.classList.add("underlined");
+                        ipVotes[snapshot[id].ip] = {
+                            "subtotal": snapshot[id].vote,
+                            "subcount": 1
+                        }
                     }
-                    if (star.dataset.value == userVote) {
+                    count++;
+                    if (id == userID) {
+                        userVote = snapshot[id].vote;
+                    }
+                }
+                for (var ip in ipVotes) {
+                    var weight = Math.log(Math.E * ipVotes[ip].subcount);
+                    var subvote = ipVotes[ip].subtotal / ipVotes[ip].subcount;
+                    total += subvote * weight;
+                    weightedCount += weight;
+                }
+                if (userVote > 0) {
+                    var passed = false;
+                    for (var star of stars) {
+                        if (passed) {
+                            star.classList.remove("underlined");
+                        }
+                        else {
+                            star.classList.add("underlined");
+                        }
+                        if (star.dataset.value == userVote) {
+                            passed = true;
+                        }
+                    }
+                }
+                var passed = count <= 0;
+                var ratio = total / weightedCount;
+                var clipTop = 90 * (ratio % 1);
+                var clipBot = 30 + 30 * (ratio % 1);
+                for (var star of stars) {
+                    if (passed) {
+                        star.children[1].style.opacity = 0;
+                    }
+                    else {
+                        star.children[1].style = "";
+                    }
+                    if (star.dataset.value == Math.floor(ratio) + 1) {
                         passed = true;
+                        star.children[1].style = [
+                            "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)",
+                            "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)"
+                        ].join(";");
                     }
                 }
-            }
-            var passed = count <= 0;
-            var ratio = total / weightedCount;
-            var clipTop = 90 * (ratio % 1);
-            var clipBot = 30 + 30 * (ratio % 1);
-            for (var star of stars) {
-                if (passed) {
-                    star.children[1].style.opacity = 0;
-                }
-                else {
-                    star.children[1].style = "";
-                }
-                if (star.dataset.value == Math.floor(ratio) + 1) {
-                    passed = true;
-                    star.children[1].style = [
-                        "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)",
-                        "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)"
-                    ].join(";");
-                }
-            }
-            starValue.dataset.value = ratio || 0;
-            starValue.dataset.count = count;
-            /* do not sort cards on update because the rearrangement is obtrusive */
-        });
+                starValue.dataset.value = ratio || 0;
+                starValue.dataset.count = count;
+                /* do not sort cards on update because the rearrangement is obtrusive */
+            });
+        }
+        catch (e) {
+            console.log(e);
+        }
     }
 
     function createRating(key, type) {
