@@ -280,29 +280,24 @@ function initCollection(responses) {
                     }
                 }
             }
-            if (count <= 0) {
-                starValue.dataset.value = "-1";
-            }
-            else {
-                var passed = false;
-                var ratio = total / count;
-                var clipTop = 90 * (ratio % 1);
-                var clipBot = 10 + 80 * (ratio % 1);
-                for (var star of stars) {
-                    if (passed) {
-                        star.children[1].style.opacity = 0;
-                    }
-                    else {
-                        star.children[1].style = "";
-                    }
-                    if (star.dataset.value == Math.floor(ratio) + 1) {
-                        passed = true;
-                        star.children[1].style = "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)";
-                    }
+            var passed = count <= 0;
+            var ratio = total / count;
+            var clipTop = 90 * (ratio % 1);
+            var clipBot = 10 + 80 * (ratio % 1);
+            for (var star of stars) {
+                if (passed) {
+                    star.children[1].style.opacity = 0;
                 }
-                starValue.dataset.value = ratio;
-                starValue.dataset.count = count;
+                else {
+                    star.children[1].style = "";
+                }
+                if (star.dataset.value == Math.floor(ratio) + 1) {
+                    passed = true;
+                    star.children[1].style = "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)";
+                }
             }
+            starValue.dataset.value = ratio;
+            starValue.dataset.count = count;
         });
     }
 
@@ -1011,8 +1006,8 @@ function initSortMenu() {
         sortHealth,
         sortAlphabetical,
         sortElement,
-        sortTier,
-        sortRating
+        sortTier
+        /* cannot initialize with rating sort because firebase is asyncronous */
     ].includes(savedButton)) {
         savedButton = sortFighterScore;
     }
