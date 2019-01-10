@@ -318,10 +318,15 @@ function initCollection(responses) {
                     }
                     if (star.dataset.value == Math.floor(ratio) + 1) {
                         passed = true;
-                        star.children[1].style = [
-                            "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)",
-                            "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)"
-                        ].join(";");
+                        if (clipTop > 0) {
+                            star.children[1].style = [
+                                "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)",
+                                "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)"
+                            ].join(";");
+                        }
+                        else {
+                            star.children[1].style.opacity = 0;
+                        }
                     }
                 }
                 starValue.dataset.value = ratio || 0;
