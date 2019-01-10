@@ -238,23 +238,30 @@ function initCollection(responses) {
     }
 
     function rate() {
-        var key = this.parentElement.parentElement.id;
+        console.log(this);
+        var key = this.parentElement.parentElement.parentElement.id;
+        var subkey = this.parentElement.dataset.category;
         var value = parseInt(this.dataset.value);
         firebase.database().ref([
             key,
+            subkey,
             userID
         ].join("/")).set({
             "vote": value
         });
-        updateRating(key, value);
+        updateRating(key, subkey);
     }
 
-    function updateRating(key) {
+    function updateRating(key, subkey) {
         var card = document.getElementById(key);
-        var stars = card.getElementsByClassName("star");
-        var starValue = card.getElementsByClassName("star-value")[0];
+        var category = card.getElementsByClassName(subkey)[0];
+        var stars = category.getElementsByClassName("star");
+        var starValue = category.getElementsByClassName("star-value")[0];
 
-        firebase.database().ref(key).once('value').then(function (snapshot) {
+        firebase.database().ref([
+            key,
+            subkey
+        ].join("/")).once('value').then(function (snapshot) {
             var snapshot = snapshot.val();
             var total = 0;
             var count = 0;
@@ -305,26 +312,33 @@ function initCollection(responses) {
         });
     }
 
-    function createRating(key) {
-        var rating = document.createElement("div");
-            rating.className = "rating";
-            for (var i = 0; i < 5; i++) {
-                var star = document.createElement("div");
-                    star.className = "star";
-                    star.dataset.value = i + 1;
-                    var shadow = document.createElement("img");
-                        shadow.src = "image/official/star01.png";
-                    star.appendChild(shadow);
-                    var light = document.createElement("img");
-                        light.src = "image/official/star01.png";
-                    star.appendChild(light);
-                    star.addEventListener("click", rate);
-                rating.appendChild(star);
+    function createRating(key, type) {
+        var categories = ["offense", "defense"];
+        var ratings = document.createElement("div");
+            ratings.className = "ratings";
+            for (var category of categories) {
+                var rating = document.createElement("div");
+                    rating.className = category;
+                    rating.dataset.category = category;
+                    for (var i = 0; i < 5; i++) {
+                        var star = document.createElement("div");
+                            star.className = "star";
+                            star.dataset.value = i + 1;
+                            var shadow = document.createElement("img");
+                                shadow.src = "image/official/star01.png";
+                            star.appendChild(shadow);
+                            var light = document.createElement("img");
+                                light.src = "image/official/star01.png";
+                            star.appendChild(light);
+                            star.addEventListener("click", rate);
+                        rating.appendChild(star);
+                    }
+                    var starValue = document.createElement("div");
+                        starValue.className = "star-value";
+                    rating.appendChild(starValue);
+                ratings.appendChild(rating);
             }
-            var starValue = document.createElement("div");
-                starValue.className = "star-value";
-            rating.appendChild(starValue);
-        return rating;
+        return ratings;
     }
 
     function createWordBreak() {
@@ -435,13 +449,13 @@ function initCollection(responses) {
             card.id = key;
             card.appendChild(createAvatar(key));
             card.appendChild(createQuote());
-            card.appendChild(createRating(key));
             card.appendChild(createStat("atk"));
             card.appendChild(createStat("hp"));
             card.appendChild(createStat("fs"));
             card.appendChild(createAbility("ca", fighters[variants[key].base].ca, true));
             card.appendChild(createAbility("sa", variants[key].sa));
             card.appendChild(createAbility("ma", fighters[variants[key].base].ma, true));
+            card.appendChild(createRating(key));
             card.appendChild(createWikia(key));
             card.appendChild(createLock());
         return card;
@@ -451,7 +465,8 @@ function initCollection(responses) {
         var card = createCard(key);
         collection.appendChild(card);
         cards.push(card);
-        updateRating(key);
+        updateRating(key, "offense");
+        updateRating(key, "defense");
     }
 }
 

@@ -15,6 +15,8 @@ common = [
     'SkillTree_CharacterAbility_Title',
     'CharacterDetails_SA',
     'SkillTree_SuperAbility_Title',
+    'LabBattle_Map_Offense_Main',
+    'LabBattle_Map_Defense_Main',
 
     'Status_Unblockable',
     'SM_Damage',

@@ -760,12 +760,12 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .fighter.card {
     grid-template-areas:
         'img qt qt'
-        'img rt rt'
         'img atk hp'
         'img fs fs'
         'ca ca ca'
         'sa sa sa'
-        'ma ma ma';
+        'ma ma ma'
+        'rt rt rt';
 }
 .move.card {
     /* grid-template-areas:
@@ -1000,10 +1000,36 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 
 /* RATING */
 
-.rating {
+.ratings {
     text-align: center;
     grid-area: rt;
+    display: flex;
 }
+.offense, .defense {
+    flex: 1;
+}
+
+.offense:before, .defense:before {
+    display: block;
+}
+
+html[lang='en'] .offense:before {content: 'OFFENSE';}
+html[lang='fr'] .offense:before {content: 'ATTAQUE';}
+html[lang='es'] .offense:before {content: 'ATAQUE';}
+html[lang='ru'] .offense:before {content: '\041d \0410 \0421 \0422 \0423 \041f \041b \0415 \041d \0418 \0415 ';}
+html[lang='ja'] .offense:before {content: '\653b \6483 ';}
+html[lang='de'] .offense:before {content: 'OFFENSIVE';}
+html[lang='ko'] .offense:before {content: '\acf5 \aca9 ';}
+html[lang='pt-br'] .offense:before {content: 'ATAQUE';}
+
+html[lang='en'] .defense:before {content: 'DEFENSE';}
+html[lang='fr'] .defense:before {content: 'D\00c9 FENSE';}
+html[lang='es'] .defense:before {content: 'DEFENSA';}
+html[lang='ru'] .defense:before {content: '\041e \0411 \041e \0420 \041e \041d \0410 ';}
+html[lang='ja'] .defense:before {content: '\9632 \885b ';}
+html[lang='de'] .defense:before {content: 'DEFENSIVE';}
+html[lang='ko'] .defense:before {content: '\bc29 \c5b4 ';}
+html[lang='pt-br'] .defense:before {content: 'DEFESA';}
 
 .star {
     position: relative;
@@ -1036,7 +1062,6 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .star-value {
     color: gray;
     font-size: x-small;
-    margin-bottom: -1em;
 }
 .star-value:before {
     content: attr(data-count) ' ';
