@@ -579,20 +579,20 @@ html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
 html[lang='en'] #sort-type + label:before {content: 'TYPE';}
 html[lang='fr'] #sort-type + label:before {content: 'TYPE';}
 html[lang='es'] #sort-type + label:before {content: 'TIPO';}
-html[lang='ru'] #sort-type + label:before {content: '\u0422\u0418\u041f';}
-html[lang='ja'] #sort-type + label:before {content: '\u30bf\u30a4\u30d7';}
+html[lang='ru'] #sort-type + label:before {content: '\0422 \0418 \041f ';}
+html[lang='ja'] #sort-type + label:before {content: '\30bf \30a4 \30d7 ';}
 html[lang='de'] #sort-type + label:before {content: 'TYP';}
-html[lang='ko'] #sort-type + label:before {content: '\ud0c0\uc785';}
+html[lang='ko'] #sort-type + label:before {content: '\d0c0 \c785 ';}
 html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 
 html[lang='en'] #sort-rating + label:before {content: 'RATING';}
-html[lang='fr'] #sort-rating + label:before {content: '\u00c9VALUATION';}
-html[lang='es'] #sort-rating + label:before {content: 'CALIFICACI\u00d3N';}
-html[lang='ru'] #sort-rating + label:before {content: '\u0420\u0415\u0419\u0422\u0418\u041d\u0413';}
-html[lang='ja'] #sort-rating + label:before {content: '\u30ec\u30fc\u30c8';}
+html[lang='fr'] #sort-rating + label:before {content: '\00c9 VALUATION';}
+html[lang='es'] #sort-rating + label:before {content: 'CALIFICACI\00d3 N';}
+html[lang='ru'] #sort-rating + label:before {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 ';}
+html[lang='ja'] #sort-rating + label:before {content: '\30ec \30fc \30c8 ';}
 html[lang='de'] #sort-rating + label:before {content: 'WERTUNG';}
-html[lang='ko'] #sort-rating + label:before {content: '\ub4f1\uae09';}
-html[lang='pt-br'] #sort-rating + label:before {content: 'CLASSIFICA\u00c7\u00c3O';}
+html[lang='ko'] #sort-rating + label:before {content: '\b4f1 \ae09 ';}
+html[lang='pt-br'] #sort-rating + label:before {content: 'CLASSIFICA\00c7 \00c3 O';}
 
 /* COLLECTION */
 
@@ -1052,10 +1052,10 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 html[lang='en'] .star-value:after {content: 'votes';}
 html[lang='fr'] .star-value:after {content: 'votes';}
 html[lang='es'] .star-value:after {content: 'votos';}
-html[lang='ru'] .star-value:after {content: '\u0433\u043e\u043b\u043e\u0441\u043e\u0432';}
-html[lang='ja'] .star-value:after {content: '\u6295\u7968';}
+html[lang='ru'] .star-value:after {content: '\0433 \043e \043b \043e \0441 \043e \0432 ';}
+html[lang='ja'] .star-value:after {content: '\6295 \7968 ';}
 html[lang='de'] .star-value:after {content: 'stimmen';}
-html[lang='ko'] .star-value:after {content: '\ud22c\ud45c\ud558\ub2e4';}
+html[lang='ko'] .star-value:after {content: '\d22c \d45c \d558 \b2e4 ';}
 html[lang='pt-br'] .star-value:after {content: 'votos';}
 
 /* STATS */
