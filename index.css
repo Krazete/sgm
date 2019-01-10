@@ -1043,11 +1043,20 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     margin-bottom: -1em;
 }
 .star-value:before {
-    content: attr(data-value);
+    content: attr(data-count) ' ';
 }
 .zoomed-in .star-value {
     font-size: small;
 }
+
+html[lang='en'] .star-value:after {content: 'votes';}
+html[lang='fr'] .star-value:after {content: 'votes';}
+html[lang='es'] .star-value:after {content: 'votos';}
+html[lang='ru'] .star-value:after {content: '\u0433\u043e\u043b\u043e\u0441\u043e\u0432';}
+html[lang='ja'] .star-value:after {content: '\u6295\u7968';}
+html[lang='de'] .star-value:after {content: 'stimmen';}
+html[lang='ko'] .star-value:after {content: '\ud22c\ud45c\ud558\ub2e4';}
+html[lang='pt-br'] .star-value:after {content: 'votos';}
 
 /* STATS */
 

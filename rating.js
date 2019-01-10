@@ -11,12 +11,6 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-function writeUserData(userId, name) {
-    firebase.database().ref('users/' + userId).set({
-        username: name
-    });
-}
-
 var userIP = 0;
 
 function getIP(json) {
