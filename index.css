@@ -1033,17 +1033,16 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     filter: brightness(0);
 }
 
-.star.burst {
-    background: radial-gradient(white, transparent 70%);
-}
-
 .star-value {
     color: gray;
-    font-size: xx-small;
+    font-size: x-small;
     margin-bottom: -1em;
 }
 .star-value:before {
     content: attr(data-count) ' ';
+}
+.zoomed-out .star-value {
+    font-size: xx-small;
 }
 .zoomed-in .star-value {
     font-size: small;

@@ -6,10 +6,7 @@ var config = {
     storageBucket: "sgmobilegallery.appspot.com",
     messagingSenderId: "65927600297"
 };
-
 firebase.initializeApp(config);
-
-var database = firebase.database();
 
 var userID = 0;
 
@@ -28,3 +25,5 @@ firebase.auth().signInAnonymously().catch(function (error) {
     var errorMessage = error.message;
     console.log(error.code, error.message);
 });
+
+var database = firebase.database();

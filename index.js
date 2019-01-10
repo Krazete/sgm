@@ -270,10 +270,10 @@ function initCollection(responses) {
                 var passed = false;
                 for (var star of stars) {
                     if (passed) {
-                        star.classList.remove("burst");
+                        star.classList.remove("underlined");
                     }
                     else {
-                        star.classList.add("burst");
+                        star.classList.add("underlined");
                     }
                     if (star.dataset.value == userVote) {
                         passed = true;
@@ -293,7 +293,10 @@ function initCollection(responses) {
                 }
                 if (star.dataset.value == Math.floor(ratio) + 1) {
                     passed = true;
-                    star.children[1].style = "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)";
+                    star.children[1].style = [
+                        "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)",
+                        "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)"
+                    ].join(";");
                 }
             }
             starValue.dataset.value = ratio;
