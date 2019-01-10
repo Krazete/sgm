@@ -766,7 +766,6 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     background: #1b2a41;
     border: 3px double #ccb55a;
     display: grid;
-    grid-auto-rows: min-content;
     grid-template-columns: 1fr repeat(2, minmax(0, 1fr));
     grid-gap: 10px;
     padding: 10px;
@@ -780,6 +779,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
         'sa sa sa'
         'ma ma ma'
         'rt rt rt';
+    grid-template-rows: repeat(6, min-content);
 }
 .move.card {
     /* grid-template-areas:
@@ -791,6 +791,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
         'img mn mn'
         'img tb tb'
         'des des des';
+    grid-auto-rows: min-content;
 }
 .card.hidden {
     display: none;
@@ -1020,6 +1021,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: flex;
 }
 .offense, .defense {
+    margin: auto;
     flex: 1;
 }
 
