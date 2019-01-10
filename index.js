@@ -242,7 +242,7 @@ function initCollection(responses) {
         var value = parseInt(this.dataset.value);
         firebase.database().ref([
             key,
-            userIP.replace(/\./g, "-")
+            userID
         ].join("/")).set({
             "vote": value
         });
@@ -259,11 +259,11 @@ function initCollection(responses) {
             var total = 0;
             var count = 0;
             var userVote = 0;
-            for (var ip in snapshot) {
-                total += snapshot[ip].vote;
+            for (var id in snapshot) {
+                total += snapshot[id].vote;
                 count++;
-                if (ip == userIP.replace(/\./g, "-")) {
-                    userVote = snapshot[ip].vote;
+                if (id == userID) {
+                    userVote = snapshot[id].vote;
                 }
             }
             if (userVote > 0) {
@@ -283,7 +283,7 @@ function initCollection(responses) {
             var passed = count <= 0;
             var ratio = total / count;
             var clipTop = 90 * (ratio % 1);
-            var clipBot = 10 + 80 * (ratio % 1);
+            var clipBot = 30 + 30 * (ratio % 1);
             for (var star of stars) {
                 if (passed) {
                     star.children[1].style.opacity = 0;
