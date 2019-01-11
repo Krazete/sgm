@@ -7,11 +7,6 @@
     <link rel="shortcut icon" type="image/png" href="image/official/Button_Modifiers.png">
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Skullgirls Mobile Fighter Gallery</title>
-    <script type="application/javascript" src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
-    <script type="application/javascript" src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"></script>
-    <script type="application/javascript" src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
-    <script type="application/javascript" src="fire.js"></script>
-    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
     <script type="application/javascript" src="index.js"></script>
 </head>
 <body class="bronze">
@@ -41,6 +36,13 @@
                 <input type="radio" name="language" id="pt-br">
                 <label for="pt-br" class="tagged"></label>
             </div>
+        </div>
+        <div>
+            <span id="enable-rating">
+                <img src="image/official/star01.png">
+                <span class="rating cinematic gold-gradient"></span>
+                <img src="image/official/star01.png">
+            </span>
         </div>
     </div>
     <div id="collection">
@@ -233,10 +235,10 @@
                             <label for="sort-tier"></label>
                         </div>
                         <div>
-                            <input type="radio" name="sort" id="sort-offense">
-                            <label for="sort-offense"> </label>
-                            <input type="radio" name="sort" id="sort-defense">
-                            <label for="sort-defense"> </label>
+                            <input type="radio" name="sort" class="hidden" id="sort-offense">
+                            <label class="rating" for="sort-offense"> </label>
+                            <input type="radio" name="sort" class="hidden" id="sort-defense">
+                            <label class="rating" for="sort-defense"> </label>
                         </div>
                     </div>
                 </div>

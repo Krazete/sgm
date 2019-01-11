@@ -13,17 +13,18 @@ If the website version is 3.0.0 but the latest game version is 3.0.2, the websit
 ### Language
 
 All of the language options available in the game are available on the website.
-Except for the terms `Fighter Gallery` and `Variant Name`, which Google Translate helped with, all translations are an exact copy of the text used in the corresponding version of the game.
+All translations are an exact copy of the text used in the corresponding version of the game (except for the words `Gallery`, `Variant`, `Name`, and `Votes`, which Google Translate helped with).
 
 *Your chosen language option is saved in your browser's local storage for future visits.*
 
 ### Rating System
 
 At the developers' request, I have implemented a rudimentary rating system to show the community's opinion on each fighter variant.
+This is initially disabled to limit the amount of requests made to the database and for aesthetic purposes.
+To enable the rating system, just click on the Rating button at top of the website.
+
 The rating system uses Firebase to keep track of votes.
 One vote is allowed per browser session, and all votes are weighted by how many votes were made at the same IP address.
-
-If you prefer to view the Fighter Gallery without ratings, go to https://sgm.netlify.com/clean.
 
 ### Options (Fighter Settings)
 

@@ -1,4 +1,5 @@
 var fighters, variants, corpus;
+var userID, userIP, database;
 
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
@@ -144,6 +145,15 @@ function fearTheRainbow() {
     dormant = !dormant;
 }
 
+function toggleLoadingScreen(loading) {
+    if (loading) {
+        document.body.classList.add("loading");
+    }
+    else {
+        document.body.classList.remove("loading");
+    }
+}
+
 function loadJSON(path) {
     function request(resolve, reject) {
         var xhr = new XMLHttpRequest();
@@ -161,13 +171,155 @@ function loadJSON(path) {
     return new Promise(request);
 }
 
-function toggleLoadingScreen(loading) {
-    if (loading) {
-        document.body.classList.add("loading");
+function loadScript(path) {
+    function request(resolve, reject) {
+        var script = document.createElement("script");
+            script.src = path;
+            script.addEventListener("load", resolve);
+            script.addEventListener("error", reject);
+        document.head.appendChild(script);
     }
-    else {
-        document.body.classList.remove("loading");
+    return new Promise(request);
+}
+
+function setIP(json) {
+    userIP = json.ip;
+}
+
+function updateRating(key, subkey) {
+    var card = document.getElementById(key);
+    var category = card.getElementsByClassName(subkey)[0];
+    var stars = category.getElementsByClassName("star");
+    var starValue = category.getElementsByClassName("star-value")[0];
+
+    try {
+        firebase.database().ref([
+            key,
+            subkey
+        ].join("/")).once('value').then(function (snapshot) {
+            var snapshot = snapshot.val();
+            var total = 0;
+            var weightedCount = 0;
+            var count = 0;
+            var userVote = 0;
+            var ipVotes = {};
+            for (var id in snapshot) {
+                if (snapshot[id].ip in ipVotes) {
+                    ipVotes[snapshot[id].ip].subtotal += snapshot[id].vote;
+                    ipVotes[snapshot[id].ip].subcount++;
+                }
+                else {
+                    ipVotes[snapshot[id].ip] = {
+                        "subtotal": snapshot[id].vote,
+                        "subcount": 1
+                    }
+                }
+                count++;
+                if (id == userID) {
+                    userVote = snapshot[id].vote;
+                }
+            }
+            for (var ip in ipVotes) {
+                var weight = Math.log(Math.E * ipVotes[ip].subcount);
+                var subvote = ipVotes[ip].subtotal / ipVotes[ip].subcount;
+                total += subvote * weight;
+                weightedCount += weight;
+            }
+            if (userVote > 0) {
+                var passed = false;
+                for (var star of stars) {
+                    if (passed) {
+                        star.classList.remove("underlined");
+                    }
+                    else {
+                        star.classList.add("underlined");
+                    }
+                    if (star.dataset.value == userVote) {
+                        passed = true;
+                    }
+                }
+            }
+            var passed = count <= 0;
+            var ratio = total / weightedCount;
+            var clipTop = 90 * (ratio % 1);
+            var clipBot = 30 + 30 * (ratio % 1);
+            for (var star of stars) {
+                if (passed) {
+                    star.children[1].style.opacity = 0;
+                }
+                else {
+                    star.children[1].style = "";
+                }
+                if (star.dataset.value == Math.floor(ratio) + 1) {
+                    passed = true;
+                    if (clipTop > 0) {
+                        star.children[1].style = [
+                            "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)",
+                            "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)"
+                        ].join(";");
+                    }
+                    else {
+                        star.children[1].style.opacity = 0;
+                    }
+                }
+            }
+            starValue.dataset.value = ratio || 0;
+            starValue.dataset.count = count;
+            /* do not sort cards on update because the rearrangement is obtrusive */
+        });
     }
+    catch (e) {
+        console.log(e);
+    }
+}
+
+function initRating() {
+    this.classList.add("pressed");
+    Promise.all([
+        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"),
+        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"),
+        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"),
+        loadScript("https://api.ipify.org?format=jsonp&callback=setIP")
+    ]).then(function () {
+        var config = {
+            apiKey: "AIzaSyCHj7h6q2cG8h3yRDvofHiDP3Y4H4wY6t4",
+            authDomain: "sgmobilegallery.firebaseapp.com",
+            databaseURL: "https://sgmobilegallery.firebaseio.com",
+            projectId: "sgmobilegallery",
+            storageBucket: "sgmobilegallery.appspot.com",
+            messagingSenderId: "65927600297"
+        };
+        firebase.initializeApp(config);
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                var isAnonymous = user.isAnonymous;
+                userID = user.uid;
+                console.log("Authentication issued.")
+            } else {
+                console.log("Authentication revoked.")
+            }
+        });
+        firebase.auth().signInAnonymously().catch(function (error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(error.code, error.message);
+        });
+
+        database = firebase.database();
+    }).then(function () {
+        for (var card of cards) {
+            var key = card.id;
+            updateRating(key, "offense");
+            updateRating(key, "defense");
+        }
+    }).then(function () {
+        document.getElementById("sort-offense").classList.remove("hidden");
+        document.getElementById("sort-defense").classList.remove("hidden");
+        for (var ratings of document.getElementsByClassName("ratings")) {
+            ratings.classList.remove("hidden");
+        }
+    });
 }
 
 function initCollection(responses) {
@@ -252,97 +404,10 @@ function initCollection(responses) {
         updateRating(key, subkey);
     }
 
-    function updateRating(key, subkey) {
-        var card = document.getElementById(key);
-        var category = card.getElementsByClassName(subkey)[0];
-        var stars = category.getElementsByClassName("star");
-        var starValue = category.getElementsByClassName("star-value")[0];
-
-        try {
-            firebase.database().ref([
-                key,
-                subkey
-            ].join("/")).once('value').then(function (snapshot) {
-                var snapshot = snapshot.val();
-                var total = 0;
-                var weightedCount = 0;
-                var count = 0;
-                var userVote = 0;
-                var ipVotes = {};
-                for (var id in snapshot) {
-                    if (snapshot[id].ip in ipVotes) {
-                        ipVotes[snapshot[id].ip].subtotal += snapshot[id].vote;
-                        ipVotes[snapshot[id].ip].subcount++;
-                    }
-                    else {
-                        ipVotes[snapshot[id].ip] = {
-                            "subtotal": snapshot[id].vote,
-                            "subcount": 1
-                        }
-                    }
-                    count++;
-                    if (id == userID) {
-                        userVote = snapshot[id].vote;
-                    }
-                }
-                for (var ip in ipVotes) {
-                    var weight = Math.log(Math.E * ipVotes[ip].subcount);
-                    var subvote = ipVotes[ip].subtotal / ipVotes[ip].subcount;
-                    total += subvote * weight;
-                    weightedCount += weight;
-                }
-                if (userVote > 0) {
-                    var passed = false;
-                    for (var star of stars) {
-                        if (passed) {
-                            star.classList.remove("underlined");
-                        }
-                        else {
-                            star.classList.add("underlined");
-                        }
-                        if (star.dataset.value == userVote) {
-                            passed = true;
-                        }
-                    }
-                }
-                var passed = count <= 0;
-                var ratio = total / weightedCount;
-                var clipTop = 90 * (ratio % 1);
-                var clipBot = 30 + 30 * (ratio % 1);
-                for (var star of stars) {
-                    if (passed) {
-                        star.children[1].style.opacity = 0;
-                    }
-                    else {
-                        star.children[1].style = "";
-                    }
-                    if (star.dataset.value == Math.floor(ratio) + 1) {
-                        passed = true;
-                        if (clipTop > 0) {
-                            star.children[1].style = [
-                                "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)",
-                                "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)"
-                            ].join(";");
-                        }
-                        else {
-                            star.children[1].style.opacity = 0;
-                        }
-                    }
-                }
-                starValue.dataset.value = ratio || 0;
-                starValue.dataset.count = count;
-                /* do not sort cards on update because the rearrangement is obtrusive */
-            });
-        }
-        catch (e) {
-            console.log(e);
-        }
-    }
-
     function createRating(key, type) {
         var categories = ["offense", "defense"];
         var ratings = document.createElement("div");
-            ratings.className = "ratings";
+            ratings.className = "ratings fill-row hidden";
             for (var category of categories) {
                 var rating = document.createElement("div");
                     rating.className = category;
@@ -492,8 +557,6 @@ function initCollection(responses) {
         var card = createCard(key);
         collection.appendChild(card);
         cards.push(card);
-        updateRating(key, "offense");
-        updateRating(key, "defense");
     }
 }
 
@@ -1440,6 +1503,7 @@ function initialize() {
         initFilterMenu();
         initSortMenu();
         initOptionsMenu();
+        document.getElementById("enable-rating").addEventListener("click", initRating);
     }
 
     toggleLoadingScreen(true);

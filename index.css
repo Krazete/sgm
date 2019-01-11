@@ -48,7 +48,7 @@ body {
     grid-column: 1 / -1;
 }
 
-.hidden {
+.hidden, input.hidden + label {
     display: none;
 }
 
@@ -255,6 +255,26 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 #de + label.tagged:before {content: 'Deutsch'; background: url(image/official/flag_de.png);}
 #ko + label.tagged:before {content: '\d55c \ad6d \c5b4 '; background: url(image/official/flag_ko.png);}
 #pt-br + label.tagged:before {content: 'Portugu\00ea s'; background: url(image/official/flag_pt.png);}
+
+#enable-rating {
+    cursor: pointer;
+}
+#enable-rating img {
+    width: 20px;
+    vertical-align: sub;
+}
+#enable-rating .rating {
+    pointer-events: none;
+}
+
+html[lang='en'] .rating:after {content: 'RATING';}
+html[lang='fr'] .rating:after {content: '\00c9 VALUATION';}
+html[lang='es'] .rating:after {content: 'CALIFICACI\00d3 N';}
+html[lang='ru'] .rating:after {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 ';}
+html[lang='ja'] .rating:after {content: '\30ec \30fc \30c8 ';}
+html[lang='de'] .rating:after {content: 'WERTUNG';}
+html[lang='ko'] .rating:after {content: '\b4f1 \ae09 ';}
+html[lang='pt-br'] .rating:after {content: 'CLASSIFICA\00c7 \00c3 O';}
 
 /* FOOTER */
 
@@ -591,23 +611,6 @@ html[lang='de'] #sort-type + label:before {content: 'TYP';}
 html[lang='ko'] #sort-type + label:before {content: '\d0c0 \c785 ';}
 html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 
-html[lang='en'] #sort-offense + label:after,
-html[lang='en'] #sort-defense + label:after {content: 'RATING';}
-html[lang='fr'] #sort-offense + label:after,
-html[lang='fr'] #sort-defense + label:after {content: '\00c9 VALUATION';}
-html[lang='es'] #sort-offense + label:after,
-html[lang='es'] #sort-defense + label:after {content: 'CALIFICACI\00d3 N';}
-html[lang='ru'] #sort-offense + label:after,
-html[lang='ru'] #sort-defense + label:after {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 ';}
-html[lang='ja'] #sort-offense + label:after,
-html[lang='ja'] #sort-defense + label:after {content: '\30ec \30fc \30c8 ';}
-html[lang='de'] #sort-offense + label:after,
-html[lang='de'] #sort-defense + label:after {content: 'WERTUNG';}
-html[lang='ko'] #sort-offense + label:after,
-html[lang='ko'] #sort-defense + label:after {content: '\b4f1 \ae09 ';}
-html[lang='pt-br'] #sort-offense + label:after,
-html[lang='pt-br'] #sort-defense + label:after {content: 'CLASSIFICA\00c7 \00c3 O';}
-
 /* COLLECTION */
 
 #collection {
@@ -777,8 +780,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
         'img fs fs'
         'ca ca ca'
         'sa sa sa'
-        'ma ma ma'
-        'rt rt rt';
+        'ma ma ma';
     grid-template-rows: repeat(6, min-content);
 }
 .move.card {
@@ -1017,9 +1019,13 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 
 .ratings {
     text-align: center;
-    grid-area: rt;
     display: flex;
 }
+
+.ratings.hidden {
+    display: none;
+}
+
 .offense, .defense {
     margin: auto;
     flex: 1;
