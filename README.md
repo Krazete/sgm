@@ -155,7 +155,7 @@ If you recognize where the art is from, please [let me know](#contact) so I can 
 
 ### Move Gallery
 
-The [Move Gallery](https://sgm.netlify.com/moves.html) is currently incomplete, and it will remain that way for a while.
+The [Move Gallery](https://sgm.netlify.com/moves) is currently incomplete, and it will remain that way for a while.
 The main issues with the Move Gallery are:
 
 * no images of each move
