@@ -191,8 +191,6 @@ function updateRating(key, subkey) {
     var category = card.getElementsByClassName(subkey)[0];
     var stars = category.getElementsByClassName("star");
 
-    category.classList.add("pressed");
-
     try {
         database.ref([key, subkey].join("/")).once('value').then(function (snapshot) {
             var votesByID = snapshot.val();
@@ -387,14 +385,18 @@ function initCollection(responses) {
     }
 
     function rate() {
-        var key = this.parentElement.parentElement.parentElement.id;
-        var subkey = this.parentElement.className;
+        var category = this.parentElement;
+        var card = category.parentElement.parentElement;
+        var key = card.id;
+        var subkey = category.className;
         var value = parseInt(this.dataset.value);
+        category.classList.add("pressed");
         database.ref([key, subkey, userID].join("/")).set({
             "ip": userIP,
             "vote": value
+        }).then(function () {
+            updateRating(key, subkey);
         });
-        updateRating(key, subkey);
     }
 
     function createRating(key, type) {
