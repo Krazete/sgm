@@ -1069,6 +1069,38 @@ html[lang='ko'] #sort-defense + label:before {content: '\bc29 \c5b4 ';}
 html[lang='pt-br'] .defense:before,
 html[lang='pt-br'] #sort-defense + label:before {content: 'DEFESA';}
 
+.offense:after,
+.defense:after {
+    color: gray;
+    font-size: x-small;
+    display: block;
+}
+.zoomed-out .offense:after,
+.zoomed-out .defense:after {
+    font-size: xx-small;
+}
+.zoomed-in .offense:after,
+.zoomed-in .defense:after {
+    font-size: small;
+}
+
+html[lang='en'] .offense:after,
+html[lang='en'] .defense:after {content: attr(data-count) ' votes';}
+html[lang='fr'] .offense:after,
+html[lang='fr'] .defense:after {content: attr(data-count) ' votes';}
+html[lang='es'] .offense:after,
+html[lang='es'] .defense:after {content: attr(data-count) ' votos';}
+html[lang='ru'] .offense:after,
+html[lang='ru'] .defense:after {content: attr(data-count) ' \0433 \043e \043b \043e \0441 \043e \0432 ';}
+html[lang='ja'] .offense:after,
+html[lang='ja'] .defense:after {content: attr(data-count) ' \6295 \7968 ';}
+html[lang='de'] .offense:after,
+html[lang='de'] .defense:after {content: attr(data-count) ' stimmen';}
+html[lang='ko'] .offense:after,
+html[lang='ko'] .defense:after {content: attr(data-count) ' \d22c \d45c \d558 \b2e4 ';}
+html[lang='pt-br'] .offense:after,
+html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
+
 .star {
     position: relative;
     width: 24px;
@@ -1096,29 +1128,6 @@ html[lang='pt-br'] #sort-defense + label:before {content: 'DEFESA';}
 .star img:first-child {
     filter: brightness(0);
 }
-
-.star-value {
-    color: gray;
-    font-size: x-small;
-}
-.star-value:before {
-    content: attr(data-count) ' ';
-}
-.zoomed-out .star-value {
-    font-size: xx-small;
-}
-.zoomed-in .star-value {
-    font-size: small;
-}
-
-html[lang='en'] .star-value:after {content: 'votes';}
-html[lang='fr'] .star-value:after {content: 'votes';}
-html[lang='es'] .star-value:after {content: 'votos';}
-html[lang='ru'] .star-value:after {content: '\0433 \043e \043b \043e \0441 \043e \0432 ';}
-html[lang='ja'] .star-value:after {content: '\6295 \7968 ';}
-html[lang='de'] .star-value:after {content: 'stimmen';}
-html[lang='ko'] .star-value:after {content: '\d22c \d45c \d558 \b2e4 ';}
-html[lang='pt-br'] .star-value:after {content: 'votos';}
 
 /* STATS */
 

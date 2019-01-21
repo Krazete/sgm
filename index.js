@@ -190,39 +190,37 @@ function updateRating(key, subkey) {
     var card = document.getElementById(key);
     var category = card.getElementsByClassName(subkey)[0];
     var stars = category.getElementsByClassName("star");
-    var starValue = category.getElementsByClassName("star-value")[0];
+
+    category.classList.add("pressed");
 
     try {
-        firebase.database().ref([
-            key,
-            subkey
-        ].join("/")).once('value').then(function (snapshot) {
-            var snapshot = snapshot.val();
-            var total = 0;
+        database.ref([key, subkey].join("/")).once('value').then(function (snapshot) {
+            var votesByID = snapshot.val();
+            var weightedTotal = 0;
             var weightedCount = 0;
             var count = 0;
             var userVote = 0;
-            var ipVotes = {};
-            for (var id in snapshot) {
-                if (snapshot[id].ip in ipVotes) {
-                    ipVotes[snapshot[id].ip].subtotal += snapshot[id].vote;
-                    ipVotes[snapshot[id].ip].subcount++;
+            var votesByIP = {};
+            for (var id in votesByID) {
+                if (votesByID[id].ip in votesByIP) {
+                    votesByIP[votesByID[id].ip].subtotal += votesByID[id].vote;
+                    votesByIP[votesByID[id].ip].subcount++;
                 }
                 else {
-                    ipVotes[snapshot[id].ip] = {
-                        "subtotal": snapshot[id].vote,
+                    votesByIP[votesByID[id].ip] = {
+                        "subtotal": votesByID[id].vote,
                         "subcount": 1
                     }
                 }
                 count++;
                 if (id == userID) {
-                    userVote = snapshot[id].vote;
+                    userVote = votesByID[id].vote;
                 }
             }
-            for (var ip in ipVotes) {
-                var weight = Math.log(Math.E * ipVotes[ip].subcount);
-                var subvote = ipVotes[ip].subtotal / ipVotes[ip].subcount;
-                total += subvote * weight;
+            for (var ip in votesByIP) {
+                var weight = Math.log(Math.E * votesByIP[ip].subcount);
+                var subvote = votesByIP[ip].subtotal / votesByIP[ip].subcount;
+                weightedTotal += subvote * weight;
                 weightedCount += weight;
             }
             if (userVote > 0) {
@@ -233,38 +231,37 @@ function updateRating(key, subkey) {
                     }
                     else {
                         star.classList.add("underlined");
-                    }
-                    if (star.dataset.value == userVote) {
-                        passed = true;
+                        passed = star.dataset.value == userVote;
                     }
                 }
             }
             var passed = count <= 0;
-            var ratio = total / weightedCount;
+            var ratio = weightedTotal / weightedCount;
             var clipTop = 90 * (ratio % 1);
-            var clipBot = 30 + 30 * (ratio % 1);
+            var clipBottom = 30 + 30 * (ratio % 1);
             for (var star of stars) {
                 if (passed) {
                     star.children[1].style.opacity = 0;
                 }
+                else if (star.dataset.value == Math.floor(ratio) + 1) {
+                    passed = true;
+                    if (clipTop <= 0) {
+                        star.children[1].style.opacity = 0;
+                    }
+                    else {
+                        star.children[1].style = [
+                            "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBottom + "% 100%, 0 100%)",
+                            "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBottom + "% 100%, 0 100%)"
+                        ].join(";");
+                    }
+                }
                 else {
                     star.children[1].style = "";
                 }
-                if (star.dataset.value == Math.floor(ratio) + 1) {
-                    passed = true;
-                    if (clipTop > 0) {
-                        star.children[1].style = [
-                            "-webkit-clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)",
-                            "clip-path: polygon(0 0, " + clipTop + "% 0, " + clipBot + "% 100%, 0 100%)"
-                        ].join(";");
-                    }
-                    else {
-                        star.children[1].style.opacity = 0;
-                    }
-                }
             }
-            starValue.dataset.value = ratio || 0;
-            starValue.dataset.count = count;
+            category.dataset.value = ratio || 0;
+            category.dataset.count = count;
+            category.classList.remove("pressed");
             /* do not sort cards on update because the rearrangement is obtrusive */
         });
     }
@@ -275,6 +272,10 @@ function updateRating(key, subkey) {
 
 function initRating() {
     this.classList.add("pressed");
+    for (var ratings of document.getElementsByClassName("ratings")) {
+        ratings.classList.remove("hidden");
+    }
+
     Promise.all([
         loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"),
         loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"),
@@ -291,13 +292,16 @@ function initRating() {
         };
         firebase.initializeApp(config);
 
+        database = firebase.database();
+
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 var isAnonymous = user.isAnonymous;
                 userID = user.uid;
-                console.log("Authentication issued.")
-            } else {
-                console.log("Authentication revoked.")
+                console.log("Authentication issued.");
+            }
+            else {
+                console.log("Authentication revoked.");
             }
         });
         firebase.auth().signInAnonymously().catch(function (error) {
@@ -306,19 +310,12 @@ function initRating() {
             console.log(error.code, error.message);
         });
 
-        database = firebase.database();
-    }).then(function () {
         for (var card of cards) {
-            var key = card.id;
-            updateRating(key, "offense");
-            updateRating(key, "defense");
+            updateRating(card.id, "offense");
+            updateRating(card.id, "defense");
         }
-    }).then(function () {
         document.getElementById("sort-offense").classList.remove("hidden");
         document.getElementById("sort-defense").classList.remove("hidden");
-        for (var ratings of document.getElementsByClassName("ratings")) {
-            ratings.classList.remove("hidden");
-        }
     });
 }
 
@@ -391,13 +388,9 @@ function initCollection(responses) {
 
     function rate() {
         var key = this.parentElement.parentElement.parentElement.id;
-        var subkey = this.parentElement.dataset.category;
+        var subkey = this.parentElement.className;
         var value = parseInt(this.dataset.value);
-        firebase.database().ref([
-            key,
-            subkey,
-            userID
-        ].join("/")).set({
+        database.ref([key, subkey, userID].join("/")).set({
             "ip": userIP,
             "vote": value
         });
@@ -410,8 +403,7 @@ function initCollection(responses) {
             ratings.className = "ratings fill-row hidden";
             for (var category of categories) {
                 var rating = document.createElement("div");
-                    rating.className = category;
-                    rating.dataset.category = category;
+                    rating.className = [category, "pressed"].join(" ");
                     for (var i = 0; i < 5; i++) {
                         var star = document.createElement("div");
                             star.className = "star";
@@ -425,9 +417,6 @@ function initCollection(responses) {
                             star.addEventListener("click", rate);
                         rating.appendChild(star);
                     }
-                    var starValue = document.createElement("div");
-                        starValue.className = "star-value";
-                    rating.appendChild(starValue);
                 ratings.appendChild(rating);
             }
         return ratings;
@@ -1029,13 +1018,13 @@ function initSortMenu() {
     }
 
     function getStatValue(card, type) {
-        var statValue = card.getElementsByClassName(type + "-value")[0];
+        var statValue = card.getElementsByClassName(type)[0];
         return statValue.dataset.value;
     }
 
     function fighterScoreBasis(a, b) {
-        var A = getStatValue(a, "fs");
-        var B = getStatValue(b, "fs");
+        var A = getStatValue(a, "fs-value");
+        var B = getStatValue(b, "fs-value");
         var C = B - A;
         if (C == 0) {
             return alphabeticalBasis(a, b);
@@ -1044,8 +1033,8 @@ function initSortMenu() {
     }
 
     function attackBasis(a, b) {
-        var A = getStatValue(a, "atk");
-        var B = getStatValue(b, "atk");
+        var A = getStatValue(a, "atk-value");
+        var B = getStatValue(b, "atk-value");
         var C = B - A;
         if (C == 0) {
             return fighterScoreBasis(a, b);
@@ -1054,8 +1043,8 @@ function initSortMenu() {
     }
 
     function healthBasis(a, b) {
-        var A = getStatValue(a, "hp");
-        var B = getStatValue(b, "hp");
+        var A = getStatValue(a, "hp-value");
+        var B = getStatValue(b, "hp-value");
         var C = B - A;
         if (C == 0) {
             return fighterScoreBasis(a, b);
@@ -1084,14 +1073,9 @@ function initSortMenu() {
         return C;
     }
 
-    function getRatingValue(card, category) {
-        var stars = card.getElementsByClassName(category)[0];
-        return getStatValue(stars, "star");
-    }
-
     function offenseBasis(a, b) {
-        var A = getRatingValue(a, "offense");
-        var B = getRatingValue(b, "offense");
+        var A = getStatValue(a, "offense");
+        var B = getStatValue(b, "offense");
         var C = B - A;
         if (C == 0) {
             return attackBasis(a, b);
@@ -1100,8 +1084,8 @@ function initSortMenu() {
     }
 
     function defenseBasis(a, b) {
-        var A = getRatingValue(a, "defense");
-        var B = getRatingValue(b, "defense");
+        var A = getStatValue(a, "defense");
+        var B = getStatValue(b, "defense");
         var C = B - A;
         if (C == 0) {
             return healthBasis(a, b);
