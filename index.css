@@ -263,18 +263,18 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
     width: 20px;
     vertical-align: sub;
 }
-#enable-rating .rating {
+#enable-rating span {
     pointer-events: none;
 }
 
-html[lang='en'] .rating:after {content: 'RATING';}
-html[lang='fr'] .rating:after {content: '\00c9 VALUATION';}
-html[lang='es'] .rating:after {content: 'CALIFICACI\00d3 N';}
-html[lang='ru'] .rating:after {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 ';}
-html[lang='ja'] .rating:after {content: '\30ec \30fc \30c8 ';}
-html[lang='de'] .rating:after {content: 'WERTUNG';}
-html[lang='ko'] .rating:after {content: '\b4f1 \ae09 ';}
-html[lang='pt-br'] .rating:after {content: 'CLASSIFICA\00c7 \00c3 O';}
+html[lang='en'] #enable-rating span:before {content: 'RATING';}
+html[lang='fr'] #enable-rating span:before {content: '\00c9 VALUATION';}
+html[lang='es'] #enable-rating span:before {content: 'CALIFICACI\00d3 N';}
+html[lang='ru'] #enable-rating span:before {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 ';}
+html[lang='ja'] #enable-rating span:before {content: '\30ec \30fc \30c8 ';}
+html[lang='de'] #enable-rating span:before {content: 'WERTUNG';}
+html[lang='ko'] #enable-rating span:before {content: '\b4f1 \ae09 ';}
+html[lang='pt-br'] #enable-rating span:before {content: 'CLASSIFICA\00c7 \00c3 O';}
 
 /* FOOTER */
 
