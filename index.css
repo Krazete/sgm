@@ -184,12 +184,48 @@ input:checked + label {
     border-color: #314c73;
 }
 
+.button {
+    max-width: 42px;
+    max-height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon {
+    max-width: 28px;
+    max-height: 28px;
+    font-size: 0;
+    display: block;
+    margin: auto;
+}
+
+.half-subicon {
+    max-width: 50%;
+    max-height: 100%;
+}
+.half-subicon:last-child {
+    transform: scaleX(-1);
+}
+
+.pressed,
 .loading input,
 .loading label,
 .loading .button,
-.loading .icon {
+.loading .icon,
+.loading #enable-rating {
     opacity: 0.5;
     pointer-events: none;
+}
+
+.glowing {
+    filter: drop-shadow(0 0 6px white);
+    /* use sparingly; excessive drop-shadow causes major visual glitches in ios */
+}
+
+.underlined {
+    border-radius: 0 0 4px 4px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid #314c73;
 }
 
 /* HEADER */
@@ -292,45 +328,6 @@ html[lang='pt-br'] #enable-rating span:before {content: 'CLASSIFICA\00c7 \00c3 O
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 3px 6px;
-}
-
-.button {
-    max-width: 42px;
-    max-height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.pressed {
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.icon {
-    max-width: 28px;
-    max-height: 28px;
-    font-size: 0;
-    display: block;
-    margin: auto;
-}
-
-.half-subicon {
-    max-width: 50%;
-    max-height: 100%;
-}
-.half-subicon:last-child {
-    transform: scaleX(-1);
-}
-
-.glowing {
-    filter: drop-shadow(0 0 6px white);
-    /* use sparingly; excessive drop-shadow causes major visual glitches in ios */
-}
-
-.underlined {
-    border-radius: 0 0 4px 4px;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid #314c73;
 }
 
 #zoom {
