@@ -48,7 +48,7 @@ common = [
     'Key_Element',
     'Sort_Tier',
     'Sort_Type',
-    'Ranked_Rating'
+    'Ranked_Rating' # UNUSED
 ]
 
 corpus = file.load('data_processing/sgm_exports/TextAsset')

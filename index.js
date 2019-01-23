@@ -119,6 +119,7 @@ var filterCards;
 var sortBasis;
 var updateCards;
 
+var chaos = false;
 var dormant = true;
 
 function randomInt(a, b) {
@@ -133,16 +134,16 @@ function fearTheRainbow() {
         for (var element of elements) {
             card.classList.remove(element);
         }
-        if (dormant) {
-            card.classList.add(tiers[randomInt(0, tiers.length)]);
-            card.classList.add(elements[randomInt(0, elements.length)]);
-        }
-        else {
+        if (chaos) {
             card.classList.add(tiers[variants[card.id].tier]);
             card.classList.add(elements[variants[card.id].element]);
         }
+        else {
+            card.classList.add(tiers[randomInt(0, tiers.length)]);
+            card.classList.add(elements[randomInt(0, elements.length)]);
+        }
     }
-    dormant = !dormant;
+    chaos = !chaos;
 }
 
 function toggleLoadingScreen(loading) {
@@ -268,55 +269,6 @@ function updateRating(key, subkey) {
     }
 }
 
-function initRating() {
-    this.classList.add("pressed");
-    for (var ratings of document.getElementsByClassName("ratings")) {
-        ratings.classList.remove("hidden");
-    }
-
-    Promise.all([
-        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"),
-        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"),
-        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"),
-        loadScript("https://api.ipify.org?format=jsonp&callback=setIP")
-    ]).then(function () {
-        var config = {
-            apiKey: "AIzaSyCHj7h6q2cG8h3yRDvofHiDP3Y4H4wY6t4",
-            authDomain: "sgmobilegallery.firebaseapp.com",
-            databaseURL: "https://sgmobilegallery.firebaseio.com",
-            projectId: "sgmobilegallery",
-            storageBucket: "sgmobilegallery.appspot.com",
-            messagingSenderId: "65927600297"
-        };
-        firebase.initializeApp(config);
-
-        database = firebase.database();
-
-        firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
-                var isAnonymous = user.isAnonymous;
-                userID = user.uid;
-                console.log("Authentication issued.");
-            }
-            else {
-                console.log("Authentication revoked.");
-            }
-        });
-        firebase.auth().signInAnonymously().catch(function (error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(error.code, error.message);
-        });
-
-        for (var card of cards) {
-            updateRating(card.id, "offense");
-            updateRating(card.id, "defense");
-        }
-        document.getElementById("sort-offense").classList.remove("hidden");
-        document.getElementById("sort-defense").classList.remove("hidden");
-    });
-}
-
 function initCollection(responses) {
     fighters = responses[0];
     variants = responses[1];
@@ -402,7 +354,7 @@ function initCollection(responses) {
     function createRating(key, type) {
         var categories = ["offense", "defense"];
         var ratings = document.createElement("div");
-            ratings.className = "ratings fill-row hidden";
+            ratings.className = "rating fill-row hidden";
             for (var category of categories) {
                 var rating = document.createElement("div");
                     rating.className = [category, "pressed"].join(" ");
@@ -647,6 +599,12 @@ function initDock() {
     var savedZoom = localStorage.getItem("zoom");
     var savedButton = document.getElementById(savedZoom);
 
+    var ratings = document.getElementById("ratings");
+    var cardRatings = document.getElementsByClassName("rating");
+    var sortFighterScore = document.getElementById("sort-fs");
+    var sortOffense = document.getElementById("sort-offense");
+    var sortDefense = document.getElementById("sort-defense");
+
     function getScrollRatio() {
         var scrollHeight = document.documentElement.scrollHeight - innerHeight;
         return scrollY / scrollHeight;
@@ -720,11 +678,81 @@ function initDock() {
         }
     }
 
+    function initRating() {
+        Promise.all([
+            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"),
+            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"),
+            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"),
+            loadScript("https://api.ipify.org?format=jsonp&callback=setIP")
+        ]).then(function () {
+            var config = {
+                apiKey: "AIzaSyCHj7h6q2cG8h3yRDvofHiDP3Y4H4wY6t4",
+                authDomain: "sgmobilegallery.firebaseapp.com",
+                databaseURL: "https://sgmobilegallery.firebaseio.com",
+                projectId: "sgmobilegallery",
+                storageBucket: "sgmobilegallery.appspot.com",
+                messagingSenderId: "65927600297"
+            };
+            firebase.initializeApp(config);
+
+            database = firebase.database();
+
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    var isAnonymous = user.isAnonymous;
+                    userID = user.uid;
+                    console.log("Authentication issued.");
+                }
+                else {
+                    console.log("Authentication revoked.");
+                }
+            });
+            firebase.auth().signInAnonymously().catch(function (error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(error.code, error.message);
+            });
+
+            for (var card of cards) {
+                updateRating(card.id, "offense");
+                updateRating(card.id, "defense");
+            }
+        });
+    }
+
+    function toggleRatings() {
+        if (this.classList.contains("glowing")) {
+            this.classList.remove("glowing");
+            for (var cardRating of cardRatings) {
+                cardRating.classList.add("hidden");
+            }
+            sortOffense.classList.add("hidden");
+            sortDefense.classList.add("hidden");
+            if (sortOffense.checked || sortDefense.checked) {
+                sortFighterScore.click();
+            }
+        }
+        else {
+            this.classList.add("glowing");
+            for (var cardRating of cardRatings) {
+                cardRating.classList.remove("hidden");
+            }
+            sortOffense.classList.remove("hidden");
+            sortDefense.classList.remove("hidden");
+            if (dormant) {
+                initRating();
+                dormant = false;
+            }
+        }
+    }
+
     zoomOut.addEventListener("click", decreaseZoom);
     zoomIn.addEventListener("click", increaseZoom);
 
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
+
+    ratings.addEventListener("click", toggleRatings);
 
     if (savedButton == zoomOut || savedButton == zoomIn) {
         savedButton.click();
@@ -1489,7 +1517,6 @@ function initialize() {
         initFilterMenu();
         initSortMenu();
         initOptionsMenu();
-        document.getElementById("enable-rating").addEventListener("click", initRating);
     }
 
     toggleLoadingScreen(true);

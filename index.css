@@ -211,8 +211,7 @@ input:checked + label {
 .loading input,
 .loading label,
 .loading .button,
-.loading .icon,
-.loading #enable-rating {
+.loading .icon {
     opacity: 0.5;
     pointer-events: none;
 }
@@ -292,26 +291,6 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 #ko + label.tagged:before {content: '\d55c \ad6d \c5b4 '; background: url(image/official/flag_ko.png);}
 #pt-br + label.tagged:before {content: 'Portugu\00ea s'; background: url(image/official/flag_pt.png);}
 
-#enable-rating {
-    cursor: pointer;
-}
-#enable-rating img {
-    width: 20px;
-    vertical-align: sub;
-}
-#enable-rating span {
-    pointer-events: none;
-}
-
-html[lang='en'] #enable-rating span:before {content: 'RATING';}
-html[lang='fr'] #enable-rating span:before {content: '\00c9 VALUATION';}
-html[lang='es'] #enable-rating span:before {content: 'CALIFICACI\00d3 N';}
-html[lang='ru'] #enable-rating span:before {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 ';}
-html[lang='ja'] #enable-rating span:before {content: '\30ec \30fc \30c8 ';}
-html[lang='de'] #enable-rating span:before {content: 'WERTUNG';}
-html[lang='ko'] #enable-rating span:before {content: '\b4f1 \ae09 ';}
-html[lang='pt-br'] #enable-rating span:before {content: 'CLASSIFICA\00c7 \00c3 O';}
-
 /* FOOTER */
 
 #footer {
@@ -326,11 +305,12 @@ html[lang='pt-br'] #enable-rating span:before {content: 'CLASSIFICA\00c7 \00c3 O
     box-shadow: 0 -3px 3px black;
     border-top: 1px solid #ccb55a;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
     padding: 3px 6px;
 }
 
-#zoom {
+#dock-left {
     margin: auto 0;
 }
 
@@ -338,8 +318,12 @@ html[lang='pt-br'] #enable-rating span:before {content: 'CLASSIFICA\00c7 \00c3 O
     margin: auto;
 }
 
-#filter-sort, #settings {
+#dock-right {
     margin: auto 0 auto auto;
+}
+
+#filter-sort, #ratings {
+    display: inline;
     cursor: pointer;
 }
 
@@ -1014,12 +998,12 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 
 /* RATING */
 
-.ratings {
+.rating {
     text-align: center;
     display: flex;
 }
 
-.ratings.hidden {
+.rating.hidden {
     display: none;
 }
 
