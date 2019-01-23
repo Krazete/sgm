@@ -694,9 +694,12 @@ function initOptionsMenu() {
             var key = card.id;
             var description = card.getElementsByClassName("description")[0];
             description.classList.add("hidden");
+            description.innerHTML = "";
             for (var feature of moves[key].ability.features) {
                 if (feature.description && corpus[feature.description]) {
-                    description.innerHTML = format(corpus[feature.description], getDescriptionTier(key, feature));
+                    var fDescription = document.createElement("div");
+                    fDescription.innerHTML = format(corpus[feature.description], getDescriptionTier(key, feature));
+                    description.appendChild(fDescription);
                     description.classList.remove("hidden");
                 }
             }
