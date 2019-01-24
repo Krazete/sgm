@@ -1125,9 +1125,15 @@ html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
     position: absolute;
     bottom: -1em;
     left: 45%;
-    line-height: 1em;
     transform: translateX(-50%);
+    background: skyblue;
+    color: #1b2a41;
+    text-shadow: none;
+    line-height: 0.9em;
     white-space: pre;
+    padding: 0.1em;
+    border-radius: 2px;
+    z-index: 1;
     pointer-events: none;
 }
 
