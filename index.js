@@ -223,14 +223,12 @@ function updateRating(key, subkey) {
                 weightedCount += weight;
             }
             if (userVote > 0) {
-                var passed = false;
                 for (var star of stars) {
-                    if (passed) {
-                        star.classList.remove("underlined");
+                    if (star.dataset.value == userVote) {
+                        star.classList.add("voted");
                     }
                     else {
-                        star.classList.add("underlined");
-                        passed = star.dataset.value == userVote;
+                        star.classList.remove("voted");
                     }
                 }
             }
@@ -351,6 +349,29 @@ function initCollection(responses) {
         });
     }
 
+    function previewRate() {
+        var category = this.parentElement;
+        var stars = category.getElementsByClassName("star");
+        var passed = false;
+        for (var star of stars) {
+            if (passed) {
+                star.classList.remove("voting");
+            }
+            else {
+                star.classList.add("voting");
+                passed = star == this;
+            }
+        }
+    }
+
+    function deviewRate() {
+        var category = this.parentElement;
+        var stars = category.getElementsByClassName("star");
+        for (var star of stars) {
+            star.classList.remove("voting");
+        }
+    }
+
     function createRating(key, type) {
         var categories = ["offense", "defense"];
         var ratings = document.createElement("div");
@@ -369,6 +390,9 @@ function initCollection(responses) {
                                 light.src = "image/official/star01.png";
                             star.appendChild(light);
                             star.addEventListener("click", rate);
+                            star.addEventListener("mouseover", previewRate);
+                            star.addEventListener("mouseout", deviewRate);
+                            star.addEventListener("click", deviewRate);
                         rating.appendChild(star);
                     }
                 ratings.appendChild(rating);
@@ -1396,7 +1420,7 @@ function initOptionsMenu() {
             else {
                 document.body.classList.remove(tiers[i]);
             }
-            if (i < parseInt(evolveRange.value) + 1) {
+            if (i == parseInt(evolveRange.value)) {
                 evolveTiers[i].classList.add("underlined");
             }
             else {

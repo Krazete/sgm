@@ -999,8 +999,16 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 /* RATING */
 
 .rating {
+    font-size: x-small;
     text-align: center;
+    text-transform: uppercase;
     display: flex;
+}
+.zoomed-out .rating {
+    font-size: xx-small;
+}
+.zoomed-in .rating {
+    font-size: small;
 }
 
 .rating.hidden {
@@ -1013,6 +1021,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 }
 
 .offense:before, .defense:before {
+    font-size: initial;
     display: block;
 }
 
@@ -1053,16 +1062,7 @@ html[lang='pt-br'] #sort-defense + label:before {content: 'DEFESA';}
 .offense:after,
 .defense:after {
     color: gray;
-    font-size: x-small;
     display: block;
-}
-.zoomed-out .offense:after,
-.zoomed-out .defense:after {
-    font-size: xx-small;
-}
-.zoomed-in .offense:after,
-.zoomed-in .defense:after {
-    font-size: small;
 }
 
 html[lang='en'] .offense:after,
@@ -1086,8 +1086,10 @@ html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
     position: relative;
     width: 24px;
     height: 24px;
+    color: skyblue;
     vertical-align: middle;
     display: inline-block;
+    margin: 0.5em 0 1em 0;
     cursor: pointer;
 }
 .zoomed-out .star {
@@ -1098,6 +1100,45 @@ html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
     width: 28px;
     height: 28px;
 }
+
+.star.voting img {
+    opacity: 1 !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    filter: saturate(2) hue-rotate(150deg);
+}
+
+.star.voted:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    transform: translateX(-50%);
+    border-left: 0.4em solid transparent;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0.5em solid skyblue;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.star.voted:after {
+    position: absolute;
+    bottom: -1em;
+    left: 45%;
+    line-height: 1em;
+    transform: translateX(-50%);
+    white-space: pre;
+    pointer-events: none;
+}
+
+html[lang='en'] .star.voted:after {content: 'You';}
+html[lang='fr'] .star.voted:after {content: 'Vous';}
+html[lang='es'] .star.voted:after {content: 'T\00fa ';}
+html[lang='ru'] .star.voted:after {content: '\0412 \044b ';}
+html[lang='ja'] .star.voted:after {content: '\541b \306f ';}
+html[lang='de'] .star.voted:after {content: 'Sie';}
+html[lang='ko'] .star.voted:after {content: '\b2f9 \c2e0 ';}
+html[lang='pt-br'] .star.voted:after {content: 'Voc\00ea ';}
 
 .star img {
     position: absolute;
