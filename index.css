@@ -1121,25 +1121,46 @@ html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
     transform: translateX(-50%);
     border-left: 0.4em solid transparent;
     border-right: 0.4em solid transparent;
-    border-bottom: 0.5em solid skyblue;
+    border-bottom: 0.5em solid transparent;
     z-index: 1;
     pointer-events: none;
+    animation: vote-success-tail 0.5s 1s ease-out forwards;
+}
+
+@keyframes vote-success-tail {
+    100% {
+        border-bottom-color: skyblue;
+    }
 }
 
 .star.voted:after {
     position: absolute;
-    bottom: -1em;
     left: 45%;
+    bottom: 0em;
+    min-width: 2em;
     transform: translateX(-50%);
-    background: skyblue;
-    color: #1b2a41;
+    background: url(image/official/Checkmark.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: transparent;
     text-shadow: none;
-    line-height: 0.9em;
+    line-height: 2em;
     white-space: pre;
     padding: 0.1em;
     border-radius: 2px;
     z-index: 1;
     pointer-events: none;
+    animation: vote-success-body 0.5s 1s ease-out forwards;
+}
+
+@keyframes vote-success-body {
+    100% {
+        bottom: -1em;
+        background: skyblue;
+        color: #1b2a41;
+        line-height: 0.9em;
+    }
 }
 
 html[lang='en'] .star.voted:after {content: 'You';}
