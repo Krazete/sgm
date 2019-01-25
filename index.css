@@ -1101,11 +1101,16 @@ html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
     height: 28px;
 }
 
-.star.voting img {
-    opacity: 1 !important;
-    -webkit-clip-path: none !important;
-    clip-path: none !important;
+.star.voting img:first-child {
     filter: saturate(2) hue-rotate(150deg);
+}
+
+.star.voting img:last-child {
+    opacity: 0;
+}
+
+.star.not-voting img:last-child {
+    opacity: 0.3;
 }
 
 .star.voted:before {

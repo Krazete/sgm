@@ -356,9 +356,11 @@ function initCollection(responses) {
         for (var star of stars) {
             if (passed) {
                 star.classList.remove("voting");
+                star.classList.add("not-voting");
             }
             else {
                 star.classList.add("voting");
+                star.classList.remove("not-voting");
                 passed = star == this;
             }
         }
@@ -369,6 +371,7 @@ function initCollection(responses) {
         var stars = category.getElementsByClassName("star");
         for (var star of stars) {
             star.classList.remove("voting");
+            star.classList.remove("not-voting");
         }
     }
 
