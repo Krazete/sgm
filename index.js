@@ -187,7 +187,7 @@ function setIP(json) {
     userIP = json.ip;
 }
 
-function updateRating(key, subkey) {
+function updateRating(key, subkey, animate) {
     var card = document.getElementById(key);
     var category = card.getElementsByClassName(subkey)[0];
     var stars = category.getElementsByClassName("star");
@@ -225,9 +225,18 @@ function updateRating(key, subkey) {
             if (userVote > 0) {
                 for (var star of stars) {
                     if (star.dataset.value == userVote) {
+                        if (animate) {
+                            star.classList.add("animated");
+                            (function (star) {
+                                setTimeout(function () {
+                                    star.classList.remove("animated")
+                                }, 1500);
+                            })(star);
+                        }
                         star.classList.add("voted");
                     }
                     else {
+                        star.classList.remove("animated");
                         star.classList.remove("voted");
                     }
                 }
@@ -345,7 +354,7 @@ function initCollection(responses) {
             "ip": userIP,
             "vote": value
         }).then(function () {
-            updateRating(key, subkey);
+            updateRating(key, subkey, true);
         });
     }
 
