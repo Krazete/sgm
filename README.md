@@ -21,7 +21,8 @@ All translations are an exact copy of the text used in the corresponding version
 
 At the developers' request, I have implemented a rudimentary rating system to show the community's opinion on each fighter variant.
 This is initially disabled to limit the amount of requests made to the database and for aesthetic purposes.
-To enable the rating system, just click on the Rating button at top of the website.
+To enable the rating system, just click on the star at bottom right of the website.
+This will also reveal two more sorting options based on the two ratings on each card.
 
 The rating system uses Firebase to keep track of votes.
 One vote is allowed per browser session, and all votes are weighted by how many votes were made at the same IP address.
@@ -115,6 +116,7 @@ This is to ease the process of searching for and comparing between different fig
 The website allows you to sort fighters by in-game options like alphabetically or based on fighter score, element, or tier.
 The game's energy and level sorting options have not been included since they are not useful in this context.
 You can additionally sort by attack, health, offense rating, and defense rating.
+The rating sort options only appear when the rating system is enabled.
 
 The website's sorting behavior mimics the game's sorting behavior for the most part.
 It even follows the game's `[Fire, Wind, Water, Light, Dark, Neutral]` element sort, which oddly differs the game's filter button order of `[Fire, Water, Wind, Light, Dark, Neutral]`.
