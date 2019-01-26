@@ -322,7 +322,7 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
     margin: auto 0 auto auto;
 }
 
-#filter-sort, #ratings {
+#filter-sort, #ratings, #settings {
     display: inline;
     cursor: pointer;
 }
