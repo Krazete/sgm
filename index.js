@@ -641,6 +641,8 @@ function initDock() {
     var sortOffense = document.getElementById("sort-offense");
     var sortDefense = document.getElementById("sort-defense");
 
+    var savedStar = localStorage.getItem("star") || "on";
+
     function getScrollRatio() {
         var scrollHeight = document.documentElement.scrollHeight - innerHeight;
         return scrollY / scrollHeight;
@@ -767,6 +769,7 @@ function initDock() {
             if (sortOffense.checked || sortDefense.checked) {
                 sortFighterScore.click();
             }
+            localStorage.setItem("star", "off");
         }
         else {
             this.classList.add("glowing");
@@ -779,19 +782,24 @@ function initDock() {
                 initRating();
                 dormant = false;
             }
+            localStorage.setItem("star", "on");
         }
     }
 
     zoomOut.addEventListener("click", decreaseZoom);
     zoomIn.addEventListener("click", increaseZoom);
 
+    if (savedButton == zoomOut || savedButton == zoomIn) {
+        savedButton.click();
+    }
+
     fighterOptions.addEventListener("click", toggleFighterOptions);
     filterSort.addEventListener("click", toggleFilterSort);
 
     ratings.addEventListener("click", toggleRatings);
 
-    if (savedButton == zoomOut || savedButton == zoomIn) {
-        savedButton.click();
+    if (savedStar == "on") {
+        ratings.click();
     }
 }
 

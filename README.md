@@ -27,6 +27,8 @@ This will also reveal two more sorting options based on the two ratings on each 
 The rating system uses Firebase to keep track of votes.
 One vote is allowed per browser session, and all votes are weighted by how many votes were made at the same IP address.
 
+*The rating system toggle state is saved in your browser's local storage for future visits.*
+
 ### Options (Fighter Settings)
 
 You can modify the tier, level, skill tree, and ability levels of the displayed fighters from this menu.
