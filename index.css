@@ -58,6 +58,9 @@ a {
     color: #ccb55a;
     text-decoration: inherit;
 }
+a:hover {
+    text-decoration: underline;
+}
 
 .cinematic {
     font-family: 'Washington', 'Trebuchet MS', 'Arial Narrow', sans-serif;
