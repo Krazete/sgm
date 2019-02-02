@@ -1,2033 +1,2033 @@
 {
-    "mf": {
-        "ca": {
-            "msFortuneImage": {
-                "m_PathID": 17323,
-                "m_FileID": 0
-            },
-            "recallImage": {
-                "m_PathID": 17325,
-                "m_FileID": 0
-            },
-            "headbuttImage": {
-                "m_PathID": 17324,
-                "m_FileID": 0
-            },
-            "felineAllergiesImage": {
-                "m_PathID": 17326,
-                "m_FileID": 0
-            },
-            "description": "Char_MsFortune_CA_Desc",
-            "zoomImage": {
-                "m_PathID": 17327,
-                "m_FileID": 0
-            },
-            "title": "Char_MsFortune_CA_Title"
-        },
-        "name": "Char_MsFortune_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_MsFortune_SUP_ICanHasBuff_Feat1_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                10,
-                                10
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                11,
-                                10
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                12,
-                                10
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                13,
-                                10
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                14,
-                                10
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                15,
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                16,
-                                10
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                17,
-                                10
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                18,
-                                10
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                19,
-                                10
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                20,
-                                10
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_MsFortune_SUP_ICanHasBuff_Feat1_Title"
-                },
-                {
-                    "description": "Char_MsFortune_SUP_ICanHasBuff_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                10,
-                                10
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                11,
-                                10
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                12,
-                                10
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                13,
-                                10
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                14,
-                                10
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                15,
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                16,
-                                10
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                17,
-                                10
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                18,
-                                10
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                19,
-                                10
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                20,
-                                10
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_MsFortune_SUP_ICanHasBuff_Feat2_Title"
-                }
-            ],
-            "title": "Char_MsFortune_SUP_ICanHasBuff_Title"
-        },
-        "voice": {
-            "en": "Kimlinh Tran",
-            "ja": "Kana Hanazawa"
-        }
-    },
-    "be": {
-        "ca": {
-            "debug": 1,
-            "beowulfImage": {
-                "m_PathID": 16862,
-                "m_FileID": 0
-            },
-            "hypeIcon": {
-                "m_PathID": 26666,
-                "m_FileID": 0
-            },
-            "hypeTime": 10,
-            "description": "Char_Beowulf_CA_Desc",
-            "secondsUntilFreeHypeLevel": 30,
-            "title": "Char_Beowulf_CA_Title"
-        },
-        "name": "Char_Beowulf_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_Beowulf_SUP_TitleFight_Feat1_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                5
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                6
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                7
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                8
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                9
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                11
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                12
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                13
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                14
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                15
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Beowulf_SUP_TitleFight_Feat1_Title"
-                },
-                {
-                    "description": "Char_Beowulf_SUP_TitleFight_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                5
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                6
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                7
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                8
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                9
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                11
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                12
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                13
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                14
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                15
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Beowulf_SUP_TitleFight_Feat2_Title"
-                }
-            ],
-            "title": "Char_Beowulf_SUP_TitleFight_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_BEO_EN",
-            "ja": "Credits_VA_BEO_JA"
-        }
-    },
-    "va": {
-        "ca": {
-            "description": "Char_Valentine_CA2_Desc",
-            "redLifeMultiplier": 0.5,
-            "lifeStealPercentage": 0.75,
-            "title": "Char_Valentine_CA2_Title"
-        },
-        "name": "Char_Valentine_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_Valentine_SUP_CombatClinic_Feat1_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                5,
-                                10
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                6,
-                                10
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                7,
-                                10
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                8,
-                                10
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                9,
-                                10
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                10,
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                11,
-                                10
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                12,
-                                10
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                13,
-                                10
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                14,
-                                10
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                15,
-                                10
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Valentine_SUP_CombatClinic_Feat1_Title"
-                },
-                {
-                    "description": "Char_Valentine_SUP_CombatClinic_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                10
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                11
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                12
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                13
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                14
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                15
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                16
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                17
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                18
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                19
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                20
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Valentine_SUP_CombatClinic_Feat2_Title"
-                }
-            ],
-            "title": "Char_Valentine_SUP_CombatClinic_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_VAL_EN",
-            "ja": "Credits_VA_VAL_JA"
-        }
-    },
-    "bb": {
-        "ca": {
-            "description": "Char_BigBand_CA_Desc",
-            "title": "Char_BigBand_CA_Title"
-        },
-        "name": "Char_BigBand_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_BigBand_SUP_Maestro_Feat1_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                5
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                6
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                7
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                8
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                9
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                11
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                12
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                13
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                14
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                15
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_BigBand_SUP_Maestro_Feat1_Title"
-                },
-                {
-                    "description": "Char_BigBand_SUP_Maestro_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                5
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                6
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                7
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                8
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                9
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                11
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                12
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                13
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                14
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                15
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_BigBand_SUP_Maestro_Feat2_Title"
-                }
-            ],
-            "title": "Char_BigBand_SUP_Maestro_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_BIG_EN",
-            "ja": "Credits_VA_BIG_JA"
-        }
-    },
-    "pw": {
-        "ca": {
-            "description": "Char_Painwheel_CA_Desc",
-            "title": "Char_Painwheel_CA_Title"
-        },
-        "name": "Char_Painwheel_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_PainWheel_SUP_TorturedSoul_Feat1_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                50
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                55
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                60
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                65
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                70
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                75
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                80
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                85
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                90
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                95
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                100
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_PainWheel_SUP_TorturedSoul_Feat1_Title"
-                },
-                {
-                    "description": "Char_PainWheel_SUP_TorturedSoul_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                10,
-                                5
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                11,
-                                5
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                12,
-                                5
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                13,
-                                5
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                14,
-                                5
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                15,
-                                5
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                16,
-                                5
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                17,
-                                5
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                18,
-                                5
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                19,
-                                5
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                20,
-                                5
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_PainWheel_SUP_TorturedSoul_Feat2_Title"
-                }
-            ],
-            "title": "Char_PainWheel_SUP_TorturedSoul_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_PAI_EN",
-            "ja": "Credits_VA_PAI_JA"
-        }
-    },
     "do": {
+        "name": "Char_Double_Name",
+        "voice": {
+            "en": "Credits_VA_DBL_EN",
+            "ja": "Credits_VA_DBL_JA"
+        },
         "ca": {
+            "linearElementChoice": 0,
+            "blockTime": 1,
             "resetOnBlockstun": 1,
             "elementalBonus": 0.100000001,
-            "blockTime": 1,
-            "description": "Char_Double_CA_Desc",
-            "linearElementChoice": 0,
-            "title": "Char_Double_CA_Title"
+            "title": "Char_Double_CA_Title",
+            "description": "Char_Double_CA_Desc"
         },
-        "name": "Char_Double_Name",
         "ma": {
             "features": [
                 {
-                    "description": "Char_Double_SUP_Entropy_Feat1_Desc",
                     "tiers": [
                         {
+                            "unlock": 1,
                             "value": [
                                 10
-                            ],
-                            "unlock": 1
+                            ]
                         },
                         {
+                            "unlock": 2,
                             "value": [
                                 11
-                            ],
-                            "unlock": 2
+                            ]
                         },
                         {
+                            "unlock": 3,
                             "value": [
                                 12
-                            ],
-                            "unlock": 3
+                            ]
                         },
                         {
+                            "unlock": 4,
                             "value": [
                                 13
-                            ],
-                            "unlock": 4
+                            ]
                         },
                         {
+                            "unlock": 5,
                             "value": [
                                 14
-                            ],
-                            "unlock": 5
+                            ]
                         },
                         {
+                            "unlock": 6,
                             "value": [
                                 15
-                            ],
-                            "unlock": 6
+                            ]
                         },
                         {
+                            "unlock": 7,
                             "value": [
                                 16
-                            ],
-                            "unlock": 7
+                            ]
                         },
                         {
+                            "unlock": 8,
                             "value": [
                                 17
-                            ],
-                            "unlock": 8
+                            ]
                         },
                         {
+                            "unlock": 9,
                             "value": [
                                 18
-                            ],
-                            "unlock": 9
+                            ]
                         },
                         {
+                            "unlock": 10,
                             "value": [
                                 19
-                            ],
-                            "unlock": 10
+                            ]
                         },
                         {
+                            "unlock": 11,
                             "value": [
                                 20
-                            ],
-                            "unlock": 11
+                            ]
                         }
                     ],
+                    "description": "Char_Double_SUP_Entropy_Feat1_Desc",
                     "title": "Char_Double_SUP_Entropy_Feat1_Title"
                 },
                 {
-                    "description": "Char_Double_SUP_Entropy_Feat2_Desc",
                     "tiers": [
                         {
+                            "unlock": 1,
                             "value": [
                                 30,
                                 10
-                            ],
-                            "unlock": 1
+                            ]
                         },
                         {
+                            "unlock": 2,
                             "value": [
                                 29,
                                 10
-                            ],
-                            "unlock": 2
+                            ]
                         },
                         {
+                            "unlock": 3,
                             "value": [
                                 28,
                                 10
-                            ],
-                            "unlock": 3
+                            ]
                         },
                         {
+                            "unlock": 4,
                             "value": [
                                 27,
                                 10
-                            ],
-                            "unlock": 4
+                            ]
                         },
                         {
+                            "unlock": 5,
                             "value": [
                                 26,
                                 10
-                            ],
-                            "unlock": 5
+                            ]
                         },
                         {
+                            "unlock": 6,
                             "value": [
                                 25,
                                 10
-                            ],
-                            "unlock": 6
+                            ]
                         },
                         {
+                            "unlock": 7,
                             "value": [
                                 24,
                                 10
-                            ],
-                            "unlock": 7
+                            ]
                         },
                         {
+                            "unlock": 8,
                             "value": [
                                 23,
                                 10
-                            ],
-                            "unlock": 8
+                            ]
                         },
                         {
+                            "unlock": 9,
                             "value": [
                                 22,
                                 10
-                            ],
-                            "unlock": 9
+                            ]
                         },
                         {
+                            "unlock": 10,
                             "value": [
                                 21,
                                 10
-                            ],
-                            "unlock": 10
+                            ]
                         },
                         {
+                            "unlock": 11,
                             "value": [
                                 20,
                                 10
-                            ],
-                            "unlock": 11
+                            ]
                         }
                     ],
+                    "description": "Char_Double_SUP_Entropy_Feat2_Desc",
                     "title": "Char_Double_SUP_Entropy_Feat2_Title"
                 }
             ],
             "title": "Char_Double_SUP_Entropy_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_DBL_EN",
-            "ja": "Credits_VA_DBL_JA"
         }
     },
-    "pe": {
-        "ca": {
-            "description": "Char_Peacock_CA_Desc",
-            "title": "Char_Peacock_CA_Title"
+    "be": {
+        "name": "Char_Beowulf_Name",
+        "voice": {
+            "en": "Credits_VA_BEO_EN",
+            "ja": "Credits_VA_BEO_JA"
         },
-        "name": "Char_Peacock_Name",
+        "ca": {
+            "beowulfImage": {
+                "m_FileID": 0,
+                "m_PathID": 16862
+            },
+            "title": "Char_Beowulf_CA_Title",
+            "hypeIcon": {
+                "m_FileID": 0,
+                "m_PathID": 26666
+            },
+            "description": "Char_Beowulf_CA_Desc",
+            "debug": 1,
+            "secondsUntilFreeHypeLevel": 30,
+            "hypeTime": 10
+        },
         "ma": {
             "features": [
                 {
-                    "description": "Char_Peacock_SUP_ToonTime_Feat1_Desc",
                     "tiers": [
                         {
-                            "value": [
-                                0.100000001
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                0.119999997
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                0.140000001
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                0.159999996
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                0.180000007
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                0.200000003
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                0.219999999
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                0.239999995
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                0.25999999
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                0.280000001
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                0.300000012
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Peacock_SUP_ToonTime_Feat1_Title"
-                },
-                {
-                    "description": "Char_Peacock_SUP_ToonTime_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                0.300000012
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                0.319999993
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                0.340000004
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                0.360000014
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                0.379999995
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                0.400000006
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                0.419999987
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                0.439999998
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                0.460000008
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                0.479999989
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                0.5
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Peacock_SUP_ToonTime_Feat2_Title"
-                }
-            ],
-            "title": "Char_Peacock_SUP_ToonTime_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_PEA_EN",
-            "ja": "Credits_VA_PEA_JA"
-        }
-    },
-    "pa": {
-        "ca": {
-            "description": "Char_Parasoul_CA_Desc",
-            "title": "Char_Parasoul_CA_Title"
-        },
-        "name": "Char_Parasoul_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_Parasoul_SUP_HyperCritical_Feat1_Desc",
-                    "tiers": [
-                        {
+                            "unlock": 1,
                             "value": [
                                 5
-                            ],
-                            "unlock": 1
+                            ]
                         },
                         {
+                            "unlock": 2,
                             "value": [
                                 6
-                            ],
-                            "unlock": 2
+                            ]
                         },
                         {
+                            "unlock": 3,
                             "value": [
                                 7
-                            ],
-                            "unlock": 3
+                            ]
                         },
                         {
+                            "unlock": 4,
                             "value": [
                                 8
-                            ],
-                            "unlock": 4
+                            ]
                         },
                         {
+                            "unlock": 5,
                             "value": [
                                 9
-                            ],
-                            "unlock": 5
+                            ]
                         },
                         {
+                            "unlock": 6,
                             "value": [
                                 10
-                            ],
-                            "unlock": 6
+                            ]
                         },
                         {
+                            "unlock": 7,
                             "value": [
                                 11
-                            ],
-                            "unlock": 7
+                            ]
                         },
                         {
+                            "unlock": 8,
                             "value": [
                                 12
-                            ],
-                            "unlock": 8
+                            ]
                         },
                         {
+                            "unlock": 9,
                             "value": [
                                 13
-                            ],
-                            "unlock": 9
+                            ]
                         },
                         {
+                            "unlock": 10,
                             "value": [
                                 14
-                            ],
-                            "unlock": 10
+                            ]
                         },
                         {
+                            "unlock": 11,
                             "value": [
                                 15
-                            ],
-                            "unlock": 11
+                            ]
                         }
                     ],
-                    "title": "Char_Parasoul_SUP_HyperCritical_Feat1_Title"
+                    "description": "Char_Beowulf_SUP_TitleFight_Feat1_Desc",
+                    "title": "Char_Beowulf_SUP_TitleFight_Feat1_Title"
                 },
                 {
-                    "description": "Char_Parasoul_SUP_HyperCritical_Feat2_Desc",
                     "tiers": [
                         {
+                            "unlock": 1,
+                            "value": [
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                6
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                7
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                8
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                9
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                11
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                12
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                13
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                14
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                15
+                            ]
+                        }
+                    ],
+                    "description": "Char_Beowulf_SUP_TitleFight_Feat2_Desc",
+                    "title": "Char_Beowulf_SUP_TitleFight_Feat2_Title"
+                }
+            ],
+            "title": "Char_Beowulf_SUP_TitleFight_Title"
+        }
+    },
+    "va": {
+        "name": "Char_Valentine_Name",
+        "voice": {
+            "en": "Credits_VA_VAL_EN",
+            "ja": "Credits_VA_VAL_JA"
+        },
+        "ca": {
+            "lifeStealPercentage": 0.75,
+            "redLifeMultiplier": 0.5,
+            "description": "Char_Valentine_CA2_Desc",
+            "title": "Char_Valentine_CA2_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                5,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                6,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                7,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                8,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                9,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                10,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                11,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                12,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                13,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                14,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                15,
+                                10
+                            ]
+                        }
+                    ],
+                    "description": "Char_Valentine_SUP_CombatClinic_Feat1_Desc",
+                    "title": "Char_Valentine_SUP_CombatClinic_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                11
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                12
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                13
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                14
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                15
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                16
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                17
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                18
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                19
+                            ]
+                        },
+                        {
+                            "unlock": 11,
                             "value": [
                                 20
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                22
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                24
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                26
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                28
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                30
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                32
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                34
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                36
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                38
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                40
-                            ],
-                            "unlock": 11
+                            ]
                         }
                     ],
-                    "title": "Char_Parasoul_SUP_HyperCritical_Feat2_Title"
+                    "description": "Char_Valentine_SUP_CombatClinic_Feat2_Desc",
+                    "title": "Char_Valentine_SUP_CombatClinic_Feat2_Title"
                 }
             ],
-            "title": "Char_Parasoul_SUP_HyperCritical_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_PAR_EN",
-            "ja": "Credits_VA_PAR_JA"
-        }
-    },
-    "el": {
-        "ca": {
-            "description": "Char_Eliza_CA_Desc",
-            "timeInSekhmet": 5,
-            "elizaImage": {
-                "m_PathID": 17167,
-                "m_FileID": 0
-            },
-            "sekhmetIcon": {
-                "m_PathID": 26667,
-                "m_FileID": 0
-            },
-            "title": "Char_Eliza_CA_Title"
-        },
-        "name": "Char_Eliza_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_Eliza_SUP_Bloodline_Feat1_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                30
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                32
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                34
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                36
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                38
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                40
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                42
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                44
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                46
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                48
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                50
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Eliza_SUP_Bloodline_Feat1_Title"
-                },
-                {
-                    "description": "Char_Eliza_SUP_Bloodline_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                50
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                55
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                60
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                65
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                70
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                75
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                80
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                85
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                90
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                95
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                100
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Eliza_SUP_Bloodline_Feat2_Title"
-                }
-            ],
-            "title": "Char_Eliza_SUP_Bloodline_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_ELI_EN",
-            "ja": "Credits_VA_ELI_JA"
-        }
-    },
-    "fi": {
-        "ca": {
-            "description": "Char_Filia_CA_Desc",
-            "title": "Char_Filia_CA_Title"
-        },
-        "name": "Char_Filia_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_Filia_SUP_Bloodletting_Feat1_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                5
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                6
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                7
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                8
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                9
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                11
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                12
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                13
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                14
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                15
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Filia_SUP_Bloodletting_Feat1_Title"
-                },
-                {
-                    "description": "Char_Filia_SUP_Bloodletting_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                0.0500000007
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                0.0599999987
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                0.0700000003
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                0.0799999982
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                0.0900000036
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                0.100000001
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                0.109999999
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                0.119999997
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                0.129999995
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                0.140000001
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                0.150000006
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Filia_SUP_Bloodletting_Feat2_Title"
-                }
-            ],
-            "title": "Char_Filia_SUP_Bloodletting_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_FIL_EN",
-            "ja": "Credits_VA_FIL_JA"
-        }
-    },
-    "ce": {
-        "ca": {
-            "description": "Char_Cerebella_CA_Desc",
-            "title": "Char_Cerebella_CA_Title"
-        },
-        "name": "Char_Cerebella_Name",
-        "ma": {
-            "features": [
-                {
-                    "description": "Char_Cerebella_SUP_CenterStage_Feat1_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                -20
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                -21
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                -22
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                -23
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                -24
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                -25
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                -26
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                -27
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                -28
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                -29
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                -30
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Cerebella_SUP_CenterStage_Feat1_Title"
-                },
-                {
-                    "description": "Char_Cerebella_SUP_CenterStage_Feat2_Desc",
-                    "tiers": [
-                        {
-                            "value": [
-                                5
-                            ],
-                            "unlock": 1
-                        },
-                        {
-                            "value": [
-                                6
-                            ],
-                            "unlock": 2
-                        },
-                        {
-                            "value": [
-                                7
-                            ],
-                            "unlock": 3
-                        },
-                        {
-                            "value": [
-                                8
-                            ],
-                            "unlock": 4
-                        },
-                        {
-                            "value": [
-                                9
-                            ],
-                            "unlock": 5
-                        },
-                        {
-                            "value": [
-                                10
-                            ],
-                            "unlock": 6
-                        },
-                        {
-                            "value": [
-                                11
-                            ],
-                            "unlock": 7
-                        },
-                        {
-                            "value": [
-                                12
-                            ],
-                            "unlock": 8
-                        },
-                        {
-                            "value": [
-                                13
-                            ],
-                            "unlock": 9
-                        },
-                        {
-                            "value": [
-                                14
-                            ],
-                            "unlock": 10
-                        },
-                        {
-                            "value": [
-                                15
-                            ],
-                            "unlock": 11
-                        }
-                    ],
-                    "title": "Char_Cerebella_SUP_CenterStage_Feat2_Title"
-                }
-            ],
-            "title": "Char_Cerebella_SUP_CenterStage_Title"
-        },
-        "voice": {
-            "en": "Credits_VA_CER_EN",
-            "ja": "Credits_VA_CER_JA"
+            "title": "Char_Valentine_SUP_CombatClinic_Title"
         }
     },
     "sq": {
+        "name": "Char_Squigly_Name",
+        "voice": {
+            "en": "Credits_VA_SQI_EN",
+            "ja": "Credits_VA_SQI_JA"
+        },
         "ca": {
-            "chargeTimeInFrames": 35,
-            "debug": 0,
             "abilityIcon": {
-                "m_PathID": 26668,
-                "m_FileID": 0
+                "m_FileID": 0,
+                "m_PathID": 26668
             },
             "squiglyImage": {
-                "m_PathID": 17632,
-                "m_FileID": 0
+                "m_FileID": 0,
+                "m_PathID": 17632
             },
-            "description": "Char_Squigly_CA_Desc",
-            "title": "Char_Squigly_CA_Title"
+            "chargeTimeInFrames": 35,
+            "title": "Char_Squigly_CA_Title",
+            "debug": 0,
+            "description": "Char_Squigly_CA_Desc"
         },
-        "name": "Char_Squigly_Name",
         "ma": {
             "features": [
                 {
-                    "description": "Char_Squigly_SUP_FrightNight_Feat1_Desc",
                     "tiers": [
                         {
+                            "unlock": 1,
                             "value": [
                                 5
-                            ],
-                            "unlock": 1
+                            ]
                         },
                         {
+                            "unlock": 2,
                             "value": [
                                 6
-                            ],
-                            "unlock": 2
+                            ]
                         },
                         {
+                            "unlock": 3,
                             "value": [
                                 7
-                            ],
-                            "unlock": 3
+                            ]
                         },
                         {
+                            "unlock": 4,
                             "value": [
                                 8
-                            ],
-                            "unlock": 4
+                            ]
                         },
                         {
+                            "unlock": 5,
                             "value": [
                                 9
-                            ],
-                            "unlock": 5
+                            ]
                         },
                         {
+                            "unlock": 6,
                             "value": [
                                 10
-                            ],
-                            "unlock": 6
+                            ]
                         },
                         {
+                            "unlock": 7,
                             "value": [
                                 11
-                            ],
-                            "unlock": 7
+                            ]
                         },
                         {
+                            "unlock": 8,
                             "value": [
                                 12
-                            ],
-                            "unlock": 8
+                            ]
                         },
                         {
+                            "unlock": 9,
                             "value": [
                                 13
-                            ],
-                            "unlock": 9
+                            ]
                         },
                         {
+                            "unlock": 10,
                             "value": [
                                 14
-                            ],
-                            "unlock": 10
+                            ]
                         },
                         {
+                            "unlock": 11,
                             "value": [
                                 15
-                            ],
-                            "unlock": 11
+                            ]
                         }
                     ],
+                    "description": "Char_Squigly_SUP_FrightNight_Feat1_Desc",
                     "title": "Char_Squigly_SUP_FrightNight_Feat1_Title"
                 },
                 {
-                    "description": "Char_Squigly_SUP_FrightNight_Feat2_Desc",
                     "tiers": [
                         {
+                            "unlock": 1,
                             "value": [
                                 5
-                            ],
-                            "unlock": 1
+                            ]
                         },
                         {
+                            "unlock": 2,
                             "value": [
                                 6
-                            ],
-                            "unlock": 2
+                            ]
                         },
                         {
+                            "unlock": 3,
                             "value": [
                                 7
-                            ],
-                            "unlock": 3
+                            ]
                         },
                         {
+                            "unlock": 4,
                             "value": [
                                 8
-                            ],
-                            "unlock": 4
+                            ]
                         },
                         {
+                            "unlock": 5,
                             "value": [
                                 9
-                            ],
-                            "unlock": 5
+                            ]
                         },
                         {
+                            "unlock": 6,
                             "value": [
                                 10
-                            ],
-                            "unlock": 6
+                            ]
                         },
                         {
+                            "unlock": 7,
                             "value": [
                                 11
-                            ],
-                            "unlock": 7
+                            ]
                         },
                         {
+                            "unlock": 8,
                             "value": [
                                 12
-                            ],
-                            "unlock": 8
+                            ]
                         },
                         {
+                            "unlock": 9,
                             "value": [
                                 13
-                            ],
-                            "unlock": 9
+                            ]
                         },
                         {
+                            "unlock": 10,
                             "value": [
                                 14
-                            ],
-                            "unlock": 10
+                            ]
                         },
                         {
+                            "unlock": 11,
                             "value": [
                                 15
-                            ],
-                            "unlock": 11
+                            ]
                         }
                     ],
+                    "description": "Char_Squigly_SUP_FrightNight_Feat2_Desc",
                     "title": "Char_Squigly_SUP_FrightNight_Feat2_Title"
                 }
             ],
             "title": "Char_Squigly_SUP_FrightNight_Title"
-        },
+        }
+    },
+    "el": {
+        "name": "Char_Eliza_Name",
         "voice": {
-            "en": "Credits_VA_SQI_EN",
-            "ja": "Credits_VA_SQI_JA"
+            "en": "Credits_VA_ELI_EN",
+            "ja": "Credits_VA_ELI_JA"
+        },
+        "ca": {
+            "sekhmetIcon": {
+                "m_FileID": 0,
+                "m_PathID": 26667
+            },
+            "description": "Char_Eliza_CA_Desc",
+            "elizaImage": {
+                "m_FileID": 0,
+                "m_PathID": 17167
+            },
+            "timeInSekhmet": 5,
+            "title": "Char_Eliza_CA_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                30
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                32
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                34
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                36
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                38
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                40
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                42
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                44
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                46
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                48
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                50
+                            ]
+                        }
+                    ],
+                    "description": "Char_Eliza_SUP_Bloodline_Feat1_Desc",
+                    "title": "Char_Eliza_SUP_Bloodline_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                50
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                55
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                60
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                65
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                70
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                75
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                80
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                85
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                90
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                95
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                100
+                            ]
+                        }
+                    ],
+                    "description": "Char_Eliza_SUP_Bloodline_Feat2_Desc",
+                    "title": "Char_Eliza_SUP_Bloodline_Feat2_Title"
+                }
+            ],
+            "title": "Char_Eliza_SUP_Bloodline_Title"
+        }
+    },
+    "bb": {
+        "name": "Char_BigBand_Name",
+        "voice": {
+            "en": "Credits_VA_BIG_EN",
+            "ja": "Credits_VA_BIG_JA"
+        },
+        "ca": {
+            "description": "Char_BigBand_CA_Desc",
+            "title": "Char_BigBand_CA_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                6
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                7
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                8
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                9
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                11
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                12
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                13
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                14
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                15
+                            ]
+                        }
+                    ],
+                    "description": "Char_BigBand_SUP_Maestro_Feat1_Desc",
+                    "title": "Char_BigBand_SUP_Maestro_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                6
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                7
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                8
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                9
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                11
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                12
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                13
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                14
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                15
+                            ]
+                        }
+                    ],
+                    "description": "Char_BigBand_SUP_Maestro_Feat2_Desc",
+                    "title": "Char_BigBand_SUP_Maestro_Feat2_Title"
+                }
+            ],
+            "title": "Char_BigBand_SUP_Maestro_Title"
+        }
+    },
+    "pw": {
+        "name": "Char_Painwheel_Name",
+        "voice": {
+            "en": "Credits_VA_PAI_EN",
+            "ja": "Credits_VA_PAI_JA"
+        },
+        "ca": {
+            "description": "Char_Painwheel_CA_Desc",
+            "title": "Char_Painwheel_CA_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                50
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                55
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                60
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                65
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                70
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                75
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                80
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                85
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                90
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                95
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                100
+                            ]
+                        }
+                    ],
+                    "description": "Char_PainWheel_SUP_TorturedSoul_Feat1_Desc",
+                    "title": "Char_PainWheel_SUP_TorturedSoul_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                10,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                11,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                12,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                13,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                14,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                15,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                16,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                17,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                18,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                19,
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                20,
+                                5
+                            ]
+                        }
+                    ],
+                    "description": "Char_PainWheel_SUP_TorturedSoul_Feat2_Desc",
+                    "title": "Char_PainWheel_SUP_TorturedSoul_Feat2_Title"
+                }
+            ],
+            "title": "Char_PainWheel_SUP_TorturedSoul_Title"
+        }
+    },
+    "mf": {
+        "name": "Char_MsFortune_Name",
+        "voice": {
+            "en": "Kimlinh Tran",
+            "ja": "Kana Hanazawa"
+        },
+        "ca": {
+            "recallImage": {
+                "m_FileID": 0,
+                "m_PathID": 17325
+            },
+            "msFortuneImage": {
+                "m_FileID": 0,
+                "m_PathID": 17323
+            },
+            "headbuttImage": {
+                "m_FileID": 0,
+                "m_PathID": 17324
+            },
+            "zoomImage": {
+                "m_FileID": 0,
+                "m_PathID": 17327
+            },
+            "title": "Char_MsFortune_CA_Title",
+            "felineAllergiesImage": {
+                "m_FileID": 0,
+                "m_PathID": 17326
+            },
+            "description": "Char_MsFortune_CA_Desc"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                10,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                11,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                12,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                13,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                14,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                15,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                16,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                17,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                18,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                19,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                20,
+                                10
+                            ]
+                        }
+                    ],
+                    "description": "Char_MsFortune_SUP_ICanHasBuff_Feat1_Desc",
+                    "title": "Char_MsFortune_SUP_ICanHasBuff_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                10,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                11,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                12,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                13,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                14,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                15,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                16,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                17,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                18,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                19,
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                20,
+                                10
+                            ]
+                        }
+                    ],
+                    "description": "Char_MsFortune_SUP_ICanHasBuff_Feat2_Desc",
+                    "title": "Char_MsFortune_SUP_ICanHasBuff_Feat2_Title"
+                }
+            ],
+            "title": "Char_MsFortune_SUP_ICanHasBuff_Title"
+        }
+    },
+    "ce": {
+        "name": "Char_Cerebella_Name",
+        "voice": {
+            "en": "Credits_VA_CER_EN",
+            "ja": "Credits_VA_CER_JA"
+        },
+        "ca": {
+            "description": "Char_Cerebella_CA_Desc",
+            "title": "Char_Cerebella_CA_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                -20
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                -21
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                -22
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                -23
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                -24
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                -25
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                -26
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                -27
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                -28
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                -29
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                -30
+                            ]
+                        }
+                    ],
+                    "description": "Char_Cerebella_SUP_CenterStage_Feat1_Desc",
+                    "title": "Char_Cerebella_SUP_CenterStage_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                6
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                7
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                8
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                9
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                11
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                12
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                13
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                14
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                15
+                            ]
+                        }
+                    ],
+                    "description": "Char_Cerebella_SUP_CenterStage_Feat2_Desc",
+                    "title": "Char_Cerebella_SUP_CenterStage_Feat2_Title"
+                }
+            ],
+            "title": "Char_Cerebella_SUP_CenterStage_Title"
+        }
+    },
+    "pe": {
+        "name": "Char_Peacock_Name",
+        "voice": {
+            "en": "Credits_VA_PEA_EN",
+            "ja": "Credits_VA_PEA_JA"
+        },
+        "ca": {
+            "description": "Char_Peacock_CA_Desc",
+            "title": "Char_Peacock_CA_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                0.100000001
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                0.119999997
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                0.140000001
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                0.159999996
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                0.180000007
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                0.200000003
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                0.219999999
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                0.239999995
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                0.25999999
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                0.280000001
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                0.300000012
+                            ]
+                        }
+                    ],
+                    "description": "Char_Peacock_SUP_ToonTime_Feat1_Desc",
+                    "title": "Char_Peacock_SUP_ToonTime_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                0.300000012
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                0.319999993
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                0.340000004
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                0.360000014
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                0.379999995
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                0.400000006
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                0.419999987
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                0.439999998
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                0.460000008
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                0.479999989
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                0.5
+                            ]
+                        }
+                    ],
+                    "description": "Char_Peacock_SUP_ToonTime_Feat2_Desc",
+                    "title": "Char_Peacock_SUP_ToonTime_Feat2_Title"
+                }
+            ],
+            "title": "Char_Peacock_SUP_ToonTime_Title"
+        }
+    },
+    "pa": {
+        "name": "Char_Parasoul_Name",
+        "voice": {
+            "en": "Credits_VA_PAR_EN",
+            "ja": "Credits_VA_PAR_JA"
+        },
+        "ca": {
+            "description": "Char_Parasoul_CA_Desc",
+            "title": "Char_Parasoul_CA_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                6
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                7
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                8
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                9
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                11
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                12
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                13
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                14
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                15
+                            ]
+                        }
+                    ],
+                    "description": "Char_Parasoul_SUP_HyperCritical_Feat1_Desc",
+                    "title": "Char_Parasoul_SUP_HyperCritical_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                20
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                22
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                24
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                26
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                28
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                30
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                32
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                34
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                36
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                38
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                40
+                            ]
+                        }
+                    ],
+                    "description": "Char_Parasoul_SUP_HyperCritical_Feat2_Desc",
+                    "title": "Char_Parasoul_SUP_HyperCritical_Feat2_Title"
+                }
+            ],
+            "title": "Char_Parasoul_SUP_HyperCritical_Title"
+        }
+    },
+    "fi": {
+        "name": "Char_Filia_Name",
+        "voice": {
+            "en": "Credits_VA_FIL_EN",
+            "ja": "Credits_VA_FIL_JA"
+        },
+        "ca": {
+            "description": "Char_Filia_CA_Desc",
+            "title": "Char_Filia_CA_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                5
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                6
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                7
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                8
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                9
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                10
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                11
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                12
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                13
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                14
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                15
+                            ]
+                        }
+                    ],
+                    "description": "Char_Filia_SUP_Bloodletting_Feat1_Desc",
+                    "title": "Char_Filia_SUP_Bloodletting_Feat1_Title"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
+                                0.0500000007
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                0.0599999987
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                0.0700000003
+                            ]
+                        },
+                        {
+                            "unlock": 4,
+                            "value": [
+                                0.0799999982
+                            ]
+                        },
+                        {
+                            "unlock": 5,
+                            "value": [
+                                0.0900000036
+                            ]
+                        },
+                        {
+                            "unlock": 6,
+                            "value": [
+                                0.100000001
+                            ]
+                        },
+                        {
+                            "unlock": 7,
+                            "value": [
+                                0.109999999
+                            ]
+                        },
+                        {
+                            "unlock": 8,
+                            "value": [
+                                0.119999997
+                            ]
+                        },
+                        {
+                            "unlock": 9,
+                            "value": [
+                                0.129999995
+                            ]
+                        },
+                        {
+                            "unlock": 10,
+                            "value": [
+                                0.140000001
+                            ]
+                        },
+                        {
+                            "unlock": 11,
+                            "value": [
+                                0.150000006
+                            ]
+                        }
+                    ],
+                    "description": "Char_Filia_SUP_Bloodletting_Feat2_Desc",
+                    "title": "Char_Filia_SUP_Bloodletting_Feat2_Title"
+                }
+            ],
+            "title": "Char_Filia_SUP_Bloodletting_Title"
         }
     }
 }
