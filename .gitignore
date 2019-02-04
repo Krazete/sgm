@@ -4,6 +4,8 @@ data_processing/sgm_exports
 data_processing/common.json
 data_processing/study.json
 
+image_processing/Art Capture
+
 image_processing/*/bb/gJazz.png
 image_processing/*/bb/hMetal.png
 image_processing/*/bb/mSonic.png
