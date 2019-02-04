@@ -20,7 +20,6 @@ All translations are an exact copy of the text used in the corresponding version
 ### Rating System
 
 At the developers' request, I have implemented a rudimentary rating system to show the community's opinion on each fighter variant.
-This is initially disabled to limit the amount of requests made to the database and for aesthetic purposes.
 To enable the rating system, just click on the star at bottom right of the website.
 This will also reveal two more sorting options based on the two ratings on each card.
 
