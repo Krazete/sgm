@@ -44,10 +44,3 @@ for i = 1:length(fighters)
         imwrite(maxdelta, ['raw_mask/', fighters(i).name, '.png'], 'Alpha', alpha);
     end
 end
-
-function resetdir(dirname)
-    if exist(dirname, 'dir')
-        rmdir(dirname, 's');
-    end
-    mkdir(dirname);
-end

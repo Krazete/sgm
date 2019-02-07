@@ -171,19 +171,6 @@ The main issues with the Move Gallery are:
 
 For these reasons, it is not prominently featured on this repository nor linked to by the Fighter Gallery.
 
-### Portraits
-
-Unlike most of the data and assets used on the website, fighter variant portrait images are not in the APK.
-The portraits are instead taken from in-game screenshots, cropped and masked with the help of MATLAB.
-
-Due to this dependence on screenshots, new fighters and variants introduced in future versions of Skullgirls Mobile will not initially have their portrait displayed on the website.
-Instead, it will display a [placeholder image](image/official/RandomBackground.png) which redirects to this page.
-
-If you have a fighter whose portrait is missing, please [send me a screenshot](#contact).
-The screenshot must be taken from the `Select an Avatar Fighter` menu (see the example below).
-
-<img src="image_processing/raw/fi/bHDay.png">
-
 ### Compatibility
 
 I spent the entire design process with Google Chrome in mind.

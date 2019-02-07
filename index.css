@@ -1443,6 +1443,7 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
     font-size: smaller;
     box-shadow: 0 0 1px black;
     padding: 6px;
+    z-index: 1;
 }
 .ability.collapsed .description {
     display: none;
