@@ -4,6 +4,8 @@
 % The shadow_mask folder should then be copied as color_mask.
 % All color_mask images should have the outermost black edges trimmed down.
 
+clear;
+
 resetdir('raw_mask');
 
 fighters = dir('Art Capture');
