@@ -286,17 +286,12 @@ function initCollection(responses) {
     var weekday = date.getDay();
     var day = date.getDate();
 
-    function openReadMe() {
-        open("https://github.com/Krazete/sgm/blob/master/README.md#portraits");
-    }
-
     function handleMissingPortrait() {
         var portrait = this;
         var backdrop = portrait.parentElement;
         var avatar = backdrop.parentElement.parentElement;
 
         portrait.classList.add("hidden");
-        backdrop.addEventListener("click", openReadMe);
         avatar.classList.add("missing-portrait");
     }
 
