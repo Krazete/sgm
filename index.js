@@ -312,15 +312,11 @@ function initCollection(responses) {
                     }
                     var portrait = document.createElement("img");
                         portrait.className = "portrait";
-                        var stem = [
+                        portrait.src = [
                             "image/portrait",
                             variants[key].base,
-                            key
+                            key + '.png'
                         ].join("/");
-                        if (key == "rBlight") {
-                            stem += "_" + randomInt(0, 7);
-                        }
-                        portrait.src = stem + ".png";
                         portrait.addEventListener("error", handleMissingPortrait);
                     backdrop.appendChild(portrait);
                 frame.appendChild(backdrop);

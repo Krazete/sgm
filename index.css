@@ -903,10 +903,9 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 }
 
 .portrait {
-    width: 135%;
-    /* filter: drop-shadow(0 0 1px black); */
-    /* excessive drop-shadow causes major visual glitches in ios */
-    margin: -64% 0 0 -18%;
+    width: 151%;
+    margin: -110% 0 0 -26%;
+    pointer-events: none;
 }
 #rBlight .portrait {
     animation: 7s infinite linear rainbow;
