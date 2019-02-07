@@ -155,6 +155,22 @@ Probably.
 
 If you recognize where the art is from, please [let me know](#contact) so I can update this section and properly credit the artist.
 
+## Versions
+
+Each branch of this repository contains a different version of this gallery.
+
+* v0 (First Draft): The gallery is initialized with information taken from [the forums](https://forum.skullgirlsmobile.com/) and portraits incompletely processed from screenshots.
+
+* v1 (Second Draft): Information is now mined from version 2.6.1 of the game. There are new language options, filters, and settings. The design has been improved and more portraits have been added.
+
+* v2 (Final Draft): The gallery now resembles what it looks like today. The design has been dramatically improved and all portraits have been added ~~thanks to screenshots from the Rift beta~~. All settings, filters, sorting options, and whatnot have been refined. The gallery is in its first "completed" state.
+
+* v3 (Move Gallery): A move gallery has been added. Images are missing and some moves are missing entirely. The basic filter, sort, and setting options are included.
+
+* v4 (Rating System): A rating system has been added, along with a rating toggle button to hide ratings and return to the original, more compact design.
+
+* v5 (Asset Upgrade)
+
 ## Issues
 
 ### Move Gallery
