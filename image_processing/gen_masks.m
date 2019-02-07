@@ -40,6 +40,8 @@ for i = 1:length(fighters)
             else
                 maxdelta = delta;
             end
+            imshow(maxdelta);
+            pause(0);
         end
         imwrite(maxdelta, ['raw_mask/', fighters(i).name, '.png'], 'Alpha', alpha);
     end

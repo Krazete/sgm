@@ -31,6 +31,9 @@ for i = 1:length(fighters)
                 imColor = imresize(im .* (colorMask / 256), 0.3);
                 imShadow = imresize(shadowMask, 0.3);
                 imwrite(imColor, ['../image/portrait/', fID, '/', vID, '.png'], 'Alpha', imShadow);
+                
+                imshow(imColor + (256 - imShadow));
+                pause(0);
             end
         end
     end
