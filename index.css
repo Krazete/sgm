@@ -241,23 +241,23 @@ input:checked + label {
 
 #skullgirls-mobile:before {content: 'Skullgirls Mobile';}
 
-html[lang='en'] #fighter-gallery:before {content: 'Fighter Gallery';}
-html[lang='fr'] #fighter-gallery:before {content: 'Galerie de Personnages';}
-html[lang='es'] #fighter-gallery:before {content: 'Galer\00ed a de Personajes';}
-html[lang='ru'] #fighter-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0435 \0440 \0441 \043e \043d \0430 \0436 \0435 \0439 ';}
-html[lang='ja'] #fighter-gallery:before {content: '\30ad \30e3 \30e9 \30af \30bf \30fc \30ae \30e3 \30e9 \30ea \30fc ';}
-html[lang='de'] #fighter-gallery:before {content: 'K\00e4 mpfergalerie';}
-html[lang='ko'] #fighter-gallery:before {content: '\ce90 \b9ad \d130  \ac24 \b7ec \b9ac ';}
-html[lang='pt-br'] #fighter-gallery:before {content: 'Galeria de Personagens';}
+html[lang='en'] .fighter-gallery:before {content: 'Fighter Gallery';}
+html[lang='fr'] .fighter-gallery:before {content: 'Galerie de Personnages';}
+html[lang='es'] .fighter-gallery:before {content: 'Galer\00ed a de Personajes';}
+html[lang='ru'] .fighter-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0435 \0440 \0441 \043e \043d \0430 \0436 \0435 \0439 ';}
+html[lang='ja'] .fighter-gallery:before {content: '\30ad \30e3 \30e9 \30af \30bf \30fc \30ae \30e3 \30e9 \30ea \30fc ';}
+html[lang='de'] .fighter-gallery:before {content: 'K\00e4 mpfergalerie';}
+html[lang='ko'] .fighter-gallery:before {content: '\ce90 \b9ad \d130  \ac24 \b7ec \b9ac ';}
+html[lang='pt-br'] .fighter-gallery:before {content: 'Galeria de Personagens';}
 
-html[lang='en'] #move-gallery:before {content: 'Move Gallery';}
-html[lang='fr'] #move-gallery:before {content: 'Galerie des Coups';}
-html[lang='es'] #move-gallery:before {content: 'Galer\00ed a de Movimientos';}
-html[lang='ru'] #move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
-html[lang='ja'] #move-gallery:before {content: '\5fc5 \6bba \6280 \30ae \30e3 \30e9 \30ea \30fc ';}
-html[lang='de'] #move-gallery:before {content: 'Angriffsgalerie';}
-html[lang='ko'] #move-gallery:before {content: '\ae30 \c220  \ac24 \b7ec \b9ac ';}
-html[lang='pt-br'] #move-gallery:before {content: 'Galeria de Golpes';}
+html[lang='en'] .move-gallery:before {content: 'Move Gallery';}
+html[lang='fr'] .move-gallery:before {content: 'Galerie des Coups';}
+html[lang='es'] .move-gallery:before {content: 'Galer\00ed a de Movimientos';}
+html[lang='ru'] .move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
+html[lang='ja'] .move-gallery:before {content: '\5fc5 \6bba \6280 \30ae \30e3 \30e9 \30ea \30fc ';}
+html[lang='de'] .move-gallery:before {content: 'Angriffsgalerie';}
+html[lang='ko'] .move-gallery:before {content: '\ae30 \c220  \ac24 \b7ec \b9ac ';}
+html[lang='pt-br'] .move-gallery:before {content: 'Galeria de Golpes';}
 
 .cinematic.banner {
     font-size: xx-large;
