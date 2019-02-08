@@ -60,45 +60,13 @@ function initCollection(responses) {
             badge.className = "badge";
             var symbol = document.createElement("img");
                 symbol.className = "symbol";
-                symbol.src = "image/official/random_question.png";
+                symbol.src = [
+                    "image/move",
+                    moves[key].base,
+                    ['b', 's', 'g'][moves[key].tier],
+                    moves[key].title + ".png"
+                ].join("/");
             badge.appendChild(symbol);
-            if (moves[key].type == 0) {
-                var shellSrc = [
-                    "image/official/SpecialFrame",
-                    ["Bronze", "Silver", "Gold"][moves[key].tier],
-                    ".png"
-                ].join("");
-                var shell = document.createElement("div");
-                    shell.className = "shell";
-                    var shell0 = document.createElement("img");
-                        shell0.src = shellSrc;
-                    shell.appendChild(shell0);
-                    var shell1 = document.createElement("img");
-                        shell1.src = shellSrc;
-                    shell.appendChild(shell1);
-                badge.appendChild(shell);
-            }
-            else {
-                var shell = document.createElement("img");
-                    shell.className = "shell";
-                    shell.src = [
-                        "image/official/BB-Frame",
-                        Math.max(1, moves[key].strength),
-                        ".png"
-                    ].join("");
-                    if (moves[key].tier == 0) {
-                        shell.style.filter = "sepia(1) saturate(2.5) brightness(0.4) hue-rotate(315deg)";
-                    }
-                    else if (moves[key].tier == 2) {
-                        shell.style.filter = "sepia(1) saturate(2)";
-                    }
-                badge.appendChild(shell);
-                if (moves[key].strength == 3) {
-                    var unblockable = document.createElement("div");
-                        unblockable.className = "unblockable cinematic dependent-gradient";
-                    badge.appendChild(unblockable);
-                }
-            }
         return badge;
     }
 

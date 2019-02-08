@@ -951,11 +951,10 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 
 .symbol {
     position: relative;
-    height: 112px;
+    width: 150%;
     display: block;
-    margin: auto;
-    margin-bottom: -112px;
-    z-index: 1;
+    margin: -25%;
+    pointer-events: none;
 }
 
 .shell {
@@ -1485,12 +1484,22 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
+    line-height: 40px;
     margin: 6px;
+}
+.zoomed-out .gear{
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+.zoomed-in .gear{
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
 }
 
 .gear:after {
     content: attr(data-value);
-    line-height: 40px;
 }
 
 /* LOCK */
