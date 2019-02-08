@@ -257,7 +257,7 @@ def build_data(monolith, mono_char_keys):
                 'gear': bb['gearDamageTier'],
                 'cost': bb['gearPointsCost'],
                 'damage': bb['damageIndicatorLevels'],
-                'strength': bb['strengthLevel'],
+                # 'strength': bb['strengthLevel'],
                 'ability': build_features(bb['signatureAbility'])
             }
             if bb_key in bb_set: # some moves are mislabeled

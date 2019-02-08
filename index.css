@@ -1264,6 +1264,11 @@ html[lang='de'] .unblockable:before {content: 'UNAUFHALTSAM';}
 html[lang='ko'] .unblockable:before {content: '\bc29 \c5b4  \bd88 \ac00 ';}
 html[lang='pt-br'] .unblockable:before {content: 'INDEFENSAVEL';}
 
+.plus {
+    width: 12px;
+    margin: 0 2px;
+}
+
 html[lang='en'] .damage:before {content: 'DAMAGE';}
 html[lang='fr'] .damage:before {content: 'D\00c9 G\00c2 TS';}
 html[lang='es'] .damage:before {content: 'DA\00d1 O';}
@@ -1326,6 +1331,15 @@ html[lang='ja'] .very-high:before {content: '\3068 \3066 \3082 \9ad8 \3044 ';}
 html[lang='de'] .very-high:before {content: 'EXTREM';}
 html[lang='ko'] .very-high:before {content: '\b9e4 \c6b0  \ac15 \d568 ';}
 html[lang='pt-br'] .very-high:before {content: 'MUITO FORTE';}
+
+html[lang='en'] .ultra:before {content: 'ULTRA';}
+html[lang='fr'] .ultra:before {content: 'ULTRA';}
+html[lang='es'] .ultra:before {content: 'ULTRA';}
+html[lang='ru'] .ultra:before {content: '\0423 \041b \042c \0422 \0420 \0410 ';}
+html[lang='ja'] .ultra:before {content: '\6700 \9ad8 ';}
+html[lang='de'] .ultra:before {content: 'ULTRA';}
+html[lang='ko'] .ultra:before {content: '\cd08 \ac15 \b825 ';}
+html[lang='pt-br'] .ultra:before {content: 'ULTRA';}
 
 html[lang='en'] .cooldown:before {content: 'COOLDOWN';}
 html[lang='fr'] .cooldown:before {content: 'REFROIDISSEMENT';}
@@ -1487,6 +1501,7 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 
 .gear:after {
     content: attr(data-value);
+    text-shadow: 0 0 3px black;
 }
 
 /* LOCK */

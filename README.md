@@ -155,6 +155,17 @@ Probably.
 
 If you recognize where the art is from, please [let me know](#contact) so I can update this section and properly credit the artist.
 
+## Move Gallery
+
+The [Move Gallery](https://sgm.netlify.com/moves) features all moves available in the game.
+It can be filtered, sorted, and searched through much like the fighter gallery and includes one level setting.
+
+This gallery still lacks the following features:
+
+* damage intensity information (none, very low, low, med, high, very high, ultra)
+* upgrade and sell costs
+* information about whether a move is a throw, grab, or projectile
+
 ## Versions
 
 Each branch of this repository contains a different version of this gallery.
@@ -169,20 +180,9 @@ Each branch of this repository contains a different version of this gallery.
 
 * v4 (Rating System): A rating system has been added, along with a rating toggle button to hide ratings and return to the original, more compact design.
 
-* v5 (Asset Upgrade)
+* v5 (Asset Upgrade): Portraits are now supplied by HVS and the masks have been refined. The move gallery is also populated with images and previously missing move entries have been added.
 
 ## Issues
-
-### Move Gallery
-
-The [Move Gallery](https://sgm.netlify.com/moves) is currently incomplete, and it will remain that way for a while.
-The main issues with the Move Gallery are:
-
-* damage indicator lacks information
-* no upgrade or sell costs
-* no information about whether a move is a throw, grab, or projectile
-
-For these reasons, it is not prominently featured on this repository nor linked to by the Fighter Gallery.
 
 ### Compatibility
 

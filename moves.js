@@ -629,7 +629,23 @@ function initOptionsMenu() {
             var key = card.id;
             var damage = card.getElementsByClassName("damage-value")[0];
             var cooldown = card.getElementsByClassName("cooldown-value")[0];
-            damage.innerHTML = moves[key].damage[levelTiers[moves[key].tier].value - 1];
+            // var bar = moves[key].superbar;
+            // damage.className = "damage-value " + (
+            //     typeof bar == "undefined" || bar <= 0 ? "none" :
+            //     bar <= 100 ? "very-low" :
+            //     bar <= 200 ? "low" :
+            //     bar <= 300 ? "medium" :
+            //     bar <= 400 ? "high" :
+            //     bar <= 500 ? "very-high" :
+            //     "ultra"
+            // );
+            damage.innerHTML = "";
+            for (var i = 0; i < moves[key].damage[levelTiers[moves[key].tier].value - 1]; i++) {
+                var plus = document.createElement("img");
+                plus.className = "plus";
+                plus.src = "image/official/plus.png";
+                damage.appendChild(plus);
+            }
             if (moves[key].type == 0) {
                 cooldown.innerHTML = moves[key].cooldown[levelTiers[moves[key].tier].value - 1] + " ";
             }
