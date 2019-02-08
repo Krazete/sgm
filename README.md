@@ -182,8 +182,6 @@ The main issues with the Move Gallery are:
 * damage indicator lacks information
 * no upgrade or sell costs
 * no information about whether a move is a throw, grab, or projectile
-* some moves are missing
-* some move descriptions are missing key ability information (e.g. Rage of the Dragon)
 
 For these reasons, it is not prominently featured on this repository nor linked to by the Fighter Gallery.
 

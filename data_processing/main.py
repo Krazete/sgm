@@ -236,6 +236,8 @@ def build_data(monolith, mono_char_keys):
                 'cooldown': sm['cooldownTimes'],
                 'ability': build_features(sm['signatureAbility'])
             }
+            if sm_key in sm_set: # some moves are mislabeled
+                sm_key = sm['guid']
             sm_set.setdefault(sm_key, sm_value)
 
     def build_bb(f_key, base):
@@ -258,6 +260,8 @@ def build_data(monolith, mono_char_keys):
                 'strength': bb['strengthLevel'],
                 'ability': build_features(bb['signatureAbility'])
             }
+            if bb_key in bb_set: # some moves are mislabeled
+                bb_key = bb['guid']
             bb_set.setdefault(bb_key, bb_value)
 
     for key in mono_char_keys:
