@@ -126,7 +126,7 @@ pwIDs('Snapdragon') = 'Char_PainWheel_SM2_Title';
 pwIDs('Violet Grudge') = 'Char_PainWheel_SM4_Title';
 
 paIDs = containers.Map('KeyType', 'char', 'ValueType', 'char');
-paIDs('BÃ¢illement') = 'Char_Parasoul_SM2_Title';
+paIDs('Bâillement') = 'Char_Parasoul_SM2_Title';
 paIDs('Banishment') = 'SA_General_Burst_Title';
 paIDs('Burst') = 'Char_Parasoul_SM1_Title';
 paIDs('Canopy Bounce') = 'Parasoul_BB4_T2_Forbearance_Title';

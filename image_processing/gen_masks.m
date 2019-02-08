@@ -18,7 +18,7 @@ for i = 1:length(fighters)
         variants = dir([fighters(i).folder, '/', fighters(i).name]);
         for j = 1:length(variants)
             isPng = endsWith(variants(j).name, '.png');
-            isBasicPortrait = length(regexp(variants(j).name, '_(Card|Portrait)_')) < 1;
+            isBasicPortrait = contains(variants(j).name, '_PortraitMarquee_');
             if isPng && isBasicPortrait
                 imName = [variants(j).folder, '/', variants(j).name];
                 [im, ~, alpha] = imread(imName);
@@ -43,6 +43,7 @@ for i = 1:length(fighters)
             imshow(maxdelta);
             pause(0);
         end
-        imwrite(maxdelta, ['raw_mask/', fighters(i).name, '.png'], 'Alpha', alpha);
+        imPath = ['raw_mask/', fighters(i).name, '.png'];
+        imwrite(maxdelta, imPath, 'Alpha', alpha);
     end
 end

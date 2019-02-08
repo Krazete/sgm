@@ -9,9 +9,7 @@ resetdir('../image/portrait');
 
 fighters = dir('Art Capture');
 for i = 1:length(fighters)
-    isFolder = fighters(i).isdir;
-    isNested = ~startsWith(fighters(i).name, '.');
-    if isFolder && isNested
+    if isNestedFolder(fighters(i))
         fID = fIDs(fighters(i).name);
         resetdir(['../image/portrait/', fID]);
         
@@ -30,18 +28,13 @@ for i = 1:length(fighters)
                 
                 imColor = imresize(im .* (colorMask / 256), 0.3);
                 imShadow = imresize(shadowMask, 0.3);
-                imwrite(imColor, ['../image/portrait/', fID, '/', vID, '.png'], 'Alpha', imShadow);
+                
+                imPath = ['../image/portrait/', fID, '/', vID, '.png'];
+                imwrite(imColor, imPath, 'Alpha', imShadow);
                 
                 imshow(imColor + (256 - imShadow));
                 pause(0);
             end
         end
     end
-end
-
-function resetdir(dirname)
-    if exist(dirname, 'dir')
-        rmdir(dirname, 's');
-    end
-    mkdir(dirname);
 end

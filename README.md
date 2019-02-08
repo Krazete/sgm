@@ -178,7 +178,6 @@ Each branch of this repository contains a different version of this gallery.
 The [Move Gallery](https://sgm.netlify.com/moves) is currently incomplete, and it will remain that way for a while.
 The main issues with the Move Gallery are:
 
-* no images of each move
 * damage indicator lacks information
 * no upgrade or sell costs
 * no information about whether a move is a throw, grab, or projectile
