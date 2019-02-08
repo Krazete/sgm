@@ -951,23 +951,10 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 
 .symbol {
     position: relative;
-    width: 150%;
+    width: 130%;
     display: block;
-    margin: -25%;
+    margin: -15%;
     pointer-events: none;
-}
-
-.shell {
-    max-width: 112px;
-    max-height: 112px;
-    display: block;
-    margin: auto;
-}
-.sm .badge .shell img {
-    width: 50%;
-}
-.sm .badge .shell img:last-child {
-    transform: scaleX(-1);
 }
 
 .title {
