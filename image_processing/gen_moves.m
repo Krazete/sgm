@@ -40,8 +40,8 @@ function gen_specified_moves(variantdir, tierselection, fID, letter)
                     mID = mIDs(moves(j).name(1:end - 6));
 
                     [im, ~, alpha] = imread([moves(j).folder, '/', moves(j).name]);
-                    imScaled = imresize(im, 0.3);
-                    alphaScaled = imresize(alpha, 0.3);
+                    imScaled = imresize(im, 0.4);
+                    alphaScaled = imresize(alpha, 0.4);
                     
                     imPath = ['../image/move/', fID, '/', letter, '/', mID, '.png'];
                     imwrite(imScaled, imPath, 'Alpha', alphaScaled);
