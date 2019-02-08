@@ -4,7 +4,9 @@
 
 You'll first need Hidden Variable Studios to share the `Art Capture` folder with you on Google Drive.
 
-## Use MATLAB and an Image Editor
+## Generate Fighter Variant Portraits
+
+Use MATLAB and an Image Editor
 
 1. Run `gen_masks.m`.
 2. Rename the resulting `raw_mask` folder as `shadow_mask`.
@@ -14,7 +16,15 @@ You'll first need Hidden Variable Studios to share the `Art Capture` folder with
 6. Manually trim the black edges of each portrait. Try not to touch the outer circle edges.
 7. Run `gen_portraits.m`.
 
-## How the Scripts Work
+## Generate Move Icons
+
+1. Run `gen_portraits.m`.
+2. That's it.
+
+For both portraits and moves, [pngquant](https://pngquant.org/) should be used to reduce file size.
+I recommend using the simple [Pngyu](https://nukesaq88.github.io/Pngyu/) GUI version.
+
+## How the Portrait Scripts Work
 
 ### `gen_masks.m`
 
