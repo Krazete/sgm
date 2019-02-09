@@ -1,20 +1,24 @@
 @font-face {
     font-family: 'Washington';
+    font-display: swap;
     src: url(font/WashingtonBoldDynamic.otf);
 }
 
 @font-face {
     font-family: 'Cinema';
+    font-display: swap;
     src: url(font/TBCinemaRGothic-M.ttf);
 }
 
 @font-face {
     font-family: 'Dodam';
+    font-display: swap;
     src: url(font/Typo_DodamM.ttf);
 }
 
 @font-face {
     font-family: 'Roboto';
+    font-display: swap;
     src: url(font/RobotoCondensed-Regular.ttf);
 }
 
