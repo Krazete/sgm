@@ -6,6 +6,7 @@ common = [
     'SkillTree_Gear',
     'MainMenu_Collection', # UNUSED
     'Version_Login',
+    'Popup_Download_Confirm_Header',
     'Loading_Status_Loading',
     'Popup_Error_Header',
 
