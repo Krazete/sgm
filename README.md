@@ -174,13 +174,13 @@ Each branch of this repository contains a different version of this gallery.
 
 * v1 (Second Draft): Information is now mined from version 2.6.1 of the game. There are new language options, filters, and settings. The design has been improved and more portraits have been added.
 
-* v2 (Final Draft): The gallery now resembles what it looks like today. The design has been dramatically improved and all portraits have been added ~~thanks to screenshots from the Rift beta~~. All settings, filters, sorting options, and whatnot have been refined. The gallery is in its first "completed" state.
+* v2 (Final Draft): The gallery now resembles what it looks like today. The design has been dramatically improved and all portraits have been added ~~thanks to screenshots from the Rift beta~~. All settings, filters, sorting options, and whatnot have been refined. The gallery is in its first "completed" state, matching up with game version 3.0.0.
 
 * v3 (Move Gallery): A move gallery has been added. Images are missing and some moves are missing entirely. The basic filter, sort, and setting options are included.
 
 * v4 (Rating System): A rating system has been added, along with a rating toggle button to hide ratings and return to the original, more compact design.
 
-* v5 (Asset Upgrade): Portraits are now supplied by HVS and the masks have been refined. The move gallery is also populated with images and previously missing move entries have been added.
+* v5 (Asset Upgrade): Portraits are now supplied by HVS and the masks have been refined. The move gallery is also populated with images and previously missing move entries have been added. Game version has been updated to 3.1.0.
 
 ## Issues
 

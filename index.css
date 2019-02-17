@@ -287,6 +287,10 @@ html[lang='de'] #version:before {content: 'VERSION:';}
 html[lang='ko'] #version:before {content: '\bc84 \c804 :';}
 html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 
+.outdated:after {
+    color: red;
+}
+
 html[lang='en'] .outdated:after {content: ' (UPDATE REQUIRED)';}
 html[lang='fr'] .outdated:after {content: ' (MISE A JOUR N\00c9 CESSAIRE)';}
 html[lang='es'] .outdated:after {content: ' (ACTUALIZACI\00d3 N NECESARIA)';}
