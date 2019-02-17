@@ -1141,9 +1141,17 @@ function initSortMenu() {
         return C;
     }
 
+    function getStarValue(card, type) {
+        var starValue = getStatValue(card, type);
+        if (starValue <= 0) {
+            return 6;
+        }
+        return starValue;
+    }
+
     function offenseBasis(a, b) {
-        var A = getStatValue(a, "offense");
-        var B = getStatValue(b, "offense");
+        var A = getStarValue(a, "offense");
+        var B = getStarValue(b, "offense");
         var C = B - A;
         if (C == 0) {
             return attackBasis(a, b);
@@ -1152,8 +1160,8 @@ function initSortMenu() {
     }
 
     function defenseBasis(a, b) {
-        var A = getStatValue(a, "defense");
-        var B = getStatValue(b, "defense");
+        var A = getStarValue(a, "defense");
+        var B = getStarValue(b, "defense");
         var C = B - A;
         if (C == 0) {
             return healthBasis(a, b);
