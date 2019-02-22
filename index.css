@@ -234,6 +234,12 @@ input:checked + label {
     border-bottom: 4px solid #314c73;
 }
 
+.wrong {
+    color: #f88;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 /* HEADER */
 
 #header {
@@ -291,7 +297,7 @@ html[lang='ru'] #version:before {content: '\0412 \0415 \0420 \0421 \0418 \042f :
 html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 
 .outdated:after {
-    color: red;
+    color: #f88;
 }
 
 html[lang='en'] .outdated:after {content: ' (UPDATE REQUIRED)';}
