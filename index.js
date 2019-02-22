@@ -876,29 +876,36 @@ function initFilterMenu() {
             return true;
         }
         var key = card.id;
-        var query = sanitize(searchbox.value);
-        if (query.includes("fear the rainbow")) {
-            searchbox.value = "";
-            fearTheRainbow();
-            return true;
-        }
-        else if (searchVN.checked) {
-            return sanitize(key).includes(query) || sanitize(corpus[variants[key].name]).includes(query);
-        }
-        else if (searchCA.checked) {
-            return removePlaceholders(sanitize(corpus[fighters[variants[key].base].ca.description])).includes(query);
-        }
-        else if (searchSA.checked) {
-            for (var feature of variants[key].sa.features) {
-                if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+        var queries = searchbox.value.split(",");
+        for (var rawQuery of queries) {
+            var query = sanitize(rawQuery);
+            if (query.includes("fear the rainbow")) {
+                searchbox.value = "";
+                fearTheRainbow();
+                return true;
+            }
+            else if (searchVN.checked) {
+                if (sanitize(key).includes(query) || sanitize(corpus[variants[key].name]).includes(query)) {
                     return true;
                 }
             }
-        }
-        else if (searchMA.checked) {
-            for (var feature of fighters[variants[key].base].ma.features) {
-                if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+            else if (searchCA.checked) {
+                if (removePlaceholders(sanitize(corpus[fighters[variants[key].base].ca.description])).includes(query)) {
                     return true;
+                };
+            }
+            else if (searchSA.checked) {
+                for (var feature of variants[key].sa.features) {
+                    if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+                        return true;
+                    }
+                }
+            }
+            else if (searchMA.checked) {
+                for (var feature of fighters[variants[key].base].ma.features) {
+                    if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+                        return true;
+                    }
                 }
             }
         }
