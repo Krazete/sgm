@@ -398,22 +398,22 @@
                         {
                             "unlock": 1,
                             "value": [
-                                15,
-                                50
+                                3,
+                                100
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
-                                25,
-                                60
+                                4,
+                                100
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                35,
-                                75
+                                5,
+                                100
                             ]
                         }
                     ],
@@ -606,19 +606,19 @@
                         {
                             "unlock": 1,
                             "value": [
-                                25
+                                50
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
-                                35
+                                60
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                50
+                                75
                             ]
                         }
                     ],
@@ -821,14 +821,14 @@
                             "unlock": 2,
                             "value": [
                                 0.0500000007,
-                                10
+                                7
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
                                 0.0500000007,
-                                15
+                                10
                             ]
                         }
                     ],
@@ -845,13 +845,13 @@
                         {
                             "unlock": 2,
                             "value": [
-                                10
+                                7
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                15
+                                10
                             ]
                         }
                     ],
@@ -884,19 +884,22 @@
                         {
                             "unlock": 1,
                             "value": [
-                                20
+                                15,
+                                25
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
-                                30
+                                15,
+                                35
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                40
+                                15,
+                                50
                             ]
                         }
                     ],
@@ -1531,23 +1534,23 @@
                         {
                             "unlock": 1,
                             "value": [
-                                1
+                                0.5
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
-                                2
+                                0.75
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                3
+                                1
                             ]
                         }
                     ],
-                    "description": "Char_Double_SA_ShapeOfSlaughter_Desc"
+                    "description": "Char_Double_SA_ShapeOfSlaughter_Desc_Alt"
                 },
                 {
                     "tiers": [
@@ -3068,25 +3071,19 @@
                         {
                             "unlock": 1,
                             "value": [
-                                2,
-                                15,
                                 10
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
-                                2,
-                                17,
-                                10
+                                12
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                2,
-                                20,
-                                10
+                                15
                             ]
                         }
                     ],
@@ -3097,22 +3094,22 @@
                         {
                             "unlock": 1,
                             "value": [
-                                2,
-                                7
+                                0.15,
+                                5
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
-                                2,
-                                10
+                                0.15,
+                                7
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                2,
-                                15
+                                0.15,
+                                10
                             ]
                         }
                     ],
@@ -3293,21 +3290,24 @@
                             "unlock": 1,
                             "value": [
                                 0.150000006,
-                                5
+                                10,
+                                3
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
                                 0.150000006,
-                                7
+                                10,
+                                4
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
                                 0.150000006,
-                                10
+                                10,
+                                5
                             ]
                         }
                     ],
@@ -3543,19 +3543,19 @@
                         {
                             "unlock": 1,
                             "value": [
-                                20
+                                15
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
-                                15
+                                10
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                10
+                                5
                             ]
                         }
                     ],
@@ -3588,6 +3588,29 @@
                         {
                             "unlock": 1,
                             "value": [
+                                25
+                            ]
+                        },
+                        {
+                            "unlock": 2,
+                            "value": [
+                                35
+                            ]
+                        },
+                        {
+                            "unlock": 3,
+                            "value": [
+                                50
+                            ]
+                        }
+                    ],
+                    "description": "Char_PainWheel_SA_Death"
+                },
+                {
+                    "tiers": [
+                        {
+                            "unlock": 1,
+                            "value": [
                                 15
                             ]
                         },
@@ -3601,29 +3624,6 @@
                             "unlock": 3,
                             "value": [
                                 25
-                            ]
-                        }
-                    ],
-                    "description": "Char_PainWheel_SA_Death"
-                },
-                {
-                    "tiers": [
-                        {
-                            "unlock": 1,
-                            "value": [
-                                20
-                            ]
-                        },
-                        {
-                            "unlock": 2,
-                            "value": [
-                                35
-                            ]
-                        },
-                        {
-                            "unlock": 3,
-                            "value": [
-                                50
                             ]
                         }
                     ],
@@ -6472,19 +6472,19 @@
                         {
                             "unlock": 1,
                             "value": [
-                                3
+                                5
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
-                                4
+                                7
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                5
+                                10
                             ]
                         }
                     ],
@@ -6495,18 +6495,21 @@
                         {
                             "unlock": 1,
                             "value": [
+                                5,
                                 100
                             ]
                         },
                         {
                             "unlock": 2,
                             "value": [
+                                5,
                                 150
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
+                                5,
                                 200
                             ]
                         }
@@ -7069,7 +7072,7 @@
                         {
                             "unlock": 1,
                             "value": [
-                                2,
+                                1,
                                 10
                             ]
                         },
@@ -7077,14 +7080,14 @@
                             "unlock": 2,
                             "value": [
                                 2,
-                                12
+                                10
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                2,
-                                15
+                                3,
+                                10
                             ]
                         }
                     ],
@@ -7095,7 +7098,7 @@
                         {
                             "unlock": 1,
                             "value": [
-                                2,
+                                1,
                                 10
                             ]
                         },
@@ -7103,14 +7106,14 @@
                             "unlock": 2,
                             "value": [
                                 2,
-                                12
+                                10
                             ]
                         },
                         {
                             "unlock": 3,
                             "value": [
-                                2,
-                                15
+                                3,
+                                10
                             ]
                         }
                     ],

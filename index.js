@@ -481,7 +481,7 @@ function initCollection(responses) {
             wikia.target = "_blank";
             wikia.href = [
                 "https://skullgirlsmobile.wikia.com/wiki",
-                wikiaPaths[key] + "#Tips_and_Tricks"
+                wikiaPaths[key] /* + "#Tips_and_Tricks" */
             ].join("/");
         return wikia;
     }
@@ -1271,28 +1271,6 @@ function initOptionsMenu() {
                 var template = corpus[variants[key].sa.features[i].description];
                 var substitutions = variants[key].sa.features[i].tiers[saRange.value - 1].value;
                 saDescription.innerHTML = format(template, substitutions);
-                var problems = {
-                    "dBrawl": [0],
-                    "bLine": [0],
-                    "aForce": [0, 1],
-                    "nSense": [0, 1],
-                    "fColor": [0],
-                    "sOut": [0],
-                    "bMFrosty": [0, 1],
-                    "iThreat": [0, 1],
-                    "gFan": [0],
-                    "rNerv": [0, 1],
-                    "prime": [1],
-                    "sketch": [0, 1],
-                    "tAFolks": [0],
-                    "sStiff": [1],
-                    "gShift": [0, 1]
-                };
-                if (key in problems) {
-                    if (problems[key].includes(i)) {
-                        saDescription.classList.add("wrong");
-                    }
-                }
             }
         }
     }

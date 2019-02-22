@@ -1,5 +1,4 @@
 from data_processing import file
-from collections import namedtuple
 import re
 
 # Study Monolith Structure
