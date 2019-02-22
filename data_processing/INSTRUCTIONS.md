@@ -41,7 +41,7 @@
 ## Repeat
 1. Repeat the decompiling and extracting steps whenever a new version of the APK is released.
 
-# Advanced (Extracting MonoBehaviour:VariantData)
+# ~~Advanced (Extracting MonoBehaviour:VariantData)~~ This isn't needed anymore, as of version 3.1.0.
 
 For some reason, the UABE cannot extract `MonoBehaviour:VariantData` files in APK versions after 2.6.1. Extra steps are needed to get these files.
 
@@ -70,3 +70,5 @@ The scripts within this folder must have this folder's parent directory set as t
 - AssetStudio is used for extracting most files because it's easier to use and exports assets in a nicely structured way.
 - UABE is used for extracting scripts because AssetStudio exports scripts with missing data.
 - The palletized portraits don't appear to be within the APK.
+- As of version 2.7.0, MonoBehaviour:VariantData files cannot be properly extracted.
+- As of version 3.1.0, MonoBehaviour:VariantData files can be accessed again, but Ability files cannot be accessed.
