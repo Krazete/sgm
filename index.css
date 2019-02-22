@@ -246,21 +246,23 @@ input:checked + label {
 #skullgirls-mobile:before {content: 'Skullgirls Mobile';}
 
 html[lang='en'] .fighter-gallery:before {content: 'Fighter Gallery';}
-html[lang='fr'] .fighter-gallery:before {content: 'Galerie de Personnages';}
-html[lang='es'] .fighter-gallery:before {content: 'Galer\00ed a de Personajes';}
-html[lang='ru'] .fighter-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0435 \0440 \0441 \043e \043d \0430 \0436 \0435 \0439 ';}
 html[lang='ja'] .fighter-gallery:before {content: '\30ad \30e3 \30e9 \30af \30bf \30fc \30ae \30e3 \30e9 \30ea \30fc ';}
+html[lang='fr'] .fighter-gallery:before {content: 'Galerie de Personnages';}
 html[lang='de'] .fighter-gallery:before {content: 'K\00e4 mpfergalerie';}
+html[lang='es'] .fighter-gallery:before {content: 'Galer\00ed a de Personajes';}
 html[lang='ko'] .fighter-gallery:before {content: '\ce90 \b9ad \d130  \ac24 \b7ec \b9ac ';}
+html[lang='zh-cn'] .fighter-gallery:before {content: '\6597 \58eb \753b \5eca ';}
+html[lang='ru'] .fighter-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0435 \0440 \0441 \043e \043d \0430 \0436 \0435 \0439 ';}
 html[lang='pt-br'] .fighter-gallery:before {content: 'Galeria de Personagens';}
 
 html[lang='en'] .move-gallery:before {content: 'Move Gallery';}
-html[lang='fr'] .move-gallery:before {content: 'Galerie des Coups';}
-html[lang='es'] .move-gallery:before {content: 'Galer\00ed a de Movimientos';}
-html[lang='ru'] .move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
 html[lang='ja'] .move-gallery:before {content: '\5fc5 \6bba \6280 \30ae \30e3 \30e9 \30ea \30fc ';}
+html[lang='fr'] .move-gallery:before {content: 'Galerie des Coups';}
 html[lang='de'] .move-gallery:before {content: 'Angriffsgalerie';}
+html[lang='es'] .move-gallery:before {content: 'Galer\00ed a de Movimientos';}
 html[lang='ko'] .move-gallery:before {content: '\ae30 \c220  \ac24 \b7ec \b9ac ';}
+html[lang='zh-cn'] .move-gallery:before {content: '\62db \5f0f \753b \5eca ';}
+html[lang='ru'] .move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
 html[lang='pt-br'] .move-gallery:before {content: 'Galeria de Golpes';}
 
 .cinematic.banner {
@@ -279,12 +281,13 @@ html[lang='pt-br'] .move-gallery:before {content: 'Galeria de Golpes';}
     margin-right: 0.25em;
 }
 html[lang='en'] #version:before {content: 'VERSION:';}
-html[lang='fr'] #version:before {content: 'VERSION:';}
-html[lang='es'] #version:before {content: 'VERSI\00d3 N:';}
-html[lang='ru'] #version:before {content: '\0412 \0415 \0420 \0421 \0418 \042f :';}
 html[lang='ja'] #version:before {content: '\30d0 \30fc \30b8 \30e7 \30f3 :';}
+html[lang='fr'] #version:before {content: 'VERSION:';}
 html[lang='de'] #version:before {content: 'VERSION:';}
+html[lang='es'] #version:before {content: 'VERSI\00d3 N:';}
 html[lang='ko'] #version:before {content: '\bc84 \c804 :';}
+html[lang='zh-cn'] #version:before {content: '\7248 \672c \ff1a ';}
+html[lang='ru'] #version:before {content: '\0412 \0415 \0420 \0421 \0418 \042f :';}
 html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 
 .outdated:after {
@@ -292,24 +295,26 @@ html[lang='pt-br'] #version:before {content: 'VERS\00c3 O:';}
 }
 
 html[lang='en'] .outdated:after {content: ' (UPDATE REQUIRED)';}
-html[lang='fr'] .outdated:after {content: ' (MISE A JOUR N\00c9 CESSAIRE)';}
-html[lang='es'] .outdated:after {content: ' (ACTUALIZACI\00d3 N NECESARIA)';}
-html[lang='ru'] .outdated:after {content: ' (\0422 \0420 \0415 \0411 \0423 \0415 \0422 \0421 \042f  \041e \0411 \041d \041e \0412 \041b \0415 \041d \0418 \0415 )';}
 html[lang='ja'] .outdated:after {content: ' (\30a2 \30c3 \30d7 \30b0 \30ec \30fc \30c9 \304c \5fc5 \8981 \3067 \3059 )';}
+html[lang='fr'] .outdated:after {content: ' (MISE A JOUR N\00c9 CESSAIRE)';}
 html[lang='de'] .outdated:after {content: ' (UPDATE ERFORDERLICH)';}
+html[lang='es'] .outdated:after {content: ' (ACTUALIZACI\00d3 N NECESARIA)';}
 html[lang='ko'] .outdated:after {content: ' (\c5c5 \b370 \c774 \d2b8  \d544 \c218 )';}
+html[lang='zh-cn'] .outdated:after {content: ' (\9700 \8981 \5347 \7ea7 )';}
+html[lang='ru'] .outdated:after {content: ' (\0422 \0420 \0415 \0411 \0423 \0415 \0422 \0421 \042f  \041e \0411 \041d \041e \0412 \041b \0415 \041d \0418 \0415 )';}
 html[lang='pt-br'] .outdated:after {content: ' (ATUALIZA\00c7 \00c3 O NECESS\00c1 RIA)';}
 
 #language-menu label:before {
     padding-left: 1.75em;
 }
 #en + label.tagged:before {content: 'English'; background: url(image/official/flag_en.png);}
-#fr + label.tagged:before {content: 'Fran\00e7 ais'; background: url(image/official/flag_fr.png);}
-#es + label.tagged:before {content: 'Espa\00f1 ol'; background: url(image/official/flag_es.png);}
-#ru + label.tagged:before {content: '\0050 \0443 \0441 \0441 \043a \0438 \0439 '; background: url(image/official/flag_ru.png);}
 #ja + label.tagged:before {content: '\65e5 \672c \8a9e '; background: url(image/official/flag_jp.png);}
+#fr + label.tagged:before {content: 'Fran\00e7 ais'; background: url(image/official/flag_fr.png);}
 #de + label.tagged:before {content: 'Deutsch'; background: url(image/official/flag_de.png);}
+#es + label.tagged:before {content: 'Espa\00f1 ol'; background: url(image/official/flag_es.png);}
 #ko + label.tagged:before {content: '\d55c \ad6d \c5b4 '; background: url(image/official/flag_ko.png);}
+#zh-cn + label.tagged:before {content: '\7b80 \4f53 \4e2d \6587 '; background: url(image/official/flag_ch.png);}
+#ru + label.tagged:before {content: '\0050 \0443 \0441 \0441 \043a \0438 \0439 '; background: url(image/official/flag_ru.png);}
 #pt-br + label.tagged:before {content: 'Portugu\00ea s'; background: url(image/official/flag_pt.png);}
 
 /* FOOTER */
@@ -392,12 +397,13 @@ html[lang='pt-br'] .outdated:after {content: ' (ATUALIZA\00c7 \00c3 O NECESS\00c
     padding-left: 1.1em;
 }
 html[lang='en'] #options-label:before {content: 'OPTIONS';}
-html[lang='fr'] #options-label:before {content: 'OPTIONS';}
-html[lang='es'] #options-label:before {content: 'OPCIONES';}
-html[lang='ru'] #options-label:before {content: '\041d \0410 \0421 \0422 \0420 \041e \0419 \041a \0418 ';}
 html[lang='ja'] #options-label:before {content: '\30aa \30d7 \30b7 \30e7 \30f3 ';}
+html[lang='fr'] #options-label:before {content: 'OPTIONS';}
 html[lang='de'] #options-label:before {content: 'EINSTELLUNGEN';}
+html[lang='es'] #options-label:before {content: 'OPCIONES';}
 html[lang='ko'] #options-label:before {content: '\c124 \c815 ';}
+html[lang='zh-cn'] #options-label:before {content: '\9009 \9879 ';}
+html[lang='ru'] #options-label:before {content: '\041d \0410 \0421 \0422 \0420 \041e \0419 \041a \0418 ';}
 html[lang='pt-br'] #options-label:before {content: 'OP\00c7 \00d5 ES';}
 
 #options-menu .subset {
@@ -405,12 +411,13 @@ html[lang='pt-br'] #options-label:before {content: 'OP\00c7 \00d5 ES';}
 }
 
 html[lang='en'] #evolve-label:before {content: 'EVOLVE';}
-html[lang='fr'] #evolve-label:before {content: 'EVOLUTION';}
-html[lang='es'] #evolve-label:before {content: 'EVOLUCIONAR';}
-html[lang='ru'] #evolve-label:before {content: '\0420 \0410 \0417 \0412 \0418 \0422 \0418 \0415 ';}
 html[lang='ja'] #evolve-label:before {content: '\9032 \5316 ';}
+html[lang='fr'] #evolve-label:before {content: 'EVOLUTION';}
 html[lang='de'] #evolve-label:before {content: 'ENTWICKLUNG';}
+html[lang='es'] #evolve-label:before {content: 'EVOLUCIONAR';}
 html[lang='ko'] #evolve-label:before {content: '\c9c4 \d654 \d558 \ae30 ';}
+html[lang='zh-cn'] #evolve-label:before {content: '\8fdb \5316 ';}
+html[lang='ru'] #evolve-label:before {content: '\0420 \0410 \0417 \0412 \0418 \0422 \0418 \0415 ';}
 html[lang='pt-br'] #evolve-label:before {content: 'EVOLUIR';}
 
 #evolve-bronze,
@@ -421,12 +428,13 @@ html[lang='pt-br'] #evolve-label:before {content: 'EVOLUIR';}
 }
 
 html[lang='en'] #level-label:before {content: 'Level';}
-html[lang='fr'] #level-label:before {content: 'Niveau';}
-html[lang='es'] #level-label:before {content: 'Level';}
-html[lang='ru'] #level-label:before {content: '\0423 \0440 \043e \0432 \0435 \043d \044c ';}
 html[lang='ja'] #level-label:before {content: '\30ec \30d9 \30eb ';}
+html[lang='fr'] #level-label:before {content: 'Niveau';}
 html[lang='de'] #level-label:before {content: 'Stufe';}
+html[lang='es'] #level-label:before {content: 'Level';}
 html[lang='ko'] #level-label:before {content: '\b808 \bca8 ';}
+html[lang='zh-cn'] #level-label:before {content: '\7b49 \7ea7 ';}
+html[lang='ru'] #level-label:before {content: '\0423 \0440 \043e \0432 \0435 \043d \044c ';}
 html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
 
 #footer input[type='text'] {
@@ -471,12 +479,13 @@ html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
 }
 
 html[lang='en'] .none-label:before {content: 'NONE';}
-html[lang='fr'] .none-label:before {content: 'VIDE';}
-html[lang='es'] .none-label:before {content: 'NADA';}
-html[lang='ru'] .none-label:before {content: '\041e \0422 \0421 \0423 \0422 \0421 \0422 \0412 \0423 \0415 \0422 ';}
 html[lang='ja'] .none-label:before {content: '\306a \3057 ';}
+html[lang='fr'] .none-label:before {content: 'VIDE';}
 html[lang='de'] .none-label:before {content: 'KEINER';}
+html[lang='es'] .none-label:before {content: 'NADA';}
 html[lang='ko'] .none-label:before {content: '\c5c6 \c74c ';}
+html[lang='zh-cn'] .none-label:before {content: '\65e0 ';}
+html[lang='ru'] .none-label:before {content: '\041e \0422 \0421 \0423 \0422 \0421 \0422 \0412 \0423 \0415 \0422 ';}
 html[lang='pt-br'] .none-label:before {content: 'NENHUM';}
 
 #tree-all + label {
@@ -484,12 +493,13 @@ html[lang='pt-br'] .none-label:before {content: 'NENHUM';}
 }
 
 html[lang='en'] .all-label:before {content: 'ALL';}
-html[lang='fr'] .all-label:before {content: 'TOUT';}
-html[lang='es'] .all-label:before {content: 'TODOS';}
-html[lang='ru'] .all-label:before {content: '\0412 \0421 \0415 ';}
 html[lang='ja'] .all-label:before {content: '\3059 \3079 \3066 ';}
+html[lang='fr'] .all-label:before {content: 'TOUT';}
 html[lang='de'] .all-label:before {content: 'ALLE';}
+html[lang='es'] .all-label:before {content: 'TODOS';}
 html[lang='ko'] .all-label:before {content: '\c804 \ccb4 ';}
+html[lang='zh-cn'] .all-label:before {content: '\5168 \90e8 ';}
+html[lang='ru'] .all-label:before {content: '\0412 \0421 \0415 ';}
 html[lang='pt-br'] .all-label:before {content: 'TODOS';}
 
 /* MOVE LEVEL */
@@ -505,12 +515,13 @@ html[lang='pt-br'] .all-label:before {content: 'TODOS';}
     padding-left: 1.2em;
 }
 html[lang='en'] #filter-label:before {content: 'FILTER';}
-html[lang='fr'] #filter-label:before {content: 'FILTRER';}
-html[lang='es'] #filter-label:before {content: 'FILTRAR';}
-html[lang='ru'] #filter-label:before {content: '\0424 \0418 \041b \042c \0422 \0420 ';}
 html[lang='ja'] #filter-label:before {content: '\30d5 \30a3 \30eb \30bf \30fc ';}
+html[lang='fr'] #filter-label:before {content: 'FILTRER';}
 html[lang='de'] #filter-label:before {content: 'FILTER';}
+html[lang='es'] #filter-label:before {content: 'FILTRAR';}
 html[lang='ko'] #filter-label:before {content: '\d544 \d130 ';}
+html[lang='zh-cn'] #filter-label:before {content: '\7b5b \9009 ';}
+html[lang='ru'] #filter-label:before {content: '\0424 \0418 \041b \042c \0422 \0420 ';}
 html[lang='pt-br'] #filter-label:before {content: 'FILTRAR';}
 
 #filter-bb + label .icon {
@@ -536,12 +547,13 @@ html[lang='pt-br'] #filter-label:before {content: 'FILTRAR';}
     padding-left: 1.6em;
 }
 html[lang='en'] #sort-label:before {content: 'SORT';}
-html[lang='fr'] #sort-label:before {content: 'TRIER';}
-html[lang='es'] #sort-label:before {content: 'ORDENAR';}
-html[lang='ru'] #sort-label:before {content: '\0423 \041f \041e \0420 \042f \0414 .';}
 html[lang='ja'] #sort-label:before {content: '\4e26 \3073 \66ff \3048 ';}
+html[lang='fr'] #sort-label:before {content: 'TRIER';}
 html[lang='de'] #sort-label:before {content: 'SORTIEREN';}
+html[lang='es'] #sort-label:before {content: 'ORDENAR';}
 html[lang='ko'] #sort-label:before {content: '\c815 \b82c ';}
+html[lang='zh-cn'] #sort-label:before {content: '\6392 \5e8f ';}
+html[lang='ru'] #sort-label:before {content: '\0423 \041f \041e \0420 \042f \0414 .';}
 html[lang='pt-br'] #sort-label:before {content: 'ORGANIZAR';}
 
 #sort-menu .subset div {
@@ -551,66 +563,73 @@ html[lang='pt-br'] #sort-label:before {content: 'ORGANIZAR';}
 }
 
 html[lang='en'] #sort-abc + label:before {content: 'Alphabetical';}
-html[lang='fr'] #sort-abc + label:before {content: 'Alphab\00e9 tique';}
-html[lang='es'] #sort-abc + label:before {content: 'Orden alfab\00e9 tico';}
-html[lang='ru'] #sort-abc + label:before {content: '\041f \043e  \0430 \043b \0444 \0430 \0432 \0438 \0442 \0443 ';}
 html[lang='ja'] #sort-abc + label:before {content: '\30a2 \30eb \30d5 \30a1 \30d9 \30c3 \30c8 \9806 ';}
+html[lang='fr'] #sort-abc + label:before {content: 'Alphab\00e9 tique';}
 html[lang='de'] #sort-abc + label:before {content: 'Alphabetisch';}
+html[lang='es'] #sort-abc + label:before {content: 'Orden alfab\00e9 tico';}
 html[lang='ko'] #sort-abc + label:before {content: '\c54c \d30c \bcb3 \c21c ';}
+html[lang='zh-cn'] #sort-abc + label:before {content: '\6309 \5b57 \6bcd \987a \5e8f ';}
+html[lang='ru'] #sort-abc + label:before {content: '\041f \043e  \0430 \043b \0444 \0430 \0432 \0438 \0442 \0443 ';}
 html[lang='pt-br'] #sort-abc + label:before {content: 'Ordem alfab\00e9 tica';}
 
 html[lang='en'] #sort-fs + label:before {content: 'FIGHTER SCORE';}
-html[lang='fr'] #sort-fs + label:before {content: 'SCORE';}
-html[lang='es'] #sort-fs + label:before {content: 'PUNTUACI\00d3 N ';}
-html[lang='ru'] #sort-fs + label:before {content: '\0411 \041e \0415 \0412 \041e \0419  \0421 \0427 \0415 \0422 ';}
 html[lang='ja'] #sort-fs + label:before {content: '\30d5 \30a1 \30a4 \30bf \30fc \30fb \30b9 \30b3 \30a2 ';}
+html[lang='fr'] #sort-fs + label:before {content: 'SCORE';}
 html[lang='de'] #sort-fs + label:before {content: 'KAMPFPUNKTE';}
+html[lang='es'] #sort-fs + label:before {content: 'PUNTUACI\00d3 N ';}
 html[lang='ko'] #sort-fs + label:before {content: '\c804 \d22c \b825 ';}
+html[lang='zh-cn'] #sort-fs + label:before {content: '\6597 \58eb \79ef \5206 ';}
+html[lang='ru'] #sort-fs + label:before {content: '\0411 \041e \0415 \0412 \041e \0419  \0421 \0427 \0415 \0422 ';}
 html[lang='pt-br'] #sort-fs + label:before {content: 'PONTUA\00c7 \00c3 O';}
 
 html[lang='en'] #sort-atk + label:before {content: 'ATTACK DAMAGE';}
-html[lang='fr'] #sort-atk + label:before {content: 'D\00c9 G\00c2 TS D\'ATT AQUE';}
-html[lang='es'] #sort-atk + label:before {content: 'DA\00d1 O POR ATAQUE';}
-html[lang='ru'] #sort-atk + label:before {content: '\0423 \0420 \041e \041d  \043e \0442  \0410 \0422 \0410 \041a \0418 ';}
 html[lang='ja'] #sort-atk + label:before {content: '\653b \6483 \30c0 \30e1 \30fc \30b8 ';}
+html[lang='fr'] #sort-atk + label:before {content: 'D\00c9 G\00c2 TS D\'ATT AQUE';}
 html[lang='de'] #sort-atk + label:before {content: 'SCHADENSBOOST';}
+html[lang='es'] #sort-atk + label:before {content: 'DA\00d1 O POR ATAQUE';}
 html[lang='ko'] #sort-atk + label:before {content: '\acf5 \aca9  \d53c \d574 ';}
+html[lang='zh-cn'] #sort-atk + label:before {content: '\653b \51fb \4f24 \5bb3 ';}
+html[lang='ru'] #sort-atk + label:before {content: '\0423 \0420 \041e \041d  \043e \0442  \0410 \0422 \0410 \041a \0418 ';}
 html[lang='pt-br'] #sort-atk + label:before {content: 'DANO DOS GOLPES';}
 
 html[lang='en'] #sort-hp + label:before {content: 'HEALTH';}
-html[lang='fr'] #sort-hp + label:before {content: 'SANT\00c9 ';}
-html[lang='es'] #sort-hp + label:before {content: 'SALUD';}
-html[lang='ru'] #sort-hp + label:before {content: '\0417 \0414 \041e \0420 \041e \0412 \042c \0415 ';}
 html[lang='ja'] #sort-hp + label:before {content: '\4f53 \529b ';}
+html[lang='fr'] #sort-hp + label:before {content: 'SANT\00c9 ';}
 html[lang='de'] #sort-hp + label:before {content: 'GESUNDHEIT';}
+html[lang='es'] #sort-hp + label:before {content: 'SALUD';}
 html[lang='ko'] #sort-hp + label:before {content: '\ccb4 \b825 ';}
+html[lang='zh-cn'] #sort-hp + label:before {content: '\8840 \91cf ';}
+html[lang='ru'] #sort-hp + label:before {content: '\0417 \0414 \041e \0420 \041e \0412 \042c \0415 ';}
 html[lang='pt-br'] #sort-hp + label:before {content: 'VIDA';}
 
 html[lang='en'] #sort-element + label:before {content: 'Element';}
-html[lang='fr'] #sort-element + label:before {content: '\00c9 l\00e9 ment';}
-html[lang='es'] #sort-element + label:before {content: 'Elemento';}
-html[lang='ru'] #sort-element + label:before {content: '\0421 \0442 \0438 \0445 \0438 \044f ';}
 html[lang='ja'] #sort-element + label:before {content: '\5c5e \6027 ';}
+html[lang='fr'] #sort-element + label:before {content: '\00c9 l\00e9 ment';}
 html[lang='de'] #sort-element + label:before {content: 'Element';}
+html[lang='es'] #sort-element + label:before {content: 'Elemento';}
 html[lang='ko'] #sort-element + label:before {content: '\c18d \c131 ';}
+html[lang='zh-cn'] #sort-element + label:before {content: '\5143 \7d20 ';}
+html[lang='ru'] #sort-element + label:before {content: '\0421 \0442 \0438 \0445 \0438 \044f ';}
 html[lang='pt-br'] #sort-element + label:before {content: 'Elemento';}
 
 html[lang='en'] #sort-tier + label:before {content: 'TIER';}
-html[lang='fr'] #sort-tier + label:before {content: 'RANG';}
-html[lang='es'] #sort-tier + label:before {content: 'GRADO';}
-html[lang='ru'] #sort-tier + label:before {content: '\0420 \0410 \041d \0413 ';}
 html[lang='ja'] #sort-tier + label:before {content: '\30e9 \30f3 \30af ';}
+html[lang='fr'] #sort-tier + label:before {content: 'RANG';}
 html[lang='de'] #sort-tier + label:before {content: 'KLASSE';}
+html[lang='es'] #sort-tier + label:before {content: 'GRADO';}
 html[lang='ko'] #sort-tier + label:before {content: '\b4f1 \ae09 ';}
+html[lang='zh-cn'] #sort-tier + label:before {content: '\9636 \7ea7 ';}
+html[lang='ru'] #sort-tier + label:before {content: '\0420 \0410 \041d \0413 ';}
 html[lang='pt-br'] #sort-tier + label:before {content: 'CATEGORIA';}
 
 html[lang='en'] #sort-type + label:before {content: 'TYPE';}
-html[lang='fr'] #sort-type + label:before {content: 'TYPE';}
-html[lang='es'] #sort-type + label:before {content: 'TIPO';}
-html[lang='ru'] #sort-type + label:before {content: '\0422 \0418 \041f ';}
 html[lang='ja'] #sort-type + label:before {content: '\30bf \30a4 \30d7 ';}
+html[lang='fr'] #sort-type + label:before {content: 'TYPE';}
 html[lang='de'] #sort-type + label:before {content: 'TYP';}
+html[lang='es'] #sort-type + label:before {content: 'TIPO';}
 html[lang='ko'] #sort-type + label:before {content: '\d0c0 \c785 ';}
+html[lang='zh-cn'] #sort-type + label:before {content: '\7c7b \578b ';}
+html[lang='ru'] #sort-type + label:before {content: '\0422 \0418 \041f ';}
 html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 
 /* COLLECTION */
@@ -684,30 +703,33 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 }
 
 html[lang='en'] #search-vn + label:before {content: 'Variant Name';}
-html[lang='fr'] #search-vn + label:before {content: 'Nom de Variante';}
-html[lang='es'] #search-vn + label:before {content: 'Nombre de la Variante';}
-html[lang='ru'] #search-vn + label:before {content: '\041d \0430 \0437 \0432 \0430 \043d \0438 \0435  \0432 \0430 \0440 \0438 \0430 \043d \0442 \0430 ';}
 html[lang='ja'] #search-vn + label:before {content: '\30d0 \30ea \30a2 \30f3 \30c8 \540d ';}
+html[lang='fr'] #search-vn + label:before {content: 'Nom de Variante';}
 html[lang='de'] #search-vn + label:before {content: 'Variantenname';}
+html[lang='es'] #search-vn + label:before {content: 'Nombre de la Variante';}
 html[lang='ko'] #search-vn + label:before {content: '\bcc0 \d615  \c774 \b984 ';}
+html[lang='zh-cn'] #search-vn + label:before {content: '\53d8 \4f53 \540d \79f0 ';}
+html[lang='ru'] #search-vn + label:before {content: '\041d \0430 \0437 \0432 \0430 \043d \0438 \0435  \0432 \0430 \0440 \0438 \0430 \043d \0442 \0430 ';}
 html[lang='pt-br'] #search-vn + label:before {content: 'Nome da Variante';}
 
 html[lang='en'] #search-mn + label:before {content: 'Move Name';}
-html[lang='fr'] #search-mn + label:before {content: 'Nom de Coup';}
-html[lang='es'] #search-mn + label:before {content: 'Nombre del Movimiento';}
-html[lang='ru'] #search-mn + label:before {content: '\041d \0430 \0437 \0432 \0430 \043d \0438 \0435  \041f \0440 \0438 \0435 \043c \0430 ';}
 html[lang='ja'] #search-mn + label:before {content: '\5fc5 \6bba \6280 \540d ';}
+html[lang='fr'] #search-mn + label:before {content: 'Nom de Coup';}
 html[lang='de'] #search-mn + label:before {content: 'Angriffsname';}
+html[lang='es'] #search-mn + label:before {content: 'Nombre del Movimiento';}
 html[lang='ko'] #search-mn + label:before {content: '\ae30 \c220  \c774 \b984 ';}
+html[lang='zh-cn'] #search-mn + label:before {content: '\62db \5f0f \540d \79f0 ';}
+html[lang='ru'] #search-mn + label:before {content: '\041d \0430 \0437 \0432 \0430 \043d \0438 \0435  \041f \0440 \0438 \0435 \043c \0430 ';}
 html[lang='pt-br'] #search-mn + label:before {content: 'Nome do Golpe';}
 
 html[lang='en'] #search-d + label:before {content: 'Description';}
-html[lang='fr'] #search-d + label:before {content: 'Description';}
-html[lang='es'] #search-d + label:before {content: 'Descripci\00f3 n';}
-html[lang='ru'] #search-d + label:before {content: '\041e \043f \0438 \0441 \0430 \043d \0438 \0435 ';}
 html[lang='ja'] #search-d + label:before {content: '\8aac \660e ';}
+html[lang='fr'] #search-d + label:before {content: 'Description';}
 html[lang='de'] #search-d + label:before {content: 'Beschreibung';}
+html[lang='es'] #search-d + label:before {content: 'Descripci\00f3 n';}
 html[lang='ko'] #search-d + label:before {content: '\c124 \ba85 ';}
+html[lang='zh-cn'] #search-d + label:before {content: '\63cf \8ff0 ';}
+html[lang='ru'] #search-d + label:before {content: '\041e \043f \0438 \0441 \0430 \043d \0438 \0435 ';}
 html[lang='pt-br'] #search-d + label:before {content: 'Descri\00e7 \00e3 o';}
 
 /* LOADING */
@@ -732,12 +754,13 @@ html[lang='pt-br'] #search-d + label:before {content: 'Descri\00e7 \00e3 o';}
     animation: 0.7s infinite fader;
 }
 html[lang='en'] #loading:after {content: 'LOADING...';}
-html[lang='fr'] #loading:after {content: 'CHARGEMENT...';}
-html[lang='es'] #loading:after {content: 'CARGANDO...';}
-html[lang='ru'] #loading:after {content: '\0417 \0410 \0413 \0420 \0423 \0417 \041a \0410 ...';}
 html[lang='ja'] #loading:after {content: '\30ed \30fc \30c9 \4e2d ...';}
+html[lang='fr'] #loading:after {content: 'CHARGEMENT...';}
 html[lang='de'] #loading:after {content: 'LADE ...';}
+html[lang='es'] #loading:after {content: 'CARGANDO...';}
 html[lang='ko'] #loading:after {content: '\b85c \b529  \c911 \2026 ';}
+html[lang='zh-cn'] #loading:after {content: '\6b63 \5728 \52a0 \8f7d \2026 ';}
+html[lang='ru'] #loading:after {content: '\0417 \0410 \0413 \0420 \0423 \0417 \041a \0410 ...';}
 html[lang='pt-br'] #loading:after {content: 'CARREGANDO...';}
 
 @keyframes fader {
@@ -756,12 +779,13 @@ html[lang='pt-br'] #loading:after {content: 'CARREGANDO...';}
     animation: none;
 }
 html[lang='en'] .error #loading:after {content: 'ERROR';}
-html[lang='fr'] .error #loading:after {content: 'ERREUR';}
-html[lang='es'] .error #loading:after {content: 'ERROR';}
-html[lang='ru'] .error #loading:after {content: '\041e \0428 \0418 \0411 \041a \0410 ';}
 html[lang='ja'] .error #loading:after {content: '\30a8 \30e9 \30fc ';}
+html[lang='fr'] .error #loading:after {content: 'ERREUR';}
 html[lang='de'] .error #loading:after {content: 'FEHLER';}
+html[lang='es'] .error #loading:after {content: 'ERROR';}
 html[lang='ko'] .error #loading:after {content: '\c624 \b958 ';}
+html[lang='zh-cn'] .error #loading:after {content: '\9519 \8bef ';}
+html[lang='ru'] .error #loading:after {content: '\041e \0428 \0418 \0411 \041a \0410 ';}
 html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 
 /* CARD */
@@ -1031,39 +1055,25 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: block;
 }
 
-html[lang='en'] .offense:before,
-html[lang='en'] #sort-offense + label:before {content: 'OFFENSE';}
-html[lang='fr'] .offense:before,
-html[lang='fr'] #sort-offense + label:before {content: 'ATTAQUE';}
-html[lang='es'] .offense:before,
-html[lang='es'] #sort-offense + label:before {content: 'ATAQUE';}
-html[lang='ru'] .offense:before,
-html[lang='ru'] #sort-offense + label:before {content: '\041d \0410 \0421 \0422 \0423 \041f \041b \0415 \041d \0418 \0415 ';}
-html[lang='ja'] .offense:before,
-html[lang='ja'] #sort-offense + label:before {content: '\653b \6483 ';}
-html[lang='de'] .offense:before,
-html[lang='de'] #sort-offense + label:before {content: 'OFFENSIVE';}
-html[lang='ko'] .offense:before,
-html[lang='ko'] #sort-offense + label:before {content: '\acf5 \aca9 ';}
-html[lang='pt-br'] .offense:before,
-html[lang='pt-br'] #sort-offense + label:before {content: 'ATAQUE';}
+html[lang='en'] .offense:before, html[lang='en'] #sort-offense + label:before {content: 'OFFENSE';}
+html[lang='ja'] .offense:before, html[lang='ja'] #sort-offense + label:before {content: '\653b \6483 ';}
+html[lang='fr'] .offense:before, html[lang='fr'] #sort-offense + label:before {content: 'ATTAQUE';}
+html[lang='de'] .offense:before, html[lang='de'] #sort-offense + label:before {content: 'OFFENSIVE';}
+html[lang='es'] .offense:before, html[lang='es'] #sort-offense + label:before {content: 'ATAQUE';}
+html[lang='ko'] .offense:before, html[lang='ko'] #sort-offense + label:before {content: '\acf5 \aca9 ';}
+html[lang='zh-cn'] .offense:before, html[lang='zh-cn'] #sort-offense + label:before {content: '\8fdb \653b ';}
+html[lang='ru'] .offense:before, html[lang='ru'] #sort-offense + label:before {content: '\041d \0410 \0421 \0422 \0423 \041f \041b \0415 \041d \0418 \0415 ';}
+html[lang='pt-br'] .offense:before, html[lang='pt-br'] #sort-offense + label:before {content: 'ATAQUE';}
 
-html[lang='en'] .defense:before,
-html[lang='en'] #sort-defense + label:before {content: 'DEFENSE';}
-html[lang='fr'] .defense:before,
-html[lang='fr'] #sort-defense + label:before {content: 'D\00c9 FENSE';}
-html[lang='es'] .defense:before,
-html[lang='es'] #sort-defense + label:before {content: 'DEFENSA';}
-html[lang='ru'] .defense:before,
-html[lang='ru'] #sort-defense + label:before {content: '\041e \0411 \041e \0420 \041e \041d \0410 ';}
-html[lang='ja'] .defense:before,
-html[lang='ja'] #sort-defense + label:before {content: '\9632 \885b ';}
-html[lang='de'] .defense:before,
-html[lang='de'] #sort-defense + label:before {content: 'DEFENSIVE';}
-html[lang='ko'] .defense:before,
-html[lang='ko'] #sort-defense + label:before {content: '\bc29 \c5b4 ';}
-html[lang='pt-br'] .defense:before,
-html[lang='pt-br'] #sort-defense + label:before {content: 'DEFESA';}
+html[lang='en'] .defense:before, html[lang='en'] #sort-defense + label:before {content: 'DEFENSE';}
+html[lang='ja'] .defense:before, html[lang='ja'] #sort-defense + label:before {content: '\9632 \885b ';}
+html[lang='fr'] .defense:before, html[lang='fr'] #sort-defense + label:before {content: 'D\00c9 FENSE';}
+html[lang='de'] .defense:before, html[lang='de'] #sort-defense + label:before {content: 'DEFENSIVE';}
+html[lang='es'] .defense:before, html[lang='es'] #sort-defense + label:before {content: 'DEFENSA';}
+html[lang='ko'] .defense:before, html[lang='ko'] #sort-defense + label:before {content: '\bc29 \c5b4 ';}
+html[lang='zh-cn'] .defense:before, html[lang='zh-cn'] #sort-defense + label:before {content: '\9632 \5fa1 ';}
+html[lang='ru'] .defense:before, html[lang='ru'] #sort-defense + label:before {content: '\041e \0411 \041e \0420 \041e \041d \0410 ';}
+html[lang='pt-br'] .defense:before, html[lang='pt-br'] #sort-defense + label:before {content: 'DEFESA';}
 
 .offense:after,
 .defense:after {
@@ -1071,22 +1081,15 @@ html[lang='pt-br'] #sort-defense + label:before {content: 'DEFESA';}
     display: block;
 }
 
-html[lang='en'] .offense:after,
-html[lang='en'] .defense:after {content: attr(data-count) ' votes';}
-html[lang='fr'] .offense:after,
-html[lang='fr'] .defense:after {content: attr(data-count) ' votes';}
-html[lang='es'] .offense:after,
-html[lang='es'] .defense:after {content: attr(data-count) ' votos';}
-html[lang='ru'] .offense:after,
-html[lang='ru'] .defense:after {content: attr(data-count) ' \0433 \043e \043b \043e \0441 \043e \0432 ';}
-html[lang='ja'] .offense:after,
-html[lang='ja'] .defense:after {content: attr(data-count) ' \6295 \7968 ';}
-html[lang='de'] .offense:after,
-html[lang='de'] .defense:after {content: attr(data-count) ' stimmen';}
-html[lang='ko'] .offense:after,
-html[lang='ko'] .defense:after {content: attr(data-count) ' \d22c \d45c \d558 \b2e4 ';}
-html[lang='pt-br'] .offense:after,
-html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
+html[lang='en'] .offense:after, html[lang='en'] .defense:after {content: attr(data-count) ' votes';}
+html[lang='ja'] .offense:after, html[lang='ja'] .defense:after {content: attr(data-count) ' \6295 \7968 ';}
+html[lang='fr'] .offense:after, html[lang='fr'] .defense:after {content: attr(data-count) ' votes';}
+html[lang='de'] .offense:after, html[lang='de'] .defense:after {content: attr(data-count) ' stimmen';}
+html[lang='es'] .offense:after, html[lang='es'] .defense:after {content: attr(data-count) ' votos';}
+html[lang='ko'] .offense:after, html[lang='ko'] .defense:after {content: attr(data-count) ' \d22c \d45c \d558 \b2e4 ';}
+html[lang='zh-cn'] .offense:after, html[lang='zh-cn'] .defense:after {content: attr(data-count) ' \7968 ';}
+html[lang='ru'] .offense:after, html[lang='ru'] .defense:after {content: attr(data-count) ' \0433 \043e \043b \043e \0441 \043e \0432 ';}
+html[lang='pt-br'] .offense:after, html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
 
 .star {
     position: relative;
@@ -1179,12 +1182,13 @@ html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
 }
 
 html[lang='en'] .star.voted:after {content: 'You';}
-html[lang='fr'] .star.voted:after {content: 'Vous';}
-html[lang='es'] .star.voted:after {content: 'T\00fa ';}
-html[lang='ru'] .star.voted:after {content: '\0412 \044b ';}
 html[lang='ja'] .star.voted:after {content: '\541b \306f ';}
+html[lang='fr'] .star.voted:after {content: 'Vous';}
 html[lang='de'] .star.voted:after {content: 'Sie';}
+html[lang='es'] .star.voted:after {content: 'T\00fa ';}
 html[lang='ko'] .star.voted:after {content: '\b2f9 \c2e0 ';}
+html[lang='zh-cn'] .star.voted:after {content: '\60a8 ';}
+html[lang='ru'] .star.voted:after {content: '\0412 \044b ';}
 html[lang='pt-br'] .star.voted:after {content: 'Voc\00ea ';}
 
 .star img {
@@ -1214,12 +1218,13 @@ html[lang='pt-br'] .star.voted:after {content: 'Voc\00ea ';}
     background: url(image/official/PowerIcon.png);
 }
 html[lang='en'] .atk:before {content: 'ATK';}
-html[lang='fr'] .atk:before {content: 'ATQ';}
-html[lang='es'] .atk:before {content: 'ATQ';}
-html[lang='ru'] .atk:before {content: '\0410 \0422 ';}
 html[lang='ja'] .atk:before {content: '\653b \6483 ';}
+html[lang='fr'] .atk:before {content: 'ATQ';}
 html[lang='de'] .atk:before {content: 'ATK';}
+html[lang='es'] .atk:before {content: 'ATQ';}
 html[lang='ko'] .atk:before {content: '\acf5 \aca9 \b825 ';}
+html[lang='zh-cn'] .atk:before {content: '\653b \51fb ';}
+html[lang='ru'] .atk:before {content: '\0410 \0422 ';}
 html[lang='pt-br'] .atk:before {content: 'ATQ';}
 
 .hp {
@@ -1230,12 +1235,13 @@ html[lang='pt-br'] .atk:before {content: 'ATQ';}
     background: url(image/official/HealthIcon.png);
 }
 html[lang='en'] .hp:before {content: 'HP';}
-html[lang='fr'] .hp:before {content: 'PV';}
-html[lang='es'] .hp:before {content: 'PV';}
-html[lang='ru'] .hp:before {content: '\0417 \0414 ';}
 html[lang='ja'] .hp:before {content: '\4f53 \529b ';}
+html[lang='fr'] .hp:before {content: 'PV';}
 html[lang='de'] .hp:before {content: 'GES';}
+html[lang='es'] .hp:before {content: 'PV';}
 html[lang='ko'] .hp:before {content: '\ccb4 \b825 ';}
+html[lang='zh-cn'] .hp:before {content: '\8840 \91cf ';}
+html[lang='ru'] .hp:before {content: '\0417 \0414 ';}
 html[lang='pt-br'] .hp:before {content: 'PV';}
 
 .fs {
@@ -1249,12 +1255,13 @@ html[lang='pt-br'] .hp:before {content: 'PV';}
 .light .fs:before {background: url(image/official/ElementalIconLight.png);}
 .dark .fs:before {background: url(image/official/ElementalIconDark.png);}
 html[lang='en'] .fs:before {content: 'FIGHTER SCORE';}
-html[lang='fr'] .fs:before {content: 'SCORE';}
-html[lang='es'] .fs:before {content: 'PUNTUACI\00d3 N ';}
-html[lang='ru'] .fs:before {content: '\0411 \041e \0415 \0412 \041e \0419  \0421 \0427 \0415 \0422 ';}
 html[lang='ja'] .fs:before {content: '\30d5 \30a1 \30a4 \30bf \30fc \30fb \30b9 \30b3 \30a2 ';}
+html[lang='fr'] .fs:before {content: 'SCORE';}
 html[lang='de'] .fs:before {content: 'KAMPFPUNKTE';}
+html[lang='es'] .fs:before {content: 'PUNTUACI\00d3 N ';}
 html[lang='ko'] .fs:before {content: '\c804 \d22c \b825 ';}
+html[lang='zh-cn'] .fs:before {content: '\6597 \58eb \79ef \5206 ';}
+html[lang='ru'] .fs:before {content: '\0411 \041e \0415 \0412 \041e \0419  \0421 \0427 \0415 \0422 ';}
 html[lang='pt-br'] .fs:before {content: 'PONTUA\00c7 \00c3 O';}
 
 /* TABLE */
@@ -1274,12 +1281,13 @@ html[lang='pt-br'] .fs:before {content: 'PONTUA\00c7 \00c3 O';}
 }
 
 html[lang='en'] .unblockable:before {content: 'UNBLOCKABLE';}
-html[lang='fr'] .unblockable:before {content: 'INBLOCABLE';}
-html[lang='es'] .unblockable:before {content: 'IMBLOQUEABLE';}
-html[lang='ru'] .unblockable:before {content: '\041d \0415 \0411 \041b \041e \041a \0418 \0420 \0423 \0415 \041c \042b \0419 ';}
 html[lang='ja'] .unblockable:before {content: '\30ac \30fc \30c9 \4e0d \53ef ';}
+html[lang='fr'] .unblockable:before {content: 'INBLOCABLE';}
 html[lang='de'] .unblockable:before {content: 'UNAUFHALTSAM';}
+html[lang='es'] .unblockable:before {content: 'IMBLOQUEABLE';}
 html[lang='ko'] .unblockable:before {content: '\bc29 \c5b4  \bd88 \ac00 ';}
+html[lang='zh-cn'] .unblockable:before {content: '\4e0d \53ef \683c \6321 ';}
+html[lang='ru'] .unblockable:before {content: '\041d \0415 \0411 \041b \041e \041a \0418 \0420 \0423 \0415 \041c \042b \0419 ';}
 html[lang='pt-br'] .unblockable:before {content: 'INDEFENSAVEL';}
 
 .plus {
@@ -1288,112 +1296,124 @@ html[lang='pt-br'] .unblockable:before {content: 'INDEFENSAVEL';}
 }
 
 html[lang='en'] .damage:before {content: 'DAMAGE';}
-html[lang='fr'] .damage:before {content: 'D\00c9 G\00c2 TS';}
-html[lang='es'] .damage:before {content: 'DA\00d1 O';}
-html[lang='ru'] .damage:before {content: '\0423 \0420 \041e \041d ';}
 html[lang='ja'] .damage:before {content: '\30c0 \30e1 \30fc \30b8 :';}
+html[lang='fr'] .damage:before {content: 'D\00c9 G\00c2 TS';}
 html[lang='de'] .damage:before {content: 'SCHADEN';}
+html[lang='es'] .damage:before {content: 'DA\00d1 O';}
 html[lang='ko'] .damage:before {content: '\d53c \d574 \b7c9 ';}
+html[lang='zh-cn'] .damage:before {content: '\4f24 \5bb3 ';}
+html[lang='ru'] .damage:before {content: '\0423 \0420 \041e \041d ';}
 html[lang='pt-br'] .damage:before {content: 'DANO';}
 
 html[lang='en'] .none:before {content: 'NONE';}
-html[lang='fr'] .none:before {content: 'VIDE';}
-html[lang='es'] .none:before {content: 'NADA';}
-html[lang='ru'] .none:before {content: '\041e \0422 \0421 \0423 \0422 \0421 \0422 \0412 \0423 \0415 \0422 ';}
 html[lang='ja'] .none:before {content: '\306a \3057 ';}
+html[lang='fr'] .none:before {content: 'VIDE';}
 html[lang='de'] .none:before {content: 'KEINER';}
+html[lang='es'] .none:before {content: 'NADA';}
 html[lang='ko'] .none:before {content: '\c5c6 \c74c ';}
+html[lang='zh-cn'] .none:before {content: '\65e0 ';}
+html[lang='ru'] .none:before {content: '\041e \0422 \0421 \0423 \0422 \0421 \0422 \0412 \0423 \0415 \0422 ';}
 html[lang='pt-br'] .none:before {content: 'NENHUM';}
 
 html[lang='en'] .very-low:before {content: 'VERY LOW';}
-html[lang='fr'] .very-low:before {content: 'TR\00c8 S FAIBLE';}
-html[lang='es'] .very-low:before {content: 'MUY BAJO';}
-html[lang='ru'] .very-low:before {content: '\041e \0427 \0415 \041d \042c  \041d \0418 \0417 \041a \041e \0415 ';}
 html[lang='ja'] .very-low:before {content: '\3068 \3066 \3082 \4f4e \3044 ';}
+html[lang='fr'] .very-low:before {content: 'TR\00c8 S FAIBLE';}
 html[lang='de'] .very-low:before {content: 'MINIMAL';}
+html[lang='es'] .very-low:before {content: 'MUY BAJO';}
 html[lang='ko'] .very-low:before {content: '\c544 \c8fc  \b0ae \c74c ';}
+html[lang='zh-cn'] .very-low:before {content: '\975e \5e38 \4f4e ';}
+html[lang='ru'] .very-low:before {content: '\041e \0427 \0415 \041d \042c  \041d \0418 \0417 \041a \041e \0415 ';}
 html[lang='pt-br'] .very-low:before {content: 'MUITO FRACO';}
 
 html[lang='en'] .low:before {content: 'LOW';}
-html[lang='fr'] .low:before {content: 'FAIBLE';}
-html[lang='es'] .low:before {content: 'BAJO';}
-html[lang='ru'] .low:before {content: '\041d \0418 \0417 \041a \041e \0415 ';}
 html[lang='ja'] .low:before {content: '\4f4e \3044 ';}
+html[lang='fr'] .low:before {content: 'FAIBLE';}
 html[lang='de'] .low:before {content: 'GERING';}
+html[lang='es'] .low:before {content: 'BAJO';}
 html[lang='ko'] .low:before {content: '\c57d \d568 ';}
+html[lang='zh-cn'] .low:before {content: '\4f4e ';}
+html[lang='ru'] .low:before {content: '\041d \0418 \0417 \041a \041e \0415 ';}
 html[lang='pt-br'] .low:before {content: 'FRACO';}
 
 html[lang='en'] .medium:before {content: 'MED';}
-html[lang='fr'] .medium:before {content: 'MOYEN';}
-html[lang='es'] .medium:before {content: 'MEDIO';}
-html[lang='ru'] .medium:before {content: '\0421 \0420 \0415 \0414 \041d \0415 \0415 ';}
 html[lang='ja'] .medium:before {content: '\4e2d \7a0b \5ea6 ';}
+html[lang='fr'] .medium:before {content: 'MOYEN';}
 html[lang='de'] .medium:before {content: 'MITTEL';}
+html[lang='es'] .medium:before {content: 'MEDIO';}
 html[lang='ko'] .medium:before {content: '\bcf4 \d1b5 ';}
+html[lang='zh-cn'] .medium:before {content: '\4e2d \7b49 ';}
+html[lang='ru'] .medium:before {content: '\0421 \0420 \0415 \0414 \041d \0415 \0415 ';}
 html[lang='pt-br'] .medium:before {content: 'M\00c9 DIO';}
 
 html[lang='en'] .high:before {content: 'HIGH';}
-html[lang='fr'] .high:before {content: 'HAUT';}
-html[lang='es'] .high:before {content: 'ALTO';}
-html[lang='ru'] .high:before {content: '\0412 \042b \0421 \041e \041a \041e \0415 ';}
 html[lang='ja'] .high:before {content: '\9ad8 \3044 ';}
+html[lang='fr'] .high:before {content: 'HAUT';}
 html[lang='de'] .high:before {content: 'HOCH';}
+html[lang='es'] .high:before {content: 'ALTO';}
 html[lang='ko'] .high:before {content: '\ac15 \d568 ';}
+html[lang='zh-cn'] .high:before {content: '\9ad8 ';}
+html[lang='ru'] .high:before {content: '\0412 \042b \0421 \041e \041a \041e \0415 ';}
 html[lang='pt-br'] .high:before {content: 'FORTE';}
 
 html[lang='en'] .very-high:before {content: 'VERY HIGH';}
-html[lang='fr'] .very-high:before {content: 'TR\00c8 S HAUT';}
-html[lang='es'] .very-high:before {content: 'MUY ALTO';}
-html[lang='ru'] .very-high:before {content: '\041e \0427 \0415 \041d \042c  \0412 \042b \0421 \041e \041a \041e \0415 ';}
 html[lang='ja'] .very-high:before {content: '\3068 \3066 \3082 \9ad8 \3044 ';}
+html[lang='fr'] .very-high:before {content: 'TR\00c8 S HAUT';}
 html[lang='de'] .very-high:before {content: 'EXTREM';}
+html[lang='es'] .very-high:before {content: 'MUY ALTO';}
 html[lang='ko'] .very-high:before {content: '\b9e4 \c6b0  \ac15 \d568 ';}
+html[lang='zh-cn'] .very-high:before {content: '\975e \5e38 \9ad8 ';}
+html[lang='ru'] .very-high:before {content: '\041e \0427 \0415 \041d \042c  \0412 \042b \0421 \041e \041a \041e \0415 ';}
 html[lang='pt-br'] .very-high:before {content: 'MUITO FORTE';}
 
 html[lang='en'] .ultra:before {content: 'ULTRA';}
-html[lang='fr'] .ultra:before {content: 'ULTRA';}
-html[lang='es'] .ultra:before {content: 'ULTRA';}
-html[lang='ru'] .ultra:before {content: '\0423 \041b \042c \0422 \0420 \0410 ';}
 html[lang='ja'] .ultra:before {content: '\6700 \9ad8 ';}
+html[lang='fr'] .ultra:before {content: 'ULTRA';}
 html[lang='de'] .ultra:before {content: 'ULTRA';}
+html[lang='es'] .ultra:before {content: 'ULTRA';}
 html[lang='ko'] .ultra:before {content: '\cd08 \ac15 \b825 ';}
+html[lang='zh-cn'] .ultra:before {content: '\8d85 \9ad8 ';}
+html[lang='ru'] .ultra:before {content: '\0423 \041b \042c \0422 \0420 \0410 ';}
 html[lang='pt-br'] .ultra:before {content: 'ULTRA';}
 
 html[lang='en'] .cooldown:before {content: 'COOLDOWN';}
-html[lang='fr'] .cooldown:before {content: 'REFROIDISSEMENT';}
-html[lang='es'] .cooldown:before {content: 'RECARGA';}
-html[lang='ru'] .cooldown:before {content: '\041f \0415 \0420 \0415 \0417 \0410 \0420 \042f \0414 \041a \0410 ';}
 html[lang='ja'] .cooldown:before {content: '\30af \30fc \30eb \30c0 \30a6 \30f3 :';}
+html[lang='fr'] .cooldown:before {content: 'REFROIDISSEMENT';}
 html[lang='de'] .cooldown:before {content: 'ABKLINGZEIT';}
+html[lang='es'] .cooldown:before {content: 'RECARGA';}
 html[lang='ko'] .cooldown:before {content: '\c7ac \c0ac \c6a9  \b300 \ae30  \c2dc \ac04 ';}
+html[lang='zh-cn'] .cooldown:before {content: '\51b7 \5374 \65f6 \95f4 ';}
+html[lang='ru'] .cooldown:before {content: '\041f \0415 \0420 \0415 \0417 \0410 \0420 \042f \0414 \041a \0410 ';}
 html[lang='pt-br'] .cooldown:before {content: 'REATIVA\00c7 \00c3 O';}
 
 html[lang='en'] .seconds:before {content: 'seconds';}
-html[lang='fr'] .seconds:before {content: 'secondes';}
-html[lang='es'] .seconds:before {content: 'segundos';}
-html[lang='ru'] .seconds:before {content: '\0441 \0435 \043a \0443 \043d \0434 ';}
 html[lang='ja'] .seconds:before {content: '\79d2 ';}
+html[lang='fr'] .seconds:before {content: 'secondes';}
 html[lang='de'] .seconds:before {content: 'sekunden';}
+html[lang='es'] .seconds:before {content: 'segundos';}
 html[lang='ko'] .seconds:before {content: '\cd08 ';}
+html[lang='zh-cn'] .seconds:before {content: '\79d2 ';}
+html[lang='ru'] .seconds:before {content: '\0441 \0435 \043a \0443 \043d \0434 ';}
 html[lang='pt-br'] .seconds:before {content: 'segundos';}
 
 /*
 html[lang='en'] .upgrade-price:before {content: 'UPGRADE';}
-html[lang='fr'] .upgrade-price:before {content: 'AM\00c9 LIORER';}
-html[lang='es'] .upgrade-price:before {content: 'MEJORAR';}
-html[lang='ru'] .upgrade-price:before {content: '\0423 \041b \0423 \0427 \0428 \0415 \041d \0418 \0415 ';}
 html[lang='ja'] .upgrade-price:before {content: '\30a2 \30c3 \30d7 \30b0 \30ec \30fc \30c9 ';}
+html[lang='fr'] .upgrade-price:before {content: 'AM\00c9 LIORER';}
 html[lang='de'] .upgrade-price:before {content: 'VERBESSERN';}
+html[lang='es'] .upgrade-price:before {content: 'MEJORAR';}
 html[lang='ko'] .upgrade-price:before {content: '\c5c5 \adf8 \b808 \c774 \b4dc ';}
+html[lang='zh-cn'] .upgrade-price:before {content: '\5347 \7ea7 ';}
+html[lang='ru'] .upgrade-price:before {content: '\0423 \041b \0423 \0427 \0428 \0415 \041d \0418 \0415 ';}
 html[lang='pt-br'] .upgrade-price:before {content: 'MELHORAR';}
 
 html[lang='en'] .sell-price:before {content: 'SELL';}
-html[lang='fr'] .sell-price:before {content: 'VENDRE';}
-html[lang='es'] .sell-price:before {content: 'VENDER';}
-html[lang='ru'] .sell-price:before {content: '\041f \0420 \041e \0414 \0410 \0422 \042c ';}
 html[lang='ja'] .sell-price:before {content: '\58f2 \308b ';}
+html[lang='fr'] .sell-price:before {content: 'VENDRE';}
 html[lang='de'] .sell-price:before {content: 'VERKAUFEN';}
+html[lang='es'] .sell-price:before {content: 'VENDER';}
 html[lang='ko'] .sell-price:before {content: '\d314 \ae30 ';}
+html[lang='zh-cn'] .sell-price:before {content: '\51fa \552e ';}
+html[lang='ru'] .sell-price:before {content: '\041f \0420 \041e \0414 \0410 \0422 \042c ';}
 html[lang='pt-br'] .sell-price:before {content: 'VENDER';}
 */
 
@@ -1415,12 +1435,13 @@ html[lang='pt-br'] .sell-price:before {content: 'VENDER';}
 }
 
 html[lang='en'] .ca .ability-type:before {content: 'CHARACTER ABILITY';}
-html[lang='fr'] .ca .ability-type:before {content: 'CAPACIT\00c9  DU PERSONNAGE';}
-html[lang='es'] .ca .ability-type:before {content: 'HABILIDAD DE PERSONAJE';}
-html[lang='ru'] .ca .ability-type:before {content: '\0423 \041c \0415 \041d \0418 \0415  \041f \0415 \0420 \0421 \041e \041d \0410 \0416 \0410 ';}
 html[lang='ja'] .ca .ability-type:before {content: '\30ad \30e3 \30e9 \30af \30bf \30fc \306e \30a2 \30d3 \30ea \30c6 \30a3 ';}
+html[lang='fr'] .ca .ability-type:before {content: 'CAPACIT\00c9  DU PERSONNAGE';}
 html[lang='de'] .ca .ability-type:before {content: 'CHARAKTER-FERTIGKEIT';}
+html[lang='es'] .ca .ability-type:before {content: 'HABILIDAD DE PERSONAJE';}
 html[lang='ko'] .ca .ability-type:before {content: '\ce90 \b9ad \d130  \b2a5 \b825 ';}
+html[lang='zh-cn'] .ca .ability-type:before {content: '\89d2 \8272 \6280 ';}
+html[lang='ru'] .ca .ability-type:before {content: '\0423 \041c \0415 \041d \0418 \0415  \041f \0415 \0420 \0421 \041e \041d \0410 \0416 \0410 ';}
 html[lang='pt-br'] .ca .ability-type:before {content: 'HABILIDADE DO PERSONAGEM';}
 
 .ability.sa {
@@ -1428,12 +1449,13 @@ html[lang='pt-br'] .ca .ability-type:before {content: 'HABILIDADE DO PERSONAGEM'
 }
 
 html[lang='en'] .sa .ability-type:before {content: 'Signature Ability';}
-html[lang='fr'] .sa .ability-type:before {content: 'Aptitude Signature';}
-html[lang='es'] .sa .ability-type:before {content: 'Habilidad caracter\00ed stica';}
-html[lang='ru'] .sa .ability-type:before {content: '\041a \043b \044e \0447 \0435 \0432 \043e \0435  \0443 \043c \0435 \043d \0438 \0435 ';}
 html[lang='ja'] .sa .ability-type:before {content: '\56fa \6709 \80fd \529b ';}
+html[lang='fr'] .sa .ability-type:before {content: 'Aptitude Signature';}
 html[lang='de'] .sa .ability-type:before {content: 'Markenzeichen';}
+html[lang='es'] .sa .ability-type:before {content: 'Habilidad caracter\00ed stica';}
 html[lang='ko'] .sa .ability-type:before {content: '\ace0 \c720  \b2a5 \b825 ';}
+html[lang='zh-cn'] .sa .ability-type:before {content: '\62db \724c \6280 ';}
+html[lang='ru'] .sa .ability-type:before {content: '\041a \043b \044e \0447 \0435 \0432 \043e \0435  \0443 \043c \0435 \043d \0438 \0435 ';}
 html[lang='pt-br'] .sa .ability-type:before {content: 'Habilidade Caracter\00ed stica';}
 
 .ability.ma {
@@ -1441,12 +1463,13 @@ html[lang='pt-br'] .sa .ability-type:before {content: 'Habilidade Caracter\00ed 
 }
 
 html[lang='en'] .ma .ability-type:before {content: 'MARQUEE ABILITY';}
-html[lang='fr'] .ma .ability-type:before {content: 'APTITUDE R\00c9 PUTATION';}
-html[lang='es'] .ma .ability-type:before {content: 'CAPACIDAD DE CARTEL';}
-html[lang='ru'] .ma .ability-type:before {content: '\0423 \041d \0418 \041a . \0421 \041f \041e \0421 \041e \0411 \041d .';}
 html[lang='ja'] .ma .ability-type:before {content: '\30b9 \30bf \30fc \30fb \30d1 \30ef \30fc ';}
+html[lang='fr'] .ma .ability-type:before {content: 'APTITUDE R\00c9 PUTATION';}
 html[lang='de'] .ma .ability-type:before {content: 'PRUNKFERTIGKEIT';}
+html[lang='es'] .ma .ability-type:before {content: 'CAPACIDAD DE CARTEL';}
 html[lang='ko'] .ma .ability-type:before {content: '\ad81 \adf9  \b2a5 \b825 ';}
+html[lang='zh-cn'] .ma .ability-type:before {content: '\5929 \5143 \6280 ';}
+html[lang='ru'] .ma .ability-type:before {content: '\0423 \041d \0418 \041a . \0421 \041f \041e \0421 \041e \0411 \041d .';}
 html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 
 .ability-title {

@@ -279,6 +279,11 @@ if __name__ =='__main__':
 
     # study_sample(monolith, mono_char_keys, 'oMai')
 
+    # for key in monolith:
+    #     if 'SA_Valentine_VAR_DeadlyFury'.lower() in str(monolith[key]).lower():
+    #         print(key)
+    # monolith['15549']
+
     fighters, variants, sm_set, bb_set, corpus_keys = build_data(monolith, mono_char_keys)
 
     for language in corpus:
