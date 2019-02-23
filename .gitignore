@@ -1,5 +1,6 @@
 __pycache__
 *.m~
+*INSTRUCTIONS.md
 data_processing/sgm_exports
 data_processing/common.json
 data_processing/study.json
