@@ -271,6 +271,16 @@ html[lang='zh-cn'] .move-gallery:before {content: '\62db \5f0f \753b \5eca ';}
 html[lang='ru'] .move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
 html[lang='pt-br'] .move-gallery:before {content: 'Galeria de Golpes';}
 
+html[lang='en'] .tier-list:before {content: 'Gallery Tier List';}
+html[lang='ja'] .tier-list:before {content: '\30ae \30e3 \30e9 \30ea \30fc \30c6 \30a3 \30a2 \30ea \30b9 \30c8 ';}
+html[lang='fr'] .tier-list:before {content: 'liste des galeries';}
+html[lang='de'] .tier-list:before {content: 'Galerie Tier Liste';}
+html[lang='es'] .tier-list:before {content: 'lista de niveles de la galer\00ed a';}
+html[lang='ko'] .tier-list:before {content: '\ac24 \b7ec \b9ac  \acc4 \ce35  \baa9 \b85d ';}
+html[lang='zh-cn'] .tier-list:before {content: '\753b \5eca \7b49 \7ea7 \5217 \8868 ';}
+html[lang='ru'] .tier-list:before {content: '\0441 \043f \0438 \0441 \043e \043a  \0443 \0440 \043e \0432 \043d \0435 \0439  \0433 \0430 \043b \0435 \0440 \0435 \0438 ';}
+html[lang='pt-br'] .tier-list:before {content: 'lista de camadas da galeria';}
+
 .cinematic.banner {
     font-size: xx-large;
 }
@@ -677,6 +687,44 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 @media (max-width: 750px) {.zoomed-out #collection {grid-template-columns: repeat(2, minmax(0, 1fr));}}
 @media (max-width: 500px) {.zoomed-out #collection {grid-template-columns: repeat(1, minmax(0, 1fr));}}
 
+/* TIER LIST */
+
+#tier-table {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.loading #tier-table {
+    display: none;
+}
+
+#tier-table tr:nth-child(2n) td:nth-child(2n) {
+    background: #333;
+}
+#tier-table tr:nth-child(2n) td:nth-child(2n + 3),
+#tier-table tr:nth-child(2n + 3) td:nth-child(2n) {
+    background: #666;
+}
+#tier-table tr:nth-child(2n + 3) td:nth-child(2n + 3) {
+    background: #999;
+}
+
+#tier-table tr td:nth-child(n + 2) img {
+    width: 64px;
+    margin: -30% -5% -10% -5%;
+}
+
+#offense-tiers,
+#defense-tiers {
+    cursor: pointer;
+}
+
+.loading #offense-tiers,
+.loading #defense-tiers {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 /* SEARCH */
 
 #search-menu {
@@ -1051,12 +1099,12 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: none;
 }
 
-.offense, .defense {
+div.offense, div.defense {
     margin: auto;
     flex: 1;
 }
 
-.offense:before, .defense:before {
+div.offense:before, div.defense:before {
     font-size: initial;
     display: block;
 }
@@ -1087,15 +1135,15 @@ html[lang='pt-br'] .defense:before, html[lang='pt-br'] #sort-defense + label:bef
     display: block;
 }
 
-html[lang='en'] .offense:after, html[lang='en'] .defense:after {content: attr(data-count) ' votes';}
-html[lang='ja'] .offense:after, html[lang='ja'] .defense:after {content: attr(data-count) ' \6295 \7968 ';}
-html[lang='fr'] .offense:after, html[lang='fr'] .defense:after {content: attr(data-count) ' votes';}
-html[lang='de'] .offense:after, html[lang='de'] .defense:after {content: attr(data-count) ' stimmen';}
-html[lang='es'] .offense:after, html[lang='es'] .defense:after {content: attr(data-count) ' votos';}
-html[lang='ko'] .offense:after, html[lang='ko'] .defense:after {content: attr(data-count) ' \d22c \d45c \d558 \b2e4 ';}
-html[lang='zh-cn'] .offense:after, html[lang='zh-cn'] .defense:after {content: attr(data-count) ' \7968 ';}
-html[lang='ru'] .offense:after, html[lang='ru'] .defense:after {content: attr(data-count) ' \0433 \043e \043b \043e \0441 \043e \0432 ';}
-html[lang='pt-br'] .offense:after, html[lang='pt-br'] .defense:after {content: attr(data-count) ' votos';}
+html[lang='en'] div.offense:after, html[lang='en'] div.defense:after {content: attr(data-count) ' votes';}
+html[lang='ja'] div.offense:after, html[lang='ja'] div.defense:after {content: attr(data-count) ' \6295 \7968 ';}
+html[lang='fr'] div.offense:after, html[lang='fr'] div.defense:after {content: attr(data-count) ' votes';}
+html[lang='de'] div.offense:after, html[lang='de'] div.defense:after {content: attr(data-count) ' stimmen';}
+html[lang='es'] div.offense:after, html[lang='es'] div.defense:after {content: attr(data-count) ' votos';}
+html[lang='ko'] div.offense:after, html[lang='ko'] div.defense:after {content: attr(data-count) ' \d22c \d45c \d558 \b2e4 ';}
+html[lang='zh-cn'] div.offense:after, html[lang='zh-cn'] div.defense:after {content: attr(data-count) ' \7968 ';}
+html[lang='ru'] div.offense:after, html[lang='ru'] div.defense:after {content: attr(data-count) ' \0433 \043e \043b \043e \0441 \043e \0432 ';}
+html[lang='pt-br'] div.offense:after, html[lang='pt-br'] div.defense:after {content: attr(data-count) ' votos';}
 
 .star {
     position: relative;
