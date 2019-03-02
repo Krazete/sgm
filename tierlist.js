@@ -111,6 +111,31 @@ function setRatings(subkey) {
     });
 }
 
+function initLanguageMenu() {
+    var buttonSet = document.getElementById("language-menu");
+    var buttons = Array.from(buttonSet.getElementsByTagName("input"));
+
+    var savedLanguage = localStorage.getItem("language") || "en";
+    var savedButton = document.getElementById(savedLanguage);
+
+    function setLanguage() {
+        var language = this.id;
+        document.documentElement.lang = language;
+        localStorage.setItem("language", language);
+    }
+
+    if (!buttons.includes(savedButton)) {
+        savedLanguage = "en";
+        savedButton = document.getElementById("en");
+    }
+    document.documentElement.lang = savedLanguage;
+    savedButton.checked = true;
+
+    for (var button of buttons) {
+        button.addEventListener("change", setLanguage);
+    }
+}
+
 function initialize() {
     var offenseTiers = document.getElementById("offense-tiers");
     var defenseTiers = document.getElementById("defense-tiers");
@@ -151,6 +176,8 @@ function initialize() {
         variants = responses[0];
         database = firebase.database();
     }).then(toggleLoadingScreen);
+
+    initLanguageMenu();
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
