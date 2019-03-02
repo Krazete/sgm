@@ -193,7 +193,7 @@ function updateRating(key, subkey, animate) {
     var stars = category.getElementsByClassName("star");
 
     try {
-        database.ref([key, subkey].join("/")).once('value').then(function (snapshot) {
+        database.ref([key, subkey].join("/")).once("value").then(function (snapshot) {
             var votesByID = snapshot.val();
             var weightedTotal = 0;
             var weightedCount = 0;
@@ -313,7 +313,7 @@ function initCollection(responses) {
                         portrait.src = [
                             "image/portrait",
                             variants[key].base,
-                            key + '.png'
+                            key + ".png"
                         ].join("/");
                         portrait.addEventListener("error", handleMissingPortrait);
                     backdrop.appendChild(portrait);
@@ -457,7 +457,7 @@ function initCollection(responses) {
                 abilityTitle.appendChild(abilityName);
                 abilityTitle.addEventListener("click", toggleAbility);
             ability.appendChild(abilityTitle);
-            if ('description' in abilityData) { /* character ability */
+            if ("description" in abilityData) { /* character ability */
                 var description = document.createElement("div");
                     description.className = "ca-0 description";
                 ability.appendChild(description);

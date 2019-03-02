@@ -63,7 +63,7 @@ function initCollection(responses) {
                 symbol.src = [
                     "image/move",
                     moves[key].base,
-                    ['b', 's', 'g'][moves[key].tier],
+                    ["b", "s", "g"][moves[key].tier],
                     moves[key].title + ".png"
                 ].join("/");
             badge.appendChild(symbol);
