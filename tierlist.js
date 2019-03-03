@@ -81,6 +81,46 @@ function getRatings(subkey) {
     return Promise.all(promises);
 }
 
+
+function handleMissingPortrait() {
+    var portrait = this;
+    var backdrop = portrait.parentElement;
+    var avatar = backdrop.parentElement.parentElement;
+
+    portrait.classList.add("hidden");
+    avatar.classList.add("missing-portrait");
+}
+
+var tiers = ["bronze", "silver", "gold", "diamond"];
+var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
+
+function createAvatar(key) {
+    var avatar = document.createElement("a");
+        avatar.className = [
+            "avatar",
+            tiers[variants[key].tier],
+            elements[variants[key].element]
+        ].join(" ");
+        avatar.target = "_blank";
+        avatar.href = "/#" + key;
+        var frame = document.createElement("div");
+            frame.className = "frame";
+            var backdrop = document.createElement("div");
+                backdrop.className = "backdrop";
+                var portrait = document.createElement("img");
+                    portrait.className = "portrait";
+                    portrait.src = [
+                        "image/portrait",
+                        variants[key].base,
+                        key + ".png"
+                    ].join("/");
+                    portrait.addEventListener("error", handleMissingPortrait);
+                backdrop.appendChild(portrait);
+            frame.appendChild(backdrop);
+        avatar.appendChild(frame);
+    return avatar;
+}
+
 function setRatings(subkey) {
     var nonFirst = [false, false];
     for (var row of document.getElementById("tier-table").rows) {
@@ -97,16 +137,12 @@ function setRatings(subkey) {
     }
     return getRatings(subkey).then(function () {
         for (var key in variants) {
-            var tier = Math.max(0, Math.floor((variants[key][subkey].rating - 1) / 4 * 11));
+            var grade = Math.max(0, variants[key][subkey].rating - 1) / 4;
+            var tier = Math.floor(11 * grade);
             var row = document.getElementsByClassName(variants[key].base)[0];
             var cell = row.cells[tier];
-            var img = new Image();
-            img.src = [
-                "image/portrait",
-                variants[key].base,
-                key + ".png"
-            ].join("/");
-            cell.appendChild(img);
+            var avatar = createAvatar(key);
+            cell.appendChild(avatar);
         }
     });
 }

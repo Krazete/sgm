@@ -693,6 +693,7 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
     width: 100%;
     text-align: center;
     vertical-align: middle;
+    white-space: pre;
 }
 .loading #tier-table {
     display: none;
@@ -709,9 +710,17 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
     background: #999;
 }
 
-#tier-table tr td:nth-child(n + 2) img {
-    width: 64px;
-    margin: -30% -5% -10% -5%;
+#tier-table .avatar {
+    width: auto;
+    display: inline-block;
+    margin: 5px;
+}
+
+#tier-table .frame {
+    width: 48px;
+    height: 48px;
+    padding: 3px;
+    margin: auto;
 }
 
 #offense-tiers,
