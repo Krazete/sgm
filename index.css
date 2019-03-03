@@ -911,6 +911,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .avatar {
     width: 100%;
     grid-area: img;
+    border-radius: 50%;
     margin: 10px auto 0 auto;
 }
 
