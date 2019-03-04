@@ -271,15 +271,15 @@ html[lang='zh-cn'] .move-gallery:before {content: '\62db \5f0f \753b \5eca ';}
 html[lang='ru'] .move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
 html[lang='pt-br'] .move-gallery:before {content: 'Galeria de Golpes';}
 
-html[lang='en'] .tier-list:before {content: 'Gallery Tier List';}
-html[lang='ja'] .tier-list:before {content: '\30ae \30e3 \30e9 \30ea \30fc \30c6 \30a3 \30a2 \30ea \30b9 \30c8 ';}
-html[lang='fr'] .tier-list:before {content: 'liste des galeries';}
-html[lang='de'] .tier-list:before {content: 'Galerie Tier Liste';}
-html[lang='es'] .tier-list:before {content: 'lista de niveles de la galer\00ed a';}
-html[lang='ko'] .tier-list:before {content: '\ac24 \b7ec \b9ac  \acc4 \ce35  \baa9 \b85d ';}
-html[lang='zh-cn'] .tier-list:before {content: '\753b \5eca \7b49 \7ea7 \5217 \8868 ';}
-html[lang='ru'] .tier-list:before {content: '\0441 \043f \0438 \0441 \043e \043a  \0443 \0440 \043e \0432 \043d \0435 \0439  \0433 \0430 \043b \0435 \0440 \0435 \0438 ';}
-html[lang='pt-br'] .tier-list:before {content: 'lista de camadas da galeria';}
+html[lang='en'] .gallery-ratings:before {content: 'Gallery Ratings';}
+html[lang='ja'] .gallery-ratings:before {content: '\30ae \30e3 \30e9 \30ea \30fc \306e \8a55 \4fa1 ';}
+html[lang='fr'] .gallery-ratings:before {content: 'Notes de la Galerie';}
+html[lang='de'] .gallery-ratings:before {content: 'Galerie-Bewertungen';}
+html[lang='es'] .gallery-ratings:before {content: 'Clasificaciones de la Galer\00ed a';}
+html[lang='ko'] .gallery-ratings:before {content: '\ac24 \b7ec \b9ac  \b4f1 \ae09 ';}
+html[lang='zh-cn'] .gallery-ratings:before {content: '\753b \5eca \8bc4 \5206 ';}
+html[lang='ru'] .gallery-ratings:before {content: '\0420 \0435 \0439 \0442 \0438 \043d \0433 \0438  \0413 \0430 \043b \0435 \0440 \0435 \0438 ';}
+html[lang='pt-br'] .gallery-ratings:before {content: 'Classifica\00e7 \00f5 es da Galeria';}
 
 .cinematic.banner {
     font-size: xx-large;
@@ -693,10 +693,13 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
     width: 100%;
     text-align: center;
     vertical-align: middle;
-    white-space: pre;
 }
 .loading #tier-table {
     display: none;
+}
+
+#tier-table td.tagged:before {
+    background: url(image/official/star01.png);
 }
 
 #tier-table tr:nth-child(2n) td:nth-child(2n) {

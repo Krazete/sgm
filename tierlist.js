@@ -138,7 +138,7 @@ function setRatings(subkey) {
     return getRatings(subkey).then(function () {
         for (var key in variants) {
             var grade = Math.max(0, variants[key][subkey].rating - 1) / 4;
-            var tier = Math.floor(11 * grade);
+            var tier = Math.floor(10 * grade);
             var row = document.getElementsByClassName(variants[key].base)[0];
             var cell = row.cells[tier];
             var avatar = createAvatar(key);
