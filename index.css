@@ -726,13 +726,13 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
     margin: auto;
 }
 
-#offense-tiers,
-#defense-tiers {
+#offense-ratings,
+#defense-ratings {
     cursor: pointer;
 }
 
-.loading #offense-tiers,
-.loading #defense-tiers {
+.loading #offense-ratings,
+.loading #defense-ratings {
     opacity: 0.5;
     pointer-events: none;
 }
