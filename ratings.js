@@ -48,17 +48,19 @@ function getRating(key, subkey) {
         var count = 0;
         var votesByIP = {};
         for (var id in votesByID) {
-            if (votesByID[id].ip in votesByIP) {
-                votesByIP[votesByID[id].ip].subtotal += votesByID[id].vote;
-                votesByIP[votesByID[id].ip].subcount++;
-            }
-            else {
-                votesByIP[votesByID[id].ip] = {
-                    "subtotal": votesByID[id].vote,
-                    "subcount": 1
+            if ([1, 2, 3, 4, 5].includes(votesByID[id].vote)) {
+                if (votesByID[id].ip in votesByIP) {
+                    votesByIP[votesByID[id].ip].subtotal += votesByID[id].vote;
+                    votesByIP[votesByID[id].ip].subcount++;
                 }
+                else {
+                    votesByIP[votesByID[id].ip] = {
+                        "subtotal": votesByID[id].vote,
+                        "subcount": 1
+                    }
+                }
+                count++;
             }
-            count++;
         }
         for (var ip in votesByIP) {
             var weight = Math.log(Math.E * votesByIP[ip].subcount);
