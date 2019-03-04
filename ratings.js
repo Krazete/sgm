@@ -140,10 +140,9 @@ function setRatings(subkey) {
     }
     return getRatings(subkey).then(function () {
         for (var key in variants) {
-            var grade = Math.max(0, variants[key][subkey].rating - 1) / 4;
-            var cellIndex = Math.floor(10 * grade);
+            var grade = Math.max(1, Math.round(2 * variants[key][subkey].rating));
             var row = document.getElementsByClassName(variants[key].base)[0];
-            var cell = row.cells[cellIndex];
+            var cell = row.cells[grade];
             var avatar = createAvatar(key);
             cell.appendChild(avatar);
         }
