@@ -13,7 +13,7 @@ If the website version is 3.0.0 but the latest game version is 3.0.2, the websit
 ### Language
 
 All of the language options available in the game are available on the website.
-All translations are an exact copy of the text used in the corresponding version of the game (except for the words `Gallery`, `Variant`, `Name`, `You`, and `Votes`, which Google Translate helped with).
+All translations are an exact copy of the text used in the corresponding version of the game (except for the words `Gallery`, `Ratings`, `Variant`, `Name`, `Votes`, and `You`, which Google Translate helped with).
 
 *Your chosen language option is saved in your browser's local storage for future visits.*
 
@@ -180,7 +180,7 @@ Each branch of this repository contains a different version of this gallery.
 
 * v4 (Rating System): A rating system has been added, along with a rating toggle button to hide ratings and return to the original, more compact design.
 
-* v5 (Asset Upgrade): Portraits are now supplied by HVS and the masks have been refined. The move gallery is also populated with images and previously missing move entries have been added. Game version has been updated to 3.1.0.
+* v5 (Asset Upgrade): Portraits are now supplied by HVS and the masks have been refined. The move gallery is also populated with images and previously missing move entries have been added. Game version has been updated to 3.1.0. A new Gallery Ratings page has been added to show all ratings in a more condensed format.
 
 ## Issues
 
