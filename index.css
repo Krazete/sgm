@@ -689,37 +689,37 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 
 /* TIER LIST */
 
-#tier-table {
+#ratings-table {
     width: 100%;
     text-align: center;
     vertical-align: middle;
 }
-.loading #tier-table {
+.loading #ratings-table {
     display: none;
 }
 
-#tier-table td.tagged:before {
+#ratings-table td.tagged:before {
     background: url(image/official/star01.png);
 }
 
-#tier-table tr:nth-child(2n) td:nth-child(2n) {
+#ratings-table tr:nth-child(2n) td:nth-child(2n) {
     background: #333;
 }
-#tier-table tr:nth-child(2n) td:nth-child(2n + 3),
-#tier-table tr:nth-child(2n + 3) td:nth-child(2n) {
+#ratings-table tr:nth-child(2n) td:nth-child(2n + 3),
+#ratings-table tr:nth-child(2n + 3) td:nth-child(2n) {
     background: #666;
 }
-#tier-table tr:nth-child(2n + 3) td:nth-child(2n + 3) {
+#ratings-table tr:nth-child(2n + 3) td:nth-child(2n + 3) {
     background: #999;
 }
 
-#tier-table .avatar {
+#ratings-table .avatar {
     width: auto;
     display: inline-block;
     margin: 5px;
 }
 
-#tier-table .frame {
+#ratings-table .frame {
     width: 48px;
     height: 48px;
     padding: 3px;

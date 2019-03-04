@@ -123,7 +123,7 @@ function createAvatar(key) {
 
 function setRatings(subkey) {
     var nonFirst = [false, false];
-    for (var row of document.getElementById("tier-table").rows) {
+    for (var row of document.getElementById("ratings-table").rows) {
         if (nonFirst[0]) {
             nonFirst[1] = false;
             for (var cell of row.cells) {
@@ -138,9 +138,9 @@ function setRatings(subkey) {
     return getRatings(subkey).then(function () {
         for (var key in variants) {
             var grade = Math.max(0, variants[key][subkey].rating - 1) / 4;
-            var tier = Math.floor(10 * grade);
+            var cellIndex = Math.floor(10 * grade);
             var row = document.getElementsByClassName(variants[key].base)[0];
-            var cell = row.cells[tier];
+            var cell = row.cells[cellIndex];
             var avatar = createAvatar(key);
             cell.appendChild(avatar);
         }
@@ -173,25 +173,25 @@ function initLanguageMenu() {
 }
 
 function initialize() {
-    var offenseTiers = document.getElementById("offense-tiers");
-    var defenseTiers = document.getElementById("defense-tiers");
+    var offenseRatings = document.getElementById("offense-ratings");
+    var defenseRatings = document.getElementById("defense-ratings");
 
     function setOffense() {
-        offenseTiers.classList.add("gold-gradient");
-        defenseTiers.classList.remove("gold-gradient");
+        offenseRatings.classList.add("gold-gradient");
+        defenseRatings.classList.remove("gold-gradient");
         toggleLoadingScreen(true);
         setRatings("offense").then(toggleLoadingScreen);
     }
 
     function setDefense() {
-        offenseTiers.classList.remove("gold-gradient");
-        defenseTiers.classList.add("gold-gradient");
+        offenseRatings.classList.remove("gold-gradient");
+        defenseRatings.classList.add("gold-gradient");
         toggleLoadingScreen(true);
         setRatings("defense").then(toggleLoadingScreen);
     }
 
-    offenseTiers.addEventListener("click", setOffense);
-    defenseTiers.addEventListener("click", setDefense);
+    offenseRatings.addEventListener("click", setOffense);
+    defenseRatings.addEventListener("click", setDefense);
 
     toggleLoadingScreen(true);
     Promise.all([
