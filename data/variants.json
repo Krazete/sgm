@@ -5816,8 +5816,8 @@
                 "lifebar": 1445
             },
             {
-                "attack": 548,
-                "lifebar": 2601
+                "attack": 432,
+                "lifebar": 2624
             }
         ],
         "name": "Char_Cerebella_B_V2_Name",
@@ -7705,8 +7705,8 @@
                 "lifebar": 1458
             },
             {
-                "attack": 432,
-                "lifebar": 2624
+                "attack": 548,
+                "lifebar": 2601
             }
         ],
         "name": "Char_Cerebella_B_V1_Name",
