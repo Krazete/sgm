@@ -138,8 +138,14 @@ function setRatings(subkey) {
         }
         nonFirst[0] = true;
     }
+    function byRating(a, b) {
+        var aRating = variants[a][subkey].rating;
+        var bRating = variants[b][subkey].rating;
+        return aRating - bRating;
+    }
     return getRatings(subkey).then(function () {
-        for (var key in variants) {
+        var sortedKeys = Object.keys(variants).sort(byRating);
+        for (var key of sortedKeys) {
             var grade = Math.max(1, Math.round(2 * variants[key][subkey].rating));
             var row = document.getElementsByClassName(variants[key].base)[0];
             var cell = row.cells[grade];
