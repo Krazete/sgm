@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/19e38262-723c-4c46-a279-dcb713ed1b64/deploy-status)](https://app.netlify.com/sites/sgm/deploys)
+
 # Skullgirls Mobile Fighter Gallery
 A character gallery for Skullgirls Mobile.
 View the stats and abilities of every fighter variant, translated in any language offered in the game.
