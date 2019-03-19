@@ -143,8 +143,8 @@ paIDs('Silent Scope') = 'Parasoul_BB1_T1_SilentScope_Title';
 
 peIDs = containers.Map('KeyType', 'char', 'ValueType', 'char');
 peIDs('Argus Agony') = 'Peacock_BB5_T1_ArgusAgony_Title';
-peIDs('Bandwagon Rushdown') = 'Char_Peacock_SM2_Title';
-peIDs('BANG, BANG, BANG!') = 'Peacock_BB4_T2_BandWagon_Title';
+peIDs('Bandwagon Rushdown') = 'Peacock_BB4_T2_BandWagon_Title';
+peIDs('BANG, BANG, BANG!') = 'Char_Peacock_SM2_Title';
 peIDs('Boxcar George') = 'Char_Peacock_SM5_Title';
 peIDs('Burst') = 'SA_General_Burst_Title';
 peIDs('Deadly Airport') = 'Peacock_BB7_T3_Airport_Title';
