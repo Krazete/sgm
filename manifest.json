@@ -1,0 +1,22 @@
+{
+	"dir" : "ltr",
+	"lang" : "en",
+	"name" : "Skullgirls Mobile Fighter Gallery",
+	"scope" : "/",
+	"display" : "fullscreen",
+	"start_url" : "https://sgm.netlify.com/",
+	"short_name" : "SGM Gallery",
+	"theme_color" : "transparent",
+	"description" : "A character gallery for Skullgirls Mobile. View the stats and abilities of every fighter variant, translated in any language offered in the game.",
+	"orientation" : "any",
+	"background_color" : "#0f1824",
+	"related_applications" : "",
+	"prefer_related_applications" : "false",
+	"generated" : "true",
+	"icons" : [
+		{
+			"src": "https://sgm.netlify.com/image/official/Button_Modifiers.png",
+			"sizes": "125x125"
+		}
+	]
+}
