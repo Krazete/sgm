@@ -1,6 +1,6 @@
 {
 	"name": "Skullgirls Mobile Fighter Gallery",
-	"short_name": "Fighter Gallery",
+	"short_name": "SGM Gallery",
 	"description": "A character gallery for Skullgirls Mobile. View the stats and abilities of every fighter variant, translated in any language offered in the game.",
 	"start_url": "/",
 	"scope": "/",
