@@ -1,0 +1,23 @@
+{
+	"name": "Skullgirls Mobile Fighter Gallery",
+	"short_name": "Fighter Gallery",
+	"description": "A character gallery for Skullgirls Mobile. View the stats and abilities of every fighter variant, translated in any language offered in the game.",
+	"start_url": "/",
+	"scope": "/",
+	"theme_color": "#0f1824",
+	"background_color": "#0f1824",
+	"display": "standalone",
+	"orientation": "any",
+	"icons": [
+		{
+			"src": "android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
