@@ -510,6 +510,13 @@ function initFilterMenu() {
         filterCards();
     }
 
+    function pressEnter(e) {
+        if (e.keyCode == 13 || e.key == "Enter" || e.code == "Enter") {
+            searchbox.blur();
+        }
+    }
+
+    searchbox.addEventListener("keydown", pressEnter);
     searchbox.addEventListener("input", filterCards);
     searchMN.addEventListener("change", filterCards);
     searchD.addEventListener("change", filterCards);
