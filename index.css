@@ -987,7 +987,6 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .missing-portrait .backdrop {
     background: url(image/official/RandomBackground.png);
     background-size: contain;
-    cursor: pointer;
 }
 
 .backdrop.hallow1:after {

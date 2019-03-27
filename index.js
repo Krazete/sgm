@@ -281,6 +281,45 @@ function updateRating(key, subkey, animate) {
 function initCollection(responses) {
     fighters = responses[0];
     variants = responses[1];
+
+    fighters.rf = {
+        "name": "fakeRF",
+        "ca": {
+            "title": "fakeCA",
+            "description": "fakeCADes"
+        },
+        "ma": {
+            "title": "fakeEmpty",
+            "features": Array(2).fill({
+                "title": "fakeEmpty",
+                "description": "fakeEmpty",
+                "tiers": Array(11).fill().map(function (e, i) {
+                    return {"unlock": i + 1, "value": []};
+                })
+            })
+        }
+    };
+    variants.pType = {
+        "base": "rf",
+        "name": "fakePType",
+        "quote": "fakeEmpty",
+        "sa": {
+            "title": "fakeEmpty",
+            "features": Array(2).fill({
+                "description": "fakeEmpty",
+                "tiers": Array(3).fill().map(function (e, i) {
+                    return {"unlock": i + 1, "value": []};
+                })
+            })
+        },
+        "stats": Array(4).fill({
+            "attack": NaN,
+            "lifebar": NaN
+        }),
+        "tier": 0,
+        "element": 3
+    };
+
     var collection = document.getElementById("collection");
 
     var date = new Date();
@@ -592,6 +631,12 @@ function initLanguageMenu() {
 
     function updateCardConstants(response) {
         corpus = response;
+
+        corpus.fakeRF = "Robo-Fortune";
+        corpus.fakePType = "Prototype";
+        corpus.fakeCA = "Headrone";
+        corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">https://www.youtube.com/watch?v=sJpINwtu-EU</a>";
+        corpus.fakeEmpty = "Undefined";
 
         for (var card of cards) {
             updateCardConstant(card);
@@ -1302,7 +1347,7 @@ function initOptionsMenu() {
             for (var i = 0; i < maDescriptions.length; i++) {
                 var maDescription = maDescriptions[i];
                 var template = [
-                    corpus[fighters[variants[key].base].ma.features[i].title],
+                    corpus[fighters[variants[key].base].ma.features[i].title].toUpperCase(),
                     corpus[fighters[variants[key].base].ma.features[i].description]
                 ].join(" - ");
                 var substitutions = fighters[variants[key].base].ma.features[i].tiers[maRange.value - 1].value;
