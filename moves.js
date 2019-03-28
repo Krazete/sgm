@@ -467,7 +467,7 @@ function initFilterMenu() {
         searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
     }
     searchMN.checked = true;
-    filterCancel.click();
+    filterTiers[2].click();
 }
 
 function sortCards() {
