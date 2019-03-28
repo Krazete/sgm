@@ -111,7 +111,8 @@ var wikiaPaths = { /* from English corpus */
     "sCross": "Star-Crossed",
     "ink": "Inkling",
     "iLeague": "Ivy League",
-    "sOut": "Stand Out"
+    "sOut": "Stand Out",
+    "pType": "Prototype"
 };
 
 var cards = [];
