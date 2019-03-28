@@ -3,6 +3,7 @@ var userID, userIP, database;
 
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
+var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
 var wikiaPaths = { /* from English corpus */
     "nEgrets": "No Egrets",
     "tAFolks": "That's All Folks!",
@@ -858,57 +859,21 @@ function initFilterMenu() {
     var searchMA = document.getElementById("search-ma");
 
     var filterCancel = document.getElementById("filter-cancel");
-
-    var filterBronze = document.getElementById("filter-bronze");
-    var filterSilver = document.getElementById("filter-silver");
-    var filterGold = document.getElementById("filter-gold");
-    var filterDiamond = document.getElementById("filter-diamond");
-
-    var filterFire = document.getElementById("filter-fire");
-    var filterWater = document.getElementById("filter-water");
-    var filterWind = document.getElementById("filter-wind");
-    var filterLight = document.getElementById("filter-light");
-    var filterDark = document.getElementById("filter-dark");
-    var filterNeutral = document.getElementById("filter-neutral");
-
-    var filterBE = document.getElementById("filter-be");
-    var filterBB = document.getElementById("filter-bb");
-    var filterCE = document.getElementById("filter-ce");
-    var filterDO = document.getElementById("filter-do");
-    var filterEL = document.getElementById("filter-el");
-    var filterFI = document.getElementById("filter-fi");
-    var filterPW = document.getElementById("filter-pw");
-    var filterPA = document.getElementById("filter-pa");
-    var filterPE = document.getElementById("filter-pe");
-    var filterMF = document.getElementById("filter-mf");
-    var filterSQ = document.getElementById("filter-sq");
-    var filterVA = document.getElementById("filter-va");
+    var filterTiers = tiers.map(function (tier) {
+        return document.getElementById("filter-" + tier);
+    });
+    var filterElements = elements.map(function (element) {
+        return document.getElementById("filter-" + element);
+    });
+    var filterFighters = fighterIDs.map(function (fighter) {
+        return document.getElementById("filter-" + fighter);
+    });
+    var filters = [].concat(filterTiers, filterElements, filterFighters);
 
     function updateFilterCancel() {
-        if (
-            filterBronze.checked ||
-            filterSilver.checked ||
-            filterGold.checked ||
-            filterDiamond.checked ||
-            filterFire.checked ||
-            filterWater.checked ||
-            filterWind.checked ||
-            filterLight.checked ||
-            filterDark.checked ||
-            filterNeutral.checked ||
-            filterBE.checked ||
-            filterBB.checked ||
-            filterCE.checked ||
-            filterDO.checked ||
-            filterEL.checked ||
-            filterFI.checked ||
-            filterPW.checked ||
-            filterPA.checked ||
-            filterPE.checked ||
-            filterMF.checked ||
-            filterSQ.checked ||
-            filterVA.checked
-        ) {
+        if (filters.some(function (filter) {
+            return filter.checked;
+        })) {
             filterCancel.checked = false;
         }
         else {
@@ -966,77 +931,33 @@ function initFilterMenu() {
     }
 
     function tierCondition(card) {
-        if (
-            !filterBronze.checked &&
-            !filterSilver.checked &&
-            !filterGold.checked &&
-            !filterDiamond.checked
-        ) {
+        if (filterTiers.every(function (filter) {
+            return !filter.checked;
+        })) {
             return true;
         }
         var key = card.id;
-        return (
-            (filterBronze.checked && variants[key].tier == 0) ||
-            (filterSilver.checked && variants[key].tier == 1) ||
-            (filterGold.checked && variants[key].tier == 2) ||
-            (filterDiamond.checked && variants[key].tier == 3)
-        );
+        return filterTiers.some(function (filter, i) {return filter.checked && variants[key].tier == i});
     }
 
     function elementCondition(card) {
-        if (
-            !filterFire.checked &&
-            !filterWater.checked &&
-            !filterWind.checked &&
-            !filterLight.checked &&
-            !filterDark.checked &&
-            !filterNeutral.checked
-        ) {
+        if (filterElements.every(function (filter) {
+            return !filter.checked
+        })) {
             return true;
         }
         var key = card.id;
-        return (
-            (filterFire.checked && variants[key].element == 1) ||
-            (filterWater.checked && variants[key].element == 2) ||
-            (filterWind.checked && variants[key].element == 3) ||
-            (filterLight.checked && variants[key].element == 5) ||
-            (filterDark.checked && variants[key].element == 4) ||
-            (filterNeutral.checked && variants[key].element == 0)
-        );
+        return filterElements.some(function (filter, i) {return filter.checked && variants[key].element == i});
     }
 
     function fighterCondition(card) {
-        if (
-            !filterBE.checked &&
-            !filterBB.checked &&
-            !filterCE.checked &&
-            !filterDO.checked &&
-            !filterEL.checked &&
-            !filterFI.checked &&
-            !filterPW.checked &&
-            !filterPA.checked &&
-            !filterPE.checked &&
-            !filterMF.checked &&
-            !filterSQ.checked &&
-            !filterVA.checked
-        ) {
+        if (filterFighters.every(function (filter) {
+            return !filter.checked;
+        })) {
             return true;
         }
         var key = card.id;
-        return (
-            (filterBE.checked && variants[key].base == "be") ||
-            (filterBB.checked && variants[key].base == "bb") ||
-            (filterCE.checked && variants[key].base == "ce") ||
-            (filterDO.checked && variants[key].base == "do") ||
-            (filterEL.checked && variants[key].base == "el") ||
-            (filterFI.checked && variants[key].base == "fi") ||
-            (filterPW.checked && variants[key].base == "pw") ||
-            (filterPA.checked && variants[key].base == "pa") ||
-            (filterPE.checked && variants[key].base == "pe") ||
-            (filterMF.checked && variants[key].base == "mf") ||
-            (filterSQ.checked && variants[key].base == "sq") ||
-            (filterVA.checked && variants[key].base == "va")
-        );
+        return filterFighters.some(function (filter, i) {return filter.checked && variants[key].base == fighterIDs[i]});
     }
 
     filterCards = function () {
@@ -1057,28 +978,9 @@ function initFilterMenu() {
     };
 
     function cancelFilters() {
-        filterBronze.checked = false;
-        filterSilver.checked = false;
-        filterGold.checked = false;
-        filterDiamond.checked = false;
-        filterFire.checked = false;
-        filterWater.checked = false;
-        filterWind.checked = false;
-        filterLight.checked = false;
-        filterDark.checked = false;
-        filterNeutral.checked = false;
-        filterBE.checked = false;
-        filterBB.checked = false;
-        filterCE.checked = false;
-        filterDO.checked = false;
-        filterEL.checked = false;
-        filterFI.checked = false;
-        filterPW.checked = false;
-        filterPA.checked = false;
-        filterPE.checked = false;
-        filterMF.checked = false;
-        filterSQ.checked = false;
-        filterVA.checked = false;
+        for (var filter of filters) {
+            filter.checked = false;
+        }
         filterCards();
     }
 
@@ -1096,28 +998,9 @@ function initFilterMenu() {
     searchMA.addEventListener("change", filterCards);
 
     filterCancel.addEventListener("change", cancelFilters);
-    filterBronze.addEventListener("change", filterCards);
-    filterSilver.addEventListener("change", filterCards);
-    filterGold.addEventListener("change", filterCards);
-    filterDiamond.addEventListener("change", filterCards);
-    filterFire.addEventListener("change", filterCards);
-    filterWater.addEventListener("change", filterCards);
-    filterWind.addEventListener("change", filterCards);
-    filterLight.addEventListener("change", filterCards);
-    filterDark.addEventListener("change", filterCards);
-    filterNeutral.addEventListener("change", filterCards);
-    filterBE.addEventListener("change", filterCards);
-    filterBB.addEventListener("change", filterCards);
-    filterCE.addEventListener("change", filterCards);
-    filterDO.addEventListener("change", filterCards);
-    filterEL.addEventListener("change", filterCards);
-    filterFI.addEventListener("change", filterCards);
-    filterPW.addEventListener("change", filterCards);
-    filterPA.addEventListener("change", filterCards);
-    filterPE.addEventListener("change", filterCards);
-    filterMF.addEventListener("change", filterCards);
-    filterSQ.addEventListener("change", filterCards);
-    filterVA.addEventListener("change", filterCards);
+    for (var filter of filters) {
+        filter.addEventListener("change", filterCards);
+    }
 
     if (location.hash) {
         searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));

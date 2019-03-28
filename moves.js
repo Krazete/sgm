@@ -1,6 +1,8 @@
 var moves, corpus;
 
+var types = ["sm", "bb"];
 var tiers = ["bronze", "silver", "gold"];
+var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
 var characters = {
     "be": "image/official/Beowulf_MasteryIcon.png",
     "bb": "image/official/BigBand_MasteryIcon.png",
@@ -8,10 +10,11 @@ var characters = {
     "do": "image/official/Double_MasteryIcon.png",
     "el": "image/official/Eliza_MasteryIcon.png",
     "fi": "image/official/Filia_MasteryIcon.png",
+    "mf": "image/official/MsFortune_MasteryIcon.png",
     "pw": "image/official/Painwheel_MasteryIcon.png",
     "pa": "image/official/Parasoul_MasteryIcon.png",
     "pe": "image/official/Peacock_MasteryIcon.png",
-    "mf": "image/official/MsFortune_MasteryIcon.png",
+    "rf": "image/official/RoboFortune_MasteryIcon.png",
     "sq": "image/official/Squigly_MasteryIcon.png",
     "va": "image/official/Valentine_MasteryIcon.png",
 };
@@ -148,7 +151,7 @@ function initCollection(responses) {
         var card = document.createElement("div");
             card.className = [
                 "move card",
-                ["sm", "bb"][moves[key].type],
+                types[moves[key].type],
                 tiers[moves[key].tier]
             ].join(" ");
             card.id = key;
@@ -328,46 +331,22 @@ function initFilterMenu() {
 
     var filterCancel = document.getElementById("filter-cancel");
 
-    var filterSMs = document.getElementById("filter-sms");
-    var filterBBs = document.getElementById("filter-bbs");
-
-    var filterBronze = document.getElementById("filter-bronze");
-    var filterSilver = document.getElementById("filter-silver");
-    var filterGold = document.getElementById("filter-gold");
-
-    var filterBE = document.getElementById("filter-be");
-    var filterBB = document.getElementById("filter-bb");
-    var filterCE = document.getElementById("filter-ce");
-    var filterDO = document.getElementById("filter-do");
-    var filterEL = document.getElementById("filter-el");
-    var filterFI = document.getElementById("filter-fi");
-    var filterPW = document.getElementById("filter-pw");
-    var filterPA = document.getElementById("filter-pa");
-    var filterPE = document.getElementById("filter-pe");
-    var filterMF = document.getElementById("filter-mf");
-    var filterSQ = document.getElementById("filter-sq");
-    var filterVA = document.getElementById("filter-va");
+    var filterCancel = document.getElementById("filter-cancel");
+    var filterTypes = types.map(function (type) {
+        return document.getElementById("filter-" + type);
+    });
+    var filterTiers = tiers.map(function (tier) {
+        return document.getElementById("filter-" + tier);
+    });
+    var filterFighters = fighterIDs.map(function (fighter) {
+        return document.getElementById("filter-" + fighter);
+    });
+    var filters = [].concat(filterTypes, filterTiers, filterFighters);
 
     function updateFilterCancel() {
-        if (
-            filterSMs.checked ||
-            filterBBs.checked ||
-            filterBronze.checked ||
-            filterSilver.checked ||
-            filterGold.checked ||
-            filterBE.checked ||
-            filterBB.checked ||
-            filterCE.checked ||
-            filterDO.checked ||
-            filterEL.checked ||
-            filterFI.checked ||
-            filterPW.checked ||
-            filterPA.checked ||
-            filterPE.checked ||
-            filterMF.checked ||
-            filterSQ.checked ||
-            filterVA.checked
-        ) {
+        if (filters.some(function (filter) {
+            return filter.checked;
+        })) {
             filterCancel.checked = false;
         }
         else {
@@ -409,67 +388,39 @@ function initFilterMenu() {
     }
 
     function typeCondition(card) {
-        if (
-            !filterSMs.checked &&
-            !filterBBs.checked
-        ) {
+        if (filterTypes.every(function (filter) {
+            return !filter.checked;
+        })) {
             return true;
         }
         var key = card.id;
-        return (
-            (filterSMs.checked && moves[key].type == 0) ||
-            (filterBBs.checked && moves[key].type == 1)
-        );
+        return filterTypes.some(function (filter, i) {
+            return filter.checked && moves[key].type == i;
+        });
     }
 
     function tierCondition(card) {
-        if (
-            !filterBronze.checked &&
-            !filterSilver.checked &&
-            !filterGold.checked
-        ) {
+        if (filterTiers.every(function (filter) {
+            return !filter.checked;
+        })) {
             return true;
         }
         var key = card.id;
-        return (
-            (filterBronze.checked && moves[key].tier == 0) ||
-            (filterSilver.checked && moves[key].tier == 1) ||
-            (filterGold.checked && moves[key].tier == 2)
-        );
+        return filterTiers.some(function (filter, i) {
+            return filter.checked && moves[key].tier == i;
+        });
     }
 
     function fighterCondition(card) {
-        if (
-            !filterBE.checked &&
-            !filterBB.checked &&
-            !filterCE.checked &&
-            !filterDO.checked &&
-            !filterEL.checked &&
-            !filterFI.checked &&
-            !filterPW.checked &&
-            !filterPA.checked &&
-            !filterPE.checked &&
-            !filterMF.checked &&
-            !filterSQ.checked &&
-            !filterVA.checked
-        ) {
+        if (filterFighters.every(function (filter) {
+            return !filter.checked;
+        })) {
             return true;
         }
         var key = card.id;
-        return (
-            (filterBE.checked && moves[key].base == "be") ||
-            (filterBB.checked && moves[key].base == "bb") ||
-            (filterCE.checked && moves[key].base == "ce") ||
-            (filterDO.checked && moves[key].base == "do") ||
-            (filterEL.checked && moves[key].base == "el") ||
-            (filterFI.checked && moves[key].base == "fi") ||
-            (filterPW.checked && moves[key].base == "pw") ||
-            (filterPA.checked && moves[key].base == "pa") ||
-            (filterPE.checked && moves[key].base == "pe") ||
-            (filterMF.checked && moves[key].base == "mf") ||
-            (filterSQ.checked && moves[key].base == "sq") ||
-            (filterVA.checked && moves[key].base == "va")
-        );
+        return filterFighters.some(function (filter, i) {
+            return filter.checked && moves[key].base == fighterIDs[i];
+        });
     }
 
     filterCards = function () {
@@ -490,23 +441,9 @@ function initFilterMenu() {
     };
 
     function cancelFilters() {
-        filterSMs.checked = false;
-        filterBBs.checked = false;
-        filterBronze.checked = false;
-        filterSilver.checked = false;
-        filterGold.checked = false;
-        filterBE.checked = false;
-        filterBB.checked = false;
-        filterCE.checked = false;
-        filterDO.checked = false;
-        filterEL.checked = false;
-        filterFI.checked = false;
-        filterPW.checked = false;
-        filterPA.checked = false;
-        filterPE.checked = false;
-        filterMF.checked = false;
-        filterSQ.checked = false;
-        filterVA.checked = false;
+        for (var filter of filters) {
+            filter.checked = false;
+        }
         filterCards();
     }
 
@@ -522,23 +459,9 @@ function initFilterMenu() {
     searchD.addEventListener("change", filterCards);
 
     filterCancel.addEventListener("change", cancelFilters);
-    filterSMs.addEventListener("change", filterCards);
-    filterBBs.addEventListener("change", filterCards);
-    filterBronze.addEventListener("change", filterCards);
-    filterSilver.addEventListener("change", filterCards);
-    filterGold.addEventListener("change", filterCards);
-    filterBE.addEventListener("change", filterCards);
-    filterBB.addEventListener("change", filterCards);
-    filterCE.addEventListener("change", filterCards);
-    filterDO.addEventListener("change", filterCards);
-    filterEL.addEventListener("change", filterCards);
-    filterFI.addEventListener("change", filterCards);
-    filterPW.addEventListener("change", filterCards);
-    filterPA.addEventListener("change", filterCards);
-    filterPE.addEventListener("change", filterCards);
-    filterMF.addEventListener("change", filterCards);
-    filterSQ.addEventListener("change", filterCards);
-    filterVA.addEventListener("change", filterCards);
+    for (var filter of filters) {
+        filter.addEventListener("change", filterCards);
+    }
 
     if (location.hash) {
         searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
