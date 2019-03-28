@@ -304,9 +304,9 @@ function initCollection(responses) {
         "name": "fakePType",
         "quote": "fakeEmpty",
         "sa": {
-            "title": "fakeEmpty",
+            "title": "fakeSA",
             "features": Array(2).fill({
-                "description": "fakeEmpty",
+                "description": "fakeSADes",
                 "tiers": Array(3).fill().map(function (e, i) {
                     return {"unlock": i + 1, "value": []};
                 })
@@ -632,11 +632,13 @@ function initLanguageMenu() {
     function updateCardConstants(response) {
         corpus = response;
 
-        corpus.fakeRF = "Robo-Fortune";
-        corpus.fakePType = "Prototype";
-        corpus.fakeCA = "Headrone";
-        corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">https://www.youtube.com/watch?v=sJpINwtu-EU</a>";
         corpus.fakeEmpty = "Undefined";
+        corpus.fakeRF = "Robo-Fortune";
+        corpus.fakeCA = "Headrone";
+        corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View video preview on Youtube.</a>";
+        corpus.fakePType = "Prototype";
+        corpus.fakeSA = "System Shock";
+        corpus.fakeSADes = "<a href=\"https://goo.gl/ggWgBZ\" target=\"_blank\">View video preview on Twitter.</a>";
 
         for (var card of cards) {
             updateCardConstant(card);
