@@ -635,10 +635,10 @@ function initLanguageMenu() {
         corpus.fakeEmpty = "Undefined";
         corpus.fakeRF = "Robo-Fortune";
         corpus.fakeCA = "Headrone";
-        corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View video preview on Youtube.</a>";
+        corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View preview on Youtube.</a>";
         corpus.fakePType = "Prototype";
         corpus.fakeSA = "System Shock";
-        corpus.fakeSADes = "<a href=\"https://goo.gl/ggWgBZ\" target=\"_blank\">View video preview on Twitter.</a>";
+        corpus.fakeSADes = "<a href=\"https://goo.gl/ggWgBZ\" target=\"_blank\">View preview on Twitter.</a>";
 
         for (var card of cards) {
             updateCardConstant(card);
