@@ -113,7 +113,8 @@ var wikiaPaths = { /* from English corpus */
     "ink": "Inkling",
     "iLeague": "Ivy League",
     "sOut": "Stand Out",
-    "pType": "Prototype"
+    "pType": "Prototype",
+    "m3ow": "M-3ow"
 };
 
 var cards = [];
@@ -608,7 +609,7 @@ function initLanguageMenu() {
         corpus.fakePtypeQuote = "The future is meow.";
         corpus.fakePtypeSA = "System Shock";
         corpus.fakePtypeSADes = "<a href=\"https://twitter.com/sgmobile/status/1111096134456340480\" target=\"_blank\">View preview on Twitter.</a>";
-        corpus.fakeM3ow = "M-3OW";
+        corpus.fakeM3ow = "M-3ow";
         corpus.fakeM3owQuote = "The chances of your survival are 725... to 1.";
         corpus.fakeM3owSA = "Far Far Away";
         corpus.fakeM3owSADes = "<a href=\"https://twitter.com/sgmobile/status/1111440170702655494\" target=\"_blank\">View preview on Twitter.</a>";
