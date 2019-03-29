@@ -83,7 +83,6 @@ function getRatings(subkey) {
     return Promise.all(promises);
 }
 
-
 function handleMissingPortrait() {
     var portrait = this;
     var backdrop = portrait.parentElement;
@@ -146,7 +145,7 @@ function setRatings(subkey) {
     return getRatings(subkey).then(function () {
         var sortedKeys = Object.keys(variants).sort(byRating);
         for (var key of sortedKeys) {
-            var grade = Math.max(1, Math.round(2 * variants[key][subkey].rating));
+            var grade = Math.max(1, Math.round(2 * variants[key][subkey].rating)) || 1;
             var row = document.getElementsByClassName(variants[key].base)[0];
             var cell = row.cells[grade];
             var avatar = createAvatar(key);
