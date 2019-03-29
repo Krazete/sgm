@@ -516,7 +516,8 @@ function initCollection(responses) {
             card.className = [
                 "fighter card",
                 tiers[variants[key].tier],
-                elements[variants[key].element]
+                elements[variants[key].element],
+                variants[key].base /* TODO: remove when robo becomes available */
             ].join(" ");
             card.id = key;
             card.appendChild(createAvatar(key));
@@ -598,6 +599,7 @@ function initLanguageMenu() {
     function updateCardConstants(response) {
         corpus = response;
 
+        /* TODO: remove when robo becomes available */
         corpus.fakeEmpty = "???";
         corpus.fakeRF = "Robo-Fortune";
         corpus.fakeCA = "Headrone";
