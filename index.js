@@ -542,7 +542,7 @@ function initCollection(responses) {
 }
 
 function formatNumbers(text) {
-    if (text.includes("href=")) {
+    if (text.includes("href=")) { /* TODO: (maybe) remove when robo becomes available */
         return text;
     }
     return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
