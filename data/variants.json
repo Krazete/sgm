@@ -1,4 +1,72 @@
 {
+    "pType": {
+        "base": "rf",
+        "name": "fakePType",
+        "element": 3,
+        "tier": 0,
+        "quote": "fakeEmpty",
+        "sa": {
+            "title": "fakePtypeSA",
+            "features": [
+                {
+                    "description": "fakePtypeSADes",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "fakePtypeSADes",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
+            ]
+        },
+        "stats": [
+            {"attack": "NaN", "lifebar": "NaN"},
+            {"attack": "NaN", "lifebar": "NaN"},
+            {"attack": "NaN", "lifebar": "NaN"},
+            {"attack": "NaN", "lifebar": "NaN"}
+        ]
+    },
+    "m3ow": {
+        "base": "rf",
+        "name": "fakeM3ow",
+        "element": 1,
+        "tier": 0,
+        "quote": "fakeEmpty",
+        "sa": {
+            "title": "fakeM3owSA",
+            "features": [
+                {
+                    "description": "fakeM3owSADes",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "fakeM3owSADes",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
+            ]
+        },
+        "stats": [
+            {"attack": "NaN", "lifebar": "NaN"},
+            {"attack": "NaN", "lifebar": "NaN"},
+            {"attack": "NaN", "lifebar": "NaN"},
+            {"attack": "NaN", "lifebar": "NaN"}
+        ]
+    },
     "iLeague": {
         "base": "pa",
         "element": 3,

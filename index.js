@@ -283,45 +283,6 @@ function updateRating(key, subkey, animate) {
 function initCollection(responses) {
     fighters = responses[0];
     variants = responses[1];
-
-    fighters.rf = {
-        "name": "fakeRF",
-        "ca": {
-            "title": "fakeCA",
-            "description": "fakeCADes"
-        },
-        "ma": {
-            "title": "fakeEmpty",
-            "features": Array(2).fill({
-                "title": "fakeEmpty",
-                "description": "fakeEmpty",
-                "tiers": Array(11).fill().map(function (e, i) {
-                    return {"unlock": i + 1, "value": []};
-                })
-            })
-        }
-    };
-    variants.pType = {
-        "base": "rf",
-        "name": "fakePType",
-        "quote": "fakeEmpty",
-        "sa": {
-            "title": "fakeSA",
-            "features": Array(2).fill({
-                "description": "fakeSADes",
-                "tiers": Array(3).fill().map(function (e, i) {
-                    return {"unlock": i + 1, "value": []};
-                })
-            })
-        },
-        "stats": Array(4).fill({
-            "attack": NaN,
-            "lifebar": NaN
-        }),
-        "tier": 0,
-        "element": 3
-    };
-
     var collection = document.getElementById("collection");
 
     var date = new Date();
@@ -580,6 +541,9 @@ function initCollection(responses) {
 }
 
 function formatNumbers(text) {
+    if (text.includes("href=")) {
+        return text;
+    }
     return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
 }
 
@@ -638,9 +602,13 @@ function initLanguageMenu() {
         corpus.fakeRF = "Robo-Fortune";
         corpus.fakeCA = "Headrone";
         corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View preview on Youtube.</a>";
-        corpus.fakePType = "Prototype";
-        corpus.fakeSA = "System Shock";
-        corpus.fakeSADes = "<a href=\"https://goo.gl/ggWgBZ\" target=\"_blank\">View preview on Twitter.</a>";
+        corpus.fakePtype = "Prototype";
+        corpus.fakePtypeSA = "System Shock";
+        corpus.fakePtypeSADes = "<a href=\"https://twitter.com/sgmobile/status/1111096134456340480\" target=\"_blank\">View preview on Twitter.</a>";
+        corpus.fakeM3ow = "M-3OW";
+        corpus.fakeM3owSA = "Far Far Away";
+        corpus.fakeM3owSADes = "<a href=\"https://twitter.com/sgmobile/status/1111440170702655494\" target=\"_blank\">View preview on Twitter.</a>";
+
 
         for (var card of cards) {
             updateCardConstant(card);

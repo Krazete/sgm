@@ -1,4 +1,50 @@
 {
+    "rf": {
+        "name": "fakeRF",
+        "ca": {
+            "title": "fakeCA",
+            "description": "fakeCADes"
+        },
+        "ma": {
+            "title": "fakeEmpty",
+            "features": [
+                {
+                    "title": "fakeEmpty",
+                    "description": "fakeEmpty",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []},
+                        {"unlock": 4, "value": []},
+                        {"unlock": 5, "value": []},
+                        {"unlock": 6, "value": []},
+                        {"unlock": 7, "value": []},
+                        {"unlock": 8, "value": []},
+                        {"unlock": 9, "value": []},
+                        {"unlock": 10, "value": []},
+                        {"unlock": 11, "value": []}
+                    ]
+                },
+                {
+                    "title": "fakeEmpty",
+                    "description": "fakeEmpty",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []},
+                        {"unlock": 4, "value": []},
+                        {"unlock": 5, "value": []},
+                        {"unlock": 6, "value": []},
+                        {"unlock": 7, "value": []},
+                        {"unlock": 8, "value": []},
+                        {"unlock": 9, "value": []},
+                        {"unlock": 10, "value": []},
+                        {"unlock": 11, "value": []}
+                    ]
+                }
+            ]
+        }
+    },
     "sq": {
         "ma": {
             "title": "Char_Squigly_SUP_FrightNight_Title",
