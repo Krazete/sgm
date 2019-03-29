@@ -1,15 +1,15 @@
 {
     "pType": {
         "base": "rf",
-        "name": "fakePType",
+        "name": "fakePtype",
         "element": 3,
         "tier": 0,
-        "quote": "fakeEmpty",
+        "quote": "fakePtypeQuote",
         "sa": {
             "title": "fakePtypeSA",
             "features": [
                 {
-                    "description": "fakePtypeSADes",
+                    "description": "fakeEmpty",
                     "tiers": [
                         {"unlock": 1, "value": []},
                         {"unlock": 2, "value": []},
@@ -27,23 +27,23 @@
             ]
         },
         "stats": [
-            {"attack": "NaN", "lifebar": "NaN"},
-            {"attack": "NaN", "lifebar": "NaN"},
-            {"attack": "NaN", "lifebar": "NaN"},
-            {"attack": "NaN", "lifebar": "NaN"}
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"}
         ]
     },
     "m3ow": {
         "base": "rf",
         "name": "fakeM3ow",
-        "element": 1,
+        "element": 5,
         "tier": 0,
-        "quote": "fakeEmpty",
+        "quote": "fakeM3owQuote",
         "sa": {
             "title": "fakeM3owSA",
             "features": [
                 {
-                    "description": "fakeM3owSADes",
+                    "description": "fakeEmpty",
                     "tiers": [
                         {"unlock": 1, "value": []},
                         {"unlock": 2, "value": []},
@@ -61,10 +61,10 @@
             ]
         },
         "stats": [
-            {"attack": "NaN", "lifebar": "NaN"},
-            {"attack": "NaN", "lifebar": "NaN"},
-            {"attack": "NaN", "lifebar": "NaN"},
-            {"attack": "NaN", "lifebar": "NaN"}
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"}
         ]
     },
     "iLeague": {

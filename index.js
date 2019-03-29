@@ -598,17 +598,18 @@ function initLanguageMenu() {
     function updateCardConstants(response) {
         corpus = response;
 
-        corpus.fakeEmpty = "Undefined";
+        corpus.fakeEmpty = "???";
         corpus.fakeRF = "Robo-Fortune";
         corpus.fakeCA = "Headrone";
         corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View preview on Youtube.</a>";
         corpus.fakePtype = "Prototype";
+        corpus.fakePtypeQuote = "The future is meow.";
         corpus.fakePtypeSA = "System Shock";
         corpus.fakePtypeSADes = "<a href=\"https://twitter.com/sgmobile/status/1111096134456340480\" target=\"_blank\">View preview on Twitter.</a>";
         corpus.fakeM3ow = "M-3OW";
+        corpus.fakeM3owQuote = "The chances of your survival are 725... to 1.";
         corpus.fakeM3owSA = "Far Far Away";
         corpus.fakeM3owSADes = "<a href=\"https://twitter.com/sgmobile/status/1111440170702655494\" target=\"_blank\">View preview on Twitter.</a>";
-
 
         for (var card of cards) {
             updateCardConstant(card);
