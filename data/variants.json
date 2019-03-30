@@ -70,8 +70,8 @@
     "nTech": {
         "base": "rf",
         "name": "fakeNtech",
-        "element": 5,
-        "tier": 0,
+        "element": 1,
+        "tier": 1,
         "quote": "fakeNtechQuote",
         "sa": {
             "title": "fakeNtechSA",
@@ -95,7 +95,6 @@
             ]
         },
         "stats": [
-            {"attack": "???", "lifebar": "???"},
             {"attack": "???", "lifebar": "???"},
             {"attack": "???", "lifebar": "???"},
             {"attack": "???", "lifebar": "???"}
