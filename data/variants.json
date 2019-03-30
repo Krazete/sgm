@@ -67,6 +67,40 @@
             {"attack": "???", "lifebar": "???"}
         ]
     },
+    "nTech": {
+        "base": "rf",
+        "name": "fakeNtech",
+        "element": 5,
+        "tier": 0,
+        "quote": "fakeNtechQuote",
+        "sa": {
+            "title": "fakeNtechSA",
+            "features": [
+                {
+                    "description": "fakeEmpty",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "fakeNtechSADes",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
+            ]
+        },
+        "stats": [
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"},
+            {"attack": "???", "lifebar": "???"}
+        ]
+    },
     "iLeague": {
         "base": "pa",
         "element": 3,

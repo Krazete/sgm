@@ -114,7 +114,8 @@ var wikiaPaths = { /* from English corpus */
     "iLeague": "Ivy League",
     "sOut": "Stand Out",
     "pType": "Prototype",
-    "m3ow": "M-3ow"
+    "m3ow": "M-3ow",
+    "nTech": "Nyanotech"
 };
 
 var cards = [];
@@ -613,6 +614,10 @@ function initLanguageMenu() {
         corpus.fakeM3owQuote = "The chances of your survival are 725... to 1.";
         corpus.fakeM3owSA = "Far Far Away";
         corpus.fakeM3owSADes = "<a href=\"https://twitter.com/sgmobile/status/1111440170702655494\" target=\"_blank\">View preview on Twitter.</a>";
+        corpus.fakeNtech = "Nyanotech";
+        corpus.fakeNtechQuote = "Heavy paws of lead, fills her victims full of dread.";
+        corpus.fakeNtechSA = "Fire Wall";
+        corpus.fakeNtechSADes = "<a href=\"https://twitter.com/sgmobile/status/1111802501932544000\" target=\"_blank\">View preview on Twitter.</a>";
 
         for (var card of cards) {
             updateCardConstant(card);
