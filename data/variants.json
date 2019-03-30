@@ -2,103 +2,47 @@
     "pType": {
         "base": "rf",
         "name": "fakePtype",
-        "element": 3,
-        "tier": 0,
         "quote": "fakePtypeQuote",
         "sa": {
             "title": "fakePtypeSA",
             "features": [
-                {
-                    "description": "fakeEmpty",
-                    "tiers": [
-                        {"unlock": 1, "value": []},
-                        {"unlock": 2, "value": []},
-                        {"unlock": 3, "value": []}
-                    ]
-                },
-                {
-                    "description": "fakePtypeSADes",
-                    "tiers": [
-                        {"unlock": 1, "value": []},
-                        {"unlock": 2, "value": []},
-                        {"unlock": 3, "value": []}
-                    ]
-                }
+                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
+                {"description": "fakePtypeSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
-        "stats": [
-            {"attack": "???", "lifebar": "???"},
-            {"attack": "???", "lifebar": "???"},
-            {"attack": "???", "lifebar": "???"},
-            {"attack": "???", "lifebar": "???"}
-        ]
+        "element": 3,
+        "tier": 0,
+        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
     },
     "m3ow": {
         "base": "rf",
         "name": "fakeM3ow",
-        "element": 5,
-        "tier": 0,
         "quote": "fakeM3owQuote",
         "sa": {
             "title": "fakeM3owSA",
             "features": [
-                {
-                    "description": "fakeEmpty",
-                    "tiers": [
-                        {"unlock": 1, "value": []},
-                        {"unlock": 2, "value": []},
-                        {"unlock": 3, "value": []}
-                    ]
-                },
-                {
-                    "description": "fakeM3owSADes",
-                    "tiers": [
-                        {"unlock": 1, "value": []},
-                        {"unlock": 2, "value": []},
-                        {"unlock": 3, "value": []}
-                    ]
-                }
+                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
+                {"description": "fakeM3owSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
-        "stats": [
-            {"attack": "???", "lifebar": "???"},
-            {"attack": "???", "lifebar": "???"},
-            {"attack": "???", "lifebar": "???"},
-            {"attack": "???", "lifebar": "???"}
-        ]
+        "element": 5,
+        "tier": 0,
+        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
     },
     "nTech": {
         "base": "rf",
         "name": "fakeNtech",
-        "element": 1,
-        "tier": 1,
         "quote": "fakeNtechQuote",
         "sa": {
             "title": "fakeNtechSA",
             "features": [
-                {
-                    "description": "fakeEmpty",
-                    "tiers": [
-                        {"unlock": 1, "value": []},
-                        {"unlock": 2, "value": []},
-                        {"unlock": 3, "value": []}
-                    ]
-                },
-                {
-                    "description": "fakeNtechSADes",
-                    "tiers": [
-                        {"unlock": 1, "value": []},
-                        {"unlock": 2, "value": []},
-                        {"unlock": 3, "value": []}
-                    ]
-                }
+                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
+                {"description": "fakeNtechSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
-        "stats": [
-            {"attack": "???", "lifebar": "???"},
-            {"attack": "???", "lifebar": "???"},
-            {"attack": "???", "lifebar": "???"}
-        ]
+        "element": 1,
+        "tier": 1,
+        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
     },
     "iLeague": {
         "base": "pa",

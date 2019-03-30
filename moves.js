@@ -194,7 +194,9 @@ function format(template, substitutions) {
         }
     }
     else {
-        console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
+        if (substitutions.length > 0) {
+            console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
+        }
     }
     return formatNumbers(formatted);
 }

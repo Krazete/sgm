@@ -568,7 +568,9 @@ function format(template, substitutions) {
         }
     }
     else {
-        console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
+        if (substitutions.length > 0) {
+            console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
+        }
     }
     return formatNumbers(formatted);
 }
@@ -606,18 +608,33 @@ function initLanguageMenu() {
         corpus.fakeRF = "Robo-Fortune";
         corpus.fakeCA = "Headrone";
         corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View preview on Youtube.</a>";
-        corpus.fakePtype = "Prototype";
-        corpus.fakePtypeQuote = "The future is meow.";
-        corpus.fakePtypeSA = "System Shock";
-        corpus.fakePtypeSADes = "<a href=\"https://twitter.com/sgmobile/status/1111096134456340480\" target=\"_blank\">View preview on Twitter.</a>";
-        corpus.fakeM3ow = "M-3ow";
-        corpus.fakeM3owQuote = "The chances of your survival are 725... to 1.";
-        corpus.fakeM3owSA = "Far Far Away";
-        corpus.fakeM3owSADes = "<a href=\"https://twitter.com/sgmobile/status/1111440170702655494\" target=\"_blank\">View preview on Twitter.</a>";
-        corpus.fakeNtech = "Nyanotech";
-        corpus.fakeNtechQuote = "Heavy paws of lead, fills her victims full of dread.";
-        corpus.fakeNtechSA = "Fire Wall";
-        corpus.fakeNtechSADes = "<a href=\"https://twitter.com/sgmobile/status/1111802501932544000\" target=\"_blank\">View preview on Twitter.</a>";
+        function newCorpusEntry(id, name, quote, saName, saDescription) {
+            corpus["fake" + id] = name;
+            corpus["fake" + id + "Quote"] = quote;
+            corpus["fake" + id + "SA"] = saName;
+            corpus["fake" + id + "SADes"] = saDescription;
+        }
+        newCorpusEntry(
+            "Ptype",
+            "Prototype",
+            "The future is meow.",
+            "System Shock",
+            "<a href=\"https://twitter.com/sgmobile/status/1111096134456340480\" target=\"_blank\">View preview on Twitter.</a>"
+        );
+        newCorpusEntry(
+            "M3ow",
+            "M-3ow",
+            "The chances of your survival are 725... to 1.",
+            "Far Far Away",
+            "<a href=\"https://twitter.com/sgmobile/status/1111440170702655494\" target=\"_blank\">View preview on Twitter.</a>"
+        );
+        newCorpusEntry(
+            "Ntech",
+            "Nyanotech",
+            "Heavy paws of lead, fills her victims full of dread.",
+            "Fire Wall",
+            "<a href=\"https://twitter.com/sgmobile/status/1111802501932544000\" target=\"_blank\">View preview on Twitter.</a>"
+        );
 
         for (var card of cards) {
             updateCardConstant(card);
