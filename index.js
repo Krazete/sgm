@@ -541,6 +541,9 @@ function initCollection(responses) {
         collection.appendChild(card);
         cards.push(card);
     }
+    if (month == 4 && day == 1) {
+        fearTheRainbow();
+    }
 }
 
 function formatNumbers(text) {
