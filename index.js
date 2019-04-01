@@ -302,6 +302,9 @@ function initCollection(responses) {
                 frame.className = "frame";
                 var backdrop = document.createElement("div");
                     backdrop.className = "backdrop";
+                    if (month == 4 && day == 1) {
+                        backdrop.style.transform = "rotate(" + randomInt(0, 360) + "deg)";
+                    }
                     if (month == 10 && day == 31 || weekday == 5 && day == 13) {
                         backdrop.classList.add("hallow" + randomInt(1, 4));
                     }
