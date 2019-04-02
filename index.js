@@ -115,7 +115,8 @@ var wikiaPaths = { /* from English corpus */
     "sOut": "Stand Out",
     "pType": "Prototype",
     "m3ow": "M-3ow",
-    "nTech": "Nyanotech"
+    "nTech": "Nyanotech",
+    "pTor": "Purrminator"
 };
 
 var cards = [];
@@ -637,6 +638,13 @@ function initLanguageMenu() {
             "Heavy paws of lead, fills her victims full of dread.",
             "Fire Wall",
             "<a href=\"https://twitter.com/sgmobile/status/1111802501932544000\" target=\"_blank\">View preview on Twitter.</a>"
+        );
+        newCorpusEntry(
+            "Ptor",
+            "Purrminator",
+            "My CPU is a neural net processor; a learning computer.",
+            "Machine Learning",
+            "<a href=\"https://twitter.com/sgmobile/status/1112902820347359232\" target=\"_blank\">View preview on Twitter.</a>"
         );
 
         for (var card of cards) {

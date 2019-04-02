@@ -44,6 +44,21 @@
         "tier": 1,
         "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
     },
+    "pTor": {
+        "base": "rf",
+        "name": "fakePtor",
+        "quote": "fakePtorQuote",
+        "sa": {
+            "title": "fakePtorSA",
+            "features": [
+                {"description": "fakePtorEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
+                {"description": "fakePtorSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+            ]
+        },
+        "element": 4,
+        "tier": 1,
+        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+    },
     "iLeague": {
         "base": "pa",
         "element": 3,
