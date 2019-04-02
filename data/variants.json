@@ -51,7 +51,7 @@
         "sa": {
             "title": "fakePtorSA",
             "features": [
-                {"description": "fakePtorEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
+                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
                 {"description": "fakePtorSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
