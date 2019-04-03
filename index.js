@@ -116,7 +116,8 @@ var wikiaPaths = { /* from English corpus */
     "pType": "Prototype",
     "m3ow": "M-3ow",
     "nTech": "Nyanotech",
-    "pTor": "Purrminator"
+    "pTor": "Purrminator",
+    "tByte": "Terror Byte"
 };
 
 var cards = [];
@@ -645,6 +646,13 @@ function initLanguageMenu() {
             "My CPU is a neural net processor; a learning computer.",
             "Machine Learning",
             "<a href=\"https://twitter.com/sgmobile/status/1112902820347359232\" target=\"_blank\">View preview on Twitter.</a>"
+        );
+        newCorpusEntry(
+            "Tbyte",
+            "Terror Byte",
+            "117 Threats Detected! Download Brain Drain anti-virus software now!",
+            "Malware",
+            "<a href=\"https://twitter.com/sgmobile/status/1113245495902633984\" target=\"_blank\">View preview on Twitter.</a>"
         );
 
         for (var card of cards) {
