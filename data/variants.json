@@ -1,13 +1,13 @@
 {
     "pType": {
         "base": "rf",
-        "name": "fakePtype",
-        "quote": "fakePtypeQuote",
+        "name": "fakepType",
+        "quote": "fakepTypeQuote",
         "sa": {
-            "title": "fakePtypeSA",
+            "title": "fakepTypeSA",
             "features": [
                 {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakePtypeSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {"description": "fakepTypeSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
         "element": 3,
@@ -16,13 +16,13 @@
     },
     "m3ow": {
         "base": "rf",
-        "name": "fakeM3ow",
-        "quote": "fakeM3owQuote",
+        "name": "fakem3ow",
+        "quote": "fakem3owQuote",
         "sa": {
-            "title": "fakeM3owSA",
+            "title": "fakem3owSA",
             "features": [
                 {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakeM3owSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {"description": "fakem3owSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
         "element": 5,
@@ -31,13 +31,13 @@
     },
     "nTech": {
         "base": "rf",
-        "name": "fakeNtech",
-        "quote": "fakeNtechQuote",
+        "name": "fakenTech",
+        "quote": "fakenTechQuote",
         "sa": {
-            "title": "fakeNtechSA",
+            "title": "fakenTechSA",
             "features": [
                 {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakeNtechSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {"description": "fakenTechSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
         "element": 1,
@@ -46,13 +46,13 @@
     },
     "pTor": {
         "base": "rf",
-        "name": "fakePtor",
-        "quote": "fakePtorQuote",
+        "name": "fakepTor",
+        "quote": "fakepTorQuote",
         "sa": {
-            "title": "fakePtorSA",
+            "title": "fakepTorSA",
             "features": [
                 {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakePtorSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {"description": "fakepTorSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
         "element": 4,
@@ -61,16 +61,31 @@
     },
     "tByte": {
         "base": "rf",
-        "name": "fakeTbyte",
-        "quote": "fakeTbyteQuote",
+        "name": "faketByte",
+        "quote": "faketByteQuote",
         "sa": {
-            "title": "fakeTbyteSA",
+            "title": "faketByteSA",
             "features": [
                 {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakeTbyteSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {"description": "faketByteSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
             ]
         },
         "element": 4,
+        "tier": 2,
+        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+    },
+    "bScreen": {
+        "base": "rf",
+        "name": "fakebScreen",
+        "quote": "fakebScreenQuote",
+        "sa": {
+            "title": "fakebScreenSA",
+            "features": [
+                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
+                {"description": "fakebScreenSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+            ]
+        },
+        "element": 2,
         "tier": 2,
         "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
     },
