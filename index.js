@@ -614,47 +614,47 @@ function initLanguageMenu() {
         corpus.fakeRF = "Robo-Fortune";
         corpus.fakeCA = "Headrone";
         corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View preview on Youtube.</a>";
-        function newCorpusEntry(id, quote, saName, saDescription) {
+        function newCorpusEntry(id, quote, sa, twit) {
             corpus["fake" + id] = wikiaPaths[id];
             corpus["fake" + id + "Quote"] = quote;
-            corpus["fake" + id + "SA"] = saName;
-            corpus["fake" + id + "SADes"] = saDescription;
+            corpus["fake" + id + "SA"] = sa;
+            corpus["fake" + id + "SADes"] = "<a href=\"https://twitter.com/sgmobile/status/" + twit + "\" target=\"_blank\">View preview on Twitter.</a>";
         }
         newCorpusEntry(
             "pType",
             "The future is meow.",
             "System Shock",
-            "<a href=\"https://twitter.com/sgmobile/status/1111096134456340480\" target=\"_blank\">View preview on Twitter.</a>"
+            1111096134456340480
         );
         newCorpusEntry(
             "m3ow",
             "The chances of your survival are 725... to 1.",
             "Far Far Away",
-            "<a href=\"https://twitter.com/sgmobile/status/1111440170702655494\" target=\"_blank\">View preview on Twitter.</a>"
+            1111440170702655494
         );
         newCorpusEntry(
             "nTech",
             "Heavy paws of lead, fills her victims full of dread.",
             "Fire Wall",
-            "<a href=\"https://twitter.com/sgmobile/status/1111802501932544000\" target=\"_blank\">View preview on Twitter.</a>"
+            1111802501932544000
         );
         newCorpusEntry(
             "pTor",
             "My CPU is a neural net processor; a learning computer.",
             "Machine Learning",
-            "<a href=\"https://twitter.com/sgmobile/status/1112902820347359232\" target=\"_blank\">View preview on Twitter.</a>"
+            1112902820347359232
         );
         newCorpusEntry(
             "tByte",
             "117 Threats Detected! Download Brain Drain anti-virus software now!",
             "Malware",
-            "<a href=\"https://twitter.com/sgmobile/status/1113245495902633984\" target=\"_blank\">View preview on Twitter.</a>"
+            1113245495902633984
         );
         newCorpusEntry(
             "bScreen",
             "Stop code: CRITICAL_PROCESS_DIED",
             "Fatal System Error",
-            "<a href=\"https://twitter.com/sgmobile/status/1113606692279685120\" target=\"_blank\">View preview on Twitter.</a>"
+            1113606692279685120
         );
 
         for (var card of cards) {
