@@ -620,12 +620,12 @@ function initLanguageMenu() {
             corpus["fake" + id + "SA"] = sa;
             corpus["fake" + id + "SADes"] = "<a href=\"https://twitter.com/sgmobile/status/" + twit + "\" target=\"_blank\">View preview on Twitter.</a>";
         }
-        newCorpusEntry(1111096134456340480, "pType", "The future is meow.", "System Shock");
-        newCorpusEntry(1111440170702655494, "m3ow", "The chances of your survival are 725... to 1.", "Far Far Away");
-        newCorpusEntry(1111802501932544000, "nTech", "Heavy paws of lead, fills her victims full of dread.", "Fire Wall");
-        newCorpusEntry(1112902820347359232, "pTor", "My CPU is a neural net processor; a learning computer.", "Machine Learning");
-        newCorpusEntry(1113245495902633984, "tByte", "117 Threats Detected! Download Brain Drain anti-virus software now!", "Malware");
-        newCorpusEntry(1113606692279685120, "bScreen", "Stop code: CRITICAL_PROCESS_DIED", "Fatal System Error");
+        newCorpusEntry("1111096134456340480", "pType", "The future is meow.", "System Shock");
+        newCorpusEntry("1111440170702655494", "m3ow", "The chances of your survival are 725... to 1.", "Far Far Away");
+        newCorpusEntry("1111802501932544000", "nTech", "Heavy paws of lead, fills her victims full of dread.", "Fire Wall");
+        newCorpusEntry("1112902820347359232", "pTor", "My CPU is a neural net processor; a learning computer.", "Machine Learning");
+        newCorpusEntry("1113245495902633984", "tByte", "117 Threats Detected! Download Brain Drain anti-virus software now!", "Malware");
+        newCorpusEntry("1113606692279685120", "bScreen", "Stop code: CRITICAL_PROCESS_DIED", "Fatal System Error");
 
         for (var card of cards) {
             updateCardConstant(card);
