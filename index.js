@@ -118,7 +118,8 @@ var wikiaPaths = { /* from English corpus */
     "nTech": "Nyanotech",
     "pTor": "Purrminator",
     "tByte": "Terror Byte",
-    "bScreen": "Blue Screen"
+    "bScreen": "Blue Screen",
+    "hHunter": "Head Hunter"
 };
 
 var cards = [];
@@ -626,6 +627,7 @@ function initLanguageMenu() {
         newCorpusEntry("1112902820347359232", "pTor", "My CPU is a neural net processor; a learning computer.", "Machine Learning");
         newCorpusEntry("1113245495902633984", "tByte", "117 Threats Detected! Download Brain Drain anti-virus software now!", "Malware");
         newCorpusEntry("1113606692279685120", "bScreen", "Stop code: CRITICAL_PROCESS_DIED", "Fatal System Error");
+        newCorpusEntry("1113993005969494016", "hHunter", "Power suits me.", "Zero Laser");
 
         for (var card of cards) {
             updateCardConstant(card);

@@ -89,6 +89,21 @@
         "tier": 2,
         "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
     },
+    "hHunter": {
+        "base": "rf",
+        "name": "fakehHunter",
+        "quote": "fakehHunterQuote",
+        "sa": {
+            "title": "fakehHunterSA",
+            "features": [
+                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
+                {"description": "fakehHunterSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+            ]
+        },
+        "element": 1,
+        "tier": 2,
+        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+    },
     "iLeague": {
         "base": "pa",
         "element": 3,
