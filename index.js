@@ -119,7 +119,8 @@ var wikiaPaths = { /* from English corpus */
     "pTor": "Purrminator",
     "tByte": "Terror Byte",
     "bScreen": "Blue Screen",
-    "hHunter": "Head Hunter"
+    "hHunter": "Head Hunter",
+    "liam": "Overclocked"
 };
 
 var cards = [];
@@ -641,7 +642,12 @@ function initLanguageMenu() {
             corpus["fake" + id] = wikiaPaths[id];
             corpus["fake" + id + "Quote"] = quote;
             corpus["fake" + id + "SA"] = sa;
-            corpus["fake" + id + "SADes"] = "<a href=\"https://twitter.com/sgmobile/status/" + twit + "\" target=\"_blank\">View preview on Twitter.</a>";
+            if (parseInt(twit)) {
+                corpus["fake" + id + "SADes"] = "<a href=\"https://twitter.com/sgmobile/status/" + twit + "\" target=\"_blank\">View preview on Twitter.</a>";
+            }
+            else {
+                corpus["fake" + id + "SADes"] = twit;
+            }
         }
         newCorpusEntry("1111096134456340480", "pType", "The future is meow.", "System Shock");
         newCorpusEntry("1111440170702655494", "m3ow", "The chances of your survival are 725... to 1.", "Far Far Away");
@@ -650,6 +656,9 @@ function initLanguageMenu() {
         newCorpusEntry("1113245495902633984", "tByte", "117 Threats Detected! Download Brain Drain anti-virus software now!", "Malware");
         newCorpusEntry("1113606692279685120", "bScreen", "Stop code: CRITICAL_PROCESS_DIED", "Fatal System Error");
         newCorpusEntry("1113993005969494016", "hHunter", "Power suits me.", "Zero Laser");
+        corpus["fakeliamName"] = "Liam";
+        corpus["fakeliamSA1Des"] = "Some information within this variant entry is inside joke among the SGM Discord community. It will be corrected after 3.2.0.";
+        newCorpusEntry("1114370741833613312", "liam", "I don't eat cereal ever actually.", "h");
 
         for (var card of cards) {
             updateCardConstant(card);

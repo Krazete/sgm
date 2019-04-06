@@ -104,6 +104,21 @@
         "tier": 2,
         "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
     },
+    "liam": {
+        "base": "rf",
+        "name": "fakeliamName",
+        "quote": "fakeliamQuote",
+        "sa": {
+            "title": "fakeliamSA",
+            "features": [
+                {"description": "fakeliamSA1Des", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
+                {"description": "fakeliamSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+            ]
+        },
+        "element": 0,
+        "tier": 3,
+        "stats": [{"attack": 999, "lifebar": 9999}]
+    },
     "iLeague": {
         "base": "pa",
         "element": 3,
