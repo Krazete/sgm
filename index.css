@@ -1635,3 +1635,80 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 .locked .lock {
     opacity: 1;
 }
+
+/* Scribble Cat */
+
+.trajectory {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 64px;
+    width: 25%;
+    min-width: 200px;
+    transform-origin: right middle;
+    pointer-events: none;
+    animation:
+        400ms jump-assist ease-out,
+        5s 3000ms exeunt linear forwards;
+}
+.scribble-cat {
+    position: absolute;
+    height: 64px;
+    width: 66px;
+    right: 0%;
+    background: url(image/cat.png);
+    background-size: cover;
+    animation:
+        400ms jump ease-out,
+        800ms 800ms befuddle steps(1) 2 forwards,
+        100ms 3000ms scurry steps(2) infinite;
+}
+
+@keyframes jump-assist {
+    0% {
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes befuddle {
+    0% {
+        transform: scaleX(1);
+    }
+    50%, 100% {
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes scurry {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: 132px;
+    }
+}
+
+@keyframes exeunt {
+    from {
+        left: 50%;
+        transform: translate(0%);
+    }
+    to {
+        left: 0%;
+        transform: translate(-100%);
+    }
+}

@@ -154,6 +154,28 @@ function fearTheRainbow() {
     chaos = !chaos;
 }
 
+function spawn(e) {
+    var motion = document.createElement("div");
+        motion.className = "trajectory";
+        var cat = document.createElement("div");
+            cat.className = "scribble-cat";
+        motion.appendChild(cat);
+    e.appendChild(motion);
+    despawn(motion);
+}
+
+function despawn(e) {
+    var box = e.getBoundingClientRect();
+    if (box.right <= 0) {
+        e.remove();
+    }
+    else {
+        requestAnimationFrame(function () {
+            despawn(e);
+        });
+    }
+}
+
 function toggleLoadingScreen(loading) {
     if (loading) {
         document.body.classList.add("loading");
@@ -731,6 +753,9 @@ function initDock() {
             filterMenu.classList.add("hidden");
             sortMenu.classList.add("hidden");
             optionsMenu.scrollTo(0, 0);
+        }
+        if (Math.random() < 0.01) {
+            spawn(footer);
         }
     }
 
