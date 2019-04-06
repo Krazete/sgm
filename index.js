@@ -657,7 +657,7 @@ function initLanguageMenu() {
         newCorpusEntry("1113606692279685120", "bScreen", "Stop code: CRITICAL_PROCESS_DIED", "Fatal System Error");
         newCorpusEntry("1113993005969494016", "hHunter", "Power suits me.", "Zero Laser");
         corpus["fakeliamName"] = "Liam";
-        corpus["fakeliamSA1Des"] = "Some information within this variant entry is inside joke among the SGM Discord community. It will be corrected after 3.2.0.";
+        corpus["fakeliamSA1Des"] = "The information within this variant entry is inside joke among the SGM Discord community. It will be corrected after 3.2.0.";
         newCorpusEntry("1114370741833613312", "liam", "I don't eat cereal ever actually.", "h");
 
         for (var card of cards) {
