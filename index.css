@@ -1638,44 +1638,47 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 
 /* Scribble Cat */
 
-.trajectory {
-    position: absolute;
+.cat-dolly {
+    position: fixed;
     left: 50%;
     bottom: 0;
     height: 64px;
     width: 25%;
     min-width: 200px;
-    transform-origin: right middle;
     pointer-events: none;
+    z-index: 1;
     animation:
-        400ms jump-assist ease-out,
-        5s 3000ms exeunt linear forwards;
+        400ms intrare ease-out,
+        5s 3000ms exire linear forwards;
 }
-.scribble-cat {
+
+.cat {
     position: absolute;
     height: 64px;
     width: 66px;
-    right: 0%;
+    right: 0;
     background: url(image/cat.png);
     background-size: cover;
     animation:
-        400ms jump ease-out,
+        400ms gyroscope ease-out,
         800ms 800ms befuddle steps(1) 2 forwards,
         100ms 3000ms scurry steps(2) infinite;
 }
 
-@keyframes jump-assist {
+@keyframes intrare {
     0% {
         opacity: 0;
         transform: rotate(-180deg);
     }
-    100% {
+    25% {
         opacity: 1;
+    }
+    100% {
         transform: rotate(0deg);
     }
 }
 
-@keyframes jump {
+@keyframes gyroscope {
     0% {
         transform: rotate(180deg);
     }
@@ -1694,21 +1697,21 @@ html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 }
 
 @keyframes scurry {
-    from {
+    0% {
         background-position: 0px;
     }
-    to {
+    100% {
         background-position: 132px;
     }
 }
 
-@keyframes exeunt {
-    from {
+@keyframes exire {
+    0% {
         left: 50%;
         transform: translate(0%);
     }
-    to {
-        left: 0%;
+    100% {
+        left: -1%; /* just to make sure it's offscreen */
         transform: translate(-100%);
     }
 }

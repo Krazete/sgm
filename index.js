@@ -155,28 +155,6 @@ function fearTheRainbow() {
     chaos = !chaos;
 }
 
-function spawn(e) {
-    var motion = document.createElement("div");
-        motion.className = "trajectory";
-        var cat = document.createElement("div");
-            cat.className = "scribble-cat";
-        motion.appendChild(cat);
-    e.appendChild(motion);
-    despawn(motion);
-}
-
-function despawn(e) {
-    var box = e.getBoundingClientRect();
-    if (box.right <= 0) {
-        e.remove();
-    }
-    else {
-        requestAnimationFrame(function () {
-            despawn(e);
-        });
-    }
-}
-
 function toggleLoadingScreen(loading) {
     if (loading) {
         document.body.classList.add("loading");
@@ -762,9 +740,6 @@ function initDock() {
             filterMenu.classList.add("hidden");
             sortMenu.classList.add("hidden");
             optionsMenu.scrollTo(0, 0);
-        }
-        if (Math.random() < 0.01) {
-            spawn(footer);
         }
     }
 
@@ -1528,12 +1503,45 @@ function initOptionsMenu() {
     optionDefault.click();
 }
 
+function initCat() {
+    function spawn() {
+        var motion = document.createElement("div");
+            motion.className = "cat-dolly";
+            var cat = document.createElement("div");
+                cat.className = "cat";
+            motion.appendChild(cat);
+        document.body.appendChild(motion);
+        despawn(motion);
+    }
+
+    function despawn(e) {
+        var box = e.getBoundingClientRect();
+        if (box.right <= 0) {
+            e.remove();
+        }
+        else {
+            requestAnimationFrame(function () {
+                despawn(e);
+            });
+        }
+    }
+
+    function throttleSpawn() {
+        if (Math.random() < 0.01) {
+            spawn();
+        }
+    }
+
+    window.addEventListener("click", throttleSpawn);
+}
+
 function initialize() {
     function initFooter() {
         initDock();
         initFilterMenu();
         initSortMenu();
         initOptionsMenu();
+        initCat();
     }
 
     toggleLoadingScreen(true);
@@ -1541,7 +1549,6 @@ function initialize() {
         loadJSON("data/fighters.json"),
         loadJSON("data/variants.json")
     ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(toggleLoadingScreen);
-
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
