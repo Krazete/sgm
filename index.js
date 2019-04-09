@@ -616,6 +616,11 @@ function initLanguageMenu() {
         corpus.fakeRF = "Robo-Fortune";
         corpus.fakeCA = "Headrone";
         corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View preview on Youtube.</a>";
+        corpus.fakeMA = "Network Protocol";
+        corpus.fakeMA1 = "DDoS";
+        corpus.fakeMA1Des = "Inflict POWER SURGE every x seconds when close to the opponent. <a href=\"https://twitter.com/sgmobile/status/1115441814457049088\" target=\"_blank\">View preview on Twitter.</a>";
+        corpus.fakeMA2 = "Ping Check";
+        corpus.fakeMA2Des = "Gain ENRAGE every x seconds when far from the opponent. <a href=\"https://twitter.com/sgmobile/status/1115441814457049088\" target=\"_blank\">View preview on Twitter.</a>";
         function newCorpusEntry(twit, id, quote, sa) {
             corpus["fake" + id] = wikiaPaths[id];
             corpus["fake" + id + "Quote"] = quote;

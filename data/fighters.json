@@ -6,11 +6,11 @@
             "description": "fakeCADes"
         },
         "ma": {
-            "title": "fakeEmpty",
+            "title": "fakeMA",
             "features": [
                 {
-                    "title": "fakeEmpty",
-                    "description": "fakeEmpty",
+                    "title": "fakeMA1",
+                    "description": "fakeMA1Des",
                     "tiers": [
                         {"unlock": 1, "value": []},
                         {"unlock": 2, "value": []},
@@ -26,8 +26,8 @@
                     ]
                 },
                 {
-                    "title": "fakeEmpty",
-                    "description": "fakeEmpty",
+                    "title": "fakeMA2",
+                    "description": "fakeMA2Des",
                     "tiers": [
                         {"unlock": 1, "value": []},
                         {"unlock": 2, "value": []},
