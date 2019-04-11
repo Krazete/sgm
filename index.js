@@ -690,7 +690,7 @@ function initDock() {
     var sortOffense = document.getElementById("sort-offense");
     var sortDefense = document.getElementById("sort-defense");
 
-    var savedStar = localStorage.getItem("star") || "on";
+    var savedStar = localStorage.getItem("star") || "off";
 
     function getScrollRatio() {
         var scrollHeight = document.documentElement.scrollHeight - innerHeight;
