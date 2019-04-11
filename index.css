@@ -272,6 +272,16 @@ html[lang='zh-cn'] .move-gallery:before {content: '\62db \5f0f \753b \5eca ';}
 html[lang='ru'] .move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
 html[lang='pt-br'] .move-gallery:before {content: 'Galeria de Golpes';}
 
+html[lang='en'] .catalyst-gallery:before {content: 'Catalyst Gallery';} /* TODO: fix these translations */
+html[lang='ja'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+html[lang='fr'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+html[lang='de'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+html[lang='es'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+html[lang='ko'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+html[lang='zh-cn'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+html[lang='ru'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+html[lang='pt-br'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+
 html[lang='en'] .gallery-ratings:before {content: 'Gallery Ratings';}
 html[lang='ja'] .gallery-ratings:before {content: '\30ae \30e3 \30e9 \30ea \30fc \306e \8a55 \4fa1 ';}
 html[lang='fr'] .gallery-ratings:before {content: 'Notes de la Galerie';}
@@ -289,7 +299,7 @@ html[lang='pt-br'] .gallery-ratings:before {content: 'Classifica\00e7 \00f5 es d
 .ribbon {
     background: #263b5a;
     margin: 6px auto;
-    text-transform: uppercase;
+    font-variant: small-caps;
 }
 
 #version:before {
