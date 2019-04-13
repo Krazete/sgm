@@ -614,7 +614,7 @@ function initLanguageMenu() {
         /* TODO: remove when robo becomes available */
         corpus.fakeEmpty = "???";
         corpus.fakeRF = "Robo-Fortune";
-        corpus.fakeCA = "Headrone";
+        corpus.fakeCA = "Headrone Hardware";
         corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View preview on Youtube.</a>";
         corpus.fakeMA = "Network Protocol";
         corpus.fakeMA1 = "DDoS";
