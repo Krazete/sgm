@@ -7,6 +7,10 @@ common = [
     'MainMenu_Collection', # UNUSED
     'Version_Login',
     'Popup_Download_Confirm_Header',
+    'Collection_Characters',
+    'Collection_SMoves',
+    # 'Collection_Catalysts',
+    'Ranked_Rating', # UNUSED (pluralized in css)
     'Loading_Status_Loading',
     'Popup_Error_Header',
 
@@ -48,8 +52,7 @@ common = [
     'SkillTree_HealthNode_Title',
     'Key_Element',
     'Sort_Tier',
-    'Sort_Type',
-    'Ranked_Rating' # UNUSED
+    'Sort_Type'
 ]
 
 corpus = file.load('data_processing/sgm_exports/TextAsset')
