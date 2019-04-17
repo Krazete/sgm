@@ -12,7 +12,12 @@
         },
         "element": 3,
         "tier": 0,
-        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+        "stats": [
+            {"attack": "74", "lifebar": "350"},
+            {"attack": "133", "lifebar": "630"},
+            {"attack": "240", "lifebar": "1134"},
+            {"attack": "432", "lifebar": "2041"}
+        ]
     },
     "m3ow": {
         "base": "rf",
@@ -27,7 +32,12 @@
         },
         "element": 5,
         "tier": 0,
-        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+        "stats": [
+            {"attack": "64", "lifebar": "495"},
+            {"attack": "115", "lifebar": "891"},
+            {"attack": "207", "lifebar": "1604"},
+            {"attack": "373", "lifebar": "2887"}
+        ]
     },
     "nTech": {
         "base": "rf",
@@ -42,7 +52,11 @@
         },
         "element": 1,
         "tier": 1,
-        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+        "stats": [
+            {"attack": "118", "lifebar": "924"},
+            {"attack": "212", "lifebar": "1663"},
+            {"attack": "382", "lifebar": "2994"}
+        ]
     },
     "pTor": {
         "base": "rf",
@@ -57,7 +71,11 @@
         },
         "element": 4,
         "tier": 1,
-        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+        "stats": [
+            {"attack": "160", "lifebar": "756"},
+            {"attack": "288", "lifebar": "1361"},
+            {"attack": "518", "lifebar": "2449"}
+        ]
     },
     "tByte": {
         "base": "rf",
@@ -72,7 +90,10 @@
         },
         "element": 4,
         "tier": 2,
-        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+        "stats": [
+            {"attack": "292", "lifebar": "1764"},
+            {"attack": "526", "lifebar": "3175"}
+        ]
     },
     "bScreen": {
         "base": "rf",
@@ -87,7 +108,10 @@
         },
         "element": 2,
         "tier": 2,
-        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+        "stats": [
+            {"attack": "218", "lifebar": "2184"},
+            {"attack": "392", "lifebar": "3931"}
+        ]
     },
     "hHunter": {
         "base": "rf",
@@ -102,7 +126,10 @@
         },
         "element": 1,
         "tier": 2,
-        "stats": [{"attack": "???", "lifebar": "???"}, {"attack": "???", "lifebar": "???"}]
+        "stats": [
+            {"attack": "375", "lifebar": "1390"},
+            {"attack": "675", "lifebar": "2502"}
+        ]
     },
     "liam": {
         "base": "rf",
@@ -117,7 +144,7 @@
         },
         "element": 0,
         "tier": 3,
-        "stats": [{"attack": 999, "lifebar": 9999}]
+        "stats": [{"attack": 613, "lifebar": 3704}]
     },
     "iLeague": {
         "base": "pa",
