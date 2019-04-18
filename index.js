@@ -552,7 +552,7 @@ function initCollection(responses) {
 }
 
 function formatNumbers(text) {
-    return text.replace(/((?:NaN|\d+(?:\.\d+)?)%?)/g, "<span class=\"number\">$1</span>");
+    return text.replace(/NaN/g, "???").replace(/((?:\?\?\?|\d+(?:\.\d+)?)%?)/g, "<span class=\"number\">$1</span>");
 }
 
 function format(template, substitutions) {
