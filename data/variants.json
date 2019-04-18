@@ -1,13 +1,27 @@
 {
     "pType": {
         "base": "rf",
-        "name": "fakepType",
-        "quote": "fakepTypeQuote",
+        "name": "Char_RoboFortune_B_V1_Name",
+        "quote": "Variant_Description_RoboFortune_Prototype",
         "sa": {
-            "title": "fakepTypeSA",
+            "title": "Char_RoboFortune_SA_SystemShock_Title",
             "features": [
-                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakepTypeSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {
+                    "description": "Char_RoboFortune_SA_SystemShock_Desc",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_SystemShock_Desc2",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
             ]
         },
         "element": 3,
@@ -21,13 +35,27 @@
     },
     "m3ow": {
         "base": "rf",
-        "name": "fakem3ow",
-        "quote": "fakem3owQuote",
+        "name": "Char_RoboFortune_B_V2_Name",
+        "quote": "Variant_Description_RoboFortune_M-3OW",
         "sa": {
-            "title": "fakem3owSA",
+            "title": "Char_RoboFortune_SA_FarFarAway_Title",
             "features": [
-                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakem3owSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {
+                    "description": "Char_RoboFortune_SA_FarFarAway_Desc",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_FarFarAway_Desc2",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
             ]
         },
         "element": 5,
@@ -39,15 +67,29 @@
             {"attack": "373", "lifebar": "2887"}
         ]
     },
-    "nTech": {
+    "nyan": {
         "base": "rf",
-        "name": "fakenTech",
-        "quote": "fakenTechQuote",
+        "name": "Char_RoboFortune_S_V1_Name",
+        "quote": "Variant_Description_RoboFortune_Nyanotech",
         "sa": {
-            "title": "fakenTechSA",
+            "title": "Char_RoboFortune_SA_FireWall_Title",
             "features": [
-                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakenTechSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {
+                    "description": "Char_RoboFortune_SA_FireWall_Desc",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_FireWall_Desc2",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
             ]
         },
         "element": 1,
@@ -58,15 +100,29 @@
             {"attack": "382", "lifebar": "2994"}
         ]
     },
-    "pTor": {
+    "purr": {
         "base": "rf",
-        "name": "fakepTor",
-        "quote": "fakepTorQuote",
+        "name": "Char_RoboFortune_S_V2_Name",
+        "quote": "Variant_Description_RoboFortune_Purrminator",
         "sa": {
-            "title": "fakepTorSA",
+            "title": "Char_RoboFortune_SA_MachineLearning_Title",
             "features": [
-                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakepTorSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {
+                    "description": "Char_RoboFortune_SA_MachineLearning_Desc",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_MachineLearning_Desc2",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
             ]
         },
         "element": 4,
@@ -77,33 +133,29 @@
             {"attack": "518", "lifebar": "2449"}
         ]
     },
-    "tByte": {
+    "blueS": {
         "base": "rf",
-        "name": "faketByte",
-        "quote": "faketByteQuote",
+        "name": "Char_RoboFortune_G_V1_Name",
+        "quote": "Variant_Description_RoboFortune_BlueScreen",
         "sa": {
-            "title": "faketByteSA",
+            "title": "Char_RoboFortune_SA_FatalSystemError_Title",
             "features": [
-                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "faketByteSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
-            ]
-        },
-        "element": 4,
-        "tier": 2,
-        "stats": [
-            {"attack": "292", "lifebar": "1764"},
-            {"attack": "526", "lifebar": "3175"}
-        ]
-    },
-    "bScreen": {
-        "base": "rf",
-        "name": "fakebScreen",
-        "quote": "fakebScreenQuote",
-        "sa": {
-            "title": "fakebScreenSA",
-            "features": [
-                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakebScreenSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {
+                    "description": "Char_RoboFortune_SA_FatalSystemError_Desc",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_FatalSystemError_Desc2",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
             ]
         },
         "element": 2,
@@ -113,15 +165,61 @@
             {"attack": "392", "lifebar": "3931"}
         ]
     },
-    "hHunter": {
+    "tByte": {
         "base": "rf",
-        "name": "fakehHunter",
-        "quote": "fakehHunterQuote",
+        "name": "Char_RoboFortune_G_V2_Name",
+        "quote": "Variant_Description_RoboFortune_TerrorByte",
         "sa": {
-            "title": "fakehHunterSA",
+            "title": "Char_RoboFortune_SA_Malware_Title",
             "features": [
-                {"description": "fakeEmpty", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakehHunterSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {
+                    "description": "Char_RoboFortune_SA_Malware_Desc",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_Malware_Desc2",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
+            ]
+        },
+        "element": 4,
+        "tier": 2,
+        "stats": [
+            {"attack": "292", "lifebar": "1764"},
+            {"attack": "526", "lifebar": "3175"}
+        ]
+    },
+    "metro": {
+        "base": "rf",
+        "name": "Char_RoboFortune_G_V3_Name",
+        "quote": "Variant_Description_RoboFortune_HeadHunter",
+        "sa": {
+            "title": "Char_RoboFortune_SA_ZeroLaser_Title",
+            "features": [
+                {
+                    "description": "Char_RoboFortune_SA_ZeroLaser_Desc",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_ZeroLaser_Desc2",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
             ]
         },
         "element": 1,
@@ -131,15 +229,29 @@
             {"attack": "675", "lifebar": "2502"}
         ]
     },
-    "liam": {
+    "clock": {
         "base": "rf",
-        "name": "fakeliamName",
-        "quote": "fakeliamQuote",
+        "name": "Char_RoboFortune_D_V1_Name",
+        "quote": "Variant_Description_RoboFortune_Overclocked",
         "sa": {
-            "title": "fakeliamSA",
+            "title": "Char_RoboFortune_SA_BufferOverflow_Title",
             "features": [
-                {"description": "fakeliamSA1Des", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]},
-                {"description": "fakeliamSADes", "tiers": [{"unlock": 1, "value": []}, {"unlock": 2, "value": []}, {"unlock": 3, "value": []}]}
+                {
+                    "description": "Char_RoboFortune_SA_BufferOverflow_Desc",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_BufferOverflow_Desc2",
+                    "tiers": [
+                        {"unlock": 1, "value": []},
+                        {"unlock": 2, "value": []},
+                        {"unlock": 3, "value": []}
+                    ]
+                }
             ]
         },
         "element": 0,

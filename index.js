@@ -114,13 +114,13 @@ var wikiaPaths = { /* from English corpus */
     "iLeague": "Ivy League",
     "sOut": "Stand Out",
     "pType": "Prototype",
-    "m3ow": "M-3ow",
-    "nTech": "Nyanotech",
-    "pTor": "Purrminator",
+    "m3ow": "M-3OW",
+    "nyan": "Nyanotech",
+    "purr": "Purrminator",
     "tByte": "Terror Byte",
-    "bScreen": "Blue Screen",
-    "hHunter": "Head Hunter",
-    "liam": "Overclocked"
+    "blueS": "Blue Screen",
+    "metro": "Head Hunter",
+    "clock": "Overclocked"
 };
 
 var cards = [];
@@ -552,10 +552,7 @@ function initCollection(responses) {
 }
 
 function formatNumbers(text) {
-    if (text.includes("href=")) { /* TODO: (maybe) remove when robo becomes available */
-        return text;
-    }
-    return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
+    return text.replace(/((?:NaN|\d+(?:\.\d+)?)%?)/g, "<span class=\"number\">$1</span>");
 }
 
 function format(template, substitutions) {
@@ -610,39 +607,6 @@ function initLanguageMenu() {
 
     function updateCardConstants(response) {
         corpus = response;
-
-        /* TODO: remove when robo becomes available */
-        corpus.fakeEmpty = "???";
-        corpus.fakeRF = "Robo-Fortune";
-        corpus.fakeCA = "Headrone Hardware";
-        corpus.fakeCADes = "<a href=\"https://www.youtube.com/watch?v=sJpINwtu-EU\" target=\"_blank\">View preview on Youtube.</a>";
-        corpus.fakeMA = "Network Protocol";
-        corpus.fakeMA1 = "DDoS";
-        corpus.fakeMA1Des = "Inflict POWER SURGE every 3 seconds when close to the opponent. <a href=\"https://twitter.com/sgmobile/status/1115441814457049088\" target=\"_blank\">View preview on Twitter.</a>";
-        corpus.fakeMA2 = "Ping Check";
-        corpus.fakeMA2Des = "Gain ENRAGE every 3 seconds when far from the opponent. <a href=\"https://twitter.com/sgmobile/status/1115441814457049088\" target=\"_blank\">View preview on Twitter.</a>";
-        function newCorpusEntry(twit, id, quote, sa) {
-            corpus["fake" + id] = wikiaPaths[id];
-            corpus["fake" + id + "Quote"] = quote;
-            corpus["fake" + id + "SA"] = sa;
-            if (parseInt(twit)) {
-                corpus["fake" + id + "SADes"] = "<a href=\"https://twitter.com/sgmobile/status/" + twit + "\" target=\"_blank\">View preview on Twitter.</a>";
-            }
-            else {
-                corpus["fake" + id + "SADes"] = twit;
-            }
-        }
-        newCorpusEntry("1111096134456340480", "pType", "The future is meow.", "System Shock");
-        newCorpusEntry("1111440170702655494", "m3ow", "The chances of your survival are 725... to 1.", "Far Far Away");
-        newCorpusEntry("1111802501932544000", "nTech", "Heavy paws of lead, fills her victims full of dread.", "Fire Wall");
-        newCorpusEntry("1112902820347359232", "pTor", "My CPU is a neural net processor; a learning computer.", "Machine Learning");
-        newCorpusEntry("1113245495902633984", "tByte", "117 Threats Detected! Download Brain Drain anti-virus software now!", "Malware");
-        newCorpusEntry("1113606692279685120", "bScreen", "Stop code: CRITICAL_PROCESS_DIED", "Fatal System Error");
-        newCorpusEntry("1113993005969494016", "hHunter", "Power suits me.", "Zero Laser");
-        corpus["fakeliamName"] = "Liam";
-        corpus["fakeliamSA1Des"] = "The information within this variant entry is an inside joke among the SGM Discord community. It will be corrected after 3.2.0.";
-        newCorpusEntry("1114370741833613312", "liam", "I don't eat cereal ever actually.", "h");
-
         for (var card of cards) {
             updateCardConstant(card);
         }
