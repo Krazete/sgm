@@ -43,7 +43,7 @@
                 {
                     "description": "Char_RoboFortune_SA_FarFarAway_Desc",
                     "tiers": [
-                        {"unlock": 1, "value": []},
+                        {"unlock": 1, "value": [50]},
                         {"unlock": 2, "value": []},
                         {"unlock": 3, "value": []}
                     ]
@@ -51,7 +51,7 @@
                 {
                     "description": "Char_RoboFortune_SA_FarFarAway_Desc2",
                     "tiers": [
-                        {"unlock": 1, "value": []},
+                        {"unlock": 1, "value": [3]},
                         {"unlock": 2, "value": []},
                         {"unlock": 3, "value": []}
                     ]
@@ -175,7 +175,7 @@
                 {
                     "description": "Char_RoboFortune_SA_Malware_Desc",
                     "tiers": [
-                        {"unlock": 1, "value": []},
+                        {"unlock": 1, "value": [5, 5]},
                         {"unlock": 2, "value": []},
                         {"unlock": 3, "value": []}
                     ]
@@ -183,7 +183,7 @@
                 {
                     "description": "Char_RoboFortune_SA_Malware_Desc2",
                     "tiers": [
-                        {"unlock": 1, "value": []},
+                        {"unlock": 1, "value": [5]},
                         {"unlock": 2, "value": []},
                         {"unlock": 3, "value": []}
                     ]
@@ -239,7 +239,7 @@
                 {
                     "description": "Char_RoboFortune_SA_BufferOverflow_Desc",
                     "tiers": [
-                        {"unlock": 1, "value": []},
+                        {"unlock": 1, "value": [5]},
                         {"unlock": 2, "value": []},
                         {"unlock": 3, "value": []}
                     ]
@@ -247,7 +247,7 @@
                 {
                     "description": "Char_RoboFortune_SA_BufferOverflow_Desc2",
                     "tiers": [
-                        {"unlock": 1, "value": []},
+                        {"unlock": 1, "value": [5, 50, 5]},
                         {"unlock": 2, "value": []},
                         {"unlock": 3, "value": []}
                     ]
