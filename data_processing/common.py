@@ -9,7 +9,7 @@ common = [
     'Popup_Download_Confirm_Header',
     'Collection_Characters',
     'Collection_SMoves',
-    # 'Collection_Catalysts',
+    'Collection_NodeModifiers',
     'Ranked_Rating', # UNUSED (pluralized in css)
     'Loading_Status_Loading',
     'Popup_Error_Header',
