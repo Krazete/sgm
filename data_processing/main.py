@@ -1,294 +1,174 @@
 from data_processing import file
 import re
 
-# Study Monolith Structure
+monolith = file.load('data_processing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
+corpus = file.load('data_processing/sgm_exports/TextAsset')
 
-def study_dictionary(dictionary):
-    'Print a nicely formatted dictionary to study its structure.'
-    longest_key = max(dictionary, key=len)
-    max_length = len(longest_key)
-    template = '{{:{}}}{{}}'.format(max_length + 1)
-    for key in dictionary:
-        print(template.format(key, dictionary[key]))
+character_traits = ['characterAbility', 'englishVoArtist']
+variant_traits = ['baseCharacter', 'displayVariantName', 'variantQuote']
+sm_traits = ['gearPointsCost', 'cooldownTimes']
+bb_traits = ['gearPointsCost', 'strengthLevel']
+catalyst_traits = ['randomCharacter', 'randomElement']
+# ability_traits = ['features']
 
-def compile_mono(obj, is_root=True):
-    'Replace monolith references with the objects they point to.'
-    global visited_monos
-    if is_root:
-        visited_monos = set()
-    if isinstance(obj, dict):
-        if 'm_PathID' in obj:
-            key = str(obj['m_PathID'])
-            if key not in visited_monos:
-                visited_monos.add(key)
-                try:
-                    value = compile_mono(monolith[key], False)
-                except KeyError:
-                    value = 'UNDEFINED'
-                return {key: value}
-            return {key: 'REPEATED'}
-        subdict = {}
-        for key in obj:
-            value = compile_mono(obj[key], False)
-            subdict.setdefault(key, value)
-        return subdict
-    elif isinstance(obj, list):
-        sublist = []
-        for item in obj:
-            value = compile_mono(item, False)
-            sublist.append(value)
-        return sublist
-    else:
-        return obj
-
-def study_sample(monolith, mono_char_keys, hrid=None):
-    'Print a monolith object and output more detailed results in study.json.'
-    if hrid:
-        for key in mono_char_keys:
-            mono = monolith[key]
-            if hrid == mono['humanReadableGuid']:
-                study_dictionary(mono)
-                monostudy = compile_mono(mono)
-                file.save(monostudy, 'data_processing/study.json')
-    else:
-        from random import sample
-        for key in sample(mono_char_keys, 1):
-            mono = monolith[key]
-            study_dictionary(mono)
-            monostudy = compile_mono(mono)
-            file.save(monostudy, 'data_processing/study.json')
-
-# Get Character Keys
-
-def get_monolith_character_keys(monolith):
-    'Extract keys of character objects from monolith.'
-    character_keys = set()
+def get_keys(traits):
+    'Get keys of objects with certain attributes from the monolith.'
+    keys = set()
     for key in monolith:
         mono = monolith[key]
-        if 'baseCharacter' in mono:
-            character_keys.add(key)
-    return character_keys
+        is_key = True
+        for trait in traits:
+            if trait not in mono:
+                is_key = False
+                break
+        if is_key:
+            keys.add(key)
+    return keys
 
-# Build Data from Monolith
+def get_characters(character_keys, variant_keys):
+    characters = {}
+    for character_key in character_keys:
+        character = monolith[character_key]
+        id = character['humanReadableGuid']
+        data = {}
+        data['name'] = character['displayName']
+        data['ca'] = character['characterAbility']
+        for variant_key in variant_keys:
+            variant = monolith[variant_key]
+            if variant['baseCharacter']['m_PathID'] == character_key:
+                data['ma'] = variant['superAbility']
+                break
+        characters.setdefault(id, data)
+    return characters
 
-def build_data(monolith, mono_char_keys):
-    'Generate database to be used on the website.'
-    fighters = {}
+def get_variants(variant_keys):
     variants = {}
-    sm_set = {}
-    bb_set = {}
-    corpus_keys = set()
+    for variant_key in variant_keys:
+        variant = monolith[variant_key]
+        id = variant['humanReadableGuid']
+        character_key = str(variant['baseCharacter']['m_PathID'])
+        if character_key not in monolith:
+            print('Character', character_key, 'for Variant', id, 'not found in monolith.')
+            continue
+        character = monolith[character_key]
+        data = {}
+        data['base'] = character['humanReadableGuid']
+        data['name'] = variant['displayVariantName']
+        data['quote'] = variant['variantQuote']
+        data['tier'] = variant['initialTier']
+        data['element'] = variant['elementAffiliation']
+        data['stats'] = variant['baseScaledValuesByTier']['Array']
+        data['sa'] = variant['signatureAbility'] # reference object
+        variants[id] = data
+    return variants
 
-    def monoref(ref):
-        'Return the monolith object referenced to by the reference object.'
-        key = str(ref['m_PathID'])
-        if key in monolith:
-            return monolith[key]
-        return {'title': None, 'features': []}
+def get_sms(character_keys, sm_keys):
+    sms = {}
+    for character_key in character_keys:
+        character = monolith[character_key]
+        for sm_ref in character['specialMoves']['Array']:
+            sm_key = str(sm_ref['m_PathID'])
+            sm = monolith[sm_key]
+            id = sm['humanReadableGuid']
+            data = {}
+            data['base'] = character['humanReadableGuid']
+            data['name'] = sm['title']
+            data['type'] = 0
+            data['tier'] = sm['tier']
+            data['gear'] = sm['gearDamageTier']
+            data['cost'] = sm['gearPointsCost']
+            data['attack'] = sm['attackDamageMultipliers']
+            data['damage'] = sm['damageIndicatorLevels']
+            data['cooldown'] = sm['cooldownTimes']
+            data['ability'] = sm['signatureAbility'] # reference object
+            sms[id] = data
+    for sm_key in sm_keys:
+        if sm_key not in sms:
+            print(sm_key)
+    for id in sms:
+        if id not in sm_keys:
+            print(id)
+    return sms
 
-    def record(key):
-        'Record corpus key and return it.'
-        if isinstance(key, dict):
-            for subkey in key:
-                record(key[subkey])
-        else:
-            corpus_keys.add(key)
-        return key
+def get_bbs(character_keys, bb_keys):
+    bbs = {}
+    for character_key in character_keys:
+        character = monolith[character_key]
+        for bb_ref in character['blockbusters']['Array']:
+            bb_key = str(bb_ref['m_PathID'])
+            bb = monolith[bb_key]
+            id = bb['humanReadableGuid']
+            data = {}
+            data['base'] = character['humanReadableGuid']
+            data['name'] = bb['title']
+            data['type'] = 0
+            data['tier'] = bb['tier']
+            data['gear'] = bb['gearDamageTier']
+            data['cost'] = bb['gearPointsCost']
+            data['attack'] = bb['attackDamageMultipliers']
+            data['damage'] = bb['damageIndicatorLevels']
+            data['cooldown'] = bb['strengthLevel']
+            data['ability'] = bb['signatureAbility'] # reference object
+            bbs[id] = data
+    for bb_key in bb_keys:
+        if bb_key not in bbs:
+            print(bb_key)
+    for id in bbs:
+        if id not in bb_keys:
+            print(id)
+    return bbs
 
-    def build_subs(m_substitutions):
-        'Get keys of substitutions to use in ability description templates.'
-        subs = []
-        for sub in m_substitutions:
-            key, value = sub.split('.')
-            key = key.upper()
-            value = value[0].lower() + value[1:]
-            subs.append((key, value))
-        return subs
+def get_catalysts(catalyst_keys):
+    catalysts = {}
+    for catalyst_key in catalyst_keys:
+        catalyst = monolith[catalyst_key]
+        id = catalyst['humanReadableGuid']
+        data = {}
+        data['name'] = catalyst['title']
+        data['tier'] = catalyst['tier']
+        data['icon'] = catalyst['icon']['resourcePath']
+        data['characterLock'] = catalyst['randomCharacter']
+        data['elementLock'] = catalyst['randomElement']
+        data['constraint'] = catalyst['abilityConstraint'] # reference object
+        data['ability'] = catalyst['signatureAbility'] # reference object
+        catalysts[id] = data
+    return catalysts
 
-    def build_tier(m_feature, m_tier, subs):
-        'Get substitution values to be used in ability description templates.'
-        tier = {
-            'unlock': 0,
-            'value': [None] * len(subs)
-        }
-        for obj in iter_object(m_tier):
-            tier['unlock'] = m_tier['unlockAtLevel']
-            for i, sub in enumerate(subs):
-                if obj['id'].upper() == sub[0]:
-                    tier['value'][i] = obj[sub[1]]
-        for obj in iter_object(m_feature, ['tiers']):
-            for i, sub in enumerate(subs):
-                if obj['id'].upper() == sub[0]:
-                    tier['value'][i] = obj[sub[1]]
-        return tier
+# def get_abilities(ability_keys):
+#     pass
 
-    def iter_object(obj, skip_keys=[]):
-        'Iterate through all substitution objects nested within an object.'
-        if isinstance(obj, dict):
-            if 'm_PathID' in obj:
-                obj = monoref(obj)
-            if 'id' in obj:
-                yield obj
-            for key in obj:
-                if key not in skip_keys:
-                    for subobj in iter_object(obj[key], skip_keys):
-                        yield subobj
-        elif isinstance(obj, list):
-            for item in obj:
-                for subobj in iter_object(item, skip_keys):
-                    yield subobj
-
-    def build_features(obj):
-        'Format an ability object.'
-        title = record(monoref(obj)['title'])
-        features = []
-        for feature_ref in monoref(obj)['features']:
-            m_feature = monoref(feature_ref)
-            subtitle = record(m_feature['title'])
-            description = record(m_feature['description'])
-            subs = build_subs(m_feature['substitutions'])
-            tiers = []
-            for tier_ref in m_feature['tiers']:
-                m_tier = monoref(tier_ref)
-                tier = build_tier(m_feature, m_tier, subs)
-                tiers.append(tier)
-            if subtitle == '': # signature ability
-                features.append({
-                    'description': description,
-                    'tiers': tiers
-                })
-            else: # marquee ability
-                features.append({
-                    'title': subtitle,
-                    'description': description,
-                    'tiers': tiers
-                })
-        return {
-            'title': title,
-            'features': features
-        }
-
-    def build_fighter(mono):
-        base = monoref(mono['baseCharacter'])
-        f_key = base['humanReadableGuid']
-        if f_key in fighters: # skip copies
-            return
-        f_value = {
-            # 'dataName': base['dataName'],
-            'name': record(base['displayName']),
-            # 'role': record(base['roleDescription']),
-            'voice': {
-                'en': base['englishVoArtist'],
-                'ja': base['japaneseVoArtist']
-            },
-            'ca': record(monoref(base['characterAbility'])),
-            'ma': build_features(mono['superAbility'])
-        }
-        if f_value['ma']['title'] == None:
-            return
-        fighters.setdefault(f_key, f_value)
-        build_sm(f_key, base)
-        build_bb(f_key, base)
-
-    def build_variant(mono):
-        base = monoref(mono['baseCharacter'])
-        f_key = base['humanReadableGuid']
-        hrid = mono['humanReadableGuid']
-        if hrid == '':
-            v_key = mono['guid']
-        elif hrid == 'dummy':
-            v_key = f_key + '_dummy'
-        else:
-            v_key = hrid
-        if v_key in variants: # skip copies (except '' or 'dummy')
-            return
-        v_value = {
-            # 'enabled': v_key == hrid,
-            'base': f_key,
-            'name': record(mono['displayVariantName']),
-            # 'role': record(mono['variantDescription']),
-            'quote': record(mono['variantQuote']),
-            'tier': mono['initialTier'],
-            'element': mono['elementAffiliation'],
-            'stats': mono['baseScaledValuesByTier'],
-            'sa': build_features(mono['signatureAbility'])
-        }
-        variants.setdefault(v_key, v_value)
-
-    def build_sm(f_key, base):
-        for sm_mono in base['specialMoves']:
-            sm = monoref(sm_mono)
-            sm_key = sm['humanReadableGuid']
-            if sm_key == '': # skip tutorial(?) moves
-                continue
-            sm_value = {
-                'base': f_key,
-                'type': 0,
-                'tier': sm['tier'],
-                'title': record(sm['title']),
-                'description': record(sm['description']),
-                # 'superbar': sm['superbarCost'],
-                'attack': sm['attackDamageMultipliers'],
-                'gear': sm['gearDamageTier'],
-                'cost': sm['gearPointsCost'],
-                'damage': sm['damageIndicatorLevels'],
-                'cooldown': sm['cooldownTimes'],
-                'ability': build_features(sm['signatureAbility'])
-            }
-            if sm_key in sm_set: # some moves are mislabeled
-                sm_key = sm['guid']
-            sm_set.setdefault(sm_key, sm_value)
-
-    def build_bb(f_key, base):
-        for bb_mono in base['blockbusters']:
-            bb = monoref(bb_mono)
-            bb_key = bb['humanReadableGuid']
-            if bb_key == '': # skip tutorial(?) moves
-                continue
-            bb_value = {
-                'base': f_key,
-                'type': 1,
-                'tier': bb['tier'],
-                'title': record(bb['title']),
-                'description': record(bb['description']),
-                # 'superbar': bb['superbarCost'],
-                'attack': bb['attackDamageMultipliers'],
-                'gear': bb['gearDamageTier'],
-                'cost': bb['gearPointsCost'],
-                'damage': bb['damageIndicatorLevels'],
-                # 'strength': bb['strengthLevel'],
-                'ability': build_features(bb['signatureAbility'])
-            }
-            if bb_key in bb_set: # some moves are mislabeled
-                bb_key = bb['guid']
-            bb_set.setdefault(bb_key, bb_value)
-
-    for key in mono_char_keys:
-        mono = monolith[key]
-        build_fighter(mono)
-        build_variant(mono)
-
-    return fighters, variants, sm_set, bb_set, corpus_keys
+def get_corpus_keys(object):
+    keys = set()
+    for key in object:
+        subobj = object[key]
+        if isinstance(subobj, str):
+            keys.add(subobj)
+        elif isinstance(subobj, dict):
+            keys.extend(get_corpus_keys(subobj))
+    return keys
 
 if __name__ =='__main__':
-    monolith = file.load('data_processing/sgm_exports/MonoBehaviour', 'split\d+-(\d+)-Mono')
-    corpus = file.load('data_processing/sgm_exports/TextAsset')
+    character_keys = get_keys(character_traits)
+    variant_keys = get_keys(variant_traits)
+    sm_keys = get_keys(sm_traits)
+    bb_keys = get_keys(bb_traits)
+    catalyst_keys = get_keys(catalyst_traits)
+    # ability_keys = get_keys(ability_traits)
 
-    mono_char_keys = get_monolith_character_keys(monolith)
+    characters = get_characters(character_keys, variant_keys)
+    variants = get_variants(variant_keys)
+    sms = get_sms(character_keys, sm_keys)
+    bbs = get_bbs(character_keys, bb_keys)
+    catalysts = get_catalysts(catalyst_keys)
+    # abilities = get_abilities(ability_keys)
 
-    # study_sample(monolith, mono_char_keys, 'oMai')
+    file.save(characters, 'data/characters.json')
+    file.save(variants, 'data/variants.json')
+    file.save(sms, 'data/sms.json')
+    file.save(bbs, 'data/bbs.json')
+    file.save(catalysts, 'data/catalysts.json')
 
-    # for key in monolith:
-    #     if 'SA_Valentine_VAR_DeadlyFury'.lower() in str(monolith[key]).lower():
-    #         print(key)
-    # monolith['15549']
-
-    fighters, variants, sm_set, bb_set, corpus_keys = build_data(monolith, mono_char_keys)
-
+    corpus_keys = get_corpus_keys(characters, variants, sms, bbs, catalysts)
     for language in corpus:
         primcorpus = {key: corpus[language][key] for key in corpus_keys if key in corpus[language]}
         file.save(primcorpus, 'data/{}.json'.format(language))
-    file.save(fighters, 'data/fighters.json')
-    file.save(variants, 'data/variants.json')
-    file.save(sm_set, 'data/sms.json')
-    file.save(bb_set, 'data/bbs.json')
