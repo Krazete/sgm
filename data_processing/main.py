@@ -6,10 +6,7 @@ corpus = file.load('data_processing/sgm_exports/TextAsset')
 
 character_traits = ['characterAbility', 'englishVoArtist']
 variant_traits = ['baseCharacter', 'displayVariantName', 'variantQuote']
-sm_traits = ['gearPointsCost', 'cooldownTimes']
-bb_traits = ['gearPointsCost', 'strengthLevel']
 catalyst_traits = ['randomCharacter', 'randomElement']
-# ability_traits = ['features']
 
 def get_keys(traits):
     'Get keys of objects with certain attributes from the monolith.'
@@ -25,18 +22,41 @@ def get_keys(traits):
             keys.add(key)
     return keys
 
+def get_reference(object):
+    if 'resourcePath' in object:
+        return {} # this references something outside of the monolith
+    id = str(object['m_PathID'])
+    if id in monolith:
+        return monolith[str(id)]
+    return {}
+
+def ability_core(ability):
+    data = {}
+    if 'title' in ability:
+        data['title'] = ability['title']
+    if 'description' in ability:
+        data['description'] = ability['description']
+    if 'substitutions' in ability:
+        data['substitutions'] = ability['substitutions']
+    return data
+
 def get_characters(character_keys, variant_keys):
     characters = {}
     for character_key in character_keys:
         character = monolith[character_key]
         id = character['humanReadableGuid']
+        if id == '':
+            id = variant['guid']
         data = {}
         data['name'] = character['displayName']
-        data['ca'] = character['characterAbility']
+        ca = get_reference(character['characterAbility'])
+        data['ca'] = ability_core(ca)
         for variant_key in variant_keys:
             variant = monolith[variant_key]
-            if variant['baseCharacter']['m_PathID'] == character_key:
-                data['ma'] = variant['superAbility']
+            baseCharacter_key = str(variant['baseCharacter']['m_PathID'])
+            if baseCharacter_key == character_key:
+                ma = get_reference(variant['superAbility'])
+                data['ma'] = ability_core(ma)
                 break
         characters.setdefault(id, data)
     return characters
@@ -46,6 +66,8 @@ def get_variants(variant_keys):
     for variant_key in variant_keys:
         variant = monolith[variant_key]
         id = variant['humanReadableGuid']
+        if id == '':
+            id = variant['guid']
         character_key = str(variant['baseCharacter']['m_PathID'])
         if character_key not in monolith:
             print('Character', character_key, 'for Variant', id, 'not found in monolith.')
@@ -58,11 +80,13 @@ def get_variants(variant_keys):
         data['tier'] = variant['initialTier']
         data['element'] = variant['elementAffiliation']
         data['stats'] = variant['baseScaledValuesByTier']['Array']
-        data['sa'] = variant['signatureAbility'] # reference object
+        sa = get_reference(variant['signatureAbility'])
+        data['sa'] = ability_core(sa),
+        data['fandom'] = corpus['en'][variant['displayVariantName']]
         variants[id] = data
     return variants
 
-def get_sms(character_keys, sm_keys):
+def get_sms(character_keys):
     sms = {}
     for character_key in character_keys:
         character = monolith[character_key]
@@ -70,9 +94,11 @@ def get_sms(character_keys, sm_keys):
             sm_key = str(sm_ref['m_PathID'])
             sm = monolith[sm_key]
             id = sm['humanReadableGuid']
+            if id == '':
+                id = sm['guid']
             data = {}
             data['base'] = character['humanReadableGuid']
-            data['name'] = sm['title']
+            data['title'] = sm['title']
             data['type'] = 0
             data['tier'] = sm['tier']
             data['gear'] = sm['gearDamageTier']
@@ -80,17 +106,12 @@ def get_sms(character_keys, sm_keys):
             data['attack'] = sm['attackDamageMultipliers']
             data['damage'] = sm['damageIndicatorLevels']
             data['cooldown'] = sm['cooldownTimes']
-            data['ability'] = sm['signatureAbility'] # reference object
+            ability = get_reference(sm['signatureAbility'])
+            data['ability'] = ability_core(ability)
             sms[id] = data
-    for sm_key in sm_keys:
-        if sm_key not in sms:
-            print(sm_key)
-    for id in sms:
-        if id not in sm_keys:
-            print(id)
     return sms
 
-def get_bbs(character_keys, bb_keys):
+def get_bbs(character_keys):
     bbs = {}
     for character_key in character_keys:
         character = monolith[character_key]
@@ -98,9 +119,11 @@ def get_bbs(character_keys, bb_keys):
             bb_key = str(bb_ref['m_PathID'])
             bb = monolith[bb_key]
             id = bb['humanReadableGuid']
+            if id == '':
+                id = bb['guid']
             data = {}
             data['base'] = character['humanReadableGuid']
-            data['name'] = bb['title']
+            data['title'] = bb['title']
             data['type'] = 0
             data['tier'] = bb['tier']
             data['gear'] = bb['gearDamageTier']
@@ -108,14 +131,9 @@ def get_bbs(character_keys, bb_keys):
             data['attack'] = bb['attackDamageMultipliers']
             data['damage'] = bb['damageIndicatorLevels']
             data['cooldown'] = bb['strengthLevel']
-            data['ability'] = bb['signatureAbility'] # reference object
+            ability = get_reference(bb['signatureAbility'])
+            data['ability'] = ability_core(ability)
             bbs[id] = data
-    for bb_key in bb_keys:
-        if bb_key not in bbs:
-            print(bb_key)
-    for id in bbs:
-        if id not in bb_keys:
-            print(id)
     return bbs
 
 def get_catalysts(catalyst_keys):
@@ -123,44 +141,53 @@ def get_catalysts(catalyst_keys):
     for catalyst_key in catalyst_keys:
         catalyst = monolith[catalyst_key]
         id = catalyst['humanReadableGuid']
+        if id == '':
+            id = catalyst['guid']
         data = {}
-        data['name'] = catalyst['title']
+        data['title'] = catalyst['title']
         data['tier'] = catalyst['tier']
         data['icon'] = catalyst['icon']['resourcePath']
         data['characterLock'] = catalyst['randomCharacter']
         data['elementLock'] = catalyst['randomElement']
-        data['constraint'] = catalyst['abilityConstraint'] # reference object
-        data['ability'] = catalyst['signatureAbility'] # reference object
+        constraint = get_reference(catalyst['abilityConstraint'])
+        data['constraint'] = {}
+        if 'charactersNeeded' in constraint:
+            character_ref = constraint['charactersNeeded']['Array'][0]
+            character = get_reference(character_ref)
+            if 'humanReadableGuid' in character:
+                data['constraint']['base'] = character['humanReadableGuid']
+            else:
+                data['constraint']['base'] = 'be' # WHY IS BEOWULF'S FILE MISSING???
+        if 'elementsNeeded' in constraint:
+            data['constraint']['element'] = constraint['elementsNeeded']['Array'][0]
+        ability = get_reference(catalyst['signatureAbility'])
+        data['ability'] = ability_core(ability)
         catalysts[id] = data
     return catalysts
 
-# def get_abilities(ability_keys):
-#     pass
-
 def get_corpus_keys(object):
     keys = set()
-    for key in object:
-        subobj = object[key]
-        if isinstance(subobj, str):
-            keys.add(subobj)
-        elif isinstance(subobj, dict):
-            keys.extend(get_corpus_keys(subobj))
+    if isinstance(object, str) and object in corpus['en']:
+        keys.add(object)
+    elif isinstance(object, list):
+        for item in object:
+            keys |= get_corpus_keys(item)
+    elif isinstance(object, dict):
+        for key in object:
+            value = object[key]
+            keys |= get_corpus_keys(value)
     return keys
 
 if __name__ =='__main__':
     character_keys = get_keys(character_traits)
     variant_keys = get_keys(variant_traits)
-    sm_keys = get_keys(sm_traits)
-    bb_keys = get_keys(bb_traits)
     catalyst_keys = get_keys(catalyst_traits)
-    # ability_keys = get_keys(ability_traits)
 
     characters = get_characters(character_keys, variant_keys)
     variants = get_variants(variant_keys)
-    sms = get_sms(character_keys, sm_keys)
-    bbs = get_bbs(character_keys, bb_keys)
+    sms = get_sms(character_keys)
+    bbs = get_bbs(character_keys)
     catalysts = get_catalysts(catalyst_keys)
-    # abilities = get_abilities(ability_keys)
 
     file.save(characters, 'data/characters.json')
     file.save(variants, 'data/variants.json')
@@ -168,7 +195,14 @@ if __name__ =='__main__':
     file.save(bbs, 'data/bbs.json')
     file.save(catalysts, 'data/catalysts.json')
 
-    corpus_keys = get_corpus_keys(characters, variants, sms, bbs, catalysts)
+    corpus_keys = set()
+    corpus_keys |= get_corpus_keys(characters)
+    corpus_keys |= get_corpus_keys(variants)
+    corpus_keys |= get_corpus_keys(sms)
+    corpus_keys |= get_corpus_keys(bbs)
+    corpus_keys |= get_corpus_keys(catalysts)
+
     for language in corpus:
-        primcorpus = {key: corpus[language][key] for key in corpus_keys if key in corpus[language]}
-        file.save(primcorpus, 'data/{}.json'.format(language))
+        corpus_core = {key: corpus[language][key] for key in corpus_keys if key in corpus[language]}
+        corpus_core[''] = 'UNDEFINED'
+        file.save(corpus_core, 'data/{}.json'.format(language))
