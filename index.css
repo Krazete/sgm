@@ -218,8 +218,7 @@ input:checked + label {
 .loading input,
 .loading label,
 .loading .button,
-.loading .icon,
-.rf .rating {
+.loading .icon {
     opacity: 0.5;
     pointer-events: none;
 }
