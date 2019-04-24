@@ -87,7 +87,7 @@
                     "tiers": [
                         {"unlock": 1, "value": [0.5]},
                         {"unlock": 2, "value": [0.75]},
-                        {"unlock": 3, "value": [0.1]}
+                        {"unlock": 3, "value": [1]}
                     ]
                 }
             ]
