@@ -17,9 +17,9 @@
                 {
                     "description": "Char_RoboFortune_SA_SystemShock_Desc2",
                     "tiers": [
-                        {"unlock": 1, "value": [15]},
-                        {"unlock": 2, "value": [20]},
-                        {"unlock": 3, "value": [25]}
+                        {"unlock": 1, "value": [0.15]},
+                        {"unlock": 2, "value": [0.2]},
+                        {"unlock": 3, "value": [0.25]}
                     ]
                 }
             ]
@@ -85,9 +85,9 @@
                 {
                     "description": "Char_RoboFortune_SA_FireWall_Desc2",
                     "tiers": [
-                        {"unlock": 1, "value": [50]},
-                        {"unlock": 2, "value": [75]},
-                        {"unlock": 3, "value": [100]}
+                        {"unlock": 1, "value": [0.5]},
+                        {"unlock": 2, "value": [0.75]},
+                        {"unlock": 3, "value": [0.1]}
                     ]
                 }
             ]
@@ -110,9 +110,9 @@
                 {
                     "description": "Char_RoboFortune_SA_MachineLearning_Desc",
                     "tiers": [
-                        {"unlock": 1, "value": [10, 1, 10]},
-                        {"unlock": 2, "value": [13, 1, 10]},
-                        {"unlock": 3, "value": [15, 1, 10]}
+                        {"unlock": 1, "value": [0.1, 1, 10]},
+                        {"unlock": 2, "value": [0.13, 1, 10]},
+                        {"unlock": 3, "value": [0.15, 1, 10]}
                     ]
                 },
                 {
