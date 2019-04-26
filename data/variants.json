@@ -176,8 +176,8 @@
                     "description": "Char_RoboFortune_SA_Malware_Desc",
                     "tiers": [
                         {"unlock": 1, "value": [5, 5]},
-                        {"unlock": 2, "value": [7, 7]},
-                        {"unlock": 3, "value": [10, 10]}
+                        {"unlock": 2, "value": [7, 5]},
+                        {"unlock": 3, "value": [10, 5]}
                     ]
                 },
                 {
