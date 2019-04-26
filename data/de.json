@@ -845,7 +845,7 @@
     "SA_PainWheel_BB6_Fracture": "TREFFER VERKR\u00dcPPELN zu {0:0%} f\u00fcr {1} Sekunden",
     "SA_PainWheel_Bleed2": "Wandelt au\u00dferdem {0} der BUFFS des Gegners in BLUTUNGEN um",
     "SA_PainWheel_CuttingEdge2": "TREFFER verursachen bei BLUTENDEN Gegnern zu {0:0%} f\u00fcr {1} Sekunden eine weitere BLUTUNG",
-    "SA_PainWheel_DeathsDoor2_2": "Verleiht permanente HAST, wenn die GESUNDHEIT unter {0}% f\u00e4llt",
+    "SA_PainWheel_DeathsDoor2_3": "Verursacht permanentes TODESMAL, wenn deinen GESUNDHEIT unter {0}% f\u00e4llt",
     "SA_PainWheel_Hemorrhage2_2": "Gew\u00e4hrt permanente WUT, wenn die GESUNDHEIT des Gegners unter {0}% f\u00e4llt",
     "SA_PainWheel_ThickSkin2": "Verleiht einmal pro Match {1} Sekunden STARKE REGENERATION und {0} Stapel R\u00dcSTUNG, wenn die GESUNDHEIT unter {2}% f\u00e4llt",
     "SA_PainWheel_Transfuse2": "Verleiht Painwheel f\u00fcr jeden ihrer BLUTUNGS-Effekte f\u00fcr {0} Sekunden WUT ",

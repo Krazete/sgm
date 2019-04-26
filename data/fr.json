@@ -845,7 +845,7 @@
     "SA_PainWheel_BB6_Fracture": "Sur une FRAPPE, {0:0%} de chances d'infliger MUTILATION pour {1} secondes.",
     "SA_PainWheel_Bleed2": "Transforme aussi {0} des EFFETS DE COMBAT b\u00e9n\u00e9fiques adverses en SAIGNEMENT.",
     "SA_PainWheel_CuttingEdge2": "Sur une FRAPPE, {0:0%} de chances d'infliger SAIGNEMENT pendant {1} secondes si l'adversaire subit SAIGNEMENT.",
-    "SA_PainWheel_DeathsDoor2_2": "Gagne de mani\u00e8re permanente H\u00c2TE lorsque ta SANT\u00c9 est inf\u00e9rieure \u00e0 {0}\u00a0%.",
+    "SA_PainWheel_DeathsDoor2_3": "Inflige MARQUE MORTELLE en permanence quand ta SANT\u00c9 descend sous {0}%.",
     "SA_PainWheel_Hemorrhage2_2": "Gagne FUREUR en permanence quand la SANT\u00c9 de l\u2019adversaire descend sous les {0}\u00a0%.",
     "SA_PainWheel_ThickSkin2": "Une fois par match, accorde GROSSE R\u00c9G\u00c9N. et {0} piles d'ARMURE pour {1} secondes quand la SANT\u00c9 tombe sous {2}%",
     "SA_PainWheel_Transfuse2": "Accorde aussi FUREUR pour {0} secondes pour chaque effet SAIGNEMENT appliqu\u00e9 \u00e0 Painwheel.",

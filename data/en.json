@@ -845,7 +845,7 @@
     "SA_PainWheel_BB6_Fracture": "{0:0%} chance on HIT to inflict CRIPPLE for {1} seconds",
     "SA_PainWheel_Bleed2": "Also converts {0} of the enemy's BUFFS into BLEED",
     "SA_PainWheel_CuttingEdge2": "{0:0%} chance on HIT to inflict BLEED for {1} seconds if opponent has BLEED",
-    "SA_PainWheel_DeathsDoor2_2": "Gain permanent HASTE when HEALTH drops below {0}%",
+    "SA_PainWheel_DeathsDoor2_3": "Inflict permanent DEATH MARK when your HEALTH drops below {0}%",
     "SA_PainWheel_Hemorrhage2_2": "Gain permanent ENRAGE when an opponent's HEALTH drops below {0}%",
     "SA_PainWheel_ThickSkin2": "Once per match, gain HEAVY REGEN and {0} stacks of ARMOR for {1} seconds when HEALTH drops below {2}%",
     "SA_PainWheel_Transfuse2": "Also gain ENRAGE for {0} seconds for every BLEED effect applied to Painwheel",

@@ -845,7 +845,7 @@
     "SA_PainWheel_BB6_Fracture": "{0:0%} de posibilidad al GOLPEAR de infligir LISIAMIENTO durante {1} segundos",
     "SA_PainWheel_Bleed2": "Tambi\u00e9n convierte {0} EFECTOS DE COMBATE positivos del enemigo en SANGRADO",
     "SA_PainWheel_CuttingEdge2": "Probabilidad del {0:0%} al GOLPEAR de infligir SANGRADO durante {1} segundos si el oponente sufre SANGRADO",
-    "SA_PainWheel_DeathsDoor2_2": "Otorga PRISA permanentemente cuando la SALUD baja del {0}%",
+    "SA_PainWheel_DeathsDoor2_3": "Inflige MARCA MORTAL permanente cuando tu SALUD est\u00e9 por debajo del {0}%.",
     "SA_PainWheel_Hemorrhage2_2": "Otorga FURIA permanentemente cuando la SALUD del oponente baja del {0}%",
     "SA_PainWheel_ThickSkin2": "Una vez por combate, gana REGEN. FUERTE y {0} ARMADURAS por {1} segundos si la SALUD cae debajo del {2}%",
     "SA_PainWheel_Transfuse2": "Tambi\u00e9n gana FURIA durante {0} segundos por cada efecto de SANGRADO usado contra Painwheel",

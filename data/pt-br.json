@@ -845,7 +845,7 @@
     "SA_PainWheel_BB6_Fracture": "Cada GOLPE tem uma chance de {0:0%} de INCAPACITAR por {1} segundos.",
     "SA_PainWheel_Bleed2": "Tamb\u00e9m converte {0} EFEITOS POSITIVOS do advers\u00e1rio em SANGRAMENTO.",
     "SA_PainWheel_CuttingEdge2": "Os GOLPES t\u00eam {0:0%} de chance de causar SANGRAMENTO por {1} segundos se o oponente estiver SANGRANDO.",
-    "SA_PainWheel_DeathsDoor2_2": "Receba VELOCIDADE permanente quando a VIDA cair abaixo de {0}%.",
+    "SA_PainWheel_DeathsDoor2_3": "Causa MARCA DA MORTE permanente quando sua VIDA cai abaixo de {0}%",
     "SA_PainWheel_Hemorrhage2_2": "Receba F\u00daRIA permanente quando a VIDA do advers\u00e1rio cair abaixo de {0}%.",
     "SA_PainWheel_ThickSkin2": "Uma vez por partida, ganhe REGEN. FORTE e {0} pilhas de ARMADURA por {1} s quando a VIDA cair abaixo de {2}%",
     "SA_PainWheel_Transfuse2": "Tamb\u00e9m recebe F\u00daRIA por {0} segundos para cada SANGRAMENTO aplicado \u00e0 Painwheel.",
