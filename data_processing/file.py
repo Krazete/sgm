@@ -33,9 +33,9 @@ def save(obj, path, pretty=True):
     'Save python object to JSON file.'
     with open(path, 'w') as file:
         if pretty:
-            json.dump(obj, file, indent=4, separators=(',', ': '))
+            json.dump(obj, file, indent=4, separators=(',', ': '), sort_keys=True)
         else:
-            json.dump(obj, file)
+            json.dump(obj, file, sort_keys=True)
 
 def copy(src, dst, show_error=False):
     'Copy a file.'

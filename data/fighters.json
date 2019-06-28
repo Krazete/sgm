@@ -1,45 +1,45 @@
 {
     "rf": {
-        "name": "fakeRF",
+        "name": "Char_RoboFortune_Name",
         "ca": {
-            "title": "fakeCA",
-            "description": "fakeCADes"
+            "title": "Char_RoboFortune_CA_Title",
+            "description": "Char_RoboFortune_CA_Desc"
         },
         "ma": {
-            "title": "fakeMA",
+            "title": "Char_RoboFortune_SUP_NetworkProtocol_Title",
             "features": [
                 {
-                    "title": "fakeMA1",
-                    "description": "fakeMA1Des",
+                    "title": "Char_RoboFortune_SUP_NetworkProtocol_Feat1_Title",
+                    "description": "Char_RoboFortune_SUP_NetworkProtocol_Feat1_Desc",
                     "tiers": [
-                        {"unlock": 1, "value": []},
-                        {"unlock": 2, "value": []},
-                        {"unlock": 3, "value": []},
-                        {"unlock": 4, "value": []},
-                        {"unlock": 5, "value": []},
-                        {"unlock": 6, "value": []},
-                        {"unlock": 7, "value": []},
-                        {"unlock": 8, "value": []},
-                        {"unlock": 9, "value": []},
-                        {"unlock": 10, "value": []},
-                        {"unlock": 11, "value": []}
+                        {"unlock": 1, "value": [5, 3]},
+                        {"unlock": 2, "value": [6, 3]},
+                        {"unlock": 3, "value": [7, 3]},
+                        {"unlock": 4, "value": [8, 3]},
+                        {"unlock": 5, "value": [9, 3]},
+                        {"unlock": 6, "value": [10, 3]},
+                        {"unlock": 7, "value": [11, 3]},
+                        {"unlock": 8, "value": [12, 3]},
+                        {"unlock": 9, "value": [13, 3]},
+                        {"unlock": 10, "value": [14, 3]},
+                        {"unlock": 11, "value": [15, 3]}
                     ]
                 },
                 {
-                    "title": "fakeMA2",
-                    "description": "fakeMA2Des",
+                    "title": "Char_RoboFortune_SUP_NetworkProtocol_Feat2_Title",
+                    "description": "Char_RoboFortune_SUP_NetworkProtocol_Feat2_Desc",
                     "tiers": [
-                        {"unlock": 1, "value": []},
-                        {"unlock": 2, "value": []},
-                        {"unlock": 3, "value": []},
-                        {"unlock": 4, "value": []},
-                        {"unlock": 5, "value": []},
-                        {"unlock": 6, "value": []},
-                        {"unlock": 7, "value": []},
-                        {"unlock": 8, "value": []},
-                        {"unlock": 9, "value": []},
-                        {"unlock": 10, "value": []},
-                        {"unlock": 11, "value": []}
+                        {"unlock": 1, "value": [5, 3]},
+                        {"unlock": 2, "value": [6, 3]},
+                        {"unlock": 3, "value": [7, 3]},
+                        {"unlock": 4, "value": [8, 3]},
+                        {"unlock": 5, "value": [9, 3]},
+                        {"unlock": 6, "value": [10, 3]},
+                        {"unlock": 7, "value": [11, 3]},
+                        {"unlock": 8, "value": [12, 3]},
+                        {"unlock": 9, "value": [13, 3]},
+                        {"unlock": 10, "value": [14, 3]},
+                        {"unlock": 11, "value": [15, 3]}
                     ]
                 }
             ]

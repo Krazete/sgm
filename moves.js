@@ -1,6 +1,6 @@
 var moves, corpus;
 
-var types = ["sm", "bb"];
+var types = ["sms", "bbs"];
 var tiers = ["bronze", "silver", "gold"];
 var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
 var characters = {

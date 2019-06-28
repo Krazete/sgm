@@ -218,8 +218,7 @@ input:checked + label {
 .loading input,
 .loading label,
 .loading .button,
-.loading .icon,
-.rf .rating {
+.loading .icon {
     opacity: 0.5;
     pointer-events: none;
 }
@@ -272,15 +271,65 @@ html[lang='zh-cn'] .move-gallery:before {content: '\62db \5f0f \753b \5eca ';}
 html[lang='ru'] .move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
 html[lang='pt-br'] .move-gallery:before {content: 'Galeria de Golpes';}
 
+html[lang='en'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
+html[lang='ja'] .catalyst-gallery:before {content: '\30ad \30e3 \30bf \30ea \30b9 \30c8 \30ae \30e3 \30e9 \30ea \30fc ';}
+html[lang='fr'] .catalyst-gallery:before {content: 'Galerie des Catalyseurs';}
+html[lang='de'] .catalyst-gallery:before {content: 'Katalysator-Galerie';}
+html[lang='es'] .catalyst-gallery:before {content: 'Galer\00ed a de Catalizadores';}
+html[lang='ko'] .catalyst-gallery:before {content: '\cd09 \b9e4  \ac24 \b7ec \b9ac ';}
+html[lang='zh-cn'] .catalyst-gallery:before {content: '\8f6c \5316 \7269 \753b \5eca ';}
+html[lang='ru'] .catalyst-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041a \0430 \0442 \0430 \043b \0438 \0437 \0430 \0442 \043e \0440 \044b ';}
+html[lang='pt-br'] .catalyst-gallery:before {content: 'Galeria de Catalisadores';}
+
 html[lang='en'] .gallery-ratings:before {content: 'Gallery Ratings';}
 html[lang='ja'] .gallery-ratings:before {content: '\30ae \30e3 \30e9 \30ea \30fc \306e \8a55 \4fa1 ';}
-html[lang='fr'] .gallery-ratings:before {content: 'Notes de la Galerie';}
+html[lang='fr'] .gallery-ratings:before {content: '\00c9 valuations de la Galerie';}
 html[lang='de'] .gallery-ratings:before {content: 'Galerie-Bewertungen';}
 html[lang='es'] .gallery-ratings:before {content: 'Clasificaciones de la Galer\00ed a';}
 html[lang='ko'] .gallery-ratings:before {content: '\ac24 \b7ec \b9ac  \b4f1 \ae09 ';}
-html[lang='zh-cn'] .gallery-ratings:before {content: '\753b \5eca \8bc4 \5206 ';}
+html[lang='zh-cn'] .gallery-ratings:before {content: '\753b \5eca \8bc4 \7ea7 ';}
 html[lang='ru'] .gallery-ratings:before {content: '\0420 \0435 \0439 \0442 \0438 \043d \0433 \0438  \0413 \0430 \043b \0435 \0440 \0435 \0438 ';}
 html[lang='pt-br'] .gallery-ratings:before {content: 'Classifica\00e7 \00f5 es da Galeria';}
+
+html[lang='en'] .fighters:before {content: 'FIGHTERS';}
+html[lang='ja'] .fighters:before {content: '\30ad \30e3 \30e9 \30af \30bf \30fc ';}
+html[lang='fr'] .fighters:before {content: 'PERSONNAGES';}
+html[lang='de'] .fighters:before {content: 'K\00c4 MPFER';}
+html[lang='es'] .fighters:before {content: 'PERSONAJES';}
+html[lang='ko'] .fighters:before {content: '\ce90 \b9ad \d130 ';}
+html[lang='zh-cn'] .fighters:before {content: '\6597 \58eb ';}
+html[lang='ru'] .fighters:before {content: '\041f \0415 \0420 \0421 \041e \041d \0410 \0416 \0418 ';}
+html[lang='pt-br'] .fighters:before {content: 'PERSONAGENS';}
+
+html[lang='en'] .moves:before {content: 'MOVES';}
+html[lang='ja'] .moves:before {content: '\5fc5 \6bba \6280 ';}
+html[lang='fr'] .moves:before {content: 'COUPS SP\00c9 CIAUX';}
+html[lang='de'] .moves:before {content: 'ANGRIFFE';}
+html[lang='es'] .moves:before {content: 'MOVIMIENTOS';}
+html[lang='ko'] .moves:before {content: '\ae30 \c220 ';}
+html[lang='zh-cn'] .moves:before {content: '\62db \5f0f ';}
+html[lang='ru'] .moves:before {content: '\041f \0420 \0418 \0415 \041c \042b ';}
+html[lang='pt-br'] .moves:before {content: 'GOLPES';}
+
+html[lang='en'] .catalysts:before {content: 'CATALYSTS';}
+html[lang='ja'] .catalysts:before {content: '\30ad \30e3 \30bf \30ea \30b9 \30c8 ';}
+html[lang='fr'] .catalysts:before {content: 'CATALYSEURS';}
+html[lang='de'] .catalysts:before {content: 'KATALYSATOREN';}
+html[lang='es'] .catalysts:before {content: 'CATALIZADORES';}
+html[lang='ko'] .catalysts:before {content: '\cd09 \b9e4 ';}
+html[lang='zh-cn'] .catalysts:before {content: '\8f6c \5316 \7269 ';}
+html[lang='ru'] .catalysts:before {content: '\041a \0410 \0422 \0410 \041b \0418 \0417 \0410 \0422 \041e \0420 \042b ';}
+html[lang='pt-br'] .catalysts:before {content: 'CATALISADORES';}
+
+html[lang='en'] .ratings:before {content: 'RATINGS';}
+html[lang='ja'] .ratings:before {content: '\8a55 \4fa1 ';}
+html[lang='fr'] .ratings:before {content: '\00c9 VALUATIONS';}
+html[lang='de'] .ratings:before {content: 'BEWERTUNGEN';}
+html[lang='es'] .ratings:before {content: 'CALIFICACIONES';}
+html[lang='ko'] .ratings:before {content: '\b4f1 \ae09 ';}
+html[lang='zh-cn'] .ratings:before {content: '\8bc4 \7ea7 ';}
+html[lang='ru'] .ratings:before {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 \0418 ';}
+html[lang='pt-br'] .ratings:before {content: 'CLASSIFICA\00c7 \00d5 ES';}
 
 .cinematic.banner {
     font-size: xx-large;
