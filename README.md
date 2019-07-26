@@ -41,14 +41,16 @@ The formulas used in these calculations are as follows:
 
 * `ATK_BOOST = {NO_ATK_NODES: 1, ALL_ATK_NODES: 1.5}`
 * `HP_BOOST = {NO_HP_NODES: 1, ALL_HP_NODES: 1.5}`
-* `FS_BOOST = {NO_ABILITY_NODES: 1, ALL_ABILITY_NODES: 1.46, MAXED_MARQUEE: 1.57}`
+* `FS_BOOST = {NO_TREE_NODES: 1, ALL_TREE_NODES: 1.46, MAXED_MARQUEE: 1.57}`
 * `LVL1_ATK = ATK_BOOST * BASE_ATK`
 * `LVL1_HP = HP_BOOST * BASE_HP`
 * `ATK = CEIL(LVL1_ATK + LVL1_ATK * (LVL - 1) / 5)`
 * `HP = CEIL(LVL1_HP + LVL1_HP * (LVL - 1) / 5)`
 * `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
 
-All `LVL1_` values are hard-coded for every tier of every fighter.
+All `BASE_` values are hard-coded for every tier of every fighter, although they seem to follow the general pattern `EVOLVED_BASE_ = FORMER_BASE_ * 1.8`.
+The only variants that deviate from this pattern are Headstrong and Understudy, who appear to swap stats with each other when evolved to the diamond tier.
+
 While I cannot confirm if the game uses these same formulas, the results appear to exactly match the stats of fighters that I have on my own account.
 See my [SGM Fighter Score Analysis](https://docs.google.com/spreadsheets/d/1CotgKsKzSIA5siRAMplX7e5k7KRT63a3GSY1XRg-hgc/edit?usp=sharing) spreadsheet for more detailed information.
 
