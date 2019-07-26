@@ -1,13 +1,13 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/19e38262-723c-4c46-a279-dcb713ed1b64/deploy-status)](https://app.netlify.com/sites/sgm/deploys)
 
-# Skullgirls Mobile Fighter Gallery
-A character gallery for Skullgirls Mobile.
-View the stats and abilities of every fighter variant, translated in any language offered in the game.
+# Skullgirls Mobile Collection Gallery
+A collection gallery for Skullgirls Mobile.
+View the stats and abilities of every fighter variant, move, and catalyst, translated in any language offered in the game.
 
 <img src="image/sample.png">
 
 The version number seen on the website indicates the version of the game from which data has been gathered.
-The website will only be updated for game updates that introduce new characters, alter existing characters, or fix translations.
+The website will only be updated for game updates that introduce new units, alter existing units, or fix translations.
 If the website version is 3.0.0 but the latest game version is 3.0.2, the website probably still contains accurate information.
 
 ## Features
@@ -61,8 +61,8 @@ The Signature Ability and Marquee Ability settings allow you to preview fighters
 These settings do not affect the tier, level, or skill tree settings and are not considered in the calculation of fighters' stats.
 
 #### Preset Buttons
-The `X` button sets tier, level, skill tree, signature, and marquee to the minimum level.  
-The `Home` button sets tier, level, and skill tree to the minimum level and sets signature and marquee to the maximum level.  
+The `X` button sets tier, level, skill tree, signature, and marquee to the minimum level.
+The `Home` button sets tier, level, and skill tree to the minimum level and sets signature and marquee to the maximum level.
 The `Crown` button sets tier, level, skill tree, signature, and marquee to the maximum level.
 
 *Your fighter settings are not saved and will be reset on every visit.*
@@ -102,10 +102,6 @@ The exceptions to this rule are as follows:
 * `rerun`: Rerun
 * `necroB`: Necrobreaker
 * `polter`: Poltergust
-
-Moreover, the natural diamonds do not have any officially defined IDs.
-I made up my own keys to use for them, consistent in format with most other official variant IDs.
-I have considered renaming the exceptions listed above to make searching easier, but I want to keep the data close to the original as possible.
 
 #### Locks
 
@@ -153,7 +149,8 @@ I don't quite remember, and I can't find the image anywhere else online.
 I know that the artist is one of the members of [Mecha Fetus](http://www.mechafetus.com/) and worked as an artist on Skullgirls.
 I think.
 It's probably Mariel "Kinuko" Cartwright's artwork.
-Probably.
+Or Persona's.
+Not sure.
 
 If you recognize where the art is from, please [let me know](#contact) so I can update this section and properly credit the artist.
 
@@ -167,6 +164,15 @@ This gallery still lacks the following features:
 * damage intensity information (none, very low, low, med, high, very high, ultra)
 * upgrade and sell costs
 * information about whether a move is a throw, grab, or projectile
+
+## Catalyst Gallery
+
+The [Catalyst Gallery](https://sgm.netlify.com/catalysts) features all catalysts available in the game.
+It can be filtered, sorted, and searched through much like the fighter gallery and includes one level setting.
+
+This gallery still lacks the following features:
+
+* existence
 
 ## Versions
 
@@ -183,6 +189,8 @@ Each branch of this repository contains a different version of this gallery.
 * v4 (Rating System): A rating system has been added, along with a rating toggle button to hide ratings and return to the original, more compact design.
 
 * v5 (Asset Upgrade): Portraits are now supplied by HVS and the masks have been refined. The move gallery is also populated with images and previously missing move entries have been added. Game version has been updated to 3.1.0. A new Gallery Ratings page has been added to show all ratings in a more condensed format.
+
+* v6 (Catalysts and Collaboration): Processing files have been moved to Krazete/sgmminer. The CONTRIBUTING.md document has been added detailing how to manually update gallery data files. A rudimentary catalyst gallery has been added.
 
 ## Issues
 
