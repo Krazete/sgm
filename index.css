@@ -17,6 +17,12 @@
 }
 
 @font-face {
+    font-family: 'DMFT';
+    font-display: swap;
+    src: url(font/DMFT-chsimp.ttf);
+}
+
+@font-face {
     font-family: 'Roboto';
     font-display: swap;
     src: url(font/RobotoCondensed-Regular.ttf);
@@ -75,6 +81,9 @@ html[lang='ja'] .cinematic {
 }
 html[lang='ko'] .cinematic {
     font-family: 'Washington', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+html[lang='zh-cn'] .cinematic {
+    font-family: 'Washington', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 .tagged {
