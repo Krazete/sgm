@@ -424,7 +424,7 @@ function initCollection(responses) {
     }
 
     for (var key in variants) {
-        if (!("base" in variants[key])) continue;
+        if (!("base" in variants[key])) variants[key].base = "be";
         var card = createCard(key);
         collection.appendChild(card);
         cards.push(card);
