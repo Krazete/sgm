@@ -61,13 +61,15 @@ function initCollection(responses) {
     function createBadge(key) {
         var badge = document.createElement("div");
             badge.className = "badge";
+            var medal = document.createElement("img");
+                medal.className = "medal";
+                medal.src = "image/official/BB-Frame1.png";
+            badge.appendChild(medal);
             var symbol = document.createElement("img");
                 symbol.className = "symbol";
                 symbol.src = [
                     "image/move",
-                    moves[key].base,
-                    ["b", "s", "g"][moves[key].tier],
-                    moves[key].title + ".png"
+                    moves[key].icon
                 ].join("/");
             badge.appendChild(symbol);
         return badge;
@@ -182,7 +184,7 @@ function format(template, substitutions) {
     if (matches) {
         for (var match of matches) {
             var index = parseInt(match.replace(/{(\d+)(?::P?\d+)?%?}%?/, "$1"));
-            var substitute = Math.abs(substitutions[index]);
+            var substitute = substitutions ? Math.abs(substitutions[index]) : NaN;
             if (match.includes("%}") || match.includes(":P")) {
                 substitute *= 100;
             }
@@ -590,17 +592,17 @@ function initOptionsMenu() {
         var fTiers = feature.tiers;
         if (feature.description == "SA_Valentine_BB4") {
             var fTiers = [ /* apk doesn't have this data for some reason */
-                {"unlock": 1, "value": [0.15]},
-                {"unlock": 9, "value": [0.2]},
-                {"unlock": 15, "value": [0.25]}
+                {"level": 1, "values": [0.15]},
+                {"level": 9, "values": [0.2]},
+                {"level": 15, "values": [0.25]}
             ];
         }
         var fTierValue = 0;
         for (var fTier of fTiers) {
-            if (fTier.unlock > levelTiers[moves[key].tier].value) {
+            if (fTier.level > levelTiers[moves[key].tier].value) {
                 break;
             }
-            fTierValue = fTier.value;
+            fTierValue = fTier.values;
         }
         return fTierValue;
     }
@@ -611,12 +613,14 @@ function initOptionsMenu() {
             var description = card.getElementsByClassName("description")[0];
             description.classList.add("hidden");
             description.innerHTML = "";
-            for (var feature of moves[key].ability.features) {
-                if (feature.description && corpus[feature.description]) {
-                    var fDescription = document.createElement("div");
-                    fDescription.innerHTML = format(corpus[feature.description], getDescriptionTier(key, feature));
-                    description.appendChild(fDescription);
-                    description.classList.remove("hidden");
+            if ("ability" in moves[key]) {
+                for (var feature of moves[key].ability.features) {
+                    if (feature.description && corpus[feature.description]) {
+                        var fDescription = document.createElement("div");
+                        fDescription.innerHTML = format(corpus[feature.description], getDescriptionTier(key, feature));
+                        description.appendChild(fDescription);
+                        description.classList.remove("hidden");
+                    }
                 }
             }
         }
