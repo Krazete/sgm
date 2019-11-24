@@ -1777,6 +1777,1803 @@
         "title": "Char_BigBand_SM2_Name",
         "type": 0
     },
+    "be-sm-blitz-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_ArmorBreakChance",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.25,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.5,
+                                7.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM4_Name"
+        },
+        "attack": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.29999995
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 1,
+        "icon": "beowulf_sm4_wulfblitzer.png",
+        "tier": 0,
+        "title": "Char_Beowulf_SM4_Name",
+        "type": 0
+    },
+    "be-sm-blitz-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_ArmorBreakChance",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.25,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.5,
+                                7.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM4_Name"
+        },
+        "attack": {
+            "Array": [
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.5
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 1,
+        "icon": "beowulf_sm4_wulfblitzer.png",
+        "tier": 2,
+        "title": "Char_Beowulf_SM4_Name",
+        "type": 0
+    },
+    "be-sm-blitz-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_ArmorBreakChance",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.25,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.5,
+                                7.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM4_Name"
+        },
+        "attack": {
+            "Array": [
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.39999998
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 1,
+        "icon": "beowulf_sm4_wulfblitzer.png",
+        "tier": 1,
+        "title": "Char_Beowulf_SM4_Name",
+        "type": 0
+    },
+    "be-sm-burst-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_Slow",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "SA_General_Burst_Title"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10,
+                10,
+                10,
+                8
+            ]
+        },
+        "cost": 1,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm2_burst.png",
+        "tier": 0,
+        "title": "SA_General_Burst_Title",
+        "type": 0
+    },
+    "be-sm-burst-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_Slow",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "SA_General_Burst_Title"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10,
+                10,
+                10,
+                8
+            ]
+        },
+        "cost": 1,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm2_burst.png",
+        "tier": 2,
+        "title": "SA_General_Burst_Title",
+        "type": 0
+    },
+    "be-sm-burst-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_Slow",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "SA_General_Burst_Title"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10,
+                10,
+                10,
+                8
+            ]
+        },
+        "cost": 1,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm2_burst.png",
+        "tier": 1,
+        "title": "SA_General_Burst_Title",
+        "type": 0
+    },
+    "be-sm-burstcomp-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_Slow",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "SA_General_Burst_Title"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                -1
+            ]
+        },
+        "cost": 1,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm2_burst.png",
+        "tier": 0,
+        "title": "SA_General_Burst_Title",
+        "type": 0
+    },
+    "be-sm-hurt-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_CritChance",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM8_Name"
+        },
+        "attack": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.29999995
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 1,
+        "icon": "beowulf_sm8_hurtinghurdle.png",
+        "tier": 0,
+        "title": "Char_Beowulf_SM8_Name",
+        "type": 0
+    },
+    "be-sm-hurt-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_CritChance",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM8_Name"
+        },
+        "attack": {
+            "Array": [
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.5
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 1,
+        "icon": "beowulf_sm8_hurtinghurdle.png",
+        "tier": 2,
+        "title": "Char_Beowulf_SM8_Name",
+        "type": 0
+    },
+    "be-sm-hurt-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_CritChance",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM8_Name"
+        },
+        "attack": {
+            "Array": [
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.10000002,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.20000005,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.39999998
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 1,
+        "icon": "beowulf_sm8_hurtinghurdle.png",
+        "tier": 1,
+        "title": "Char_Beowulf_SM8_Name",
+        "type": 0
+    },
+    "be-sm-oTake-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_General_Outtake_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "SA_General_Outtake_Title"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm1_outtake.png",
+        "tier": 0,
+        "title": "Char_Beowulf_SM1_Name",
+        "type": 0
+    },
+    "be-sm-oTake-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_General_Outtake_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "SA_General_Outtake_Title"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm1_outtake.png",
+        "tier": 2,
+        "title": "Char_Beowulf_SM1_Name",
+        "type": 0
+    },
+    "be-sm-oTake-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_General_Outtake_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "SA_General_Outtake_Title"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm1_outtake.png",
+        "tier": 1,
+        "title": "Char_Beowulf_SM1_Name",
+        "type": 0
+    },
+    "be-sm-shoot-b": {
+        "attack": {
+            "Array": [
+                1.60000002,
+                1.60000002,
+                1.60000002,
+                1.60000002,
+                1.60000002,
+                1.70000005,
+                1.70000005,
+                1.70000005,
+                1.70000005,
+                1.70000005,
+                1.70000005,
+                1.79999995,
+                1.79999995,
+                1.79999995,
+                1.89999998
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 3,
+        "icon": "beowulf_sm5_wulfshoot.png",
+        "tier": 0,
+        "title": "Char_Beowulf_SM5_Name",
+        "type": 0
+    },
+    "be-sm-shoot-g": {
+        "attack": {
+            "Array": [
+                1.79999995,
+                1.79999995,
+                1.79999995,
+                1.79999995,
+                1.79999995,
+                1.89999998,
+                1.89999998,
+                1.89999998,
+                1.89999998,
+                1.89999998,
+                1.89999998,
+                2,
+                2,
+                2,
+                2.0999999
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 3,
+        "icon": "beowulf_sm5_wulfshoot.png",
+        "tier": 2,
+        "title": "Char_Beowulf_SM5_Name",
+        "type": 0
+    },
+    "be-sm-shoot-s": {
+        "attack": {
+            "Array": [
+                1.70000005,
+                1.70000005,
+                1.70000005,
+                1.70000005,
+                1.70000005,
+                1.79999995,
+                1.79999995,
+                1.79999995,
+                1.79999995,
+                1.79999995,
+                1.79999995,
+                1.89999998,
+                1.89999998,
+                1.89999998,
+                2
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 3,
+        "icon": "beowulf_sm5_wulfshoot.png",
+        "tier": 1,
+        "title": "Char_Beowulf_SM5_Name",
+        "type": 0
+    },
+    "be-sm-sweep-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_Bleed",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM6_Name"
+        },
+        "attack": {
+            "Array": [
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.29999995,
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.5,
+                1.5,
+                1.5,
+                1.60000002
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 2,
+        "icon": "beowulf_sm6_giganarmsweep.png",
+        "tier": 0,
+        "title": "Char_Beowulf_SM6_Name",
+        "type": 0
+    },
+    "be-sm-sweep-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_Bleed",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM6_Name"
+        },
+        "attack": {
+            "Array": [
+                1.5,
+                1.5,
+                1.5,
+                1.5,
+                1.5,
+                1.60000002,
+                1.60000002,
+                1.60000002,
+                1.60000002,
+                1.60000002,
+                1.60000002,
+                1.70000005,
+                1.70000005,
+                1.70000005,
+                1.79999995
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 2,
+        "icon": "beowulf_sm6_giganarmsweep.png",
+        "tier": 2,
+        "title": "Char_Beowulf_SM6_Name",
+        "type": 0
+    },
+    "be-sm-sweep-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_Bleed",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM6_Name"
+        },
+        "attack": {
+            "Array": [
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.39999998,
+                1.5,
+                1.5,
+                1.5,
+                1.5,
+                1.5,
+                1.5,
+                1.60000002,
+                1.60000002,
+                1.60000002,
+                1.70000005
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 2,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 2,
+        "icon": "beowulf_sm6_giganarmsweep.png",
+        "tier": 1,
+        "title": "Char_Beowulf_SM6_Name",
+        "type": 0
+    },
+    "be-sm-taunt-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Taunt_Haste",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM3_Name"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 1,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm3_taunt.png",
+        "tier": 0,
+        "title": "Char_Beowulf_SM3_Name",
+        "type": 0
+    },
+    "be-sm-taunt-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Taunt_Haste",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM3_Name"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 1,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm3_taunt.png",
+        "tier": 2,
+        "title": "Char_Beowulf_SM3_Name",
+        "type": 0
+    },
+    "be-sm-taunt-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Taunt_Haste",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SM3_Name"
+        },
+        "attack": {
+            "Array": [
+                0
+            ]
+        },
+        "base": "be",
+        "cooldown": {
+            "Array": [
+                20,
+                20,
+                18,
+                18,
+                18,
+                16,
+                16,
+                16,
+                14,
+                14,
+                14,
+                12,
+                12,
+                12,
+                10
+            ]
+        },
+        "cost": 1,
+        "damage": {
+            "Array": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        "gear": 0,
+        "icon": "beowulf_sm3_taunt.png",
+        "tier": 1,
+        "title": "Char_Beowulf_SM3_Name",
+        "type": 0
+    },
     "ce-sm-bButt-b": {
         "ability": {
             "features": [

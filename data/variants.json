@@ -1239,6 +1239,7 @@
         "tier": 2
     },
     "cStones": {
+        "base": "be",
         "element": 2,
         "fandom": "Cold Stones",
         "name": "Char_Beowulf_B_V2_Name",
@@ -1527,6 +1528,7 @@
         "tier": 3
     },
     "dBrawl": {
+        "base": "be",
         "element": 1,
         "fandom": "Dragon Brawler",
         "name": "Char_Beowulf_G_V3_Name",
@@ -2036,6 +2038,7 @@
         "tier": 2
     },
     "dMight": {
+        "base": "be",
         "element": 4,
         "fandom": "Dark Might",
         "name": "Char_Beowulf_D_V1_Name",
@@ -2398,6 +2401,7 @@
         "tier": 0
     },
     "fFight": {
+        "base": "be",
         "element": 2,
         "fandom": "Freedom Fighter",
         "name": "Char_Beowulf_G_V4_Name",
@@ -3481,6 +3485,7 @@
         "tier": 3
     },
     "hMan": {
+        "base": "be",
         "element": 3,
         "fandom": "Hype Man",
         "name": "Char_Beowulf_S_V2_Name",
@@ -5527,6 +5532,7 @@
         "tier": 3
     },
     "nOne": {
+        "base": "be",
         "element": 1,
         "fandom": "Number One",
         "name": "Char_Beowulf_S_V1_Name",
@@ -7697,6 +7703,7 @@
         "tier": 0
     },
     "sBite": {
+        "base": "be",
         "element": 3,
         "fandom": "Snake Bite",
         "name": "Char_Beowulf_D_V2_Name",
@@ -9453,6 +9460,7 @@
         "tier": 1
     },
     "uDog": {
+        "base": "be",
         "element": 4,
         "fandom": "Underdog",
         "name": "Char_Beowulf_B_V1_Name",
@@ -9744,6 +9752,7 @@
         "tier": 2
     },
     "wBane": {
+        "base": "be",
         "element": 4,
         "fandom": "Wulfsbane",
         "name": "Char_Beowulf_G_V2_Name",
@@ -10025,6 +10034,7 @@
         "tier": 2
     },
     "wWarr": {
+        "base": "be",
         "element": 5,
         "fandom": "Weekend Warrior",
         "name": "Char_Beowulf_G_V1_Name",
@@ -10096,6 +10106,7 @@
         "tier": 2
     },
     "wresX": {
+        "base": "be",
         "element": 5,
         "fandom": "Wrestler X",
         "name": "Char_Beowulf_S_V3_Name",

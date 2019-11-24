@@ -1363,6 +1363,1322 @@
         "title": "BigBand_BB3_T2_Tympani_Title",
         "type": 1
     },
+    "be-bb-aWulf-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB2_AirWulf",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.349999994,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB2_T2_Airwulf_Title"
+        },
+        "attack": {
+            "Array": [
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995
+            ]
+        },
+        "base": "be",
+        "cooldown": 2,
+        "cost": 5,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 5,
+        "icon": "beowulf_bb2_t2_airwulf.png",
+        "tier": 0,
+        "title": "Beowulf_BB2_T2_Airwulf_Title",
+        "type": 1
+    },
+    "be-bb-aWulf-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB2_AirWulf",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.349999994,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB2_T2_Airwulf_Title"
+        },
+        "attack": {
+            "Array": [
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998,
+                1.14999998,
+                1.14999998,
+                1.25
+            ]
+        },
+        "base": "be",
+        "cooldown": 2,
+        "cost": 5,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 5,
+        "icon": "beowulf_bb2_t2_airwulf.png",
+        "tier": 2,
+        "title": "Beowulf_BB2_T2_Airwulf_Title",
+        "type": 1
+    },
+    "be-bb-aWulf-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB2_AirWulf",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.349999994,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB2_T2_Airwulf_Title"
+        },
+        "attack": {
+            "Array": [
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998
+            ]
+        },
+        "base": "be",
+        "cooldown": 2,
+        "cost": 5,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 5,
+        "icon": "beowulf_bb2_t2_airwulf.png",
+        "tier": 1,
+        "title": "Beowulf_BB2_T2_Airwulf_Title",
+        "type": 1
+    },
+    "be-bb-arm-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_StunChance",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.150000006,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.150000006,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.25,
+                                6.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB1_T1_GiganticArm_Title"
+        },
+        "attack": {
+            "Array": [
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995
+            ]
+        },
+        "base": "be",
+        "cooldown": 1,
+        "cost": 4,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 4,
+        "icon": "beowulf_bb1_t1_giganticarm.png",
+        "tier": 0,
+        "title": "Beowulf_BB1_T1_GiganticArm_Title",
+        "type": 1
+    },
+    "be-bb-arm-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_StunChance",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.150000006,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.150000006,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.25,
+                                6.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB1_T1_GiganticArm_Title"
+        },
+        "attack": {
+            "Array": [
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998,
+                1.14999998,
+                1.14999998,
+                1.25
+            ]
+        },
+        "base": "be",
+        "cooldown": 1,
+        "cost": 4,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 4,
+        "icon": "beowulf_bb1_t1_giganticarm.png",
+        "tier": 2,
+        "title": "Beowulf_BB1_T1_GiganticArm_Title",
+        "type": 1
+    },
+    "be-bb-arm-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_SMGeneric_StunChance",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.150000006,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.150000006,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.25,
+                                6.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB1_T1_GiganticArm_Title"
+        },
+        "attack": {
+            "Array": [
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998
+            ]
+        },
+        "base": "be",
+        "cooldown": 1,
+        "cost": 4,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 4,
+        "icon": "beowulf_bb1_t1_giganticarm.png",
+        "tier": 1,
+        "title": "Beowulf_BB1_T1_GiganticArm_Title",
+        "type": 1
+    },
+    "be-bb-mania-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB6_Wulfamania",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB6_T3_Wulfamania_Title"
+        },
+        "attack": {
+            "Array": [
+                0.680000007,
+                0.680000007,
+                0.680000007,
+                0.680000007,
+                0.680000007,
+                0.779999971,
+                0.779999971,
+                0.779999971,
+                0.779999971,
+                0.779999971,
+                0.779999971,
+                0.879999995,
+                0.879999995,
+                0.879999995,
+                0.980000019
+            ]
+        },
+        "base": "be",
+        "cooldown": 3,
+        "cost": 7,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 6,
+        "icon": "beowulf_bb6_t3_wulfamania.png",
+        "tier": 0,
+        "title": "Beowulf_BB6_T3_Wulfamania_Title",
+        "type": 1
+    },
+    "be-bb-mania-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB6_Wulfamania",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB6_T3_Wulfamania_Title"
+        },
+        "attack": {
+            "Array": [
+                0.879999995,
+                0.879999995,
+                0.879999995,
+                0.879999995,
+                0.879999995,
+                0.980000019,
+                0.980000019,
+                0.980000019,
+                0.980000019,
+                0.980000019,
+                0.980000019,
+                1.08000004,
+                1.08000004,
+                1.08000004,
+                1.17999995
+            ]
+        },
+        "base": "be",
+        "cooldown": 3,
+        "cost": 7,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 6,
+        "icon": "beowulf_bb6_t3_wulfamania.png",
+        "tier": 2,
+        "title": "Beowulf_BB6_T3_Wulfamania_Title",
+        "type": 1
+    },
+    "be-bb-mania-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB6_Wulfamania",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB6_T3_Wulfamania_Title"
+        },
+        "attack": {
+            "Array": [
+                0.779999971,
+                0.779999971,
+                0.779999971,
+                0.779999971,
+                0.779999971,
+                0.879999995,
+                0.879999995,
+                0.879999995,
+                0.879999995,
+                0.879999995,
+                0.879999995,
+                0.980000019,
+                0.980000019,
+                0.980000019,
+                1.08000004
+            ]
+        },
+        "base": "be",
+        "cooldown": 3,
+        "cost": 7,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 6,
+        "icon": "beowulf_bb6_t3_wulfamania.png",
+        "tier": 1,
+        "title": "Beowulf_BB6_T3_Wulfamania_Title",
+        "type": 1
+    },
+    "be-bb-pummel-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB5_LupinePummel",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.349999994,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB5_T2_LupinePummel_Title"
+        },
+        "attack": {
+            "Array": [
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995
+            ]
+        },
+        "base": "be",
+        "cooldown": 2,
+        "cost": 4,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 5,
+        "icon": "beowulf_bb5_t2_lupinepummel.png",
+        "tier": 0,
+        "title": "Beowulf_BB5_T2_LupinePummel_Title",
+        "type": 1
+    },
+    "be-bb-pummel-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB5_LupinePummel",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.349999994,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB5_T2_LupinePummel_Title"
+        },
+        "attack": {
+            "Array": [
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998
+            ]
+        },
+        "base": "be",
+        "cooldown": 2,
+        "cost": 4,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 5,
+        "icon": "beowulf_bb5_t2_lupinepummel.png",
+        "tier": 1,
+        "title": "Beowulf_BB5_T2_LupinePummel_Title",
+        "type": 1
+    },
+    "be-bb-sault-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB3_ThreeWulfMoonsault",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                -10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                -15.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                -25.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB3_T3_ThreeWulfMoon_Title"
+        },
+        "attack": {
+            "Array": [
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995
+            ]
+        },
+        "base": "be",
+        "cooldown": 3,
+        "cost": 8,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 6,
+        "icon": "beowulf_bb3_t3_threewulfmoonsault.png",
+        "tier": 0,
+        "title": "Beowulf_BB3_T3_ThreeWulfMoon_Title",
+        "type": 1
+    },
+    "be-bb-sault-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB3_ThreeWulfMoonsault",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                -10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                -15.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                -25.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB3_T3_ThreeWulfMoon_Title"
+        },
+        "attack": {
+            "Array": [
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998,
+                1.14999998,
+                1.14999998,
+                1.25
+            ]
+        },
+        "base": "be",
+        "cooldown": 3,
+        "cost": 8,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 6,
+        "icon": "beowulf_bb3_t3_threewulfmoonsault.png",
+        "tier": 2,
+        "title": "Beowulf_BB3_T3_ThreeWulfMoon_Title",
+        "type": 1
+    },
+    "be-bb-sault-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB3_ThreeWulfMoonsault",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                -10.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                -15.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                -25.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB3_T3_ThreeWulfMoon_Title"
+        },
+        "attack": {
+            "Array": [
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998
+            ]
+        },
+        "base": "be",
+        "cooldown": 3,
+        "cost": 8,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 6,
+        "icon": "beowulf_bb3_t3_threewulfmoonsault.png",
+        "tier": 1,
+        "title": "Beowulf_BB3_T3_ThreeWulfMoon_Title",
+        "type": 1
+    },
+    "be-bb-trepak-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB4_GeatishTrepak",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                25.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB4_T1_GeatishTrepak_Title"
+        },
+        "attack": {
+            "Array": [
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.75,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995
+            ]
+        },
+        "base": "be",
+        "cooldown": 1,
+        "cost": 3,
+        "damage": {
+            "Array": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                4
+            ]
+        },
+        "gear": 4,
+        "icon": "beowulf_bb4_t1_geatishtrepak.png",
+        "tier": 0,
+        "title": "Beowulf_BB4_T1_GeatishTrepak_Title",
+        "type": 1
+    },
+    "be-bb-trepak-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB4_GeatishTrepak",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                25.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB4_T1_GeatishTrepak_Title"
+        },
+        "attack": {
+            "Array": [
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998,
+                1.14999998,
+                1.14999998,
+                1.25
+            ]
+        },
+        "base": "be",
+        "cooldown": 1,
+        "cost": 3,
+        "damage": {
+            "Array": [
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                5,
+                5,
+                5,
+                6
+            ]
+        },
+        "gear": 4,
+        "icon": "beowulf_bb4_t1_geatishtrepak.png",
+        "tier": 2,
+        "title": "Beowulf_BB4_T1_GeatishTrepak_Title",
+        "type": 1
+    },
+    "be-bb-trepak-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Beowulf_BB4_GeatishTrepak",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                25.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Beowulf_BB4_T1_GeatishTrepak_Title"
+        },
+        "attack": {
+            "Array": [
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.850000024,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                0.949999988,
+                1.04999995,
+                1.04999995,
+                1.04999995,
+                1.14999998
+            ]
+        },
+        "base": "be",
+        "cooldown": 1,
+        "cost": 3,
+        "damage": {
+            "Array": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                5
+            ]
+        },
+        "gear": 4,
+        "icon": "beowulf_bb4_t1_geatishtrepak.png",
+        "tier": 1,
+        "title": "Beowulf_BB4_T1_GeatishTrepak_Title",
+        "type": 1
+    },
     "ce-bb-dDrop-b": {
         "ability": {
             "features": [
