@@ -1,0 +1,1436 @@
+{
+    "cat-IArm-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconInvincible",
+        "tier": 0,
+        "title": "Catalyst_InvincibleArmada"
+    },
+    "cat-IArm-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconInvincible",
+        "tier": 2,
+        "title": "Catalyst_InvincibleArmada"
+    },
+    "cat-IArm-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconInvincible",
+        "tier": 1,
+        "title": "Catalyst_InvincibleArmada"
+    },
+    "cat-IArm-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconInvincible",
+        "tier": 0,
+        "title": "Catalyst_InvincibleArmada"
+    },
+    "cat-IArm-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconInvincible",
+        "tier": 2,
+        "title": "Catalyst_InvincibleArmada"
+    },
+    "cat-IArm-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconInvincible",
+        "tier": 1,
+        "title": "Catalyst_InvincibleArmada"
+    },
+    "cat-aFlin-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconUnflinching",
+        "tier": 0,
+        "title": "Catalyst_TheAngryFlinch"
+    },
+    "cat-aFlin-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconUnflinching",
+        "tier": 2,
+        "title": "Catalyst_TheAngryFlinch"
+    },
+    "cat-aFlin-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconUnflinching",
+        "tier": 1,
+        "title": "Catalyst_TheAngryFlinch"
+    },
+    "cat-aFlin-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconUnflinching",
+        "tier": 0,
+        "title": "Catalyst_TheAngryFlinch"
+    },
+    "cat-aFlin-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconUnflinching",
+        "tier": 2,
+        "title": "Catalyst_TheAngryFlinch"
+    },
+    "cat-aFlin-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconUnflinching",
+        "tier": 1,
+        "title": "Catalyst_TheAngryFlinch"
+    },
+    "cat-aImmu-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconImmune",
+        "tier": 0,
+        "title": "Catalyst_Autoimmune"
+    },
+    "cat-aImmu-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconImmune",
+        "tier": 2,
+        "title": "Catalyst_Autoimmune"
+    },
+    "cat-aImmu-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconImmune",
+        "tier": 1,
+        "title": "Catalyst_Autoimmune"
+    },
+    "cat-aImmu-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconImmune",
+        "tier": 0,
+        "title": "Catalyst_Autoimmune"
+    },
+    "cat-aImmu-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconImmune",
+        "tier": 2,
+        "title": "Catalyst_Autoimmune"
+    },
+    "cat-aImmu-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconImmune",
+        "tier": 1,
+        "title": "Catalyst_Autoimmune"
+    },
+    "cat-armRa-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 0,
+        "title": "Catalyst_ArmorRating"
+    },
+    "cat-armRa-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 2,
+        "title": "Catalyst_ArmorRating"
+    },
+    "cat-armRa-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 1,
+        "title": "Catalyst_ArmorRating"
+    },
+    "cat-armRa-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 0,
+        "title": "Catalyst_ArmorRating"
+    },
+    "cat-armRa-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 2,
+        "title": "Catalyst_ArmorRating"
+    },
+    "cat-armRa-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 1,
+        "title": "Catalyst_ArmorRating"
+    },
+    "cat-bBust-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockBlock",
+        "tier": 0,
+        "title": "Catalyst_Blockbusted"
+    },
+    "cat-bBust-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockBlock",
+        "tier": 2,
+        "title": "Catalyst_Blockbusted"
+    },
+    "cat-bBust-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockBlock",
+        "tier": 1,
+        "title": "Catalyst_Blockbusted"
+    },
+    "cat-bBust-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockBlock",
+        "tier": 0,
+        "title": "Catalyst_Blockbusted"
+    },
+    "cat-bBust-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockBlock",
+        "tier": 2,
+        "title": "Catalyst_Blockbusted"
+    },
+    "cat-bBust-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockBlock",
+        "tier": 1,
+        "title": "Catalyst_Blockbusted"
+    },
+    "cat-bGuil-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconBleed",
+        "tier": 0,
+        "title": "Catalyst_BleedingGuilty"
+    },
+    "cat-bGuil-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconBleed",
+        "tier": 2,
+        "title": "Catalyst_BleedingGuilty"
+    },
+    "cat-bGuil-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconBleed",
+        "tier": 1,
+        "title": "Catalyst_BleedingGuilty"
+    },
+    "cat-bGuil-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconBleed",
+        "tier": 0,
+        "title": "Catalyst_BleedingGuilty"
+    },
+    "cat-bGuil-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconBleed",
+        "tier": 2,
+        "title": "Catalyst_BleedingGuilty"
+    },
+    "cat-bGuil-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconBleed",
+        "tier": 1,
+        "title": "Catalyst_BleedingGuilty"
+    },
+    "cat-cElem-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "do"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_CorrosiveElement"
+    },
+    "cat-cOfKno-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCurse",
+        "tier": 0,
+        "title": "Catalyst_CurseOfKnowledge"
+    },
+    "cat-cOfKno-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCurse",
+        "tier": 2,
+        "title": "Catalyst_CurseOfKnowledge"
+    },
+    "cat-cOfKno-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCurse",
+        "tier": 1,
+        "title": "Catalyst_CurseOfKnowledge"
+    },
+    "cat-cOfKno-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCurse",
+        "tier": 0,
+        "title": "Catalyst_CurseOfKnowledge"
+    },
+    "cat-cOfKno-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCurse",
+        "tier": 2,
+        "title": "Catalyst_CurseOfKnowledge"
+    },
+    "cat-cOfKno-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCurse",
+        "tier": 1,
+        "title": "Catalyst_CurseOfKnowledge"
+    },
+    "cat-crip-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCripple",
+        "tier": 0,
+        "title": "Catalyst_CrippleDecker"
+    },
+    "cat-crip-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCripple",
+        "tier": 2,
+        "title": "Catalyst_CrippleDecker"
+    },
+    "cat-crip-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCripple",
+        "tier": 1,
+        "title": "Catalyst_CrippleDecker"
+    },
+    "cat-crip-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCripple",
+        "tier": 0,
+        "title": "Catalyst_CrippleDecker"
+    },
+    "cat-crip-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCripple",
+        "tier": 2,
+        "title": "Catalyst_CrippleDecker"
+    },
+    "cat-crip-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconCripple",
+        "tier": 1,
+        "title": "Catalyst_CrippleDecker"
+    },
+    "cat-dNut-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 4
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_Darknut"
+    },
+    "cat-dOrD-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "be"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_DoOrDieTime"
+    },
+    "cat-doomD-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDoom",
+        "tier": 0,
+        "title": "Catalyst_DoomsdayDevice"
+    },
+    "cat-doomD-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDoom",
+        "tier": 2,
+        "title": "Catalyst_DoomsdayDevice"
+    },
+    "cat-doomD-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDoom",
+        "tier": 1,
+        "title": "Catalyst_DoomsdayDevice"
+    },
+    "cat-doomD-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDoom",
+        "tier": 0,
+        "title": "Catalyst_DoomsdayDevice"
+    },
+    "cat-doomD-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDoom",
+        "tier": 2,
+        "title": "Catalyst_DoomsdayDevice"
+    },
+    "cat-doomD-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDoom",
+        "tier": 1,
+        "title": "Catalyst_DoomsdayDevice"
+    },
+    "cat-dpBuer-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "pw"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_DontPokeTheBuer"
+    },
+    "cat-electF-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "rf"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_ElectrostaticField"
+    },
+    "cat-fArmo-elem-b": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 2
+        },
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 0,
+        "title": "Catalyst_FrostArmor"
+    },
+    "cat-fArmo-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 2
+        },
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 2,
+        "title": "Catalyst_FrostArmor"
+    },
+    "cat-fArmo-elem-s": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 2
+        },
+        "elementLock": 0,
+        "icon": "BuffIconArmor",
+        "tier": 1,
+        "title": "Catalyst_FrostArmor"
+    },
+    "cat-fFight-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 0,
+        "title": "Catalyst_FinalFight"
+    },
+    "cat-fFight-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 2,
+        "title": "Catalyst_FinalFight"
+    },
+    "cat-fFight-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 1,
+        "title": "Catalyst_FinalFight"
+    },
+    "cat-fFight-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 0,
+        "title": "Catalyst_FinalFight"
+    },
+    "cat-fFight-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 2,
+        "title": "Catalyst_FinalFight"
+    },
+    "cat-fFight-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 1,
+        "title": "Catalyst_FinalFight"
+    },
+    "cat-fireS-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 1
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_FireStarter"
+    },
+    "cat-futRes-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "bb"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_FutileResistance"
+    },
+    "cat-gEscap-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "fi"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_GreatEscape"
+    },
+    "cat-hPoint-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "pe"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_HollowPoints"
+    },
+    "cat-hWater-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 2
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_HighWaters"
+    },
+    "cat-hexT-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHex",
+        "tier": 0,
+        "title": "Catalyst_HexyTime"
+    },
+    "cat-hexT-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHex",
+        "tier": 2,
+        "title": "Catalyst_HexyTime"
+    },
+    "cat-hexT-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHex",
+        "tier": 1,
+        "title": "Catalyst_HexyTime"
+    },
+    "cat-hexT-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHex",
+        "tier": 0,
+        "title": "Catalyst_HexyTime"
+    },
+    "cat-hexT-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHex",
+        "tier": 2,
+        "title": "Catalyst_HexyTime"
+    },
+    "cat-hexT-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHex",
+        "tier": 1,
+        "title": "Catalyst_HexyTime"
+    },
+    "cat-iThreat-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "pa"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_ImminentThreat"
+    },
+    "cat-inAir-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 3
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_IntoThinAir"
+    },
+    "cat-lWeigh-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 5
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_LightWeight"
+    },
+    "cat-lWord-elem-b": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 5
+        },
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 0,
+        "title": "Catalyst_LastWords"
+    },
+    "cat-lWord-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 5
+        },
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 2,
+        "title": "Catalyst_LastWords"
+    },
+    "cat-lWord-elem-s": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 5
+        },
+        "elementLock": 0,
+        "icon": "BuffIconFinalStand",
+        "tier": 1,
+        "title": "Catalyst_LastWords"
+    },
+    "cat-markD-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDeathMark",
+        "tier": 0,
+        "title": "Catalyst_MarkedForDeletion"
+    },
+    "cat-markD-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDeathMark",
+        "tier": 2,
+        "title": "Catalyst_MarkedForDeletion"
+    },
+    "cat-markD-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDeathMark",
+        "tier": 1,
+        "title": "Catalyst_MarkedForDeletion"
+    },
+    "cat-markD-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDeathMark",
+        "tier": 0,
+        "title": "Catalyst_MarkedForDeletion"
+    },
+    "cat-markD-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDeathMark",
+        "tier": 2,
+        "title": "Catalyst_MarkedForDeletion"
+    },
+    "cat-markD-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconDeathMark",
+        "tier": 1,
+        "title": "Catalyst_MarkedForDeletion"
+    },
+    "cat-megaL-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "va"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_Megalixer"
+    },
+    "cat-noHeal-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHealBlock",
+        "tier": 0,
+        "title": "Catalyst_NoHighHeals"
+    },
+    "cat-noHeal-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHealBlock",
+        "tier": 2,
+        "title": "Catalyst_NoHighHeals"
+    },
+    "cat-noHeal-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHealBlock",
+        "tier": 1,
+        "title": "Catalyst_NoHighHeals"
+    },
+    "cat-noHeal-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHealBlock",
+        "tier": 0,
+        "title": "Catalyst_NoHighHeals"
+    },
+    "cat-noHeal-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHealBlock",
+        "tier": 2,
+        "title": "Catalyst_NoHighHeals"
+    },
+    "cat-noHeal-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHealBlock",
+        "tier": 1,
+        "title": "Catalyst_NoHighHeals"
+    },
+    "cat-overL-elem-b": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 3
+        },
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 0,
+        "title": "Catalyst_Overload"
+    },
+    "cat-overL-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 3
+        },
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 2,
+        "title": "Catalyst_Overload"
+    },
+    "cat-overL-elem-s": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 3
+        },
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 1,
+        "title": "Catalyst_Overload"
+    },
+    "cat-pHaste-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHaste",
+        "tier": 0,
+        "title": "Catalyst_PostHaste"
+    },
+    "cat-pHaste-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHaste",
+        "tier": 2,
+        "title": "Catalyst_PostHaste"
+    },
+    "cat-pHaste-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHaste",
+        "tier": 1,
+        "title": "Catalyst_PostHaste"
+    },
+    "cat-pHaste-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHaste",
+        "tier": 0,
+        "title": "Catalyst_PostHaste"
+    },
+    "cat-pHaste-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHaste",
+        "tier": 2,
+        "title": "Catalyst_PostHaste"
+    },
+    "cat-pHaste-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconHaste",
+        "tier": 1,
+        "title": "Catalyst_PostHaste"
+    },
+    "cat-pMones-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "el"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_Pharaohmones"
+    },
+    "cat-pRage-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 0,
+        "title": "Catalyst_PrimalRage"
+    },
+    "cat-pRage-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 2,
+        "title": "Catalyst_PrimalRage"
+    },
+    "cat-pRage-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 1,
+        "title": "Catalyst_PrimalRage"
+    },
+    "cat-pRage-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 0,
+        "title": "Catalyst_PrimalRage"
+    },
+    "cat-pRage-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 2,
+        "title": "Catalyst_PrimalRage"
+    },
+    "cat-pRage-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 1,
+        "title": "Catalyst_PrimalRage"
+    },
+    "cat-rTemp-elem-b": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 1
+        },
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 0,
+        "title": "Catalyst_RisingTemperatures"
+    },
+    "cat-rTemp-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 1
+        },
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 2,
+        "title": "Catalyst_RisingTemperatures"
+    },
+    "cat-rTemp-elem-s": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 1
+        },
+        "elementLock": 0,
+        "icon": "BuffIconEnrage",
+        "tier": 1,
+        "title": "Catalyst_RisingTemperatures"
+    },
+    "cat-recB-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmorBreak",
+        "tier": 0,
+        "title": "Catalyst_RecordBreaker"
+    },
+    "cat-recB-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmorBreak",
+        "tier": 2,
+        "title": "Catalyst_RecordBreaker"
+    },
+    "cat-recB-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmorBreak",
+        "tier": 1,
+        "title": "Catalyst_RecordBreaker"
+    },
+    "cat-recB-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmorBreak",
+        "tier": 0,
+        "title": "Catalyst_RecordBreaker"
+    },
+    "cat-recB-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmorBreak",
+        "tier": 2,
+        "title": "Catalyst_RecordBreaker"
+    },
+    "cat-recB-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconArmorBreak",
+        "tier": 1,
+        "title": "Catalyst_RecordBreaker"
+    },
+    "cat-regX-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconRegen",
+        "tier": 0,
+        "title": "Catalyst_RegenerationX"
+    },
+    "cat-regX-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconRegen",
+        "tier": 2,
+        "title": "Catalyst_RegenerationX"
+    },
+    "cat-regX-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconRegen",
+        "tier": 1,
+        "title": "Catalyst_RegenerationX"
+    },
+    "cat-regX-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconRegen",
+        "tier": 0,
+        "title": "Catalyst_RegenerationX"
+    },
+    "cat-regX-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconRegen",
+        "tier": 2,
+        "title": "Catalyst_RegenerationX"
+    },
+    "cat-regX-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconRegen",
+        "tier": 1,
+        "title": "Catalyst_RegenerationX"
+    },
+    "cat-rtSend-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "sq"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_ReturnToSender"
+    },
+    "cat-sDark-elem-b": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 4
+        },
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 0,
+        "title": "Catalyst_ShotInTheDark"
+    },
+    "cat-sDark-elem-g": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 4
+        },
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 2,
+        "title": "Catalyst_ShotInTheDark"
+    },
+    "cat-sDark-elem-s": {
+        "characterLock": 0,
+        "constraint": {
+            "element": 4
+        },
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 1,
+        "title": "Catalyst_ShotInTheDark"
+    },
+    "cat-sPost-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "mf"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_ScratchingPost"
+    },
+    "cat-slomo-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconSlow",
+        "tier": 0,
+        "title": "Catalyst_SuperSloMo"
+    },
+    "cat-slomo-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconSlow",
+        "tier": 2,
+        "title": "Catalyst_SuperSloMo"
+    },
+    "cat-slomo-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconSlow",
+        "tier": 1,
+        "title": "Catalyst_SuperSloMo"
+    },
+    "cat-slomo-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconSlow",
+        "tier": 0,
+        "title": "Catalyst_SuperSloMo"
+    },
+    "cat-slomo-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconSlow",
+        "tier": 2,
+        "title": "Catalyst_SuperSloMo"
+    },
+    "cat-slomo-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconSlow",
+        "tier": 1,
+        "title": "Catalyst_SuperSloMo"
+    },
+    "cat-specE-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockSpecial",
+        "tier": 0,
+        "title": "Catalyst_SpecialException"
+    },
+    "cat-specE-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockSpecial",
+        "tier": 2,
+        "title": "Catalyst_SpecialException"
+    },
+    "cat-specE-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockSpecial",
+        "tier": 1,
+        "title": "Catalyst_SpecialException"
+    },
+    "cat-specE-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockSpecial",
+        "tier": 0,
+        "title": "Catalyst_SpecialException"
+    },
+    "cat-specE-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockSpecial",
+        "tier": 2,
+        "title": "Catalyst_SpecialException"
+    },
+    "cat-specE-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockSpecial",
+        "tier": 1,
+        "title": "Catalyst_SpecialException"
+    },
+    "cat-strongA-char-g": {
+        "characterLock": 0,
+        "constraint": {
+            "base": "ce"
+        },
+        "elementLock": 0,
+        "icon": "SkullModifierIcon",
+        "tier": 2,
+        "title": "Catalyst_StrongArmed"
+    },
+    "cat-stunG-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 0,
+        "title": "Catalyst_StunGrenade"
+    },
+    "cat-stunG-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 2,
+        "title": "Catalyst_StunGrenade"
+    },
+    "cat-stunG-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 1,
+        "title": "Catalyst_StunGrenade"
+    },
+    "cat-stunG-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 0,
+        "title": "Catalyst_StunGrenade"
+    },
+    "cat-stunG-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 2,
+        "title": "Catalyst_StunGrenade"
+    },
+    "cat-stunG-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconStun",
+        "tier": 1,
+        "title": "Catalyst_StunGrenade"
+    },
+    "cat-tBPrec-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconPrecision",
+        "tier": 0,
+        "title": "Catalyst_ToBePrecise"
+    },
+    "cat-tBPrec-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconPrecision",
+        "tier": 2,
+        "title": "Catalyst_ToBePrecise"
+    },
+    "cat-tBPrec-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconPrecision",
+        "tier": 1,
+        "title": "Catalyst_ToBePrecise"
+    },
+    "cat-tBPrec-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconPrecision",
+        "tier": 0,
+        "title": "Catalyst_ToBePrecise"
+    },
+    "cat-tBPrec-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconPrecision",
+        "tier": 2,
+        "title": "Catalyst_ToBePrecise"
+    },
+    "cat-tBPrec-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconPrecision",
+        "tier": 1,
+        "title": "Catalyst_ToBePrecise"
+    },
+    "cat-tagNG-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockTag",
+        "tier": 0,
+        "title": "Catalyst_TagNGag"
+    },
+    "cat-tagNG-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockTag",
+        "tier": 2,
+        "title": "Catalyst_TagNGag"
+    },
+    "cat-tagNG-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockTag",
+        "tier": 1,
+        "title": "Catalyst_TagNGag"
+    },
+    "cat-tagNG-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockTag",
+        "tier": 0,
+        "title": "Catalyst_TagNGag"
+    },
+    "cat-tagNG-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockTag",
+        "tier": 2,
+        "title": "Catalyst_TagNGag"
+    },
+    "cat-tagNG-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconLockTag",
+        "tier": 1,
+        "title": "Catalyst_TagNGag"
+    },
+    "cat-withF-NA-b": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 0,
+        "title": "Catalyst_WitherForecast"
+    },
+    "cat-withF-NA-g": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 2,
+        "title": "Catalyst_WitherForecast"
+    },
+    "cat-withF-NA-s": {
+        "characterLock": 0,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 1,
+        "title": "Catalyst_WitherForecast"
+    },
+    "cat-withF-char-b": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 0,
+        "title": "Catalyst_WitherForecast"
+    },
+    "cat-withF-char-g": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 2,
+        "title": "Catalyst_WitherForecast"
+    },
+    "cat-withF-char-s": {
+        "characterLock": 1,
+        "constraint": {},
+        "elementLock": 0,
+        "icon": "BuffIconWither",
+        "tier": 1,
+        "title": "Catalyst_WitherForecast"
+    }
+}

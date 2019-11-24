@@ -4,124 +4,6 @@ var userID, userIP, database;
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
-var wikiaPaths = { /* from English corpus */
-    "nEgrets": "No Egrets",
-    "tAFolks": "That's All Folks!",
-    "nSense": "Nunsense",
-    "meow": "Meow & Furever",
-    "tTyrant": "Temple Tyrant",
-    "gMatt": "Gray Matter",
-    "necroB": "Necrobreaker",
-    "dMight": "Dark Might",
-    "splash": "Hack n' Splash",
-    "hHanded": "Heavy Handed",
-    "toad": "Toad Warrior",
-    "fEnds": "Frayed Ends",
-    "bBath": "Bloodbath",
-    "gShift": "Graveyard Shift",
-    "gloom": "Tomb & Gloom",
-    "mTrial": "Ms. Trial",
-    "dHeat": "Dead Heat",
-    "hCat": "Hellcat",
-    "wBane": "Wulfsbane",
-    "rBlight": "Rainbow Blight",
-    "polter": "Poltergust",
-    "sketch": "Sketchy",
-    "bFreeze": "Brain Freeze",
-    "rerun": "Rerun",
-    "rNerv": "Raw Nerv",
-    "xMorph": "Xenomorph",
-    "nDepart": "Nearly Departed",
-    "dLicious": "Doublicious",
-    "nOne": "Number One",
-    "sSalt": "Summer Salt",
-    "claw": "Claw & Order",
-    "bValen": "Bloody Valentine",
-    "rCopy": "Robocopy",
-    "pTech": "Pyro-Technique",
-    "bTop": "Big Top",
-    "fFrame": "Freeze Frame",
-    "uStudy": "Understudy",
-    "iThreat": "Idol Threat",
-    "wresX": "Wrestler X",
-    "dInterv": "Diva Intervention",
-    "pDark": "Purrfect Dark",
-    "rBlonde": "Regally Blonde",
-    "eSax": "Epic Sax",
-    "pDick": "Private Dick",
-    "hAppar": "Hair Apparent",
-    "fTrap": "Fly Trap",
-    "sGeneral": "Surgeon General",
-    "aForce": "Armed Forces",
-    "pShoot": "Pea Shooter",
-    "wCard": "Wildcard",
-    "lHope": "Last Hope",
-    "sStiff": "Scared Stiff",
-    "hMan": "Hype Man",
-    "rusty": "Rusty",
-    "oMai": "Oh Mai",
-    "sViper": "Scarlet Viper",
-    "hReign": "Heavy Reign",
-    "hStrong": "Headstrong",
-    "rEvil": "Resonant Evil",
-    "inDeni": "In Denile",
-    "fFly": "Firefly",
-    "bMFrosty": "Bad Ms Frosty",
-    "jKit": "Just Kitten",
-    "hMetal": "Heavy Metal",
-    "cStones": "Cold Stones",
-    "scrub": "Scrub",
-    "dLocks": "Dread Locks",
-    "sFright": "Stage Fright",
-    "uTouch": "Untouchable",
-    "bExor": "Bio-Exorcist",
-    "wSwept": "Windswept",
-    "dBrawl": "Dragon Brawler",
-    "uViolent": "Ultraviolent",
-    "bLine": "Bassline",
-    "gFan": "Grim Fan",
-    "gJazz": "G.I. Jazz",
-    "bHDay": "Bad Hair Day",
-    "fFury": "Furry Fury",
-    "shelt": "Sheltered",
-    "fColor": "Myst-Match",
-    "lucky": "Feline Lucky",
-    "pWeave": "Parasite Weave",
-    "bBox": "Beat Box",
-    "bDrive": "Blood Drive",
-    "jBreaker": "Jawbreaker",
-    "lCrafted": "Love Crafted",
-    "prime": "Primed",
-    "wWarr": "Weekend Warrior",
-    "iHot": "Icy Hot",
-    "hQuin": "Harlequin",
-    "bKill": "Buzzkill",
-    "uDog": "Underdog",
-    "sSchool": "Sundae School",
-    "iFiber": "Immoral Fiber",
-    "aGreed": "Assassin's Greed",
-    "tMett": "Twisted Mettle",
-    "dOWint": "Dead of Winter",
-    "rAppr": "Rage Appropriate",
-    "mSonic": "Megasonic",
-    "cCutter": "Class Cutter",
-    "dCrypt": "Decrypted",
-    "pPride": "Princess Pride",
-    "rVelvet": "Red Velvet",
-    "sKill": "Silent Kill",
-    "sCross": "Star-Crossed",
-    "ink": "Inkling",
-    "iLeague": "Ivy League",
-    "sOut": "Stand Out",
-    "pType": "Prototype",
-    "m3ow": "M-3OW",
-    "nyan": "Nyanotech",
-    "purr": "Purrminator",
-    "tByte": "Terror Byte",
-    "blueS": "Blue Screen",
-    "metro": "Head Hunter",
-    "clock": "Overclocked"
-};
 
 var cards = [];
 var filterCards;
@@ -495,7 +377,7 @@ function initCollection(responses) {
             wikia.target = "_blank";
             wikia.href = [
                 "https://skullgirlsmobile.wikia.com/wiki",
-                wikiaPaths[key] /* + "#Tips_and_Tricks" */
+                variants[key].fandom /* + "#Tips_and_Tricks" */
             ].join("/");
         return wikia;
     }
@@ -542,6 +424,7 @@ function initCollection(responses) {
     }
 
     for (var key in variants) {
+        if (!("base" in variants[key])) continue;
         var card = createCard(key);
         collection.appendChild(card);
         cards.push(card);
@@ -598,7 +481,7 @@ function initLanguageMenu() {
         var maName = card.getElementsByClassName("ma-name")[0];
         variantName.innerHTML = corpus[variants[key].name];
         fighterName.innerHTML = corpus[fighters[variants[key].base].name];
-        quote.innerHTML = corpus[variants[key].quote];
+        quote.innerHTML = corpus[variants[key].quote].replace(/\s*\n\s*/, "<br>");
         caName.innerHTML = corpus[fighters[variants[key].base].ca.title];
         ca0.innerHTML = formatNumbers(corpus[fighters[variants[key].base].ca.description]);
         saName.innerHTML = corpus[variants[key].sa.title];
@@ -1515,7 +1398,7 @@ function initialize() {
 
     toggleLoadingScreen(true);
     Promise.all([
-        loadJSON("data/fighters.json"),
+        loadJSON("data/characters.json"),
         loadJSON("data/variants.json")
     ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(toggleLoadingScreen);
 }
