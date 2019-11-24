@@ -1116,12 +1116,28 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     grid-area: img;
 }
 
+.medal {
+    width: 100%;
+}
+.bronze .medal {
+    filter: brightness(0.4) sepia(1) saturate(2) hue-rotate(325deg);
+}
+.gold .medal {
+    filter: sepia(1) saturate(2);
+}
+
 .symbol {
     position: relative;
-    width: 130%;
+    width: 100%;
     display: block;
-    margin: -15%;
+    margin: -110% 0 0 16%;
     pointer-events: none;
+}
+.bronze .symbol {
+    filter: sepia(1) hue-rotate(325deg);
+}
+.gold .symbol {
+    filter: sepia(1);
 }
 
 .title {
