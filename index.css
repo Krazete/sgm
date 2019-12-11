@@ -340,6 +340,12 @@ html[lang='zh-cn'] .ratings:before {content: '\8bc4 \7ea7 ';}
 html[lang='ru'] .ratings:before {content: '\0420 \0415 \0419 \0422 \0418 \041d \0413 \0418 ';}
 html[lang='pt-br'] .ratings:before {content: 'CLASSIFICA\00c7 \00d5 ES';}
 
+#kofi img {
+    height: 1.2em;
+    display: block;
+    margin: -0.1em auto;
+}
+
 .cinematic.banner {
     font-size: xx-large;
 }
