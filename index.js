@@ -197,7 +197,7 @@ function initCollection(responses) {
                 frame.className = "frame";
                 var backdrop = document.createElement("div");
                     backdrop.className = "backdrop";
-                    if (month == 10 && day == 31 || weekday == 5 && day = 13) {
+                    if (month == 10 && day == 31 || weekday == 5 && day == 13) {
                         var r = Math.floor(Math.random() * 3) + 1;
                         backdrop.classList.add("hallow" + r);
                     }
