@@ -1074,6 +1074,9 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: block;
     margin-top: -131%;
 }
+.missing-portrait .backdrop:after{
+    margin-top: 0;
+}
 
 .portrait {
     width: 151%;
