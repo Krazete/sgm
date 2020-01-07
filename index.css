@@ -434,7 +434,7 @@ html[lang='pt-br'] .outdated:after {content: ' (ATUALIZA\00c7 \00c3 O NECESS\00c
     cursor: pointer;
 }
 
-#menu {
+#panel {
     background: linear-gradient(#1b2a41, #0f1824);
     text-align: center;
     box-shadow: 0 -3px 3px black;
