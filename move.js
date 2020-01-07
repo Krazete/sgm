@@ -1,8 +1,8 @@
-var moves, corpus;
+var moves;
 
+var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
 var types = ["sms", "bbs"];
 var tiers = ["bronze", "silver", "gold"];
-var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
 var characters = {
     "be": "image/official/Beowulf_MasteryIcon.png",
     "bb": "image/official/BigBand_MasteryIcon.png",
@@ -18,38 +18,6 @@ var characters = {
     "sq": "image/official/Squigly_MasteryIcon.png",
     "va": "image/official/Valentine_MasteryIcon.png",
 };
-
-var cards = [];
-var filterCards;
-var sortBasis;
-var updateCards;
-
-function loadJSON(path) {
-    function request(resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", path, true);
-        xhr.onload = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                resolve(JSON.parse(this.response));
-    		}
-    	};
-        xhr.onerror = function() {
-            document.body.classList.add("error");
-            reject(new Error("Could not load \"" + path + "\"."));
-        };
-        xhr.send();
-    }
-    return new Promise(request);
-}
-
-function toggleLoadingScreen(loading) {
-    if (loading) {
-        document.body.classList.add("loading");
-    }
-    else {
-        document.body.classList.remove("loading");
-    }
-}
 
 function initCollection(responses) {
     var sms = responses[0];
@@ -174,136 +142,20 @@ function initCollection(responses) {
     }
 }
 
-function formatNumbers(text) {
-    return text.replace(/(\d+(?:\.\d+)?%?)/g, "<span class=\"number\">$1</span>");
-}
-
-function format(template, substitutions) {
-    var matches = template.match(/{\d+(?::P?\d+)?%?}%?/g);
-    var formatted = template;
-    if (matches) {
-        for (var match of matches) {
-            var index = parseInt(match.replace(/{(\d+)(?::P?\d+)?%?}%?/, "$1"));
-            var substitute = substitutions ? Math.abs(substitutions[index]) : NaN;
-            if (match.includes("%}") || match.includes(":P")) {
-                substitute *= 100;
-            }
-            substitute = Math.round(substitute * 100) / 100; /* round to nearest 100th */
-            if (match.includes("%") || match.includes(":P")) {
-                substitute += "%";
-            }
-            formatted = formatted.replace(match, substitute);
-        }
+function updateCardConstant(card) {
+    var key = card.id;
+    var tag = card.getElementsByClassName("tag")[0];
+    var quote = card.getElementsByClassName("quote")[0];
+    var gear = card.getElementsByClassName("gear")[0];
+    tag.innerHTML = corpus[moves[key].title];
+    if (corpus[moves[key].description]) {
+        quote.innerHTML = corpus[moves[key].description];
     }
-    else {
-        if (substitutions.length > 0) {
-            console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
-        }
-    }
-    return formatNumbers(formatted);
-}
-
-function initLanguageMenu() {
-    var buttonSet = document.getElementById("language-menu");
-    var buttons = Array.from(buttonSet.getElementsByTagName("input"));
-
-    var savedLanguage = localStorage.getItem("language") || "en";
-    var savedButton = document.getElementById(savedLanguage);
-
-    function updateCardConstant(card) {
-        var key = card.id;
-        var tag = card.getElementsByClassName("tag")[0];
-        var quote = card.getElementsByClassName("quote")[0];
-        var gear = card.getElementsByClassName("gear")[0];
-        tag.innerHTML = corpus[moves[key].title];
-        if (corpus[moves[key].description]) {
-            quote.innerHTML = corpus[moves[key].description];
-        }
-        gear.dataset.value = moves[key].cost;
-    }
-
-    function updateCardConstants(response) {
-        corpus = response;
-
-        for (var card of cards) {
-            updateCardConstant(card);
-        }
-    }
-
-    function setLanguage() {
-        var language = this.id;
-        document.documentElement.lang = language;
-        toggleLoadingScreen(true);
-        loadJSON("data/" + language + ".json").then(updateCardConstants).then(updateCards).then(toggleLoadingScreen);
-        localStorage.setItem("language", language);
-    }
-
-    if (!buttons.includes(savedButton)) {
-        savedLanguage = "en";
-        savedButton = document.getElementById("en");
-    }
-    document.documentElement.lang = savedLanguage;
-    savedButton.checked = true;
-
-    for (var button of buttons) {
-        button.addEventListener("change", setLanguage);
-    }
-
-    return loadJSON("data/" + savedLanguage + ".json").then(updateCardConstants);
+    gear.dataset.value = moves[key].cost;
 }
 
 function initDock() {
-    var zoomIn = document.getElementById("zoom-in");
-    var zoomOut = document.getElementById("zoom-out");
     var settings = document.getElementById("settings");
-
-    var menu = document.getElementById("menu");
-    var optionsMenu = document.getElementById("options-menu");
-    var filterMenu = document.getElementById("filter-menu");
-    var sortMenu = document.getElementById("sort-menu");
-
-    var savedZoom = localStorage.getItem("zoom");
-    var savedButton = document.getElementById(savedZoom);
-
-    function getScrollRatio() {
-        var scrollHeight = document.documentElement.scrollHeight - innerHeight;
-        return scrollY / scrollHeight;
-    }
-
-    function setScrollRatio(scrollRatio) {
-        var scrollHeight = document.documentElement.scrollHeight - innerHeight;
-        scrollTo(0, scrollHeight * scrollRatio);
-    }
-
-    function decreaseZoom() {
-        var scrollRatio = getScrollRatio();
-        if (document.body.classList.contains("zoomed-in")) {
-            document.body.classList.remove("zoomed-in");
-            zoomIn.classList.remove("pressed");
-            localStorage.removeItem("zoom");
-        }
-        else {
-            document.body.classList.add("zoomed-out");
-            zoomOut.classList.add("pressed");
-            localStorage.setItem("zoom", this.id);
-        }
-        setScrollRatio(scrollRatio);
-    }
-
-    function increaseZoom() {
-        var scrollRatio = getScrollRatio();
-        if (document.body.classList.contains("zoomed-out")) {
-            document.body.classList.remove("zoomed-out");
-            zoomOut.classList.remove("pressed");
-            localStorage.removeItem("zoom");
-        }
-        else {
-            document.body.classList.add("zoomed-in");
-            zoomIn.classList.add("pressed");
-            localStorage.setItem("zoom", this.id);
-        }
-        setScrollRatio(scrollRatio);
-    }
 
     function toggleMenu() {
         if (this.classList.contains("glowing")) {
@@ -318,24 +170,13 @@ function initDock() {
         }
     }
 
-    zoomOut.addEventListener("click", decreaseZoom);
-    zoomIn.addEventListener("click", increaseZoom);
-
     settings.addEventListener("click", toggleMenu);
-
-    if (savedButton == zoomOut || savedButton == zoomIn) {
-        savedButton.click();
-    }
 }
 
 function initFilterMenu() {
-    var searchbox = document.getElementById("searchbox");
     var searchMN = document.getElementById("search-mn");
     var searchD = document.getElementById("search-d");
 
-    var filterCancel = document.getElementById("filter-cancel");
-
-    var filterCancel = document.getElementById("filter-cancel");
     var filterTypes = types.map(function (type) {
         return document.getElementById("filter-" + type);
     });
@@ -346,31 +187,6 @@ function initFilterMenu() {
         return document.getElementById("filter-" + fighter);
     });
     var filters = [].concat(filterTypes, filterTiers, filterFighters);
-
-    function updateFilterCancel() {
-        if (filters.some(function (filter) {
-            return filter.checked;
-        })) {
-            filterCancel.checked = false;
-        }
-        else {
-            filterCancel.checked = true;
-        }
-    }
-
-    function sanitize(text) {
-        if (text) {
-            return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/g, " ").trim();
-        }
-        return "";
-    }
-
-    function removePlaceholders(template) {
-        if (template) {
-            return template.replace(/{\d+(?::\d+)?%?}%?/g, "");
-        }
-        return "";
-    }
 
     function searchCondition(card) {
         if (!searchbox.value) {
@@ -444,41 +260,11 @@ function initFilterMenu() {
         updateFilterCancel();
     };
 
-    function cancelFilters() {
-        for (var filter of filters) {
-            filter.checked = false;
-        }
-        filterCards();
-    }
-
-    function pressEnter(e) {
-        if (e.keyCode == 13 || e.key == "Enter" || e.code == "Enter") {
-            searchbox.blur();
-        }
-    }
-
-    searchbox.addEventListener("keydown", pressEnter);
-    searchbox.addEventListener("input", filterCards);
     searchMN.addEventListener("change", filterCards);
     searchD.addEventListener("change", filterCards);
 
-    filterCancel.addEventListener("change", cancelFilters);
-    for (var filter of filters) {
-        filter.addEventListener("change", filterCards);
-    }
-
-    if (location.hash) {
-        searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
-    }
     searchMN.checked = true;
     filterTiers[2].click();
-}
-
-function sortCards() {
-    cards.sort(sortBasis);
-    for (var card of cards) {
-        card.parentElement.appendChild(card);
-    }
 }
 
 function initSortMenu() {

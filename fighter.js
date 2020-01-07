@@ -1,14 +1,9 @@
-var fighters, variants, corpus;
+var fighters, variants;
 var userID, userIP, database;
 
+var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
-var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
-
-var cards = [];
-var filterCards;
-var sortBasis;
-var updateCards;
 
 var chaos = false;
 var dormant = true;
@@ -35,32 +30,6 @@ function fearTheRainbow() {
         }
     }
     chaos = !chaos;
-}
-
-function toggleLoadingScreen(loading) {
-    if (loading) {
-        document.body.classList.add("loading");
-    }
-    else {
-        document.body.classList.remove("loading");
-    }
-}
-
-function loadJSON(path) {
-    function request(resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", path, true);
-        xhr.onload = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                resolve(JSON.parse(this.response));
-    		}
-    	};
-        xhr.onerror = function() {
-            reject(new Error("Could not load \"" + path + "\"."));
-        };
-        xhr.send();
-    }
-    return new Promise(request);
 }
 
 function loadScript(path) {
@@ -434,308 +403,132 @@ function initCollection(responses) {
     }
 }
 
-function formatNumbers(text) {
-    return text.replace(/NaN/g, "???").replace(/((?:\?\?\?|\d+(?:\.\d+)?)%?)/g, "<span class=\"number\">$1</span>");
+function updateCardConstant(card) {
+    var key = card.id;
+    var variantName = card.getElementsByClassName("variant-name")[0];
+    var fighterName = card.getElementsByClassName("fighter-name")[0];
+    var quote = card.getElementsByClassName("quote")[0];
+    var caName = card.getElementsByClassName("ca-name")[0];
+    var ca0 = card.getElementsByClassName("ca-0")[0];
+    var saName = card.getElementsByClassName("sa-name")[0];
+    var maName = card.getElementsByClassName("ma-name")[0];
+    variantName.innerHTML = corpus[variants[key].name];
+    fighterName.innerHTML = corpus[fighters[variants[key].base].name];
+    quote.innerHTML = corpus[variants[key].quote].replace(/\s*\n\s*/, "<br>");
+    caName.innerHTML = corpus[fighters[variants[key].base].ca.title];
+    ca0.innerHTML = formatNumbers(corpus[fighters[variants[key].base].ca.description]);
+    saName.innerHTML = corpus[variants[key].sa.title];
+    maName.innerHTML = corpus[fighters[variants[key].base].ma.title];
 }
 
-function format(template, substitutions) {
-    var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
-    var formatted = template;
-    if (matches) {
-        for (var match of matches) {
-            var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
-            var substitute = Math.abs(substitutions[index]);
-            if (match.includes("%}")) {
-                substitute *= 100;
-            }
-            substitute = Math.round(substitute * 100) / 100; /* round to nearest 100th */
-            if (match.includes("%")) {
-                substitute += "%";
-            }
-            formatted = formatted.replace(match, substitute);
-        }
+function updateCardConstant(card) {
+    var key = card.id;
+    for (var c in cardConstants) {
+        var element = card.getElementsByClassName(c)[0];
+        element.innerHTML = cardConstants[c](key);
     }
-    else {
-        if (substitutions.length > 0) {
-            console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
-        }
-    }
-    return formatNumbers(formatted);
 }
 
-function initLanguageMenu() {
-    var buttonSet = document.getElementById("language-menu");
-    var buttons = Array.from(buttonSet.getElementsByTagName("input"));
-
-    var savedLanguage = localStorage.getItem("language") || "en";
-    var savedButton = document.getElementById(savedLanguage);
-
-    function updateCardConstant(card) {
-        var key = card.id;
-        var variantName = card.getElementsByClassName("variant-name")[0];
-        var fighterName = card.getElementsByClassName("fighter-name")[0];
-        var quote = card.getElementsByClassName("quote")[0];
-        var caName = card.getElementsByClassName("ca-name")[0];
-        var ca0 = card.getElementsByClassName("ca-0")[0];
-        var saName = card.getElementsByClassName("sa-name")[0];
-        var maName = card.getElementsByClassName("ma-name")[0];
-        variantName.innerHTML = corpus[variants[key].name];
-        fighterName.innerHTML = corpus[fighters[variants[key].base].name];
-        quote.innerHTML = corpus[variants[key].quote].replace(/\s*\n\s*/, "<br>");
-        caName.innerHTML = corpus[fighters[variants[key].base].ca.title];
-        ca0.innerHTML = formatNumbers(corpus[fighters[variants[key].base].ca.description]);
-        saName.innerHTML = corpus[variants[key].sa.title];
-        maName.innerHTML = corpus[fighters[variants[key].base].ma.title];
+var cardConstants = {
+    "variant-name": function (key) {
+        return corpus[variants[key].name];
+    },
+    "fighter-name": function (key) {
+        return corpus[fighters[variants[key].base].name];
+    },
+    "quote": function (key) {
+        return corpus[variants[key].quote].replace(/\s*\n\s*/, "<br>");
+    },
+    "ca-name": function (key) {
+        return corpus[fighters[variants[key].base].ca.title];
+    },
+    "ca-0": function (key) {
+        return formatNumbers(corpus[fighters[variants[key].base].ca.description]);
+    },
+    "sa-name": function (key) {
+        return corpus[variants[key].sa.title];
+    },
+    "ma-name": function (key) {
+        return corpus[fighters[variants[key].base].ma.title];
     }
-
-    function updateCardConstants(response) {
-        corpus = response;
-        for (var card of cards) {
-            updateCardConstant(card);
-        }
-    }
-
-    function setLanguage() {
-        var language = this.id;
-        document.documentElement.lang = language;
-        toggleLoadingScreen(true);
-        loadJSON("data/" + language + ".json").then(updateCardConstants).then(updateCards).then(toggleLoadingScreen);
-        localStorage.setItem("language", language);
-    }
-
-    if (!buttons.includes(savedButton)) {
-        savedLanguage = "en";
-        savedButton = document.getElementById("en");
-    }
-    document.documentElement.lang = savedLanguage;
-    savedButton.checked = true;
-
-    for (var button of buttons) {
-        button.addEventListener("change", setLanguage);
-    }
-
-    return loadJSON("data/" + savedLanguage + ".json").then(updateCardConstants);
 }
 
-function initDock() {
-    var zoomIn = document.getElementById("zoom-in");
-    var zoomOut = document.getElementById("zoom-out");
-    var fighterOptions = document.getElementById("fighter-options");
-    var filterSort = document.getElementById("filter-sort");
+var menuMap = {
+    "fighter-options": ["options-menu"],
+    "filter-sort": ["filter-menu", "sort-menu"]
+};
 
-    var menu = document.getElementById("menu");
-    var optionsMenu = document.getElementById("options-menu");
-    var filterMenu = document.getElementById("filter-menu");
-    var sortMenu = document.getElementById("sort-menu");
 
-    var savedZoom = localStorage.getItem("zoom");
-    var savedButton = document.getElementById(savedZoom);
 
-    var ratings = document.getElementById("ratings");
-    var cardRatings = document.getElementsByClassName("rating");
-    var sortFighterScore = document.getElementById("sort-fs");
-    var sortOffense = document.getElementById("sort-offense");
-    var sortDefense = document.getElementById("sort-defense");
 
-    var savedStar = localStorage.getItem("star") || "off";
 
-    function getScrollRatio() {
-        var scrollHeight = document.documentElement.scrollHeight - innerHeight;
-        return scrollY / scrollHeight;
-    }
 
-    function setScrollRatio(scrollRatio) {
-        var scrollHeight = document.documentElement.scrollHeight - innerHeight;
-        scrollTo(0, scrollHeight * scrollRatio);
-    }
 
-    function decreaseZoom() {
-        var scrollRatio = getScrollRatio();
-        if (document.body.classList.contains("zoomed-in")) {
-            document.body.classList.remove("zoomed-in");
-            zoomIn.classList.remove("pressed");
-            localStorage.removeItem("zoom");
+
+
+
+
+
+var filterSets = {
+    "tiers": {
+        "buttons": tiers,
+        "method": function (filter, i) {
+            return filter.checked && variants[key].tier == i
         }
-        else {
-            document.body.classList.add("zoomed-out");
-            zoomOut.classList.add("pressed");
-            localStorage.setItem("zoom", this.id);
+    },
+    "elements": {
+        "buttons": elements,
+        "method": function (filter, i) {
+            return filter.checked && variants[key].element == i
         }
-        setScrollRatio(scrollRatio);
-    }
-
-    function increaseZoom() {
-        var scrollRatio = getScrollRatio();
-        if (document.body.classList.contains("zoomed-out")) {
-            document.body.classList.remove("zoomed-out");
-            zoomOut.classList.remove("pressed");
-            localStorage.removeItem("zoom");
-        }
-        else {
-            document.body.classList.add("zoomed-in");
-            zoomIn.classList.add("pressed");
-            localStorage.setItem("zoom", this.id);
-        }
-        setScrollRatio(scrollRatio);
-    }
-
-    function toggleFighterOptions() {
-        if (this.classList.contains("glowing")) {
-            this.classList.remove("glowing");
-            menu.classList.add("hidden");
-        }
-        else {
-            this.classList.add("glowing");
-            filterSort.classList.remove("glowing");
-            menu.classList.remove("hidden");
-            optionsMenu.classList.remove("hidden");
-            filterMenu.classList.add("hidden");
-            sortMenu.classList.add("hidden");
-            optionsMenu.scrollTo(0, 0);
+    },
+    "fighters": {
+        "buttons": fighterIDs,
+        "method": function (filter, i) {
+            return filter.checked && variants[key].base == fighterIDs[i]
         }
     }
+};
 
-    function toggleFilterSort() {
-        if (this.classList.contains("glowing")) {
-            this.classList.remove("glowing");
-            menu.classList.add("hidden");
-        }
-        else {
-            fighterOptions.classList.remove("glowing");
-            this.classList.add("glowing");
-            menu.classList.remove("hidden");
-            optionsMenu.classList.add("hidden");
-            filterMenu.classList.remove("hidden");
-            sortMenu.classList.remove("hidden");
-            filterMenu.scrollTo(0, 0);
-            sortMenu.scrollTo(0, 0);
-        }
-    }
-
-    function initRating() {
-        Promise.all([
-            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"),
-            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"),
-            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"),
-            loadScript("https://api.ipify.org?format=jsonp&callback=setIP")
-        ]).then(function () {
-            var config = {
-                apiKey: "AIzaSyCHj7h6q2cG8h3yRDvofHiDP3Y4H4wY6t4",
-                authDomain: "sgmobilegallery.firebaseapp.com",
-                databaseURL: "https://sgmobilegallery.firebaseio.com",
-                projectId: "sgmobilegallery",
-                storageBucket: "sgmobilegallery.appspot.com",
-                messagingSenderId: "65927600297"
-            };
-            firebase.initializeApp(config);
-
-            database = firebase.database();
-
-            firebase.auth().onAuthStateChanged(function (user) {
-                if (user) {
-                    var isAnonymous = user.isAnonymous;
-                    userID = user.uid;
-                    console.log("Authentication issued.");
-                }
-                else {
-                    console.log("Authentication revoked.");
-                }
-            });
-            firebase.auth().signInAnonymously().catch(function (error) {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                console.log(error.code, error.message);
-            });
-
-            for (var card of cards) {
-                updateRating(card.id, "offense");
-                updateRating(card.id, "defense");
+function getFilterSets() {
+    return {
+        "tiers": {
+            "buttons": tiers.map(function (tier) {
+                return document.getElementById("filter-" + tier);
+            }),
+            "method": function (filter, i) {
+                return filter.checked && variants[key].tier == i
             }
-        });
-    }
-
-    function toggleRatings() {
-        if (this.classList.contains("glowing")) {
-            this.classList.remove("glowing");
-            for (var cardRating of cardRatings) {
-                cardRating.classList.add("hidden");
+        },
+        "elements": {
+            "buttons": elements.map(function (element) {
+                return document.getElementById("filter-" + element);
+            }),
+            "method": function (filter, i) {
+                return filter.checked && variants[key].element == i
             }
-            sortOffense.classList.add("hidden");
-            sortDefense.classList.add("hidden");
-            if (sortOffense.checked || sortDefense.checked) {
-                sortFighterScore.click();
+        },
+        "fighters": {
+            "buttons": fighterIDs.map(function (fighter) {
+                return document.getElementById("filter-" + fighter);
+            }),
+            "method": function (filter, i) {
+                return filter.checked && variants[key].base == fighterIDs[i]
             }
-            localStorage.setItem("star", "off");
         }
-        else {
-            this.classList.add("glowing");
-            for (var cardRating of cardRatings) {
-                cardRating.classList.remove("hidden");
-            }
-            sortOffense.classList.remove("hidden");
-            sortDefense.classList.remove("hidden");
-            if (dormant) {
-                initRating();
-                dormant = false;
-            }
-            localStorage.setItem("star", "on");
-        }
-    }
-
-    zoomOut.addEventListener("click", decreaseZoom);
-    zoomIn.addEventListener("click", increaseZoom);
-
-    if (savedButton == zoomOut || savedButton == zoomIn) {
-        savedButton.click();
-    }
-
-    fighterOptions.addEventListener("click", toggleFighterOptions);
-    filterSort.addEventListener("click", toggleFilterSort);
-
-    ratings.addEventListener("click", toggleRatings);
-
-    if (savedStar == "on") {
-        ratings.click();
-    }
+    };
 }
 
 function initFilterMenu() {
-    var searchbox = document.getElementById("searchbox");
+    var filterSets = getFilterSets();
+    var filters = [].concat(filterSets.tiers.buttons, filterSets.elements.buttons, filterSets.fighters.buttons)
+
+
+
     var searchVN = document.getElementById("search-vn");
     var searchCA = document.getElementById("search-ca");
     var searchSA = document.getElementById("search-sa");
     var searchMA = document.getElementById("search-ma");
-
-    var filterCancel = document.getElementById("filter-cancel");
-    var filterTiers = tiers.map(function (tier) {
-        return document.getElementById("filter-" + tier);
-    });
-    var filterElements = elements.map(function (element) {
-        return document.getElementById("filter-" + element);
-    });
-    var filterFighters = fighterIDs.map(function (fighter) {
-        return document.getElementById("filter-" + fighter);
-    });
-    var filters = [].concat(filterTiers, filterElements, filterFighters);
-
-    function updateFilterCancel() {
-        if (filters.some(function (filter) {
-            return filter.checked;
-        })) {
-            filterCancel.checked = false;
-        }
-        else {
-            filterCancel.checked = true;
-        }
-    }
-
-    function sanitize(text) {
-        return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/g, " ").trim();
-    }
-
-    function removePlaceholders(template) {
-        return template.replace(/{\d+(?::\d+)?%?}%?/g, "");
-    }
 
     function searchCondition(card) {
         if (!searchbox.value) {
@@ -778,90 +571,13 @@ function initFilterMenu() {
         return false;
     }
 
-    function tierCondition(card) {
-        if (filterTiers.every(function (filter) {
-            return !filter.checked;
-        })) {
-            return true;
-        }
-        var key = card.id;
-        return filterTiers.some(function (filter, i) {return filter.checked && variants[key].tier == i});
-    }
-
-    function elementCondition(card) {
-        if (filterElements.every(function (filter) {
-            return !filter.checked
-        })) {
-            return true;
-        }
-        var key = card.id;
-        return filterElements.some(function (filter, i) {return filter.checked && variants[key].element == i});
-    }
-
-    function fighterCondition(card) {
-        if (filterFighters.every(function (filter) {
-            return !filter.checked;
-        })) {
-            return true;
-        }
-        var key = card.id;
-        return filterFighters.some(function (filter, i) {return filter.checked && variants[key].base == fighterIDs[i]});
-    }
-
-    filterCards = function () {
-        for (var card of cards) {
-            if (
-                searchCondition(card) &&
-                tierCondition(card) &&
-                elementCondition(card) &&
-                fighterCondition(card)
-            ) {
-                card.classList.remove("hidden");
-            }
-            else {
-                card.classList.add("hidden");
-            }
-        }
-        updateFilterCancel();
-    };
-
-    function cancelFilters() {
-        for (var filter of filters) {
-            filter.checked = false;
-        }
-        filterCards();
-    }
-
-    function pressEnter(e) {
-        if (e.keyCode == 13 || e.key == "Enter" || e.code == "Enter") {
-            searchbox.blur();
-        }
-    }
-
-    searchbox.addEventListener("keydown", pressEnter);
-    searchbox.addEventListener("input", filterCards);
     searchVN.addEventListener("change", filterCards);
     searchCA.addEventListener("change", filterCards);
     searchSA.addEventListener("change", filterCards);
     searchMA.addEventListener("change", filterCards);
 
-    filterCancel.addEventListener("change", cancelFilters);
-    for (var filter of filters) {
-        filter.addEventListener("change", filterCards);
-    }
-
-    if (location.hash) {
-        searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
-    }
     searchVN.checked = true;
     filterCancel.click();
-}
-
-function sortCards() {
-    cards.sort(sortBasis);
-    for (var card of cards) {
-        card.parentElement.appendChild(card);
-    }
 }
 
 function initSortMenu() {
