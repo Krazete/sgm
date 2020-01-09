@@ -185,73 +185,23 @@ function initDock() {
     }
 }
 
-
-
-
-
-
-
-
-
-function initFilterMenu() {
-    var filterCancel = document.getElementById("filter-cancel");
-    var filterSets = getFilterSets();
-    var filters = [].concat(filterSets.tiers.buttons, filterSets.elements.buttons, filterSets.fighters.buttons)
-
+function initSearchbox() {
     var searchbox = document.getElementById("searchbox");
 
-    function updateFilterCancel() {
-        if (filters.some(function (filter) {
-            return filter.checked;
-        })) {
-            filterCancel.checked = false;
+    function sanitize(text) {
+        if (text) {
+            return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/g, " ").trim();
         }
-        else {
-            filterCancel.checked = true;
-        }
+        return "";
     }
 
-
-    function unchecked(filter) {
-        return !filter.checked;
-    }
-    function uncheckedAll(filterSet) {
-        return filterSet.every(unchecked);
-    }
-    function satisfies(filterSet, key) {
-        for (var i of filterSet) {
-            if (!filterSet.method(key)) {
-                return false;
-            }
+    function removePlaceholders(template) {
+        if (template) {
+            return template.replace(/{\d+(?::\d+)?%?}%?/g, "");
         }
-        return true;
-    }
-    function condition(card, filterSet) {
-        if (uncheckedAll(filterSet.buttons)) {
-            return true;
-        }
-        var key = card.id;
-        return satisfies(filterSet, key);
+        return "";
     }
 
-
-
-    filterCards = function () {
-        for (var card of cards) {
-            if (
-                searchCondition(card) &&
-                condition(card, filterSets.tiers) &&
-                condition(card, filterSets.elements) &&
-                condition(card, filterSets.fighters)
-            ) {
-                card.classList.remove("hidden");
-            }
-            else {
-                card.classList.add("hidden");
-            }
-        }
-        updateFilterCancel();
-    };
     function searchCondition(card) {
         if (!searchbox.value) {
             return true;
@@ -260,12 +210,7 @@ function initFilterMenu() {
         var queries = searchbox.value.split(",");
         for (var rawQuery of queries) {
             var query = sanitize(rawQuery);
-            if (query.includes("fear the rainbow")) {
-                searchbox.value = "";
-                fearTheRainbow();
-                return true;
-            }
-            else if (searchVN.checked) {
+            if (searchVN.checked) {
                 if (sanitize(key).includes(query) || sanitize(corpus[variants[key].name]).includes(query)) {
                     return true;
                 }
@@ -293,28 +238,15 @@ function initFilterMenu() {
         return false;
     }
 
-
-
-
-    function sanitize(text) {
-        if (text) {
-            return text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/g, " ").trim();
+    function filterCards2() {
+        for (var card of cards) {
+            if (searchCondition(card)) {
+                card.classList.remove("hidden2");
+            }
+            else {
+                card.classList.add("hidden2");
+            }
         }
-        return "";
-    }
-
-    function removePlaceholders(template) {
-        if (template) {
-            return template.replace(/{\d+(?::\d+)?%?}%?/g, "");
-        }
-        return "";
-    }
-
-    function cancelFilters() {
-        for (var filter of filters) {
-            filter.checked = false;
-        }
-        filterCards();
     }
 
     function pressEnter(e) {
@@ -323,24 +255,83 @@ function initFilterMenu() {
         }
     }
 
-    searchbox.addEventListener("keydown", pressEnter);
     searchbox.addEventListener("input", filterCards);
+    searchbox.addEventListener("keydown", pressEnter);
+
+    if (location.hash) {
+        searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
+    }
+}
+
+function initFilterMenu() {
+    var filterCancel = document.getElementById("filter-cancel");
+    var filters = [];
+    for (var filterSet of filterSets) {
+        for (var id of filterSet.buttons) {
+            filters.push(document.getElementById(id));
+        }
+    }
+
+    function checked(filter) {
+        return filter.checked;
+    }
+
+    function updateFilterCancel() {
+        if (filters.some(checked)) {
+            filterCancel.checked = false;
+        }
+        else {
+            filterCancel.checked = true;
+        }
+    }
+
+    function unchecked(filter) {
+        return !filter.checked;
+    }
+    function uncheckedAll(filterSet) {
+        return filterSet.every(unchecked);
+    }
+    function satisfies(filterSet, key) {
+        for (var i of filterSet) {
+            if (!filterSet.method(key)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function condition(card, filterSet) {
+        if (uncheckedAll(filterSet.buttons)) {
+            return true;
+        }
+        var key = card.id;
+        return satisfies(filterSet, key);
+    }
+
+
+
+    function filterCards() {
+        for (var card of cards) {
+            if (filterSets.every(x => condition(card, x))) {
+                card.classList.remove("hidden");
+            }
+            else {
+                card.classList.add("hidden");
+            }
+        }
+        updateFilterCancel();
+    };
+
+    function cancelFilters() {
+        for (var filter of filters) {
+            filter.checked = false;
+        }
+        filterCards();
+    }
 
     filterCancel.addEventListener("change", cancelFilters);
     for (var filter of filters) {
         filter.addEventListener("change", filterCards);
     }
-
-    if (location.hash) {
-        searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
-    }
-
-
-
-
-
-
-
 }
 
 function sortCards() {

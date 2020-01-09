@@ -8,6 +8,15 @@ var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 var chaos = false;
 var dormant = true;
 
+/**/
+
+var menuMap = {
+    "fighter-options": ["options-menu"],
+    "filter-sort": ["filter-menu", "sort-menu"]
+};
+
+/**/
+
 function randomInt(a, b) {
     return a + Math.floor(Math.random() * (b - a));
 }
@@ -453,10 +462,6 @@ var cardConstants = {
     }
 }
 
-var menuMap = {
-    "fighter-options": ["options-menu"],
-    "filter-sort": ["filter-menu", "sort-menu"]
-};
 
 
 
@@ -469,26 +474,36 @@ var menuMap = {
 
 
 
-var filterSets = {
-    "tiers": {
-        "buttons": tiers,
-        "method": function (filter, i) {
+function getElementsByIds(ids) {
+    var elements = [];
+    for (var id of ids) {
+        elements.push(document.getElementById(id));
+    }
+    return elements;
+}
+
+
+
+var filterSets = [
+    {
+        "buttons": tiers.map(e => "filter-" + e),
+        "basis": function (filter, i) {
             return filter.checked && variants[key].tier == i
         }
     },
-    "elements": {
-        "buttons": elements,
-        "method": function (filter, i) {
+    {
+        "buttons": tiers.map(e => "filter-" + e),
+        "basis": function (filter, i) {
             return filter.checked && variants[key].element == i
         }
     },
-    "fighters": {
-        "buttons": fighterIDs,
-        "method": function (filter, i) {
+    {
+        "buttons": tiers.map(e => "filter-" + e),
+        "basis": function (filter, i) {
             return filter.checked && variants[key].base == fighterIDs[i]
         }
     }
-};
+];
 
 function getFilterSets() {
     return {
