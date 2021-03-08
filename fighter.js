@@ -3,7 +3,7 @@ var userID, userIP, database;
 
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
-var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
+var fighterIDs = ["an", "be", "bb", "ce", "do", "el", "fi", "fu", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
 
 var cards = [];
 var filterCards;
