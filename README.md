@@ -48,6 +48,8 @@ The formulas used in these calculations are as follows:
 * `HP = CEIL(LVL1_HP + LVL1_HP * (LVL - 1) / 5)`
 * `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
 
+[lazy edit, FS_BOOST seems to increase by 1/850 per Prestige Level (see Analysis spreadsheet linked below)]
+
 All `BASE_` values are hard-coded for every tier of every fighter, although they seem to follow the general pattern `EVOLVED_BASE_ = FORMER_BASE_ * 1.8`.
 The only variants that deviate from this pattern are Headstrong and Understudy, who appear to swap stats with each other when evolved to the diamond tier.
 

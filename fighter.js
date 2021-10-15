@@ -358,7 +358,7 @@ function initCollection(responses) {
                     description.className = "ca-0 description";
                 ability.appendChild(description);
             }
-            else { /* signature and marquee abilities */
+            else if (abilityData.features) { /* signature and marquee abilities */ /* exclude prestige abilities */
                 for (var i = 0; i < abilityData.features.length; i++) {
                     var description = document.createElement("div");
                         description.className = [
@@ -417,6 +417,7 @@ function initCollection(responses) {
             card.appendChild(createAbility("ca", fighters[variants[key].base].ca, true));
             card.appendChild(createAbility("sa", variants[key].sa));
             card.appendChild(createAbility("ma", fighters[variants[key].base].ma, true));
+            card.appendChild(createAbility("pa", fighters[variants[key].base].pa, true));
             card.appendChild(createRating(key));
             card.appendChild(createWikia(key));
             card.appendChild(createLock());
@@ -479,6 +480,7 @@ function initLanguageMenu() {
         var ca0 = card.getElementsByClassName("ca-0")[0];
         var saName = card.getElementsByClassName("sa-name")[0];
         var maName = card.getElementsByClassName("ma-name")[0];
+        var paName = card.getElementsByClassName("pa-name")[0];
         variantName.innerHTML = corpus[variants[key].name];
         fighterName.innerHTML = corpus[fighters[variants[key].base].name];
         quote.innerHTML = corpus[variants[key].quote].replace(/\s*\n\s*/, "<br>");
@@ -486,6 +488,7 @@ function initLanguageMenu() {
         ca0.innerHTML = formatNumbers(corpus[fighters[variants[key].base].ca.description]);
         saName.innerHTML = corpus[variants[key].sa.title];
         maName.innerHTML = corpus[fighters[variants[key].base].ma.title];
+        paName.innerHTML = corpus[fighters[variants[key].base].pa.title];
     }
 
     function updateCardConstants(response) {
@@ -1020,13 +1023,15 @@ function initOptionsMenu() {
 
     var treeNone = document.getElementById("tree-none");
     var treeAll = document.getElementById("tree-all");
-    var treeMarquee = document.getElementById("tree-marquee");
 
     var saNumber = document.getElementById("sa-number");
     var saRange = document.getElementById("sa-range");
 
     var maNumber = document.getElementById("ma-number");
     var maRange = document.getElementById("ma-range");
+
+    var paNumber = document.getElementById("pa-number");
+    var paRange = document.getElementById("pa-range");
 
     function updateCardStats() {
         for (var card of cards) {
@@ -1036,7 +1041,11 @@ function initOptionsMenu() {
             var fsValue = card.getElementsByClassName("fs-value")[0];
 
             var baseBoost = treeNone.checked ? 1 : 1.5;
-            var abilityBoost = treeNone.checked ? 1 : treeAll.checked ? 1.46 : treeMarquee.checked ? 1.57 : NaN;
+
+            var treeBoost = treeNone.checked ? 1 : 1.46;
+            var maBoost = maRange.value / 100;
+            var paBoost = paRange.value / 850;
+            var fsBoost = treeBoost + maBoost + paBoost;
 
             var i = Math.max(0, evolveRange.value - variants[key].tier);
             var baseATK = baseBoost * variants[key].stats[i].attack;
@@ -1045,7 +1054,7 @@ function initOptionsMenu() {
             var j = Math.max(evolveRange.value, variants[key].tier);
             var atk = Math.ceil(baseATK + baseATK * (levelTiers[j].value - 1) / 5);
             var hp = Math.ceil(baseHP + baseHP * (levelTiers[j].value - 1) / 5);
-            var fs = Math.ceil(abilityBoost * (atk + hp / 6) * 7 / 10);
+            var fs = Math.ceil(fsBoost * (atk + hp / 6) * 7 / 10);
 
             atkValue.dataset.value = atk;
             hpValue.dataset.value = hp;
@@ -1084,16 +1093,36 @@ function initOptionsMenu() {
                     corpus[fighters[variants[key].base].ma.features[i].title].toUpperCase(),
                     corpus[fighters[variants[key].base].ma.features[i].description]
                 ].join(" - ");
-                var substitutions = fighters[variants[key].base].ma.features[i].tiers[maRange.value - 1].values;
+                var substitutions = fighters[variants[key].base].ma.features[i].tiers[(maRange.value + 10) % 11].values;
                 maDescription.innerHTML = format(template, substitutions);
             }
         }
+        updateCardStats();
+    }
+
+    function updateCardPAs() {
+        for (var card of cards) {
+            var key = card.id;
+            var pa = card.getElementsByClassName("pa")[0];
+            var paDescriptions = pa.getElementsByClassName("description");
+            for (var i = 0; i < paDescriptions.length; i++) {
+                var paDescription = paDescriptions[i];
+                var template = [
+                    corpus[fighters[variants[key].base].pa.features[i].title].toUpperCase(),
+                    corpus[fighters[variants[key].base].pa.features[i].description]
+                ].join(" - ");
+                var substitutions = fighters[variants[key].base].pa.features[i].tiers[(paRange.value + 99) % 100].values;
+                paDescription.innerHTML = format(template, substitutions);
+            }
+        }
+        updateCardStats();
     }
 
     updateCards = function () {
         updateCardStats();
         updateCardSAs();
         updateCardMAs();
+        updateCardPAs();
     };
 
     function updatePresetButtons() {
@@ -1128,7 +1157,6 @@ function initOptionsMenu() {
         else if (
             evolveRange.value == evolveRange.max &&
             levelDiamond.value == levelDiamond.max &&
-            treeMarquee.checked &&
             saRange.value == saRange.max &&
             maRange.value == maRange.max
         ) {
@@ -1174,6 +1202,8 @@ function initOptionsMenu() {
         setValidInput(saRange, saRange.min);
         setValidInput(maNumber, maNumber.min);
         setValidInput(maRange, maRange.min);
+        setValidInput(paNumber, paNumber.min);
+        setValidInput(paRange, paRange.min);
         updateCards();
     }
 
@@ -1191,8 +1221,10 @@ function initOptionsMenu() {
         treeNone.checked = true;
         setValidInput(saNumber, saNumber.max);
         setValidInput(saRange, saRange.max);
-        setValidInput(maNumber, maNumber.max);
-        setValidInput(maRange, maRange.max);
+        setValidInput(maNumber, maNumber.min);
+        setValidInput(maRange, maRange.min);
+        setValidInput(paNumber, paNumber.min);
+        setValidInput(paRange, paRange.min);
         updateCards();
     }
 
@@ -1207,11 +1239,13 @@ function initOptionsMenu() {
         setValidInput(levelSilver, levelSilver.max);
         setValidInput(levelGold, levelGold.max);
         setValidInput(levelDiamond, levelDiamond.max);
-        treeMarquee.checked = true;
+        treeAll.checked = true;
         setValidInput(saNumber, saNumber.max);
         setValidInput(saRange, saRange.max);
         setValidInput(maNumber, maNumber.max);
         setValidInput(maRange, maRange.max);
+        setValidInput(paNumber, paNumber.max);
+        setValidInput(paRange, paRange.max);
         updateCards();
     }
 
@@ -1320,6 +1354,19 @@ function initOptionsMenu() {
         updateCardMAs();
     }
 
+    function setPAViaNumber() {
+        setValidInput(this, this.value);
+        setValidInput(paRange, this.value);
+        updatePresetButtons();
+        updateCardPAs();
+    }
+
+    function setPAViaRange() {
+        setValidInput(paNumber, this.value);
+        updatePresetButtons();
+        updateCardPAs();
+    }
+
     optionBase.addEventListener("click", setAllToBase);
     optionDefault.addEventListener("click", setAllToDefault);
     optionMaximum.addEventListener("click", setAllToMaximum);
@@ -1342,7 +1389,6 @@ function initOptionsMenu() {
 
     treeNone.addEventListener("change", setTree);
     treeAll.addEventListener("change", setTree);
-    treeMarquee.addEventListener("change", setTree);
 
     saNumber.addEventListener("focus", focusSelect);
     saNumber.addEventListener("change", setSAViaNumber);
@@ -1351,6 +1397,10 @@ function initOptionsMenu() {
     maNumber.addEventListener("focus", focusSelect);
     maNumber.addEventListener("change", setMAViaNumber);
     maRange.addEventListener("change", setMAViaRange);
+
+    paNumber.addEventListener("focus", focusSelect);
+    paNumber.addEventListener("change", setPAViaNumber);
+    paRange.addEventListener("change", setPAViaRange);
 
     optionDefault.click();
 }

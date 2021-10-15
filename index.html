@@ -96,6 +96,15 @@
                         </div>
                     </div>
                     <div class="divider"></div>
+                    <div class="sa subset">
+                        <div class="ability-type fill-row cinematic dependent-gradient"></div>
+                        <div class="fill-row">
+                            <input type="text" pattern="\d*" min="1" max="3" value="3" class="cinematic" id="sa-number">
+                            <img src="image/official/icon_middle.png" class="icon">
+                        </div>
+                        <input type="range" min="1" max="3" value="3" class="fill-row" id="sa-range">
+                    </div>
+                    <div class="divider"></div>
                     <div class="subset">
                         <div class="fill-row cinematic dependent-gradient" id="evolve-label"></div>
                         <input type="range" min="0" max="3" value="0" class="fill-row" id="evolve-range">
@@ -132,32 +141,24 @@
                         <label for="tree-none" class="none-label"></label>
                         <input type="radio" name="tree" id="tree-all">
                         <label for="tree-all" class="all-label"></label>
-                        <input type="radio" name="tree" id="tree-marquee">
-                        <label for="tree-marquee" class="fill-row">
-                            <span class="all-label"></span>
-                            +
-                            <span class="ma">
-                                <span class="ability-type"></span>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="sa subset">
-                        <div class="ability-type fill-row cinematic dependent-gradient"></div>
-                        <div class="fill-row">
-                            <input type="text" pattern="\d*" min="1" max="3" value="3" class="cinematic" id="sa-number">
-                            <img src="image/official/icon_middle.png" class="icon">
-                        </div>
-                        <input type="range" min="1" max="3" value="3" class="fill-row" id="sa-range">
                     </div>
                     <div class="divider"></div>
                     <div class="ma subset">
                         <div class="ability-type fill-row cinematic dependent-gradient"></div>
                         <div class="fill-row">
-                            <input type="text" pattern="\d*" min="1" max="11" value="11" class="cinematic" id="ma-number">
+                            <input type="text" pattern="\d*" min="0" max="11" value="11" class="cinematic" id="ma-number">
                             <img src="image/official/icon_middle.png" class="icon">
                         </div>
-                        <input type="range" min="1" max="11" value="11" class="fill-row" id="ma-range">
+                        <input type="range" min="0" max="11" value="11" class="fill-row" id="ma-range">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="pa subset">
+                        <div class="ability-type fill-row cinematic dependent-gradient"><sup>(???)</sup></div>
+                        <div class="fill-row">
+                            <input type="text" pattern="\d*" min="0" max="100" value="100" class="cinematic" id="pa-number">
+                            <img src="image/official/icon_middle.png" class="icon">
+                        </div>
+                        <input type="range" min="0" max="100" value="100" class="fill-row" id="pa-range">
                     </div>
                 </div>
             </div>
