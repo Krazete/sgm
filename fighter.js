@@ -332,6 +332,9 @@ function initCollection(responses) {
     }
 
     function createAbility(type, abilityData, collapsed) {
+        if (type == "pa") { // temporary fix until i update sgmprocessor
+            abilityData = {};
+        }
         var ability = document.createElement("div");
             if (collapsed) {
                 ability.className = [type, "ability", "collapsed"].join(" ");
@@ -488,7 +491,7 @@ function initLanguageMenu() {
         ca0.innerHTML = formatNumbers(corpus[fighters[variants[key].base].ca.description]);
         saName.innerHTML = corpus[variants[key].sa.title];
         maName.innerHTML = corpus[fighters[variants[key].base].ma.title];
-        paName.innerHTML = corpus[fighters[variants[key].base].pa.title];
+        // paName.innerHTML = corpus[fighters[variants[key].base].pa.title];
     }
 
     function updateCardConstants(response) {
@@ -1122,7 +1125,7 @@ function initOptionsMenu() {
         updateCardStats();
         updateCardSAs();
         updateCardMAs();
-        updateCardPAs();
+        // updateCardPAs();
     };
 
     function updatePresetButtons() {
