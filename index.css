@@ -1050,10 +1050,12 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .wind .backdrop {background: radial-gradient(#9f8, #082);}
 .dark .backdrop {background: radial-gradient(#eae, #525);}
 .light .backdrop {background: radial-gradient(#fff, #ec5);}
-.missing-portrait .backdrop {
-    background: url(image/official/RandomBackground.png);
-    background-size: contain;
-}
+.neutral .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#ccc, #888);}
+.fire .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fb7, #d00);}
+.water .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#5ff, #06c);}
+.wind .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#9f8, #082);}
+.dark .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#eae, #525);}
+.light .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fff, #ec5);}
 
 .backdrop.hallow1:after {
     background: url(image/official/Blood1.png);
