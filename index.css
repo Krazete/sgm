@@ -1815,3 +1815,9 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
         transform: translate(-100%);
     }
 }
+
+/* TEMPORARY */
+#wishfulEater .sa .ability-title:after {
+    content: '\26a0  not final; may change';
+    color: yellow;
+}
