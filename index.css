@@ -1815,3 +1815,8 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
         transform: translate(-100%);
     }
 }
+
+/* TEMPORARY */
+#wishfulEater {
+    filter: blur(1px);
+}
