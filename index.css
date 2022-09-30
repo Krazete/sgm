@@ -882,7 +882,7 @@ html[lang='pt-br'] #search-d + label:before {content: 'Descri\00e7 \00e3 o';}
 #loading:after {
     font-size: xx-large;
     display: block;
-    animation: 0.7s infinite fader;
+    animation: fader 0.7s infinite;
 }
 html[lang='en'] #loading:after {content: 'LOADING...';}
 html[lang='ja'] #loading:after {content: '\30ed \30fc \30c9 \4e2d ...';}
@@ -1087,7 +1087,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     pointer-events: none;
 }
 #rBlight .portrait {
-    animation: 7s infinite linear rainbow;
+    animation: rainbow 7s linear infinite;
 }
 
 @keyframes rainbow {
@@ -1748,8 +1748,8 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
     pointer-events: none;
     z-index: 1;
     animation:
-        400ms intrare ease-out,
-        5s 3000ms exire linear forwards;
+        intrare 400ms ease-out,
+        exire 5s 3000ms linear forwards;
 }
 
 .cat {
@@ -1760,9 +1760,9 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
     background: url(image/cat.png);
     background-size: cover;
     animation:
-        400ms gyroscope ease-out,
-        800ms 800ms befuddle steps(1) 2 forwards,
-        100ms 3000ms scurry steps(2) infinite;
+        gyroscope 400ms ease-out,
+        befuddle 800ms 800ms steps(1) 2 forwards,
+        scurry 100ms 3000ms steps(2) infinite;
 }
 
 @keyframes intrare {
