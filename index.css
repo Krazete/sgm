@@ -1089,6 +1089,18 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 #rBlight .portrait {
     animation: rainbow 7s linear infinite;
 }
+#wishfulEater:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -50px;
+    display: block;
+    pointer-events: none;
+    animation:
+        skullheart .3s steps(1) infinite,
+        sine 1s ease-in-out alternate infinite;
+}
 
 @keyframes rainbow {
     0% {
@@ -1096,6 +1108,23 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     }
     100% {
         filter: hue-rotate(360deg);
+    }
+}
+@keyframes skullheart {
+    0%,
+    100% {background: url(image/official/skullheart_idle01.png) 18px 19px / 117px no-repeat;}
+    17% {background: url(image/official/skullheart_idle02.png) 0px 0px / 151px no-repeat;}
+    33% {background: url(image/official/skullheart_idle03.png) 18px 3px / 130px no-repeat;}
+    50% {background: url(image/official/skullheart_idle04.png) 18px 9px / 130px no-repeat;}
+    67% {background: url(image/official/skullheart_idle05.png) 18px 19px / 127px no-repeat;}
+    83% {background: url(image/official/skullheart_idle06.png) 0px 10px / 126px no-repeat;}
+}
+@keyframes sine {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: -80px;
     }
 }
 
