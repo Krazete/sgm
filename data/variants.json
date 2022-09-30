@@ -14205,32 +14205,32 @@
     "wishfulEater": {
         "base": "um",
         "element": 4,
-        "fandom": "Wishful Eater",
+        "fandom": "Death Wish",
         "name": "Char_Umbrella_D_V3_Name",
-        "quote": "Variant_Description_Umbrella_WishfulEater",
+        "quote": "Variant_Description_Umbrella_DeathWish",
         "sa": {
             "features": [
                 {
-                    "description": "Char_Umbrella_SA_BoneAppetit_Desc",
+                    "description": "Char_Umbrella_SA_VoraciousCycle_Desc",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                0.5,
-                                5.0
+                                1,
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.5,
-                                7.0
+                                2,
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.5,
+                                3,
                                 10.0
                             ]
                         }
@@ -14238,34 +14238,37 @@
                     "title": ""
                 },
                 {
-                    "description": "Char_Umbrella_SA_BoneAppetit_Desc2",
+                    "description": "Char_Umbrella_SA_VoraciousCycle_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                0.5,
-                                1
+                                25.0,
+                                25.0,
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.5,
-                                2
+                                35.0,
+                                25.0,
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.5,
-                                3
+                                50.0,
+                                25.0,
+                                10.0
                             ]
                         }
                     ],
                     "title": ""
                 }
             ],
-            "title": "Char_Umbrella_SA_BoneAppetit_Title"
+            "title": "Char_Umbrella_SA_VoraciousCycle_Title"
         },
         "stats": [
             {
