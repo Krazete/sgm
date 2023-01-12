@@ -618,7 +618,7 @@ html[lang='pt-br'] #filter-label:before {content: 'FILTRAR';}
 }
 
 #mastery {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
 }
 
 /* SORT */
