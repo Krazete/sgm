@@ -443,11 +443,11 @@ function formatNumbers(text) {
 }
 
 function format(template, substitutions) {
-    var matches = template.match(/{\d+(?::\d+)?%?}%?/g);
+    var matches = template.match(/{\s*\d+(?::\d+)?%?\s*}%?/g);
     var formatted = template;
     if (matches) {
         for (var match of matches) {
-            var index = parseInt(match.replace(/{(\d+)(?::\d+)?%?}%?/, "$1"));
+            var index = parseInt(match.replace(/{\s*(\d+)(?::\d+)?%?\s*}%?/, "$1"));
             var substitute = Math.abs(substitutions[index]);
             if (match.includes("%}")) {
                 substitute *= 100;
