@@ -31,8 +31,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Cerebella_DiamondDef2",
@@ -55,8 +54,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_Defense_Title"
@@ -105,8 +103,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Valentine_SA_BledDry_Desc2",
@@ -129,8 +126,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_BledDry_Title"
@@ -172,8 +168,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_CelestialShield_Desc2",
@@ -199,8 +194,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_CelestialShield_Title"
@@ -246,8 +240,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Eliza_SA_Solo",
@@ -270,8 +263,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_Solo_Title"
@@ -320,8 +312,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_MegaBuster_Desc2",
@@ -347,8 +338,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_MegaBuster_Title"
@@ -398,8 +388,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_BigBand_Freestyle2",
@@ -422,8 +411,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigB_SA_Freestyle_Title"
@@ -483,8 +471,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Painwheel_SA_Necrovore_Desc2",
@@ -513,8 +500,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_PainWheel_SA_Necrovore_Title"
@@ -563,8 +549,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Painwheel_SA_Transfuse_Desc_2",
@@ -578,17 +563,16 @@
                         {
                             "level": 2,
                             "values": [
-                                5.0
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                5.0
+                                10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_PainWheel_SA_Transfuse_Title"
@@ -638,8 +622,7 @@
                                 2.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_ExistentialDecay_Desc2",
@@ -662,8 +645,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_ExistentialDecay_Title"
@@ -709,8 +691,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Cerebella_SA_FrozenOver_Desc2",
@@ -733,8 +714,7 @@
                                 -3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_FrozenOver_Title"
@@ -780,8 +760,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Cerebella_SA_StagePresence_Desc2",
@@ -804,8 +783,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_StagePresence_Title"
@@ -854,8 +832,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Filia_Razor2",
@@ -878,8 +855,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_Razor_Title"
@@ -936,8 +912,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_PainWheel_Hemorrhage2_2",
@@ -960,8 +935,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_PainWheel_SA_Hemm_Title"
@@ -1010,8 +984,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_CorruptedPower_Desc2",
@@ -1034,8 +1007,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_CorruptedPower_Title"
@@ -1077,8 +1049,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_BigBand_SecondWind2",
@@ -1101,8 +1072,7 @@
                                 35.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigB_SA_SecondWind_Title"
@@ -1159,8 +1129,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Filia_ISeeYou2",
@@ -1183,8 +1152,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_IceSeeYou_Title"
@@ -1234,8 +1202,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Cerebella_Encore2",
@@ -1258,8 +1225,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_Encore_Title"
@@ -1309,8 +1275,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Eliza_Pyramid2",
@@ -1333,8 +1298,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_Pyramid_Title"
@@ -1384,8 +1348,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_FatalSystemError_Desc2",
@@ -1399,17 +1362,16 @@
                         {
                             "level": 2,
                             "values": [
-                                25.0
+                                35.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                25.0
+                                50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_FatalSystemError_Title"
@@ -1458,8 +1420,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Filia_SA_SplittingHairs_Desc2",
@@ -1485,8 +1446,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_SplittingHairs_Title"
@@ -1534,8 +1494,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_MonstersBrew_Desc2",
@@ -1561,8 +1520,7 @@
                                 2.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_MonstersBrew_Title"
@@ -1607,8 +1565,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Cerebella_SA_BriarStraits_Desc2",
@@ -1631,8 +1588,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_BriarStraits_Title"
@@ -1681,8 +1637,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_OutCold_Desc2",
@@ -1705,8 +1660,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_OutCold_Title"
@@ -1760,8 +1714,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_SugarRush_Desc2",
@@ -1784,8 +1737,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_SugarRush_Title"
@@ -1835,8 +1787,7 @@
                                 0.5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_FromScratch_Desc2",
@@ -1862,8 +1813,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_FromScratch_Title"
@@ -1936,8 +1886,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_BufferOverflow_Title"
@@ -1949,6 +1898,78 @@
             }
         ],
         "tier": 3
+    },
+    "corrosive": {
+        "base": "bd",
+        "element": 2,
+        "fandom": "Corrosive Agent",
+        "name": "Char_BlackDahlia_G_V1_Name",
+        "quote": "Variant_Description_BlackDahlia_CorrosiveAgent",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_PoisonedChalice_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_PoisonedChalice_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                5.0,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_PoisonedChalice_Title"
+        },
+        "stats": [
+            {
+                "attack": 248,
+                "lifebar": 2184
+            },
+            {
+                "attack": 446,
+                "lifebar": 3931
+            }
+        ],
+        "tier": 2
     },
     "dBand": {
         "base": "bb",
@@ -1982,8 +2003,7 @@
                                 10
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_BigBand_SA_SuckItUp_Desc2",
@@ -2006,8 +2026,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigBand_SA_SuckItUp_Title"
@@ -2041,19 +2060,18 @@
                         {
                             "level": 2,
                             "values": [
-                                3,
+                                4,
                                 100.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                3,
+                                5,
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_WulfFangFist_Desc2",
@@ -2076,8 +2094,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_WulfFangFist_Title"
@@ -2126,8 +2143,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Peacock_SA_TheBigSleep_Desc2",
@@ -2159,8 +2175,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_TheBigSleep_Title"
@@ -2202,8 +2217,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Eliza_Envy2",
@@ -2226,8 +2240,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_Envy_Title"
@@ -2281,8 +2294,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_MurderousIntentions_Desc2",
@@ -2305,8 +2317,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_MurderousIntentions_Title"
@@ -2348,8 +2359,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_Immolation_Desc2",
@@ -2372,8 +2382,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_Immolation_Title"
@@ -2423,8 +2432,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Eliza_BleachedBone2",
@@ -2447,8 +2455,7 @@
                                 8.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_Bone_Title"
@@ -2494,8 +2501,7 @@
                                 0.25
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_StickyFingers2",
@@ -2518,8 +2524,7 @@
                                 0.25
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_StickyFingers_Title"
@@ -2569,8 +2574,7 @@
                                 35.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Filia_LockNess2",
@@ -2593,8 +2597,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_LochNess_Title"
@@ -2640,8 +2643,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_GraveInjustice_Desc2",
@@ -2664,8 +2666,7 @@
                                 0.3499999940395355
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_GraveInjustice_Title"
@@ -2713,8 +2714,7 @@
                                 30.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_Wightout_Desc2",
@@ -2737,8 +2737,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_Wightout_Title"
@@ -2754,6 +2753,82 @@
             }
         ],
         "tier": 2
+    },
+    "dame": {
+        "base": "bd",
+        "element": 3,
+        "fandom": "Dame Slayer",
+        "name": "Char_BlackDahlia_S_V1_Name",
+        "quote": "Variant_Description_BlackDahlia_DameSlayer",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_PlasmaPowered_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                30.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_PlasmaPowered_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                100.0,
+                                -5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                100.0,
+                                -10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0,
+                                -15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_PlasmaPowered_Title"
+        },
+        "stats": [
+            {
+                "attack": 139,
+                "lifebar": 945
+            },
+            {
+                "attack": 250,
+                "lifebar": 1701
+            },
+            {
+                "attack": 450,
+                "lifebar": 3062
+            }
+        ],
+        "tier": 1
     },
     "djFriz": {
         "base": "fi",
@@ -2790,8 +2865,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Filia_SA_ThreeWishes_Desc2",
@@ -2817,8 +2891,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_ThreeWishes_Title"
@@ -2863,8 +2936,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_PresentDanger_Desc2",
@@ -2890,8 +2962,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_PresentDanger_Title"
@@ -2937,8 +3008,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_BigBand_Breathing2",
@@ -2961,8 +3031,7 @@
                                 10
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigB_SA_CircularB_Title"
@@ -3011,8 +3080,7 @@
                                 1
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_IllusionsOfGrandeur_Desc2",
@@ -3038,8 +3106,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_IllusionsOfGrandeur_Title"
@@ -3084,8 +3151,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Filia_CutItOut2",
@@ -3108,8 +3174,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_CutItOut_Title"
@@ -3166,8 +3231,7 @@
                                 30
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_UndyingSupport_Desc2",
@@ -3193,8 +3257,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_UndyingSupport_Title"
@@ -3244,8 +3307,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_CapsLock_Desc2",
@@ -3271,8 +3333,7 @@
                                 4.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_CapsLock_Title"
@@ -3321,8 +3382,7 @@
                                 8.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Painwheel_SA_Serenity_Desc2",
@@ -3345,8 +3405,7 @@
                                 8.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_PainWheel_SA_Serenity_Title"
@@ -3395,8 +3454,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Peacock_SA_Frostbite_Desc2",
@@ -3422,8 +3480,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_Frostbite_Title"
@@ -3465,8 +3522,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Painwheel_SA_LadyKiller_Desc2",
@@ -3495,8 +3551,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Painwheel_SA_LadyKiller_Title"
@@ -3549,8 +3604,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_SlashAndBurn_Desc2",
@@ -3573,8 +3627,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_SlashAndBurn_Title"
@@ -3616,8 +3669,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Painwheel_SA_LittlePropOfHorrors_Desc2",
@@ -3640,8 +3692,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Painwheel_SA_LittlePropOfHorrors_Title"
@@ -3686,8 +3737,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_FukuaPhantasm_Desc2",
@@ -3710,8 +3760,7 @@
                                 200.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_FukuaPhantasm_Title"
@@ -3760,8 +3809,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_PrevailingWinds_Desc2",
@@ -3784,8 +3832,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_PrevailingWinds_Title"
@@ -3839,8 +3886,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_ChosenByTheOcean_Desc2",
@@ -3866,8 +3912,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_ChosenByTheOcean_Title"
@@ -3883,6 +3928,71 @@
             }
         ],
         "tier": 2
+    },
+    "furM": {
+        "base": "bd",
+        "element": 1,
+        "fandom": "Fur Monger",
+        "name": "Char_BlackDahlia_D_V1_Name",
+        "quote": "Variant_Description_BlackDahlia_FurMonger",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_DressedToKill_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_DressedToKill_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_DressedToKill_Title"
+        },
+        "stats": [
+            {
+                "attack": 706,
+                "lifebar": 3753
+            }
+        ],
+        "tier": 3
     },
     "gFan": {
         "base": "pw",
@@ -3993,8 +4103,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_BigBand_SA_ReserveTank_Desc2",
@@ -4017,8 +4126,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigBand_SA_ReserveTank_Title"
@@ -4064,8 +4172,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Cerebella_SA_HatTrick_Desc2_2",
@@ -4091,8 +4198,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_HatTrick_Title"
@@ -4142,8 +4248,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Valentine_Forensics2",
@@ -4169,8 +4274,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_Forensics_Title"
@@ -4223,8 +4327,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_PerfectlyBalanced_Desc2",
@@ -4250,8 +4353,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_PerfectlyBalanced_Title"
@@ -4301,8 +4403,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_DeathRoll_Desc2",
@@ -4331,8 +4432,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_DeathRoll_Title"
@@ -4382,8 +4482,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Eliza_SA_AstralDeflection_Desc2",
@@ -4406,8 +4505,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_AstralDeflection_Title"
@@ -4427,6 +4525,86 @@
             }
         ],
         "tier": 1
+    },
+    "goldG": {
+        "base": "bd",
+        "element": 5,
+        "fandom": "Golden Gunner",
+        "name": "Char_BlackDahlia_B_V2_Name",
+        "quote": "Variant_Description_BlackDahlia_GoldenGunner",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_MillionDollarShot_Desc_Alt",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_MillionDollarShot_Desc2_Alt",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                75.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                100.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_MillionDollarShot_Title"
+        },
+        "stats": [
+            {
+                "attack": 83,
+                "lifebar": 445
+            },
+            {
+                "attack": 149,
+                "lifebar": 801
+            },
+            {
+                "attack": 269,
+                "lifebar": 1442
+            },
+            {
+                "attack": 484,
+                "lifebar": 2595
+            }
+        ],
+        "tier": 0
     },
     "hAppar": {
         "base": "fi",
@@ -4457,8 +4635,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Filia_Trigger2",
@@ -4481,8 +4658,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_HTrigger_Title"
@@ -4532,8 +4708,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_Purrgatory_Desc2",
@@ -4556,8 +4731,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_Purrgatory_Title"
@@ -4611,8 +4785,7 @@
                                 30.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_CorruptedWish_Desc2",
@@ -4635,8 +4808,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_CorruptedWish_Title"
@@ -4678,8 +4850,7 @@
                                 0.10009765625
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Cerebella_SA_KnuckleSandvich_Desc2",
@@ -4705,8 +4876,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_KnuckleSandvich_Title"
@@ -4748,8 +4918,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_HypeTrain_Desc2",
@@ -4772,8 +4941,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_HypeTrain_Title"
@@ -4826,8 +4994,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_BigBand_SA_GoingPlatinum_Desc2",
@@ -4850,8 +5017,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigBand_SA_GoingPlatinum_Title"
@@ -4893,8 +5059,7 @@
                                 20.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Cerebella_Attraction2",
@@ -4917,8 +5082,7 @@
                                 35.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_Attract_Title"
@@ -4967,8 +5131,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Parasoul_Overcast2",
@@ -4994,8 +5157,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_Overcast_Title"
@@ -5049,8 +5211,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Parasoul_SA_SovereignSeal_Desc2",
@@ -5076,8 +5237,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_SovereignSeal_Title"
@@ -5126,8 +5286,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Cerebella_BigBreak2",
@@ -5150,8 +5309,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_BigBreak_Title"
@@ -5205,8 +5363,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_SearingStars_Desc2",
@@ -5220,17 +5377,16 @@
                         {
                             "level": 2,
                             "values": [
-                                1.0
+                                1.5
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                1.0
+                                2.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_SearingStars_Title"
@@ -5272,8 +5428,7 @@
                                 20
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_SwordMaster_Desc2",
@@ -5296,8 +5451,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_SwordMaster_Title"
@@ -5343,8 +5497,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_ReapAndSew2",
@@ -5367,8 +5520,7 @@
                                 -50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_ReapAndSew_Title"
@@ -5414,8 +5566,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Valentine_FirstResponder2",
@@ -5438,8 +5589,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_FirstResponder_Title"
@@ -5493,8 +5643,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Parasoul_Fenced2",
@@ -5517,8 +5666,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_Fenced_Title"
@@ -5568,8 +5716,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Eliza_SA_SelfAbsorbed_Desc2",
@@ -5592,8 +5739,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_SelfAbsorbed_Title"
@@ -5639,8 +5785,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Filia_SA_TheShowMustGoOn_Desc2",
@@ -5666,8 +5811,7 @@
                                 200.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_TheShowMustGoOn_Title"
@@ -5713,8 +5857,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_BoilingPoint_Desc2",
@@ -5740,8 +5883,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_BoilingPoint_Title"
@@ -5795,8 +5937,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Eliza_SkinBeneath2",
@@ -5819,8 +5960,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_Skin_Title"
@@ -5874,8 +6014,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Peacock_GangUp2",
@@ -5898,8 +6037,7 @@
                                 0.25
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_Gang_Title"
@@ -5949,8 +6087,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_MysteryFlavor_Desc2",
@@ -5973,8 +6110,7 @@
                                 20.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_MysteryFlavor_Title"
@@ -6016,8 +6152,7 @@
                                 0.5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_FelineAgility_Desc2",
@@ -6043,8 +6178,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_FelineAgility_Title"
@@ -6098,8 +6232,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Valentine_SA_PrideAndJoy_Desc2",
@@ -6122,8 +6255,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_PrideAndJoy_Title"
@@ -6176,8 +6308,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Valentine_UrgentCare2",
@@ -6200,8 +6331,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_Care_Title"
@@ -6247,8 +6377,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Eliza_SA_TurningTides_Desc2",
@@ -6271,8 +6400,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_TurningTides_Title"
@@ -6288,6 +6416,85 @@
             }
         ],
         "tier": 2
+    },
+    "lethalW": {
+        "base": "bd",
+        "element": 2,
+        "fandom": "Lethal Weapon",
+        "name": "Char_BlackDahlia_S_V2_Name",
+        "quote": "Variant_Description_BlackDahlia_LethalWeapon",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_FueledByBlood_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_FueledByBlood_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3.0,
+                                1.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_FueledByBlood_Title"
+        },
+        "stats": [
+            {
+                "attack": 118,
+                "lifebar": 1040
+            },
+            {
+                "attack": 212,
+                "lifebar": 1872
+            },
+            {
+                "attack": 382,
+                "lifebar": 3370
+            }
+        ],
+        "tier": 1
     },
     "loveCraft": {
         "base": "sq",
@@ -6318,8 +6525,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_TenTickles_Desc2",
@@ -6342,8 +6548,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_TenTickles_Title"
@@ -6388,8 +6593,7 @@
                                 7
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_Jackpot_Desc2",
@@ -6415,8 +6619,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_Jackpot_Title"
@@ -6466,8 +6669,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_FarFarAway_Desc2",
@@ -6482,19 +6684,18 @@
                         {
                             "level": 2,
                             "values": [
-                                3.0,
+                                4.0,
                                 3.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                3.0,
+                                5.0,
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_FarFarAway_Title"
@@ -6554,8 +6755,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Eliza_SA_AbsoluteDomination_Desc2",
@@ -6578,8 +6778,7 @@
                                 30.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_AbsoluteDomination_Title"
@@ -6614,18 +6813,17 @@
                             "level": 2,
                             "values": [
                                 0.10000000149011612,
-                                10.0
+                                12.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 0.10000000149011612,
-                                10.0
+                                15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_LimitBreak_Desc2",
@@ -6648,8 +6846,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_LimitBreak_Title"
@@ -6695,8 +6892,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_ShapeOfSlaughter_Desc2",
@@ -6719,8 +6915,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_ShapeOfSlaughter_Title"
@@ -6770,8 +6965,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Peacock_SA_HolidayJeers_Desc2",
@@ -6797,8 +6991,7 @@
                                 1
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_HolidayJeers_Title"
@@ -6847,8 +7040,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_BigBand_SA_ChipTuned_Desc2",
@@ -6871,8 +7063,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigBand_SA_ChipTuned_Title"
@@ -6918,8 +7109,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_Overruled_Desc2",
@@ -6942,8 +7132,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_Overruled_Title"
@@ -6963,6 +7152,78 @@
             }
         ],
         "tier": 1
+    },
+    "martialO": {
+        "base": "bd",
+        "element": 3,
+        "fandom": "Martial Outlaw",
+        "name": "Char_BlackDahlia_G_V4_Name",
+        "quote": "Variant_Description_BlackDahlia_MartialOutlaw",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_StrongarmTactics_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_StrongarmTactics_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.15000000596046448,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.20000000298023224,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_StrongarmTactics_Title"
+        },
+        "stats": [
+            {
+                "attack": 336,
+                "lifebar": 1786
+            },
+            {
+                "attack": 605,
+                "lifebar": 3215
+            }
+        ],
+        "tier": 2
     },
     "meow": {
         "base": "mf",
@@ -6999,8 +7260,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_CloudNine_Desc2",
@@ -7026,8 +7286,7 @@
                                 4.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_CloudNine_Title"
@@ -7073,8 +7332,7 @@
                                 0.5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_ZeroLaser_Desc2",
@@ -7100,8 +7358,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_ZeroLaser_Title"
@@ -7150,8 +7407,7 @@
                                 20
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_LiquidCourage_Desc2",
@@ -7174,8 +7430,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_LiquidCourage_Title"
@@ -7210,18 +7465,17 @@
                             "level": 2,
                             "values": [
                                 10.0,
-                                10.0
+                                12.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 10.0,
-                                10.0
+                                15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_TotalEclipse_Desc2",
@@ -7235,17 +7489,16 @@
                         {
                             "level": 2,
                             "values": [
-                                50.0
+                                75.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                50.0
+                                100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_TotalEclipse_Title"
@@ -7297,8 +7550,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_PowerOfFive_Desc2",
@@ -7327,8 +7579,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_PowerOfFive_Title"
@@ -7374,8 +7625,7 @@
                                 8.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_Abracadaver_Desc2",
@@ -7401,8 +7651,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_Abracadaver_Title"
@@ -7452,8 +7701,7 @@
                                 4.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Parasoul_Law2",
@@ -7476,8 +7724,7 @@
                                 4.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_Law_Title"
@@ -7527,8 +7774,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Painwheel_SA_PsycheOut_Desc2",
@@ -7551,8 +7797,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Painwheel_SA_PsycheOut_Title"
@@ -7594,8 +7839,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_RedAlert_Desc2",
@@ -7621,8 +7865,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_RedAlert_Title"
@@ -7675,8 +7918,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_Counterfeit2",
@@ -7702,8 +7944,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_Counterfeit_Title"
@@ -7760,8 +8001,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_SleepParalysis_Desc2",
@@ -7787,8 +8027,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_SleepParalysis_Title"
@@ -7834,8 +8073,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_MagicPixel_Desc2",
@@ -7858,8 +8096,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_MagicPixel_Title"
@@ -7915,8 +8152,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_SonicSword_Desc2",
@@ -7939,8 +8175,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_SonicSword_Title"
@@ -7990,8 +8225,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_FireWall_Desc2",
@@ -8014,8 +8248,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_FireWall_Title"
@@ -8071,8 +8304,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Valentine_Fury2",
@@ -8098,8 +8330,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_Fury_Title"
@@ -8158,8 +8389,7 @@
                                 1
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_LoveHertz_Desc2",
@@ -8182,8 +8412,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_LoveHertz_Title"
@@ -8229,8 +8458,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_RareSightings_Desc2",
@@ -8256,8 +8484,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_RareSightings_Title"
@@ -8310,8 +8537,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_BigBand_StunningPerf2_2",
@@ -8334,8 +8560,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigB_SA_StunPerf_Title"
@@ -8384,8 +8609,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Peacock_SA_BroadSpectrum_Desc2",
@@ -8411,8 +8635,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_BroadSpectrum_Title"
@@ -8462,8 +8685,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Parasoul_Tears2",
@@ -8486,8 +8708,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_Tears_Title"
@@ -8533,8 +8754,7 @@
                                 35.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Peacock_Vintage2",
@@ -8560,8 +8780,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_Vintage_Title"
@@ -8614,8 +8833,7 @@
                                 1
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Valentine_SA_SoulBurn_Desc2",
@@ -8638,8 +8856,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_SoulBurn_Title"
@@ -8688,8 +8905,7 @@
                                 1
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_EgoStrip_Desc2",
@@ -8705,18 +8921,17 @@
                             "level": 2,
                             "values": [
                                 10.0,
-                                5.0
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 10.0,
-                                5.0
+                                10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_EgoStrip_Title"
@@ -8774,8 +8989,7 @@
                                 20.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_MadnessReturns_Desc2",
@@ -8798,8 +9012,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_MadnessReturns_Title"
@@ -8844,8 +9057,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_SystemShock_Desc2",
@@ -8868,8 +9080,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_SystemShock_Title"
@@ -8929,8 +9140,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Filia_Entanglement2",
@@ -8956,8 +9166,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_Tangle_Title"
@@ -9003,8 +9212,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_Ectoplasm_Desc2",
@@ -9027,8 +9235,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_Ectoplasm_Title"
@@ -9074,8 +9281,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Parasoul_Screwed2",
@@ -9098,8 +9304,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_Screwed_Title"
@@ -9112,6 +9317,81 @@
             {
                 "attack": 605,
                 "lifebar": 2858
+            }
+        ],
+        "tier": 2
+    },
+    "psyco": {
+        "base": "bd",
+        "element": 1,
+        "fandom": "Psycommander",
+        "name": "Char_BlackDahlia_G_V2_Name",
+        "quote": "Variant_Description_BlackDahlia_Psycommander",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_DespotMeasures_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_DespotMeasures_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_DespotMeasures_Title"
+        },
+        "stats": [
+            {
+                "attack": 336,
+                "lifebar": 1786
+            },
+            {
+                "attack": 605,
+                "lifebar": 3215
             }
         ],
         "tier": 2
@@ -9145,8 +9425,7 @@
                                 2.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_SpillageAndPlunder_Desc2",
@@ -9169,8 +9448,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_SpillageAndPlunder_Title"
@@ -9220,8 +9498,7 @@
                                 0.05000000074505806
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_ChaosControl_Desc2",
@@ -9250,8 +9527,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_ChaosControl_Title"
@@ -9299,8 +9575,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_MachineLearning_Desc2",
@@ -9323,8 +9598,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_MachineLearning_Title"
@@ -9374,8 +9648,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_PainWheel_ThickSkin2",
@@ -9404,8 +9677,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_PainWheel_SA_ThickSkin_Title"
@@ -9455,8 +9727,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_Pentaglam2",
@@ -9479,8 +9750,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_Pentaglam_Title"
@@ -9529,8 +9799,7 @@
                                 -75.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Parasoul_SA_OnIce_Desc2",
@@ -9553,8 +9822,7 @@
                                 8.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_OnIce_Title"
@@ -9572,85 +9840,6 @@
         "tier": 2
     },
     "rCopy": {
-        "base": "fu",
-        "element": 3,
-        "fandom": "Rough Copy",
-        "name": "Char_Fukua_B_V1_Name",
-        "quote": "Variant_Description_Fukua_RoughCopy",
-        "sa": {
-            "features": [
-                {
-                    "description": "Char_Fukua_SA_LikeMinded_Desc",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": [
-                                10.0
-                            ]
-                        },
-                        {
-                            "level": 2,
-                            "values": [
-                                7.0
-                            ]
-                        },
-                        {
-                            "level": 3,
-                            "values": [
-                                5.0
-                            ]
-                        }
-                    ],
-                    "title": ""
-                },
-                {
-                    "description": "Char_Fukua_SA_LikeMinded_Desc2",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": [
-                                10.0
-                            ]
-                        },
-                        {
-                            "level": 2,
-                            "values": [
-                                7.0
-                            ]
-                        },
-                        {
-                            "level": 3,
-                            "values": [
-                                5.0
-                            ]
-                        }
-                    ],
-                    "title": ""
-                }
-            ],
-            "title": "Char_Fukua_SA_LikeMinded_Title"
-        },
-        "stats": [
-            {
-                "attack": 66,
-                "lifebar": 350
-            },
-            {
-                "attack": 119,
-                "lifebar": 630
-            },
-            {
-                "attack": 214,
-                "lifebar": 1134
-            },
-            {
-                "attack": 385,
-                "lifebar": 2041
-            }
-        ],
-        "tier": 0
-    },
-    "rCopy_": {
         "base": "bb",
         "element": 2,
         "fandom": "Robocopy",
@@ -9682,8 +9871,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_BigBand_SA_DeadorAlive_Desc2_2",
@@ -9712,8 +9900,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigB_SA_DeadorAlive_Title"
@@ -9733,6 +9920,83 @@
             }
         ],
         "tier": 1
+    },
+    "rCopy_": {
+        "base": "fu",
+        "element": 3,
+        "fandom": "Rough Copy",
+        "name": "Char_Fukua_B_V1_Name",
+        "quote": "Variant_Description_Fukua_RoughCopy",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Fukua_SA_LikeMinded_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Fukua_SA_LikeMinded_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Fukua_SA_LikeMinded_Title"
+        },
+        "stats": [
+            {
+                "attack": 66,
+                "lifebar": 350
+            },
+            {
+                "attack": 119,
+                "lifebar": 630
+            },
+            {
+                "attack": 214,
+                "lifebar": 1134
+            },
+            {
+                "attack": 385,
+                "lifebar": 2041
+            }
+        ],
+        "tier": 0
     },
     "rEvil": {
         "base": "bb",
@@ -9766,8 +10030,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_BigBand_BlockingMaster2",
@@ -9793,8 +10056,7 @@
                                 4.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigB_SA_MasterBlock_Title"
@@ -9844,8 +10106,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Parasoul_SA_RedHanded_Desc2",
@@ -9868,8 +10129,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_RedHanded_Title"
@@ -9911,8 +10171,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_PainWheel_DeathsDoor2_3",
@@ -9935,8 +10194,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_PainWheel_SA_Death_Title"
@@ -9985,8 +10243,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Filia_SA_GemShield_Desc2",
@@ -10012,8 +10269,7 @@
                                 20.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_GemShield_Title"
@@ -10063,8 +10319,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Eliza_SA_WitchingHour_Desc2_2",
@@ -10090,8 +10345,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_WitchingHour_Title"
@@ -10140,8 +10394,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_PhantomRains_Desc2",
@@ -10157,18 +10410,17 @@
                             "level": 2,
                             "values": [
                                 5.0,
-                                15.0
+                                13.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 5.0,
-                                15.0
+                                10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_PhantomRains_Title"
@@ -10221,8 +10473,7 @@
                                 2
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_BattleBond_Desc2",
@@ -10248,8 +10499,7 @@
                                 20
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_BattleBond_Title"
@@ -10291,8 +10541,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Peacock_Ensemble2",
@@ -10315,8 +10564,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_Cast_Title"
@@ -10376,8 +10624,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_SneakAttack_Desc2",
@@ -10400,8 +10647,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_SneakAttack_Title"
@@ -10450,8 +10696,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_OurHeartsGoOn_Desc2",
@@ -10474,8 +10719,7 @@
                                 20
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_OurHeartsGoOn_Title"
@@ -10528,8 +10772,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_PainWheel_Bleed2",
@@ -10552,8 +10795,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_PainWheel_SA_Bleed_Title"
@@ -10610,8 +10852,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_StealthTakedown_Desc2",
@@ -10634,8 +10875,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_StealthTakedown_Title"
@@ -10680,8 +10920,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Parasoul_SA_RiposteApocalypse_Desc2",
@@ -10704,8 +10943,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_RiposteApocalypse_Title"
@@ -10754,8 +10992,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_MementoMori_Desc2",
@@ -10778,8 +11015,7 @@
                                 20.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_MementoMori_Title"
@@ -10833,8 +11069,7 @@
                                 30
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Valentine_SA_Stimpak_Desc2",
@@ -10860,8 +11095,7 @@
                                 30
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_Stimpak_Title"
@@ -10907,8 +11141,7 @@
                                 2.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_SelfReflection_Desc2",
@@ -10937,8 +11170,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_SelfReflection_Title"
@@ -10980,8 +11212,7 @@
                                 0.25
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Valentine_Foggy2",
@@ -11004,8 +11235,7 @@
                                 0.25
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_Foggy_Title"
@@ -11051,8 +11281,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Parasoul_SA_ThrowingShade_Desc2",
@@ -11075,8 +11304,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_ThrowingShade_Title"
@@ -11126,8 +11354,7 @@
                                 75.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Eliza_SA_Buffet_Desc2",
@@ -11153,8 +11380,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_Buffet_Title"
@@ -11190,7 +11416,7 @@
                             "level": 2,
                             "values": [
                                 1,
-                                1.0,
+                                2.0,
                                 2.0
                             ]
                         },
@@ -11198,12 +11424,11 @@
                             "level": 3,
                             "values": [
                                 1,
-                                1.0,
+                                3.0,
                                 2.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Parasoul_SA_ASaltRifle_Desc2",
@@ -11218,19 +11443,18 @@
                         {
                             "level": 2,
                             "values": [
-                                3.0,
+                                4.0,
                                 100.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                3.0,
+                                5.0,
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_ASaltRifle_Title"
@@ -11272,8 +11496,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_MeltingPoint2",
@@ -11296,8 +11519,7 @@
                                 -3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_MeltingPoint_Title"
@@ -11351,8 +11573,7 @@
                                 20.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_ButterflyEffect_Desc2",
@@ -11375,8 +11596,7 @@
                                 30.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_ButterflyEffect_Title"
@@ -11418,8 +11638,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Cerebella_SA_FlyingHigh_Desc2",
@@ -11445,8 +11664,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_FlyingHigh_Title"
@@ -11491,8 +11709,7 @@
                                 30
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_RigorMortis_Desc2",
@@ -11515,8 +11732,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_RigorMortis_Title"
@@ -11570,8 +11786,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Eliza_SeeingRed2_2",
@@ -11594,8 +11809,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Eliza_SA_SeeRed_Title"
@@ -11651,8 +11865,7 @@
                                 35.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_TemperTantrum_Desc2",
@@ -11678,8 +11891,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_TemperTantrum_Title"
@@ -11733,8 +11945,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Valentine_Patient2",
@@ -11757,8 +11968,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_OutPatient_Title"
@@ -11812,8 +12022,7 @@
                                 20.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Parasoul_OverCrit2",
@@ -11836,8 +12045,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Parasoul_SA_OverCrit_Title"
@@ -11891,8 +12099,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Squigly_SA_DanseMacabre_Desc2",
@@ -11915,8 +12122,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Squigly_SA_DanseMacabre_Title"
@@ -11962,8 +12168,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Peacock_SA_RunningGag_2",
@@ -11986,8 +12191,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_RunningGag_Title"
@@ -12032,17 +12236,16 @@
                         {
                             "level": 2,
                             "values": [
-                                25.0
+                                35.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                25.0
+                                50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_DragonInstall_Desc2",
@@ -12068,8 +12271,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_DragonInstall_Title"
@@ -12093,6 +12295,79 @@
             }
         ],
         "tier": 0
+    },
+    "soulC": {
+        "base": "bd",
+        "element": 5,
+        "fandom": "Soul Crusher",
+        "name": "Char_BlackDahlia_S_V3_Name",
+        "quote": "Variant_Description_BlackDahlia_SoulCrusher",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_CalamitousSymphony_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_CalamitousSymphony_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_CalamitousSymphony_Title"
+        },
+        "stats": [
+            {
+                "attack": 160,
+                "lifebar": 850
+            },
+            {
+                "attack": 288,
+                "lifebar": 1530
+            },
+            {
+                "attack": 518,
+                "lifebar": 2754
+            }
+        ],
+        "tier": 1
     },
     "souls": {
         "base": "fu",
@@ -12123,8 +12398,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_AnimaMagnetism_Desc2",
@@ -12147,8 +12421,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_AnimaMagnetism_Title"
@@ -12201,8 +12474,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_AlienAutopsy_Desc2",
@@ -12231,8 +12503,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_AlienAutopsy_Title"
@@ -12281,8 +12552,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_SplashDamage_Desc2",
@@ -12305,8 +12575,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_SplashDamage_Title"
@@ -12355,8 +12624,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_StarDust_Desc2",
@@ -12379,8 +12647,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_StarDust_Title"
@@ -12440,8 +12707,7 @@
                                 5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Peacock_SlapStick2_2",
@@ -12464,8 +12730,7 @@
                                 -75.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_SlapStick_Title"
@@ -12503,19 +12768,18 @@
                         {
                             "level": 2,
                             "values": [
-                                5.0,
+                                7.0,
                                 5.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                5.0,
+                                10.0,
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_Malware_Desc2",
@@ -12538,8 +12802,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_Malware_Title"
@@ -12588,8 +12851,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Valentine_SA_TwoFaced_Desc2",
@@ -12612,8 +12874,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_TwoFaced_Title"
@@ -12658,8 +12919,7 @@
                                 10
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_BigBand_SA_ChimeAndPunishment_Desc2",
@@ -12682,8 +12942,7 @@
                                 35.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigBand_SA_ChimeAndPunishment_Title"
@@ -12733,8 +12992,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_PainWheel_CuttingEdge2",
@@ -12760,8 +13018,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_PainWheel_SA_CuttingEdge_Title"
@@ -12818,8 +13075,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_Zoomies_Desc2",
@@ -12842,8 +13098,7 @@
                                 100.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_Zoomies_Title"
@@ -12889,8 +13144,7 @@
                                 25.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_Morpha2",
@@ -12916,8 +13170,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_Morpha_Title"
@@ -12967,8 +13220,7 @@
                                 3.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Cerebella_SA_TurboTunnel_Desc2",
@@ -12991,8 +13243,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_TurboTunnel_Title"
@@ -13012,6 +13263,83 @@
             }
         ],
         "tier": 1
+    },
+    "trigger": {
+        "base": "bd",
+        "element": 4,
+        "fandom": "Trigger Happy",
+        "name": "Char_BlackDahlia_B_V1_Name",
+        "quote": "Variant_Description_BlackDahlia_TriggerHappy",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_CollateralDamage_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                75.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_CollateralDamage_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_CollateralDamage_Title"
+        },
+        "stats": [
+            {
+                "attack": 66,
+                "lifebar": 450
+            },
+            {
+                "attack": 119,
+                "lifebar": 810
+            },
+            {
+                "attack": 214,
+                "lifebar": 1458
+            },
+            {
+                "attack": 385,
+                "lifebar": 2624
+            }
+        ],
+        "tier": 0
     },
     "triple": {
         "base": "an",
@@ -13042,8 +13370,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Annie_SA_ThreeBodyProblem_Desc2",
@@ -13059,18 +13386,17 @@
                             "level": 2,
                             "values": [
                                 0.33000001311302185,
-                                20.0
+                                25.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 0.33000001311302185,
-                                20.0
+                                30.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Annie_SA_ThreeBodyProblem_Title"
@@ -13120,8 +13446,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_AcidReflex_Desc2",
@@ -13147,8 +13472,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_AcidReflex_Title"
@@ -13198,8 +13522,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_OnTheRopes_Desc2",
@@ -13222,8 +13545,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_OnTheRopes_Title"
@@ -13277,8 +13599,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Cerebella_ThrowDown2",
@@ -13301,8 +13622,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Cerebella_SA_TDown_Title"
@@ -13356,8 +13676,7 @@
                                 0.15000000596046448
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "SA_Peacock_Bullet2",
@@ -13380,8 +13699,7 @@
                                 6.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_Bullet_Title"
@@ -13427,8 +13745,7 @@
                                 0.5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Peacock_SA_DeathThrow_Desc2",
@@ -13451,8 +13768,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_DeathThrow_Title"
@@ -13468,6 +13784,146 @@
             }
         ],
         "tier": 2
+    },
+    "unfazed": {
+        "base": "bd",
+        "element": 4,
+        "fandom": "Unfazed",
+        "name": "Char_BlackDahlia_G_V3_Name",
+        "quote": "Variant_Description_BlackDahlia_Unfazed",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_EchoChambers_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_EchoChambers_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_EchoChambers_Title"
+        },
+        "stats": [
+            {
+                "attack": 292,
+                "lifebar": 1985
+            },
+            {
+                "attack": 526,
+                "lifebar": 3573
+            }
+        ],
+        "tier": 2
+    },
+    "unholy": {
+        "base": "bd",
+        "element": 4,
+        "fandom": "Unholy Host",
+        "name": "Char_BlackDahlia_D_V2_Name",
+        "quote": "Variant_Description_BlackDahlia_UnholyHost",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_OccultStatus_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_OccultStatus_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.5
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_OccultStatus_Title"
+        },
+        "stats": [
+            {
+                "attack": 521,
+                "lifebar": 4586
+            }
+        ],
+        "tier": 3
     },
     "vVirt": {
         "base": "bb",
@@ -13501,8 +13957,7 @@
                                 10
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_BigBand_SA_ClassicallyTrained_Desc2",
@@ -13525,8 +13980,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_BigBand_SA_ClassicallyTrained_Title"
@@ -13576,8 +14030,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Fukua_SA_JustVibing_Desc2",
@@ -13593,18 +14046,17 @@
                             "level": 2,
                             "values": [
                                 2.0,
-                                5.0
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 2.0,
-                                5.0
+                                10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Fukua_SA_JustVibing_Title"
@@ -13650,8 +14102,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_Metalmorphosis_Desc2",
@@ -13674,8 +14125,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_Metalmorphosis_Title"
@@ -13728,8 +14178,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_ForceChoke_Desc2",
@@ -13752,8 +14201,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_ForceChoke_Title"
@@ -13799,8 +14247,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Peacock_SA_KillingJoke_Desc2",
@@ -13823,8 +14270,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Peacock_SA_KillingJoke_Title"
@@ -13874,8 +14320,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_MsFortune_SA_StalkingHeads_Desc2",
@@ -13901,8 +14346,7 @@
                                 35.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_MsFortune_SA_StalkingHeads_Title"
@@ -13944,8 +14388,7 @@
                                 0.5
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Filia_SA_Blowback_Desc2",
@@ -13968,8 +14411,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Filia_SA_Blowback_Title"
@@ -14018,8 +14460,7 @@
                                 50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_LastCall_Desc2",
@@ -14042,8 +14483,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_LastCall_Title"
@@ -14089,8 +14529,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Valentine_SA_AerialRave_Desc2",
@@ -14113,8 +14552,7 @@
                                 7.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_AerialRave_Title"
@@ -14156,8 +14594,7 @@
                                 35.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_WulfedDown_Desc2",
@@ -14180,8 +14617,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_WulfedDown_Title"
@@ -14234,8 +14670,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_VoraciousCycle_Desc2",
@@ -14264,8 +14699,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_VoraciousCycle_Title"
@@ -14310,8 +14744,7 @@
                                 10.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Beowulf_SA_XFactor_Desc2",
@@ -14337,8 +14770,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Beowulf_SA_XFactor_Title"
@@ -14391,8 +14823,7 @@
                                 15.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Umbrella_SA_OmegaFlare_Desc2",
@@ -14421,8 +14852,7 @@
                                 -50.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Umbrella_SA_OmegaFlare_Title"
@@ -14468,8 +14898,7 @@
                                 1.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_RoboFortune_SA_HeadShot_Desc2",
@@ -14492,8 +14921,7 @@
                                 5.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_RoboFortune_SA_HeadShot_Title"
@@ -14538,8 +14966,7 @@
                                 30.0
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 },
                 {
                     "description": "Char_Double_SA_GameOver2",
@@ -14562,8 +14989,7 @@
                                 3
                             ]
                         }
-                    ],
-                    "title": ""
+                    ]
                 }
             ],
             "title": "Char_Double_SA_GameOver_Title"
