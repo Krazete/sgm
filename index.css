@@ -1157,13 +1157,37 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     grid-area: img;
 }
 
-.medal {
-    width: 100%;
+.sms .badge:before,
+.sms .badge:after {
+    content: '';
+    background-size: 50px;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 10px;
+    display: block;
 }
-.bronze .medal {
+.sms .badge:after {
+    transform: scaleX(-1);
+    margin-top: -101px;
+}
+.sms.bronze .badge:before, .sms.bronze .badge:after {background-image: url(image/official/SpecialFrameBronze.png);}
+.sms.silver .badge:before, .sms.silver .badge:after {background-image: url(image/official/SpecialFrameSilver.png);}
+.sms.gold .badge:before, .sms.gold .badge:after {background-image: url(image/official/SpecialFrameGold.png);}
+
+.bbs .badge:before {
+    content: '';
+    background: url(image/official/BB-Frame1.png) 0 0 / 108px no-repeat;
+    position: relative;
+    width: 108px;
+    height: 92px;
+    display: block;
+}
+.bbs.bronze .badge:before {
     filter: brightness(0.4) sepia(1) saturate(2) hue-rotate(325deg);
 }
-.gold .medal {
+.bbs.gold .badge:before {
     filter: sepia(1) saturate(2);
 }
 
@@ -1171,8 +1195,14 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     position: relative;
     width: 100%;
     display: block;
-    margin: -110% 0 0 16%;
+    z-index: 1;
     pointer-events: none;
+}
+.sms .symbol {
+    margin: -95% 0 0 16%;
+}
+.bbs .symbol {
+    margin: -110% 0 0 16%;
 }
 .bronze .symbol {
     filter: sepia(1) hue-rotate(325deg);

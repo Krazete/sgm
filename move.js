@@ -2,20 +2,24 @@ var moves, corpus;
 
 var types = ["sms", "bbs"];
 var tiers = ["bronze", "silver", "gold"];
-var fighterIDs = ["be", "bb", "ce", "do", "el", "fi", "mf", "pw", "pa", "pe", "rf", "sq", "va"];
+var fighterIDs = ["an", "be", "bb", "bd", "ce", "do", "el", "fi", "fu", "mf", "pw", "pa", "pe", "rf", "sq", "um", "va"];
 var characters = {
+    "an": "image/official/Annie_MasteryIcon.png",
     "be": "image/official/Beowulf_MasteryIcon.png",
     "bb": "image/official/BigBand_MasteryIcon.png",
+    "bd": "image/official/BlackDahlia_MasteryIcon.png",
     "ce": "image/official/Cerebella_MasteryIcon.png",
     "do": "image/official/Double_MasteryIcon.png",
     "el": "image/official/Eliza_MasteryIcon.png",
     "fi": "image/official/Filia_MasteryIcon.png",
+    "fu": "image/official/Fukua_MasteryIcon.png",
     "mf": "image/official/MsFortune_MasteryIcon.png",
     "pw": "image/official/Painwheel_MasteryIcon.png",
     "pa": "image/official/Parasoul_MasteryIcon.png",
     "pe": "image/official/Peacock_MasteryIcon.png",
     "rf": "image/official/RoboFortune_MasteryIcon.png",
     "sq": "image/official/Squigly_MasteryIcon.png",
+    "um": "image/official/Umbrella_MasteryIcon.png",
     "va": "image/official/Valentine_MasteryIcon.png",
 };
 
@@ -61,10 +65,6 @@ function initCollection(responses) {
     function createBadge(key) {
         var badge = document.createElement("div");
             badge.className = "badge";
-            var medal = document.createElement("img");
-                medal.className = "medal";
-                medal.src = "image/official/BB-Frame1.png";
-            badge.appendChild(medal);
             var symbol = document.createElement("img");
                 symbol.className = "symbol";
                 symbol.src = [
@@ -382,9 +382,11 @@ function initFilterMenu() {
             return sanitize(key).includes(query) || sanitize(corpus[moves[key].title]).includes(query);
         }
         else if (searchD.checked) {
-            for (var feature of moves[key].ability.features) {
-                if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
-                    return true;
+            if ("ability" in moves[key] && "features" in moves[key].ability) {
+                for (var feature of moves[key].ability.features) {
+                    if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+                        return true;
+                    }
                 }
             }
         }
@@ -545,7 +547,7 @@ function initSortMenu() {
         sortTier,
         sortType
     ].includes(savedButton)) {
-        savedButton = sortTier;
+        savedButton = sortAlphabetical;
     }
     savedButton.checked = false; /* resets radio so change event can be triggered */
     savedButton.click();
@@ -613,7 +615,7 @@ function initOptionsMenu() {
             var description = card.getElementsByClassName("description")[0];
             description.classList.add("hidden");
             description.innerHTML = "";
-            if ("ability" in moves[key]) {
+            if ("ability" in moves[key] && "features" in moves[key].ability) {
                 for (var feature of moves[key].ability.features) {
                     if (feature.description && corpus[feature.description]) {
                         var fDescription = document.createElement("div");
