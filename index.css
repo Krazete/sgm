@@ -1708,6 +1708,7 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
 .description {
     background: #314c73;
     font-size: smaller;
+    white-space: pre-line;
     box-shadow: 0 0 1px black;
     padding: 6px;
     z-index: 1;
