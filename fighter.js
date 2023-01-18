@@ -332,9 +332,6 @@ function initCollection(responses) {
     }
 
     function createAbility(type, abilityData, collapsed) {
-        if (type == "pa") { // temporary fix until i update sgmprocessor
-            abilityData = {};
-        }
         var ability = document.createElement("div");
             if (collapsed) {
                 ability.className = [type, "ability", "collapsed"].join(" ");
@@ -361,7 +358,7 @@ function initCollection(responses) {
                     description.className = "ca-0 description";
                 ability.appendChild(description);
             }
-            else if (abilityData.features) { /* signature and marquee abilities */ /* exclude prestige abilities */
+            else if (abilityData.features) { /* signature and marquee abilities */
                 for (var i = 0; i < abilityData.features.length; i++) {
                     var description = document.createElement("div");
                         description.className = [
@@ -370,6 +367,14 @@ function initCollection(responses) {
                         ].join(" ");
                     ability.appendChild(description);
                 }
+            }
+            else { /* prestige abilities */
+                var description = document.createElement("div");
+                    description.className = [
+                        type + "-" + i,
+                        "description"
+                    ].join(" ");
+                ability.appendChild(description);
             }
         return ability;
     }
@@ -409,7 +414,7 @@ function initCollection(responses) {
                 "fighter card",
                 tiers[variants[key].tier],
                 elements[variants[key].element],
-                variants[key].base /* TODO: remove when robo becomes available */
+                variants[key].base
             ].join(" ");
             card.id = key;
             card.appendChild(createAvatar(key));
@@ -491,7 +496,7 @@ function initLanguageMenu() {
         ca0.innerHTML = formatNumbers(corpus[fighters[variants[key].base].ca.description]);
         saName.innerHTML = corpus[variants[key].sa.title];
         maName.innerHTML = corpus[fighters[variants[key].base].ma.title];
-        // paName.innerHTML = corpus[fighters[variants[key].base].pa.title];
+        paName.innerHTML = corpus[fighters[variants[key].base].pa.title];
     }
 
     function updateCardConstants(response) {
@@ -1037,18 +1042,16 @@ function initOptionsMenu() {
     var paRange = document.getElementById("pa-range");
 
     function updateCardStats() {
+        var baseBoost = treeNone.checked ? 1 : 1.5;
+        var treeBoost = treeNone.checked ? 1 : 1.46;
+        var maBoost = maRange.value / 100;
+        var paBoost = paRange.value > 0 ? (parseInt(paRange.value) + 9 + (paRange.value > 99 ? 9 : 0)) / 1000 : 0;
+        var fsBoost = treeBoost + maBoost + paBoost;
         for (var card of cards) {
             var key = card.id;
             var atkValue = card.getElementsByClassName("atk-value")[0];
             var hpValue = card.getElementsByClassName("hp-value")[0];
             var fsValue = card.getElementsByClassName("fs-value")[0];
-
-            var baseBoost = treeNone.checked ? 1 : 1.5;
-
-            var treeBoost = treeNone.checked ? 1 : 1.46;
-            var maBoost = maRange.value / 100;
-            var paBoost = paRange.value / 850;
-            var fsBoost = treeBoost + maBoost + paBoost;
 
             var i = Math.max(0, evolveRange.value - variants[key].tier);
             var baseATK = baseBoost * variants[key].stats[i].attack;
@@ -1107,16 +1110,53 @@ function initOptionsMenu() {
         for (var card of cards) {
             var key = card.id;
             var pa = card.getElementsByClassName("pa")[0];
-            var paDescriptions = pa.getElementsByClassName("description");
-            for (var i = 0; i < paDescriptions.length; i++) {
-                var paDescription = paDescriptions[i];
-                var template = [
-                    corpus[fighters[variants[key].base].pa.features[i].title].toUpperCase(),
-                    corpus[fighters[variants[key].base].pa.features[i].description]
-                ].join(" - ");
-                var substitutions = fighters[variants[key].base].pa.features[i].tiers[(paRange.value + 99) % 100].values;
-                paDescription.innerHTML = format(template, substitutions);
+            var paDescription = pa.getElementsByClassName("description")[0];
+            var rate = fighters[variants[key].base].pa.chargeRate;
+            var value = fighters[variants[key].base].pa.base;
+            if (paRange.value >= 2) {
+                value += (Math.min(paRange.value, 99) - 1) * fighters[variants[key].base].pa.lvlBonus;
             }
+            if (paRange.value >= 100) {
+                value += fighters[variants[key].base].pa.maxBonus;
+                value = Math.round(value); /* todo: fix if they ever make a fractional max value */
+            }
+            var template = corpus[fighters[variants[key].base].pa.description];
+            var substitutions = [rate, value];
+            switch (variants[key].base) {
+                case "an": substitutions = [
+                    rate,
+                    fighters[variants[key].base].pa.starPower,
+                    value
+                ]; break;
+                case "be": substitutions = [
+                    rate,
+                    value,
+                    fighters[variants[key].base].pa.secondsElapsed
+                ]; break;
+                case "bb": substitutions = [
+                    rate,
+                    fighters[variants[key].base].pa.comboCount,
+                    value
+                ]; break;
+                case "mf": substitutions = [
+                    rate,
+                    fighters[variants[key].base].pa.evasion,
+                    value
+                ]; break;
+                case "um": substitutions = [
+                    rate,
+                    fighters[variants[key].base].pa.hungerDifference,
+                    fighters[variants[key].base].pa.regen,
+                    value
+                ]; break;
+                case "va": substitutions = [
+                    rate,
+                    fighters[variants[key].base].pa.healthRecovered,
+                    fighters[variants[key].base].pa.resurrection,
+                    value
+                ]; break;
+            }
+            paDescription.innerHTML = format(template, substitutions);
         }
         updateCardStats();
     }
@@ -1125,7 +1165,7 @@ function initOptionsMenu() {
         updateCardStats();
         updateCardSAs();
         updateCardMAs();
-        // updateCardPAs();
+        updateCardPAs();
     };
 
     function updatePresetButtons() {
