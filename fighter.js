@@ -1045,7 +1045,7 @@ function initOptionsMenu() {
         var baseBoost = treeNone.checked ? 1 : 1.5;
         var treeBoost = treeNone.checked ? 1 : 1.46;
         var maBoost = maRange.value / 100;
-        var paBoost = paRange.value > 0 ? (parseInt(paRange.value) + 9 + (paRange.value > 99 ? 9 : 0)) / 1000 : 0;
+        var paBoost = (parseInt(paRange.value) + (paRange.value > 0 ? 9 : 0) + (paRange.value > 99 ? 9 : 0)) / 1000;
         var fsBoost = treeBoost + maBoost + paBoost;
         for (var card of cards) {
             var key = card.id;
