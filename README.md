@@ -41,14 +41,15 @@ The formulas used in these calculations are as follows:
 
 * `ATK_BOOST = {NO_ATK_NODES: 1, ALL_ATK_NODES: 1.5}`
 * `HP_BOOST = {NO_HP_NODES: 1, ALL_HP_NODES: 1.5}`
-* `FS_BOOST = {NO_TREE_NODES: 1, ALL_TREE_NODES: 1.46, MAXED_MARQUEE: 1.57}`
+* `TREE_BOOST = {NO_TREE_NODES: 1, ALL_TREE_NODES: 1.46, MAXED_MARQUEE: 1.57}`
+* `PA_BOOST_BONUS = {REACH_PA_LVL1: 9, REACH_PA_LVL100: 18}`
+* `PA_BOOST = (PA_LVL + PA_BOOST_BONUS) / 1000`
+* `FS_BOOST = TREE_BOOST + PA_BOOST`
 * `LVL1_ATK = ATK_BOOST * BASE_ATK`
 * `LVL1_HP = HP_BOOST * BASE_HP`
 * `ATK = CEIL(LVL1_ATK + LVL1_ATK * (LVL - 1) / 5)`
 * `HP = CEIL(LVL1_HP + LVL1_HP * (LVL - 1) / 5)`
 * `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
-
-[lazy edit, FS_BOOST seems to increase by 1/850 per Prestige Level (see Analysis spreadsheet linked below)]
 
 All `BASE_` values are hard-coded for every tier of every fighter, although they seem to follow the general pattern `EVOLVED_BASE_ = FORMER_BASE_ * 1.8`.
 The only variants that deviate from this pattern are Headstrong and Understudy, who appear to swap stats with each other when evolved to the diamond tier.
@@ -58,6 +59,8 @@ See my [SGM Fighter Score Analysis](https://docs.google.com/spreadsheets/d/1Cotg
 
 The [Skullgirls Mobile Fighter Data](https://docs.google.com/spreadsheets/d/1goYXai7QUu4IJp76POP1IWyc2_6fEqEmxt9e74qyIgw) spreadsheet, [created by Raidriar and currently maintained by Takio](https://forum.skullgirlsmobile.com/threads/calculated-fighter-stats.392/), is the origin of the initial version of these formulas.
 I then modified them until the results perfectly matched in-game stats.
+
+Thanks to bbp, brdv, and qdd for help figuring out how Prestige Ability affects Fighter Score.
 
 #### Abilities
 
