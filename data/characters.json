@@ -165,7 +165,15 @@
             "title": "Char_Annie_SUP_EventHorizon_Title"
         },
         "name": "Char_Annie_Name",
-        "pa": {}
+        "pa": {
+            "base": 50.0,
+            "chargeRate": 2.0,
+            "description": "Char_Annie_PA_Desc",
+            "lvlBonus": 0.5,
+            "maxBonus": 21.0,
+            "starPower": 1,
+            "title": "Char_Annie_PA_Title"
+        }
     },
     "bb": {
         "ca": {
@@ -322,7 +330,15 @@
             "title": "Char_BigBand_SUP_Maestro_Title"
         },
         "name": "Char_BigBand_Name",
-        "pa": {}
+        "pa": {
+            "base": 25.0,
+            "chargeRate": 17.0,
+            "comboCount": 10,
+            "description": "Char_BigBand_PA_Desc",
+            "lvlBonus": 0.25,
+            "maxBonus": 10.5,
+            "title": "Char_BigBand_PA_Title"
+        }
     },
     "bd": {
         "ca": {
@@ -490,7 +506,14 @@
             "title": "Char_BlackDahlia_SUP_ClockworkOrigins_Title"
         },
         "name": "Char_BlackDahlia_Name",
-        "pa": {}
+        "pa": {
+            "base": 10.0,
+            "chargeRate": 17.0,
+            "description": "Char_BlackDahlia_PA_Desc",
+            "lvlBonus": 0.045,
+            "maxBonus": 0.591796875,
+            "title": "Char_BlackDahlia_PA_Title"
+        }
     },
     "be": {
         "ca": {
@@ -647,7 +670,15 @@
             "title": "Char_Beowulf_SUP_TitleFight_Title"
         },
         "name": "Char_Beowulf_Name",
-        "pa": {}
+        "pa": {
+            "base": 5.0,
+            "chargeRate": 50.0,
+            "description": "Char_Beowulf_PA_Desc",
+            "lvlBonus": 0.1,
+            "maxBonus": 5.2001953125,
+            "secondsElapsed": 20,
+            "title": "Char_Beowulf_PA_Title"
+        }
     },
     "ce": {
         "ca": {
@@ -804,7 +835,14 @@
             "title": "Char_Cerebella_SUP_CenterStage_Title"
         },
         "name": "Char_Cerebella_Name",
-        "pa": {}
+        "pa": {
+            "base": 50.0,
+            "chargeRate": 20.0,
+            "description": "Char_Cerebella_PA_Desc",
+            "lvlBonus": 0.4,
+            "maxBonus": 10.7998046875,
+            "title": "Char_Cerebella_PA_Title"
+        }
     },
     "do": {
         "ca": {
@@ -972,7 +1010,14 @@
             "title": "Char_Double_SUP_Entropy_Title"
         },
         "name": "Char_Double_Name",
-        "pa": {}
+        "pa": {
+            "base": 40.0,
+            "chargeRate": 13.0,
+            "description": "Char_Double_PA_Desc",
+            "lvlBonus": 0.5,
+            "maxBonus": 11.0,
+            "title": "Char_Double_PA_Title"
+        }
     },
     "el": {
         "ca": {
@@ -1129,7 +1174,14 @@
             "title": "Char_Eliza_SUP_Bloodline_Title"
         },
         "name": "Char_Eliza_Name",
-        "pa": {}
+        "pa": {
+            "base": 5.0,
+            "chargeRate": 25.0,
+            "description": "Char_Eliza_PA_Desc",
+            "lvlBonus": 0.1,
+            "maxBonus": 5.2001953125,
+            "title": "Char_Eliza_PA_Title"
+        }
     },
     "fi": {
         "ca": {
@@ -1286,7 +1338,14 @@
             "title": "Char_Filia_SUP_Bloodletting_Title"
         },
         "name": "Char_Filia_Name",
-        "pa": {}
+        "pa": {
+            "base": 50.0,
+            "chargeRate": 20.0,
+            "description": "Char_Filia_PA_Desc",
+            "lvlBonus": 0.4,
+            "maxBonus": 10.7998046875,
+            "title": "Char_Filia_PA_Title"
+        }
     },
     "fu": {
         "ca": {
@@ -1465,7 +1524,14 @@
             "title": "Char_Fukua_SUP_UntetheredEntity_Title"
         },
         "name": "Char_Fukua_Name",
-        "pa": {}
+        "pa": {
+            "base": 5.0,
+            "chargeRate": 25.0,
+            "description": "Char_Fukua_PA_Desc",
+            "lvlBonus": 0.04,
+            "maxBonus": 1.08984375,
+            "title": "Char_Fukua_PA_Title"
+        }
     },
     "mf": {
         "ca": {
@@ -1644,7 +1710,15 @@
             "title": "Char_MsFortune_SUP_ICanHasBuff_Title"
         },
         "name": "Char_MsFortune_Name",
-        "pa": {}
+        "pa": {
+            "base": 10.0,
+            "chargeRate": 1.5,
+            "description": "Char_MsFortune_PA_Desc",
+            "evasion": 5.0,
+            "lvlBonus": -0.045,
+            "maxBonus": -0.58984375,
+            "title": "Char_MsFortune_PA_Title"
+        }
     },
     "pa": {
         "ca": {
@@ -1801,7 +1875,14 @@
             "title": "Char_Parasoul_SUP_HyperCritical_Title"
         },
         "name": "Char_Parasoul_Name",
-        "pa": {}
+        "pa": {
+            "base": 7.0,
+            "chargeRate": 12.0,
+            "description": "Char_Parasoul_PA_Desc",
+            "lvlBonus": -0.045,
+            "maxBonus": -0.595703125,
+            "title": "Char_Parasoul_PA_Title"
+        }
     },
     "pe": {
         "ca": {
@@ -1958,7 +2039,14 @@
             "title": "Char_Peacock_SUP_ToonTime_Title"
         },
         "name": "Char_Peacock_Name",
-        "pa": {}
+        "pa": {
+            "base": 25.0,
+            "chargeRate": 3.0,
+            "description": "Char_Peacock_PA_Desc",
+            "lvlBonus": 0.2,
+            "maxBonus": 5.39990234375,
+            "title": "Char_Peacock_PA_Title"
+        }
     },
     "pw": {
         "ca": {
@@ -2126,7 +2214,14 @@
             "title": "Char_PainWheel_SUP_TorturedSoul_Title"
         },
         "name": "Char_Painwheel_Name",
-        "pa": {}
+        "pa": {
+            "base": 5.0,
+            "chargeRate": 4.0,
+            "description": "Char_Painwheel_PA_Desc",
+            "lvlBonus": 0.045,
+            "maxBonus": 0.58984375,
+            "title": "Char_Painwheel_PA_Title"
+        }
     },
     "rf": {
         "ca": {
@@ -2305,7 +2400,14 @@
             "title": "Char_RoboFortune_SUP_NetworkProtocol_Title"
         },
         "name": "Char_RoboFortune_Name",
-        "pa": {}
+        "pa": {
+            "base": 5.0,
+            "chargeRate": 7.0,
+            "description": "Char_RoboFortune_PA_Desc",
+            "lvlBonus": 0.1,
+            "maxBonus": 5.2001953125,
+            "title": "Char_RoboFortune_PA_Title"
+        }
     },
     "sq": {
         "ca": {
@@ -2462,7 +2564,14 @@
             "title": "Char_Squigly_SUP_FrightNight_Title"
         },
         "name": "Char_Squigly_Name",
-        "pa": {}
+        "pa": {
+            "base": 7.0,
+            "chargeRate": 12.0,
+            "description": "Char_Squigly_PA_Desc",
+            "lvlBonus": -0.045,
+            "maxBonus": -0.595703125,
+            "title": "Char_Squigly_PA_Title"
+        }
     },
     "um": {
         "ca": {
@@ -2641,7 +2750,16 @@
             "title": "Char_Umbrella_SUP_JawsOfDefeat_Title"
         },
         "name": "Char_Umbrella_Name",
-        "pa": {}
+        "pa": {
+            "base": 10.0,
+            "chargeRate": 1.0,
+            "description": "Char_Umbrella_PA_Desc",
+            "hungerDifference": 1,
+            "lvlBonus": 0.045,
+            "maxBonus": 0.595703125,
+            "regen": 5.0,
+            "title": "Char_Umbrella_PA_Title"
+        }
     },
     "va": {
         "ca": {
@@ -2809,6 +2927,15 @@
             "title": "Char_Valentine_SUP_CombatClinic_Title"
         },
         "name": "Char_Valentine_Name",
-        "pa": {}
+        "pa": {
+            "base": 0.75,
+            "chargeRate": 4.0,
+            "description": "Char_Valentine_PA_Desc",
+            "healthRecovered": 1,
+            "lvlBonus": 0.01,
+            "maxBonus": 0.27978515625,
+            "resurrection": 10.0,
+            "title": "Char_Valentine_PA_Title"
+        }
     }
 }
