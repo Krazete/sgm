@@ -2,7 +2,7 @@
 
 # Skullgirls Mobile Collection Gallery
 A collection gallery for Skullgirls Mobile.
-View the stats and abilities of every fighter variant, move, and catalyst, translated in any language offered in the game.
+View the stats and abilities of every fighter variant and move, translated in any language offered in the game.
 
 <img src="image/sample.png">
 
@@ -15,7 +15,7 @@ If the website version is 3.0.0 but the latest game version is 3.0.2, the websit
 ### Language
 
 All of the language options available in the game are available on the website.
-All translations are an exact copy of the text used in the corresponding version of the game (except for the words `Gallery`, `Ratings`, `Variant`, `Name`, `Votes`, and `You`, which Google Translate helped with).
+The localizations are exactly as they are in the game (except for a few terms like `Gallery`, `Ratings`, `Variant`, `Name`, `Votes`, and `You`, which the game data does not have exact translations for; machine translation assisted here).
 
 *Your chosen language option is saved in your browser's local storage for future visits.*
 
@@ -36,7 +36,7 @@ You can modify the tier, level, skill tree, and ability levels of the displayed 
 
 #### Stats
 
-When the tier, level, or skill tree settings are changed, the attack, health, and fighter score values on each card are recalculated.
+When the tier, level, skill tree, or Prestige Ability settings are changed, the attack, health, and Fighter Score values on each card are recalculated.
 The formulas used in these calculations are as follows:
 
 * `ATK_BOOST = {NO_ATK_NODES: 1, ALL_ATK_NODES: 1.5}`
@@ -52,7 +52,7 @@ The formulas used in these calculations are as follows:
 * `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
 
 All `BASE_` values are hard-coded for every tier of every fighter, although they seem to follow the general pattern `EVOLVED_BASE_ = FORMER_BASE_ * 1.8`.
-The only variants that deviate from this pattern are Headstrong and Understudy, who appear to swap stats with each other when evolved to the diamond tier.
+The only variants to ever deviate from this pattern were Headstrong and Understudy, who swapped stats when evolved to diamond tier before it was patched in version 4.3.3.
 
 While I cannot confirm if the game uses these same formulas, the results appear to exactly match the stats of fighters that I have on my own account.
 See my [SGM Fighter Score Analysis](https://docs.google.com/spreadsheets/d/1CotgKsKzSIA5siRAMplX7e5k7KRT63a3GSY1XRg-hgc/edit?usp=sharing) spreadsheet for more detailed information.
@@ -60,25 +60,26 @@ See my [SGM Fighter Score Analysis](https://docs.google.com/spreadsheets/d/1Cotg
 The [Skullgirls Mobile Fighter Data](https://docs.google.com/spreadsheets/d/1goYXai7QUu4IJp76POP1IWyc2_6fEqEmxt9e74qyIgw) spreadsheet, [created by Raidriar and currently maintained by Takio](https://forum.skullgirlsmobile.com/threads/calculated-fighter-stats.392/), is the origin of the initial version of these formulas.
 I then modified them until the results perfectly matched in-game stats.
 
-Thanks to bbp, brdv, and qdd for help figuring out how Prestige Ability affects Fighter Score.
+Thanks to bbp, brdv, and qdd for their help in figuring out how Prestige Ability level affects Fighter Score.
+They were the ones to notice that both the initial and final Prestige Ability levels provide bonus boosts.
+And their method of calculating precise Fighter Scores by using Prize Fight scores helped provide the data needed to verify the accuracy of the new formula.
 
 #### Abilities
 
-The Signature Ability and Marquee Ability settings allow you to preview fighters' abilities at each ability level.
-These settings do not affect the tier, level, or skill tree settings and are not considered in the calculation of fighters' stats.
+The Signature Ability, Marquee Ability, and Prestige Ability settings allow you to preview fighters' abilities at each ability level.
+These settings do not affect the tier, level, or skill tree settings and are not considered in the calculation of fighters' attack or health stats.
 
 #### Preset Buttons
-The `X` button sets tier, level, skill tree, signature, and marquee to the minimum level.
-The `Home` button sets tier, level, and skill tree to the minimum level and sets signature and marquee to the maximum level.
-The `Crown` button sets tier, level, skill tree, signature, and marquee to the maximum level.
+The `X` button sets every option to the minimum level.
+The `Home` button sets every option to the minimum level except for Signature Ability, which is set to the maximum level.
+The `Crown` button every option to the maximum level.
 
 *Your fighter settings are not saved and will be reset on every visit.*
 
 ### Filter
 
-All of the filter settings in the game are also on the website.
-The filters behave just like they do in the game, except for the tier filters.
-Filtering by tier filters by natural tier, not by the tier set in the Fighter Settings menu.
+All of the filter settings in the game (besides favorite, new, and shiny) are also on the website.
+The filters behave just like they do in the game (except for the tier filters, which filter by natural tier rather than evolved tier).
 
 #### Search Box
 
@@ -88,27 +89,12 @@ The query processing method is very basic, simply searching for an exact match (
 Base fighter names, quotes, stats, and ability names are not included in these searches.
 
 If you include a hash property in the URL, the website will initialize with the hash property in the search box.
-For example, opening https://sgm.netlify.com/#Bad%20Hair%20Day will only show Bad Hair Day's card upon page load.
+For example, opening https://krazete.github.io/sgm/#Bad%20Hair%20Day will only show Bad Hair Day's card upon page load.
 
 ##### Shorthand
 
 The variant data object keys are included in variant name searches because keys often include common shorthand.
 For example, the abbreviation BHD refers to Bad Hair Day Filia, whose data is stored with the key `bHDay`.
-The exceptions to this rule are as follows:
-
-* `wresX`: Wrestler X
-* `gJazz`: G.I. Jazz
-* `toad`: Toad Warrior
-* `fColor`: Myst-Match
-* `inDeni`: In Denile
-* `gloom`: Tomb & Gloom
-* `claw`: Claw & Order
-* `lucky`: Feline Lucky
-* `splash`: Hack n' Splash
-* `meow`: Meow & Furever
-* `rerun`: Rerun
-* `necroB`: Necrobreaker
-* `polter`: Poltergust
 
 #### Locks
 
@@ -119,7 +105,7 @@ This is to ease the process of searching for and comparing between different fig
 
 ### Sort
 
-The website allows you to sort fighters by in-game options like alphabetically or based on fighter score, element, or tier.
+The website allows you to sort fighters by in-game options like alphabetically or based on Fighter Score, element, or tier.
 The game's energy and level sorting options have not been included since they are not useful in this context.
 You can additionally sort by attack, health, offense rating, and defense rating.
 The rating sort options only appear when the rating system is enabled.
@@ -127,7 +113,7 @@ The rating sort options only appear when the rating system is enabled.
 The website's sorting behavior mimics the game's sorting behavior for the most part.
 It even follows the game's `[Fire, Wind, Water, Light, Dark, Neutral]` element sort, which oddly differs the game's filter button order of `[Fire, Water, Wind, Light, Dark, Neutral]`.
 
-The only two differences in sorting behavior are: you cannot reverse sorting order, and sorting by tier sorts by natural tier, not by the tier set in the Fighter Settings menu.
+The only two differences in sorting behavior are: you cannot reverse sorting order, and sorting by tier sorts by natural tier rather than evolved tier.
 
 *Your chosen sorting option is saved in your browser's local storage for future visits.*
 
@@ -143,7 +129,7 @@ Like the game, there are only three zoom levels.
 Every fighter variant has a link on the top right corner of their card which redirects to the Tips and Tricks section of their official [Wikia](https://skullgirlsmobile.wikia.com/) page.
 
 This is possible because the Wikia contributors nearly always name the variant pages consistent with the official capitalization and punctuation.
-The only exception was the [Hack n' Splash](https://skullgirlsmobile.wikia.com/wiki/Hack_N%27_Splash) page, which had an erroneous uppercase "N" until I renamed it.
+The only exception I know of is the [Hack n' Splash](https://skullgirlsmobile.wikia.com/wiki/Hack_N%27_Splash) page, which has an erroneous uppercase "N" which led to a broken link until I created a redirect page for it.
 
 If you notice a link is redirecting to a nonexistent Wikia page, please try to fix the page title or [notify me about it](#contact).
 
@@ -154,8 +140,7 @@ The [loading animation featuring Squigly](image_processing/what.gif) appears whe
 I think this was taken from a live stream a few years ago.
 I don't quite remember, and I can't find the image anywhere else online.
 I know that the artist is one of the members of [Mecha Fetus](http://www.mechafetus.com/) and worked as an artist on Skullgirls.
-I think.
-It's probably Mariel "Kinuko" Cartwright's artwork.
+It's probably Mariel Kinuko Cartwright's artwork.
 Or Persona's.
 Not sure.
 
@@ -163,8 +148,8 @@ If you recognize where the art is from, please [let me know](#contact) so I can 
 
 ## Move Gallery
 
-The [Move Gallery](https://sgm.netlify.com/moves) features all moves available in the game.
-It can be filtered, sorted, and searched through much like the fighter gallery and includes one level setting.
+The [Move Gallery](https://krazete.github.io/sgm/moves) features all moves available in the game.
+It can be filtered, sorted, and searched through much like the Fighter Gallery and includes one level setting.
 
 This gallery still lacks the following features:
 
@@ -172,18 +157,9 @@ This gallery still lacks the following features:
 * upgrade and sell costs
 * information about whether a move is a throw, grab, or projectile
 
-## Catalyst Gallery
-
-The [Catalyst Gallery](https://sgm.netlify.com/catalysts) features all catalysts available in the game.
-It can be filtered, sorted, and searched through much like the fighter gallery and includes one level setting.
-
-This gallery still lacks the following features:
-
-* existence
-
 ## Versions
 
-Each branch of this repository contains a different version of this gallery.
+Each tag in this repository marks a different version of this gallery.
 
 * v0 (First Draft): The gallery is initialized with information taken from [the forums](https://forum.skullgirlsmobile.com/) and portraits incompletely processed from screenshots.
 
@@ -191,13 +167,15 @@ Each branch of this repository contains a different version of this gallery.
 
 * v2 (Final Draft): The gallery now resembles what it looks like today. The design has been dramatically improved and all portraits have been added ~~thanks to screenshots from the Rift beta~~. All settings, filters, sorting options, and whatnot have been refined. The gallery is in its first "completed" state, matching up with game version 3.0.0.
 
-* v3 (Move Gallery): A move gallery has been added. Images are missing and some moves are missing entirely. The basic filter, sort, and setting options are included.
+* v3 (Move Gallery): A Move Gallery has been added. Images are missing and some moves are missing entirely. The basic filter, sort, and setting options are included.
 
 * v4 (Rating System): A rating system has been added, along with a rating toggle button to hide ratings and return to the original, more compact design.
 
-* v5 (Asset Upgrade): Portraits are now supplied by HVS and the masks have been refined. The move gallery is also populated with images and previously missing move entries have been added. Game version has been updated to 3.1.0. A new Gallery Ratings page has been added to show all ratings in a more condensed format.
+* v5 (Asset Upgrade): Portraits are now supplied by HVS and the masks have been refined. The Move Gallery is also populated with images and previously missing move entries have been added. Game version has been updated to 3.1.0. A new Gallery Ratings page has been added to show all ratings in a more condensed format.
 
-* v6 (Catalysts and Collaboration): Processing files have been moved to Krazete/sgmminer. The CONTRIBUTING.md document has been added detailing how to manually update gallery data files. A rudimentary catalyst gallery has been added.
+* v6 (Catalysts and Collaboration): Processing files have been moved to ~~Krazete/sgmminer~~ Krazete/sgmprocessor. The CONTRIBUTING.md document has been added detailing how to manually update gallery data files. A rudimentary Catalyst Gallery has been added.
+
+* v7 (Repair and Prestige): I neglected the website for over a year because my processing scripts kept failing more and more with each new game update: bugged ability data, missing fighter data, no access to move data, broken ratings page, etc. I finally fixed Krazete/sgmprocessor in January 2023 by switching from UABE to UnityPy. This new library helped facilitate the complete repair of the website as well implementation of the new Prestige Ability feature. (I also deleted CONTRIBUTING.md because nobody helps anyway. And I never got around to fixing the Catalyst Gallery.)
 
 ## Issues
 
