@@ -320,6 +320,10 @@ html[lang='zh-cn'] .moves:before {content: '\62db \5f0f ';}
 html[lang='ru'] .moves:before {content: '\041f \0420 \0418 \0415 \041c \042b ';}
 html[lang='pt-br'] .moves:before {content: 'GOLPES';}
 
+.catalysts { /* TODO: remove whenever catalysts are implemented */
+    color: gray;
+    cursor: not-allowed;
+}
 html[lang='en'] .catalysts:before {content: 'CATALYSTS';}
 html[lang='ja'] .catalysts:before {content: '\30ad \30e3 \30bf \30ea \30b9 \30c8 ';}
 html[lang='fr'] .catalysts:before {content: 'CATALYSEURS';}
