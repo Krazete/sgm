@@ -443,7 +443,7 @@ function initCollection(responses) {
     }
 }
 
-function formatNumbers(text) {
+function formatNumbers(text) { /* TODO: gray these out at level 0 */
     return text.replace(/NaN/g, "???").replace(/((?:\?\?\?|\d+(?:\.\d+)?)%?)/g, "<span class=\"number\">$1</span>");
 }
 
@@ -785,6 +785,7 @@ function initFilterMenu() {
                     }
                 }
             }
+            /* TODO: implement searchPA? or make a smarter search altogether? */
         }
         return false;
     }
@@ -861,7 +862,7 @@ function initFilterMenu() {
         filter.addEventListener("change", filterCards);
     }
 
-    if (location.hash) {
+    if (location.hash) { /* TODO: make this smarter; replace "+" and "_" with " " */
         searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
     }
     searchVN.checked = true;
@@ -1250,7 +1251,7 @@ function initOptionsMenu() {
         updateCards();
     }
 
-    function setAllToDefault() {
+    function setAllToDefault() { /* TODO: make SA like MA and PA and display max values at level 0, but grayed out */
         optionBase.classList.remove("pressed");
         this.classList.add("pressed");
         optionMaximum.classList.remove("pressed");
