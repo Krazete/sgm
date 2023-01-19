@@ -129,7 +129,7 @@ Like the game, there are only three zoom levels.
 Every fighter variant has a link on the top right corner of their card which redirects to the Tips and Tricks section of their official [Wikia](https://skullgirlsmobile.wikia.com/) page.
 
 This is possible because the Wikia contributors nearly always name the variant pages consistent with the official capitalization and punctuation.
-The only exception I know of is the [Hack n' Splash](https://skullgirlsmobile.wikia.com/wiki/Hack_N%27_Splash) page, which has an erroneous uppercase "N" which led to a broken link until I created a redirect page for it.
+The only exception I know of is [Hack n' Splash](https://skullgirlsmobile.wikia.com/wiki/Hack_N%27_Splash)'s page with an erroneous uppercase "N," which led to a broken link until I created a redirect page for it.
 
 If you notice a link is redirecting to a nonexistent Wikia page, please try to fix the page title or [notify me about it](#contact).
 
@@ -175,7 +175,7 @@ Each tag in this repository marks a different version of this gallery.
 
 * v6 (Catalysts and Collaboration): Processing files have been moved to ~~Krazete/sgmminer~~ Krazete/sgmprocessor. The CONTRIBUTING.md document has been added detailing how to manually update gallery data files. A rudimentary Catalyst Gallery has been added.
 
-* v7 (Repair and Prestige): I neglected the website for over a year because my processing scripts kept failing more and more with each new game update: bugged ability data, missing fighter data, no access to move data, broken ratings page, etc. I finally fixed Krazete/sgmprocessor in January 2023 by switching from UABE to UnityPy. This new library helped facilitate the complete repair of the website as well implementation of the new Prestige Ability feature. (I also deleted CONTRIBUTING.md because nobody helps anyway. And I never got around to fixing the Catalyst Gallery.)
+* v7 (Repair and Prestige): I neglected the website for over a year because my processing scripts kept failing more and more with each new game update: bugged ability data, missing fighter data, no access to move data, broken ratings page, etc. I finally fixed Krazete/sgmprocessor in January 2023 by switching from UABE to UnityPy. This new library helped facilitate the complete repair of the website as well implementation of the new Prestige Ability feature. (I also deleted CONTRIBUTING.md because nobody helps anyway. And I never got around to finishing the Catalyst Gallery.)
 
 ## Issues
 
