@@ -783,6 +783,7 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 }
 
 #ratings-table .avatar {
+    position: relative;
     width: auto;
     display: inline-block;
     margin: 5px;
@@ -1104,6 +1105,9 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     animation:
         skullheart .3s steps(1) infinite,
         sine 1s ease-in-out alternate infinite;
+}
+#ratings-table #wishfulEater:after {
+    transform: scale(0.4) translate(-40%);
 }
 
 @keyframes rainbow {

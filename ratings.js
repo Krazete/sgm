@@ -180,10 +180,12 @@ function initLanguageMenu() {
 }
 
 function initialize() {
+    var instructions = document.getElementById("instructions");
     var offenseRatings = document.getElementById("offense-ratings");
     var defenseRatings = document.getElementById("defense-ratings");
 
     function setOffense() {
+        instructions.classList.add("hidden");
         offenseRatings.classList.add("gold-gradient");
         defenseRatings.classList.remove("gold-gradient");
         toggleLoadingScreen(true);
@@ -191,6 +193,7 @@ function initialize() {
     }
 
     function setDefense() {
+        instructions.classList.add("hidden");
         offenseRatings.classList.remove("gold-gradient");
         defenseRatings.classList.add("gold-gradient");
         toggleLoadingScreen(true);
