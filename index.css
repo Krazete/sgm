@@ -1728,8 +1728,17 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
     grid-area: des;
 }
 
+.description span {
+    font-weight: bold;
+}
 .number {
     color: lime;
+}
+.overstuffed {
+    color: #00d7f9;
+}
+.ravenous {
+    color: #ff1a1a;
 }
 
 /* WIKIA */
