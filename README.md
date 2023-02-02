@@ -26,7 +26,8 @@ To enable the rating system, just click on the star at bottom right of the websi
 This will also reveal two more sorting options based on the two ratings on each card.
 
 The rating system uses Firebase to keep track of votes.
-One vote is allowed per browser session, and all votes are weighted by how many votes were made at the same IP address.
+One vote is allowed per browser session.
+All votes are weighted by their age in days and by the number of votes made at the same IP address.
 
 *The rating system toggle state is saved in your browser's local storage for future visits.*
 

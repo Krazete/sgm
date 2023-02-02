@@ -1,4 +1,4 @@
-var variants, database;
+var variants, database, now = Date.now();
 
 function toggleLoadingScreen(loading) {
     if (loading) {
@@ -48,28 +48,40 @@ function getRating(key, subkey) {
         var count = 0;
         var votesByIP = {};
         for (var id in votesByID) {
-            if ([1, 2, 3, 4, 5].includes(votesByID[id].vote)) {
-                if (votesByID[id].ip in votesByIP) {
-                    votesByIP[votesByID[id].ip].subtotal += votesByID[id].vote;
-                    votesByIP[votesByID[id].ip].subcount++;
+            var ip = votesByID[id].ip;
+            var vote = votesByID[id].vote;
+            if (votesByID[id].timestamp) {
+                var timestamp = votesByID[id].timestamp;
+                var age = Math.max(0, Math.floor((now - timestamp) / 86400000)); /* age in days */
+                var subweight = 100 - 99 * Math.min(Math.max(0, age - 30) / 335, 1); /* depreciate after a month, down to 1% after a year */
+            }
+            else {
+                var subweight = 1;
+            }
+            if ([1, 2, 3, 4, 5].includes(vote)) {
+                if (ip in votesByIP) {
+                    votesByIP[ip].subtotal += vote * subweight;
+                    votesByIP[ip].subcount += subweight;
                 }
                 else {
-                    votesByIP[votesByID[id].ip] = {
-                        "subtotal": votesByID[id].vote,
-                        "subcount": 1
+                    votesByIP[ip] = {
+                        "subtotal": vote * subweight,
+                        "subcount": subweight
                     }
                 }
                 count++;
             }
         }
         for (var ip in votesByIP) {
-            var weight = Math.log(Math.E * votesByIP[ip].subcount);
-            var subvote = votesByIP[ip].subtotal / votesByIP[ip].subcount;
+            var subtotal = votesByIP[ip].subtotal;
+            var subcount = votesByIP[ip].subcount;
+            var subvote = subtotal / subcount;
+            var weight = subcount <= 100 ? subcount / 100 : Math.log(Math.E * subcount / 100);
             weightedTotal += subvote * weight;
             weightedCount += weight;
         }
         variants[key][subkey] = {
-            "count": count,
+            "count": count, /* unused */
             "rating": weightedTotal / weightedCount
         };
     });
