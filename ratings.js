@@ -98,7 +98,7 @@ var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 function createAvatar(key) {
     var avatar = document.createElement("a");
         avatar.target = "_blank";
-        avatar.href = "/#" + key;
+        avatar.href = "./#" + key;
         avatar.className = [
             "avatar",
             tiers[variants[key].tier],
