@@ -1,59 +1,146 @@
-// This is the "Offline copy of pages" service worker
+const VERSION = "5.2.1"; /* update whenever anything changes */
 
-const CACHE = "pwabuilder-offline";
-
-const offlineFallbackPage = "index.html";
-
-// Install stage sets up the index page (home page) in the cache and opens a new cache
-self.addEventListener("install", function (event) {
-  console.log("[PWA Builder] Install Event processing");
-
-  event.waitUntil(
-    caches.open(CACHE).then(function (cache) {
-      console.log("[PWA Builder] Cached offline page during install");
-      return cache.add(offlineFallbackPage);
-    })
-  );
+self.addEventListener("install", event => {
+    // console.log("PWA Install: " + VERSION);
+    event.waitUntil((async () => {
+        const assets = [
+            "./data/bbs.json",
+            "./data/characters.json",
+            "./data/de.json",
+            "./data/en.json",
+            "./data/es.json",
+            "./data/fr.json",
+            "./data/ja.json",
+            "./data/ko.json",
+            "./data/pt-br.json",
+            "./data/ru.json",
+            "./data/sms.json",
+            "./data/variants.json",
+            "./data/zh-cn.json",
+            "./fighter.js",
+            "./font/DMFT-chsimp.ttf",
+            "./font/RobotoCondensed-Regular.ttf",
+            "./font/TBCinemaRGothic-M.ttf",
+            "./font/Typo_DodamM.ttf",
+            "./font/WashingtonBoldDynamic.otf",
+            "./image/huh.gif",
+            "./image/kofi.png",
+            "./image/official/Annie_MasteryIcon.png",
+            "./image/official/BB-Frame1.png",
+            "./image/official/Beowulf_MasteryIcon.png",
+            "./image/official/BigBand_MasteryIcon.png",
+            "./image/official/BlackDahlia_MasteryIcon.png",
+            "./image/official/BronzeLevel.png",
+            "./image/official/Button_Home.png",
+            "./image/official/Button_Settings.png",
+            "./image/official/Cerebella_MasteryIcon.png",
+            "./image/official/CloseButton.png",
+            "./image/official/DiamondLevel.png",
+            "./image/official/Double_MasteryIcon.png",
+            "./image/official/ElementalDarkBackless.png",
+            "./image/official/ElementalFireBackless.png",
+            "./image/official/ElementalIconDark.png",
+            "./image/official/ElementalIconFire.png",
+            "./image/official/ElementalIconLight.png",
+            "./image/official/ElementalIconNeutral.png",
+            "./image/official/ElementalIconWater.png",
+            "./image/official/ElementalIconWind.png",
+            "./image/official/ElementalLightBackless.png",
+            "./image/official/ElementalNeutralBackless.png",
+            "./image/official/ElementalWaterBackless.png",
+            "./image/official/ElementalWindBackless.png",
+            "./image/official/Eliza_MasteryIcon.png",
+            "./image/official/Filia_MasteryIcon.png",
+            "./image/official/Fukua_MasteryIcon.png",
+            "./image/official/GearIcon.png",
+            "./image/official/GoldLevel.png",
+            "./image/official/HealthIcon.png",
+            "./image/official/IconInfo.png",
+            "./image/official/Lock.png",
+            "./image/official/MsFortune_MasteryIcon.png",
+            "./image/official/Painwheel_MasteryIcon.png",
+            "./image/official/Parasoul_MasteryIcon.png",
+            "./image/official/Peacock_MasteryIcon.png",
+            "./image/official/PowerIcon.png",
+            "./image/official/RoboFortune_MasteryIcon.png",
+            "./image/official/Robofortune_MasteryIcon.png",
+            "./image/official/SilverLevel.png",
+            "./image/official/SpecialFrameGold.png",
+            "./image/official/SpecialFrameSilver.png",
+            "./image/official/Squigly_MasteryIcon.png",
+            "./image/official/Umbrella_MasteryIcon.png",
+            "./image/official/Valentine_MasteryIcon.png",
+            "./image/official/WinsToggleIcon.png",
+            "./image/official/ZoomIn.png",
+            "./image/official/ZoomOut.png",
+            "./image/official/constraints_bronze.png",
+            "./image/official/constraints_diamond.png",
+            "./image/official/constraints_gold.png",
+            "./image/official/constraints_no.png",
+            "./image/official/constraints_silver.png",
+            "./image/official/flag_ch.png",
+            "./image/official/flag_de.png",
+            "./image/official/flag_en.png",
+            "./image/official/flag_es.png",
+            "./image/official/flag_fr.png",
+            "./image/official/flag_jp.png",
+            "./image/official/flag_ko.png",
+            "./image/official/flag_pt.png",
+            "./image/official/flag_ru.png",
+            "./image/official/icon_externalsite.png",
+            "./image/official/icon_filter.png",
+            "./image/official/icon_middle.png",
+            "./image/official/plus.png",
+            "./image/official/skullheart_idle01.png",
+            "./image/official/skullheart_idle02.png",
+            "./image/official/skullheart_idle03.png",
+            "./image/official/skullheart_idle04.png",
+            "./image/official/skullheart_idle05.png",
+            "./image/official/skullheart_idle06.png",
+            "./image/official/star01.png",
+            "./image/what.gif",
+            "./index.css",
+            "./index.html",
+            "./move.js",
+            "./moves.html",
+            "./ratings.html",
+            "./ratings.js"
+        ];
+        const cache = await caches.open(VERSION);
+        cache.addAll(assets);
+    })());
 });
 
-// If any fetch fails, it will look for the request in the cache and serve it from there first
-self.addEventListener("fetch", function (event) {
-  if (event.request.method !== "GET") return;
-
-  event.respondWith(
-    fetch(event.request)
-      .then(function (response) {
-        console.log("[PWA Builder] add page to offline cache: " + response.url);
-
-        // If request was success, add or update it in the cache
-        event.waitUntil(updateCache(event.request, response.clone()));
-
-        return response;
-      })
-      .catch(function (error) {        
-        console.log("[PWA Builder] Network request Failed. Serving content from cache: " + error);
-        return fromCache(event.request);
-      })
-  );
+self.addEventListener("activate", event => {
+    // console.log("PWA Activate: " + VERSION);
+    event.waitUntil((async () => {
+        const keys = await caches.keys();
+        keys.forEach(async (key) => {
+            if (key !== VERSION) {
+                // console.log("PWA Delete: " + key);
+                await caches.delete(key);
+            }
+        });
+    })());
 });
 
-function fromCache(request) {
-  // Check to see if you have it in the cache
-  // Return response
-  // If not in the cache, then return error page
-  return caches.open(CACHE).then(function (cache) {
-    return cache.match(request).then(function (matching) {
-      if (!matching || matching.status === 404) {
-        return Promise.reject("no-match");
-      }
-
-      return matching;
-    });
-  });
-}
-
-function updateCache(request, response) {
-  return caches.open(CACHE).then(function (cache) {
-    return cache.put(request, response);
-  });
-}
+self.addEventListener("fetch", event => {
+    // console.log("PWA Fetch: " + VERSION);
+    event.respondWith((async () => {
+        const cache = await caches.open(VERSION);
+        const cacheResponse = await cache.match(event.request);
+        if (cacheResponse) {
+            return cacheResponse;
+        }
+        else {
+            try {
+                const fetchResponse = await fetch(event.request);
+                cache.put(event.request, fetchResponse.clone());
+                return fetchResponse;
+            }
+            catch (e) {
+                console.warn(e);
+            }
+        }
+    })());
+});
