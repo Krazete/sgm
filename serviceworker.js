@@ -135,7 +135,9 @@ self.addEventListener("fetch", event => {
         else {
             try {
                 const fetchResponse = await fetch(event.request);
-                cache.put(event.request, fetchResponse.clone());
+                if (event.request.method === "GET") {
+                    cache.put(event.request, fetchResponse.clone());
+                }
                 return fetchResponse;
             }
             catch (e) {
