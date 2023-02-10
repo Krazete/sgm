@@ -1044,6 +1044,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 }
 
 .backdrop {
+    position: relative;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -1055,12 +1056,12 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .wind .backdrop {background: radial-gradient(#9f8, #082);}
 .dark .backdrop {background: radial-gradient(#eae, #525);}
 .light .backdrop {background: radial-gradient(#fff, #ec5);}
-.neutral .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#ccc, #888);}
-.fire .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fb7, #d00);}
-.water .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#5ff, #06c);}
-.wind .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#9f8, #082);}
-.dark .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#eae, #525);}
-.light .missing-portrait .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fff, #ec5);}
+.neutral .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#ccc, #888);}
+.fire .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fb7, #d00);}
+.water .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#5ff, #06c);}
+.wind .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#9f8, #082);}
+.dark .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#eae, #525);}
+.light .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fff, #ec5);}
 
 .backdrop.hallow1:after {
     background: url(image/official/Blood1.png);
@@ -1073,17 +1074,14 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 }
 .backdrop.hallow1:after, .backdrop.hallow2:after, .backdrop.hallow3:after {
     content: '';
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
-    margin-top: -131%;
-}
-.missing-portrait .backdrop:after{
-    margin-top: 0;
 }
 
 .portrait {
