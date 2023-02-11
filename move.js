@@ -177,6 +177,7 @@ function initCollection(responses) {
             card.className = [
                 "move card",
                 types[moves[key].type],
+                "bb" + moves[key].strength,
                 tiers[moves[key].tier]
             ].join(" ");
             card.id = key;

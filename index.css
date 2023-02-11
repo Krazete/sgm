@@ -1197,7 +1197,6 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 
 .bbs .badge:before {
     content: '';
-    background: url(image/official/BB-Frame1.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1211,6 +1210,9 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .bbs.gold .badge:before {
     filter: sepia(1) saturate(2);
 }
+.bb1 .badge:before {background-image: url(image/official/BB-Frame1.png);}
+.bb2 .badge:before {background-image: url(image/official/BB-Frame2.png);}
+.bb3 .badge:before {background-image: url(image/official/BB-Frame3.png);}
 
 .symbol {
     position: absolute;
