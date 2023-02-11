@@ -62,15 +62,38 @@ function initCollection(responses) {
 
     var collection = document.getElementById("collection");
 
+    var lazyList = [];
+    function lazyLoadImages() {
+        for (var img of lazyList) {
+            if (img.dataset.src) {
+                var imgBox = img.getBoundingClientRect();
+                if (imgBox.bottom > 0 && imgBox.top < innerHeight) {
+                    img.src = img.dataset.src;
+                    delete img.dataset.src;
+                }
+            }
+        }
+        requestAnimationFrame(lazyLoadImages);
+    }
+
+    function handleMissingSymbol() {
+        var symbol = this;
+        var card = symbol.parentElement.parentElement;
+        symbol.classList.add("hidden");
+        console.warn("Icon not found for move " + card.id + ".");
+    }
+
     function createBadge(key) {
         var badge = document.createElement("div");
             badge.className = "badge";
             var symbol = document.createElement("img");
                 symbol.className = "symbol";
-                symbol.src = [
+                symbol.dataset.src = [
                     "image/move",
                     moves[key].icon
                 ].join("/");
+                symbol.addEventListener("error", handleMissingSymbol);
+                lazyList.push(symbol);
             badge.appendChild(symbol);
         return badge;
     }
@@ -172,6 +195,8 @@ function initCollection(responses) {
         collection.appendChild(card);
         cards.push(card);
     }
+
+    lazyLoadImages();
 }
 
 function formatNumbers(text) {

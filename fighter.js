@@ -191,18 +191,36 @@ function initCollection(responses) {
     var weekday = date.getDay();
     var day = date.getDate();
 
+    var lazyList = [];
+    function lazyLoadImages() {
+        for (var img of lazyList) {
+            if (img.dataset.src) {
+                var imgBox = img.getBoundingClientRect();
+                if (imgBox.bottom > 0 && imgBox.top < innerHeight) {
+                    img.src = img.dataset.src;
+                    delete img.dataset.src;
+                }
+            }
+        }
+        requestAnimationFrame(lazyLoadImages);
+    }
+
+    function removePortraitPlaceholder() {
+        var portrait = this;
+        var avatar = portrait.parentElement.parentElement.parentElement;
+        avatar.classList.remove("unloaded");
+    }
+
     function handleMissingPortrait() {
         var portrait = this;
-        var backdrop = portrait.parentElement;
-        var avatar = backdrop.parentElement.parentElement;
-
+        var card = portrait.parentElement.parentElement.parentElement.parentElement;
         portrait.classList.add("hidden");
-        avatar.classList.add("missing-portrait");
+        console.warn("Portrait not found for variant " + card.id + ".");
     }
 
     function createAvatar(key) {
         var avatar = document.createElement("div");
-            avatar.className = "avatar";
+            avatar.className = "avatar unloaded";
             var frame = document.createElement("div");
                 frame.className = "frame";
                 var backdrop = document.createElement("div");
@@ -218,12 +236,14 @@ function initCollection(responses) {
                     }
                     var portrait = document.createElement("img");
                         portrait.className = "portrait";
-                        portrait.src = [
+                        portrait.dataset.src = [
                             "image/portrait",
                             variants[key].base,
                             key + ".png"
                         ].join("/");
+                        portrait.addEventListener("load", removePortraitPlaceholder);
                         portrait.addEventListener("error", handleMissingPortrait);
+                        lazyList.push(portrait);
                     backdrop.appendChild(portrait);
                 frame.appendChild(backdrop);
             avatar.appendChild(frame);
@@ -454,6 +474,8 @@ function initCollection(responses) {
     if (month == 4 && day == 1) {
         fearTheRainbow();
     }
+
+    lazyLoadImages();
 }
 
 function formatNumbers(text) { /* TODO: gray these out at level 0 */
@@ -483,7 +505,7 @@ function format(template, substitutions) {
     }
     else {
         if (substitutions.length > 0) {
-            console.log("Error: Could not format \"" + template + "\" with [" + substitutions + "].");
+            console.warn("Could not format \"" + template + "\" with [" + substitutions + "].");
         }
     }
     return formatNumbers(formatted);
@@ -661,7 +683,7 @@ function initDock() {
 
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
-                    var isAnonymous = user.isAnonymous;
+                    // var isAnonymous = user.isAnonymous;
                     userID = user.uid;
                     console.log("Authentication issued.");
                 }
@@ -670,9 +692,7 @@ function initDock() {
                 }
             });
             firebase.auth().signInAnonymously().catch(function (error) {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                console.log(error.code, error.message);
+                console.error(error.code, error.message);
             });
 
             for (var card of cards) {
