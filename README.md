@@ -4,7 +4,7 @@
 A collection gallery for Skullgirls Mobile.
 View the stats and abilities of every fighter variant and move, translated in any language offered in the game.
 
-<img src="image/sample.png">
+<img src="image/preview.png">
 
 The version number seen on the website indicates the version of the game from which data has been gathered.
 The website will only be updated for game updates that introduce new units, alter existing units, or fix translations.
