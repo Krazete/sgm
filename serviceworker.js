@@ -1,12 +1,18 @@
 self.addEventListener("install", function () {
+    self.skipWaiting();
     caches.keys().then(function (cs) {
         cs.forEach(function (c) {
             caches.delete(c);
         });
     });
-    navigator.serviceWorker.getRegistrations().then(function (sws) {
-        sws.forEach(function (sw) {
-            sw.unregister();
+});
+
+self.addEventListener("activate", function () {
+    self.registration.unregister().then(function () {
+        return self.clients.matchAll();
+    }).then(function (clients) {
+        clients.forEach(function (client) {
+            client.navigate(client.url);
         });
     });
 });
