@@ -1,4 +1,4 @@
-const VERSION = "5.2.1.1"; /* update whenever anything changes */
+const VERSION = "5.3.0"; /* update whenever anything changes */
 
 self.addEventListener("install", event => {
     // console.log("PWA Install: " + VERSION);
