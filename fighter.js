@@ -742,9 +742,11 @@ function initDock() {
 
     ratings.addEventListener("click", toggleRatings);
 
+    /* auto-toggle disabled to stay within quota
     if (savedStar == "on") {
         ratings.click();
     }
+    */
 }
 
 function initFilterMenu() {
