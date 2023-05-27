@@ -320,10 +320,6 @@ html[lang='zh-cn'] .moves:before {content: '\62db \5f0f ';}
 html[lang='ru'] .moves:before {content: '\041f \0420 \0418 \0415 \041c \042b ';}
 html[lang='pt-br'] .moves:before {content: 'GOLPES';}
 
-.catalysts { /* TODO: remove whenever catalysts are implemented */
-    color: gray;
-    cursor: not-allowed;
-}
 html[lang='en'] .catalysts:before {content: 'CATALYSTS';}
 html[lang='ja'] .catalysts:before {content: '\30ad \30e3 \30bf \30ea \30b9 \30c8 ';}
 html[lang='fr'] .catalysts:before {content: 'CATALYSEURS';}
@@ -857,6 +853,16 @@ html[lang='ko'] #search-mn + label:before {content: '\ae30 \c220  \c774 \b984 ';
 html[lang='zh-cn'] #search-mn + label:before {content: '\62db \5f0f \540d \79f0 ';}
 html[lang='ru'] #search-mn + label:before {content: '\041d \0430 \0437 \0432 \0430 \043d \0438 \0435  \041f \0440 \0438 \0435 \043c \0430 ';}
 html[lang='pt-br'] #search-mn + label:before {content: 'Nome do Golpe';}
+
+html[lang='en'] #search-cn + label:before {content: 'Catalyst Name';}
+html[lang='ja'] #search-cn + label:before {content: '\30ad \30e3 \30bf \30ea \30b9 \30c8 \540d ';}
+html[lang='fr'] #search-cn + label:before {content: 'Nom du Catalyseur';}
+html[lang='de'] #search-cn + label:before {content: 'Katalysatorname';}
+html[lang='es'] #search-cn + label:before {content: 'Nombre del Catalizador';}
+html[lang='ko'] #search-cn + label:before {content: '\cd09 \b9e4  \c774 \b984 ';}
+html[lang='zh-cn'] #search-cn + label:before {content: '\8f6c \5316 \7269 \540d \79f0 ';}
+html[lang='ru'] #search-cn + label:before {content: '\041d \0430 \0437 \0432 \0430 \043d \0438 \0435  \041a \0430 \0442 \0430 \043b \0438 \0437 \0430 \0442 \043e \0440 \0430 ';}
+html[lang='pt-br'] #search-cn + label:before {content: 'Nome do Catalisador';}
 
 html[lang='en'] #search-d + label:before {content: 'Description';}
 html[lang='ja'] #search-d + label:before {content: '\8aac \660e ';}
