@@ -953,14 +953,16 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     grid-template-rows: repeat(7, min-content);
 }
 .move.card {
-    /* grid-template-areas:
-        'img mn mn'
-        'img qt qt'
-        'img tb tb'
-        'des des des'; */
     grid-template-areas:
         'img mn mn'
         'img tb tb'
+        'des des des';
+    grid-auto-rows: min-content;
+}
+.catalyst.card {
+    grid-template-areas:
+        'mn mn mn'
+        'tb tb tb'
         'des des des';
     grid-auto-rows: min-content;
 }
@@ -1741,7 +1743,8 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
 .ability.collapsed .description {
     display: none;
 }
-.move .description {
+.move .description,
+.catalyst .description {
     grid-area: des;
 }
 
@@ -1815,7 +1818,8 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
     padding: 6px;
     cursor: pointer;
 }
-.move .lock {
+.move .lock,
+.catalyst .lock {
     right: 0;
 }
 .zoomed-out .lock {
