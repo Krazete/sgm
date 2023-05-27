@@ -156,6 +156,13 @@ This gallery still lacks the following features:
 * upgrade and sell costs
 * information about whether a move is a throw, grab, or projectile
 
+## Catalyst Gallery
+
+The [Catalyst Gallery](https://krazete.github.io/sgm/catalysts) features all catalysts available in the game.
+It can be filtered, sorted, and searched through much like the Fighter Gallery and includes one level setting.
+
+I have not included any catalyst icons in this gallery since they aren't as unique and not too helpful with identification in this case.
+
 ## Versions
 
 Each tag in this repository marks a different version of this gallery.
@@ -174,7 +181,7 @@ Each tag in this repository marks a different version of this gallery.
 
 * v6 (Catalysts and Collaboration): Processing files have been moved to ~~Krazete/sgmminer~~ Krazete/sgmprocessor. The CONTRIBUTING.md document has been added detailing how to manually update gallery data files. A rudimentary Catalyst Gallery has been added.
 
-* v7 (Repair and Prestige): I neglected the website for over a year because my processing scripts kept failing more and more with each new game update: bugged ability data, missing fighter data, no access to move data, broken ratings page, etc. I finally fixed Krazete/sgmprocessor in January 2023 by switching from UABE to UnityPy. This new library helped facilitate the complete repair of the website as well implementation of the new Prestige Ability feature. (I also deleted CONTRIBUTING.md because nobody helps anyway. And I never got around to finishing the Catalyst Gallery.)
+* v7 (Repair and Prestige): I neglected the website for over a year because my processing scripts kept failing more and more with each new game update: bugged ability data, missing fighter data, no access to move data, broken ratings page, etc. I finally fixed Krazete/sgmprocessor in January 2023 by switching from UABE to UnityPy. This new library helped facilitate the complete repair of the website as well as implementation of the new Prestige Ability feature. The Catalyst Gallery was also completed a few months later in May. (And I deleted CONTRIBUTING.md because nobody helps anyway.)
 
 ## Issues
 
