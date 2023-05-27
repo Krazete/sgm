@@ -20,7 +20,7 @@ var characters = {
     "rf": "image/official/RoboFortune_MasteryIcon.png",
     "sq": "image/official/Squigly_MasteryIcon.png",
     "um": "image/official/Umbrella_MasteryIcon.png",
-    "va": "image/official/Valentine_MasteryIcon.png",
+    "va": "image/official/Valentine_MasteryIcon.png"
 };
 
 var cards = [];
@@ -111,12 +111,6 @@ function initCollection(responses) {
         return title;
     }
 
-    function createFlavor() {
-        var quote = document.createElement("i");
-            quote.className = "quote";
-        return quote;
-    }
-
     function createTable(key) {
         var table = document.createElement("table");
             table.className = "table";
@@ -183,7 +177,6 @@ function initCollection(responses) {
             card.id = key;
             card.appendChild(createBadge(key));
             card.appendChild(createTitle(key));
-            card.appendChild(createFlavor());
             card.appendChild(createTable(key));
             card.appendChild(createDescription());
             card.appendChild(createGear());
@@ -239,12 +232,8 @@ function initLanguageMenu() {
     function updateCardConstant(card) {
         var key = card.id;
         var tag = card.getElementsByClassName("tag")[0];
-        var quote = card.getElementsByClassName("quote")[0];
         var gear = card.getElementsByClassName("gear")[0];
         tag.innerHTML = corpus[moves[key].title];
-        if (corpus[moves[key].description]) {
-            quote.innerHTML = corpus[moves[key].description];
-        }
         gear.dataset.value = moves[key].cost;
     }
 

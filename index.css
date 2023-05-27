@@ -1257,12 +1257,6 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     margin-top: auto;
 }
 
-.move .quote {
-    font-size: smaller;
-    margin-top: 0;
-    display: none; /* flavor text officially unfinished */
-}
-
 /* RATING */
 
 .rating {
