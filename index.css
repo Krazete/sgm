@@ -106,6 +106,7 @@ html[lang='zh-cn'] .cinematic {
 .diamond-gradient,
 .dependent-gradient {
     background: -o-linear-gradient(transparent, transparent) !important; /* for opera */
+    background-clip: text !important;
     -webkit-background-clip: text !important;
     font-size: larger;
     -webkit-text-fill-color: transparent;
