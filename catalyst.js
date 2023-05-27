@@ -100,7 +100,17 @@ function initCollection(response) {
             title.className = "title";
             var icon = document.createElement("img");
                 icon.className = "icon";
-                icon.src = characters[catalysts[key].base];
+            if (catalysts[key].constraints.characters) { /* assuming there can only be one constraint */
+                icon.src = characters[catalysts[key].constraints.characters[0]];
+            }
+            else if (catalysts[key].constraints.elements) {
+                var element = elements[catalysts[key].constraints.elements[0]];
+                var el = element[0].toUpperCase();
+                icon.src = "image/official/ElementalIcon" + el + element.slice(1) + ".png";
+            }
+            else if (key.includes("-char-")) { /* assuming all character-locked catalysts have this in their key */
+                icon.src = "image/Random_MasteryIcon.png";
+            }
             title.appendChild(icon);
             var tag = document.createElement("span");
                 tag.className = "tag cinematic dependent-gradient";
@@ -318,7 +328,8 @@ function initFilterMenu() {
     var filterFighters = fighterIDs.map(function (fighter) {
         return document.getElementById("filter-" + fighter);
     });
-    var filters = [].concat(filterTiers, filterElements, filterFighters);
+    var filterXX = document.getElementById("filter-xx")
+    var filters = [].concat(filterTiers, filterElements, filterFighters, filterXX);
 
     function updateFilterCancel() {
         if (filters.some(function (filter) {
@@ -385,19 +396,21 @@ function initFilterMenu() {
             return true;
         }
         var key = card.id;
-        return filterElements.some(function (filter, i) {return filter.checked && catalysts[key].element == i});
+        return filterElements.some(function (filter, i) {
+            return filter.checked && catalysts[key].constraints.elements && catalysts[key].constraints.elements[0] == i
+        });
     }
 
     function fighterCondition(card) {
-        if (filterFighters.every(function (filter) {
+        if (filterFighters.concat(filterXX).every(function (filter) {
             return !filter.checked;
         })) {
             return true;
         }
         var key = card.id;
         return filterFighters.some(function (filter, i) {
-            return filter.checked && catalysts[key].base == fighterIDs[i];
-        });
+            return filter.checked && catalysts[key].constraints.characters && catalysts[key].constraints.characters[0] == fighterIDs[i]
+        }) || (filterXX.checked && key.includes("-char-") && !catalysts[key].constraints.characters);
     }
 
     filterCards = function () {
