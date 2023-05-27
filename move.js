@@ -17,7 +17,7 @@ var characters = {
     "pw": "image/official/Painwheel_MasteryIcon.png",
     "pa": "image/official/Parasoul_MasteryIcon.png",
     "pe": "image/official/Peacock_MasteryIcon.png",
-    "rf": "image/official/RoboFortune_MasteryIcon.png",
+    "rf": "image/official/Robofortune_MasteryIcon.png",
     "sq": "image/official/Squigly_MasteryIcon.png",
     "um": "image/official/Umbrella_MasteryIcon.png",
     "va": "image/official/Valentine_MasteryIcon.png"
