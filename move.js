@@ -345,8 +345,8 @@ function initDock() {
 
 function initFilterMenu() {
     var searchbox = document.getElementById("searchbox");
-    var searchMN = document.getElementById("search-mn");
-    var searchD = document.getElementById("search-d");
+    var searchN = document.getElementById("search-n");
+    var searchA = document.getElementById("search-a");
 
     var filterCancel = document.getElementById("filter-cancel");
 
@@ -393,10 +393,10 @@ function initFilterMenu() {
         }
         var key = card.id;
         var query = sanitize(searchbox.value);
-        if (searchMN.checked) {
+        if (searchN.checked) {
             return sanitize(key).includes(query) || sanitize(corpus[moves[key].title]).includes(query);
         }
-        else if (searchD.checked) {
+        else if (searchA.checked) {
             if ("ability" in moves[key] && "features" in moves[key].ability) {
                 for (var feature of moves[key].ability.features) {
                     if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
@@ -476,8 +476,8 @@ function initFilterMenu() {
 
     searchbox.addEventListener("keydown", pressEnter);
     searchbox.addEventListener("input", filterCards);
-    searchMN.addEventListener("change", filterCards);
-    searchD.addEventListener("change", filterCards);
+    searchN.addEventListener("change", filterCards);
+    searchA.addEventListener("change", filterCards);
 
     filterCancel.addEventListener("change", cancelFilters);
     for (var filter of filters) {
@@ -487,7 +487,7 @@ function initFilterMenu() {
     if (location.hash) {
         searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
     }
-    searchMN.checked = true;
+    searchN.checked = true;
     filterTiers[2].click();
 }
 
@@ -606,16 +606,8 @@ function initOptionsMenu() {
     }
 
     function getDescriptionTier(key, feature) {
-        var fTiers = feature.tiers;
-        if (feature.description == "SA_Valentine_BB4") {
-            var fTiers = [ /* apk doesn't have this data for some reason */
-                {"level": 1, "values": [0.15]},
-                {"level": 9, "values": [0.2]},
-                {"level": 15, "values": [0.25]}
-            ];
-        }
         var fTierValue = 0;
-        for (var fTier of fTiers) {
+        for (var fTier of feature.tiers) {
             if (fTier.level > levelTiers[moves[key].tier].value) {
                 break;
             }
