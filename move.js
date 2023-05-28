@@ -273,7 +273,6 @@ function initDock() {
     var settings = document.getElementById("settings");
 
     var menu = document.getElementById("menu");
-    var optionsMenu = document.getElementById("options-menu");
     var filterMenu = document.getElementById("filter-menu");
     var sortMenu = document.getElementById("sort-menu");
 
