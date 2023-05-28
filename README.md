@@ -161,8 +161,6 @@ This gallery still lacks the following features:
 The [Catalyst Gallery](https://krazete.github.io/sgm/catalysts) features all catalysts available in the game.
 It can be filtered, sorted, and searched through much like the Fighter Gallery and includes one level setting.
 
-I have not included any catalyst icons in this gallery since they aren't as unique and not too helpful with identification in this case.
-
 ## Versions
 
 Each tag in this repository marks a different version of this gallery.
