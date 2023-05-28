@@ -963,9 +963,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .catalyst.card {
     grid-template-areas:
         'mn mn mn'
-        'tb tb tb'
         'des des des';
-    grid-auto-rows: min-content;
 }
 .card.hidden {
     display: none;
