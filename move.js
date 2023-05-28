@@ -344,8 +344,8 @@ function initDock() {
 
 function initFilterMenu() {
     var searchbox = document.getElementById("searchbox");
-    var searchN = document.getElementById("search-n");
-    var searchA = document.getElementById("search-a");
+    var searchMN = document.getElementById("search-mn");
+    var searchD = document.getElementById("search-d");
 
     var filterCancel = document.getElementById("filter-cancel");
 
@@ -392,10 +392,10 @@ function initFilterMenu() {
         }
         var key = card.id;
         var query = sanitize(searchbox.value);
-        if (searchN.checked) {
+        if (searchMN.checked) {
             return sanitize(key).includes(query) || sanitize(corpus[moves[key].title]).includes(query);
         }
-        else if (searchA.checked) {
+        else if (searchD.checked) {
             if ("ability" in moves[key] && "features" in moves[key].ability) {
                 for (var feature of moves[key].ability.features) {
                     if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
@@ -475,8 +475,8 @@ function initFilterMenu() {
 
     searchbox.addEventListener("keydown", pressEnter);
     searchbox.addEventListener("input", filterCards);
-    searchN.addEventListener("change", filterCards);
-    searchA.addEventListener("change", filterCards);
+    searchMN.addEventListener("change", filterCards);
+    searchD.addEventListener("change", filterCards);
 
     filterCancel.addEventListener("change", cancelFilters);
     for (var filter of filters) {
@@ -486,7 +486,7 @@ function initFilterMenu() {
     if (location.hash) {
         searchbox.value = decodeURIComponent(location.hash.replace(/#/g, ""));
     }
-    searchN.checked = true;
+    searchMN.checked = true;
     filterTiers[2].click();
 }
 
