@@ -43,7 +43,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100%;
-    background: #0f1824;
+    background-color: #0f1824;
     color: white;
     font-family: 'Roboto', 'Arial Narrow', sans-serif;
     font-size: medium;
@@ -92,8 +92,8 @@ html[lang='zh-cn'] .cinematic {
 
 .tagged:before {
     content: '\00a0 ';
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline;
     padding-left: 1em;
 }
@@ -105,9 +105,9 @@ html[lang='zh-cn'] .cinematic {
 .gold-gradient,
 .diamond-gradient,
 .dependent-gradient {
-    background: -o-linear-gradient(transparent, transparent) !important; /* for opera */
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
+    background-image: -o-linear-gradient(transparent, transparent); /* for opera */
+    background-clip: text;
+    -webkit-background-clip: text;
     font-size: larger;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
@@ -120,22 +120,22 @@ html[lang='zh-cn'] .cinematic {
 }
 .bronze-gradient,
 .bronze .dependent-gradient {
-    background: -webkit-linear-gradient(white 10%, #843 70%);
+    background-image: -webkit-linear-gradient(white 10%, #843 70%);
     color: #b76;
 }
 .silver-gradient,
 .silver .dependent-gradient {
-    background: -webkit-linear-gradient(white 10%, #889 70%);
+    background-image: -webkit-linear-gradient(white 10%, #889 70%);
     color: #aab;
 }
 .gold-gradient,
 .gold .dependent-gradient {
-    background: -webkit-linear-gradient(white 10%, #da2 70%);
+    background-image: -webkit-linear-gradient(white 10%, #da2 70%);
     color: #fd8;
 }
 .diamond-gradient,
 .diamond .dependent-gradient {
-    background: -webkit-linear-gradient(white 10%, #d9d 70%);
+    background-image: -webkit-linear-gradient(white 10%, #d9d 70%);
     color: #fcf;
 }
 
@@ -186,7 +186,7 @@ input[type='checkbox'] {
 label {
     min-width: 28px;
     min-height: 28px;
-    background: #0f1824;
+    background-color: #0f1824;
     text-align: center;
     text-transform: uppercase;
     line-height: 28px;
@@ -197,7 +197,7 @@ label {
     cursor: pointer;
 }
 input:checked + label {
-    background: linear-gradient(#1b2a41, #314c73);
+    background-image: linear-gradient(#1b2a41, #314c73);
     border-color: #314c73;
 }
 
@@ -253,7 +253,7 @@ input:checked + label {
 /* HEADER */
 
 #header {
-    background: linear-gradient(#0f1824, #1b2a41);
+    background-image: linear-gradient(#0f1824, #1b2a41);
     text-align: center;
     border-bottom: 1px solid #ccb55a;
     padding: 6px 0;
@@ -352,13 +352,13 @@ html[lang='pt-br'] .ratings:before {content: 'CLASSIFICA\00c7 \00d5 ES';}
 }
 
 .ribbon {
-    background: #263b5a;
+    background-color: #263b5a;
     margin: 6px auto;
     text-transform: uppercase;
 }
 
 #version:before {
-    background: url(image/official/IconInfo.png);
+    background-image: url(image/official/IconInfo.png);
     padding-left: 1.25em;
     margin-right: 0.25em;
 }
@@ -389,15 +389,15 @@ html[lang='pt-br'] .outdated:after {content: ' (ATUALIZA\00c7 \00c3 O NECESS\00c
 #language-menu label:before {
     padding-left: 1.75em;
 }
-#en + label.tagged:before {content: 'English'; background: url(image/official/flag_en.png);}
-#ja + label.tagged:before {content: '\65e5 \672c \8a9e '; background: url(image/official/flag_jp.png);}
-#fr + label.tagged:before {content: 'Fran\00e7 ais'; background: url(image/official/flag_fr.png);}
-#de + label.tagged:before {content: 'Deutsch'; background: url(image/official/flag_de.png);}
-#es + label.tagged:before {content: 'Espa\00f1 ol'; background: url(image/official/flag_es.png);}
-#ko + label.tagged:before {content: '\d55c \ad6d \c5b4 '; background: url(image/official/flag_ko.png);}
-#zh-cn + label.tagged:before {content: '\7b80 \4f53 \4e2d \6587 '; background: url(image/official/flag_ch.png);}
-#ru + label.tagged:before {content: '\0050 \0443 \0441 \0441 \043a \0438 \0439 '; background: url(image/official/flag_ru.png);}
-#pt-br + label.tagged:before {content: 'Portugu\00ea s'; background: url(image/official/flag_pt.png);}
+#en + label.tagged:before {content: 'English'; background-image: url(image/official/flag_en.png);}
+#ja + label.tagged:before {content: '\65e5 \672c \8a9e '; background-image: url(image/official/flag_jp.png);}
+#fr + label.tagged:before {content: 'Fran\00e7 ais'; background-image: url(image/official/flag_fr.png);}
+#de + label.tagged:before {content: 'Deutsch'; background-image: url(image/official/flag_de.png);}
+#es + label.tagged:before {content: 'Espa\00f1 ol'; background-image: url(image/official/flag_es.png);}
+#ko + label.tagged:before {content: '\d55c \ad6d \c5b4 '; background-image: url(image/official/flag_ko.png);}
+#zh-cn + label.tagged:before {content: '\7b80 \4f53 \4e2d \6587 '; background-image: url(image/official/flag_ch.png);}
+#ru + label.tagged:before {content: '\0050 \0443 \0441 \0441 \043a \0438 \0439 '; background-image: url(image/official/flag_ru.png);}
+#pt-br + label.tagged:before {content: 'Portugu\00ea s'; background-image: url(image/official/flag_pt.png);}
 
 /* FOOTER */
 
@@ -409,7 +409,7 @@ html[lang='pt-br'] .outdated:after {content: ' (ATUALIZA\00c7 \00c3 O NECESS\00c
 }
 
 #dock {
-    background: linear-gradient(#263b5a, #0f1824);
+    background-image: linear-gradient(#263b5a, #0f1824);
     box-shadow: 0 -3px 3px black;
     border-top: 1px solid #ccb55a;
     display: grid;
@@ -436,7 +436,7 @@ html[lang='pt-br'] .outdated:after {content: ' (ATUALIZA\00c7 \00c3 O NECESS\00c
 }
 
 #menu {
-    background: linear-gradient(#1b2a41, #0f1824);
+    background-image: linear-gradient(#1b2a41, #0f1824);
     text-align: center;
     box-shadow: 0 -3px 3px black;
     border-top: 1px solid #ccb55a;
@@ -460,7 +460,7 @@ html[lang='pt-br'] .outdated:after {content: ' (ATUALIZA\00c7 \00c3 O NECESS\00c
 
 .divider {
     width: 1px;
-    background: #263b5a;
+    background-color: #263b5a;
     margin: 8px 4px;
 }
 
@@ -475,7 +475,7 @@ html[lang='pt-br'] .outdated:after {content: ' (ATUALIZA\00c7 \00c3 O NECESS\00c
 }
 
 #options-label:before {
-    background: url(image/official/GearIcon.png);
+    background-image: url(image/official/GearIcon.png);
     padding-left: 1.1em;
 }
 html[lang='en'] #options-label:before {content: 'OPTIONS';}
@@ -523,7 +523,7 @@ html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
     position: relative;
     width: 28px;
     height: 28px;
-    background: transparent;
+    background-color: transparent;
     color: white;
     font-size: inherit;
     text-align: center;
@@ -593,7 +593,7 @@ html[lang='pt-br'] .all-label:before {content: 'TODOS';}
 /* FILTER */
 
 #filter-label:before {
-    background: url(image/official/icon_filter.png);
+    background-image: url(image/official/icon_filter.png);
     padding-left: 1.2em;
 }
 html[lang='en'] #filter-label:before {content: 'FILTER';}
@@ -625,7 +625,7 @@ html[lang='pt-br'] #filter-label:before {content: 'FILTRAR';}
 /* SORT */
 
 #sort-label:before {
-    background: url(image/official/icon_sort.png);
+    background-image: url(image/official/icon_sort.png);
     padding-left: 1.6em;
 }
 html[lang='en'] #sort-label:before {content: 'SORT';}
@@ -717,7 +717,7 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 /* COLLECTION */
 
 #collection {
-    background: black;
+    background-color: black;
     display: grid;
     flex: 1;
     grid-template-columns: repeat(9, minmax(0, 1fr));
@@ -765,18 +765,18 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 }
 
 #ratings-table td.tagged:before {
-    background: url(image/official/star01.png);
+    background-image: url(image/official/star01.png);
 }
 
 #ratings-table tr:nth-child(2n) td:nth-child(2n) {
-    background: #333;
+    background-color: #333;
 }
 #ratings-table tr:nth-child(2n) td:nth-child(2n + 3),
 #ratings-table tr:nth-child(2n + 3) td:nth-child(2n) {
-    background: #666;
+    background-color: #666;
 }
 #ratings-table tr:nth-child(2n + 3) td:nth-child(2n + 3) {
-    background: #999;
+    background-color: #999;
 }
 
 #ratings-table .avatar {
@@ -935,7 +935,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 
 .card {
     position: relative;
-    background: #1b2a41;
+    background-color: #1b2a41;
     border: 3px double #ccb55a;
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(0, 1fr));
@@ -969,7 +969,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: none;
 }
 .card.locked {
-    background: black;
+    background-color: black;
     display: grid;
 }
 
@@ -1017,37 +1017,37 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     margin: 0 auto -18px auto;
 }
 .bronze .frame {
-    background: linear-gradient(#621 10%, #b76 20%, #843 40%, #b76 60%, #621 90%);
+    background-image: linear-gradient(#621 10%, #b76 20%, #843 40%, #b76 60%, #621 90%);
 }
 .silver .frame {
-    background: linear-gradient(#889 10%, #eef 20%, #aab 40%, #eef 60%, #889 90%);
+    background-image: linear-gradient(#889 10%, #eef 20%, #aab 40%, #eef 60%, #889 90%);
 }
 .gold .frame {
-    background: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
+    background-image: linear-gradient(#da2 10%, #feb 20%, #fd8 40%, #feb 60%, #da2 90%);
 }
 .diamond.neutral .frame,
 .diamond .neutral .frame {
-    background: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%);
+    background-image: linear-gradient(#d9d 10%, #fff 20%, #fcf 40%, #fef 60%, #d9d 90%);
 }
 .diamond.fire .frame,
 .diamond .fire .frame {
-    background: linear-gradient(#d33 10%, #fff 20%, #f99 40%, #fee 60%, #d33 90%);
+    background-image: linear-gradient(#d33 10%, #fff 20%, #f99 40%, #fee 60%, #d33 90%);
 }
 .diamond.water .frame,
 .diamond .water .frame {
-    background: linear-gradient(#6be 10%, #fff 20%, #ace 40%, #eff 60%, #6be 90%);
+    background-image: linear-gradient(#6be 10%, #fff 20%, #ace 40%, #eff 60%, #6be 90%);
 }
 .diamond.wind .frame,
 .diamond .wind .frame {
-    background: linear-gradient(#8b3 10%, #fff 20%, #de9 40%, #efe 60%, #8b3 90%);
+    background-image: linear-gradient(#8b3 10%, #fff 20%, #de9 40%, #efe 60%, #8b3 90%);
 }
 .diamond.dark .frame,
 .diamond .dark .frame {
-    background: linear-gradient(#95f 10%, #fff 20%, #caf 40%, #fef 60%, #95f 90%);
+    background-image: linear-gradient(#95f 10%, #fff 20%, #caf 40%, #fef 60%, #95f 90%);
 }
 .diamond.light .frame,
 .diamond .light .frame {
-    background: linear-gradient(#dd6 10%, #fff 20%, #ffb 40%, #ffe 60%, #dd6 90%);
+    background-image: linear-gradient(#dd6 10%, #fff 20%, #ffb 40%, #ffe 60%, #dd6 90%);
 }
 
 .backdrop {
@@ -1057,12 +1057,12 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     border-radius: 50%;
     box-shadow: inset 0 0 2px 1px black;
 }
-.neutral .backdrop {background: radial-gradient(#ccc, #888);}
-.fire .backdrop {background: radial-gradient(#fb7, #d00);}
-.water .backdrop {background: radial-gradient(#5ff, #06c);}
-.wind .backdrop {background: radial-gradient(#9f8, #082);}
-.dark .backdrop {background: radial-gradient(#eae, #525);}
-.light .backdrop {background: radial-gradient(#fff, #ec5);}
+.neutral .backdrop {background-image: radial-gradient(#ccc, #888);}
+.fire .backdrop {background-image: radial-gradient(#fb7, #d00);}
+.water .backdrop {background-image: radial-gradient(#5ff, #06c);}
+.wind .backdrop {background-image: radial-gradient(#9f8, #082);}
+.dark .backdrop {background-image: radial-gradient(#eae, #525);}
+.light .backdrop {background-image: radial-gradient(#fff, #ec5);}
 .neutral .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#ccc, #888);}
 .fire .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fb7, #d00);}
 .water .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#5ff, #06c);}
@@ -1071,13 +1071,13 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .light .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fff, #ec5);}
 
 .backdrop.hallow1:after {
-    background: url(image/official/Blood1.png);
+    background-image: url(image/official/Blood1.png);
 }
 .backdrop.hallow2:after {
-    background: url(image/official/Blood2.png);
+    background-image: url(image/official/Blood2.png);
 }
 .backdrop.hallow3:after {
-    background: url(image/official/Blood3.png);
+    background-image: url(image/official/Blood3.png);
 }
 .backdrop.hallow1:after, .backdrop.hallow2:after, .backdrop.hallow3:after {
     content: '';
@@ -1148,7 +1148,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     max-width: calc(100% - 10px);
     left: 50%;
     transform: translateX(-50%);
-    background: #3e2c29;
+    background-color: #3e2c29;
     text-align: center;
     border: 3px double #8f6151;
     box-shadow: 0 1px 1px 1px black;
@@ -1404,7 +1404,7 @@ html[lang='pt-br'] div.offense:after, html[lang='pt-br'] div.defense:after {cont
     bottom: -1em;
     min-width: 2em;
     transform: translateX(-50%);
-    background: skyblue;
+    background-color: skyblue;
     color: #1b2a41;
     text-shadow: none;
     line-height: 0.9em;
@@ -1416,7 +1416,7 @@ html[lang='pt-br'] div.offense:after, html[lang='pt-br'] div.defense:after {cont
 }
 .star.voted.animated:after {
     bottom: 0em;
-    background: url(image/official/Checkmark.png);
+    background-image: url(image/official/Checkmark.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1428,7 +1428,7 @@ html[lang='pt-br'] div.offense:after, html[lang='pt-br'] div.defense:after {cont
 @keyframes vote-success-body {
     100% {
         bottom: -1em;
-        background: skyblue;
+        background-color: skyblue;
         color: #1b2a41;
         line-height: 0.9em;
     }
@@ -1468,7 +1468,7 @@ html[lang='pt-br'] .star.voted:after {content: 'Voc\00ea ';}
     margin: auto;
 }
 .atk:before {
-    background: url(image/official/PowerIcon.png);
+    background-image: url(image/official/PowerIcon.png);
 }
 html[lang='en'] .atk:before {content: 'ATK';}
 html[lang='ja'] .atk:before {content: '\653b \6483 ';}
@@ -1485,7 +1485,7 @@ html[lang='pt-br'] .atk:before {content: 'ATQ';}
     margin: auto;
 }
 .hp:before {
-    background: url(image/official/HealthIcon.png);
+    background-image: url(image/official/HealthIcon.png);
 }
 html[lang='en'] .hp:before {content: 'HP';}
 html[lang='ja'] .hp:before {content: '\4f53 \529b ';}
@@ -1501,12 +1501,12 @@ html[lang='pt-br'] .hp:before {content: 'PV';}
     grid-area: fs;
     margin: 0 auto;
 }
-.neutral .fs:before {background: url(image/official/ElementalIconNeutral.png);}
-.fire .fs:before {background: url(image/official/ElementalIconFire.png);}
-.water .fs:before {background: url(image/official/ElementalIconWater.png);}
-.wind .fs:before {background: url(image/official/ElementalIconWind.png);}
-.light .fs:before {background: url(image/official/ElementalIconLight.png);}
-.dark .fs:before {background: url(image/official/ElementalIconDark.png);}
+.neutral .fs:before {background-image: url(image/official/ElementalIconNeutral.png);}
+.fire .fs:before {background-image: url(image/official/ElementalIconFire.png);}
+.water .fs:before {background-image: url(image/official/ElementalIconWater.png);}
+.wind .fs:before {background-image: url(image/official/ElementalIconWind.png);}
+.light .fs:before {background-image: url(image/official/ElementalIconLight.png);}
+.dark .fs:before {background-image: url(image/official/ElementalIconDark.png);}
 html[lang='en'] .fs:before {content: 'FIGHTER SCORE';}
 html[lang='ja'] .fs:before {content: '\30d5 \30a1 \30a4 \30bf \30fc \30fb \30b9 \30b3 \30a2 ';}
 html[lang='fr'] .fs:before {content: 'SCORE';}
@@ -1524,10 +1524,10 @@ html[lang='pt-br'] .fs:before {content: 'PONTUA\00c7 \00c3 O';}
     grid-area: tb;
 }
 .table tr:nth-child(2n) {
-    background: #314c73;
+    background-color: #314c73;
 }
 .table tr:nth-child(2n + 1) {
-    background: #263b5a;
+    background-color: #263b5a;
 }
 .table td {
     padding: 2px 4px;
@@ -1673,14 +1673,14 @@ html[lang='pt-br'] .sell-price:before {content: 'VENDER';}
 /* ABILITIES */
 
 .ability {
-    background: #263b5a;
+    background-color: #263b5a;
     box-shadow: 0 0 1px black;
     display: grid;
     grid-gap: 6px;
     padding: 6px;
 }
 .ability.collapsed {
-    background: #0f1824;
+    background-color: #0f1824;
 }
 
 .ability.ca {
@@ -1747,7 +1747,7 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
 }
 
 .description {
-    background: #314c73;
+    background-color: #314c73;
     font-size: smaller;
     white-space: pre-line;
     box-shadow: 0 0 1px black;
@@ -1788,7 +1788,7 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
     content: '';
     width: 14px;
     height: 14px;
-    background: url(image/official/icon_externalsite.png);
+    background-image: url(image/official/icon_externalsite.png);
     background-size: contain;
     display: block;
 }
@@ -1799,7 +1799,7 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
     position: absolute;
     width: 40px;
     height: 40px;
-    background: url(image/official/GearIcon.png);
+    background-image: url(image/official/GearIcon.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1869,7 +1869,7 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
     height: 64px;
     width: 66px;
     right: 0;
-    background: url(image/cat.png);
+    background-image: url(image/cat.png);
     background-size: cover;
     animation:
         gyroscope 400ms ease-out,
