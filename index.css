@@ -1189,7 +1189,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     left: 0;
     top: 0;
     transform: none;
-    width: 100%;
+    width: 33%;
     height: 100%;
     overflow: hidden;
 }
@@ -1254,12 +1254,8 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     filter: sepia(1);
 }
 .catalyst .symbol {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    height: 125%;
-    margin: auto;
+    left: -15%;
+    top: -15%;
     opacity: 0.1;
 }
 
