@@ -3,25 +3,6 @@ var moves, corpus;
 var types = ["sms", "bbs"];
 var tiers = ["bronze", "silver", "gold"];
 var fighterIDs = ["an", "be", "bb", "bd", "ce", "do", "el", "fi", "fu", "mf", "pw", "pa", "pe", "rf", "sq", "um", "va"];
-var characters = {
-    "an": "image/official/Annie_MasteryIcon.png",
-    "be": "image/official/Beowulf_MasteryIcon.png",
-    "bb": "image/official/BigBand_MasteryIcon.png",
-    "bd": "image/official/BlackDahlia_MasteryIcon.png",
-    "ce": "image/official/Cerebella_MasteryIcon.png",
-    "do": "image/official/Double_MasteryIcon.png",
-    "el": "image/official/Eliza_MasteryIcon.png",
-    "fi": "image/official/Filia_MasteryIcon.png",
-    "fu": "image/official/Fukua_MasteryIcon.png",
-    "mf": "image/official/MsFortune_MasteryIcon.png",
-    "pw": "image/official/Painwheel_MasteryIcon.png",
-    "pa": "image/official/Parasoul_MasteryIcon.png",
-    "pe": "image/official/Peacock_MasteryIcon.png",
-    "rf": "image/official/Robofortune_MasteryIcon.png",
-    "sq": "image/official/Squigly_MasteryIcon.png",
-    "um": "image/official/Umbrella_MasteryIcon.png",
-    "va": "image/official/Valentine_MasteryIcon.png"
-};
 
 var cards = [];
 var filterCards;
@@ -98,16 +79,9 @@ function initCollection(responses) {
         return badge;
     }
 
-    function createTitle(key) {
+    function createTitle() {
         var title = document.createElement("div");
-            title.className = "title";
-            var icon = document.createElement("img");
-                icon.className = "icon";
-                icon.src = characters[moves[key].base];
-            title.appendChild(icon);
-            var tag = document.createElement("span");
-                tag.className = "tag cinematic dependent-gradient";
-            title.appendChild(tag);
+            title.className = "title tagged cinematic dependent-gradient";
         return title;
     }
 
@@ -167,16 +141,20 @@ function initCollection(responses) {
     }
 
     function createCard(key) {
+        var classList = [
+            "move card",
+            moves[key].base,
+            tiers[moves[key].tier],
+            types[moves[key].type]
+        ];
+        if (moves[key].type == 1) {
+            classList.push("bb" + moves[key].strength);
+        }
         var card = document.createElement("div");
-            card.className = [
-                "move card",
-                types[moves[key].type],
-                "bb" + moves[key].strength,
-                tiers[moves[key].tier]
-            ].join(" ");
+            card.className = classList.join(" ");
             card.id = key;
             card.appendChild(createBadge(key));
-            card.appendChild(createTitle(key));
+            card.appendChild(createTitle());
             card.appendChild(createTable(key));
             card.appendChild(createDescription());
             card.appendChild(createGear());
@@ -231,9 +209,9 @@ function initLanguageMenu() {
 
     function updateCardConstant(card) {
         var key = card.id;
-        var tag = card.getElementsByClassName("tag")[0];
+        var title = card.getElementsByClassName("title")[0];
         var gear = card.getElementsByClassName("gear")[0];
-        tag.innerHTML = corpus[moves[key].title];
+        title.innerHTML = corpus[moves[key].title];
         gear.dataset.value = moves[key].cost;
     }
 

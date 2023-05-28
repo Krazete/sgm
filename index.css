@@ -1258,18 +1258,37 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 }
 
 .title {
-    text-align: center;
     grid-area: mn;
     margin: auto;
     z-index: 1;
 }
-.title .icon {
-    vertical-align: middle;
-    display: initial;
+.title:before {
+    padding-left: 1.1em;
 }
-.tag {
-    vertical-align: middle;
-}
+.an .title:before {background-image: url(image/official/Annie_MasteryIcon.png);}
+.be .title:before {background-image: url(image/official/Beowulf_MasteryIcon.png);}
+.bb .title:before {background-image: url(image/official/BigBand_MasteryIcon.png);}
+.bd .title:before {background-image: url(image/official/BlackDahlia_MasteryIcon.png);}
+.ce .title:before {background-image: url(image/official/Cerebella_MasteryIcon.png);}
+.do .title:before {background-image: url(image/official/Double_MasteryIcon.png);}
+.el .title:before {background-image: url(image/official/Eliza_MasteryIcon.png);}
+.fi .title:before {background-image: url(image/official/Filia_MasteryIcon.png);}
+.fu .title:before {background-image: url(image/official/Fukua_MasteryIcon.png);}
+.mf .title:before {background-image: url(image/official/MsFortune_MasteryIcon.png);}
+.pw .title:before {background-image: url(image/official/Painwheel_MasteryIcon.png);}
+.pa .title:before {background-image: url(image/official/Parasoul_MasteryIcon.png);}
+.pe .title:before {background-image: url(image/official/Peacock_MasteryIcon.png);}
+.rf .title:before {background-image: url(image/official/Robofortune_MasteryIcon.png);}
+.sq .title:before {background-image: url(image/official/Squigly_MasteryIcon.png);}
+.um .title:before {background-image: url(image/official/Umbrella_MasteryIcon.png);}
+.va .title:before {background-image: url(image/official/Valentine_MasteryIcon.png);}
+.xx .title:before {background-image: url(image/Random_MasteryIcon.png);}
+.neutral .title:before {background-image: url(image/official/ElementalIconNeutral.png);}
+.fire .title:before {background-image: url(image/official/ElementalIconFire.png);}
+.water .title:before {background-image: url(image/official/ElementalIconWater.png);}
+.wind .title:before {background-image: url(image/official/ElementalIconWind.png);}
+.light .title:before {background-image: url(image/official/ElementalIconLight.png);}
+.dark .title:before {background-image: url(image/official/ElementalIconDark.png);}
 
 /* QUOTE */
 
