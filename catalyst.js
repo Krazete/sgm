@@ -59,6 +59,42 @@ function initCollection(response) {
 
     var collection = document.getElementById("collection");
 
+    var lazyList = [];
+    function lazyLoadImages() {
+        for (var img of lazyList) {
+            if (img.dataset.src) {
+                var imgBox = img.getBoundingClientRect();
+                if (imgBox.bottom > 0 && imgBox.top < innerHeight) {
+                    img.src = img.dataset.src;
+                    delete img.dataset.src;
+                }
+            }
+        }
+        requestAnimationFrame(lazyLoadImages);
+    }
+
+    function handleMissingSymbol() {
+        var symbol = this;
+        var card = symbol.parentElement.parentElement;
+        symbol.classList.add("hidden");
+        console.warn("Icon not found for catalyst " + card.id + ".");
+    }
+
+    function createBadge(key) {
+        var badge = document.createElement("div");
+            badge.className = "badge";
+            var symbol = document.createElement("img");
+                symbol.className = "symbol";
+                symbol.dataset.src = [
+                    "image/official",
+                    catalysts[key].icon + ".png"
+                ].join("/");
+                symbol.addEventListener("error", handleMissingSymbol);
+                lazyList.push(symbol);
+            badge.appendChild(symbol);
+        return badge;
+    }
+
     function createTitle(key) {
         var title = document.createElement("div");
             title.className = "title";
@@ -113,6 +149,7 @@ function initCollection(response) {
                 tiers[catalysts[key].tier]
             ].join(" ");
             card.id = key;
+            card.appendChild(createBadge(key));
             card.appendChild(createTitle(key));
             card.appendChild(createDescription());
             card.appendChild(createLock());
@@ -124,6 +161,8 @@ function initCollection(response) {
         collection.appendChild(card);
         cards.push(card);
     }
+
+    lazyLoadImages();
 }
 
 function formatNumbers(text) {
@@ -203,7 +242,6 @@ function initDock() {
     var settings = document.getElementById("settings");
 
     var menu = document.getElementById("menu");
-    var optionsMenu = document.getElementById("options-menu");
     var filterMenu = document.getElementById("filter-menu");
     var sortMenu = document.getElementById("sort-menu");
 

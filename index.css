@@ -1184,6 +1184,15 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     width: 140px;
     height: 140px;
 }
+.catalyst .badge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
 .sms .badge:before,
 .sms .badge:after {
@@ -1238,17 +1247,27 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     left: 16%;
     top: -16%;
 }
-.bronze .symbol {
+.move.bronze .symbol {
     filter: sepia(1) hue-rotate(325deg);
 }
-.gold .symbol {
+.move.gold .symbol {
     filter: sepia(1);
+}
+.catalyst .symbol {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    height: 125%;
+    margin: auto;
+    opacity: 0.1;
 }
 
 .title {
     text-align: center;
     grid-area: mn;
     margin: auto;
+    z-index: 1;
 }
 .title .icon {
     vertical-align: middle;
