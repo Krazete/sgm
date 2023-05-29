@@ -233,7 +233,7 @@ function initialize() {
         };
         firebase.initializeApp(config);
 
-        variants = responses[0];
+        variants = responses[1];
         database = firebase.database();
     }).then(toggleLoadingScreen);
 
