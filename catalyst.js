@@ -449,11 +449,10 @@ function sortCards() {
 }
 
 function initSortMenu() {
-    var sortDamage = document.getElementById("sort-damage");
     var sortAlphabetical = document.getElementById("sort-abc");
     var sortTier = document.getElementById("sort-tier");
 
-    var savedBasis = localStorage.getItem("basis2") || "sort-tier";
+    var savedBasis = localStorage.getItem("basis3") || "sort-abc";
     var savedButton = document.getElementById(savedBasis);
 
     function alphabeticalBasis(a, b) {
@@ -476,7 +475,7 @@ function initSortMenu() {
         return function () {
             sortBasis = basis;
             sortCards();
-            localStorage.setItem("basis2", this.id);
+            localStorage.setItem("basis3", this.id);
         };
     }
 

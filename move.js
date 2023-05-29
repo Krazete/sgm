@@ -481,7 +481,7 @@ function initSortMenu() {
     var sortTier = document.getElementById("sort-tier");
     var sortType = document.getElementById("sort-type");
 
-    var savedBasis = localStorage.getItem("basis2") || "sort-tier";
+    var savedBasis = localStorage.getItem("basis2") || "sort-abc";
     var savedButton = document.getElementById(savedBasis);
 
     function alphabeticalBasis(a, b) {
@@ -515,7 +515,7 @@ function initSortMenu() {
         var B = moves[b.id].type;
         var C = A - B;
         if (C == 0) {
-            return tierBasis(a, b);
+            return alphabeticalBasis(a, b);
         }
         return C;
     }
