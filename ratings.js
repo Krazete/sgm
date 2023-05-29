@@ -216,11 +216,13 @@ function initialize() {
     defenseRatings.addEventListener("click", setDefense);
 
     toggleLoadingScreen(true);
-    Promise.all([
-        loadJSON("data/variants.json"),
-        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"),
-        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js")
-    ]).then(function (responses) {
+
+    loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js").then(function () {
+        return Promise.all([
+            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"),
+            loadJSON("data/variants.json")
+        ]);
+    }).then(function (responses) {
         var config = {
             apiKey: "AIzaSyCHj7h6q2cG8h3yRDvofHiDP3Y4H4wY6t4",
             authDomain: "sgmobilegallery.firebaseapp.com",

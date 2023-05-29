@@ -663,12 +663,13 @@ function initDock() {
     }
 
     function initRating() {
-        Promise.all([
-            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"),
-            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"),
-            loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"),
-            loadScript("https://api.ipify.org?format=jsonp&callback=setIP")
-        ]).then(function () {
+        loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js").then(function () {
+            return Promise.all([
+                loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"),
+                loadScript("https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"),
+                loadScript("https://api.ipify.org?format=jsonp&callback=setIP")
+            ]);
+        }).then(function () {
             var config = {
                 apiKey: "AIzaSyCHj7h6q2cG8h3yRDvofHiDP3Y4H4wY6t4",
                 authDomain: "sgmobilegallery.firebaseapp.com",
