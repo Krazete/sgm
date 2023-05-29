@@ -157,11 +157,16 @@ function setRatings(subkey) {
     return getRatings(subkey).then(function () {
         var sortedKeys = Object.keys(variants).sort(byRating);
         for (var key of sortedKeys) {
-            var grade = Math.max(1, Math.round(2 * variants[key][subkey].rating)) || 1;
-            var row = document.getElementsByClassName(variants[key].base)[0];
-            var cell = row.cells[grade];
-            var avatar = createAvatar(key);
-            cell.appendChild(avatar);
+            var grade = Math.round(variants[key][subkey].rating) || 0;
+            if (grade < 0 || grade > 5) {
+                console.warn("Invalid", subkey, "rating for", key + ":", grade);
+            }
+            else {
+                var row = document.getElementsByClassName(variants[key].base)[0];
+                var cell = row.cells[grade + 1];
+                var avatar = createAvatar(key);
+                cell.appendChild(avatar);
+            }
         }
     });
 }

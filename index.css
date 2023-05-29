@@ -763,6 +763,10 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 .loading #ratings-table {
     display: none;
 }
+#ratings-table td {
+    max-width: 235px;
+    overflow: hidden;
+}
 
 #ratings-table td.tagged:before {
     background-image: url(image/official/star01.png);
@@ -782,8 +786,9 @@ html[lang='pt-br'] #sort-type + label:before {content: 'TIPO';}
 #ratings-table .avatar {
     position: relative;
     width: auto;
+    vertical-align: bottom;
     display: inline-block;
-    margin: 5px;
+    margin: 2px;
 }
 
 #ratings-table .frame {
