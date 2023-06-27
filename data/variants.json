@@ -1,4 +1,81 @@
 {
+    "aEgo": {
+        "base": "do",
+        "element": 1,
+        "fandom": "Altar Ego",
+        "name": "Char_Double_D_V4_Name",
+        "quote": "Variant_Description_Double_AltarEgo",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Double_SA_InfernalMachinations_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Double_SA_InfernalMachinations_Desc2_v3",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                25.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Double_SA_InfernalMachinations_Title"
+        },
+        "stats": [
+            {
+                "attack": 788,
+                "lifebar": 2501
+            }
+        ],
+        "tier": 3
+    },
     "aForce": {
         "base": "ce",
         "element": 3,
@@ -1178,6 +1255,83 @@
             }
         ],
         "tier": 1
+    },
+    "bStreak": {
+        "base": "fi",
+        "element": 2,
+        "fandom": "Blue Streak",
+        "name": "Char_Filia_D_V3_Name",
+        "quote": "Variant_Description_Filia_BlueStreak",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Filia_SA_GottaGoFast_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                100.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                98.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                95.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Filia_SA_GottaGoFast_Desc2_v3",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                3
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                6.0,
+                                3
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                7.0,
+                                3
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Filia_SA_GottaGoFast_Title"
+        },
+        "stats": [
+            {
+                "attack": 706,
+                "lifebar": 2919
+            }
+        ],
+        "tier": 3
     },
     "bTop": {
         "base": "ce",
@@ -3207,6 +3361,81 @@
             }
         ],
         "tier": 0
+    },
+    "fFang": {
+        "base": "va",
+        "element": 4,
+        "fandom": "Final Fang",
+        "name": "Char_Valentine_G_V5_Name",
+        "quote": "Variant_Description_Valentine_FinalFang",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Valentine_SA_1001Techniques_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1,
+                                7.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Valentine_SA_1001Techniques_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.15000000596046448,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.20000000298023224,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Valentine_SA_1001Techniques_Title"
+        },
+        "stats": [
+            {
+                "attack": 294,
+                "lifebar": 1588
+            },
+            {
+                "attack": 529,
+                "lifebar": 2858
+            }
+        ],
+        "tier": 2
     },
     "fFav": {
         "base": "be",
@@ -8595,6 +8824,75 @@
         ],
         "tier": 2
     },
+    "pKid": {
+        "base": "um",
+        "element": 5,
+        "fandom": "Psykid",
+        "name": "Char_Umbrella_G_V4_Name",
+        "quote": "Variant_Description_Umbrella_Psykid",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Umbrella_SA_MindOverMatter_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Umbrella_SA_MindOverMatter_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Umbrella_SA_MindOverMatter_Title"
+        },
+        "stats": [
+            {
+                "attack": 375,
+                "lifebar": 1390
+            },
+            {
+                "attack": 675,
+                "lifebar": 2502
+            }
+        ],
+        "tier": 2
+    },
     "pPlum": {
         "base": "pe",
         "element": 0,
@@ -11405,6 +11703,77 @@
         ],
         "tier": 3
     },
+    "sRose": {
+        "base": "an",
+        "element": 0,
+        "fandom": "Starlight Rose",
+        "name": "Char_Annie_D_V4_Name",
+        "quote": "Variant_Description_Annie_StarlightRose",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Annie_SA_GemPolish_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Annie_SA_GemPolish_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                3
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                6.0,
+                                3
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                7.0,
+                                3
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Annie_SA_GemPolish_Title"
+        },
+        "stats": [
+            {
+                "attack": 521,
+                "lifebar": 4074
+            }
+        ],
+        "tier": 3
+    },
     "sSalt": {
         "base": "pa",
         "element": 5,
@@ -13878,7 +14247,7 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_BlackDahlia_SA_OccultStatus_Desc",
+                    "description": "Char_BlackDahlia_SA_OccultStatus_Desc_Revised",
                     "tiers": [
                         {
                             "level": 1,
@@ -13901,7 +14270,7 @@
                     ]
                 },
                 {
-                    "description": "Char_BlackDahlia_SA_OccultStatus_Desc2",
+                    "description": "Char_BlackDahlia_SA_OccultStatus_Desc2_Revised",
                     "tiers": [
                         {
                             "level": 1,
@@ -14655,6 +15024,75 @@
             }
         ],
         "tier": 1
+    },
+    "wildH": {
+        "base": "bd",
+        "element": 1,
+        "fandom": "Red Rider",
+        "name": "Char_BlackDahlia_G_V5_Name",
+        "quote": "Variant_Description_BlackDahlia_WildHuntress",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_HotPursuit_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_HotPursuit_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_HotPursuit_Title"
+        },
+        "stats": [
+            {
+                "attack": 292,
+                "lifebar": 1985
+            },
+            {
+                "attack": 526,
+                "lifebar": 3573
+            }
+        ],
+        "tier": 2
     },
     "wishfulEater": {
         "base": "um",
