@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.75">
-    <meta name="description" content="A move gallery for Skullgirls Mobile. View the stats and abilities of all special moves and blockbusters, translated in any language offered in the game.">
+    <meta name="description" content="A artifact gallery for Skullgirls Mobile. View the abilities of all artifacts, translated in any language offered in the game.">
     <link rel="shortcut icon" type="image/png" href="image/official/Button_Modifiers.png">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <title>Skullgirls Mobile Move Gallery</title>
-    <script type="application/javascript" src="move.js"></script>
+    <title>Skullgirls Mobile Artifact Gallery</title>
+    <script type="application/javascript" src="artifact.js"></script>
 </head>
 <body>
     <div id="header">
         <span class="banner cinematic gold-gradient" id="skullgirls-mobile"></span>
         <wbr>
-        <span class="move-gallery banner cinematic silver-gradient"></span>
+        <span class="banner cinematic silver-gradient">Artifact Gallery</span>
         <div class="ribbon">
             <div class="scroller">
                 <div>
@@ -25,9 +25,9 @@
                     |
                     <a href="index.html" class="fighters"></a>
                     |
-                    <a href="catalysts.html" class="catalysts"></a>
+                    <a href="moves.html" class="moves"></a>
                     |
-                    <a href="artifacts.html">Artifacts</a>
+                    <a href="catalysts.html" class="catalysts"></a>
                     |
                     <a href="ratings.html" class="ratings"></a>
                 </div>
@@ -62,8 +62,8 @@
             <div class="scroller">
                 <div>
                     <div>
-                        <input type="radio" name="search" id="search-mn">
-                        <label for="search-mn"></label>
+                        <input type="radio" name="search" id="search-an">
+                        <label for="search-an">Artifact Name</label>
                     </div>
                     <div>
                         <input type="radio" name="search" id="search-d">
@@ -86,18 +86,6 @@
                         <label for="filter-cancel"><img src="image/official/constraints_no.png" class="icon"></label>
                     </div>
                     <div class="divider"></div>
-                    <div class="subset" id="badges">
-                        <input type="checkbox" id="filter-sms">
-                        <label for="filter-sms">
-                            <div class="icon">
-                                <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
-                                <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
-                            </div>
-                        </label>
-                        <input type="checkbox" id="filter-bbs">
-                        <label for="filter-bbs"><img src="image/official/BB-Frame1.png" class="icon"></label>
-                    </div>
-                    <div class="divider"></div>
                     <div class="subset" id="medals">
                         <input type="checkbox" id="filter-bronze">
                         <label for="filter-bronze"><img src="image/official/constraints_bronze.png" class="icon"></label>
@@ -105,6 +93,21 @@
                         <label for="filter-silver"><img src="image/official/constraints_silver.png" class="icon"></label>
                         <input type="checkbox" id="filter-gold">
                         <label for="filter-gold"><img src="image/official/constraints_gold.png" class="icon"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="elements">
+                        <input type="checkbox" id="filter-fire">
+                        <label for="filter-fire"><img src="image/official/ElementalFireBackless.png" class="icon"></label>
+                        <input type="checkbox" id="filter-water">
+                        <label for="filter-water"><img src="image/official/ElementalWaterBackless.png" class="icon"></label>
+                        <input type="checkbox" id="filter-wind">
+                        <label for="filter-wind"><img src="image/official/ElementalWindBackless.png" class="icon"></label>
+                        <input type="checkbox" id="filter-light">
+                        <label for="filter-light"><img src="image/official/ElementalLightBackless.png" class="icon"></label>
+                        <input type="checkbox" id="filter-dark">
+                        <label for="filter-dark"><img src="image/official/ElementalDarkBackless.png" class="icon"></label>
+                        <input type="checkbox" id="filter-neutral">
+                        <label for="filter-neutral"><img src="image/official/ElementalNeutralBackless.png" class="icon"></label>
                     </div>
                     <div class="divider"></div>
                     <div class="subset" id="mastery">
@@ -142,6 +145,8 @@
                         <label for="filter-um"><img src="image/official/Umbrella_MasteryIcon.png" class="icon"></label>
                         <input type="checkbox" id="filter-va">
                         <label for="filter-va"><img src="image/official/Valentine_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-xx">
+                        <label for="filter-xx"><img src="image/Random_MasteryIcon.png" class="icon"></label>
                     </div>
                 </div>
             </div>
@@ -151,14 +156,10 @@
                         <span class="tagged cinematic silver-gradient" id="sort-label"></span>
                     </div>
                     <div class="divider"></div>
-                    <input type="radio" name="sort" id="sort-damage">
-                    <label for="sort-damage" class="damage"></label>
                     <input type="radio" name="sort" id="sort-abc">
                     <label for="sort-abc"></label>
                     <input type="radio" name="sort" id="sort-tier">
                     <label for="sort-tier"></label>
-                    <input type="radio" name="sort" id="sort-type">
-                    <label for="sort-type"></label>
                 </div>
             </div>
         </div>
@@ -166,29 +167,6 @@
             <div id="dock-left">
                 <img src="image/official/ZoomOut.png" class="button" id="zoom-out">
                 <img src="image/official/ZoomIn.png" class="button" id="zoom-in">
-            </div>
-            <div class="scroller" id="level-menu">
-                <div>
-                    <div class="label-flexbox">
-                        <span class="cinematic silver-gradient" id="level-label"></span>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="subset">
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="15" value="15" class="cinematic" id="level-bronze">
-                            <img src="image/official/BronzeLevel.png" class="icon">
-                        </div>
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="15" value="15" class="cinematic" id="level-silver">
-                            <img src="image/official/SilverLevel.png" class="icon">
-                        </div>
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="15" value="15" class="cinematic" id="level-gold">
-                            <img src="image/official/GoldLevel.png" class="icon">
-                        </div>
-                        <input type="range" min="1" max="15" value="15" class="fill-row" id="level-range">
-                    </div>
-                </div>
             </div>
             <div id="dock-right">
                 <img src="image/official/icon_filter.png" class="icon" id="settings">

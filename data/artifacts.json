@@ -1,0 +1,803 @@
+{
+    "art-aOfSpade-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_AceOfSpades_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_AceOfSpades"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_AceOfSpades"
+    },
+    "art-abArm-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Char_Squigly_SA_RigorMortis_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_AblativeArmor"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_AblativeArmor"
+    },
+    "art-appJuice-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_AppleJuice_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_AppleJuice"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_AppleJuice"
+    },
+    "art-dagFeast-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_DagonianFeast_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_DagonianFeast"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_DagonianFeast"
+    },
+    "art-darkGrim-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_DarkGrimoire_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "Artifact_DarkGrimoire_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_DarkGrimoire"
+        },
+        "constraints": {
+            "elements": [
+                4
+            ]
+        },
+        "tier": 2,
+        "title": "Artifact_DarkGrimoire"
+    },
+    "art-elemDmg-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_ElemDamage_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_ElemDamage_B"
+        },
+        "constraints": {},
+        "tier": 0,
+        "title": "Artifact_ElemDamage_B"
+    },
+    "art-elemDmg-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_ElemDamage_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_ElemDamage_G"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_ElemDamage_G"
+    },
+    "art-elemDmg-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_ElemDamage_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_ElemDamage_S"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_ElemDamage_S"
+    },
+    "art-explTips-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_ExplosiveTips_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                0.15,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_ExplosiveTips"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_ExplosiveTips"
+    },
+    "art-fishCleave-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_FishboneCleaver_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_FishboneCleaver"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_FishboneCleaver"
+    },
+    "art-flashBang-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_Flashbangs_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                5.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_Flashbangs"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_Flashbangs"
+    },
+    "art-fogMach-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_FogMachine_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                15
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_FogMachine"
+        },
+        "constraints": {
+            "elements": [
+                3
+            ]
+        },
+        "tier": 2,
+        "title": "Artifact_FogMachine"
+    },
+    "art-gehenObliv-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_GehennasOblivion_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_GehennasOblivion"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_GehennasOblivion"
+    },
+    "art-hitList-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_HitList_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_HitList"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_HitList"
+    },
+    "art-hotRod-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_HotRod_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.15000000596046448,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Artifact_HotRod_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                2,
+                                20.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_HotRod"
+        },
+        "constraints": {
+            "elements": [
+                1
+            ]
+        },
+        "tier": 2,
+        "title": "Artifact_HotRod"
+    },
+    "art-iceEm-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_IceEm_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.15000000596046448,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Artifact_IceEm_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                5.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_IceEm"
+        },
+        "constraints": {
+            "elements": [
+                2
+            ]
+        },
+        "tier": 2,
+        "title": "Artifact_IceEm"
+    },
+    "art-immOfLam-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_ImmortalityOfLamia_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_ImmortalityOfLamia"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_ImmortalityOfLamia"
+    },
+    "art-ironCurt-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_IronCurtain_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_IronCurtain"
+        },
+        "constraints": {},
+        "tier": 0,
+        "title": "Artifact_IronCurtain"
+    },
+    "art-jOfClub-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_JackOfClubs_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_JackOfClubs"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_JackOfClubs"
+    },
+    "art-jellyLant-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_JellyfishLantern_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_JellyfishLantern"
+        },
+        "constraints": {},
+        "tier": 0,
+        "title": "Artifact_JellyfishLantern"
+    },
+    "art-kOfDia-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_KingOfDiamonds_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_KingOfDiamonds"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_KingOfDiamonds"
+    },
+    "art-knuckDust-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_KnuckleDusters_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                0.15,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_KnuckleDusters"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_KnuckleDusters"
+    },
+    "art-parasImpl-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_ParasiticImplants_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                20.0,
+                                20.0,
+                                20.0,
+                                1.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_ParasiticImplants"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_ParasiticImplants"
+    },
+    "art-preOfAeon-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_PrescienceOfAeon_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Artifact_PrescienceOfAeon_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_PrescienceOfAeon"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_PrescienceOfAeon"
+    },
+    "art-priorContr-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_PriorityContract_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                60
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_PriorityContract"
+        },
+        "constraints": {},
+        "tier": 0,
+        "title": "Artifact_PriorityContract"
+    },
+    "art-qOfHeart-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_QueenOfHearts_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_QueenOfHearts"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_QueenOfHearts"
+    },
+    "art-rustMan-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_RustyManacles_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                7.0,
+                                15
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_RustyManacles"
+        },
+        "constraints": {},
+        "tier": 0,
+        "title": "Artifact_RustyManacles"
+    },
+    "art-soupDump-b": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_SoupDumplings_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_SoupDumplings"
+        },
+        "constraints": {},
+        "tier": 0,
+        "title": "Artifact_SoupDumplings"
+    },
+    "art-stageSpot-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_StageSpotlight_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_StageSpotlight"
+        },
+        "constraints": {
+            "elements": [
+                5
+            ]
+        },
+        "tier": 2,
+        "title": "Artifact_StageSpotlight"
+    },
+    "art-supChrg-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_Supercharger_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0,
+                                0.25,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_Supercharger"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_Supercharger"
+    },
+    "art-timeBalm-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_TimeBalm_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_TimeBalm"
+        },
+        "constraints": {},
+        "tier": 1,
+        "title": "Artifact_TimeBalm"
+    },
+    "art-yearnVen-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "Artifact_YearningOfVenus_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0,
+                                20.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Artifact_YearningOfVenus"
+        },
+        "constraints": {},
+        "tier": 2,
+        "title": "Artifact_YearningOfVenus"
+    }
+}
