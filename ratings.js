@@ -101,7 +101,7 @@ function handleMissingPortrait() {
     var avatar = backdrop.parentElement.parentElement;
 
     portrait.classList.add("hidden");
-    avatar.classList.add("missing-portrait");
+    avatar.classList.add("unloaded");
 }
 
 var tiers = ["bronze", "silver", "gold", "diamond"];

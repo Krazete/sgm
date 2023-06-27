@@ -393,12 +393,14 @@ function initCollection(responses) {
             }
             else if (abilityData.features) { /* signature and marquee abilities */
                 for (var i = 0; i < abilityData.features.length; i++) {
-                    var description = document.createElement("div");
-                        description.className = [
-                            type + "-" + i,
-                            "description"
-                        ].join(" ");
-                    ability.appendChild(description);
+                    if (abilityData.features[i].description) { /* skip if empty */
+                        var description = document.createElement("div");
+                            description.className = [
+                                type + "-" + i,
+                                "description"
+                            ].join(" ");
+                        ability.appendChild(description);
+                    }
                 }
             }
             else { /* prestige abilities */

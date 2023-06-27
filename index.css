@@ -1068,12 +1068,18 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .wind .backdrop {background-image: radial-gradient(#9f8, #082);}
 .dark .backdrop {background-image: radial-gradient(#eae, #525);}
 .light .backdrop {background-image: radial-gradient(#fff, #ec5);}
-.neutral .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#ccc, #888);}
-.fire .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fb7, #d00);}
-.water .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#5ff, #06c);}
-.wind .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#9f8, #082);}
-.dark .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#eae, #525);}
-.light .unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fff, #ec5);}
+.neutral .unloaded .backdrop,
+.neutral.unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#ccc, #888);}
+.fire .unloaded .backdrop,
+.fire.unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fb7, #d00);}
+.water .unloaded .backdrop,
+.water.unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#5ff, #06c);}
+.wind .unloaded .backdrop,
+.wind.unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#9f8, #082);}
+.dark .unloaded .backdrop,
+.dark.unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#eae, #525);}
+.light .unloaded .backdrop,
+.light.unloaded .backdrop {background: url(image/RandomBackgroundTransparent.png) 0 0 / contain, radial-gradient(#fff, #ec5);}
 
 .backdrop.hallow1:after {
     background-image: url(image/official/Blood1.png);
