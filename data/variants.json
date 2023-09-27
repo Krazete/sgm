@@ -1256,6 +1256,98 @@
         ],
         "tier": 1
     },
+    "bShell": {
+        "base": "pa",
+        "element": 0,
+        "fandom": "Bombshell",
+        "name": "Char_Parasoul_D_V3_Name",
+        "quote": "Variant_Description_Parasoul_Bombshell_Alt",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Parasoul_SA_Showstopper_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Parasoul_SA_Showstopper_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.5
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Parasoul_SA_Showstopper_Title"
+        },
+        "stats": [
+            {
+                "attack": 613,
+                "lifebar": 3704
+            }
+        ],
+        "tier": 3
+    },
     "bStreak": {
         "base": "fi",
         "element": 2,
@@ -1310,6 +1402,23 @@
                                 7.0,
                                 3
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 },
@@ -1547,6 +1656,102 @@
             }
         ],
         "tier": 2
+    },
+    "boneBelle": {
+        "base": "ma",
+        "element": 1,
+        "fandom": "Phantom Wrangler",
+        "name": "Char_Marie_S_V1_Name",
+        "quote": "Variant_Description_Marie_PhantomWrangler",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_OutToPasture_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                30.0,
+                                0.5,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                30.0,
+                                0.5,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                30.0,
+                                0.5,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_OutToPasture_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_OutToPasture_Title"
+        },
+        "stats": [
+            {
+                "attack": 140,
+                "lifebar": 851
+            },
+            {
+                "attack": 252,
+                "lifebar": 1532
+            },
+            {
+                "attack": 454,
+                "lifebar": 2757
+            }
+        ],
+        "tier": 1
     },
     "cCutter": {
         "base": "fi",
@@ -2127,6 +2332,75 @@
             {
                 "attack": 446,
                 "lifebar": 3931
+            }
+        ],
+        "tier": 2
+    },
+    "dArtist": {
+        "base": "sq",
+        "element": 0,
+        "fandom": "Demon Artist",
+        "name": "Char_Squigly_G_V5_Name",
+        "quote": "Variant_Description_Squigly_DemonArtist",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Squigly_SA_MonsterWithin_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Squigly_SA_MonsterWithin_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Squigly_SA_MonsterWithin_Title"
+        },
+        "stats": [
+            {
+                "attack": 294,
+                "lifebar": 1787
+            },
+            {
+                "attack": 529,
+                "lifebar": 3217
             }
         ],
         "tier": 2
@@ -3884,6 +4158,80 @@
         ],
         "tier": 3
     },
+    "fSoldier": {
+        "base": "mf",
+        "element": 4,
+        "fandom": "Foot Soldier",
+        "name": "Char_MsFortune_D_V3_Name",
+        "quote": "Variant_Description_MsFortune_FootSoldier",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_MsFortune_SA_EyeOnTarget_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                7.0,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75,
+                                7.0,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0,
+                                7.0,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_MsFortune_SA_EyeOnTarget_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                100.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                100.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                100.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_MsFortune_SA_EyeOnTarget_Title"
+        },
+        "stats": [
+            {
+                "attack": 645,
+                "lifebar": 3568
+            }
+        ],
+        "tier": 3
+    },
     "fTrap": {
         "base": "pw",
         "element": 3,
@@ -4237,6 +4585,75 @@
             }
         ],
         "tier": 3
+    },
+    "gDigger": {
+        "base": "ma",
+        "element": 5,
+        "fandom": "Gravedigger",
+        "name": "Char_Marie_G_V3_Name",
+        "quote": "Variant_Description_Marie_Gravedigger",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_DownToEarth_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_DownToEarth_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_DownToEarth_Title"
+        },
+        "stats": [
+            {
+                "attack": 256,
+                "lifebar": 1985
+            },
+            {
+                "attack": 461,
+                "lifebar": 3573
+            }
+        ],
+        "tier": 2
     },
     "gFan": {
         "base": "pw",
@@ -6661,6 +7078,75 @@
         ],
         "tier": 2
     },
+    "lRegent": {
+        "base": "ma",
+        "element": 4,
+        "fandom": "Dark Horse",
+        "name": "Char_Marie_G_V1_Name",
+        "quote": "Variant_Description_Marie_DarkHorse",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_BadMoonRising_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_BadMoonRising_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_BadMoonRising_Title"
+        },
+        "stats": [
+            {
+                "attack": 294,
+                "lifebar": 1787
+            },
+            {
+                "attack": 529,
+                "lifebar": 3217
+            }
+        ],
+        "tier": 2
+    },
     "lethalW": {
         "base": "bd",
         "element": 2,
@@ -6964,6 +7450,75 @@
         ],
         "tier": 0
     },
+    "mCorpse": {
+        "base": "ma",
+        "element": 2,
+        "fandom": "Octoplasm",
+        "name": "Char_Marie_G_V2_Name",
+        "quote": "Variant_Description_Marie_MarineCorpse",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_DeadInTheWater_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_DeadInTheWater_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                35.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_DeadInTheWater_Title"
+        },
+        "stats": [
+            {
+                "attack": 218,
+                "lifebar": 2184
+            },
+            {
+                "attack": 392,
+                "lifebar": 3931
+            }
+        ],
+        "tier": 2
+    },
     "mDear": {
         "base": "el",
         "element": 5,
@@ -7176,6 +7731,82 @@
             {
                 "attack": 577,
                 "lifebar": 1837
+            }
+        ],
+        "tier": 1
+    },
+    "mOfHonor": {
+        "base": "ma",
+        "element": 5,
+        "fandom": "Maid of Honor",
+        "name": "Char_Marie_S_V3_Name",
+        "quote": "Variant_Description_Marie_MaidOfHonor",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_ValorMortis_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.3499999940395355,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.5,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_ValorMortis_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.5
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_ValorMortis_Title"
+        },
+        "stats": [
+            {
+                "attack": 104,
+                "lifebar": 1040
+            },
+            {
+                "attack": 187,
+                "lifebar": 1872
+            },
+            {
+                "attack": 337,
+                "lifebar": 3370
             }
         ],
         "tier": 1
@@ -7618,6 +8249,89 @@
             }
         ],
         "tier": 2
+    },
+    "mmaid": {
+        "base": "ma",
+        "element": 4,
+        "fandom": "Bare Bones",
+        "name": "Char_Marie_B_V1_Name",
+        "quote": "Variant_Description_Marie_BareBones",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_FleshedOut_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_FleshedOut_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                1,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                1,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                1,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_FleshedOut_Title"
+        },
+        "stats": [
+            {
+                "attack": 58,
+                "lifebar": 450
+            },
+            {
+                "attack": 104,
+                "lifebar": 810
+            },
+            {
+                "attack": 188,
+                "lifebar": 1458
+            },
+            {
+                "attack": 338,
+                "lifebar": 2624
+            }
+        ],
+        "tier": 0
     },
     "model": {
         "base": "an",
@@ -9041,6 +9755,81 @@
         ],
         "tier": 2
     },
+    "pProdigy": {
+        "base": "pe",
+        "element": 3,
+        "fandom": "Primal Prodigy",
+        "name": "Char_Peacock_G_V5_Name",
+        "quote": "Variant_Description_Peacock_PrimalProdigy",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Peacock_SA_MonkeyBusiness_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                5.0,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                5.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                5.0,
+                                4.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Peacock_SA_MonkeyBusiness_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                8.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Peacock_SA_MonkeyBusiness_Title"
+        },
+        "stats": [
+            {
+                "attack": 326,
+                "lifebar": 1544
+            },
+            {
+                "attack": 587,
+                "lifebar": 2779
+            }
+        ],
+        "tier": 2
+    },
     "pShoot": {
         "base": "pe",
         "element": 3,
@@ -9495,6 +10284,87 @@
             {
                 "attack": 526,
                 "lifebar": 2779
+            }
+        ],
+        "tier": 2
+    },
+    "pWrangler": {
+        "base": "ma",
+        "element": 3,
+        "fandom": "Gust Buster",
+        "name": "Char_Marie_G_V4_Name",
+        "quote": "Variant_Description_Marie_GustBuster",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_MansionImpossible_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                25.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                35.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_MansionImpossible_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                35.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_MansionImpossible_Title"
+        },
+        "stats": [
+            {
+                "attack": 256,
+                "lifebar": 1985
+            },
+            {
+                "attack": 461,
+                "lifebar": 3573
             }
         ],
         "tier": 2
@@ -11198,6 +12068,82 @@
         ],
         "tier": 3
     },
+    "sCharmer": {
+        "base": "ma",
+        "element": 3,
+        "fandom": "Snake Charmer",
+        "name": "Char_Marie_S_V2_Name",
+        "quote": "Variant_Description_Marie_SnakeCharmer",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_InfernalFavor_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                80.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                65.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_InfernalFavor_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_InfernalFavor_Title"
+        },
+        "stats": [
+            {
+                "attack": 122,
+                "lifebar": 945
+            },
+            {
+                "attack": 220,
+                "lifebar": 1701
+            },
+            {
+                "attack": 395,
+                "lifebar": 3062
+            }
+        ],
+        "tier": 1
+    },
     "sCross": {
         "base": "pa",
         "element": 3,
@@ -11418,6 +12364,81 @@
             {
                 "attack": 529,
                 "lifebar": 2858
+            }
+        ],
+        "tier": 2
+    },
+    "sGiver": {
+        "base": "ce",
+        "element": 4,
+        "fandom": "Scare Giver",
+        "name": "Char_Cerebella_G_V6_Name",
+        "quote": "Variant_Description_Cerebella_ScareGiver",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Cerebella_SA_FurociousRoar_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                8.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Cerebella_SA_FurociousRoar_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.05000000074505806,
+                                10.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.10000000149011612,
+                                10.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.15000000596046448,
+                                10.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Cerebella_SA_FurociousRoar_Title"
+        },
+        "stats": [
+            {
+                "attack": 326,
+                "lifebar": 1985
+            },
+            {
+                "attack": 587,
+                "lifebar": 3573
             }
         ],
         "tier": 2
@@ -11743,22 +12764,22 @@
                         {
                             "level": 1,
                             "values": [
-                                5.0,
-                                3
+                                3.0,
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                6.0,
-                                3
+                                3.0,
+                                6.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                7.0,
-                                3
+                                3.0,
+                                7.0
                             ]
                         }
                     ]
@@ -11924,6 +12945,157 @@
             }
         ],
         "tier": 0
+    },
+    "sSeeker": {
+        "base": "ma",
+        "element": 4,
+        "fandom": "Heartless",
+        "name": "Char_Marie_D_V2_Name",
+        "quote": "Variant_Description_Marie_HeartlessSeeker",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_AbyssalAssault_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                35.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_AbyssalAssault_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_AbyssalAssault_Title"
+        },
+        "stats": [
+            {
+                "attack": 617,
+                "lifebar": 3753
+            }
+        ],
+        "tier": 3
+    },
+    "sSeraph": {
+        "base": "ma",
+        "element": 2,
+        "fandom": "Megalomaniac",
+        "name": "Char_Marie_D_V1_Name",
+        "quote": "Variant_Description_Marie_SansSeraph",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_JudgementDay_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                40.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                30.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_JudgementDay_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                15,
+                                50.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                15,
+                                75.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                15,
+                                100.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_JudgementDay_Title"
+        },
+        "stats": [
+            {
+                "attack": 457,
+                "lifebar": 4586
+            }
+        ],
+        "tier": 3
     },
     "sShine": {
         "base": "an",
@@ -13421,6 +14593,83 @@
         ],
         "tier": 0
     },
+    "tMystic": {
+        "base": "ma",
+        "element": 1,
+        "fandom": "Moody Magus",
+        "name": "Char_Marie_B_V2_Name",
+        "quote": "Variant_Description_Marie_MoodyMagus",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_MixItUp_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                30.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_MixItUp_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.5
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_MixItUp_Title"
+        },
+        "stats": [
+            {
+                "attack": 73,
+                "lifebar": 446
+            },
+            {
+                "attack": 131,
+                "lifebar": 803
+            },
+            {
+                "attack": 237,
+                "lifebar": 1445
+            },
+            {
+                "attack": 426,
+                "lifebar": 2601
+            }
+        ],
+        "tier": 0
+    },
     "tThief": {
         "base": "mf",
         "element": 1,
@@ -14668,6 +15917,83 @@
             }
         ],
         "tier": 1
+    },
+    "wCrawler": {
+        "base": "pw",
+        "element": 2,
+        "fandom": "Web Crawler",
+        "name": "Char_Painwheel_D_V3_Name",
+        "quote": "Variant_Description_Painwheel_WebCrawler",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Painwheel_SA_JustHangingOut_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.5,
+                                10.0,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.5,
+                                10.0,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.5,
+                                10.0,
+                                8.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Painwheel_SA_JustHangingOut_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612,
+                                1,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.11999999731779099,
+                                1,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.15000000596046448,
+                                1,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Painwheel_SA_JustHangingOut_Title"
+        },
+        "stats": [
+            {
+                "attack": 645,
+                "lifebar": 3056
+            }
+        ],
+        "tier": 3
     },
     "wStalk": {
         "base": "mf",

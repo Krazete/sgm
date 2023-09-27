@@ -7956,6 +7956,928 @@
         "title": "Fukua_BB5_T3_TwiceShy_Title",
         "type": 1
     },
+    "ma-bb-carpal-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB3_CarpalPummel",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.20000000298023224,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.20000000298023224,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.3499999940395355,
+                                4.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB3_T1_CarpalPummel_Title"
+        },
+        "attack": [
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142,
+            1.149999976158142,
+            1.149999976158142,
+            1.25
+        ],
+        "base": "ma",
+        "cost": 4,
+        "damage": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6
+        ],
+        "gear": 4,
+        "icon": "marie_bb3_carpalpummel.png",
+        "strength": 1,
+        "tier": 2,
+        "title": "Marie_BB3_T1_CarpalPummel_Title",
+        "type": 1
+    },
+    "ma-bb-carpal-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB3_CarpalPummel",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.20000000298023224,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.20000000298023224,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.3499999940395355,
+                                4.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB3_T1_CarpalPummel_Title"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142
+        ],
+        "base": "ma",
+        "cost": 4,
+        "damage": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+        ],
+        "gear": 4,
+        "icon": "marie_bb3_carpalpummel.png",
+        "strength": 1,
+        "tier": 1,
+        "title": "Marie_BB3_T1_CarpalPummel_Title",
+        "type": 1
+    },
+    "ma-bb-hilgard-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB1_T1_HilgardsHowl",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.3499999940395355,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.3499999940395355,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.3499999940395355,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB1_T1_HilgardsHowl_Title"
+        },
+        "attack": [
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142,
+            1.149999976158142,
+            1.149999976158142,
+            1.25
+        ],
+        "base": "ma",
+        "cost": 4,
+        "damage": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6
+        ],
+        "gear": 4,
+        "icon": "marie_bb1_hilgardshowl.png",
+        "strength": 1,
+        "tier": 2,
+        "title": "Marie_BB1_T1_HilgardsHowl_Title",
+        "type": 1
+    },
+    "ma-bb-hilgard-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB1_T1_HilgardsHowl",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.3499999940395355,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.3499999940395355,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.3499999940395355,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB1_T1_HilgardsHowl_Title"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142
+        ],
+        "base": "ma",
+        "cost": 4,
+        "damage": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+        ],
+        "gear": 4,
+        "icon": "marie_bb1_hilgardshowl.png",
+        "strength": 1,
+        "tier": 1,
+        "title": "Marie_BB1_T1_HilgardsHowl_Title",
+        "type": 1
+    },
+    "ma-bb-hoover-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB4_HooverManeuver",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                50.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB4_T2_HooverManeuver_Title"
+        },
+        "attack": [
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142,
+            1.149999976158142,
+            1.149999976158142,
+            1.25
+        ],
+        "base": "ma",
+        "cost": 5,
+        "damage": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6
+        ],
+        "gear": 5,
+        "icon": "marie_bb4_hoovermaneuver.png",
+        "strength": 2,
+        "tier": 2,
+        "title": "Marie_BB4_T2_HooverManeuver_Title",
+        "type": 1
+    },
+    "ma-bb-hoover-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB4_HooverManeuver",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                50.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB4_T2_HooverManeuver_Title"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142
+        ],
+        "base": "ma",
+        "cost": 5,
+        "damage": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+        ],
+        "gear": 5,
+        "icon": "marie_bb4_hoovermaneuver.png",
+        "strength": 2,
+        "tier": 1,
+        "title": "Marie_BB4_T2_HooverManeuver_Title",
+        "type": 1
+    },
+    "ma-bb-repetitive-c": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB6_RepetitiveSkeletonImpact",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                12.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                15.0,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB6_T3_RepetitiveSkeletonImpact_Title"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142
+        ],
+        "base": "ma",
+        "cost": 7,
+        "damage": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+        ],
+        "gear": 6,
+        "icon": "marie_bb6_repetitiveskeletonimpact.png",
+        "strength": 3,
+        "tier": 1,
+        "title": "Marie_BB6_T3_RepetitiveSkeletonImpact_Title",
+        "type": 1
+    },
+    "ma-bb-repetitive-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB6_RepetitiveSkeletonImpact",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                12.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                15.0,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB6_T3_RepetitiveSkeletonImpact_Title"
+        },
+        "attack": [
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142,
+            1.149999976158142,
+            1.149999976158142,
+            1.25
+        ],
+        "base": "ma",
+        "cost": 7,
+        "damage": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6
+        ],
+        "gear": 6,
+        "icon": "marie_bb6_repetitiveskeletonimpact.png",
+        "strength": 3,
+        "tier": 2,
+        "title": "Marie_BB6_T3_RepetitiveSkeletonImpact_Title",
+        "type": 1
+    },
+    "ma-bb-scrub-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB2_ScrubNSmash",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.75
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB2_T1_ScrubNSmash_Title"
+        },
+        "attack": [
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142,
+            1.149999976158142,
+            1.149999976158142,
+            1.25
+        ],
+        "base": "ma",
+        "cost": 3,
+        "damage": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6
+        ],
+        "gear": 3,
+        "icon": "marie_bb2_scrubnsmash.png",
+        "strength": 1,
+        "tier": 2,
+        "title": "Marie_BB2_T1_ScrubNSmash_Title",
+        "type": 1
+    },
+    "ma-bb-scrub-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB2_ScrubNSmash",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                0.75
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB2_T1_ScrubNSmash_Title"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142
+        ],
+        "base": "ma",
+        "cost": 3,
+        "damage": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+        ],
+        "gear": 3,
+        "icon": "marie_bb2_scrubnsmash.png",
+        "strength": 1,
+        "tier": 1,
+        "title": "Marie_BB2_T1_ScrubNSmash_Title",
+        "type": 1
+    },
+    "ma-bb-weight-g": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB5_WeightOfOurWill",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                -2.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                -3.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                -4.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB5_T2_WeightOfOurWill_Title"
+        },
+        "attack": [
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142,
+            1.149999976158142,
+            1.149999976158142,
+            1.25
+        ],
+        "base": "ma",
+        "cost": 6,
+        "damage": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6
+        ],
+        "gear": 5,
+        "icon": "marie_bb5_weightofourwill.png",
+        "strength": 2,
+        "tier": 2,
+        "title": "Marie_BB5_T2_WeightOfOurWill_Title",
+        "type": 1
+    },
+    "ma-bb-weight-s": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB5_WeightOfOurWill",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                -2.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                -3.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                -4.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Marie_BB5_T2_WeightOfOurWill_Title"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.8500000238418579,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            0.949999988079071,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.0499999523162842,
+            1.149999976158142
+        ],
+        "base": "ma",
+        "cost": 6,
+        "damage": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+        ],
+        "gear": 5,
+        "icon": "marie_bb5_weightofourwill.png",
+        "strength": 2,
+        "tier": 1,
+        "title": "Marie_BB5_T2_WeightOfOurWill_Title",
+        "type": 1
+    },
     "mf-bb-dMemb-g": {
         "ability": {
             "features": [

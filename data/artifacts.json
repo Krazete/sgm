@@ -245,7 +245,7 @@
                             "level": 1,
                             "values": [
                                 10.0,
-                                5.0
+                                2.0
                             ]
                         }
                     ]
@@ -465,7 +465,7 @@
         "tier": 1,
         "title": "Artifact_JackOfClubs"
     },
-    "art-jellyLant-b": {
+    "art-jellyLant-s": {
         "ability": {
             "features": [
                 {
@@ -483,7 +483,7 @@
             "title": "Artifact_JellyfishLantern"
         },
         "constraints": {},
-        "tier": 0,
+        "tier": 1,
         "title": "Artifact_JellyfishLantern"
     },
     "art-kOfDia-s": {
@@ -495,7 +495,7 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0
+                                30.0
                             ]
                         }
                     ]
@@ -636,7 +636,7 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0
+                                20.0
                             ]
                         }
                     ]
@@ -657,8 +657,8 @@
                         {
                             "level": 1,
                             "values": [
-                                7.0,
-                                15
+                                0.25,
+                                10.0
                             ]
                         }
                     ]
@@ -748,7 +748,7 @@
         "tier": 1,
         "title": "Artifact_Supercharger"
     },
-    "art-timeBalm-s": {
+    "art-timeBalm-b": {
         "ability": {
             "features": [
                 {
@@ -775,7 +775,7 @@
             "title": "Artifact_TimeBalm"
         },
         "constraints": {},
-        "tier": 1,
+        "tier": 0,
         "title": "Artifact_TimeBalm"
     },
     "art-yearnVen-g": {

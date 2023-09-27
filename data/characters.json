@@ -1533,6 +1533,170 @@
             "title": "Char_Fukua_PA_Title"
         }
     },
+    "ma": {
+        "ca": {
+            "description": "Char_Marie_CA_Desc",
+            "title": "Char_Marie_CA_Title"
+        },
+        "ma": {
+            "features": [
+                {
+                    "description": "Char_Marie_SUP_CorpseArtisan_Feat1_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                16.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                17.0
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                18.0
+                            ]
+                        },
+                        {
+                            "level": 5,
+                            "values": [
+                                19.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 7,
+                            "values": [
+                                21.0
+                            ]
+                        },
+                        {
+                            "level": 8,
+                            "values": [
+                                22.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                23.0
+                            ]
+                        },
+                        {
+                            "level": 10,
+                            "values": [
+                                24.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                25.0
+                            ]
+                        }
+                    ],
+                    "title": "Char_Marie_SUP_CorpseArtisan_Feat1_Title"
+                },
+                {
+                    "description": "Char_Marie_SUP_CorpseArtisan_Feat2_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                16.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                17.0
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                18.0
+                            ]
+                        },
+                        {
+                            "level": 5,
+                            "values": [
+                                19.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 7,
+                            "values": [
+                                21.0
+                            ]
+                        },
+                        {
+                            "level": 8,
+                            "values": [
+                                22.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                23.0
+                            ]
+                        },
+                        {
+                            "level": 10,
+                            "values": [
+                                24.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                25.0
+                            ]
+                        }
+                    ],
+                    "title": "Char_Marie_SUP_CorpseArtisan_Feat2_Title"
+                }
+            ],
+            "title": "Char_Marie_SUP_CorpseArtisan_Title"
+        },
+        "name": "Char_Marie_Name",
+        "pa": {
+            "base": 10.0,
+            "chargeRate": 14.0,
+            "description": "Char_Marie_PA_Desc",
+            "lvlBonus": 0.045,
+            "maxBonus": 0.591796875,
+            "title": "Char_Marie_PA_Title"
+        }
+    },
     "mf": {
         "ca": {
             "description": "Char_MsFortune_CA_Desc",
