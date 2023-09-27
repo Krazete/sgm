@@ -1724,6 +1724,20 @@ html[lang='pt-br'] .sell-price:before {content: 'VENDER';}
     background-color: #0f1824;
 }
 
+.ability.ma { /* .ma defined before .ca, .sa, and .pa because marie */
+    grid-area: ma;
+}
+
+html[lang='en'] .ma .ability-type:before {content: 'MARQUEE ABILITY';}
+html[lang='ja'] .ma .ability-type:before {content: '\30b9 \30bf \30fc \30fb \30d1 \30ef \30fc ';}
+html[lang='fr'] .ma .ability-type:before {content: 'APTITUDE R\00c9 PUTATION';}
+html[lang='de'] .ma .ability-type:before {content: 'PRUNKFERTIGKEIT';}
+html[lang='es'] .ma .ability-type:before {content: 'CAPACIDAD DE CARTEL';}
+html[lang='ko'] .ma .ability-type:before {content: '\ad81 \adf9  \b2a5 \b825 ';}
+html[lang='zh-cn'] .ma .ability-type:before {content: '\5929 \5143 \6280 ';}
+html[lang='ru'] .ma .ability-type:before {content: '\0423 \041d \0418 \041a . \0421 \041f \041e \0421 \041e \0411 \041d .';}
+html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
+
 .ability.ca {
     grid-area: ca;
 }
@@ -1751,20 +1765,6 @@ html[lang='ko'] .sa .ability-type:before {content: '\ace0 \c720  \b2a5 \b825 ';}
 html[lang='zh-cn'] .sa .ability-type:before {content: '\62db \724c \6280 ';}
 html[lang='ru'] .sa .ability-type:before {content: '\041a \043b \044e \0447 \0435 \0432 \043e \0435  \0443 \043c \0435 \043d \0438 \0435 ';}
 html[lang='pt-br'] .sa .ability-type:before {content: 'Habilidade Caracter\00ed stica';}
-
-.ability.ma {
-    grid-area: ma;
-}
-
-html[lang='en'] .ma .ability-type:before {content: 'MARQUEE ABILITY';}
-html[lang='ja'] .ma .ability-type:before {content: '\30b9 \30bf \30fc \30fb \30d1 \30ef \30fc ';}
-html[lang='fr'] .ma .ability-type:before {content: 'APTITUDE R\00c9 PUTATION';}
-html[lang='de'] .ma .ability-type:before {content: 'PRUNKFERTIGKEIT';}
-html[lang='es'] .ma .ability-type:before {content: 'CAPACIDAD DE CARTEL';}
-html[lang='ko'] .ma .ability-type:before {content: '\ad81 \adf9  \b2a5 \b825 ';}
-html[lang='zh-cn'] .ma .ability-type:before {content: '\5929 \5143 \6280 ';}
-html[lang='ru'] .ma .ability-type:before {content: '\0423 \041d \0418 \041a . \0421 \041f \041e \0421 \041e \0411 \041d .';}
-html[lang='pt-br'] .ma .ability-type:before {content: 'HABILIDADE SUPERIOR';}
 
 .ability.pa {
     grid-area: pa;
