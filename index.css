@@ -621,6 +621,9 @@ html[lang='pt-br'] #filter-label:before {content: 'FILTRAR';}
 #mastery {
     grid-template-columns: repeat(9, 1fr);
 }
+.mastery-extra#mastery {
+    grid-template-columns: repeat(10, 1fr);
+}
 
 /* SORT */
 
@@ -1292,6 +1295,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .el .title.tagged:before {background-image: url(image/official/Eliza_MasteryIcon.png);}
 .fi .title.tagged:before {background-image: url(image/official/Filia_MasteryIcon.png);}
 .fu .title.tagged:before {background-image: url(image/official/Fukua_MasteryIcon.png);}
+.ma .title.tagged:before {background-image: url(image/official/Marie_MasteryIcon.png);}
 .mf .title.tagged:before {background-image: url(image/official/MsFortune_MasteryIcon.png);}
 .pw .title.tagged:before {background-image: url(image/official/Painwheel_MasteryIcon.png);}
 .pa .title.tagged:before {background-image: url(image/official/Parasoul_MasteryIcon.png);}
@@ -1300,7 +1304,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .sq .title.tagged:before {background-image: url(image/official/Squigly_MasteryIcon.png);}
 .um .title.tagged:before {background-image: url(image/official/Umbrella_MasteryIcon.png);}
 .va .title.tagged:before {background-image: url(image/official/Valentine_MasteryIcon.png);}
-.xx .title.tagged:before {background-image: url(image/Random_MasteryIcon.png);}
+.xx .title.tagged:before {background-image: url(image/official/Random_MasteryIcon.png);}
 .neutral .title.tagged:before {background-image: url(image/official/ElementalIconNeutral.png);}
 .fire .title.tagged:before {background-image: url(image/official/ElementalIconFire.png);}
 .water .title.tagged:before {background-image: url(image/official/ElementalIconWater.png);}

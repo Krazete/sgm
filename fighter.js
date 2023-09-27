@@ -3,7 +3,7 @@ var userID, userIP, database, now = Date.now();
 
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
-var fighterIDs = ["an", "be", "bb", "bd", "ce", "do", "el", "fi", "fu", "mf", "pw", "pa", "pe", "rf", "sq", "um", "va"];
+var fighterIDs = ["an", "be", "bb", "bd", "ce", "do", "el", "fi", "fu", "ma", "mf", "pw", "pa", "pe", "rf", "sq", "um", "va"];
 
 var cards = [];
 var filterCards;
