@@ -482,8 +482,11 @@ function initCollection(responses) {
 
 function formatNumbers(text) { /* TODO: gray these out at level 0 */
     /* special cases for umbrella */
-    text = text.replace(/<color=#00[0-9a-f]{4}>(.+?)<\/color>/gi, "<span class=\"overstuffed\">$1</span>");
-    text = text.replace(/<color=#ff[0-9a-f]{4}>(.+?)<\/color>/gi, "<span class=\"ravenous\">$1</span>");
+    text = text.replace(/<color=#00d7f9>(.+?)<\/color>/gi, "<span class=\"overstuffed\">$1</span>");
+    text = text.replace(/<color=#ff1a1a>(.+?)<\/color>/gi, "<span class=\"ravenous\">$1</span>");
+    /* special cases for marie */
+    text = text.replace(/<color=#40eff4>(.+?)<\/color>/gi, "<span class=\"revive\">$1</span>");
+    text = text.replace(/<color=#ff9d01>(.+?)<\/color>/gi, "<span class=\"incinerate\">$1</span>");
 
     return text.replace(/NaN/g, "???").replace(/((?:\?\?\?|\d+(?:\.\d+)?)%?)/g, "<span class=\"number\">$1</span>");
 }

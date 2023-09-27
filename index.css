@@ -1815,6 +1815,12 @@ html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
 .ravenous {
     color: #ff1a1a;
 }
+.revive {
+    color: #40eff4;
+}
+.incinerate {
+    color: #ff9d01;
+}
 
 /* WIKIA */
 
