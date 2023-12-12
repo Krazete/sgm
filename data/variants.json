@@ -1,4 +1,95 @@
 {
+    "aComp": {
+        "base": "fu",
+        "element": 0,
+        "fandom": "Apex Complex",
+        "name": "Char_Fukua_D_V4_Name",
+        "quote": "Variant_Description_Fukua_ApexComplex",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Fukua_SA_PanicAttack_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                65.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                50.0,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                35.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Fukua_SA_PanicAttack_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                5.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                5.0,
+                                5.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0,
+                                5.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Fukua_SA_PanicAttack_Title"
+        },
+        "stats": [
+            {
+                "attack": 706,
+                "lifebar": 2919
+            }
+        ],
+        "tier": 3
+    },
     "aEgo": {
         "base": "do",
         "element": 1,
@@ -221,6 +312,87 @@
             }
         ],
         "tier": 3
+    },
+    "aSent": {
+        "base": "rf",
+        "element": 3,
+        "fandom": "Buffer Zone",
+        "name": "Char_RoboFortune_G_V6_Name",
+        "quote": "Variant_Description_RoboFortune_AncientSentry",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_RoboFortune_SA_IntruderProtocol_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_IntruderProtocol_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.10000000149011612,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.10000000149011612,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_RoboFortune_SA_IntruderProtocol_Title"
+        },
+        "stats": [
+            {
+                "attack": 248,
+                "lifebar": 1940
+            },
+            {
+                "attack": 446,
+                "lifebar": 3492
+            }
+        ],
+        "tier": 2
     },
     "aWond": {
         "base": "an",
@@ -6129,6 +6301,95 @@
         ],
         "tier": 2
     },
+    "iDom": {
+        "base": "pa",
+        "element": 1,
+        "fandom": "Indomitable",
+        "name": "Char_Parasoul_G_V6_Name",
+        "quote": "Variant_Description_Parasoul_Indomitable",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Parasoul_SA_BringToHeel_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                60.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                70.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                80.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Parasoul_SA_BringToHeel_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                7.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                7.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Parasoul_SA_BringToHeel_Title"
+        },
+        "stats": [
+            {
+                "attack": 248,
+                "lifebar": 1940
+            },
+            {
+                "attack": 446,
+                "lifebar": 3492
+            }
+        ],
+        "tier": 2
+    },
     "iFiber": {
         "base": "do",
         "element": 1,
@@ -9230,6 +9491,74 @@
         ],
         "tier": 1
     },
+    "oGre": {
+        "base": "be",
+        "element": 5,
+        "fandom": "Ogre Achiever",
+        "name": "Char_Beowulf_D_V4_Name",
+        "quote": "Variant_Description_Beowulf_OgreAchiever",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Beowulf_SA_FeastAndFurious_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.3499999940395355,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.5,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Beowulf_SA_FeastAndFurious_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SA_FeastAndFurious_Title"
+        },
+        "stats": [
+            {
+                "attack": 582,
+                "lifebar": 4074
+            }
+        ],
+        "tier": 3
+    },
     "oMai": {
         "base": "va",
         "element": 1,
@@ -11257,6 +11586,84 @@
         ],
         "tier": 1
     },
+    "rForce": {
+        "base": "an",
+        "element": 1,
+        "fandom": "Cosmic Rebel",
+        "name": "Char_Annie_G_V5_Name",
+        "quote": "Variant_Description_Annie_CosmicRebel",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Annie_SA_ForceOfWill_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10,
+                                10.0,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10,
+                                12.0,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10,
+                                15.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Annie_SA_ForceOfWill_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3.0,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0,
+                                25.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Annie_SA_ForceOfWill_Title"
+        },
+        "stats": [
+            {
+                "attack": 336,
+                "lifebar": 1588
+            },
+            {
+                "attack": 605,
+                "lifebar": 2858
+            }
+        ],
+        "tier": 2
+    },
     "rGing": {
         "base": "pa",
         "element": 1,
@@ -12764,22 +13171,22 @@
                         {
                             "level": 1,
                             "values": [
-                                3.0,
-                                5.0
+                                5.0,
+                                3.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                3.0,
-                                6.0
+                                6.0,
+                                3.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                3.0,
-                                7.0
+                                7.0,
+                                3.0
                             ]
                         }
                     ]
@@ -13157,6 +13564,91 @@
         "stats": [
             {
                 "attack": 613,
+                "lifebar": 3704
+            }
+        ],
+        "tier": 3
+    },
+    "sSold": {
+        "base": "va",
+        "element": 1,
+        "fandom": "Seraph Soldier",
+        "name": "Char_Valentine_D_V4_Name",
+        "quote": "Variant_Description_Valentine_SeraphSoldier",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Valentine_SA_HeartsOnFire_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                0.25
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                0.35
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                0.5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Valentine_SA_HeartsOnFire_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                25.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Valentine_SA_HeartsOnFire_Title"
+        },
+        "stats": [
+            {
+                "attack": 538,
                 "lifebar": 3704
             }
         ],
