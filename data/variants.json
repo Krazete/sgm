@@ -466,6 +466,94 @@
         ],
         "tier": 2
     },
+    "bBandit": {
+        "base": "bb",
+        "element": 4,
+        "fandom": "Brass Bandit",
+        "name": "Char_BigBand_D_V3_Name",
+        "quote": "Variant_Description_BigBand_BrassBandit",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BigBand_SA_RiffWrath_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                3.0,
+                                15
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                3.0,
+                                12
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                3.0,
+                                10
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BigBand_SA_RiffWrath_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BigBand_SA_RiffWrath_Title"
+        },
+        "stats": [
+            {
+                "attack": 617,
+                "lifebar": 4169
+            }
+        ],
+        "tier": 3
+    },
     "bBath": {
         "base": "el",
         "element": 4,
@@ -2142,6 +2230,104 @@
         ],
         "tier": 2
     },
+    "cScout": {
+        "base": "fi",
+        "element": 2,
+        "fandom": "Curl Scout",
+        "name": "Char_Filia_G_V5_Name",
+        "quote": "Variant_Description_Filia_CurlScout",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Filia_SA_DareToDream_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                30.0,
+                                5
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0,
+                                30.0,
+                                5
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                30.0,
+                                5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Filia_SA_DareToDream_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                6.0,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                6.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                6.0,
+                                4.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Filia_SA_DareToDream_Title"
+        },
+        "stats": [
+            {
+                "attack": 248,
+                "lifebar": 1698
+            },
+            {
+                "attack": 446,
+                "lifebar": 3056
+            }
+        ],
+        "tier": 2
+    },
     "cStones": {
         "base": "be",
         "element": 2,
@@ -2717,6 +2903,77 @@
         ],
         "tier": 2
     },
+    "dBreaker": {
+        "base": "pe",
+        "element": 1,
+        "fandom": "Deal Breaker",
+        "name": "Char_Peacock_D_V3_Name",
+        "quote": "Variant_Description_Peacock_DealBreaker",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Peacock_SA_DrawingDead_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Peacock_SA_DrawingDead_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.5,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.5,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Peacock_SA_DrawingDead_Title"
+        },
+        "stats": [
+            {
+                "attack": 788,
+                "lifebar": 2627
+            }
+        ],
+        "tier": 3
+    },
     "dCatch": {
         "base": "pe",
         "element": 5,
@@ -3287,6 +3544,84 @@
             }
         ],
         "tier": 3
+    },
+    "dNaire": {
+        "base": "el",
+        "element": 5,
+        "fandom": "Noble Mogul",
+        "name": "Char_Eliza_G_V6_Name",
+        "quote": "Variant_Description_Eliza_Debonaire",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Eliza_SA_BaskingInGlory_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                30
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                25
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                20
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Eliza_SA_BaskingInGlory_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Eliza_SA_BaskingInGlory_Title"
+        },
+        "stats": [
+            {
+                "attack": 248,
+                "lifebar": 2184
+            },
+            {
+                "attack": 446,
+                "lifebar": 3931
+            }
+        ],
+        "tier": 2
     },
     "dOWint": {
         "base": "sq",
@@ -5052,6 +5387,81 @@
         ],
         "tier": 1
     },
+    "gReaper": {
+        "base": "ma",
+        "element": 3,
+        "fandom": "Grin Reaper",
+        "name": "Char_Marie_G_V5_Name",
+        "quote": "Variant_Description_Marie_GrinReaper",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_KnockEmDead_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15.0,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_KnockEmDead_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2,
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2,
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_KnockEmDead_Title"
+        },
+        "stats": [
+            {
+                "attack": 294,
+                "lifebar": 1787
+            },
+            {
+                "attack": 529,
+                "lifebar": 3217
+            }
+        ],
+        "tier": 2
+    },
     "gShift": {
         "base": "va",
         "element": 4,
@@ -5511,6 +5921,83 @@
             }
         ],
         "tier": 1
+    },
+    "hCaliber": {
+        "base": "bd",
+        "element": 5,
+        "fandom": "Hex Caliber",
+        "name": "Char_BlackDahlia_D_V3_Name",
+        "quote": "Variant_Description_BlackDahlia_HexCaliber",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_FatalAttraction_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_FatalAttraction_Desc2_Alt",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_FatalAttraction_Title"
+        },
+        "stats": [
+            {
+                "attack": 613,
+                "lifebar": 4169
+            }
+        ],
+        "tier": 3
     },
     "hCat": {
         "base": "mf",
