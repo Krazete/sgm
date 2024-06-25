@@ -806,6 +806,11 @@ function initFilterMenu() {
                 fearTheRainbow();
                 return true;
             }
+            else if (query.includes("fel()")) {
+                searchbox.value = "";
+                felExport();
+                return true;
+            }
             else if (searchVN.checked) {
                 if (sanitize(key).includes(query) || sanitize(corpus[variants[key].name]).includes(query)) {
                     return true;
@@ -1519,6 +1524,88 @@ function initCat() {
     }
 
     window.addEventListener("click", throttleSpawn);
+}
+
+function felExport() {
+    function felFormat(feature) {
+        var template = corpus[feature.description];
+        var matches = template.match(/{\s*\d+(?::\d+)?%?\s*}%?/g);
+        var formatted = template.replace(/<.*?>/g, "");
+        if (matches) {
+            for (var match of matches) {
+                var index = parseInt(match.replace(/{\s*(\d+)(?::\d+)?%?\s*}%?/, "$1"));
+                var subs = [];
+                for (var i = 0; i < 3; i++) {
+                    var subi = Math.abs(feature.tiers[i].values[index]);
+                    if (match.includes("%}")) {
+                        subi *= 100;
+                    }
+                    subi = Math.round(subi * 100) / 100; /* round to nearest 100th */
+                    if (subs.length <= 0 || subs[subs.length - 1] != subi) {
+                        subs.push(subi);
+                    }
+                }
+                var substitute = subs.join("/") + (match.includes("%") ? "%" : "");
+                formatted = formatted.replace(match, substitute);
+            }
+        }
+        else {
+            console.warn("No placeholders found in \"" + template + "\".");
+        }
+        if (formatted.match(/NaN/g)) {
+            console.warn("NaN detected within \"" + template + "\.");
+        }
+        return formatted;
+    }
+
+    function felStats(stats) {
+        var baseBoost = 1.5;
+        var treeBoost = 1.46;
+        var maBoost = 0.11;
+        var paBoost = 0.118;
+        var fsBoost = treeBoost + maBoost + paBoost;
+        
+        var i = stats.length - 1;
+        var baseATK = baseBoost * stats[i].attack;
+        var baseHP = baseBoost * stats[i].lifebar;
+
+        var atk = Math.ceil(baseATK + baseATK * 59 / 5);
+        var hp = Math.ceil(baseHP + baseHP * 59 / 5);
+        var fs = Math.ceil(fsBoost * (atk + hp / 6) * 7 / 10);
+
+        return {
+            "atk": stats[0].attack.toLocaleString("en-US"),
+            "hp": stats[0].lifebar.toLocaleString("en-US"),
+            "fs": Math.ceil((stats[0].attack + stats[0].lifebar / 6) * 7 / 10).toLocaleString("en-US"),
+            "maxatk": atk.toLocaleString("en-US"),
+            "maxhp": hp.toLocaleString("en-US"),
+            "maxfs": fs.toLocaleString("en-US")
+        };
+    }
+
+    var fel = {};
+    for (var vid in variants) {
+        var variant = variants[vid];
+        var id = corpus[variant.name].replace(/\W+/g, "").toLowerCase();
+        var value = {
+            "name": corpus[variant.name],
+            "rarity": tiers[variant.tier],
+            "element": elements[variant.element],
+            "character": ":sp_" + variant.base + ": " + corpus[fighters[variant.base].name],
+            "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/portrait/" + variant.base + "/" + vid + ".png",
+            "ability": corpus[variant.sa.title],
+            "SA1": felFormat(variant.sa.features[0]),
+            "SA2": felFormat(variant.sa.features[1]),
+            "stats": felStats(variant.stats)
+        };
+        fel[id] = value;
+    }
+
+    var a = document.createElement("a");
+    var blob = new Blob([JSON.stringify(fel, null, 4)], {"type": "application/json"});
+    a.href = URL.createObjectURL(blob);
+    a.download = "stanleyDB.json";
+    a.click();
 }
 
 function initialize() {
