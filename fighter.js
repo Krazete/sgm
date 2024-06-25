@@ -1179,11 +1179,6 @@ function initOptionsMenu() {
                     value,
                     fighters[variants[key].base].pa.secondsElapsed
                 ]; break;
-                case "bb": substitutions = [
-                    rate,
-                    fighters[variants[key].base].pa.comboCount,
-                    value
-                ]; break;
                 case "mf": substitutions = [
                     rate,
                     fighters[variants[key].base].pa.evasion,

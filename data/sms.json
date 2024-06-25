@@ -1304,7 +1304,34 @@
         "type": 0
     },
     "bb-sm-clar-g": {
-        "ability": {},
+        "ability": {
+            "features": [
+                {
+                    "description": "Char_BigBand_SM7_SweetClarinet_Desc",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                -6.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                -7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                -8.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BigBand_SM2_Name"
+        },
         "attack": [
             1.7999999523162842,
             1.7999999523162842,
@@ -1365,7 +1392,34 @@
         "type": 0
     },
     "bb-sm-clar-s": {
-        "ability": {},
+        "ability": {
+            "features": [
+                {
+                    "description": "Char_BigBand_SM7_SweetClarinet_Desc",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": [
+                                -6.0
+                            ]
+                        },
+                        {
+                            "level": 9,
+                            "values": [
+                                -7.0
+                            ]
+                        },
+                        {
+                            "level": 15,
+                            "values": [
+                                -8.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BigBand_SM2_Name"
+        },
         "attack": [
             1.7000000476837158,
             1.7000000476837158,
@@ -1511,7 +1565,7 @@
             6
         ],
         "gear": 2,
-        "icon": "bigband_sm5_cymbalsmash.png",
+        "icon": "bigband_sm5_cymbalclash.png",
         "tier": 2,
         "title": "Char_BigBand_SM5_Name",
         "type": 0
@@ -1602,7 +1656,7 @@
             5
         ],
         "gear": 2,
-        "icon": "bigband_sm5_cymbalsmash.png",
+        "icon": "bigband_sm5_cymbalclash.png",
         "tier": 1,
         "title": "Char_BigBand_SM5_Name",
         "type": 0
@@ -2055,24 +2109,24 @@
         "ability": {
             "features": [
                 {
-                    "description": "SA_SMGeneric_CritChance",
+                    "description": "Char_BigBand_SM2_GiantStep_Desc",
                     "tiers": [
                         {
                             "level": 3,
                             "values": [
-                                25.0
+                                4.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                50.0
+                                8.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                100.0
+                                12.0
                             ]
                         }
                     ]
@@ -2154,13 +2208,13 @@
                         {
                             "level": 6,
                             "values": [
-                                12.0
+                                15.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                15.0
+                                20.0
                             ]
                         }
                     ]
@@ -2212,13 +2266,13 @@
                         {
                             "level": 6,
                             "values": [
-                                12.0
+                                15.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                15.0
+                                20.0
                             ]
                         }
                     ]
@@ -2259,24 +2313,24 @@
         "ability": {
             "features": [
                 {
-                    "description": "SA_SMGeneric_CritChance",
+                    "description": "Char_BigBand_SM2_GiantStep_Desc",
                     "tiers": [
                         {
                             "level": 3,
                             "values": [
-                                25.0
+                                4.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                50.0
+                                8.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                100.0
+                                12.0
                             ]
                         }
                     ]
@@ -11234,7 +11288,7 @@
             6
         ],
         "gear": 2,
-        "icon": "marie_sm4_ballroomblitz.png",
+        "icon": "marie_sm4_mariegoround.png",
         "tier": 2,
         "title": "Char_Marie_SM4_Name",
         "type": 0
@@ -11322,7 +11376,7 @@
             5
         ],
         "gear": 2,
-        "icon": "marie_sm4_ballroomblitz.png",
+        "icon": "marie_sm4_mariegoround.png",
         "tier": 1,
         "title": "Char_Marie_SM4_Name",
         "type": 0
@@ -11739,7 +11793,7 @@
             6
         ],
         "gear": 1,
-        "icon": "marie_sm6_commandclog.png",
+        "icon": "marie_sm6_suctionobstruction.png",
         "tier": 2,
         "title": "Char_Marie_SM6_Name",
         "type": 0
@@ -11800,7 +11854,7 @@
             5
         ],
         "gear": 1,
-        "icon": "marie_sm6_commandclog.png",
+        "icon": "marie_sm6_suctionobstruction.png",
         "tier": 1,
         "title": "Char_Marie_SM6_Name",
         "type": 0
@@ -14128,7 +14182,7 @@
         "cost": 2,
         "damage": [],
         "gear": 0,
-        "icon": "parasoul_sm6_egretsacrifice.png",
+        "icon": "parasoul_sm6_egretdive.png",
         "tier": 2,
         "title": "Char_Parasoul_SM6_Title",
         "type": 0
@@ -14186,7 +14240,7 @@
         "cost": 2,
         "damage": [],
         "gear": 0,
-        "icon": "parasoul_sm6_egretsacrifice.png",
+        "icon": "parasoul_sm6_egretdive.png",
         "tier": 1,
         "title": "Char_Parasoul_SM6_Title",
         "type": 0

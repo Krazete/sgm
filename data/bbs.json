@@ -274,7 +274,7 @@
             6
         ],
         "gear": 5,
-        "icon": "annie_bb5_autographmagicgirl.png",
+        "icon": "annie_bb5_photobop.png",
         "strength": 3,
         "tier": 2,
         "title": "Annie_BB5_T3_AutographMagicGirl_Title",
@@ -366,7 +366,7 @@
             5
         ],
         "gear": 5,
-        "icon": "annie_bb5_autographmagicgirl.png",
+        "icon": "annie_bb5_photobop.png",
         "strength": 3,
         "tier": 1,
         "title": "Annie_BB5_T3_AutographMagicGirl_Title",
@@ -825,22 +825,22 @@
                         {
                             "level": 3,
                             "values": [
-                                0.25,
-                                10.0
+                                10,
+                                -8.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.3499999940395355,
-                                10.0
+                                10,
+                                -10.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.5,
-                                10.0
+                                10,
+                                -12.0
                             ]
                         }
                     ]
@@ -900,22 +900,22 @@
                         {
                             "level": 3,
                             "values": [
-                                0.25,
-                                10.0
+                                10,
+                                -8.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.3499999940395355,
-                                10.0
+                                10,
+                                -10.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.5,
-                                10.0
+                                10,
+                                -12.0
                             ]
                         }
                     ]
@@ -1119,22 +1119,22 @@
                         {
                             "level": 3,
                             "values": [
-                                0.05000000074505806,
-                                4.0
+                                0.15000000596046448,
+                                5.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.10000000149011612,
-                                4.0
+                                0.15000000596046448,
+                                7.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.10000000149011612,
-                                6.0
+                                0.15000000596046448,
+                                10.0
                             ]
                         }
                     ]
@@ -1194,22 +1194,22 @@
                         {
                             "level": 3,
                             "values": [
-                                0.05000000074505806,
-                                4.0
+                                0.15000000596046448,
+                                5.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.10000000149011612,
-                                4.0
+                                0.15000000596046448,
+                                7.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.10000000149011612,
-                                6.0
+                                0.15000000596046448,
+                                10.0
                             ]
                         }
                     ]
@@ -1269,19 +1269,22 @@
                         {
                             "level": 3,
                             "values": [
-                                10.0
+                                3,
+                                8.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                20.0
+                                3,
+                                10.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                30.0
+                                3,
+                                12.0
                             ]
                         }
                     ]
@@ -1341,19 +1344,22 @@
                         {
                             "level": 3,
                             "values": [
-                                10.0
+                                3,
+                                8.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                20.0
+                                3,
+                                10.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                30.0
+                                3,
+                                12.0
                             ]
                         }
                     ]
@@ -1413,23 +1419,43 @@
                         {
                             "level": 3,
                             "values": [
-                                0.15000000596046448,
-                                4.0
+                                0.3499999940395355,
+                                50.0,
+                                6.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.25,
-                                4.0
+                                0.3499999940395355,
+                                75.0,
+                                6.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.25,
+                                0.3499999940395355,
+                                100.0,
                                 6.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -1488,23 +1514,43 @@
                         {
                             "level": 3,
                             "values": [
-                                0.15000000596046448,
-                                4.0
+                                0.3499999940395355,
+                                50.0,
+                                6.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.25,
-                                4.0
+                                0.3499999940395355,
+                                75.0,
+                                6.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.25,
+                                0.3499999940395355,
+                                100.0,
                                 6.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -1563,19 +1609,22 @@
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                0.25,
+                                5.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                25.0
+                                0.25,
+                                7.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                50.0
+                                0.25,
+                                10.0
                             ]
                         }
                     ]
@@ -1635,19 +1684,22 @@
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                0.25,
+                                5.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                25.0
+                                0.25,
+                                7.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                50.0
+                                0.25,
+                                10.0
                             ]
                         }
                     ]
@@ -14612,7 +14664,7 @@
             6
         ],
         "gear": 4,
-        "icon": "valentine_bb5_t1_countervenomalpha.png",
+        "icon": "valentine_bb5_t1_countervenomsedative.png",
         "strength": 1,
         "tier": 2,
         "title": "Valentine_BB5_T1_Alpha_Title",
@@ -14684,7 +14736,7 @@
             5
         ],
         "gear": 4,
-        "icon": "valentine_bb5_t1_countervenomalpha.png",
+        "icon": "valentine_bb5_t1_countervenomsedative.png",
         "strength": 1,
         "tier": 1,
         "title": "Valentine_BB5_T1_Alpha_Title",
@@ -14756,7 +14808,7 @@
             6
         ],
         "gear": 4,
-        "icon": "valentine_bb6_t1_countervenombeta.png",
+        "icon": "valentine_bb6_t1_countervenomdetox.png",
         "strength": 1,
         "tier": 2,
         "title": "Valentine_BB6_T1_Beta_Title",
@@ -14828,7 +14880,7 @@
             5
         ],
         "gear": 4,
-        "icon": "valentine_bb6_t1_countervenombeta.png",
+        "icon": "valentine_bb6_t1_countervenomdetox.png",
         "strength": 1,
         "tier": 1,
         "title": "Valentine_BB6_T1_Beta_Title",
@@ -14903,7 +14955,7 @@
             6
         ],
         "gear": 4,
-        "icon": "valentine_bb7_t1_countervenomomega.png",
+        "icon": "valentine_bb7_t1_countervenomparalysis.png",
         "strength": 1,
         "tier": 2,
         "title": "Valentine_BB7_T1_Omega_Title",
@@ -14978,7 +15030,7 @@
             5
         ],
         "gear": 4,
-        "icon": "valentine_bb7_t1_countervenomomega.png",
+        "icon": "valentine_bb7_t1_countervenomparalysis.png",
         "strength": 1,
         "tier": 1,
         "title": "Valentine_BB7_T1_Omega_Title",

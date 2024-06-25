@@ -188,67 +188,78 @@
                         {
                             "level": 1,
                             "values": [
-                                5.0
+                                10.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                6.0
+                                10.0,
+                                32.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                7.0
+                                10.0,
+                                34.0
                             ]
                         },
                         {
                             "level": 4,
                             "values": [
-                                8.0
+                                10.0,
+                                36.0
                             ]
                         },
                         {
                             "level": 5,
                             "values": [
-                                9.0
+                                10.0,
+                                38.0
                             ]
                         },
                         {
                             "level": 6,
                             "values": [
-                                10.0
+                                10.0,
+                                40.0
                             ]
                         },
                         {
                             "level": 7,
                             "values": [
-                                11.0
+                                10.0,
+                                42.0
                             ]
                         },
                         {
                             "level": 8,
                             "values": [
-                                12.0
+                                10.0,
+                                44.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                13.0
+                                10.0,
+                                46.0
                             ]
                         },
                         {
                             "level": 10,
                             "values": [
-                                14.0
+                                10.0,
+                                48.0
                             ]
                         },
                         {
                             "level": 11,
                             "values": [
-                                15.0
+                                10.0,
+                                50.0
                             ]
                         }
                     ],
@@ -260,71 +271,91 @@
                         {
                             "level": 1,
                             "values": [
-                                5.0
+                                5.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                6.0
+                                6.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                7.0
+                                7.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 4,
                             "values": [
-                                8.0
+                                8.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 5,
                             "values": [
-                                9.0
+                                9.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 6,
                             "values": [
-                                10.0
+                                10.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 7,
                             "values": [
-                                11.0
+                                11.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 8,
                             "values": [
-                                12.0
+                                12.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                13.0
+                                13.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 10,
                             "values": [
-                                14.0
+                                14.0,
+                                30.0
                             ]
                         },
                         {
                             "level": 11,
                             "values": [
-                                15.0
+                                15.0,
+                                30.0
                             ]
                         }
                     ],
                     "title": "Char_BigBand_SUP_Maestro_Feat2_Title"
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
                 }
             ],
             "title": "Char_BigBand_SUP_Maestro_Title"
@@ -333,7 +364,6 @@
         "pa": {
             "base": 25.0,
             "chargeRate": 17.0,
-            "comboCount": 10,
             "description": "Char_BigBand_PA_Desc",
             "lvlBonus": 0.25,
             "maxBonus": 10.5,
