@@ -1558,7 +1558,7 @@ function felExport() {
         return formatted;
     }
 
-    function felStats(stats) {
+    function felStats(stats) { /* unused */
         var baseBoost = 1.5;
         var treeBoost = 1.46;
         var maBoost = 0.11;
@@ -1596,7 +1596,11 @@ function felExport() {
             "ability": corpus[variant.sa.title],
             "SA1": felFormat(variant.sa.features[0]),
             "SA2": felFormat(variant.sa.features[1]),
-            "stats": felStats(variant.stats)
+            "stats": {
+                "atk": variant.stats[0].attack,
+                "hp": variant.stats[0].lifebar,
+                "fs": Math.ceil((variant.stats[0].attack + variant.stats[0].lifebar / 6) * 7 / 10)
+            }
         };
         fel[id] = value;
     }
