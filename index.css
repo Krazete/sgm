@@ -1113,6 +1113,25 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 #rBlight .portrait {
     animation: rainbow 7s linear infinite;
 }
+#heat .backdrop:after {
+    content: '';
+    position: absolute;
+    width: 151%;
+    height: 500px;
+    top: 0;
+    margin: -110% 0 0 -26%;
+    pointer-events: none;
+    display: block;
+    background-image: url(image/portrait/an/hSync.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+#heat:hover .backdrop:after {
+    opacity: 1;
+    transition: opacity 8s 2s ease-in;
+}
 #wishfulEater:after {
     content: '';
     position: absolute;
