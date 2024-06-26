@@ -1583,6 +1583,27 @@ function felExport() {
         };
     }
 
+    var emojiID = {
+        "an": "<:sp_an:767922687204524032>",
+        "bb": "<:sp_bb:684054646528147500>",
+        "bd": "<:sp_bd:1115123780705063043>",
+        "be": "<:sp_beo:684771548414083107>",
+        "cb": "<:sp_cb:685401170495537152>",
+        "db": "<:sp_db:692275933536845884>",
+        "el": "<:sp_el:692287012450992219>",
+        "fi": "<:sp_fi:698821373698637894>",
+        "fu": "<:sp_fu:698919709336141886>",
+        "ma": "<:sp_ma:1247164362528133210>",
+        "mf": "<:sp_mf:698837829467242496>",
+        "pa": "<:sp_pa:698884548678910043>",
+        "pe": "<:sp_pe:698879915713626142>",
+        "pw": "<:sp_pw:698904045389348914>",
+        "rf": "<:sp_rf:698919676612313168>",
+        "sq": "<:sp_sq:698909665077231776>",
+        "um": "<:sp_um:969082448082268241>",
+        "va": "<:sp_va:698852651617746974>"
+    };
+
     var fel = {};
     for (var vid in variants) {
         var variant = variants[vid];
@@ -1591,7 +1612,7 @@ function felExport() {
             "name": corpus[variant.name],
             "rarity": tiers[variant.tier],
             "element": elements[variant.element],
-            "character": ":sp_" + variant.base + ": " + corpus[fighters[variant.base].name],
+            "character": emojiID[variant.base] + " " + corpus[fighters[variant.base].name],
             "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/portrait/" + variant.base + "/" + vid + ".png",
             "ability": corpus[variant.sa.title],
             "SA1": felFormat(variant.sa.features[0]),
