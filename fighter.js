@@ -1604,7 +1604,23 @@ function felExport() {
         "va": "<:sp_va:698852651617746974>"
     };
 
-    var fel = {};
+    var fel = {
+        "heatsynced": { /* legacy Fire Branded */
+            "name": "Heat Synced",
+            "rarity": "diamond",
+            "element": "fire",
+            "character": "<:sp_an:767922687204524032> Annie",
+            "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/portrait/an/hSync.png",
+            "ability": "SEARING STARS",
+            "SA1": "Gain ENRAGE for 10/12/15 seconds when using a SPECIAL MOVE or BLOCKBUSTER while in STAR POWER mode.",
+            "SA2": "CHARGE ATTACKS consume all stacks of ENRAGE, inflicting STUN and HEAVY BLEED for 1/1.5/2 second(s) per stack consumed.",
+            "stats": {
+                "atk": "706",
+                "hp": "3335",
+                "fs": "884"
+            }
+        }
+    };
     for (var vid in variants) {
         var variant = variants[vid];
         var id = corpus[variant.name].replace(/\W+/g, "").toLowerCase();
