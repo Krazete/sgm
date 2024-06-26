@@ -1597,9 +1597,9 @@ function felExport() {
             "SA1": felFormat(variant.sa.features[0]),
             "SA2": felFormat(variant.sa.features[1]),
             "stats": {
-                "atk": variant.stats[0].attack,
-                "hp": variant.stats[0].lifebar,
-                "fs": Math.ceil((variant.stats[0].attack + variant.stats[0].lifebar / 6) * 7 / 10)
+                "atk": variant.stats[0].attack.toString(),
+                "hp": variant.stats[0].lifebar.toString(),
+                "fs": Math.ceil((variant.stats[0].attack + variant.stats[0].lifebar / 6) * 7 / 10).toString()
             }
         };
         fel[id] = value;
