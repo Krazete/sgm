@@ -329,7 +329,7 @@
     "Char_BigBand_SA_GoingPlatinum_Desc2": "Avec ARMURE active, les BLOCKBUSTERS infligent {0}% de d\u00e9g\u00e2ts bonus.",
     "Char_BigBand_SA_GoingPlatinum_Title": "VISE LE PLATINE",
     "Char_BigBand_SA_ReserveTank_Desc": "Une fois par match, octroie {0} piles de R\u00c9G\u00c9N. et {2} piles d\u2019ARMURE pendant {1} s chacune lorsque la SANT\u00c9 est sous {3}%.",
-    "Char_BigBand_SA_ReserveTank_Desc2": "Tant que la SANT\u00c9 est sup\u00e9rieure \u00e0 {0}%, octroie {1} piles d\u2019ARMURE permanente.",
+    "Char_BigBand_SA_ReserveTank_Desc2": "Tant que la SANT\u00c9 est sup\u00e9rieure \u00e0 {0}%, octroie {1} pile(s) d\u2019ARMURE permanente.",
     "Char_BigBand_SA_ReserveTank_Title": "R\u00c9SERVOIR DE SECOURS",
     "Char_BigBand_SA_RiffWrath_Desc": "Retire 1 BUFF adverse, octroie FUREUR pendant {0} secondes et DRAINE {1}% de SANT\u00c9 tous les {2} COUPS DE COMBO.",
     "Char_BigBand_SA_RiffWrath_Desc2": "R\u00e9initialise les chronos de tous les BUFFS actifs pour chaque tranche de {0}% de SANT\u00c9 perdue par n\u2019importe quel combattant.",

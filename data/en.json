@@ -329,7 +329,7 @@
     "Char_BigBand_SA_GoingPlatinum_Desc2": "While benefiting from ARMOR, BLOCKBUSTERS deal {0}% bonus damage.",
     "Char_BigBand_SA_GoingPlatinum_Title": "GOING PLATINUM",
     "Char_BigBand_SA_ReserveTank_Desc": "Once per match, gain {0} stacks of REGEN and {2} stacks of ARMOR for {1} seconds each when falling below {3}% HEALTH.",
-    "Char_BigBand_SA_ReserveTank_Desc2": "While HEALTH is greater than {0}%, gain {1} stacks of permanent ARMOR.",
+    "Char_BigBand_SA_ReserveTank_Desc2": "While HEALTH is greater than {0}%, gain {1} stack(s) of permanent ARMOR.",
     "Char_BigBand_SA_ReserveTank_Title": "RESERVE TANK",
     "Char_BigBand_SA_RiffWrath_Desc": "Remove 1 opponent BUFF, grant ENRAGE for {0} seconds and DRAIN {1}% HEALTH every {2} COMBO HITS.",
     "Char_BigBand_SA_RiffWrath_Desc2": "Reset the timers of all active BUFFS for every {0}% HEALTH lost by either Fighter.",

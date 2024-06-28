@@ -329,7 +329,7 @@
     "Char_BigBand_SA_GoingPlatinum_Desc2": "Los BLOCKBUSTERS causan un {0}% de da\u00f1o extra mientras tengas ARMADURA.",
     "Char_BigBand_SA_GoingPlatinum_Title": "DE PLATINO",
     "Char_BigBand_SA_ReserveTank_Desc": "Una vez por combate, obtiene {0} uds. de REGENERACI\u00d3N y {2} uds. de ARMADURA durante {1}\u00a0s si la SALUD baja del {3}\u00a0%.",
-    "Char_BigBand_SA_ReserveTank_Desc2": "Si la SALUD es superior al {0}\u00a0%, obtiene {1} unidades de ARMADURA permanente.",
+    "Char_BigBand_SA_ReserveTank_Desc2": "Si la SALUD es superior al {0}\u00a0%, obtiene {1} unidad(es) de ARMADURA permanente.",
     "Char_BigBand_SA_ReserveTank_Title": "TANQUE DE RESERVA",
     "Char_BigBand_SA_RiffWrath_Desc": "Elimina 1 EFECTO POSITIVO del oponente, concede RABIA durante {0} segundos y DRENA un {1} % de SALUD cada {2} GOLPES DE COMBO.",
     "Char_BigBand_SA_RiffWrath_Desc2": "Reinicia los contadores de todos los EFECTOS POSITIVOS activos por cada {0} % de SALUD perdida por cada luchador.",
