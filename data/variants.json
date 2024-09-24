@@ -623,6 +623,89 @@
         ],
         "tier": 2
     },
+    "bBelle": {
+        "base": "pa",
+        "element": 4,
+        "fandom": "Locked In",
+        "name": "Char_Parasoul_D_V4_Name",
+        "quote": "Variant_Description_Parasoul_BarBelle",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Parasoul_SA_PowerHour_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                15.0,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75,
+                                15.0,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0,
+                                15.0,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Parasoul_SA_PowerHour_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.0,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Parasoul_SA_PowerHour_Title"
+        },
+        "stats": [
+            {
+                "attack": 706,
+                "lifebar": 3335
+            }
+        ],
+        "tier": 3
+    },
     "bBomb": {
         "base": "rf",
         "element": 2,
@@ -2447,6 +2530,84 @@
             }
         ],
         "tier": 0
+    },
+    "cTheory": {
+        "base": "do",
+        "element": 4,
+        "fandom": "Chaos Theory",
+        "name": "Char_Double_G_V5_Name",
+        "quote": "Variant_Description_Double_ChaosTheory",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Double_SA_BlessingsInDisguise_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Double_SA_BlessingsInDisguise_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Double_SA_BlessingsInDisguise_Title"
+        },
+        "stats": [
+            {
+                "attack": 297,
+                "lifebar": 1455
+            },
+            {
+                "attack": 535,
+                "lifebar": 2619
+            }
+        ],
+        "tier": 2
     },
     "candyCrusher": {
         "base": "um",
@@ -4704,6 +4865,87 @@
             }
         ],
         "tier": 3
+    },
+    "fRein": {
+        "base": "ma",
+        "element": 5,
+        "fandom": "Spell-Bent",
+        "name": "Char_Marie_G_V6_Name",
+        "quote": "Variant_Description_Marie_FreeRein",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_SpellBent_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_SpellBent_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.5,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_SpellBent_Title"
+        },
+        "stats": [
+            {
+                "attack": 256,
+                "lifebar": 1985
+            },
+            {
+                "attack": 461,
+                "lifebar": 3573
+            }
+        ],
+        "tier": 2
     },
     "fSoldier": {
         "base": "mf",
@@ -8802,6 +9044,77 @@
         ],
         "tier": 1
     },
+    "mMen": {
+        "base": "pw",
+        "element": 5,
+        "fandom": "Masked Menace",
+        "name": "Char_Painwheel_D_V4_Name",
+        "quote": "Variant_Description_Painwheel_MaskedMenace",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Painwheel_SA_LoomingDoom_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Painwheel_SA_LoomingDoom_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                20.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Painwheel_SA_LoomingDoom_Title"
+        },
+        "stats": [
+            {
+                "attack": 645,
+                "lifebar": 3056
+            }
+        ],
+        "tier": 3
+    },
     "mOfHonor": {
         "base": "ma",
         "element": 5,
@@ -9715,6 +10028,92 @@
         ],
         "tier": 2
     },
+    "nDeath": {
+        "base": "va",
+        "element": 0,
+        "fandom": "Near Death",
+        "name": "Char_Valentine_D_V5_Name",
+        "quote": "Variant_Description_Valentine_NearDeath",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Valentine_SA_RoutineExecution_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                15.0,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1,
+                                15.0,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1,
+                                15.0,
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Valentine_SA_RoutineExecution_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                3,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0,
+                                3,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                3,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Valentine_SA_RoutineExecution_Title"
+        },
+        "stats": [
+            {
+                "attack": 617,
+                "lifebar": 3335
+            }
+        ],
+        "tier": 3
+    },
     "nDepart": {
         "base": "sq",
         "element": 5,
@@ -10615,6 +11014,81 @@
             {
                 "attack": 529,
                 "lifebar": 3217
+            }
+        ],
+        "tier": 2
+    },
+    "pBall": {
+        "base": "be",
+        "element": 3,
+        "fandom": "Pickle Baller",
+        "name": "Char_Beowulf_G_V5_Name",
+        "quote": "Variant_Description_Beowulf_PickleBaller",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Beowulf_SA_EyeOnTheBrawl_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                7.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                7.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Beowulf_SA_EyeOnTheBrawl_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                6.0,
+                                2
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                8.0,
+                                2
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                2
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SA_EyeOnTheBrawl_Title"
+        },
+        "stats": [
+            {
+                "attack": 326,
+                "lifebar": 1764
+            },
+            {
+                "attack": 587,
+                "lifebar": 3175
             }
         ],
         "tier": 2
