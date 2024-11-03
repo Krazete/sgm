@@ -476,6 +476,9 @@ function initCollection(responses) {
     if (month == 4 && day == 1) {
         fearTheRainbow();
     }
+    if (month == 11 && day == 3) {
+        document.body.classList.add("birthday");
+    }
 
     lazyLoadImages();
 }
