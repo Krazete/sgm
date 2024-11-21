@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta name="description" content="A move gallery for Skullgirls Mobile. View the stats and abilities of all special moves and blockbusters, translated in any language offered in the game.">
+    <link rel="shortcut icon" type="image/png" href="image/official/Button_Modifiers.png">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Skullgirls Mobile Guest Star Gallery</title>
+    <script type="application/javascript" src="assist.js"></script>
+</head>
+<body>
+    <div id="header">
+        <span class="banner cinematic gold-gradient" id="skullgirls-mobile"></span>
+        <wbr>
+        <span class="assist-gallery banner cinematic silver-gradient"></span>
+        <div class="ribbon">
+            <div class="scroller">
+                <div>
+                    <a target="_blank" href="https://github.com/krazete/sgm/blob/main/README.md" class="tagged" id="version">7.0.0</a>
+                    |
+                    <a href="https://krazete.github.io/sgmnow" id="sgmnow">
+                        <img src="image/home.png">
+                    </a>
+                    |
+                    <a href="index.html" class="fighters"></a>
+                    |
+                    <a href="moves.html" class="moves"></a>
+                    |
+                    <a href="catalysts.html" class="catalysts"></a>
+                    |
+                    <a href="artifacts.html" class="artifacts"></a>
+                    |
+                    <a href="ratings.html" class="ratings"></a>
+                </div>
+            </div>
+        </div>
+        <div class="scroller">
+            <div id="language-menu">
+                <input type="radio" name="language" id="en">
+                <label for="en" class="tagged"></label>
+                <input type="radio" name="language" id="ja">
+                <label for="ja" class="tagged"></label>
+                <input type="radio" name="language" id="fr">
+                <label for="fr" class="tagged"></label>
+                <input type="radio" name="language" id="de">
+                <label for="de" class="tagged"></label>
+                <input type="radio" name="language" id="es">
+                <label for="es" class="tagged"></label>
+                <input type="radio" name="language" id="ko">
+                <label for="ko" class="tagged"></label>
+                <input type="radio" name="language" id="zh-cn">
+                <label for="zh-cn" class="tagged"></label>
+                <input type="radio" name="language" id="ru">
+                <label for="ru" class="tagged"></label>
+                <input type="radio" name="language" id="pt-br">
+                <label for="pt-br" class="tagged"></label>
+            </div>
+        </div>
+    </div>
+    <div id="collection">
+        <div class="fill-row scroller" style="text-align: center;">
+            This page is under construction.
+            <br>
+            Menu options may not make sense and some visual aspects may be missing or out of place.
+            <br>
+            Names, icons, and descriptions should be accurate though.
+        </div>
+        <div class="fill-row" id="search-menu">
+            <input type="text" class="cinematic" id="searchbox">
+            <div class="scroller">
+                <div>
+                    <div>
+                        <input type="radio" name="search" id="search-mn">
+                        <label for="search-mn"></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="search" id="search-d">
+                        <label for="search-d" class="ability-type"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fill-row cinematic" id="loading">
+            <img src="image/huh.gif">
+        </div>
+    </div>
+    <div id="footer">
+        <div class="hidden" id="menu">
+            <div class="scroller half" id="filter-menu">
+                <div>
+                    <div class="label-flexbox">
+                        <span class="tagged cinematic silver-gradient" id="filter-label"></span>
+                        <input type="checkbox" id="filter-cancel">
+                        <label for="filter-cancel"><img src="image/official/constraints_no.png" class="icon"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="badges">
+                        <input type="checkbox" id="filter-sms">
+                        <label for="filter-sms">
+                            <div class="icon">
+                                <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
+                                <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
+                            </div>
+                        </label>
+                        <input type="checkbox" id="filter-bbs">
+                        <label for="filter-bbs"><img src="image/official/BB-Frame1.png" class="icon"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="medals">
+                        <input type="checkbox" id="filter-bronze">
+                        <label for="filter-bronze"><img src="image/official/constraints_bronze.png" class="icon"></label>
+                        <input type="checkbox" id="filter-silver">
+                        <label for="filter-silver"><img src="image/official/constraints_silver.png" class="icon"></label>
+                        <input type="checkbox" id="filter-gold">
+                        <label for="filter-gold"><img src="image/official/constraints_gold.png" class="icon"></label>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset" id="mastery">
+                        <input type="checkbox" id="filter-br">
+                        <label for="filter-br"><img src="image/official/BrainDrain_MasteryIcon.png" class="icon"></label>
+                        <input type="checkbox" id="filter-mi">
+                        <label for="filter-mi"><img src="image/official/Minette_MasteryIcon.png" class="icon"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="scroller half" id="sort-menu">
+                <div>
+                    <div>
+                        <span class="tagged cinematic silver-gradient" id="sort-label"></span>
+                    </div>
+                    <div class="divider"></div>
+                    <input type="radio" name="sort" id="sort-damage">
+                    <label for="sort-damage" class="damage"></label>
+                    <input type="radio" name="sort" id="sort-abc">
+                    <label for="sort-abc"></label>
+                    <input type="radio" name="sort" id="sort-tier">
+                    <label for="sort-tier"></label>
+                    <input type="radio" name="sort" id="sort-type">
+                    <label for="sort-type"></label>
+                </div>
+            </div>
+        </div>
+        <div id="dock">
+            <div id="dock-left">
+                <img src="image/official/ZoomOut.png" class="button" id="zoom-out">
+                <img src="image/official/ZoomIn.png" class="button" id="zoom-in">
+            </div>
+            <div class="scroller" id="level-menu">
+                <div>
+                    <div class="label-flexbox">
+                        <span class="cinematic silver-gradient" id="level-label"></span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="subset">
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="16" value="16" class="cinematic" id="level-bronze">
+                            <img src="image/official/BronzeLevel.png" class="icon">
+                        </div>
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="16" value="16" class="cinematic" id="level-silver">
+                            <img src="image/official/SilverLevel.png" class="icon">
+                        </div>
+                        <div>
+                            <input type="text" pattern="\d*" min="1" max="16" value="16" class="cinematic" id="level-gold">
+                            <img src="image/official/GoldLevel.png" class="icon">
+                        </div>
+                        <input type="range" min="1" max="16" value="16" class="fill-row" id="level-range">
+                    </div>
+                </div>
+            </div>
+            <div id="dock-right">
+                <img src="image/official/icon_filter.png" class="icon" id="settings">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
