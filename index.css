@@ -281,6 +281,16 @@ html[lang='zh-cn'] .move-gallery:before {content: '\62db \5f0f \753b \5eca ';}
 html[lang='ru'] .move-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0435 \043c \043e \0432 ';}
 html[lang='pt-br'] .move-gallery:before {content: 'Galeria de Golpes';}
 
+html[lang='en'] .assist-gallery:before {content: 'Guest Star Gallery';}
+html[lang='ja'] .assist-gallery:before {content: '\30b2 \30b9 \30c8 \30b9 \30bf \30fc \30ae \30e3 \30e9 \30ea \30fc ';}
+html[lang='fr'] .assist-gallery:before {content: 'Galerie des Quest-Stars';}
+html[lang='de'] .assist-gallery:before {content: 'Starg\00e4 stegalerie';}
+html[lang='es'] .assist-gallery:before {content: 'Galer\00ed a de Estrellas Invitadas';}
+html[lang='ko'] .assist-gallery:before {content: '\ac8c \c2a4 \d2b8  \c2a4 \d0c0  \ac24 \b7ec \b9ac ';}
+html[lang='zh-cn'] .assist-gallery:before {content: '\5609 \5bbe \660e \661f \753b \5eca ';}
+html[lang='ru'] .assist-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041f \0440 \0438 \0433 \043b \0430 \0448 \0435 \043d \043d \044b \0435  \0437 \0432 \0435 \0437 \0434 \044b ';}
+html[lang='pt-br'] .assist-gallery:before {content: 'Galeria de Astros Convidados';}
+
 html[lang='en'] .catalyst-gallery:before {content: 'Catalyst Gallery';}
 html[lang='ja'] .catalyst-gallery:before {content: '\30ad \30e3 \30bf \30ea \30b9 \30c8 \30ae \30e3 \30e9 \30ea \30fc ';}
 html[lang='fr'] .catalyst-gallery:before {content: 'Galerie des Catalyseurs';}
@@ -290,6 +300,16 @@ html[lang='ko'] .catalyst-gallery:before {content: '\cd09 \b9e4  \ac24 \b7ec \b9
 html[lang='zh-cn'] .catalyst-gallery:before {content: '\8f6c \5316 \7269 \753b \5eca ';}
 html[lang='ru'] .catalyst-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \041a \0430 \0442 \0430 \043b \0438 \0437 \0430 \0442 \043e \0440 \044b ';}
 html[lang='pt-br'] .catalyst-gallery:before {content: 'Galeria de Catalisadores';}
+
+html[lang='en'] .artifact-gallery:before {content: 'Artifact Gallery';}
+html[lang='ja'] .artifact-gallery:before {content: '\30a2 \30fc \30c6 \30a3 \30d5 \30a1 \30af \30c8 \30ae \30e3 \30e9 \30ea \30fc ';}
+html[lang='fr'] .artifact-gallery:before {content: 'Galerie des Artefacts';}
+html[lang='de'] .artifact-gallery:before {content: 'Artefaktegalerie';}
+html[lang='es'] .artifact-gallery:before {content: 'Galer\00ed a de Artefactos';}
+html[lang='ko'] .artifact-gallery:before {content: '\c544 \d2f0 \d329 \d2b8  \ac24 \b7ec \b9ac ';}
+html[lang='zh-cn'] .artifact-gallery:before {content: '\6587 \7269 \753b \5eca ';}
+html[lang='ru'] .artifact-gallery:before {content: '\0413 \0430 \043b \0435 \0440 \0435 \044f  \0410 \0440 \0442 \0435 \0444 \0430 \043a \0442 \044b ';}
+html[lang='pt-br'] .artifact-gallery:before {content: 'Galeria de Artefatos';}
 
 html[lang='en'] .gallery-ratings:before {content: 'Gallery Ratings';}
 html[lang='ja'] .gallery-ratings:before {content: '\30ae \30e3 \30e9 \30ea \30fc \306e \8a55 \4fa1 ';}
