@@ -2879,6 +2879,23 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
                 }
             ],
             "title": "Char_BlackDahlia_SA_PoisonedChalice_Title"
