@@ -1,0 +1,3131 @@
+{
+    "bdrain-gphantasm-a1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM4_MechaPhantasm_A1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                30.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                26.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                22.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM4_MechaPhantasm"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am4_gendophantasmsmall.png",
+        "name": "Assist_BrainDrain_A_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM4_MechaPhantasm",
+        "type": 1
+    },
+    "bdrain-gphantasm-d1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM4_MechaPhantasm_D1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                30.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                35.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM4_MechaPhantasm"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am4_gendophantasmsmall.png",
+        "name": "Assist_BrainDrain_D_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM4_MechaPhantasm",
+        "type": 1
+    },
+    "bdrain-gphantasm-f1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM4_MechaPhantasm_F1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                2,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                2,
+                                14.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                2,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM4_MechaPhantasm"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am4_gendophantasmsmall.png",
+        "name": "Assist_BrainDrain_F_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM4_MechaPhantasm",
+        "type": 1
+    },
+    "bdrain-gphantasm-l1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM4_MechaPhantasm_L1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                40.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                45.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                50.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM4_MechaPhantasm"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am4_gendophantasmsmall.png",
+        "name": "Assist_BrainDrain_L_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM4_MechaPhantasm",
+        "type": 1
+    },
+    "bdrain-gphantasm-w1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM4_MechaPhantasm_W1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                3,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                3,
+                                14.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                3,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM4_MechaPhantasm"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am4_gendophantasmsmall.png",
+        "name": "Assist_BrainDrain_W_V1_Name_Alt",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM4_MechaPhantasm",
+        "type": 1
+    },
+    "bdrain-hdetach-a1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM1_HeadDetach_A1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM1_HeadDetach"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am1_headdetachsmall.png",
+        "name": "Assist_BrainDrain_A_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM1_HeadDetach",
+        "type": 1
+    },
+    "bdrain-hdetach-d1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM1_HeadDetach_D1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM1_HeadDetach"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am1_headdetachsmall.png",
+        "name": "Assist_BrainDrain_D_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM1_HeadDetach",
+        "type": 1
+    },
+    "bdrain-hdetach-f1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM1_HeadDetach_F1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM1_HeadDetach"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am1_headdetachsmall.png",
+        "name": "Assist_BrainDrain_F_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM1_HeadDetach",
+        "type": 1
+    },
+    "bdrain-hdetach-l1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM1_HeadDetach_L1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM1_HeadDetach"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am1_headdetachsmall.png",
+        "name": "Assist_BrainDrain_L_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM1_HeadDetach",
+        "type": 1
+    },
+    "bdrain-hdetach-w1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM1_HeadDetach_W1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM1_HeadDetach"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am1_headdetachsmall.png",
+        "name": "Assist_BrainDrain_W_V1_Name_Alt",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM1_HeadDetach",
+        "type": 1
+    },
+    "bdrain-msummon-a1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM3_RoboMinion_A1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                2
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.5,
+                                2
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.75,
+                                2
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                2
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM3_RoboMinion"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am3_minionsummonsmall.png",
+        "name": "Assist_BrainDrain_A_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM3_RoboMinion",
+        "type": 1
+    },
+    "bdrain-msummon-d1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM3_RoboMinion_D1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.5,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.75,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                12.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM3_RoboMinion"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am3_minionsummonsmall.png",
+        "name": "Assist_BrainDrain_D_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM3_RoboMinion",
+        "type": 1
+    },
+    "bdrain-msummon-f1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM3_RoboMinion_F1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                1,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.5,
+                                1,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.75,
+                                1,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                1,
+                                12.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM3_RoboMinion"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am3_minionsummonsmall.png",
+        "name": "Assist_BrainDrain_F_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM3_RoboMinion",
+        "type": 1
+    },
+    "bdrain-msummon-l1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM3_RoboMinion_L1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                75.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM3_RoboMinion"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am3_minionsummonsmall.png",
+        "name": "Assist_BrainDrain_L_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM3_RoboMinion",
+        "type": 1
+    },
+    "bdrain-msummon-w1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM3_RoboMinion_W1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.5,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.75,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                12.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM3_RoboMinion"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am3_minionsummonsmall.png",
+        "name": "Assist_BrainDrain_W_V1_Name_Alt",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM3_RoboMinion",
+        "type": 1
+    },
+    "bdrain-psyjumble-a1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_BlackDahlia_BB4_PartingGift",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                14.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM2_PsychicJumble"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am2_psychicjumblesmall.png",
+        "name": "Assist_BrainDrain_A_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM2_PsychicJumble",
+        "type": 1
+    },
+    "bdrain-psyjumble-d1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM2_PsychicJumble_D1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.10000000149011612,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.10000000149011612,
+                                14.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.10000000149011612,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM2_PsychicJumble"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am2_psychicjumblesmall.png",
+        "name": "Assist_BrainDrain_D_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM2_PsychicJumble",
+        "type": 1
+    },
+    "bdrain-psyjumble-f1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM2_PsychicJumble_F1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.11999999731779099
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.14000000059604645
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.15000000596046448
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM2_PsychicJumble"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am2_psychicjumblesmall.png",
+        "name": "Assist_BrainDrain_F_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM2_PsychicJumble",
+        "type": 1
+    },
+    "bdrain-psyjumble-l1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM2_PsychicJumble_L1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.10000000149011612,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.10000000149011612,
+                                14.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.10000000149011612,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM2_PsychicJumble"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am2_psychicjumblesmall.png",
+        "name": "Assist_BrainDrain_L_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM2_PsychicJumble",
+        "type": 1
+    },
+    "bdrain-psyjumble-w1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistBrainDrain_AM2_PsychicJumble_W1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612,
+                                1,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.10000000149011612,
+                                1,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.10000000149011612,
+                                1,
+                                14.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.10000000149011612,
+                                1,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_BrainDrain_AM2_PsychicJumble"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "bdrain",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "braindrain_am2_psychicjumblesmall.png",
+        "name": "Assist_BrainDrain_W_V1_Name_Alt",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_BrainDrain_AM2_PsychicJumble",
+        "type": 1
+    },
+    "min-coolkids-d1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_Marie_BB5_WeightOfOurWill",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                -2.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                -2.2998046875
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                -2.60009765625
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                -3.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM2_CoolKidsDrinkTime"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am2_coolkidsdrinktimesmall.png",
+        "name": "Assist_Minette_D_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_Minette_AM2_CoolKidsDrinkTime",
+        "type": 1
+    },
+    "min-coolkids-f1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM2_CoolKidsDrinkTime_F1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.11999999731779099
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.14000000059604645
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.15000000596046448
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM2_CoolKidsDrinkTime"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am2_coolkidsdrinktimesmall.png",
+        "name": "Assist_Minette_F_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_Minette_AM2_CoolKidsDrinkTime",
+        "type": 1
+    },
+    "min-coolkids-l1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM2_CoolKidsDrinkTime_L1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.11999999731779099,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.14000000059604645,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.15000000596046448,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM2_CoolKidsDrinkTime"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am2_coolkidsdrinktimesmall.png",
+        "name": "Assist_Minette_L_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_Minette_AM2_CoolKidsDrinkTime",
+        "type": 1
+    },
+    "min-coolkids-n1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM2_CoolKidsDrinkTime_N1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.15000000596046448,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.15000000596046448,
+                                17.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.15000000596046448,
+                                19.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.15000000596046448,
+                                20.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM2_CoolKidsDrinkTime"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am2_coolkidsdrinktimesmall.png",
+        "name": "Assist_Minette_N_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_Minette_AM2_CoolKidsDrinkTime",
+        "type": 1
+    },
+    "min-coolkids-w1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM2_CoolKidsDrinkTime_W1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.10000000149011612
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.11999999731779099
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.14000000059604645
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.15000000596046448
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM2_CoolKidsDrinkTime"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am2_coolkidsdrinktimesmall.png",
+        "name": "Assist_Minette_W_V1_Name",
+        "strength": 3,
+        "tier": 0,
+        "title": "Assist_Minette_AM2_CoolKidsDrinkTime",
+        "type": 1
+    },
+    "min-dimsum-d1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM3_DimSumCart_D1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0,
+                                8.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0,
+                                10.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0,
+                                11.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0,
+                                12.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 6,
+                            "values": []
+                        },
+                        {
+                            "level": 11,
+                            "values": []
+                        },
+                        {
+                            "level": 16,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM3_DimSumCart"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am3_dimsumcartsmall.png",
+        "name": "Assist_Minette_D_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_Minette_AM3_DimSumCart",
+        "type": 1
+    },
+    "min-dimsum-f1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM3_DimSumCart_F1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0,
+                                2.0,
+                                8.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0,
+                                2.0,
+                                10.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0,
+                                2.0,
+                                11.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0,
+                                2.0,
+                                12.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 6,
+                            "values": []
+                        },
+                        {
+                            "level": 11,
+                            "values": []
+                        },
+                        {
+                            "level": 16,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM3_DimSumCart"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am3_dimsumcartsmall.png",
+        "name": "Assist_Minette_F_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_Minette_AM3_DimSumCart",
+        "type": 1
+    },
+    "min-dimsum-l1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM3_DimSumCart_L1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0,
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0,
+                                11.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0,
+                                12.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 6,
+                            "values": []
+                        },
+                        {
+                            "level": 11,
+                            "values": []
+                        },
+                        {
+                            "level": 16,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM3_DimSumCart"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am3_dimsumcartsmall.png",
+        "name": "Assist_Minette_L_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_Minette_AM3_DimSumCart",
+        "type": 1
+    },
+    "min-dimsum-n1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM3_DimSumCart_N1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                8.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                12.0,
+                                10.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                14.0,
+                                11.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                15.0,
+                                12.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 6,
+                            "values": []
+                        },
+                        {
+                            "level": 11,
+                            "values": []
+                        },
+                        {
+                            "level": 16,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM3_DimSumCart"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am3_dimsumcartsmall.png",
+        "name": "Assist_Minette_N_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_Minette_AM3_DimSumCart",
+        "type": 1
+    },
+    "min-dimsum-w1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM3_DimSumCart_W1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                8.0,
+                                8.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0,
+                                10.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                11.0,
+                                11.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                12.0,
+                                12.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 6,
+                            "values": []
+                        },
+                        {
+                            "level": 11,
+                            "values": []
+                        },
+                        {
+                            "level": 16,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM3_DimSumCart"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am3_dimsumcartsmall.png",
+        "name": "Assist_Minette_W_V1_Name",
+        "strength": 2,
+        "tier": 0,
+        "title": "Assist_Minette_AM3_DimSumCart",
+        "type": 1
+    },
+    "min-jattack-d1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM4_JawsAttack_D1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                2,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.6499999761581421,
+                                2,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.800000011920929,
+                                2,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                2,
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM4_JawsAttack"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am4_jawsattacksmall.png",
+        "name": "Assist_Minette_D_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM4_JawsAttack",
+        "type": 1
+    },
+    "min-jattack-f1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM4_JawsAttack_F1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM4_JawsAttack"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am4_jawsattacksmall.png",
+        "name": "Assist_Minette_F_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM4_JawsAttack",
+        "type": 1
+    },
+    "min-jattack-l1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM4_JawsAttack_L1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                25.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM4_JawsAttack"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am4_jawsattacksmall.png",
+        "name": "Assist_Minette_L_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM4_JawsAttack",
+        "type": 1
+    },
+    "min-jattack-n1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM4_JawsAttack_N1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                30.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                35.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM4_JawsAttack"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am4_jawsattacksmall.png",
+        "name": "Assist_Minette_N_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM4_JawsAttack",
+        "type": 1
+    },
+    "min-jattack-w1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM4_JawsAttack_W1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.6499999761581421,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.800000011920929,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM4_JawsAttack"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am4_jawsattacksmall.png",
+        "name": "Assist_Minette_W_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM4_JawsAttack",
+        "type": 1
+    },
+    "min-tgrab-d1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM1_TentacleGrab_D1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.3499999940395355,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.44999998807907104,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                0.6000000238418579,
+                                4.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM1_TentacleGrab"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am1_tentaclegrabsmall.png",
+        "name": "Assist_Minette_D_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM1_TentacleGrab",
+        "type": 1
+    },
+    "min-tgrab-f1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM1_TentacleGrab_F1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                2,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.6499999761581421,
+                                2,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.800000011920929,
+                                2,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                2,
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM1_TentacleGrab"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am1_tentaclegrabsmall.png",
+        "name": "Assist_Minette_F_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM1_TentacleGrab",
+        "type": 1
+    },
+    "min-tgrab-l1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM1_TentacleGrab_L1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                9.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM1_TentacleGrab"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am1_tentaclegrabsmall.png",
+        "name": "Assist_Minette_L_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM1_TentacleGrab",
+        "type": 1
+    },
+    "min-tgrab-n1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM1_TentacleGrab_N1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.6499999761581421,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.800000011920929,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM1_TentacleGrab"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am1_tentaclegrabsmall.png",
+        "name": "Assist_Minette_N_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM1_TentacleGrab",
+        "type": 1
+    },
+    "min-tgrab-w1": {
+        "ability": {
+            "features": [
+                {
+                    "description": "SA_AssistMinette_AM1_TentacleGrab_W1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 6,
+                            "values": [
+                                0.6499999761581421,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 11,
+                            "values": [
+                                0.800000011920929,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 16,
+                            "values": [
+                                1.0,
+                                12.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Assist_Minette_AM1_TentacleGrab"
+        },
+        "attack": [
+            0.8500000238418579,
+            0.8799999952316284,
+            0.9100000262260437,
+            0.9399999976158142,
+            0.9700000286102295,
+            1.0,
+            1.0299999713897705,
+            1.059999942779541,
+            1.090000033378601,
+            1.1200000047683716,
+            1.149999976158142,
+            1.1799999475479126,
+            1.2100000381469727,
+            1.2300000190734863,
+            1.25,
+            1.2699999809265137,
+            1.2899999618530273,
+            1.309999942779541,
+            1.3300000429153442,
+            1.350000023841858
+        ],
+        "base": "min",
+        "cost": 0,
+        "damage": [],
+        "gear": 1,
+        "icon": "minette_am1_tentaclegrabsmall.png",
+        "name": "Assist_Minette_W_V1_Name",
+        "strength": 1,
+        "tier": 0,
+        "title": "Assist_Minette_AM1_TentacleGrab",
+        "type": 1
+    }
+}
