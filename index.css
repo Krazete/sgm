@@ -321,6 +321,16 @@ html[lang='zh-cn'] .moves:before {content: '\62db \5f0f ';}
 html[lang='ru'] .moves:before {content: '\041f \0420 \0418 \0415 \041c \042b ';}
 html[lang='pt-br'] .moves:before {content: 'GOLPES';}
 
+html[lang='en'] .assists:before {content: 'GUEST STARS';}
+html[lang='ja'] .assists:before {content: '\30b2 \30b9 \30c8 \30b9 \30bf \30fc ';}
+html[lang='fr'] .assists:before {content: 'QUEST-STARS';}
+html[lang='de'] .assists:before {content: 'STARG\00c4 STE';}
+html[lang='es'] .assists:before {content: 'ESTRELLAS INVITADAS';}
+html[lang='ko'] .assists:before {content: '\ac8c \c2a4 \d2b8  \c2a4 \d0c0 ';}
+html[lang='zh-cn'] .assists:before {content: '\5609 \5bbe \660e \661f ';}
+html[lang='ru'] .assists:before {content: '\041f \0420 \0418 \0413 \041b \0410 \0428 \0415 \041d \041d \042b \0415  \0417 \0412 \0415 \0417 \0414 \042b ';}
+html[lang='pt-br'] .assists:before {content: 'ASTROS CONVIDADOS';}
+
 html[lang='en'] .catalysts:before {content: 'CATALYSTS';}
 html[lang='ja'] .catalysts:before {content: '\30ad \30e3 \30bf \30ea \30b9 \30c8 ';}
 html[lang='fr'] .catalysts:before {content: 'CATALYSEURS';}
@@ -330,6 +340,16 @@ html[lang='ko'] .catalysts:before {content: '\cd09 \b9e4 ';}
 html[lang='zh-cn'] .catalysts:before {content: '\8f6c \5316 \7269 ';}
 html[lang='ru'] .catalysts:before {content: '\041a \0410 \0422 \0410 \041b \0418 \0417 \0410 \0422 \041e \0420 \042b ';}
 html[lang='pt-br'] .catalysts:before {content: 'CATALISADORES';}
+
+html[lang='en'] .artifacts:before {content: 'Artifacts';}
+html[lang='ja'] .artifacts:before {content: '\30a2 \30fc \30c6 \30a3 \30d5 \30a1 \30af \30c8 ';}
+html[lang='fr'] .artifacts:before {content: 'Artefacts';}
+html[lang='de'] .artifacts:before {content: 'Artefakte';}
+html[lang='es'] .artifacts:before {content: 'Artefactos';}
+html[lang='ko'] .artifacts:before {content: '\c544 \d2f0 \d329 \d2b8 ';}
+html[lang='zh-cn'] .artifacts:before {content: '\6587 \7269 ';}
+html[lang='ru'] .artifacts:before {content: '\0410 \0440 \0442 \0435 \0444 \0430 \043a \0442 \044b ';}
+html[lang='pt-br'] .artifacts:before {content: 'Artefatos';}
 
 html[lang='en'] .ratings:before {content: 'RATINGS';}
 html[lang='ja'] .ratings:before {content: '\8a55 \4fa1 ';}
