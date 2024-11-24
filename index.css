@@ -1329,6 +1329,18 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .bb2 .badge:before {background-image: url(image/official/BB-Frame2.png);}
 .bb3 .badge:before {background-image: url(image/official/BB-Frame3.png);}
 
+.gss .badge:before {
+    content: '';
+    background-image: url(image/official/AssistFrame.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .symbol {
     position: absolute;
     width: 100%;
@@ -1350,6 +1362,26 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .move.gold .symbol {
     filter: sepia(1);
 }
+
+.gss .symbol {
+    top: -6%;
+}
+.move.fire .symbol {
+    filter: sepia(1) hue-rotate(300deg);
+}
+.move.water .symbol {
+    filter: sepia(1) hue-rotate(160deg);
+}
+.move.wind .symbol {
+    filter: sepia(1) hue-rotate(60deg);
+}
+.move.dark .symbol {
+    filter: sepia(1) hue-rotate(200deg);
+}
+.move.light .symbol {
+    filter: sepia(1) hue-rotate(20deg);
+}
+
 .catalyst .symbol {
     left: -15%;
     top: -15%;
@@ -1683,6 +1715,17 @@ html[lang='ko'] .damage:before {content: '\d53c \d574 \b7c9 ';}
 html[lang='zh-cn'] .damage:before {content: '\4f24 \5bb3 ';}
 html[lang='ru'] .damage:before {content: '\0423 \0420 \041e \041d ';}
 html[lang='pt-br'] .damage:before {content: 'DANO';}
+
+
+html[lang='en'] .bonus-damage:before {content: 'BONUS DAMAGE:';}
+html[lang='ja'] .bonus-damage:before {content: '\30dc \30fc \30ca \30b9 \30c0 \30e1 \30fc \30b8 \ff1a ';}
+html[lang='fr'] .bonus-damage:before {content: 'D\00c9 G\00c2 TS BONUS:';}
+html[lang='de'] .bonus-damage:before {content: 'BONUSSCHADEN:';}
+html[lang='es'] .bonus-damage:before {content: 'DA\00d1 O EXTRA:';}
+html[lang='ko'] .bonus-damage:before {content: '\cd94 \ac00  \d53c \d574 :';}
+html[lang='zh-cn'] .bonus-damage:before {content: '\989d \5916 \4f24 \5bb3 \ff1a ';}
+html[lang='ru'] .bonus-damage:before {content: '\0414 \041e \041f . \0423 \0420 \041e \041d :';}
+html[lang='pt-br'] .bonus-damage:before {content: 'DANO EXTRA:';}
 
 html[lang='en'] .none:before {content: 'NONE';}
 html[lang='ja'] .none:before {content: '\306a \3057 ';}

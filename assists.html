@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.75">
-    <meta name="description" content="A move gallery for Skullgirls Mobile. View the stats and abilities of all special moves and blockbusters, translated in any language offered in the game.">
+    <meta name="description" content="A guest star gallery for Skullgirls Mobile. View the stats and abilities of all guest stars, translated in any language offered in the game.">
     <link rel="shortcut icon" type="image/png" href="image/official/Button_Modifiers.png">
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Skullgirls Mobile Guest Star Gallery</title>
     <script type="application/javascript" src="assist.js"></script>
 </head>
-<body>
+<body class="silver">
     <div id="header">
         <span class="banner cinematic gold-gradient" id="skullgirls-mobile"></span>
         <wbr>
-        <span class="assist-gallery banner cinematic silver-gradient"></span>
+        <span class="assist-gallery banner cinematic dependent-gradient"></span>
         <div class="ribbon">
             <div class="scroller">
                 <div>
@@ -95,27 +95,6 @@
                         <label for="filter-cancel"><img src="image/official/constraints_no.png" class="icon"></label>
                     </div>
                     <div class="divider"></div>
-                    <div class="subset" id="badges">
-                        <input type="checkbox" id="filter-sms">
-                        <label for="filter-sms">
-                            <div class="icon">
-                                <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
-                                <img src="image/official/SpecialFrameSilver.png" class="half-subicon">
-                            </div>
-                        </label>
-                        <input type="checkbox" id="filter-bbs">
-                        <label for="filter-bbs"><img src="image/official/BB-Frame1.png" class="icon"></label>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="subset" id="medals">
-                        <input type="checkbox" id="filter-bronze">
-                        <label for="filter-bronze"><img src="image/official/constraints_bronze.png" class="icon"></label>
-                        <input type="checkbox" id="filter-silver">
-                        <label for="filter-silver"><img src="image/official/constraints_silver.png" class="icon"></label>
-                        <input type="checkbox" id="filter-gold">
-                        <label for="filter-gold"><img src="image/official/constraints_gold.png" class="icon"></label>
-                    </div>
-                    <div class="divider"></div>
                     <div class="subset" id="mastery">
                         <input type="checkbox" id="filter-br">
                         <label for="filter-br"><img src="image/official/BrainDrain_MasteryIcon.png" class="icon"></label>
@@ -130,14 +109,10 @@
                         <span class="tagged cinematic silver-gradient" id="sort-label"></span>
                     </div>
                     <div class="divider"></div>
-                    <input type="radio" name="sort" id="sort-damage">
-                    <label for="sort-damage" class="damage"></label>
                     <input type="radio" name="sort" id="sort-abc">
                     <label for="sort-abc"></label>
-                    <input type="radio" name="sort" id="sort-tier">
-                    <label for="sort-tier"></label>
-                    <input type="radio" name="sort" id="sort-type">
-                    <label for="sort-type"></label>
+                    <input type="radio" name="sort" id="sort-element">
+                    <label for="sort-element"></label>
                 </div>
             </div>
         </div>
@@ -153,14 +128,6 @@
                     </div>
                     <div class="divider"></div>
                     <div class="subset">
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="20" value="20" class="cinematic" id="level-bronze">
-                            <img src="image/official/BronzeLevel.png" class="icon">
-                        </div>
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="20" value="20" class="cinematic" id="level-silver">
-                            <img src="image/official/SilverLevel.png" class="icon">
-                        </div>
                         <div>
                             <input type="text" pattern="\d*" min="1" max="20" value="20" class="cinematic" id="level-gold">
                             <img src="image/official/GoldLevel.png" class="icon">

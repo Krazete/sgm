@@ -1,7 +1,7 @@
-var gss, corpus;
+var moves, corpus;
 
-var types = ["sms", "bbs"];
-var tiers = ["bronze", "silver", "gold"];
+var tiers = ["bronze", "silver", "gold", "diamond"];
+var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 var fighterIDs = ["br", "mi"];
 
 var cards = [];
@@ -36,8 +36,8 @@ function toggleLoadingScreen(loading) {
     }
 }
 
-function initCollection(responses) {
-    gss = responses[0];
+function initCollection(response) {
+    moves = response;
 
     var collection = document.getElementById("collection");
 
@@ -69,7 +69,7 @@ function initCollection(responses) {
                 symbol.className = "symbol";
                 symbol.dataset.src = [
                     "image/move",
-                    gss[key].icon
+                    moves[key].icon
                 ].join("/");
                 symbol.addEventListener("error", handleMissingSymbol);
                 lazyList.push(symbol);
@@ -88,23 +88,11 @@ function initCollection(responses) {
             table.className = "table";
             var row = table.insertRow();
             var cell = row.insertCell();
-                cell.className = "damage";
+                cell.className = "bonus-damage";
             var cell = row.insertCell();
                 var value = document.createElement("span");
                     value.className = "damage-value";
                 cell.appendChild(value);
-            if (gss[key].type == 0) {
-                var row = table.insertRow();
-                var cell = row.insertCell();
-                    cell.className = "cooldown";
-                var cell = row.insertCell();
-                    var value = document.createElement("span");
-                        value.className = "cooldown-value";
-                    cell.appendChild(value);
-                    var seconds = document.createElement("span");
-                        seconds.className = "seconds";
-                    cell.appendChild(seconds);
-            }
         return table;
     }
 
@@ -124,12 +112,6 @@ function initCollection(responses) {
         }
     }
 
-    function createGear() {
-        var gear = document.createElement("div");
-            gear.className = "gear cinematic";
-        return gear;
-    }
-
     function createLock() {
         var lock = document.createElement("img");
             lock.className = "lock";
@@ -140,14 +122,10 @@ function initCollection(responses) {
 
     function createCard(key) {
         var classList = [
-            "move card",
-            gss[key].base,
-            tiers[gss[key].tier],
-            types[gss[key].type]
+            "move card gss",
+            elements[moves[key].element],
+            moves[key].base
         ];
-        if (gss[key].type == 1) {
-            classList.push("bb" + gss[key].strength);
-        }
         var card = document.createElement("div");
             card.className = classList.join(" ");
             card.id = key;
@@ -155,12 +133,11 @@ function initCollection(responses) {
             card.appendChild(createTitle());
             card.appendChild(createTable(key));
             card.appendChild(createDescription());
-            card.appendChild(createGear());
             card.appendChild(createLock());
         return card;
     }
 
-    for (var key in gss) {
+    for (var key in moves) {
         var card = createCard(key);
         collection.appendChild(card);
         cards.push(card);
@@ -208,9 +185,7 @@ function initLanguageMenu() {
     function updateCardConstant(card) {
         var key = card.id;
         var title = card.getElementsByClassName("title")[0];
-        var gear = card.getElementsByClassName("gear")[0];
-        title.innerHTML = corpus[gss[key].title];
-        gear.dataset.value = gss[key].cost;
+        title.innerHTML = corpus[moves[key].title];
     }
 
     function updateCardConstants(response) {
@@ -326,16 +301,10 @@ function initFilterMenu() {
     var filterCancel = document.getElementById("filter-cancel");
 
     var filterCancel = document.getElementById("filter-cancel");
-    var filterTypes = types.map(function (type) {
-        return document.getElementById("filter-" + type);
-    });
-    var filterTiers = tiers.map(function (tier) {
-        return document.getElementById("filter-" + tier);
-    });
     var filterFighters = fighterIDs.map(function (fighter) {
         return document.getElementById("filter-" + fighter);
     });
-    var filters = [].concat(filterTypes, filterTiers, filterFighters);
+    var filters = [].concat(filterFighters);
 
     function updateFilterCancel() {
         if (filters.some(function (filter) {
@@ -369,11 +338,11 @@ function initFilterMenu() {
         var key = card.id;
         var query = sanitize(searchbox.value);
         if (searchMN.checked) {
-            return sanitize(key).includes(query) || sanitize(corpus[gss[key].title]).includes(query);
+            return sanitize(key).includes(query) || sanitize(corpus[moves[key].title]).includes(query);
         }
         else if (searchD.checked) {
-            if ("ability" in gss[key] && "features" in gss[key].ability) {
-                for (var feature of gss[key].ability.features) {
+            if ("ability" in moves[key] && "features" in moves[key].ability) {
+                for (var feature of moves[key].ability.features) {
                     if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
                         return true;
                     }
@@ -381,30 +350,6 @@ function initFilterMenu() {
             }
         }
         return false;
-    }
-
-    function typeCondition(card) {
-        if (filterTypes.every(function (filter) {
-            return !filter.checked;
-        })) {
-            return true;
-        }
-        var key = card.id;
-        return filterTypes.some(function (filter, i) {
-            return filter.checked && gss[key].type == i;
-        });
-    }
-
-    function tierCondition(card) {
-        if (filterTiers.every(function (filter) {
-            return !filter.checked;
-        })) {
-            return true;
-        }
-        var key = card.id;
-        return filterTiers.some(function (filter, i) {
-            return filter.checked && gss[key].tier == i;
-        });
     }
 
     function fighterCondition(card) {
@@ -415,7 +360,7 @@ function initFilterMenu() {
         }
         var key = card.id;
         return filterFighters.some(function (filter, i) {
-            return filter.checked && gss[key].base == fighterIDs[i];
+            return filter.checked && moves[key].base == fighterIDs[i];
         });
     }
 
@@ -423,8 +368,6 @@ function initFilterMenu() {
         for (var card of cards) {
             if (
                 searchCondition(card) &&
-                typeCondition(card) &&
-                tierCondition(card) &&
                 fighterCondition(card)
             ) {
                 card.classList.remove("hidden");
@@ -473,48 +416,15 @@ function sortCards() {
 }
 
 function initSortMenu() {
-    var sortDamage = document.getElementById("sort-damage");
     var sortAlphabetical = document.getElementById("sort-abc");
-    var sortTier = document.getElementById("sort-tier");
-    var sortType = document.getElementById("sort-type");
 
-    var savedBasis = localStorage.getItem("basis2") || "sort-tier";
+    var savedBasis = localStorage.getItem("basis2") || "sort-abc";
     var savedButton = document.getElementById(savedBasis);
 
     function alphabeticalBasis(a, b) {
-        var A = gss[a.id].base + corpus[gss[a.id].title];
-        var B = gss[b.id].base + corpus[gss[b.id].title];
+        var A = moves[a.id].base + corpus[moves[a.id].title];
+        var B = moves[b.id].base + corpus[moves[b.id].title];
         return A > B ? 1 : A < B ? -1 : 0;
-    }
-
-    function damageBasis(a, b) {
-        var A = gss[a.id].damage[0];
-        var B = gss[b.id].damage[0];
-        var C = B - A;
-        if (C == 0) {
-            return alphabeticalBasis(a, b);
-        }
-        return C;
-    }
-
-    function tierBasis(a, b) {
-        var A = gss[a.id].tier;
-        var B = gss[b.id].tier;
-        var C = B - A;
-        if (C == 0) {
-            return alphabeticalBasis(a, b);
-        }
-        return C;
-    }
-
-    function typeBasis(a, b) {
-        var A = gss[a.id].type;
-        var B = gss[b.id].type;
-        var C = A - B;
-        if (C == 0) {
-            return tierBasis(a, b);
-        }
-        return C;
     }
 
     function sorter(basis) {
@@ -525,16 +435,10 @@ function initSortMenu() {
         };
     }
 
-    sortDamage.addEventListener("change", sorter(damageBasis));
     sortAlphabetical.addEventListener("change", sorter(alphabeticalBasis));
-    sortTier.addEventListener("change", sorter(tierBasis));
-    sortType.addEventListener("change", sorter(typeBasis));
 
     if (![
-        sortDamage,
-        sortAlphabetical,
-        sortTier,
-        sortType
+        sortAlphabetical
     ].includes(savedButton)) {
         savedButton = sortAlphabetical;
     }
@@ -544,36 +448,20 @@ function initSortMenu() {
 
 function initOptionsMenu() {
     var levelRange = document.getElementById("level-range");
-    var levelBronze = document.getElementById("level-bronze");
-    var levelSilver = document.getElementById("level-silver");
     var levelGold = document.getElementById("level-gold");
-    var levelTiers = [levelBronze, levelSilver, levelGold];
+    var levelTiers = [levelGold];
 
     function updateCardStats() {
         for (var card of cards) {
             var key = card.id;
             var damage = card.getElementsByClassName("damage-value")[0];
-            var cooldown = card.getElementsByClassName("cooldown-value")[0];
-            // var bar = gss[key].superbar;
-            // damage.className = "damage-value " + (
-            //     typeof bar == "undefined" || bar <= 0 ? "none" :
-            //     bar <= 100 ? "very-low" :
-            //     bar <= 200 ? "low" :
-            //     bar <= 300 ? "medium" :
-            //     bar <= 400 ? "high" :
-            //     bar <= 500 ? "very-high" :
-            //     "ultra"
-            // );
             damage.innerHTML = "";
-            for (var i = 0; i < gss[key].damage[levelTiers[gss[key].tier].value - 1]; i++) {
-                var plus = document.createElement("img");
-                plus.className = "plus";
-                plus.src = "image/official/plus.png";
-                damage.appendChild(plus);
-            }
-            if (gss[key].type == 0) {
-                cooldown.innerHTML = gss[key].cooldown[levelTiers[gss[key].tier].value - 1] + " ";
-            }
+            // for (var i = 0; i < 6; i++) {
+            //     var plus = document.createElement("img");
+            //     plus.className = "plus";
+            //     plus.src = "image/official/plus.png";
+            //     damage.appendChild(plus);
+            // }
         }
         filterCards(); /* for the searchbox filter when language changes*/
         sortCards();
@@ -582,7 +470,7 @@ function initOptionsMenu() {
     function getDescriptionTier(key, feature) {
         var fTierValue = 0;
         for (var fTier of feature.tiers) {
-            if (fTier.level > levelTiers[gss[key].tier].value) {
+            if (fTier.level > levelTiers[moves[key].tier].value) {
                 break;
             }
             fTierValue = fTier.values;
@@ -596,8 +484,8 @@ function initOptionsMenu() {
             var description = card.getElementsByClassName("description")[0];
             description.classList.add("hidden");
             description.innerHTML = "";
-            if ("ability" in gss[key] && "features" in gss[key].ability) {
-                for (var feature of gss[key].ability.features) {
+            if ("ability" in moves[key] && "features" in moves[key].ability) {
+                for (var feature of moves[key].ability.features) {
                     if (feature.description && corpus[feature.description]) {
                         var fDescription = document.createElement("div");
                         fDescription.innerHTML = format(corpus[feature.description], getDescriptionTier(key, feature));
@@ -630,8 +518,6 @@ function initOptionsMenu() {
     }
 
     function setLevelViaRange() {
-        setValidInput(levelBronze, this.value);
-        setValidInput(levelSilver, this.value);
         setValidInput(levelGold, this.value);
         updateCards();
     }
@@ -643,19 +529,13 @@ function initOptionsMenu() {
     function setLevelViaNumber() {
         setValidInput(this, this.value);
         setValidInput(levelRange, Math.max(
-            levelBronze.value,
-            levelSilver.value,
             levelGold.value
         ));
         updateCards();
     }
 
     levelRange.addEventListener("change", setLevelViaRange);
-    levelBronze.addEventListener("focus", focusSelect);
-    levelSilver.addEventListener("focus", focusSelect);
     levelGold.addEventListener("focus", focusSelect);
-    levelBronze.addEventListener("change", setLevelViaNumber);
-    levelSilver.addEventListener("change", setLevelViaNumber);
     levelGold.addEventListener("change", setLevelViaNumber);
 
     updateCards();
@@ -670,9 +550,7 @@ function initialize() {
     }
 
     toggleLoadingScreen(true);
-    Promise.all([
-        loadJSON("data/gss.json")
-    ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(toggleLoadingScreen);
+    loadJSON("data/gss.json").then(initCollection).then(initLanguageMenu).then(initFooter).then(toggleLoadingScreen);
 
 }
 
