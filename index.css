@@ -1856,14 +1856,14 @@ html[lang='pt-br'] .fighter.card .ma .ability-type:before, html[lang='pt-br'] .m
 }
 
 html[lang='en'] .fighter.card .pa .ability-type:before, html[lang='en'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
-html[lang='ja'] .fighter.card .pa .ability-type:before, html[lang='ja'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
-html[lang='fr'] .fighter.card .pa .ability-type:before, html[lang='fr'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
-html[lang='de'] .fighter.card .pa .ability-type:before, html[lang='de'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
-html[lang='es'] .fighter.card .pa .ability-type:before, html[lang='es'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
-html[lang='ko'] .fighter.card .pa .ability-type:before, html[lang='ko'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
-html[lang='zh-cn'] .fighter.card .pa .ability-type:before, html[lang='zh-cn'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
-html[lang='ru'] .fighter.card .pa .ability-type:before, html[lang='ru'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
-html[lang='pt-br'] .fighter.card .pa .ability-type:before, html[lang='pt-br'] .pa .ability-type:before {content: 'PRESTIGE ABILITY';}
+html[lang='ja'] .fighter.card .pa .ability-type:before, html[lang='ja'] .pa .ability-type:before {content: '\540d \58f0 \30d1 \30ef \30fc ';}
+html[lang='fr'] .fighter.card .pa .ability-type:before, html[lang='fr'] .pa .ability-type:before {content: 'APTITUDE PRESTIGE';}
+html[lang='de'] .fighter.card .pa .ability-type:before, html[lang='de'] .pa .ability-type:before {content: 'PRESTIGEFERTIGKEIT';}
+html[lang='es'] .fighter.card .pa .ability-type:before, html[lang='es'] .pa .ability-type:before {content: 'HABILIDAD DE PRESTIGIO';}
+html[lang='ko'] .fighter.card .pa .ability-type:before, html[lang='ko'] .pa .ability-type:before {content: '\c77c \b958  \b2a5 \b825 ';}
+html[lang='zh-cn'] .fighter.card .pa .ability-type:before, html[lang='zh-cn'] .pa .ability-type:before {content: '\5a01 \671b \80fd \529b ';}
+html[lang='ru'] .fighter.card .pa .ability-type:before, html[lang='ru'] .pa .ability-type:before {content: '\0423 \041c \0415 \041d \0418 \0415  \041f \0420 \0415 \0421 \0422 \0418 \0416 \0410 ';}
+html[lang='pt-br'] .fighter.card .pa .ability-type:before, html[lang='pt-br'] .pa .ability-type:before {content: 'HABILIDADE PREST\00cd GIO';}
 
 .ability-title {
     cursor: pointer;
