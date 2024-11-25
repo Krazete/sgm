@@ -630,6 +630,17 @@ html[lang='pt-br'] .all-label:before {content: 'TODOS';}
     grid-template-columns: repeat(3, 1fr);
 }
 
+.level-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+}
+.bronze .level-icon {background-image: url(image/official/BronzeLevel.png);}
+.silver .level-icon {background-image: url(image/official/SilverLevel.png);}
+.gold .level-icon {background-image: url(image/official/GoldLevel.png);}
+.diamond .level-icon {background-image: url(image/official/DiamondLevel.png); filter: sepia(1) hue-rotate(270deg);}
+
 /* FILTER */
 
 #filter-label:before {

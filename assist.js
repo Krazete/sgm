@@ -525,12 +525,6 @@ function initOptionsMenu() {
         else {
             input.value = Math.max(input.min, Math.min(value, input.max));
         }
-        if (input.value == input.max) {
-            input.classList.add("maxed");
-        }
-        else {
-            input.classList.remove("maxed");
-        }
     }
 
     function setLevelViaRange() {
