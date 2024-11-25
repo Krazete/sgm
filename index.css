@@ -1425,12 +1425,14 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     filter: contrast(2) sepia(1) saturate(3);
 }
 
-.title {
+.title,
+.compound {
     grid-area: mn;
     margin: auto;
     z-index: 1;
 }
-.title.tagged:before {
+.title.tagged:before,
+.name.tagged:before {
     content: '';
     background-size: contain;
     background-repeat: no-repeat;
@@ -1444,12 +1446,14 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .be .title.tagged:before {background-image: url(image/official/Beowulf_MasteryIcon.png);}
 .bb .title.tagged:before {background-image: url(image/official/BigBand_MasteryIcon.png);}
 .bd .title.tagged:before {background-image: url(image/official/BlackDahlia_MasteryIcon.png);}
+.bdrain .name.tagged:before {background-image: url(image/official/BrainDrain_MasteryIcon.png);}
 .ce .title.tagged:before {background-image: url(image/official/Cerebella_MasteryIcon.png);}
 .do .title.tagged:before {background-image: url(image/official/Double_MasteryIcon.png);}
 .el .title.tagged:before {background-image: url(image/official/Eliza_MasteryIcon.png);}
 .fi .title.tagged:before {background-image: url(image/official/Filia_MasteryIcon.png);}
 .fu .title.tagged:before {background-image: url(image/official/Fukua_MasteryIcon.png);}
 .ma .title.tagged:before {background-image: url(image/official/Marie_MasteryIcon.png);}
+.min .name.tagged:before {background-image: url(image/official/Minette_MasteryIcon.png);}
 .mf .title.tagged:before {background-image: url(image/official/MsFortune_MasteryIcon.png);}
 .pw .title.tagged:before {background-image: url(image/official/Painwheel_MasteryIcon.png);}
 .pa .title.tagged:before {background-image: url(image/official/Parasoul_MasteryIcon.png);}
@@ -1465,6 +1469,10 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .wind .title.tagged:before {background-image: url(image/official/ElementalIconWind.png);}
 .light .title.tagged:before {background-image: url(image/official/ElementalIconLight.png);}
 .dark .title.tagged:before {background-image: url(image/official/ElementalIconDark.png);}
+
+.compound .name {
+    margin-top: -0.5em;
+}
 
 /* QUOTE */
 

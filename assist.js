@@ -84,9 +84,15 @@ function initCollection(response) {
     }
 
     function createTitle() {
-        var title = document.createElement("div");
-            title.className = "title tagged cinematic dependent-gradient";
-        return title;
+        var compound = document.createElement("div");
+            compound.className = "compound";
+            var title = document.createElement("div");
+                title.className = "title tagged cinematic dependent-gradient";
+            compound.appendChild(title);
+            var name = document.createElement("div");
+                name.className = "name tagged cinematic";
+            compound.appendChild(name);
+        return compound;
     }
 
     function createTable(key) {
@@ -192,6 +198,8 @@ function initLanguageMenu() {
         var key = card.id;
         var title = card.getElementsByClassName("title")[0];
         title.innerHTML = corpus[moves[key].title];
+        var name = card.getElementsByClassName("name")[0];
+        name.innerHTML = corpus[moves[key].name];
     }
 
     function updateCardConstants(response) {
