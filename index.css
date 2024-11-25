@@ -1310,35 +1310,63 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 .sms.silver .badge:before, .sms.silver .badge:after {background-image: url(image/official/SpecialFrameSilver.png);}
 .sms.gold .badge:before, .sms.gold .badge:after {background-image: url(image/official/SpecialFrameGold.png);}
 
-.bbs .badge:before {
-    content: '';
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-.bbs.bronze .badge:before {
-    filter: brightness(0.4) sepia(1) saturate(2) hue-rotate(325deg);
-}
-.bbs.gold .badge:before {
-    filter: sepia(1) saturate(2);
-}
-.bb1 .badge:before {background-image: url(image/official/BB-Frame1.png);}
-.bb2 .badge:before {background-image: url(image/official/BB-Frame2.png);}
-.bb3 .badge:before {background-image: url(image/official/BB-Frame3.png);}
-
 .gss .badge:before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    display: block;
+    border-radius: 50% / 30%;
+    z-index: -1;
+}
+.neutral .badge:before {background-image: radial-gradient(#ccc, #888);}
+.fire .badge:before {background-image: radial-gradient(#fb7, #d00);}
+.water .badge:before {background-image: radial-gradient(#5ff, #06c);}
+.wind .badge:before {background-image: radial-gradient(#9f8, #082);}
+.dark .badge:before {background-image: radial-gradient(#eae, #525);}
+.light .badge:before {background-image: radial-gradient(#fff, #ec5);}
+
+.bbs .badge:before,
+.gss .badge:after {
     content: '';
     background-image: url(image/official/AssistFrame.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
     width: 100%;
     height: 100%;
     display: block;
+}
+.bb1 .badge:before {background-image: url(image/official/BB-Frame1.png);}
+.bb2 .badge:before {background-image: url(image/official/BB-Frame2.png);}
+.bb3 .badge:before {background-image: url(image/official/BB-Frame3.png);}
+.bbs.bronze .badge:before,
+.bronze .gss .badge:after {
+    filter: brightness(0.4) sepia(1) saturate(2) hue-rotate(325deg);
+}
+.bbs.gold .badge:before,
+.gold .gss .badge:after {
+    filter: sepia(1) saturate(2);
+}
+.diamond .gss.neutral .badge:after {
+    filter: contrast(2) sepia(1) saturate(3) hue-rotate(270deg);
+}
+.diamond .gss.fire .badge:after {
+    filter: contrast(2) sepia(1) saturate(3) hue-rotate(310deg);
+}
+.diamond .gss.water .badge:after {
+    filter: contrast(2) sepia(1) saturate(3) hue-rotate(160deg);
+}
+.diamond .gss.wind .badge:after {
+    filter: contrast(2) sepia(1) saturate(3) hue-rotate(50deg);
+}
+.diamond .gss.dark .badge:after {
+    filter: contrast(2) sepia(1) saturate(3) hue-rotate(220deg);
+}
+.diamond .gss.light .badge:after {
+    filter: contrast(2) sepia(1) saturate(3);
 }
 
 .symbol {
@@ -1356,32 +1384,18 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     left: 16%;
     top: -16%;
 }
-.move.bronze .symbol {
-    filter: sepia(1) hue-rotate(325deg);
-}
-.move.gold .symbol {
-    filter: sepia(1);
-}
-
 .gss .symbol {
     top: -6%;
 }
-.move.fire .symbol {
-    filter: sepia(1) hue-rotate(300deg);
+.bronze .symbol {
+    filter: sepia(1) hue-rotate(325deg);
 }
-.move.water .symbol {
-    filter: sepia(1) hue-rotate(160deg);
+.gold .symbol {
+    filter: sepia(1);
 }
-.move.wind .symbol {
-    filter: sepia(1) hue-rotate(60deg);
+.diamond .symbol {
+    filter: sepia(1) hue-rotate(270deg);
 }
-.move.dark .symbol {
-    filter: sepia(1) hue-rotate(200deg);
-}
-.move.light .symbol {
-    filter: sepia(1) hue-rotate(20deg);
-}
-
 .catalyst .symbol {
     left: -15%;
     top: -15%;
