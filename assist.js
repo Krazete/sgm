@@ -310,6 +310,7 @@ function initDock() {
 function initFilterMenu() {
     var searchbox = document.getElementById("searchbox");
     var searchMN = document.getElementById("search-mn");
+    var searchVN = document.getElementById("search-vn");
     var searchD = document.getElementById("search-d");
 
     var filterCancel = document.getElementById("filter-cancel");
@@ -353,6 +354,9 @@ function initFilterMenu() {
         var query = sanitize(searchbox.value);
         if (searchMN.checked) {
             return sanitize(key).includes(query) || sanitize(corpus[moves[key].title]).includes(query);
+        }
+        else if (searchVN.checked) {
+            return sanitize(key).includes(query) || sanitize(corpus[moves[key].name]).includes(query);
         }
         else if (searchD.checked) {
             if ("ability" in moves[key] && "features" in moves[key].ability) {
@@ -409,6 +413,7 @@ function initFilterMenu() {
     searchbox.addEventListener("keydown", pressEnter);
     searchbox.addEventListener("input", filterCards);
     searchMN.addEventListener("change", filterCards);
+    searchVN.addEventListener("change", filterCards);
     searchD.addEventListener("change", filterCards);
 
     filterCancel.addEventListener("change", cancelFilters);
