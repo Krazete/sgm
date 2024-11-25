@@ -461,21 +461,22 @@ function initSortMenu() {
 }
 
 function initOptionsMenu() {
+    var levelText = document.getElementById("level-text");
     var levelRange = document.getElementById("level-range");
-    var levelGold = document.getElementById("level-gold");
-    var levelTiers = [levelGold];
+
+    function updateTier() {
+        document.body.classList.remove("bronze");
+        document.body.classList.remove("silver");
+        document.body.classList.remove("gold");
+        document.body.classList.remove("diamond");
+        document.body.classList.add(tiers[Math.floor((levelRange.value - 1) / 5)]);
+    }
 
     function updateCardStats() {
         for (var card of cards) {
             var key = card.id;
             var damage = card.getElementsByClassName("damage-value")[0];
-            damage.innerHTML = "";
-            // for (var i = 0; i < 6; i++) {
-            //     var plus = document.createElement("img");
-            //     plus.className = "plus";
-            //     plus.src = "image/official/plus.png";
-            //     damage.appendChild(plus);
-            // }
+            damage.innerHTML = "+" + Math.round(moves[key].attack[levelRange.value - 1] * 100 - 85) + "%";
         }
         filterCards(); /* for the searchbox filter when language changes*/
         sortCards();
@@ -484,7 +485,7 @@ function initOptionsMenu() {
     function getDescriptionTier(key, feature) {
         var fTierValue = 0;
         for (var fTier of feature.tiers) {
-            if (fTier.level > levelTiers[moves[key].tier].value) {
+            if (fTier.level > levelRange.value) {
                 break;
             }
             fTierValue = fTier.values;
@@ -512,6 +513,7 @@ function initOptionsMenu() {
     }
 
     updateCards = function () {
+        updateTier();
         updateCardStats();
         updateCardDescriptions();
     };
@@ -532,7 +534,7 @@ function initOptionsMenu() {
     }
 
     function setLevelViaRange() {
-        setValidInput(levelGold, this.value);
+        setValidInput(levelText, this.value);
         updateCards();
     }
 
@@ -543,14 +545,14 @@ function initOptionsMenu() {
     function setLevelViaNumber() {
         setValidInput(this, this.value);
         setValidInput(levelRange, Math.max(
-            levelGold.value
+            levelText.value
         ));
         updateCards();
     }
 
     levelRange.addEventListener("change", setLevelViaRange);
-    levelGold.addEventListener("focus", focusSelect);
-    levelGold.addEventListener("change", setLevelViaNumber);
+    levelText.addEventListener("focus", focusSelect);
+    levelText.addEventListener("change", setLevelViaNumber);
 
     updateCards();
 }

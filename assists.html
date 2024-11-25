@@ -89,25 +89,19 @@
         <div class="hidden" id="menu">
             <div class="scroller half" id="filter-menu">
                 <div>
-                    <div class="label-flexbox">
-                        <span class="tagged cinematic silver-gradient" id="filter-label"></span>
-                        <input type="checkbox" id="filter-cancel">
-                        <label for="filter-cancel"><img src="image/official/constraints_no.png" class="icon"></label>
-                    </div>
+                    <span class="tagged cinematic silver-gradient" id="filter-label"></span>
+                    <input type="checkbox" id="filter-cancel">
+                    <label for="filter-cancel"><img src="image/official/constraints_no.png" class="icon"></label>
                     <div class="divider"></div>
-                    <div class="subset" id="mastery">
-                        <input type="checkbox" id="filter-bdrain">
-                        <label for="filter-bdrain"><img src="image/official/BrainDrain_MasteryIcon.png" class="icon"></label>
-                        <input type="checkbox" id="filter-min">
-                        <label for="filter-min"><img src="image/official/Minette_MasteryIcon.png" class="icon"></label>
-                    </div>
+                    <input type="checkbox" id="filter-bdrain">
+                    <label for="filter-bdrain"><img src="image/official/BrainDrain_MasteryIcon.png" class="icon"></label>
+                    <input type="checkbox" id="filter-min">
+                    <label for="filter-min"><img src="image/official/Minette_MasteryIcon.png" class="icon"></label>
                 </div>
             </div>
             <div class="scroller half" id="sort-menu">
                 <div>
-                    <div>
-                        <span class="tagged cinematic silver-gradient" id="sort-label"></span>
-                    </div>
+                    <span class="tagged cinematic silver-gradient" id="sort-label"></span>
                     <div class="divider"></div>
                     <input type="radio" name="sort" id="sort-abc">
                     <label for="sort-abc"></label>
@@ -123,17 +117,12 @@
             </div>
             <div class="scroller" id="level-menu">
                 <div>
-                    <div class="label-flexbox">
-                        <span class="cinematic silver-gradient" id="level-label"></span>
+                    <span class="cinematic dependent-gradient" id="level-label"></span>
+                    <div>
+                        <input type="text" pattern="\d*" min="1" max="20" value="20" class="cinematic" id="level-text">
+                        <img src="image/official/GoldLevel.png" class="icon">
                     </div>
-                    <div class="divider"></div>
-                    <div class="subset">
-                        <div>
-                            <input type="text" pattern="\d*" min="1" max="20" value="20" class="cinematic" id="level-gold">
-                            <img src="image/official/GoldLevel.png" class="icon">
-                        </div>
-                        <input type="range" min="1" max="20" value="20" class="fill-row" id="level-range">
-                    </div>
+                    <input type="range" min="1" max="20" value="20" id="level-range">
                 </div>
             </div>
             <div id="dock-right">
