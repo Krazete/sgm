@@ -2,7 +2,7 @@ var moves, corpus;
 
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
-var fighterIDs = ["br", "mi"];
+var fighterIDs = ["bdrain", "min"];
 
 var cards = [];
 var filterCards;
