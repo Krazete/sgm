@@ -431,8 +431,9 @@ function sortCards() {
 
 function initSortMenu() {
     var sortAlphabetical = document.getElementById("sort-abc");
+    var sortElement = document.getElementById("sort-element");
 
-    var savedBasis = localStorage.getItem("basis2") || "sort-abc";
+    var savedBasis = localStorage.getItem("basis5") || "sort-abc";
     var savedButton = document.getElementById(savedBasis);
 
     function alphabeticalBasis(a, b) {
@@ -441,18 +442,31 @@ function initSortMenu() {
         return A > B ? 1 : A < B ? -1 : 0;
     }
 
+    function elementBasis(a, b) {
+        var elementMap = [0, 5, 3, 4, 1, 2];
+        var A = elementMap[moves[a.id].element];
+        var B = elementMap[moves[b.id].element];
+        var C = B - A;
+        if (C == 0) {
+            return alphabeticalBasis(a, b);
+        }
+        return C;
+    }
+
     function sorter(basis) {
         return function () {
             sortBasis = basis;
             sortCards();
-            localStorage.setItem("basis2", this.id);
+            localStorage.setItem("basis5", this.id);
         };
     }
 
     sortAlphabetical.addEventListener("change", sorter(alphabeticalBasis));
+    sortElement.addEventListener("change", sorter(elementBasis));
 
     if (![
-        sortAlphabetical
+        sortAlphabetical,
+        sortElement
     ].includes(savedButton)) {
         savedButton = sortAlphabetical;
     }
