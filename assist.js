@@ -74,6 +74,12 @@ function initCollection(response) {
                 symbol.addEventListener("error", handleMissingSymbol);
                 lazyList.push(symbol);
             badge.appendChild(symbol);
+            var starbar = document.createElement("div");
+                starbar.className = [
+                    "starbar",
+                    "strength-" + moves[key].strength
+                ].join(" ");
+            badge.appendChild(starbar);
         return badge;
     }
 
