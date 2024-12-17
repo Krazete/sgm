@@ -394,6 +394,84 @@
         ],
         "tier": 2
     },
+    "aTeen": {
+        "base": "an",
+        "element": 2,
+        "fandom": "Wave Warrior",
+        "name": "Char_Annie_G_V6_Name",
+        "quote": "Variant_Description_Annie_G_V6",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Annie_G_V6_SA_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15,
+                                2,
+                                -15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15,
+                                2,
+                                -20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15,
+                                2,
+                                -25.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Annie_G_V6_SA_Desc2_ALT_V1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                5.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Annie_G_V6_SA_Title"
+        },
+        "stats": [
+            {
+                "attack": 292,
+                "lifebar": 1764
+            },
+            {
+                "attack": 526,
+                "lifebar": 3175
+            }
+        ],
+        "tier": 2
+    },
     "aWond": {
         "base": "an",
         "element": 5,
@@ -4963,6 +5041,92 @@
             }
         ],
         "tier": 2
+    },
+    "fRemains": {
+        "base": "sq",
+        "element": 2,
+        "fandom": "Glacial Ghoul",
+        "name": "Char_Squigly_D_V4_Name",
+        "quote": "Variant_Description_Squigly_D_V4",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Squigly_D_V4_SA_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Squigly_D_V4_SA_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                8.0,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                6.0,
+                                12.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Squigly_D_V4_SA_Title"
+        },
+        "stats": [
+            {
+                "attack": 538,
+                "lifebar": 4169
+            }
+        ],
+        "tier": 3
     },
     "fSoldier": {
         "base": "mf",
@@ -11275,6 +11439,74 @@
         ],
         "tier": 2
     },
+    "pIcon": {
+        "base": "el",
+        "element": 0,
+        "fandom": "Don Passione",
+        "name": "Char_Eliza_D_V3_Name",
+        "quote": "Variant_Description_Eliza_D_V3",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Eliza_D_V3_SA_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                null,
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                null,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                null,
+                                12.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Eliza_D_V3_SA_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Eliza_D_V3_SA_Title_ALT02"
+        },
+        "stats": [
+            {
+                "attack": 613,
+                "lifebar": 4169
+            }
+        ],
+        "tier": 3
+    },
     "pKid": {
         "base": "um",
         "element": 5,
@@ -11483,6 +11715,23 @@
                                 10,
                                 30.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -13799,6 +14048,95 @@
         ],
         "tier": 0
     },
+    "rhythm": {
+        "base": "bb",
+        "element": 3,
+        "fandom": "Rhythm Rider",
+        "name": "Char_BigBand_G_V5_Name",
+        "quote": "Variant_Description_BigBand_G_V5",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BigBand_G_V5_SA_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                6.0,
+                                15
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                8.0,
+                                15
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                15
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BigBand_G_V5_SA_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BigBand_G_V5_SA_Title"
+        },
+        "stats": [
+            {
+                "attack": 256,
+                "lifebar": 2205
+            },
+            {
+                "attack": 461,
+                "lifebar": 3969
+            }
+        ],
+        "tier": 2
+    },
     "rogue": {
         "base": "mf",
         "element": 4,
@@ -14246,6 +14584,103 @@
         ],
         "tier": 2
     },
+    "sForce": {
+        "base": "fi",
+        "element": 3,
+        "fandom": "Shear Force",
+        "name": "Char_Filia_D_V4_Name",
+        "quote": "Variant_Description_Filia_D_V4",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Filia_D_V4_SA_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Filia_D_V4_SA_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15.0,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                25.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Filia_D_V4_SA_Title"
+        },
+        "stats": [
+            {
+                "attack": 521,
+                "lifebar": 3568
+            }
+        ],
+        "tier": 3
+    },
     "sFright": {
         "base": "sq",
         "element": 4,
@@ -14469,6 +14904,124 @@
             {
                 "attack": 587,
                 "lifebar": 3573
+            }
+        ],
+        "tier": 2
+    },
+    "sHuntress": {
+        "base": "bd",
+        "element": 4,
+        "fandom": "Stellar Huntress",
+        "name": "Char_BlackDahlia_G_V6_Name",
+        "quote": "Variant_Description_BlackDahlia_G_V6",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_G_V6_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_G_V6_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.5,
+                                1.5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_G_V6_SA_Title"
+        },
+        "stats": [
+            {
+                "attack": 248,
+                "lifebar": 2184
+            },
+            {
+                "attack": 446,
+                "lifebar": 3931
             }
         ],
         "tier": 2
