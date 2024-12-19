@@ -1182,6 +1182,11 @@ function initOptionsMenu() {
                     fighters[variants[key].base].pa.starPower,
                     value
                 ]; break;
+                case "bb": substitutions = [
+                    rate,
+                    fighters[variants[key].base].pa.comboCount,
+                    value
+                ]; break;
                 case "be": substitutions = [
                     rate,
                     value,

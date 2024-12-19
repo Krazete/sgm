@@ -364,6 +364,7 @@
         "pa": {
             "base": 25.0,
             "chargeRate": 15.0,
+            "comboCount": 10,
             "description": "Char_BigBand_PA_Desc",
             "lvlBonus": 0.25,
             "maxBonus": 10.5,
