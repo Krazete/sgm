@@ -9152,6 +9152,94 @@
         ],
         "tier": 2
     },
+    "mMalice": {
+        "base": "ma",
+        "element": 5,
+        "fandom": "Mad Malice",
+        "name": "Char_Marie_D_V3_Name",
+        "quote": "Variant_Description_Marie_MadMalice",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_OffWithTheirHeads_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.15000000596046448,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.20000000298023224,
+                                13.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_OffWithTheirHeads_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.4,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.3,
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_OffWithTheirHeads_Title"
+        },
+        "stats": [
+            {
+                "attack": 617,
+                "lifebar": 3753
+            }
+        ],
+        "tier": 3
+    },
     "mMatch": {
         "base": "do",
         "element": 2,
@@ -17372,6 +17460,104 @@
             }
         ],
         "tier": 0
+    },
+    "tRant": {
+        "base": "pw",
+        "element": 4,
+        "fandom": "Tyrannical",
+        "name": "Char_Painwheel_G_V6_Name",
+        "quote": "Variant_Description_Painwheel_Tyrant",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Painwheel_SA_InfectiousBite_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.30000001192092896,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.3499999940395355,
+                                6.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Painwheel_SA_InfectiousBite_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                3,
+                                0.30000001192092896,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                3,
+                                0.4000000059604645,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                3,
+                                0.5,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Painwheel_SA_InfectiousBite_Title"
+        },
+        "stats": [
+            {
+                "attack": 415,
+                "lifebar": 1191
+            },
+            {
+                "attack": 747,
+                "lifebar": 2144
+            }
+        ],
+        "tier": 2
     },
     "tThief": {
         "base": "mf",
