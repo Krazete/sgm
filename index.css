@@ -1032,6 +1032,26 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: grid;
 }
 
+.card.changed-fighter .ability.sa:after,
+.card.new-fighter .frame:after {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    transform: rotate(20deg);
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0 2px;
+    pointer-events: none;
+}
+.card.changed-fighter .ability.sa:after {
+    content: 'CHANGED';
+}
+.card.new-fighter .frame:after {
+    content: 'NEW';
+}
+
 .loading .card {
     display: none;
 }
@@ -1056,6 +1076,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
 }
 
 .frame {
+    position: relative;
     width: 85px;
     height: 85px;
     border-radius: 50%;
@@ -1898,6 +1919,7 @@ html[lang='pt-br'] .sell-price:before {content: 'VENDER';}
 /* ABILITIES */
 
 .ability {
+    position: relative;
     background-color: #263b5a;
     box-shadow: 0 0 1px black;
     display: grid;

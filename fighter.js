@@ -1670,7 +1670,15 @@ function initialize() {
     Promise.all([
         loadJSON("data/characters.json"),
         loadJSON("data/variants.json")
-    ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(toggleLoadingScreen);
+    ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(function () {
+            var changedvid = ["lHope", "sForce", "oMai", "hMetal", "wStalk", "pAssist", "pBall"];
+            var newvid = ["sWitch", "cCyclone"];
+            changedvid.forEach(id => document.getElementById(id).classList.add("changed-fighter"));
+            newvid.forEach(id => document.getElementById(id).classList.add("new-fighter"));
+            for (var id of changedvid.concat(newvid)) {
+                document.getElementById("collection").insertBefore(document.getElementById(id), document.getElementsByClassName("card")[0]);
+            }
+    }).then(toggleLoadingScreen);
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
