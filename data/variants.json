@@ -2285,6 +2285,111 @@
         ],
         "tier": 3
     },
+    "cCyclone": {
+        "base": "ce",
+        "element": 3,
+        "fandom": "Crimson Cyclone",
+        "name": "Char_Cerebella_D_V4_Name",
+        "quote": "Variant_Description_Cerebella_CrimsonCyclone",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Cerebella_SA_IronMuscle_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                30.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                13.0,
+                                40.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Cerebella_SA_IronMuscle_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                0.30000001192092896
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0,
+                                0.4000000059604645
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                0.5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Cerebella_SA_IronMuscle_Title"
+        },
+        "stats": [
+            {
+                "attack": 685,
+                "lifebar": 4169
+            }
+        ],
+        "tier": 3
+    },
     "cHabit": {
         "base": "do",
         "element": 3,
@@ -8441,21 +8546,18 @@
                         {
                             "level": 1,
                             "values": [
-                                5.0,
-                                25.0
+                                15.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                7.0,
-                                25.0
+                                20.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                10.0,
                                 25.0
                             ]
                         }
@@ -8467,19 +8569,19 @@
                         {
                             "level": 1,
                             "values": [
-                                15.0
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                25.0
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                50.0
+                                15.0
                             ]
                         }
                     ]
@@ -11223,7 +11325,7 @@
                         {
                             "level": 1,
                             "values": [
-                                30,
+                                20,
                                 3,
                                 5.0,
                                 1
@@ -11232,7 +11334,7 @@
                         {
                             "level": 2,
                             "values": [
-                                30,
+                                20,
                                 4,
                                 5.0,
                                 1
@@ -11241,7 +11343,7 @@
                         {
                             "level": 3,
                             "values": [
-                                30,
+                                20,
                                 5,
                                 5.0,
                                 1
@@ -11302,21 +11404,21 @@
                             "level": 1,
                             "values": [
                                 7.0,
-                                5.0
+                                3.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 7.0,
-                                7.0
+                                4.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 7.0,
-                                10.0
+                                5.0
                             ]
                         }
                     ]
@@ -14713,21 +14815,21 @@
                             "level": 1,
                             "values": [
                                 15.0,
-                                15.0
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 15.0,
-                                20.0
+                                12.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 15.0,
-                                25.0
+                                15.0
                             ]
                         }
                     ]
@@ -16170,6 +16272,75 @@
             }
         ],
         "tier": 1
+    },
+    "sWitch": {
+        "base": "do",
+        "element": 2,
+        "fandom": "Sea Witch",
+        "name": "Char_Double_G_V6_Name",
+        "quote": "Variant_Description_Double_SeaWitch",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Double_SA_NowSing_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Double_SA_NowSing_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Double_SA_NowSing_Title"
+        },
+        "stats": [
+            {
+                "attack": 375,
+                "lifebar": 1191
+            },
+            {
+                "attack": 675,
+                "lifebar": 2144
+            }
+        ],
+        "tier": 2
     },
     "salty": {
         "base": "um",
