@@ -1671,22 +1671,39 @@ function initialize() {
         loadJSON("data/characters.json"),
         loadJSON("data/variants.json")
     ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(function () {
-            var changedvid = ["lHope", "sForce", "oMai", "hMetal", "wStalk", "pAssist", "pBall"];
-            var newvid = ["sWitch", "cCyclone"];
+            var vids = [
+                { /* changed */
+                    lHope: "Last Hope Valentine Rework:",
+                    sForce: "Shear Force Filia:",
+                    oMai: "Oh Mai Valentine:",
+                    hMetal: "Heavy Metal Big Band:",
+                    wStalk: "Wind Stalker Ms. Fortune:",
+                    pAssist: "Persona Assistant Robo Fortune:",
+                    pBall: "Pickle Baller Beowulf:"
+                },
+                { /* new */
+                    sWitch: "Sea Witch Double (Gold - Control/Damage)",
+                    cCyclone: "Crimson Cyclone Cerebella (Diamond - Bruiser)"
+                }
+            ];
 
-            function addLabel(id, className, text, textFragment) {
+            function addLabel(id, type) {
+                var text = ["CHANGED", "NEW"][type];
+                var element = document.getElementById(id).getElementsByClassName(["sa", "frame"][type])[0];
+                var textFragment = "#:~:text=" + encodeURI(vids[type][id]).replace(/-/g, "%2D");
                 var label = document.createElement("a");
                 label.className = "label";
                 label.innerHTML = text;
                 label.target = "_blank";
-                label.href = "https://hub.skullgirlsmobile.com/updates/official-73-update-notes-summer-of-slam-season-launch-throwing-shade-june-backstage-pass#:~:text=" + encodeURI(textFragment).replace(/-/g, "%2D");
-                document.getElementById(id).getElementsByClassName(className)[0].appendChild(label);
+                label.href = "https://hub.skullgirlsmobile.com/updates/official-73-update-notes-summer-of-slam-season-launch-throwing-shade-june-backstage-pass" + textFragment;
+                element.appendChild(label);
             }
-            changedvid.forEach(id => addLabel(id, "sa", "CHANGED", "Balance Changes:"));
-            newvid.forEach(id => addLabel(id, "frame", "NEW", "Sea Witch Double (Gold - Control/Damage)"));
 
-            for (var id of changedvid.concat(newvid)) {
-                document.getElementById("collection").insertBefore(document.getElementById(id), document.getElementsByClassName("card")[0]);
+            for (var i in vids) {
+                for (var vid in vids[i]) {
+                    addLabel(vid, i);
+                    document.getElementById("collection").insertBefore(document.getElementById(vid), document.getElementsByClassName("card")[0]);
+                }
             }
     }).then(toggleLoadingScreen);
 }
