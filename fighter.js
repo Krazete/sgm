@@ -1673,8 +1673,18 @@ function initialize() {
     ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(function () {
             var changedvid = ["lHope", "sForce", "oMai", "hMetal", "wStalk", "pAssist", "pBall"];
             var newvid = ["sWitch", "cCyclone"];
-            changedvid.forEach(id => document.getElementById(id).classList.add("changed-fighter"));
-            newvid.forEach(id => document.getElementById(id).classList.add("new-fighter"));
+
+            function addLabel(id, className, text, textFragment) {
+                var label = document.createElement("a");
+                label.className = "label";
+                label.innerHTML = text;
+                label.target = "_blank";
+                label.href = "https://hub.skullgirlsmobile.com/updates/official-73-update-notes-summer-of-slam-season-launch-throwing-shade-june-backstage-pass#:~:text=" + encodeURI(textFragment).replace(/-/g, "%2D");
+                document.getElementById(id).getElementsByClassName(className)[0].appendChild(label);
+            }
+            changedvid.forEach(id => addLabel(id, "sa", "CHANGED", "Balance Changes:"));
+            newvid.forEach(id => addLabel(id, "frame", "NEW", "Sea Witch Double (Gold - Control/Damage)"));
+
             for (var id of changedvid.concat(newvid)) {
                 document.getElementById("collection").insertBefore(document.getElementById(id), document.getElementsByClassName("card")[0]);
             }
