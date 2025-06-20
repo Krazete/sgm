@@ -218,6 +218,13 @@ function initCollection(responses) {
         console.warn("Portrait not found for variant " + card.id + ".");
     }
 
+    function tryBackupPortrait() {
+        var portrait = this;
+        portrait.removeEventListener("error", tryBackupPortrait);
+        portrait.addEventListener("error", handleMissingPortrait);
+        portrait.dataset.src = portrait.src.replace("/portrait/", "/custom_portrait/");
+    }
+
     function createAvatar(key) {
         var avatar = document.createElement("div");
             avatar.className = "avatar unloaded";
@@ -242,7 +249,7 @@ function initCollection(responses) {
                             key + ".png"
                         ].join("/");
                         portrait.addEventListener("load", removePortraitPlaceholder);
-                        portrait.addEventListener("error", handleMissingPortrait);
+                        portrait.addEventListener("error", tryBackupPortrait);
                         lazyList.push(portrait);
                     backdrop.appendChild(portrait);
                 frame.appendChild(backdrop);
