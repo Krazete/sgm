@@ -104,6 +104,13 @@ function handleMissingPortrait() {
     avatar.classList.add("unloaded");
 }
 
+function tryBackupPortrait() {
+    var portrait = this;
+    portrait.removeEventListener("error", tryBackupPortrait);
+    portrait.addEventListener("error", handleMissingPortrait);
+    portrait.src = portrait.src.replace("/portrait/", "/custom_portrait/");
+}
+
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 
@@ -128,7 +135,7 @@ function createAvatar(key) {
                         variants[key].base,
                         key + ".png"
                     ].join("/");
-                    portrait.addEventListener("error", handleMissingPortrait);
+                    portrait.addEventListener("error", tryBackupPortrait);
                 backdrop.appendChild(portrait);
             frame.appendChild(backdrop);
         avatar.appendChild(frame);
