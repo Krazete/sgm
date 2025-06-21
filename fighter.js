@@ -10,8 +10,12 @@ var filterCards;
 var sortBasis;
 var updateCards;
 
-var chaos = false;
 var dormant = true;
+var chaos = false;
+var useCustom = Math.random() < 0.05;
+var portraitDir = useCustom ? "custom_portrait" : "portrait";
+var portraitDir2 = useCustom ? "portrait" : "custom_portrait";
+var resetPortraits;
 
 function randomInt(a, b) {
     return a + Math.floor(Math.random() * (b - a));
@@ -35,6 +39,13 @@ function fearTheRainbow() {
         }
     }
     chaos = !chaos;
+}
+
+function swapPortraits() {
+    var portraitDir3 = portraitDir;
+    portraitDir = portraitDir2;
+    portraitDir2 = portraitDir3;
+    resetPortraits();
 }
 
 function toggleLoadingScreen(loading) {
@@ -181,10 +192,6 @@ function updateRating(key, subkey, animate) {
     }
 }
 
-var useCustom = Math.random() < 0.05;
-var portraitDir = useCustom ? "custom_portrait" : "portrait";
-var portraitDir2 = useCustom ? "portrait" : "custom_portrait";
-
 function initCollection(responses) {
     fighters = responses[0];
     variants = responses[1];
@@ -227,6 +234,27 @@ function initCollection(responses) {
         portrait.removeEventListener("error", tryBackupPortrait);
         portrait.addEventListener("error", handleMissingPortrait);
         portrait.dataset.src = portrait.src.replace("/" + portraitDir + "/", "/" + portraitDir2 + "/");
+    }
+
+    resetPortraits = function () { /* for swapPortraits */
+        for (var card of cards) {
+            var key = card.id;
+
+            var avatar = card.getElementsByClassName("avatar")[0];
+            avatar.classList.add("unloaded");
+
+            var portrait = card.getElementsByClassName("portrait")[0];
+            portrait.classList.remove("hidden");
+            portrait.removeEventListener("error", handleMissingPortrait);
+            portrait.removeEventListener("error", tryBackupPortrait);
+            portrait.addEventListener("error", tryBackupPortrait);
+            portrait.dataset.src = [
+                "image",
+                portraitDir,
+                variants[key].base,
+                key + ".png"
+            ].join("/");
+        }
     }
 
     function createAvatar(key) {
@@ -819,6 +847,11 @@ function initFilterMenu() {
             if (query.includes("fear the rainbow")) {
                 searchbox.value = "";
                 fearTheRainbow();
+                return true;
+            }
+            else if (query.includes("swap portraits")) {
+                searchbox.value = "";
+                swapPortraits();
                 return true;
             }
             else if (query.includes("fel()")) {
