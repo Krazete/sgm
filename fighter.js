@@ -849,7 +849,7 @@ function initFilterMenu() {
                 fearTheRainbow();
                 return true;
             }
-            else if (query.includes("swap portraits")) {
+            else if (query.includes("swap()") || query.includes("swap portraits")) {
                 searchbox.value = "";
                 swapPortraits();
                 return true;
