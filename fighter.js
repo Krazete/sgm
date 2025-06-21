@@ -285,6 +285,11 @@ function initCollection(responses) {
                         portrait.addEventListener("error", tryBackupPortrait);
                         lazyList.push(portrait);
                     backdrop.appendChild(portrait);
+                    if (key == "heat") {
+                        var afterimage = document.createElement("div");
+                        afterimage.className = "afterimage";
+                        backdrop.appendChild(afterimage);
+                    }
                 frame.appendChild(backdrop);
             avatar.appendChild(frame);
             var nameplate = document.createElement("div");

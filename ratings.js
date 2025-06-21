@@ -137,6 +137,11 @@ function createAvatar(key) {
                     ].join("/");
                     portrait.addEventListener("error", tryBackupPortrait);
                 backdrop.appendChild(portrait);
+                if (key == "heat") {
+                    var afterimage = document.createElement("div");
+                    afterimage.className = "afterimage";
+                    backdrop.appendChild(afterimage);
+                }
             frame.appendChild(backdrop);
         avatar.appendChild(frame);
     return avatar;
