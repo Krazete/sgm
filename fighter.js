@@ -181,6 +181,10 @@ function updateRating(key, subkey, animate) {
     }
 }
 
+var useCustom = Math.random() < 0.05;
+var portraitDir = useCustom ? "custom_portrait" : "portrait";
+var portraitDir2 = useCustom ? "portrait" : "custom_portrait";
+
 function initCollection(responses) {
     fighters = responses[0];
     variants = responses[1];
@@ -222,7 +226,7 @@ function initCollection(responses) {
         var portrait = this;
         portrait.removeEventListener("error", tryBackupPortrait);
         portrait.addEventListener("error", handleMissingPortrait);
-        portrait.dataset.src = portrait.src.replace("/portrait/", "/custom_portrait/");
+        portrait.dataset.src = portrait.src.replace("/" + portraitDir + "/", "/" + portraitDir2 + "/");
     }
 
     function createAvatar(key) {
@@ -244,7 +248,8 @@ function initCollection(responses) {
                     var portrait = document.createElement("img");
                         portrait.className = "portrait";
                         portrait.dataset.src = [
-                            "image/portrait",
+                            "image",
+                            portraitDir,
                             variants[key].base,
                             key + ".png"
                         ].join("/");
