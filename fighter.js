@@ -1722,37 +1722,41 @@ function initialize() {
         loadJSON("data/variants.json")
     ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(function () {
             var vids = [
-                { /* changed */
-                    lHope: "Last Hope Valentine Rework:",
-                    sForce: "Shear Force Filia:",
-                    oMai: "Oh Mai Valentine:",
-                    hMetal: "Heavy Metal Big Band:",
-                    wStalk: "Wind Stalker Ms. Fortune:",
-                    pAssist: "Persona Assistant Robo Fortune:",
-                    pBall: "Pickle Baller Beowulf:"
-                },
                 { /* new */
-                    sWitch: "Sea Witch Double (Gold - Control/Damage)",
-                    cCyclone: "Crimson Cyclone Cerebella (Diamond - Bruiser)"
+                    bigSister: "Iron Matron Parasoul (Gold Damage):",
+                    littleSister: "Angel Maker Umbrella (Diamond Support):",
+                },
+                { /* changed */
+                    mCorpse: "Octoplasm Marie (Rework! Special thanks to Deny17S for their input!)",
+                    lHope: "Last Hope Valentine (SA1 Rework):",
+                    pTech: "Pyro-Technique Valentine:",
+                    sGiver: "Scare Giver Cerebella:",
+                    nDeath: "Near Death Valentine:",
+                    oGre: "Ogre Achiever Beowulf:",
+                    rGing: "Risky Ginger Parasoul, Idol Threat Filia, Ms. Trial Ms. Fortune, and Chameleon Twist Fukua:",
+                    iThreat: "Risky Ginger Parasoul, Idol Threat Filia, Ms. Trial Ms. Fortune, and Chameleon Twist Fukua:",
+                    mTrial: "Risky Ginger Parasoul, Idol Threat Filia, Ms. Trial Ms. Fortune, and Chameleon Twist Fukua:",
+                    twist: "Risky Ginger Parasoul, Idol Threat Filia, Ms. Trial Ms. Fortune, and Chameleon Twist Fukua:",
                 }
             ];
 
             function addLabel(id, type) {
-                var text = ["CHANGED", "NEW"][type];
-                var element = document.getElementById(id).getElementsByClassName(["sa", "frame"][type])[0];
-                var textFragment = "#:~:text=" + encodeURI(vids[type][id]).replace(/-/g, "%2D");
+                var text = ["NEW", "CHANGED"][type];
+                var element = document.getElementById(id).getElementsByClassName(["frame", "sa"][type])[0];
+                var textFragment = "#:~:text=" + encodeURI(vids[type][id]).replace(/,/g, "%2C").replace(/-/g, "%2D");
                 var label = document.createElement("a");
                 label.className = "label";
                 label.innerHTML = text;
                 label.target = "_blank";
-                label.href = "https://hub.skullgirlsmobile.com/updates/official-73-update-notes-summer-of-slam-season-launch-throwing-shade-june-backstage-pass" + textFragment;
+                label.href = "https://hub.skullgirlsmobile.com/updates/official-731-update-notes-sisterhood-and-a-splash-of-revolution-family-tides-july-backstage-pass" + textFragment;
                 element.appendChild(label);
             }
 
+            var j = 0;
             for (var i in vids) {
                 for (var vid in vids[i]) {
                     addLabel(vid, i);
-                    document.getElementById("collection").insertBefore(document.getElementById(vid), document.getElementsByClassName("card")[0]);
+                    document.getElementById("collection").insertBefore(document.getElementById(vid), document.getElementsByClassName("card")[j++]);
                 }
             }
     }).then(toggleLoadingScreen);
