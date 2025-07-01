@@ -2049,6 +2049,98 @@
         ],
         "tier": 1
     },
+    "bigSister": {
+        "base": "pa",
+        "element": 1,
+        "fandom": "Iron Matron",
+        "name": "Char_Parasoul_G_V7_Name",
+        "quote": "Variant_Description_Parasoul_BigSister",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Parasoul_SA_BigSister_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Parasoul_SA_BigSister_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Parasoul_SA_BigSister_Title"
+        },
+        "stats": [
+            {
+                "attack": 336,
+                "lifebar": 1588
+            },
+            {
+                "attack": 605,
+                "lifebar": 2858
+            }
+        ],
+        "tier": 2
+    },
     "blueS": {
         "base": "rf",
         "element": 2,
@@ -8818,6 +8910,106 @@
         ],
         "tier": 1
     },
+    "littleSister": {
+        "base": "um",
+        "element": 2,
+        "fandom": "Angel Maker",
+        "name": "Char_Umbrella_D_V4_Name",
+        "quote": "Variant_Description_Umbrella_LittleSister",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Umbrella_SA_PowerHarvest_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                3,
+                                15.0,
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                3,
+                                18.0,
+                                30.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                3,
+                                20.0,
+                                25.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Umbrella_SA_PowerHarvest_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                2,
+                                10.0,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                2,
+                                12.0,
+                                30.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                2,
+                                15.0,
+                                35.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Umbrella_SA_LittleSister_Title"
+        },
+        "stats": [
+            {
+                "attack": 624,
+                "lifebar": 3566
+            }
+        ],
+        "tier": 3
+    },
     "loveCraft": {
         "base": "sq",
         "element": 4,
@@ -9056,19 +9248,25 @@
                         {
                             "level": 1,
                             "values": [
-                                3.0
+                                2,
+                                15.0,
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                4.0
+                                2,
+                                15.0,
+                                12.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                5.0
+                                2,
+                                15.0,
+                                15.0
                             ]
                         }
                     ]
@@ -9079,20 +9277,40 @@
                         {
                             "level": 1,
                             "values": [
+                                0.15000000596046448,
                                 15.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                25.0
+                                0.20000000298023224,
+                                15.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                35.0
+                                0.25,
+                                15.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -10452,7 +10670,7 @@
                             "values": [
                                 12.0,
                                 3,
-                                50.0
+                                75.0
                             ]
                         },
                         {
@@ -10460,7 +10678,7 @@
                             "values": [
                                 15.0,
                                 3,
-                                50.0
+                                100.0
                             ]
                         }
                     ]
@@ -10470,6 +10688,14 @@
                     "tiers": [
                         {
                             "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
                             "values": []
                         }
                     ]
@@ -14859,6 +15085,23 @@
                             "values": []
                         }
                     ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
                 }
             ],
             "title": "Char_Filia_D_V4_SA_Title"
@@ -15060,25 +15303,25 @@
                         {
                             "level": 1,
                             "values": [
-                                0.05000000074505806,
+                                0.15000000596046448,
                                 10.0,
-                                1.0
+                                3.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.10000000149011612,
+                                0.20000000298023224,
                                 10.0,
-                                2.0
+                                4.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.15000000596046448,
+                                0.25,
                                 10.0,
-                                3.0
+                                5.0
                             ]
                         }
                     ]
