@@ -2482,6 +2482,98 @@
         ],
         "tier": 3
     },
+    "cGuy": {
+        "base": "be",
+        "element": 2,
+        "fandom": "Chill Guy",
+        "name": "Char_Beowulf_G_V6_Name",
+        "quote": "Variant_Description_Beowulf_ChillGuy",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Beowulf_SA_ChillOut_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                5,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                13.0,
+                                5,
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                5,
+                                6.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Beowulf_SA_ChillOut_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                8.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SA_ChillOut_Title"
+        },
+        "stats": [
+            {
+                "attack": 277,
+                "lifebar": 1940
+            },
+            {
+                "attack": 499,
+                "lifebar": 3492
+            }
+        ],
+        "tier": 2
+    },
     "cHabit": {
         "base": "do",
         "element": 3,
@@ -3364,18 +3456,21 @@
                         {
                             "level": 1,
                             "values": [
+                                2,
                                 25.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
+                                2,
                                 35.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
+                                2,
                                 50.0
                             ]
                         }
@@ -3796,20 +3891,40 @@
                         {
                             "level": 1,
                             "values": [
+                                50.0,
                                 4.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
+                                75.0,
                                 6.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
+                                100.0,
                                 8.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -4526,22 +4641,42 @@
                             "level": 1,
                             "values": [
                                 0.5,
-                                1
+                                1,
+                                5
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 0.5,
-                                2
+                                2,
+                                5
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 0.5,
-                                3
+                                3,
+                                5
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -4552,6 +4687,91 @@
             {
                 "attack": 685,
                 "lifebar": 3242
+            }
+        ],
+        "tier": 3
+    },
+    "fCookie": {
+        "base": "mf",
+        "element": 4,
+        "fandom": "Fortune Cookie",
+        "name": "Char_MsFortune_D_V4_Name",
+        "quote": "Variant_Description_MsFortune_FortuneCookie",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_MsFortune_SA_ReversalOfFortune_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_MsFortune_SA_ReversalOfFortune_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                30.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_MsFortune_SA_ReversalOfFortune_Title"
+        },
+        "stats": [
+            {
+                "attack": 872,
+                "lifebar": 2919
             }
         ],
         "tier": 3
@@ -4852,12 +5072,12 @@
         },
         "stats": [
             {
-                "attack": 277,
-                "lifebar": 1940
+                "attack": 375,
+                "lifebar": 1588
             },
             {
-                "attack": 499,
-                "lifebar": 3492
+                "attack": 675,
+                "lifebar": 2858
             }
         ],
         "tier": 2
@@ -7607,19 +7827,22 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0
+                                10.0,
+                                1
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                12.0
+                                12.0,
+                                1
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                15.0,
+                                1
                             ]
                         }
                     ]
@@ -10962,22 +11185,22 @@
                         {
                             "level": 1,
                             "values": [
-                                0.20000000298023224,
-                                5.0
+                                0.15000000596046448,
+                                15.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 0.20000000298023224,
-                                7.0
+                                15.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.20000000298023224,
-                                10.0
+                                0.25,
+                                15.0
                             ]
                         }
                     ]
@@ -18460,19 +18683,19 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                12.0
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                10.0
                             ]
                         }
                     ]
@@ -18591,19 +18814,25 @@
                         {
                             "level": 1,
                             "values": [
-                                0.05000000074505806
+                                0.15000000596046448,
+                                4.0,
+                                2.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.10000000149011612
+                                0.15000000596046448,
+                                5.0,
+                                2.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.15000000596046448
+                                0.15000000596046448,
+                                6.0,
+                                2.0
                             ]
                         }
                     ]
@@ -18614,20 +18843,40 @@
                         {
                             "level": 1,
                             "values": [
-                                4.0
+                                25.0,
+                                25.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                5.0
+                                35.0,
+                                35.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                6.0
+                                50.0,
+                                50.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -19817,22 +20066,19 @@
                         {
                             "level": 1,
                             "values": [
-                                5.0,
-                                10.0
+                                1
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                7.0,
-                                10.0
+                                2
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                10.0,
-                                10.0
+                                3
                             ]
                         }
                     ]
@@ -19844,21 +20090,21 @@
                             "level": 1,
                             "values": [
                                 0.15000000596046448,
-                                5.0
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 0.20000000298023224,
-                                5.0
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 0.25,
-                                5.0
+                                10.0
                             ]
                         }
                     ]

@@ -2642,14 +2642,14 @@
                         {
                             "level": 9,
                             "values": [
-                                0.3499999940395355,
+                                0.5,
                                 10.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.5,
+                                1.0,
                                 10.0
                             ]
                         }
@@ -2717,14 +2717,14 @@
                         {
                             "level": 9,
                             "values": [
-                                0.3499999940395355,
+                                0.5,
                                 10.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.5,
+                                1.0,
                                 10.0
                             ]
                         }
@@ -2780,28 +2780,48 @@
         "ability": {
             "features": [
                 {
-                    "description": "SA_SMGeneric_StunChance",
+                    "description": "SA_SM_Beowulf_GiganticArm",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
                                 0.15000000596046448,
-                                4.0
+                                4.0,
+                                25.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.15000000596046448,
-                                6.0
+                                0.20000000298023224,
+                                6.0,
+                                50.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
                                 0.25,
-                                6.0
+                                6.0,
+                                100.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -2855,28 +2875,48 @@
         "ability": {
             "features": [
                 {
-                    "description": "SA_SMGeneric_StunChance",
+                    "description": "SA_SM_Beowulf_GiganticArm",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
                                 0.15000000596046448,
-                                4.0
+                                4.0,
+                                25.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.15000000596046448,
-                                6.0
+                                0.20000000298023224,
+                                6.0,
+                                50.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
                                 0.25,
-                                6.0
+                                6.0,
+                                100.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -2933,22 +2973,39 @@
                     "description": "SA_Beowulf_BB6_Wulfamania",
                     "tiers": [
                         {
-                            "level": 3,
+                            "level": 1,
                             "values": [
-                                10.0
+                                25.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                12.0
+                                35.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                15.0
+                                50.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -3005,22 +3062,39 @@
                     "description": "SA_Beowulf_BB6_Wulfamania",
                     "tiers": [
                         {
-                            "level": 3,
+                            "level": 1,
                             "values": [
-                                10.0
+                                25.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                12.0
+                                35.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                15.0
+                                50.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -3079,21 +3153,21 @@
                         {
                             "level": 3,
                             "values": [
-                                0.25,
+                                0.15000000596046448,
                                 10.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.3499999940395355,
+                                0.25,
                                 10.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.5,
+                                0.3499999940395355,
                                 10.0
                             ]
                         }
@@ -3154,21 +3228,21 @@
                         {
                             "level": 3,
                             "values": [
-                                0.25,
+                                0.15000000596046448,
                                 10.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                0.3499999940395355,
+                                0.25,
                                 10.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                0.5,
+                                0.3499999940395355,
                                 10.0
                             ]
                         }
@@ -3227,22 +3301,39 @@
                     "description": "SA_Beowulf_BB3_ThreeWulfMoonsault",
                     "tiers": [
                         {
-                            "level": 3,
+                            "level": 1,
                             "values": [
-                                -10.0
+                                0.25
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                -15.0
+                                0.5
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                -25.0
+                                1.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -3299,22 +3390,39 @@
                     "description": "SA_Beowulf_BB3_ThreeWulfMoonsault",
                     "tiers": [
                         {
-                            "level": 3,
+                            "level": 1,
                             "values": [
-                                -10.0
+                                0.25
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                -15.0
+                                0.5
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                -25.0
+                                1.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -3373,19 +3481,19 @@
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                25.0
                             ]
                         },
                         {
                             "level": 6,
                             "values": [
-                                20.0
+                                35.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                25.0
+                                50.0
                             ]
                         }
                     ]
@@ -3445,19 +3553,19 @@
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                25.0
                             ]
                         },
                         {
                             "level": 6,
                             "values": [
-                                20.0
+                                35.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                25.0
+                                50.0
                             ]
                         }
                     ]

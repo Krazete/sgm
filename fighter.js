@@ -1721,22 +1721,24 @@ function initialize() {
         loadJSON("data/characters.json"),
         loadJSON("data/variants.json")
     ]).then(initCollection).then(initLanguageMenu).then(initFooter).then(function () {
+            /* variant id search helper
+            cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
+            */
             var vids = [
                 { /* new */
-                    bigSister: "Iron Matron Parasoul (Gold Damage):",
-                    littleSister: "Angel Maker Umbrella (Diamond Support):",
+                    cGuy: "Chill Guy Beowulf (Gold)",
+                    fCookie: "Fortune Cookie Ms. Fortune (Diamond)",
                 },
                 { /* changed */
-                    mCorpse: "Octoplasm Marie (Rework! Special thanks to Deny17S for their input!)",
-                    lHope: "Last Hope Valentine (SA1 Rework):",
-                    pTech: "Pyro-Technique Valentine:",
-                    sGiver: "Scare Giver Cerebella:",
-                    nDeath: "Near Death Valentine:",
-                    oGre: "Ogre Achiever Beowulf:",
-                    rGing: "Risky Ginger Parasoul, Idol Threat Filia, Ms. Trial Ms. Fortune, and Chameleon Twist Fukua:",
-                    iThreat: "Risky Ginger Parasoul, Idol Threat Filia, Ms. Trial Ms. Fortune, and Chameleon Twist Fukua:",
-                    mTrial: "Risky Ginger Parasoul, Idol Threat Filia, Ms. Trial Ms. Fortune, and Chameleon Twist Fukua:",
-                    twist: "Risky Ginger Parasoul, Idol Threat Filia, Ms. Trial Ms. Fortune, and Chameleon Twist Fukua:",
+                    uTouch: "Untouchable Peacock:",
+                    dInterv: "Diva Intervention Eliza:",
+                    heat: "Fire Branded Annie:",
+                    eagerDeceiver: "Eager Deceiver Umbrella:",
+                    uDog: "Underdog Beowulf:",
+                    nOne: "Number One Beowulf:",
+                    wresX: "Wrestler X Beowulf:",
+                    dBrawl: "Dragon Brawler Beowulf:",
+                    fFight: "Freedom Fighter Beowulf",
                 }
             ];
 
@@ -1748,7 +1750,7 @@ function initialize() {
                 label.className = "label";
                 label.innerHTML = text;
                 label.target = "_blank";
-                label.href = "https://hub.skullgirlsmobile.com/updates/official-731-update-notes-sisterhood-and-a-splash-of-revolution-family-tides-july-backstage-pass" + textFragment;
+                label.href = "https://hub.skullgirlsmobile.com/updates/game-update-74-patch-notes-the-sun-never-sets-on-the-cool-%E2%80%9Ctop-fun%E2%80%9D-august-backstage-pass" + textFragment;
                 element.appendChild(label);
             }
 

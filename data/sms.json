@@ -4359,25 +4359,48 @@
         "ability": {
             "features": [
                 {
-                    "description": "SA_SMGeneric_Bleed",
+                    "description": "SA_Beowulf_GiganArmSweep",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                4.0
+                                4.0,
+                                10.0,
+                                15.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                8.0
+                                8.0,
+                                15.0,
+                                20.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                12.0
+                                12.0,
+                                20.0,
+                                25.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
@@ -4447,25 +4470,48 @@
         "ability": {
             "features": [
                 {
-                    "description": "SA_SMGeneric_Bleed",
+                    "description": "SA_Beowulf_GiganArmSweep",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                4.0
+                                4.0,
+                                10.0,
+                                15.0
                             ]
                         },
                         {
                             "level": 9,
                             "values": [
-                                8.0
+                                8.0,
+                                15.0,
+                                20.0
                             ]
                         },
                         {
                             "level": 15,
                             "values": [
-                                12.0
+                                12.0,
+                                20.0,
+                                25.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 9,
+                            "values": []
+                        },
+                        {
+                            "level": 15,
+                            "values": []
                         }
                     ]
                 }
