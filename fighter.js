@@ -1726,31 +1726,26 @@ function initialize() {
             */
             var vids = [
                 { /* new */
-                    cGuy: "Chill Guy Beowulf (Gold)",
-                    fCookie: "Fortune Cookie Ms. Fortune (Diamond)",
+                    iono: "Ionic Icon Peacock,-Stats",
+                    zeraora: "Proton Pulse Robo-Fortune,-Stats",
                 },
                 { /* changed */
-                    uTouch: "Untouchable Peacock:",
-                    dInterv: "Diva Intervention Eliza:",
-                    heat: "Fire Branded Annie:",
-                    eagerDeceiver: "Eager Deceiver Umbrella:",
-                    uDog: "Underdog Beowulf:",
-                    nOne: "Number One Beowulf:",
-                    wresX: "Wrestler X Beowulf:",
-                    dBrawl: "Dragon Brawler Beowulf:",
-                    fFight: "Freedom Fighter Beowulf",
+                    reigningChamp: "Raining Champ Umbrella:",
+                    model: "Model Leader Annie:",
+                    wunderKind: "Wunderkind Umbrella:",
+                    tByte: "Terror Byte Robo-Fortune:",
                 }
             ];
 
             function addLabel(id, type) {
                 var text = ["NEW", "CHANGED"][type];
                 var element = document.getElementById(id).getElementsByClassName(["frame", "sa"][type])[0];
-                var textFragment = "#:~:text=" + encodeURI(vids[type][id]).replace(/,/g, "%2C").replace(/-/g, "%2D");
+                var textFragment = "#:~:text=" + encodeURI(vids[type][id]).replace(/,/g, "%2C").replace(/-/g, "%2D").replace(/%2C%2D/g, ",-");
                 var label = document.createElement("a");
                 label.className = "label";
                 label.innerHTML = text;
                 label.target = "_blank";
-                label.href = "https://hub.skullgirlsmobile.com/updates/game-update-74-patch-notes-the-sun-never-sets-on-the-cool-%E2%80%9Ctop-fun%E2%80%9D-august-backstage-pass" + textFragment;
+                label.href = "https://hub.skullgirlsmobile.com/updates/game-update-75-patch-notes-a-changing-of-seasons-%E2%80%9Celectric-encounter%E2%80%9D-august-backstage-pass" + textFragment;
                 element.appendChild(label);
             }
 

@@ -8629,6 +8629,101 @@
         ],
         "tier": 1
     },
+    "iono": {
+        "base": "pe",
+        "element": 5,
+        "fandom": "Ionic Icon",
+        "name": "Char_Peacock_G_V6_Name",
+        "quote": "Variant_Description_Peacock_Iono",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Peacock_SA_ShockingPresence_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                4.0,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15.0,
+                                4.0,
+                                2
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                20.0,
+                                4.0,
+                                3
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Peacock_SA_ShockingPresence_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Peacock_SA_ShockingPresence_Title"
+        },
+        "stats": [
+            {
+                "attack": 375,
+                "lifebar": 1390
+            },
+            {
+                "attack": 675,
+                "lifebar": 2502
+            }
+        ],
+        "tier": 2
+    },
     "jBreaker": {
         "base": "do",
         "element": 5,
@@ -10634,21 +10729,24 @@
                             "level": 1,
                             "values": [
                                 15.0,
-                                30
+                                30,
+                                2
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 15.0,
-                                25
+                                25,
+                                2
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 15.0,
-                                20
+                                20,
+                                2
                             ]
                         }
                     ]
@@ -10659,20 +10757,57 @@
                         {
                             "level": 1,
                             "values": [
-                                25.0
+                                25.0,
+                                4.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                20.0
+                                20.0,
+                                5.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                15.0,
+                                6.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -14553,22 +14688,22 @@
                         {
                             "level": 1,
                             "values": [
-                                5.0,
-                                2
+                                15.0,
+                                20
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                7.0,
-                                2
+                                15.0,
+                                15
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                10.0,
-                                2
+                                15.0,
+                                10
                             ]
                         }
                     ]
@@ -14579,23 +14714,88 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0,
-                                30
+                                2.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                10.0,
-                                25
+                                3.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                10.0,
-                                20
+                                4.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -17739,32 +17939,6 @@
                         {
                             "level": 1,
                             "values": [
-                                5.0,
-                                5.0
-                            ]
-                        },
-                        {
-                            "level": 2,
-                            "values": [
-                                7.0,
-                                5.0
-                            ]
-                        },
-                        {
-                            "level": 3,
-                            "values": [
-                                10.0,
-                                5.0
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description": "Char_RoboFortune_SA_Malware_Desc2",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": [
                                 10.0
                             ]
                         },
@@ -17778,6 +17952,29 @@
                             "level": 3,
                             "values": [
                                 15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_Malware_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.5
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0
                             ]
                         }
                     ]
@@ -20142,21 +20339,21 @@
                         {
                             "level": 1,
                             "values": [
-                                0.3499999940395355,
+                                0.5,
                                 10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.3499999940395355,
+                                0.5,
                                 12.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.3499999940395355,
+                                0.5,
                                 15.0
                             ]
                         }
@@ -20168,25 +20365,25 @@
                         {
                             "level": 1,
                             "values": [
-                                3,
-                                50.0,
-                                -50.0
+                                3.0,
+                                3.0,
+                                3
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                3,
-                                75.0,
-                                -50.0
+                                4.0,
+                                3.0,
+                                3
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                3,
-                                100.0,
-                                -50.0
+                                5.0,
+                                3.0,
+                                3
                             ]
                         }
                     ]
@@ -20342,5 +20539,198 @@
             }
         ],
         "tier": 2
+    },
+    "zeraora": {
+        "base": "rf",
+        "element": 5,
+        "fandom": "Proton Pulse",
+        "name": "Char_RoboFortune_D_V4_Name",
+        "quote": "Variant_Description_RoboFortune_Zeraora",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_RoboFortune_SA_FullCharge_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.20000000298023224,
+                                10.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.20000000298023224,
+                                15.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.20000000298023224,
+                                20.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_FullCharge_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                null,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                null,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                null,
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_RoboFortune_SA_FullCharge_Title"
+        },
+        "stats": [
+            {
+                "attack": 706,
+                "lifebar": 3753
+            }
+        ],
+        "tier": 3
     }
 }
