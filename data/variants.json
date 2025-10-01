@@ -1483,21 +1483,21 @@
                         {
                             "level": 1,
                             "values": [
-                                null,
+                                50.0,
                                 25.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                null,
+                                50.0,
                                 35.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                null,
+                                50.0,
                                 50.0
                             ]
                         }
@@ -13171,21 +13171,21 @@
                             "level": 1,
                             "values": [
                                 2.0,
-                                null
+                                20.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 4.0,
-                                null
+                                20.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 6.0,
-                                null
+                                20.0
                             ]
                         }
                     ]
