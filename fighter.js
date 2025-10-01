@@ -1740,6 +1740,7 @@ function initialize() {
                     cScout: "Curl Scout Filia:",
                     hHanded: "Heavy Handed Cerebella:",
                     sShine: "Star Shine Annie:",
+                    zeraora: "Proton Pulse:",
                 }
             ];
 
