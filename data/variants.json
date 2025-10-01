@@ -1,4 +1,89 @@
 {
+    "Draccy": {
+        "base": "el",
+        "element": 4,
+        "fandom": "Dark Lord",
+        "name": "Char_Eliza_D_V4_Name",
+        "quote": "Variant_Description_Eliza_Dracula",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Eliza_SA_RitualSacrifice_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                50.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                75.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Eliza_SA_RitualSacrifice_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Eliza_SA_RitualSacrifice_Title"
+        },
+        "stats": [
+            {
+                "attack": 706,
+                "lifebar": 3753
+            }
+        ],
+        "tier": 3
+    },
     "aComp": {
         "base": "fu",
         "element": 0,
@@ -1384,6 +1469,103 @@
         ],
         "tier": 0
     },
+    "bHazard": {
+        "base": "bd",
+        "element": 4,
+        "fandom": "Biohazard",
+        "name": "Char_BlackDahlia_S_V4_Name",
+        "quote": "Variant_Description_BlackDahlia_Biohazard",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_SpecialistToolkit_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                null,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                null,
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                null,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_SpecialistToolkit_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                50.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                50.0,
+                                75.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0,
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_SpecialistToolkit_Title"
+        },
+        "stats": [
+            {
+                "attack": 139,
+                "lifebar": 945
+            },
+            {
+                "attack": 250,
+                "lifebar": 1701
+            },
+            {
+                "attack": 450,
+                "lifebar": 3062
+            }
+        ],
+        "tier": 1
+    },
     "bKill": {
         "base": "pw",
         "element": 3,
@@ -2306,6 +2488,235 @@
         ],
         "tier": 1
     },
+    "cChaser": {
+        "base": "fi",
+        "element": 5,
+        "fandom": "Clue Chaser",
+        "name": "Char_Filia_S_V4_Name",
+        "quote": "Variant_Description_Filia_ClueChaser",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Filia_SA_AhaMoment_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                75.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Filia_SA_AhaMoment_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                20
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Filia_SA_AhaMoment_Title"
+        },
+        "stats": [
+            {
+                "attack": 139,
+                "lifebar": 735
+            },
+            {
+                "attack": 250,
+                "lifebar": 1323
+            },
+            {
+                "attack": 450,
+                "lifebar": 2381
+            }
+        ],
+        "tier": 1
+    },
     "cCutter": {
         "base": "fi",
         "element": 4,
@@ -2734,25 +3145,22 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0,
-                                30.0,
-                                5
+                                5,
+                                7.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                12.0,
-                                30.0,
-                                5
+                                5,
+                                8.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                15.0,
-                                30.0,
-                                5
+                                5,
+                                10.0
                             ]
                         }
                     ]
@@ -2763,23 +3171,26 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0,
-                                6.0,
-                                6.0
+                                1.0,
+                                1.0,
+                                4.0,
+                                4.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                10.0,
-                                6.0,
-                                5.0
+                                1.0,
+                                2.0,
+                                5.0,
+                                4.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                10.0,
+                                1.0,
+                                3.0,
                                 6.0,
                                 4.0
                             ]
@@ -2808,12 +3219,12 @@
         },
         "stats": [
             {
-                "attack": 248,
-                "lifebar": 1698
+                "attack": 292,
+                "lifebar": 1544
             },
             {
-                "attack": 446,
-                "lifebar": 3056
+                "attack": 526,
+                "lifebar": 2779
             }
         ],
         "tier": 2
@@ -4305,6 +4716,96 @@
             }
         ],
         "tier": 2
+    },
+    "dProne": {
+        "base": "pa",
+        "element": 3,
+        "fandom": "Danger-Prone",
+        "name": "Char_Parasoul_S_V4_Name",
+        "quote": "Variant_Description_Parasoul_DangerProne",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Parasoul_SA_NowhereToHide_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Parasoul_SA_NowhereToHide_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                75.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Parasoul_SA_NowhereToHide_Title"
+        },
+        "stats": [
+            {
+                "attack": 160,
+                "lifebar": 756
+            },
+            {
+                "attack": 288,
+                "lifebar": 1361
+            },
+            {
+                "attack": 518,
+                "lifebar": 2449
+            }
+        ],
+        "tier": 1
     },
     "dame": {
         "base": "bd",
@@ -7314,19 +7815,22 @@
                         {
                             "level": 1,
                             "values": [
-                                0.2998046875
+                                0.2998046875,
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.2001953125
+                                0.2001953125,
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.10009765625
+                                0.10009765625,
+                                10.0
                             ]
                         }
                     ]
@@ -7337,23 +7841,52 @@
                         {
                             "level": 1,
                             "values": [
-                                5,
-                                5.0
+                                10.0,
+                                1.0,
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                5,
-                                7.0
+                                10.0,
+                                2.0,
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                5,
+                                10.0,
+                                3.0,
                                 10.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -8868,6 +9401,82 @@
             }
         ],
         "tier": 0
+    },
+    "jSpecter": {
+        "base": "ma",
+        "element": 4,
+        "fandom": "Jack-O-Specter",
+        "name": "Char_Marie_S_V4_Name",
+        "quote": "Variant_Description_Marie_JackOSpecter",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_TrickOrTreat_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_TrickOrTreat_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                12.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                15.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_TrickOrTreat_Title"
+        },
+        "stats": [
+            {
+                "attack": 140,
+                "lifebar": 851
+            },
+            {
+                "attack": 252,
+                "lifebar": 1532
+            },
+            {
+                "attack": 454,
+                "lifebar": 2757
+            }
+        ],
+        "tier": 1
     },
     "kJoy": {
         "base": "va",
@@ -12561,20 +13170,32 @@
                         {
                             "level": 1,
                             "values": [
-                                2.0
+                                2.0,
+                                null
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                4.0
+                                4.0,
+                                null
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                6.0
+                                6.0,
+                                null
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
                         }
                     ]
                 }
@@ -13047,6 +13668,85 @@
             }
         ],
         "tier": 0
+    },
+    "pUp": {
+        "base": "mf",
+        "element": 4,
+        "fandom": "Patched Up",
+        "name": "Char_MsFortune_S_V4_Name",
+        "quote": "Variant_Description_MsFortune_PatchedUp",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_MsFortune_SA_ItsAlive_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.07999999821186066,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.11999999731779099,
+                                1
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.15000000596046448,
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_MsFortune_SA_ItsAlive_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_MsFortune_SA_ItsAlive_Title"
+        },
+        "stats": [
+            {
+                "attack": 172,
+                "lifebar": 735
+            },
+            {
+                "attack": 310,
+                "lifebar": 1323
+            },
+            {
+                "attack": 557,
+                "lifebar": 2381
+            }
+        ],
+        "tier": 1
     },
     "pWeave": {
         "base": "fi",
@@ -15207,6 +15907,82 @@
         ],
         "tier": 0
     },
+    "sApart": {
+        "base": "pw",
+        "element": 4,
+        "fandom": "Sawed Apart",
+        "name": "Char_Painwheel_S_V4_Name",
+        "quote": "Variant_Description_Painwheel_Jigsaw",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Painwheel_SA_LiveOrDie_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.30000001192092896,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.3499999940395355,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Painwheel_SA_LiveOrDie_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Painwheel_SA_LiveOrDie_Title"
+        },
+        "stats": [
+            {
+                "attack": 172,
+                "lifebar": 630
+            },
+            {
+                "attack": 310,
+                "lifebar": 1134
+            },
+            {
+                "attack": 557,
+                "lifebar": 2041
+            }
+        ],
+        "tier": 1
+    },
     "sBite": {
         "base": "be",
         "element": 3,
@@ -16565,18 +17341,24 @@
                         {
                             "level": 1,
                             "values": [
-                                15.0
+                                8.0,
+                                4.0,
+                                8.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                12.0
+                                15.0,
+                                4.0,
+                                9.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
+                                20.0,
+                                4.0,
                                 10.0
                             ]
                         }
@@ -16588,20 +17370,46 @@
                         {
                             "level": 1,
                             "values": [
-                                25.0
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                20.0
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                10.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
                         }
                     ]
                 }
@@ -18061,6 +18869,95 @@
             }
         ],
         "tier": 3
+    },
+    "tKnight": {
+        "base": "sq",
+        "element": 0,
+        "fandom": "Nail Biter",
+        "name": "Char_Squigly_G_V6_Name",
+        "quote": "Variant_Description_Squigly_Knight",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Squigly_SA_HK_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.2998046875
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.25
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Squigly_SA_HK_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Squigly_SA_HK_Title"
+        },
+        "stats": [
+            {
+                "attack": 294,
+                "lifebar": 1787
+            },
+            {
+                "attack": 529,
+                "lifebar": 3217
+            }
+        ],
+        "tier": 2
     },
     "tMake": {
         "base": "bb",

@@ -4502,7 +4502,7 @@
         "ability": {
             "features": [
                 {
-                    "description": "SA_Beowulf_BB3_ThreeWulfMoonsault",
+                    "description": "SA_PainWheel_BB3_OverDrive",
                     "tiers": [
                         {
                             "level": 3,
@@ -4574,7 +4574,7 @@
         "ability": {
             "features": [
                 {
-                    "description": "SA_Beowulf_BB3_ThreeWulfMoonsault",
+                    "description": "SA_PainWheel_BB3_OverDrive",
                     "tiers": [
                         {
                             "level": 3,

@@ -1726,14 +1726,20 @@ function initialize() {
             */
             var vids = [
                 { /* new */
-                    iono: "Ionic Icon Peacock,-Stats",
-                    zeraora: "Proton Pulse Robo-Fortune,-Stats",
+                    tKnight: "Nail Biter Squigly,-Stats",
+                    Draccy: "Dark Lord Eliza,-Stats",
+                    dProne: "Danger Prone Parasoul:",
+                    cChaser: "Clue Chaser Filia:",
+                    sApart: "Sawed Apart Painwheel:",
+                    jSpecter: "Jack-O’-Specter Marie:",
+                    pUp: "Patched Up Ms. Fortune:",
+                    bHazard: "Biohazard Black Dahlia:",
                 },
                 { /* changed */
-                    reigningChamp: "Raining Champ Umbrella:",
-                    model: "Model Leader Annie:",
-                    wunderKind: "Wunderkind Umbrella:",
-                    tByte: "Terror Byte Robo-Fortune:",
+                    pPride: "Princess Pride Parasoul:",
+                    cScout: "Curl Scout Filia:",
+                    hHanded: "Heavy Handed Cerebella:",
+                    sShine: "Star Shine Annie:",
                 }
             ];
 
@@ -1745,7 +1751,7 @@ function initialize() {
                 label.className = "label";
                 label.innerHTML = text;
                 label.target = "_blank";
-                label.href = "https://hub.skullgirlsmobile.com/updates/game-update-75-patch-notes-a-changing-of-seasons-%E2%80%9Celectric-encounter%E2%80%9D-august-backstage-pass" + textFragment;
+                label.href = "https://hub.skullgirlsmobile.com/updates/game-update-76-patch-notes-enter-the-cemetery-gates-%E2%80%9Cgraveyard-gauntlet%E2%80%9D-october-backstage-pass" + textFragment;
                 element.appendChild(label);
             }
 
