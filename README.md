@@ -50,8 +50,9 @@ The formulas used in these calculations are as follows:
 * `HP = CEIL(LVL1_HP + LVL1_HP * (LVL - 1) / 5)`
 * `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
 
-All `BASE_` values are hard-coded for every tier of every fighter, although they seem to follow the general pattern `EVOLVED_BASE_ = FORMER_BASE_ * 1.8`.
-The only variants to ever deviate from this pattern were Headstrong and Understudy, who swapped stats when evolved to diamond tier before it was patched in version 4.3.3.
+All `BASE_` values are hard-coded for every tier of every fighter, although they seem to follow the general pattern `BASE_ = ROUND(UNEVOLVED_BASE_ * 1.8 ^ EVOLUTIONS)`.
+Minor deviations include the `BASE_HP` of Dead Heat and Scared Stiff and the `BASE_ATK` of Nearly Departed, Sundae School, and Vector Protector; these all have hard-coded values 1 higher than this pattern at diamond tier.
+The only variants to ever majorly deviate from this pattern were Headstrong and Understudy, who swapped stats when evolved to diamond tier before it was patched in version 4.3.3.
 
 While I cannot confirm if the game uses these same formulas, the results appear to exactly match the stats of fighters that I have on my own account.
 See my [SGM Fighter Score Analysis](https://docs.google.com/spreadsheets/d/1CotgKsKzSIA5siRAMplX7e5k7KRT63a3GSY1XRg-hgc/edit?usp=sharing) spreadsheet for more detailed information.
