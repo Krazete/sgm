@@ -1162,9 +1162,9 @@ function initOptionsMenu() {
             var baseHP = baseBoost * variants[key].stats[i].lifebar;
 
             var j = Math.max(evolveRange.value, variants[key].tier);
-            var atk = Math.ceil(baseATK + baseATK * (levelTiers[j].value - 1) / 5);
-            var hp = Math.ceil(baseHP + baseHP * (levelTiers[j].value - 1) / 5);
-            var fs = Math.ceil(fsBoost * (atk + hp / 6) * 7 / 10);
+            var atk = Math.ceil(baseATK * (levelTiers[j].value + 4) / 5);
+            var hp = Math.ceil(baseHP * (levelTiers[j].value + 4) / 5);
+            var fs = Math.ceil(fsBoost * (6 * atk + hp) * 7 / 60);
 
             atkValue.dataset.value = atk;
             hpValue.dataset.value = hp;
@@ -1629,12 +1629,12 @@ function felExport() {
 
         var atk = Math.ceil(baseATK + baseATK * 59 / 5);
         var hp = Math.ceil(baseHP + baseHP * 59 / 5);
-        var fs = Math.ceil(fsBoost * (atk + hp / 6) * 7 / 10);
+        var fs = Math.ceil(fsBoost * (6 * atk + hp) * 7 / 60);
 
         return {
             "atk": stats[0].attack.toLocaleString("en-US"),
             "hp": stats[0].lifebar.toLocaleString("en-US"),
-            "fs": Math.ceil((stats[0].attack + stats[0].lifebar / 6) * 7 / 10).toLocaleString("en-US"),
+            "fs": Math.ceil((6 * stats[0].attack + stats[0].lifebar) * 7 / 60).toLocaleString("en-US"),
             "maxatk": atk.toLocaleString("en-US"),
             "maxhp": hp.toLocaleString("en-US"),
             "maxfs": fs.toLocaleString("en-US")
@@ -1694,7 +1694,7 @@ function felExport() {
             "stats": {
                 "atk": variant.stats[0].attack.toString(),
                 "hp": variant.stats[0].lifebar.toString(),
-                "fs": Math.ceil((variant.stats[0].attack + variant.stats[0].lifebar / 6) * 7 / 10).toString()
+                "fs": Math.ceil((6 * variant.stats[0].attack + variant.stats[0].lifebar) * 7 / 60).toString()
             }
         };
         fel[id] = value;
