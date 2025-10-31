@@ -1729,21 +1729,17 @@ function initialize() {
             */
             var vids = [
                 { /* new */
-                    tKnight: "Nail Biter Squigly,-Stats",
-                    Draccy: "Dark Lord Eliza,-Stats",
-                    dProne: "Danger Prone Parasoul:",
-                    cChaser: "Clue Chaser Filia:",
-                    sApart: "Sawed Apart Painwheel:",
-                    jSpecter: "Jack-O’-Specter Marie:",
-                    pUp: "Patched Up Ms. Fortune:",
-                    bHazard: "Biohazard Black Dahlia:",
+                    aTach: "Superluminal Valentine,-Stats",
+                    teto: "Idol Echo Fukua,-Stats",
+                    mMercury: "Miss Mercury Annie,-Stats",
+                    goliath: "Stone Sentinel Cerebella,-Stats",
+                    sSin: "Serpent Sin Double,-Stats",
+                    nShade: "Nightshade Eliza,-Stats",
+                    eEcho: "Feared Faux Fukua,-Stats",
+                    hFiend: "Hallow Fiend Valentine,-Stats",
                 },
                 { /* changed */
-                    pPride: "Princess Pride Parasoul:",
-                    cScout: "Curl Scout Filia:",
-                    hHanded: "Heavy Handed Cerebella:",
-                    sShine: "Star Shine Annie:",
-                    zeraora: "Proton Pulse:",
+                    // dProne: "Misc. Updates-,Danger-Prone",
                 }
             ];
 
@@ -1755,7 +1751,7 @@ function initialize() {
                 label.className = "label";
                 label.innerHTML = text;
                 label.target = "_blank";
-                label.href = "https://hub.skullgirlsmobile.com/updates/game-update-76-patch-notes-enter-the-cemetery-gates-%E2%80%9Cgraveyard-gauntlet%E2%80%9D-october-backstage-pass" + textFragment;
+                label.href = "https://hub.skullgirlsmobile.com/news/game-update-77-patch-notes-the-table-is-set-%E2%80%9Ca-fools-feast%E2%80%9D-november-backstage-pass" + textFragment;
                 element.appendChild(label);
             }
 
