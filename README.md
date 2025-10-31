@@ -51,9 +51,9 @@ The formulas used in these calculations are as follows:
 * `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
 
 All `BASE_` values are hard-coded for every tier of every fighter, although they seem to follow the general pattern `BASE_ = ROUND(UNEVOLVED_BASE_ * 1.95 ^ EVOLUTIONS)`.
-(Before version 7.7.0, the multiplier was `1.8` instead of `1.95`. Any discrepencies in the following notes and links are due to this change.)
+(Before version 7.7.0, the multiplier was `1.8` instead of `1.95`.)
 
-Minor deviations include the `BASE_HP` of Dead Heat and Scared Stiff and the `BASE_ATK` of Nearly Departed, Sundae School, and Vector Protector; these all have hard-coded values 1 higher than this pattern at diamond tier.
+Many variants have minor deviations in their `BASE_HP` or `BASE_ATK`, with their hard-coded values being 1 or 2 lower or higher than this calculation.
 The only variants to ever majorly deviate from this pattern were Headstrong and Understudy, who swapped stats when evolved to diamond tier before it was patched in version 4.3.3.
 
 While I cannot confirm if the game uses these same formulas, the results appear to exactly match the stats of fighters that I have on my own account.
