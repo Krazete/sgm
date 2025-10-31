@@ -324,8 +324,8 @@
                 "lifebar": 2184
             },
             {
-                "attack": 499,
-                "lifebar": 3931
+                "attack": 540,
+                "lifebar": 4259
             }
         ],
         "tier": 2
@@ -473,8 +473,111 @@
                 "lifebar": 1940
             },
             {
-                "attack": 446,
-                "lifebar": 3492
+                "attack": 484,
+                "lifebar": 3783
+            }
+        ],
+        "tier": 2
+    },
+    "aTach": {
+        "base": "va",
+        "element": 3,
+        "fandom": "Superluminal",
+        "name": "Char_Valentine_G_V6_Name",
+        "quote": "Variant_Description_Valentine_Tachyon",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Valentine_SA_FieldTest_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                70.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                85.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Valentine_SA_FieldTest_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                7.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Valentine_SA_FieldTest_Title"
+        },
+        "stats": [
+            {
+                "attack": 256,
+                "lifebar": 1764
+            },
+            {
+                "attack": 499,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -551,8 +654,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 526,
-                "lifebar": 3175
+                "attack": 569,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -623,8 +726,8 @@
                 "lifebar": 1940
             },
             {
-                "attack": 446,
-                "lifebar": 3492
+                "attack": 484,
+                "lifebar": 3783
             }
         ],
         "tier": 2
@@ -780,8 +883,8 @@
                 "lifebar": 1786
             },
             {
-                "attack": 605,
-                "lifebar": 3215
+                "attack": 655,
+                "lifebar": 3483
             }
         ],
         "tier": 2
@@ -938,12 +1041,12 @@
                 "lifebar": 809
             },
             {
-                "attack": 238,
-                "lifebar": 1456
+                "attack": 257,
+                "lifebar": 1578
             },
             {
-                "attack": 428,
-                "lifebar": 2621
+                "attack": 501,
+                "lifebar": 3077
             }
         ],
         "tier": 1
@@ -1007,20 +1110,20 @@
         },
         "stats": [
             {
-                "attack": 73,
-                "lifebar": 495
+                "attack": 66,
+                "lifebar": 450
             },
             {
-                "attack": 131,
-                "lifebar": 891
+                "attack": 129,
+                "lifebar": 878
             },
             {
-                "attack": 237,
-                "lifebar": 1604
+                "attack": 252,
+                "lifebar": 1712
             },
             {
-                "attack": 426,
-                "lifebar": 2887
+                "attack": 491,
+                "lifebar": 3338
             }
         ],
         "tier": 0
@@ -1100,8 +1203,8 @@
                 "lifebar": 1455
             },
             {
-                "attack": 553,
-                "lifebar": 2619
+                "attack": 599,
+                "lifebar": 2837
             }
         ],
         "tier": 2
@@ -1172,12 +1275,12 @@
                 "lifebar": 630
             },
             {
-                "attack": 310,
-                "lifebar": 1134
+                "attack": 335,
+                "lifebar": 1228
             },
             {
-                "attack": 557,
-                "lifebar": 2041
+                "attack": 653,
+                "lifebar": 2395
             }
         ],
         "tier": 1
@@ -1245,8 +1348,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 461,
-                "lifebar": 3573
+                "attack": 499,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -1314,8 +1417,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 587,
-                "lifebar": 3573
+                "attack": 636,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -1383,8 +1486,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 587,
-                "lifebar": 3573
+                "attack": 636,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -1455,16 +1558,16 @@
                 "lifebar": 350
             },
             {
-                "attack": 119,
-                "lifebar": 630
+                "attack": 129,
+                "lifebar": 682
             },
             {
-                "attack": 214,
-                "lifebar": 1134
+                "attack": 252,
+                "lifebar": 1330
             },
             {
-                "attack": 385,
-                "lifebar": 2041
+                "attack": 491,
+                "lifebar": 2594
             }
         ],
         "tier": 0
@@ -1556,12 +1659,12 @@
                 "lifebar": 945
             },
             {
-                "attack": 250,
-                "lifebar": 1701
+                "attack": 271,
+                "lifebar": 1843
             },
             {
-                "attack": 450,
-                "lifebar": 3062
+                "attack": 528,
+                "lifebar": 3594
             }
         ],
         "tier": 1
@@ -1632,8 +1735,8 @@
                 "lifebar": 1191
             },
             {
-                "attack": 747,
-                "lifebar": 2144
+                "attack": 809,
+                "lifebar": 2322
             }
         ],
         "tier": 2
@@ -1769,16 +1872,16 @@
                 "lifebar": 500
             },
             {
-                "attack": 104,
-                "lifebar": 900
+                "attack": 113,
+                "lifebar": 975
             },
             {
-                "attack": 188,
-                "lifebar": 1620
+                "attack": 220,
+                "lifebar": 1901
             },
             {
-                "attack": 338,
-                "lifebar": 2916
+                "attack": 429,
+                "lifebar": 3707
             }
         ],
         "tier": 0
@@ -1849,12 +1952,12 @@
                 "lifebar": 735
             },
             {
-                "attack": 250,
-                "lifebar": 1323
+                "attack": 271,
+                "lifebar": 1433
             },
             {
-                "attack": 450,
-                "lifebar": 2381
+                "attack": 528,
+                "lifebar": 2794
             }
         ],
         "tier": 1
@@ -2148,12 +2251,12 @@
                 "lifebar": 1040
             },
             {
-                "attack": 238,
-                "lifebar": 1872
+                "attack": 257,
+                "lifebar": 2028
             },
             {
-                "attack": 428,
-                "lifebar": 3370
+                "attack": 501,
+                "lifebar": 3955
             }
         ],
         "tier": 1
@@ -2221,12 +2324,12 @@
                 "lifebar": 945
             },
             {
-                "attack": 250,
-                "lifebar": 1701
+                "attack": 271,
+                "lifebar": 1843
             },
             {
-                "attack": 450,
-                "lifebar": 3062
+                "attack": 528,
+                "lifebar": 3594
             }
         ],
         "tier": 1
@@ -2317,8 +2420,8 @@
                 "lifebar": 1588
             },
             {
-                "attack": 605,
-                "lifebar": 2858
+                "attack": 655,
+                "lifebar": 3097
             }
         ],
         "tier": 2
@@ -2386,8 +2489,8 @@
                 "lifebar": 2184
             },
             {
-                "attack": 392,
-                "lifebar": 3931
+                "attack": 425,
+                "lifebar": 4259
             }
         ],
         "tier": 2
@@ -2478,12 +2581,12 @@
                 "lifebar": 851
             },
             {
-                "attack": 252,
-                "lifebar": 1532
+                "attack": 273,
+                "lifebar": 1659
             },
             {
-                "attack": 454,
-                "lifebar": 2757
+                "attack": 532,
+                "lifebar": 3235
             }
         ],
         "tier": 1
@@ -2707,12 +2810,12 @@
                 "lifebar": 735
             },
             {
-                "attack": 250,
-                "lifebar": 1323
+                "attack": 271,
+                "lifebar": 1433
             },
             {
-                "attack": 450,
-                "lifebar": 2381
+                "attack": 528,
+                "lifebar": 2794
             }
         ],
         "tier": 1
@@ -2979,8 +3082,8 @@
                 "lifebar": 1940
             },
             {
-                "attack": 499,
-                "lifebar": 3492
+                "attack": 540,
+                "lifebar": 3783
             }
         ],
         "tier": 2
@@ -3125,8 +3228,8 @@
                 "lifebar": 1786
             },
             {
-                "attack": 675,
-                "lifebar": 3215
+                "attack": 731,
+                "lifebar": 3483
             }
         ],
         "tier": 2
@@ -3223,8 +3326,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 526,
-                "lifebar": 2779
+                "attack": 569,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -3291,20 +3394,20 @@
         },
         "stats": [
             {
-                "attack": 94,
-                "lifebar": 396
+                "attack": 85,
+                "lifebar": 360
             },
             {
-                "attack": 169,
-                "lifebar": 713
+                "attack": 166,
+                "lifebar": 702
             },
             {
-                "attack": 305,
-                "lifebar": 1283
+                "attack": 324,
+                "lifebar": 1369
             },
             {
-                "attack": 548,
-                "lifebar": 2309
+                "attack": 632,
+                "lifebar": 2670
             }
         ],
         "tier": 0
@@ -3381,8 +3484,8 @@
                 "lifebar": 1455
             },
             {
-                "attack": 535,
-                "lifebar": 2619
+                "attack": 579,
+                "lifebar": 2837
             }
         ],
         "tier": 2
@@ -3450,12 +3553,12 @@
                 "lifebar": 735
             },
             {
-                "attack": 279,
-                "lifebar": 1323
+                "attack": 302,
+                "lifebar": 1433
             },
             {
-                "attack": 502,
-                "lifebar": 2381
+                "attack": 589,
+                "lifebar": 2794
             }
         ],
         "tier": 1
@@ -3526,8 +3629,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 652,
-                "lifebar": 2779
+                "attack": 706,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -3684,8 +3787,8 @@
                 "lifebar": 2184
             },
             {
-                "attack": 446,
-                "lifebar": 3931
+                "attack": 484,
+                "lifebar": 4259
             }
         ],
         "tier": 2
@@ -3753,8 +3856,8 @@
                 "lifebar": 1787
             },
             {
-                "attack": 529,
-                "lifebar": 3217
+                "attack": 573,
+                "lifebar": 3485
             }
         ],
         "tier": 2
@@ -3896,8 +3999,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 587,
-                "lifebar": 3175
+                "attack": 636,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -4109,20 +4212,20 @@
         },
         "stats": [
             {
-                "attack": 62,
-                "lifebar": 545
+                "attack": 56,
+                "lifebar": 495
             },
             {
-                "attack": 112,
-                "lifebar": 981
+                "attack": 109,
+                "lifebar": 965
             },
             {
-                "attack": 201,
-                "lifebar": 1766
+                "attack": 213,
+                "lifebar": 1882
             },
             {
-                "attack": 362,
-                "lifebar": 3178
+                "attack": 415,
+                "lifebar": 3670
             }
         ],
         "tier": 0
@@ -4255,12 +4358,12 @@
                 "lifebar": 851
             },
             {
-                "attack": 252,
-                "lifebar": 1532
+                "attack": 273,
+                "lifebar": 1659
             },
             {
-                "attack": 454,
-                "lifebar": 2758
+                "attack": 532,
+                "lifebar": 3235
             }
         ],
         "tier": 1
@@ -4348,8 +4451,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 526,
-                "lifebar": 3573
+                "attack": 569,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -4417,12 +4520,12 @@
                 "lifebar": 630
             },
             {
-                "attack": 279,
-                "lifebar": 1134
+                "attack": 302,
+                "lifebar": 1228
             },
             {
-                "attack": 502,
-                "lifebar": 2041
+                "attack": 589,
+                "lifebar": 2395
             }
         ],
         "tier": 1
@@ -4490,8 +4593,8 @@
                 "lifebar": 1698
             },
             {
-                "attack": 446,
-                "lifebar": 3056
+                "attack": 484,
+                "lifebar": 3311
             }
         ],
         "tier": 2
@@ -4636,8 +4739,8 @@
                 "lifebar": 2184
             },
             {
-                "attack": 446,
-                "lifebar": 3931
+                "attack": 484,
+                "lifebar": 4259
             }
         ],
         "tier": 2
@@ -4711,8 +4814,8 @@
                 "lifebar": 2184
             },
             {
-                "attack": 392,
-                "lifebar": 3931
+                "attack": 425,
+                "lifebar": 4259
             }
         ],
         "tier": 2
@@ -4797,12 +4900,12 @@
                 "lifebar": 756
             },
             {
-                "attack": 288,
-                "lifebar": 1361
+                "attack": 312,
+                "lifebar": 1474
             },
             {
-                "attack": 518,
-                "lifebar": 2449
+                "attack": 608,
+                "lifebar": 2874
             }
         ],
         "tier": 1
@@ -4873,12 +4976,12 @@
                 "lifebar": 945
             },
             {
-                "attack": 250,
-                "lifebar": 1701
+                "attack": 271,
+                "lifebar": 1843
             },
             {
-                "attack": 450,
-                "lifebar": 3062
+                "attack": 528,
+                "lifebar": 3594
             }
         ],
         "tier": 1
@@ -4957,6 +5060,79 @@
         ],
         "tier": 3
     },
+    "eEcho": {
+        "base": "fu",
+        "element": 4,
+        "fandom": "Feared Faux",
+        "name": "Char_Fukua_S_V4_Name",
+        "quote": "Variant_Description_Fukua_EbonEcho",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Fukua_SA_NoobMercy_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Fukua_SA_NoobMercy_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                60.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                80.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Fukua_SA_NoobMercy_Title"
+        },
+        "stats": [
+            {
+                "attack": 160,
+                "lifebar": 661
+            },
+            {
+                "attack": 312,
+                "lifebar": 1289
+            },
+            {
+                "attack": 608,
+                "lifebar": 2514
+            }
+        ],
+        "tier": 1
+    },
     "eEvil": {
         "base": "do",
         "element": 3,
@@ -5026,8 +5202,8 @@
                 "lifebar": 1455
             },
             {
-                "attack": 535,
-                "lifebar": 2619
+                "attack": 579,
+                "lifebar": 2837
             }
         ],
         "tier": 2
@@ -5095,8 +5271,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 529,
-                "lifebar": 3573
+                "attack": 573,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -5339,20 +5515,20 @@
         },
         "stats": [
             {
-                "attack": 62,
-                "lifebar": 424
+                "attack": 56,
+                "lifebar": 385
             },
             {
-                "attack": 112,
-                "lifebar": 763
+                "attack": 109,
+                "lifebar": 751
             },
             {
-                "attack": 201,
-                "lifebar": 1374
+                "attack": 213,
+                "lifebar": 1464
             },
             {
-                "attack": 362,
-                "lifebar": 2473
+                "attack": 415,
+                "lifebar": 2855
             }
         ],
         "tier": 0
@@ -5426,8 +5602,8 @@
                 "lifebar": 1588
             },
             {
-                "attack": 529,
-                "lifebar": 2858
+                "attack": 573,
+                "lifebar": 3097
             }
         ],
         "tier": 2
@@ -5501,12 +5677,12 @@
                 "lifebar": 756
             },
             {
-                "attack": 320,
-                "lifebar": 1361
+                "attack": 347,
+                "lifebar": 1474
             },
             {
-                "attack": 577,
-                "lifebar": 2449
+                "attack": 677,
+                "lifebar": 2874
             }
         ],
         "tier": 1
@@ -5577,8 +5753,8 @@
                 "lifebar": 1588
             },
             {
-                "attack": 675,
-                "lifebar": 2858
+                "attack": 731,
+                "lifebar": 3097
             }
         ],
         "tier": 2
@@ -5649,8 +5825,8 @@
                 "lifebar": 1455
             },
             {
-                "attack": 553,
-                "lifebar": 2619
+                "attack": 599,
+                "lifebar": 2837
             }
         ],
         "tier": 2
@@ -5795,12 +5971,12 @@
                 "lifebar": 567
             },
             {
-                "attack": 356,
-                "lifebar": 1021
+                "attack": 386,
+                "lifebar": 1106
             },
             {
-                "attack": 642,
-                "lifebar": 1837
+                "attack": 753,
+                "lifebar": 2157
             }
         ],
         "tier": 1
@@ -5954,8 +6130,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 461,
-                "lifebar": 3573
+                "attack": 499,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -6251,8 +6427,8 @@
                 "lifebar": 1698
             },
             {
-                "attack": 446,
-                "lifebar": 3056
+                "attack": 484,
+                "lifebar": 3311
             }
         ],
         "tier": 2
@@ -6319,20 +6495,20 @@
         },
         "stats": [
             {
-                "attack": 81,
-                "lifebar": 385
+                "attack": 74,
+                "lifebar": 350
             },
             {
-                "attack": 146,
-                "lifebar": 693
+                "attack": 144,
+                "lifebar": 682
             },
             {
-                "attack": 262,
-                "lifebar": 1247
+                "attack": 281,
+                "lifebar": 1330
             },
             {
-                "attack": 472,
-                "lifebar": 2245
+                "attack": 548,
+                "lifebar": 2594
             }
         ],
         "tier": 0
@@ -6403,8 +6579,8 @@
                 "lifebar": 1698
             },
             {
-                "attack": 535,
-                "lifebar": 3056
+                "attack": 579,
+                "lifebar": 3311
             }
         ],
         "tier": 2
@@ -6492,8 +6668,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 652,
-                "lifebar": 2779
+                "attack": 706,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -6703,8 +6879,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 461,
-                "lifebar": 3573
+                "attack": 499,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -6777,8 +6953,8 @@
                 "lifebar": 1323
             },
             {
-                "attack": 650,
-                "lifebar": 2381
+                "attack": 704,
+                "lifebar": 2580
             }
         ],
         "tier": 2
@@ -6858,8 +7034,8 @@
                 "lifebar": 2426
             },
             {
-                "attack": 392,
-                "lifebar": 4367
+                "attack": 425,
+                "lifebar": 4731
             }
         ],
         "tier": 2
@@ -6930,12 +7106,12 @@
                 "lifebar": 945
             },
             {
-                "attack": 279,
-                "lifebar": 1701
+                "attack": 302,
+                "lifebar": 1843
             },
             {
-                "attack": 502,
-                "lifebar": 3062
+                "attack": 589,
+                "lifebar": 3594
             }
         ],
         "tier": 1
@@ -7009,8 +7185,8 @@
                 "lifebar": 1787
             },
             {
-                "attack": 529,
-                "lifebar": 3217
+                "attack": 573,
+                "lifebar": 3485
             }
         ],
         "tier": 2
@@ -7081,12 +7257,12 @@
                 "lifebar": 924
             },
             {
-                "attack": 187,
-                "lifebar": 1663
+                "attack": 203,
+                "lifebar": 1802
             },
             {
-                "attack": 337,
-                "lifebar": 2994
+                "attack": 396,
+                "lifebar": 3514
             }
         ],
         "tier": 1
@@ -7160,12 +7336,12 @@
                 "lifebar": 840
             },
             {
-                "attack": 250,
-                "lifebar": 1512
+                "attack": 271,
+                "lifebar": 1638
             },
             {
-                "attack": 450,
-                "lifebar": 2722
+                "attack": 528,
+                "lifebar": 3194
             }
         ],
         "tier": 1
@@ -7239,12 +7415,12 @@
                 "lifebar": 1040
             },
             {
-                "attack": 187,
-                "lifebar": 1872
+                "attack": 203,
+                "lifebar": 2028
             },
             {
-                "attack": 337,
-                "lifebar": 3370
+                "attack": 396,
+                "lifebar": 3955
             }
         ],
         "tier": 1
@@ -7312,12 +7488,12 @@
                 "lifebar": 1040
             },
             {
-                "attack": 212,
-                "lifebar": 1872
+                "attack": 230,
+                "lifebar": 2028
             },
             {
-                "attack": 382,
-                "lifebar": 3370
+                "attack": 448,
+                "lifebar": 3955
             }
         ],
         "tier": 1
@@ -7384,23 +7560,102 @@
         },
         "stats": [
             {
-                "attack": 83,
-                "lifebar": 445
+                "attack": 75,
+                "lifebar": 405
             },
             {
-                "attack": 149,
-                "lifebar": 801
+                "attack": 146,
+                "lifebar": 790
             },
             {
-                "attack": 269,
-                "lifebar": 1442
+                "attack": 285,
+                "lifebar": 1540
             },
             {
-                "attack": 484,
-                "lifebar": 2595
+                "attack": 556,
+                "lifebar": 3003
             }
         ],
         "tier": 0
+    },
+    "goliath": {
+        "base": "ce",
+        "element": 4,
+        "fandom": "Stone Sentinel",
+        "name": "Char_Cerebella_S_V4_Name",
+        "quote": "Variant_Description_Cerebella_StoneSentinel",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Cerebella_SA_StoneForm_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                40.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                60.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Cerebella_SA_StoneForm_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                10.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1,
+                                10.0,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1,
+                                10.0,
+                                5.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Cerebella_SA_StoneForm_Title"
+        },
+        "stats": [
+            {
+                "attack": 132,
+                "lifebar": 1040
+            },
+            {
+                "attack": 257,
+                "lifebar": 2028
+            },
+            {
+                "attack": 501,
+                "lifebar": 3955
+            }
+        ],
+        "tier": 1
     },
     "hAppar": {
         "base": "fi",
@@ -7465,12 +7720,12 @@
                 "lifebar": 661
             },
             {
-                "attack": 288,
-                "lifebar": 1190
+                "attack": 312,
+                "lifebar": 1289
             },
             {
-                "attack": 518,
-                "lifebar": 2142
+                "attack": 608,
+                "lifebar": 2514
             }
         ],
         "tier": 1
@@ -7564,8 +7819,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 526,
-                "lifebar": 2779
+                "attack": 569,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -7712,20 +7967,20 @@
         },
         "stats": [
             {
-                "attack": 105,
-                "lifebar": 347
+                "attack": 95,
+                "lifebar": 315
             },
             {
-                "attack": 189,
-                "lifebar": 625
+                "attack": 185,
+                "lifebar": 614
             },
             {
-                "attack": 340,
-                "lifebar": 1124
+                "attack": 361,
+                "lifebar": 1197
             },
             {
-                "attack": 612,
-                "lifebar": 2024
+                "attack": 704,
+                "lifebar": 2334
             }
         ],
         "tier": 0
@@ -7800,6 +8055,79 @@
             }
         ],
         "tier": 3
+    },
+    "hFiend": {
+        "base": "va",
+        "element": 2,
+        "fandom": "Hallow Fiend",
+        "name": "Char_Valentine_S_V4_Name",
+        "quote": "Variant_Description_Valentine_HallowFiend",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Valentine_SA_LethalInjection_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                -3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                -4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                -5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Valentine_SA_LethalInjection_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                6.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Valentine_SA_LethalInjection_Title"
+        },
+        "stats": [
+            {
+                "attack": 140,
+                "lifebar": 756
+            },
+            {
+                "attack": 273,
+                "lifebar": 1474
+            },
+            {
+                "attack": 532,
+                "lifebar": 2874
+            }
+        ],
+        "tier": 1
     },
     "hHanded": {
         "base": "ce",
@@ -7964,12 +8292,12 @@
                 "lifebar": 840
             },
             {
-                "attack": 279,
-                "lifebar": 1512
+                "attack": 302,
+                "lifebar": 1638
             },
             {
-                "attack": 502,
-                "lifebar": 2722
+                "attack": 589,
+                "lifebar": 3194
             }
         ],
         "tier": 1
@@ -8105,8 +8433,8 @@
                 "lifebar": 1786
             },
             {
-                "attack": 675,
-                "lifebar": 3215
+                "attack": 731,
+                "lifebar": 3483
             }
         ],
         "tier": 2
@@ -8176,20 +8504,20 @@
         },
         "stats": [
             {
-                "attack": 62,
-                "lifebar": 484
+                "attack": 56,
+                "lifebar": 440
             },
             {
-                "attack": 112,
-                "lifebar": 871
+                "attack": 109,
+                "lifebar": 858
             },
             {
-                "attack": 201,
-                "lifebar": 1568
+                "attack": 213,
+                "lifebar": 1673
             },
             {
-                "attack": 362,
-                "lifebar": 2823
+                "attack": 415,
+                "lifebar": 3262
             }
         ],
         "tier": 0
@@ -8260,8 +8588,8 @@
                 "lifebar": 1940
             },
             {
-                "attack": 446,
-                "lifebar": 3492
+                "attack": 484,
+                "lifebar": 3783
             }
         ],
         "tier": 2
@@ -8328,20 +8656,20 @@
         },
         "stats": [
             {
-                "attack": 94,
-                "lifebar": 446
+                "attack": 85,
+                "lifebar": 405
             },
             {
-                "attack": 169,
-                "lifebar": 803
+                "attack": 166,
+                "lifebar": 790
             },
             {
-                "attack": 305,
-                "lifebar": 1445
+                "attack": 324,
+                "lifebar": 1540
             },
             {
-                "attack": 548,
-                "lifebar": 2601
+                "attack": 632,
+                "lifebar": 3003
             }
         ],
         "tier": 0
@@ -8477,8 +8805,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 526,
-                "lifebar": 3175
+                "attack": 569,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -8566,8 +8894,8 @@
                 "lifebar": 1940
             },
             {
-                "attack": 446,
-                "lifebar": 3492
+                "attack": 484,
+                "lifebar": 3783
             }
         ],
         "tier": 2
@@ -8635,8 +8963,8 @@
                 "lifebar": 1455
             },
             {
-                "attack": 535,
-                "lifebar": 2619
+                "attack": 579,
+                "lifebar": 2837
             }
         ],
         "tier": 2
@@ -8700,20 +9028,20 @@
         },
         "stats": [
             {
-                "attack": 73,
-                "lifebar": 396
+                "attack": 66,
+                "lifebar": 360
             },
             {
-                "attack": 131,
-                "lifebar": 713
+                "attack": 129,
+                "lifebar": 702
             },
             {
-                "attack": 237,
-                "lifebar": 1283
+                "attack": 252,
+                "lifebar": 1369
             },
             {
-                "attack": 426,
-                "lifebar": 2309
+                "attack": 491,
+                "lifebar": 2670
             }
         ],
         "tier": 0
@@ -8781,12 +9109,12 @@
                 "lifebar": 756
             },
             {
-                "attack": 288,
-                "lifebar": 1361
+                "attack": 312,
+                "lifebar": 1474
             },
             {
-                "attack": 518,
-                "lifebar": 2449
+                "attack": 608,
+                "lifebar": 2874
             }
         ],
         "tier": 1
@@ -8854,8 +9182,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 526,
-                "lifebar": 3573
+                "attack": 569,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -8926,8 +9254,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 605,
-                "lifebar": 2502
+                "attack": 655,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -8994,20 +9322,20 @@
         },
         "stats": [
             {
-                "attack": 83,
-                "lifebar": 347
+                "attack": 75,
+                "lifebar": 315
             },
             {
-                "attack": 149,
-                "lifebar": 625
+                "attack": 146,
+                "lifebar": 614
             },
             {
-                "attack": 269,
-                "lifebar": 1124
+                "attack": 285,
+                "lifebar": 1197
             },
             {
-                "attack": 484,
-                "lifebar": 2024
+                "attack": 556,
+                "lifebar": 2334
             }
         ],
         "tier": 0
@@ -9075,16 +9403,16 @@
                 "lifebar": 450
             },
             {
-                "attack": 119,
-                "lifebar": 810
+                "attack": 129,
+                "lifebar": 878
             },
             {
-                "attack": 214,
-                "lifebar": 1458
+                "attack": 252,
+                "lifebar": 1712
             },
             {
-                "attack": 385,
-                "lifebar": 2624
+                "attack": 491,
+                "lifebar": 3338
             }
         ],
         "tier": 0
@@ -9152,12 +9480,12 @@
                 "lifebar": 735
             },
             {
-                "attack": 279,
-                "lifebar": 1323
+                "attack": 302,
+                "lifebar": 1433
             },
             {
-                "attack": 502,
-                "lifebar": 2381
+                "attack": 589,
+                "lifebar": 2794
             }
         ],
         "tier": 1
@@ -9251,8 +9579,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 675,
-                "lifebar": 2502
+                "attack": 731,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -9388,16 +9716,16 @@
                 "lifebar": 350
             },
             {
-                "attack": 148,
-                "lifebar": 630
+                "attack": 160,
+                "lifebar": 682
             },
             {
-                "attack": 266,
-                "lifebar": 1134
+                "attack": 312,
+                "lifebar": 1330
             },
             {
-                "attack": 478,
-                "lifebar": 2041
+                "attack": 608,
+                "lifebar": 2594
             }
         ],
         "tier": 0
@@ -9468,12 +9796,12 @@
                 "lifebar": 851
             },
             {
-                "attack": 252,
-                "lifebar": 1532
+                "attack": 273,
+                "lifebar": 1659
             },
             {
-                "attack": 454,
-                "lifebar": 2757
+                "attack": 532,
+                "lifebar": 3235
             }
         ],
         "tier": 1
@@ -9541,12 +9869,12 @@
                 "lifebar": 840
             },
             {
-                "attack": 220,
-                "lifebar": 1512
+                "attack": 238,
+                "lifebar": 1638
             },
             {
-                "attack": 395,
-                "lifebar": 2722
+                "attack": 464,
+                "lifebar": 3194
             }
         ],
         "tier": 1
@@ -9614,8 +9942,8 @@
                 "lifebar": 1940
             },
             {
-                "attack": 392,
-                "lifebar": 3492
+                "attack": 425,
+                "lifebar": 3783
             }
         ],
         "tier": 2
@@ -9683,8 +10011,8 @@
                 "lifebar": 1786
             },
             {
-                "attack": 605,
-                "lifebar": 3215
+                "attack": 655,
+                "lifebar": 3483
             }
         ],
         "tier": 2
@@ -9752,8 +10080,8 @@
                 "lifebar": 1787
             },
             {
-                "attack": 529,
-                "lifebar": 3217
+                "attack": 573,
+                "lifebar": 3485
             }
         ],
         "tier": 2
@@ -9827,12 +10155,12 @@
                 "lifebar": 1040
             },
             {
-                "attack": 212,
-                "lifebar": 1872
+                "attack": 230,
+                "lifebar": 2028
             },
             {
-                "attack": 382,
-                "lifebar": 3370
+                "attack": 448,
+                "lifebar": 3955
             }
         ],
         "tier": 1
@@ -10071,12 +10399,12 @@
                 "lifebar": 809
             },
             {
-                "attack": 263,
-                "lifebar": 1456
+                "attack": 285,
+                "lifebar": 1578
             },
             {
-                "attack": 473,
-                "lifebar": 2621
+                "attack": 556,
+                "lifebar": 3077
             }
         ],
         "tier": 1
@@ -10143,20 +10471,20 @@
         },
         "stats": [
             {
-                "attack": 64,
-                "lifebar": 495
+                "attack": 58,
+                "lifebar": 450
             },
             {
-                "attack": 115,
-                "lifebar": 891
+                "attack": 113,
+                "lifebar": 878
             },
             {
-                "attack": 207,
-                "lifebar": 1604
+                "attack": 220,
+                "lifebar": 1712
             },
             {
-                "attack": 373,
-                "lifebar": 2887
+                "attack": 429,
+                "lifebar": 3338
             }
         ],
         "tier": 0
@@ -10250,8 +10578,8 @@
                 "lifebar": 2184
             },
             {
-                "attack": 392,
-                "lifebar": 3931
+                "attack": 425,
+                "lifebar": 4259
             }
         ],
         "tier": 2
@@ -10393,8 +10721,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 526,
-                "lifebar": 3175
+                "attack": 569,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -10550,12 +10878,12 @@
                 "lifebar": 567
             },
             {
-                "attack": 320,
-                "lifebar": 1021
+                "attack": 347,
+                "lifebar": 1106
             },
             {
-                "attack": 577,
-                "lifebar": 1837
+                "attack": 677,
+                "lifebar": 2157
             }
         ],
         "tier": 1
@@ -10631,6 +10959,108 @@
         ],
         "tier": 3
     },
+    "mMercury": {
+        "base": "an",
+        "element": 4,
+        "fandom": "Miss Mercury",
+        "name": "Char_Annie_S_V4_Name",
+        "quote": "Variant_Description_Annie_MissMercury",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Annie_SA_FuneralParty_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.09000000357627869,
+                                13.0,
+                                13.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.10999999940395355,
+                                13.0,
+                                13.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.12999999523162842,
+                                13.0,
+                                13.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Annie_SA_FuneralParty_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                13.0,
+                                13.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2,
+                                13.0,
+                                13.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                13.0,
+                                13.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Annie_SA_FuneralParty_Title"
+        },
+        "stats": [
+            {
+                "attack": 139,
+                "lifebar": 840
+            },
+            {
+                "attack": 271,
+                "lifebar": 1638
+            },
+            {
+                "attack": 528,
+                "lifebar": 3194
+            }
+        ],
+        "tier": 1
+    },
     "mOfHonor": {
         "base": "ma",
         "element": 5,
@@ -10697,12 +11127,12 @@
                 "lifebar": 1040
             },
             {
-                "attack": 187,
-                "lifebar": 1872
+                "attack": 203,
+                "lifebar": 2028
             },
             {
-                "attack": 337,
-                "lifebar": 3370
+                "attack": 396,
+                "lifebar": 3955
             }
         ],
         "tier": 1
@@ -10773,8 +11203,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 675,
-                "lifebar": 2502
+                "attack": 731,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -10845,8 +11275,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 529,
-                "lifebar": 3573
+                "attack": 573,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -10914,12 +11344,12 @@
                 "lifebar": 735
             },
             {
-                "attack": 310,
-                "lifebar": 1323
+                "attack": 335,
+                "lifebar": 1433
             },
             {
-                "attack": 557,
-                "lifebar": 2381
+                "attack": 653,
+                "lifebar": 2794
             }
         ],
         "tier": 1
@@ -10990,8 +11420,8 @@
                 "lifebar": 1786
             },
             {
-                "attack": 605,
-                "lifebar": 3215
+                "attack": 655,
+                "lifebar": 3483
             }
         ],
         "tier": 2
@@ -11162,8 +11592,8 @@
                 "lifebar": 1699
             },
             {
-                "attack": 553,
-                "lifebar": 3058
+                "attack": 599,
+                "lifebar": 3313
             }
         ],
         "tier": 2
@@ -11234,8 +11664,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 675,
-                "lifebar": 2502
+                "attack": 731,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -11309,16 +11739,16 @@
                 "lifebar": 450
             },
             {
-                "attack": 104,
-                "lifebar": 810
+                "attack": 113,
+                "lifebar": 878
             },
             {
-                "attack": 188,
-                "lifebar": 1458
+                "attack": 220,
+                "lifebar": 1712
             },
             {
-                "attack": 338,
-                "lifebar": 2624
+                "attack": 429,
+                "lifebar": 3338
             }
         ],
         "tier": 0
@@ -11497,8 +11927,8 @@
                 "lifebar": 1588
             },
             {
-                "attack": 605,
-                "lifebar": 2858
+                "attack": 655,
+                "lifebar": 3097
             }
         ],
         "tier": 2
@@ -11578,8 +12008,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 587,
-                "lifebar": 2779
+                "attack": 636,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -11744,12 +12174,12 @@
                 "lifebar": 945
             },
             {
-                "attack": 220,
-                "lifebar": 1701
+                "attack": 238,
+                "lifebar": 1843
             },
             {
-                "attack": 396,
-                "lifebar": 3062
+                "attack": 464,
+                "lifebar": 3594
             }
         ],
         "tier": 1
@@ -11817,12 +12247,12 @@
                 "lifebar": 840
             },
             {
-                "attack": 250,
-                "lifebar": 1512
+                "attack": 271,
+                "lifebar": 1638
             },
             {
-                "attack": 450,
-                "lifebar": 2722
+                "attack": 528,
+                "lifebar": 3194
             }
         ],
         "tier": 1
@@ -11958,12 +12388,12 @@
                 "lifebar": 924
             },
             {
-                "attack": 238,
-                "lifebar": 1663
+                "attack": 257,
+                "lifebar": 1802
             },
             {
-                "attack": 428,
-                "lifebar": 2994
+                "attack": 501,
+                "lifebar": 3514
             }
         ],
         "tier": 1
@@ -12037,19 +12467,109 @@
                 "lifebar": 300
             },
             {
-                "attack": 133,
-                "lifebar": 540
+                "attack": 144,
+                "lifebar": 585
             },
             {
-                "attack": 240,
-                "lifebar": 972
+                "attack": 281,
+                "lifebar": 1141
             },
             {
-                "attack": 432,
-                "lifebar": 1750
+                "attack": 548,
+                "lifebar": 2225
             }
         ],
         "tier": 0
+    },
+    "nShade": {
+        "base": "el",
+        "element": 2,
+        "fandom": "Nightshade",
+        "name": "Char_Eliza_S_V4_Name",
+        "quote": "Variant_Description_Eliza_Nightshade",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Eliza_SA_ChillOfTheGrave_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                6.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Eliza_SA_ChillOfTheGrave_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                75.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Eliza_SA_ChillOfTheGrave_Title"
+        },
+        "stats": [
+            {
+                "attack": 139,
+                "lifebar": 945
+            },
+            {
+                "attack": 271,
+                "lifebar": 1843
+            },
+            {
+                "attack": 528,
+                "lifebar": 3594
+            }
+        ],
+        "tier": 1
     },
     "nTerr": {
         "base": "fu",
@@ -12123,8 +12643,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 526,
-                "lifebar": 2779
+                "attack": 569,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -12192,12 +12712,12 @@
                 "lifebar": 1040
             },
             {
-                "attack": 187,
-                "lifebar": 1872
+                "attack": 203,
+                "lifebar": 2028
             },
             {
-                "attack": 337,
-                "lifebar": 3370
+                "attack": 396,
+                "lifebar": 3955
             }
         ],
         "tier": 1
@@ -12271,12 +12791,12 @@
                 "lifebar": 756
             },
             {
-                "attack": 288,
-                "lifebar": 1361
+                "attack": 312,
+                "lifebar": 1474
             },
             {
-                "attack": 518,
-                "lifebar": 2449
+                "attack": 608,
+                "lifebar": 2874
             }
         ],
         "tier": 1
@@ -12344,12 +12864,12 @@
                 "lifebar": 924
             },
             {
-                "attack": 212,
-                "lifebar": 1663
+                "attack": 230,
+                "lifebar": 1802
             },
             {
-                "attack": 382,
-                "lifebar": 2994
+                "attack": 448,
+                "lifebar": 3514
             }
         ],
         "tier": 1
@@ -12494,12 +13014,12 @@
                 "lifebar": 756
             },
             {
-                "attack": 252,
-                "lifebar": 1361
+                "attack": 273,
+                "lifebar": 1474
             },
             {
-                "attack": 454,
-                "lifebar": 2449
+                "attack": 532,
+                "lifebar": 2874
             }
         ],
         "tier": 1
@@ -12576,8 +13096,8 @@
                 "lifebar": 1787
             },
             {
-                "attack": 529,
-                "lifebar": 3217
+                "attack": 573,
+                "lifebar": 3485
             }
         ],
         "tier": 2
@@ -12651,8 +13171,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 587,
-                "lifebar": 3175
+                "attack": 636,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -12723,12 +13243,12 @@
                 "lifebar": 662
             },
             {
-                "attack": 356,
-                "lifebar": 1192
+                "attack": 386,
+                "lifebar": 1291
             },
             {
-                "attack": 642,
-                "lifebar": 2145
+                "attack": 753,
+                "lifebar": 2517
             }
         ],
         "tier": 1
@@ -12816,8 +13336,8 @@
                 "lifebar": 2205
             },
             {
-                "attack": 461,
-                "lifebar": 3969
+                "attack": 499,
+                "lifebar": 4300
             }
         ],
         "tier": 2
@@ -12953,8 +13473,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 675,
-                "lifebar": 2502
+                "attack": 731,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -13028,12 +13548,12 @@
                 "lifebar": 809
             },
             {
-                "attack": 238,
-                "lifebar": 1456
+                "attack": 257,
+                "lifebar": 1578
             },
             {
-                "attack": 428,
-                "lifebar": 2621
+                "attack": 501,
+                "lifebar": 3077
             }
         ],
         "tier": 1
@@ -13127,8 +13647,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 587,
-                "lifebar": 2779
+                "attack": 636,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -13208,8 +13728,8 @@
                 "lifebar": 1940
             },
             {
-                "attack": 446,
-                "lifebar": 3492
+                "attack": 484,
+                "lifebar": 3783
             }
         ],
         "tier": 2
@@ -13283,8 +13803,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 587,
-                "lifebar": 2779
+                "attack": 636,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -13355,12 +13875,12 @@
                 "lifebar": 661
             },
             {
-                "attack": 320,
-                "lifebar": 1190
+                "attack": 347,
+                "lifebar": 1289
             },
             {
-                "attack": 577,
-                "lifebar": 2142
+                "attack": 677,
+                "lifebar": 2514
             }
         ],
         "tier": 1
@@ -13431,8 +13951,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 461,
-                "lifebar": 3175
+                "attack": 499,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -13506,8 +14026,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 605,
-                "lifebar": 2502
+                "attack": 655,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -13655,16 +14175,16 @@
                 "lifebar": 350
             },
             {
-                "attack": 133,
-                "lifebar": 630
+                "attack": 144,
+                "lifebar": 682
             },
             {
-                "attack": 240,
-                "lifebar": 1134
+                "attack": 281,
+                "lifebar": 1330
             },
             {
-                "attack": 432,
-                "lifebar": 2041
+                "attack": 548,
+                "lifebar": 2594
             }
         ],
         "tier": 0
@@ -13738,12 +14258,12 @@
                 "lifebar": 735
             },
             {
-                "attack": 310,
-                "lifebar": 1323
+                "attack": 335,
+                "lifebar": 1433
             },
             {
-                "attack": 557,
-                "lifebar": 2381
+                "attack": 653,
+                "lifebar": 2794
             }
         ],
         "tier": 1
@@ -13820,8 +14340,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 526,
-                "lifebar": 2779
+                "attack": 569,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -13901,8 +14421,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 461,
-                "lifebar": 3573
+                "attack": 499,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -13970,8 +14490,8 @@
                 "lifebar": 1787
             },
             {
-                "attack": 529,
-                "lifebar": 3217
+                "attack": 573,
+                "lifebar": 3485
             }
         ],
         "tier": 2
@@ -14039,8 +14559,8 @@
                 "lifebar": 1588
             },
             {
-                "attack": 605,
-                "lifebar": 2858
+                "attack": 655,
+                "lifebar": 3097
             }
         ],
         "tier": 2
@@ -14114,8 +14634,8 @@
                 "lifebar": 1786
             },
             {
-                "attack": 605,
-                "lifebar": 3215
+                "attack": 655,
+                "lifebar": 3483
             }
         ],
         "tier": 2
@@ -14183,12 +14703,12 @@
                 "lifebar": 735
             },
             {
-                "attack": 279,
-                "lifebar": 1323
+                "attack": 302,
+                "lifebar": 1433
             },
             {
-                "attack": 502,
-                "lifebar": 2381
+                "attack": 589,
+                "lifebar": 2794
             }
         ],
         "tier": 1
@@ -14333,12 +14853,12 @@
                 "lifebar": 756
             },
             {
-                "attack": 288,
-                "lifebar": 1361
+                "attack": 312,
+                "lifebar": 1474
             },
             {
-                "attack": 518,
-                "lifebar": 2449
+                "attack": 608,
+                "lifebar": 2874
             }
         ],
         "tier": 1
@@ -14412,12 +14932,12 @@
                 "lifebar": 693
             },
             {
-                "attack": 263,
-                "lifebar": 1247
+                "attack": 285,
+                "lifebar": 1351
             },
             {
-                "attack": 473,
-                "lifebar": 2245
+                "attack": 556,
+                "lifebar": 2634
             }
         ],
         "tier": 1
@@ -14485,8 +15005,8 @@
                 "lifebar": 1323
             },
             {
-                "attack": 587,
-                "lifebar": 2381
+                "attack": 636,
+                "lifebar": 2580
             }
         ],
         "tier": 2
@@ -14557,8 +15077,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 526,
-                "lifebar": 3175
+                "attack": 569,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -14635,12 +15155,12 @@
                 "lifebar": 945
             },
             {
-                "attack": 252,
-                "lifebar": 1701
+                "attack": 273,
+                "lifebar": 1843
             },
             {
-                "attack": 454,
-                "lifebar": 3062
+                "attack": 532,
+                "lifebar": 3594
             }
         ],
         "tier": 1
@@ -14708,16 +15228,16 @@
                 "lifebar": 350
             },
             {
-                "attack": 119,
-                "lifebar": 630
+                "attack": 129,
+                "lifebar": 682
             },
             {
-                "attack": 214,
-                "lifebar": 1134
+                "attack": 252,
+                "lifebar": 1330
             },
             {
-                "attack": 385,
-                "lifebar": 2041
+                "attack": 491,
+                "lifebar": 2594
             }
         ],
         "tier": 0
@@ -14791,12 +15311,12 @@
                 "lifebar": 1155
             },
             {
-                "attack": 187,
-                "lifebar": 2079
+                "attack": 203,
+                "lifebar": 2252
             },
             {
-                "attack": 337,
-                "lifebar": 3742
+                "attack": 396,
+                "lifebar": 4391
             }
         ],
         "tier": 1
@@ -14873,8 +15393,8 @@
                 "lifebar": 1588
             },
             {
-                "attack": 605,
-                "lifebar": 2858
+                "attack": 655,
+                "lifebar": 3097
             }
         ],
         "tier": 2
@@ -15030,8 +15550,8 @@
                 "lifebar": 1323
             },
             {
-                "attack": 650,
-                "lifebar": 2381
+                "attack": 704,
+                "lifebar": 2580
             }
         ],
         "tier": 2
@@ -15105,12 +15625,12 @@
                 "lifebar": 809
             },
             {
-                "attack": 212,
-                "lifebar": 1456
+                "attack": 230,
+                "lifebar": 1578
             },
             {
-                "attack": 382,
-                "lifebar": 2621
+                "attack": 448,
+                "lifebar": 3077
             }
         ],
         "tier": 1
@@ -15181,8 +15701,8 @@
                 "lifebar": 2184
             },
             {
-                "attack": 446,
-                "lifebar": 3931
+                "attack": 484,
+                "lifebar": 4259
             }
         ],
         "tier": 2
@@ -15256,12 +15776,12 @@
                 "lifebar": 735
             },
             {
-                "attack": 250,
-                "lifebar": 1323
+                "attack": 271,
+                "lifebar": 1433
             },
             {
-                "attack": 450,
-                "lifebar": 2381
+                "attack": 528,
+                "lifebar": 2794
             }
         ],
         "tier": 1
@@ -15573,16 +16093,16 @@
                 "lifebar": 350
             },
             {
-                "attack": 133,
-                "lifebar": 630
+                "attack": 144,
+                "lifebar": 682
             },
             {
-                "attack": 240,
-                "lifebar": 1134
+                "attack": 281,
+                "lifebar": 1330
             },
             {
-                "attack": 432,
-                "lifebar": 2041
+                "attack": 548,
+                "lifebar": 2594
             }
         ],
         "tier": 0
@@ -15670,8 +16190,8 @@
                 "lifebar": 2205
             },
             {
-                "attack": 461,
-                "lifebar": 3969
+                "attack": 499,
+                "lifebar": 4300
             }
         ],
         "tier": 2
@@ -15745,8 +16265,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 747,
-                "lifebar": 2502
+                "attack": 809,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -15817,12 +16337,12 @@
                 "lifebar": 809
             },
             {
-                "attack": 238,
-                "lifebar": 1456
+                "attack": 257,
+                "lifebar": 1578
             },
             {
-                "attack": 428,
-                "lifebar": 2621
+                "attack": 501,
+                "lifebar": 3077
             }
         ],
         "tier": 1
@@ -15893,16 +16413,16 @@
                 "lifebar": 300
             },
             {
-                "attack": 148,
-                "lifebar": 540
+                "attack": 160,
+                "lifebar": 585
             },
             {
-                "attack": 266,
-                "lifebar": 972
+                "attack": 312,
+                "lifebar": 1141
             },
             {
-                "attack": 478,
-                "lifebar": 1750
+                "attack": 608,
+                "lifebar": 2225
             }
         ],
         "tier": 0
@@ -15973,12 +16493,12 @@
                 "lifebar": 630
             },
             {
-                "attack": 310,
-                "lifebar": 1134
+                "attack": 335,
+                "lifebar": 1228
             },
             {
-                "attack": 557,
-                "lifebar": 2041
+                "attack": 653,
+                "lifebar": 2395
             }
         ],
         "tier": 1
@@ -16117,12 +16637,12 @@
                 "lifebar": 945
             },
             {
-                "attack": 220,
-                "lifebar": 1701
+                "attack": 238,
+                "lifebar": 1843
             },
             {
-                "attack": 395,
-                "lifebar": 3062
+                "attack": 464,
+                "lifebar": 3594
             }
         ],
         "tier": 1
@@ -16193,8 +16713,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 526,
-                "lifebar": 3175
+                "attack": 569,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -16379,16 +16899,16 @@
                 "lifebar": 450
             },
             {
-                "attack": 104,
-                "lifebar": 810
+                "attack": 113,
+                "lifebar": 878
             },
             {
-                "attack": 188,
-                "lifebar": 1458
+                "attack": 220,
+                "lifebar": 1712
             },
             {
-                "attack": 338,
-                "lifebar": 2624
+                "attack": 429,
+                "lifebar": 3338
             }
         ],
         "tier": 0
@@ -16459,8 +16979,8 @@
                 "lifebar": 1588
             },
             {
-                "attack": 529,
-                "lifebar": 2858
+                "attack": 573,
+                "lifebar": 3097
             }
         ],
         "tier": 2
@@ -16534,8 +17054,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 587,
-                "lifebar": 3573
+                "attack": 636,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -16652,8 +17172,8 @@
                 "lifebar": 2184
             },
             {
-                "attack": 446,
-                "lifebar": 3931
+                "attack": 484,
+                "lifebar": 4259
             }
         ],
         "tier": 2
@@ -16792,8 +17312,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 461,
-                "lifebar": 3175
+                "attack": 499,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -16861,12 +17381,12 @@
                 "lifebar": 924
             },
             {
-                "attack": 212,
-                "lifebar": 1663
+                "attack": 230,
+                "lifebar": 1802
             },
             {
-                "attack": 382,
-                "lifebar": 2994
+                "attack": 448,
+                "lifebar": 3514
             }
         ],
         "tier": 1
@@ -17143,20 +17663,20 @@
         },
         "stats": [
             {
-                "attack": 69,
-                "lifebar": 363
+                "attack": 74,
+                "lifebar": 300
             },
             {
-                "attack": 124,
-                "lifebar": 653
+                "attack": 144,
+                "lifebar": 585
             },
             {
-                "attack": 224,
-                "lifebar": 1176
+                "attack": 281,
+                "lifebar": 1141
             },
             {
-                "attack": 403,
-                "lifebar": 2117
+                "attack": 548,
+                "lifebar": 2225
             }
         ],
         "tier": 0
@@ -17349,7 +17869,7 @@
                         {
                             "level": 2,
                             "values": [
-                                10.0,
+                                15.0,
                                 4.0,
                                 9.0
                             ]
@@ -17357,7 +17877,7 @@
                         {
                             "level": 3,
                             "values": [
-                                12.0,
+                                20.0,
                                 4.0,
                                 10.0
                             ]
@@ -17423,6 +17943,79 @@
             }
         ],
         "tier": 3
+    },
+    "sSin": {
+        "base": "do",
+        "element": 3,
+        "fandom": "Serpent Sin",
+        "name": "Char_Double_S_V4_Name",
+        "quote": "Variant_Description_Double_SerpentSin",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Double_SA_Avarice_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Double_SA_Avarice_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Double_SA_Avarice_Title"
+        },
+        "stats": [
+            {
+                "attack": 132,
+                "lifebar": 693
+            },
+            {
+                "attack": 257,
+                "lifebar": 1351
+            },
+            {
+                "attack": 501,
+                "lifebar": 2634
+            }
+        ],
+        "tier": 1
     },
     "sSold": {
         "base": "va",
@@ -17656,20 +18249,20 @@
         },
         "stats": [
             {
-                "attack": 54,
-                "lifebar": 545
+                "attack": 49,
+                "lifebar": 495
             },
             {
-                "attack": 97,
-                "lifebar": 981
+                "attack": 96,
+                "lifebar": 965
             },
             {
-                "attack": 175,
-                "lifebar": 1766
+                "attack": 187,
+                "lifebar": 1882
             },
             {
-                "attack": 315,
-                "lifebar": 3179
+                "attack": 365,
+                "lifebar": 3670
             }
         ],
         "tier": 0
@@ -17737,12 +18330,12 @@
                 "lifebar": 850
             },
             {
-                "attack": 288,
-                "lifebar": 1530
+                "attack": 312,
+                "lifebar": 1658
             },
             {
-                "attack": 518,
-                "lifebar": 2754
+                "attack": 608,
+                "lifebar": 3233
             }
         ],
         "tier": 1
@@ -17810,8 +18403,8 @@
                 "lifebar": 1191
             },
             {
-                "attack": 675,
-                "lifebar": 2144
+                "attack": 731,
+                "lifebar": 2322
             }
         ],
         "tier": 2
@@ -17888,16 +18481,16 @@
                 "lifebar": 315
             },
             {
-                "attack": 153,
-                "lifebar": 567
+                "attack": 166,
+                "lifebar": 614
             },
             {
-                "attack": 275,
-                "lifebar": 1021
+                "attack": 324,
+                "lifebar": 1197
             },
             {
-                "attack": 496,
-                "lifebar": 1837
+                "attack": 632,
+                "lifebar": 2334
             }
         ],
         "tier": 0
@@ -17965,16 +18558,16 @@
                 "lifebar": 400
             },
             {
-                "attack": 104,
-                "lifebar": 720
+                "attack": 113,
+                "lifebar": 780
             },
             {
-                "attack": 188,
-                "lifebar": 1296
+                "attack": 220,
+                "lifebar": 1521
             },
             {
-                "attack": 338,
-                "lifebar": 2333
+                "attack": 429,
+                "lifebar": 2966
             }
         ],
         "tier": 0
@@ -18042,16 +18635,16 @@
                 "lifebar": 400
             },
             {
-                "attack": 119,
-                "lifebar": 720
+                "attack": 129,
+                "lifebar": 780
             },
             {
-                "attack": 214,
-                "lifebar": 1296
+                "attack": 252,
+                "lifebar": 1521
             },
             {
-                "attack": 385,
-                "lifebar": 2333
+                "attack": 491,
+                "lifebar": 2966
             }
         ],
         "tier": 0
@@ -18119,8 +18712,8 @@
                 "lifebar": 1787
             },
             {
-                "attack": 529,
-                "lifebar": 3217
+                "attack": 573,
+                "lifebar": 3485
             }
         ],
         "tier": 2
@@ -18184,20 +18777,20 @@
         },
         "stats": [
             {
-                "attack": 94,
-                "lifebar": 347
+                "attack": 85,
+                "lifebar": 315
             },
             {
-                "attack": 169,
-                "lifebar": 625
+                "attack": 166,
+                "lifebar": 614
             },
             {
-                "attack": 305,
-                "lifebar": 1124
+                "attack": 324,
+                "lifebar": 1197
             },
             {
-                "attack": 548,
-                "lifebar": 2024
+                "attack": 632,
+                "lifebar": 2334
             }
         ],
         "tier": 0
@@ -18264,20 +18857,20 @@
         },
         "stats": [
             {
-                "attack": 83,
-                "lifebar": 396
+                "attack": 75,
+                "lifebar": 360
             },
             {
-                "attack": 149,
-                "lifebar": 713
+                "attack": 146,
+                "lifebar": 702
             },
             {
-                "attack": 269,
-                "lifebar": 1283
+                "attack": 285,
+                "lifebar": 1369
             },
             {
-                "attack": 484,
-                "lifebar": 2309
+                "attack": 556,
+                "lifebar": 2670
             }
         ],
         "tier": 0
@@ -18345,12 +18938,12 @@
                 "lifebar": 850
             },
             {
-                "attack": 288,
-                "lifebar": 1530
+                "attack": 312,
+                "lifebar": 1658
             },
             {
-                "attack": 518,
-                "lifebar": 2754
+                "attack": 608,
+                "lifebar": 3233
             }
         ],
         "tier": 1
@@ -18418,12 +19011,12 @@
                 "lifebar": 661
             },
             {
-                "attack": 288,
-                "lifebar": 1190
+                "attack": 312,
+                "lifebar": 1289
             },
             {
-                "attack": 518,
-                "lifebar": 2142
+                "attack": 608,
+                "lifebar": 2514
             }
         ],
         "tier": 1
@@ -18500,8 +19093,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 587,
-                "lifebar": 2779
+                "attack": 636,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -18572,8 +19165,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 747,
-                "lifebar": 2502
+                "attack": 809,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -18644,16 +19237,16 @@
                 "lifebar": 400
             },
             {
-                "attack": 119,
-                "lifebar": 720
+                "attack": 129,
+                "lifebar": 780
             },
             {
-                "attack": 214,
-                "lifebar": 1296
+                "attack": 252,
+                "lifebar": 1521
             },
             {
-                "attack": 385,
-                "lifebar": 2333
+                "attack": 491,
+                "lifebar": 2966
             }
         ],
         "tier": 0
@@ -18727,8 +19320,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 587,
-                "lifebar": 2779
+                "attack": 636,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -18796,8 +19389,8 @@
                 "lifebar": 1764
             },
             {
-                "attack": 526,
-                "lifebar": 3175
+                "attack": 569,
+                "lifebar": 3440
             }
         ],
         "tier": 2
@@ -18953,8 +19546,8 @@
                 "lifebar": 1787
             },
             {
-                "attack": 529,
-                "lifebar": 3217
+                "attack": 573,
+                "lifebar": 3485
             }
         ],
         "tier": 2
@@ -19025,12 +19618,12 @@
                 "lifebar": 1050
             },
             {
-                "attack": 220,
-                "lifebar": 1890
+                "attack": 238,
+                "lifebar": 2048
             },
             {
-                "attack": 395,
-                "lifebar": 3402
+                "attack": 464,
+                "lifebar": 3994
             }
         ],
         "tier": 1
@@ -19097,20 +19690,20 @@
         },
         "stats": [
             {
-                "attack": 77,
-                "lifebar": 363
+                "attack": 70,
+                "lifebar": 330
             },
             {
-                "attack": 139,
-                "lifebar": 653
+                "attack": 136,
+                "lifebar": 644
             },
             {
-                "attack": 249,
-                "lifebar": 1176
+                "attack": 265,
+                "lifebar": 1256
             },
             {
-                "attack": 449,
-                "lifebar": 2117
+                "attack": 517,
+                "lifebar": 2449
             }
         ],
         "tier": 0
@@ -19174,20 +19767,20 @@
         },
         "stats": [
             {
-                "attack": 73,
-                "lifebar": 446
+                "attack": 65,
+                "lifebar": 405
             },
             {
-                "attack": 131,
-                "lifebar": 803
+                "attack": 127,
+                "lifebar": 790
             },
             {
-                "attack": 237,
-                "lifebar": 1445
+                "attack": 248,
+                "lifebar": 1540
             },
             {
-                "attack": 426,
-                "lifebar": 2601
+                "attack": 484,
+                "lifebar": 3003
             }
         ],
         "tier": 0
@@ -19284,8 +19877,8 @@
                 "lifebar": 1191
             },
             {
-                "attack": 747,
-                "lifebar": 2144
+                "attack": 809,
+                "lifebar": 2322
             }
         ],
         "tier": 2
@@ -19356,8 +19949,8 @@
                 "lifebar": 1699
             },
             {
-                "attack": 553,
-                "lifebar": 3058
+                "attack": 599,
+                "lifebar": 3313
             }
         ],
         "tier": 2
@@ -19428,15 +20021,98 @@
                 "lifebar": 693
             },
             {
-                "attack": 238,
-                "lifebar": 1247
+                "attack": 257,
+                "lifebar": 1351
             },
             {
-                "attack": 428,
-                "lifebar": 2245
+                "attack": 501,
+                "lifebar": 2634
             }
         ],
         "tier": 1
+    },
+    "teto": {
+        "base": "fu",
+        "element": 1,
+        "fandom": "Idol Echo",
+        "name": "Char_Fukua_D_V5_Name",
+        "quote": "Variant_Description_Fukua_Teto",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Fukua_SA_DissonantFinale_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                1,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1,
+                                1,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1,
+                                1,
+                                1.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Fukua_SA_DissonantFinale_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                10
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                10
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                10
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Fukua_SA_DissonantFinale_Title"
+        },
+        "stats": [
+            {
+                "attack": 613,
+                "lifebar": 3242
+            }
+        ],
+        "tier": 3
     },
     "toad": {
         "base": "ce",
@@ -19501,12 +20177,12 @@
                 "lifebar": 851
             },
             {
-                "attack": 320,
-                "lifebar": 1532
+                "attack": 347,
+                "lifebar": 1659
             },
             {
-                "attack": 577,
-                "lifebar": 2757
+                "attack": 677,
+                "lifebar": 3235
             }
         ],
         "tier": 1
@@ -19574,16 +20250,16 @@
                 "lifebar": 450
             },
             {
-                "attack": 119,
-                "lifebar": 810
+                "attack": 129,
+                "lifebar": 878
             },
             {
-                "attack": 214,
-                "lifebar": 1458
+                "attack": 252,
+                "lifebar": 1712
             },
             {
-                "attack": 385,
-                "lifebar": 2624
+                "attack": 491,
+                "lifebar": 3338
             }
         ],
         "tier": 0
@@ -19654,12 +20330,12 @@
                 "lifebar": 924
             },
             {
-                "attack": 212,
-                "lifebar": 1663
+                "attack": 230,
+                "lifebar": 1802
             },
             {
-                "attack": 382,
-                "lifebar": 2994
+                "attack": 448,
+                "lifebar": 3514
             }
         ],
         "tier": 1
@@ -19730,12 +20406,12 @@
                 "lifebar": 809
             },
             {
-                "attack": 212,
-                "lifebar": 1456
+                "attack": 230,
+                "lifebar": 1578
             },
             {
-                "attack": 382,
-                "lifebar": 2621
+                "attack": 448,
+                "lifebar": 3077
             }
         ],
         "tier": 1
@@ -19803,16 +20479,16 @@
                 "lifebar": 400
             },
             {
-                "attack": 133,
-                "lifebar": 720
+                "attack": 144,
+                "lifebar": 780
             },
             {
-                "attack": 240,
-                "lifebar": 1296
+                "attack": 281,
+                "lifebar": 1521
             },
             {
-                "attack": 432,
-                "lifebar": 2333
+                "attack": 548,
+                "lifebar": 2966
             }
         ],
         "tier": 0
@@ -19880,16 +20556,16 @@
                 "lifebar": 450
             },
             {
-                "attack": 133,
-                "lifebar": 810
+                "attack": 144,
+                "lifebar": 878
             },
             {
-                "attack": 240,
-                "lifebar": 1458
+                "attack": 281,
+                "lifebar": 1712
             },
             {
-                "attack": 432,
-                "lifebar": 2624
+                "attack": 548,
+                "lifebar": 3338
             }
         ],
         "tier": 0
@@ -19983,8 +20659,8 @@
                 "lifebar": 1698
             },
             {
-                "attack": 535,
-                "lifebar": 3056
+                "attack": 579,
+                "lifebar": 3311
             }
         ],
         "tier": 2
@@ -20058,8 +20734,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 675,
-                "lifebar": 2502
+                "attack": 731,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -20133,8 +20809,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 526,
-                "lifebar": 3573
+                "attack": 569,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -20270,12 +20946,12 @@
                 "lifebar": 1050
             },
             {
-                "attack": 220,
-                "lifebar": 1890
+                "attack": 238,
+                "lifebar": 2048
             },
             {
-                "attack": 395,
-                "lifebar": 3402
+                "attack": 464,
+                "lifebar": 3994
             }
         ],
         "tier": 1
@@ -20346,8 +21022,8 @@
                 "lifebar": 1544
             },
             {
-                "attack": 526,
-                "lifebar": 2779
+                "attack": 569,
+                "lifebar": 3011
             }
         ],
         "tier": 2
@@ -20415,12 +21091,12 @@
                 "lifebar": 945
             },
             {
-                "attack": 220,
-                "lifebar": 1701
+                "attack": 238,
+                "lifebar": 1843
             },
             {
-                "attack": 396,
-                "lifebar": 3062
+                "attack": 464,
+                "lifebar": 3594
             }
         ],
         "tier": 1
@@ -20491,8 +21167,8 @@
                 "lifebar": 1588
             },
             {
-                "attack": 675,
-                "lifebar": 2858
+                "attack": 731,
+                "lifebar": 3097
             }
         ],
         "tier": 2
@@ -20560,12 +21236,12 @@
                 "lifebar": 809
             },
             {
-                "attack": 238,
-                "lifebar": 1456
+                "attack": 257,
+                "lifebar": 1578
             },
             {
-                "attack": 428,
-                "lifebar": 2621
+                "attack": 501,
+                "lifebar": 3077
             }
         ],
         "tier": 1
@@ -20781,8 +21457,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 605,
-                "lifebar": 2502
+                "attack": 655,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -20853,8 +21529,8 @@
                 "lifebar": 1940
             },
             {
-                "attack": 499,
-                "lifebar": 3492
+                "attack": 540,
+                "lifebar": 3783
             }
         ],
         "tier": 2
@@ -20993,12 +21669,12 @@
                 "lifebar": 661
             },
             {
-                "attack": 320,
-                "lifebar": 1190
+                "attack": 347,
+                "lifebar": 1289
             },
             {
-                "attack": 577,
-                "lifebar": 2142
+                "attack": 677,
+                "lifebar": 2514
             }
         ],
         "tier": 1
@@ -21066,8 +21742,8 @@
                 "lifebar": 1985
             },
             {
-                "attack": 526,
-                "lifebar": 3573
+                "attack": 569,
+                "lifebar": 3871
             }
         ],
         "tier": 2
@@ -21212,12 +21888,12 @@
                 "lifebar": 756
             },
             {
-                "attack": 320,
-                "lifebar": 1361
+                "attack": 347,
+                "lifebar": 1474
             },
             {
-                "attack": 577,
-                "lifebar": 2449
+                "attack": 677,
+                "lifebar": 2874
             }
         ],
         "tier": 1
@@ -21294,8 +21970,8 @@
                 "lifebar": 1390
             },
             {
-                "attack": 675,
-                "lifebar": 2502
+                "attack": 731,
+                "lifebar": 2710
             }
         ],
         "tier": 2
@@ -21431,8 +22107,8 @@
                 "lifebar": 1191
             },
             {
-                "attack": 675,
-                "lifebar": 2144
+                "attack": 731,
+                "lifebar": 2322
             }
         ],
         "tier": 2
