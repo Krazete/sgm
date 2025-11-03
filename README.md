@@ -38,26 +38,34 @@ You can modify the tier, level, skill tree, and ability levels of the displayed 
 When the tier, level, skill tree, or Prestige Ability settings are changed, the attack, health, and Fighter Score values on each card are recalculated.
 The formulas used in these calculations are as follows:
 
-* `ATK_BOOST = {NO_ATK_NODES: 1, ALL_ATK_NODES: 1.5}`
-* `HP_BOOST = {NO_HP_NODES: 1, ALL_HP_NODES: 1.5}`
-* `TREE_BOOST = {NO_TREE_NODES: 1, ALL_TREE_NODES: 1.46, MAXED_MARQUEE: 1.57}`
-* `PA_BOOST_BONUS = {REACH_PA_LVL1: 9, REACH_PA_LVL100: 18}`
-* `PA_BOOST = (PA_LVL + PA_BOOST_BONUS) / 1000`
-* `FS_BOOST = TREE_BOOST + PA_BOOST`
-* `LVL1_ATK = ATK_BOOST * BASE_ATK`
-* `LVL1_HP = HP_BOOST * BASE_HP`
-* `ATK = CEIL(LVL1_ATK + LVL1_ATK * (LVL - 1) / 5)`
-* `HP = CEIL(LVL1_HP + LVL1_HP * (LVL - 1) / 5)`
-* `FS = CEIL(FS_BOOST * (ATK + HP / 6) * 7 / 10)`
-
-All `BASE_` values are hard-coded for every tier of every fighter, although they seem to follow the general pattern `BASE_ = ROUND(UNEVOLVED_BASE_ * 1.95 ^ EVOLUTIONS)`.
-(Before version 7.7.0, the multiplier was `1.8` instead of `1.95`.)
-
-Many variants have minor deviations in their `BASE_HP` or `BASE_ATK`, with their hard-coded values being 1 or 2 lower or higher than this calculation.
-The only variants to ever majorly deviate from this pattern were Headstrong and Understudy, who swapped stats when evolved to diamond tier before it was patched in version 4.3.3.
+* ATK:
+  * $Boost_{ATK} \in [0, 0.5]$
+  * $ATK(1) = ATK_{Base} \times \left( 1 + Boost_{ATK} \right)$
+  * $ATK(n) = \left\lceil ATK(1) \times \left( 1 + \frac{n - 1}{5} \right) \right\rceil$
+* HP:
+  * $Boost_{HP} \in [0, 0.5]$
+  * $HP(1) = HP_{Base} \times \left( 1 + Boost_{HP} \right)$
+  * $HP(n) = \left\lceil HP(1) \times \left( 1 + \frac{n - 1}{5} \right) \right\rceil$
+* FS:
+  * $Boost_{Tree} \in [0, 0.46]$
+  * $Boost_{MA} = \frac{MA}{100} ; MA \in [0, 11]$
+  * $Boost_{PA} = \frac{PA + PA_1 + PA_{100}}{1000} ; PA \in [0, 100] ; PA_m = \left\\{ {9 \text{ if } PA \ge m \atop 0 \text{ otherwise }} \right.$
+  * $Boost_{FS} = Boost_{Tree} + Boost_{MA} + Boost_{PA}$
+  * $FS(n) = \left\lceil \left( ATK(n) + \frac{HP(n)}{6} \right) \times \frac{7}{10} \times \left( 1 + Boost_{FS} \right) \right\rceil$
+* $Boost_{ATK}$, $Boost_{HP}$, and $Boost_{Tree}$ are determined by unlocked skill tree nodes.
+* $Boost_{MA}$ and $Boost_{PA}$ are determined by the Marquee Ability level and Prestige Ability level.
+* $ATK(n)$, $HP(n)$, and $FS(n)$ is the stat value when the fighter is level $n$.
+* $ATK_{Base}$ and $HP_{Base}$ are hard-coded for every tier of every fighter, although they follow the pattern:
+  * $Stat_{Base}(v) = \text{round} \left( Stat_{Base} \left( v - 1 \right) \times 1.95 \right)$
+  * $v$ is the number of times the fighter was evolved and $Stat_{Base}(0)$ is known.
+  * Rounding is done with the round-half-to-even method.
+  * Before version 7.7.0, the more accurate equation was $Stat_{Base}(v) = \text{round} \left( Stat_{Base}(0) \times 1.8 ^ v \right)$.
+    * Rounding was only done once, and the rounding method didn't matter.
+    * Before version 4.3.3, Headstrong and Understudy had swapped stats when evolved to diamond tier.
+  * For more info and analysis regarding base stats, see my [SGM Evolution Scaling Analysis](https://docs.google.com/spreadsheets/d/1vrwR6ta8gHr1ldXVXqIljYSAq3mnwhdS1uQ6OTcJVzo) spreadsheet.
 
 While I cannot confirm if the game uses these same formulas, the results appear to exactly match the stats of fighters that I have on my own account.
-See my [SGM Fighter Score Analysis](https://docs.google.com/spreadsheets/d/1CotgKsKzSIA5siRAMplX7e5k7KRT63a3GSY1XRg-hgc/edit?usp=sharing) spreadsheet for more detailed information.
+See my [SGM Fighter Score Analysis](https://docs.google.com/spreadsheets/d/1CotgKsKzSIA5siRAMplX7e5k7KRT63a3GSY1XRg-hgc) spreadsheet for more detailed information.
 
 The [Skullgirls Mobile Fighter Data](https://docs.google.com/spreadsheets/d/1goYXai7QUu4IJp76POP1IWyc2_6fEqEmxt9e74qyIgw) spreadsheet, [created by Raidriar and currently maintained by Takio](https://forum.skullgirlsmobile.com/threads/calculated-fighter-stats.392/), is the origin of the initial version of these formulas.
 I then modified them until the results perfectly matched in-game stats.
