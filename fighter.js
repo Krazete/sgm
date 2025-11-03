@@ -1680,7 +1680,7 @@ function felExport() {
     };
     for (var vid in variants) {
         var variant = variants[vid];
-        var id = corpus[variant.name].replace(/\W+/g, "").toLowerCase();
+        var id = variant.fandom.replace(/\W+/g, "").toLowerCase();
         var value = {
             "name": corpus[variant.name],
             "rarity": tiers[variant.tier],
