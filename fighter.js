@@ -1166,7 +1166,7 @@ function initOptionsMenu() {
             var j = Math.max(evolveRange.value, variants[key].tier);
             var atk = Math.ceil(baseATK * (parseInt(levelTiers[j].value) + 4) / 50);
             var hp = Math.ceil(baseHP * (parseInt(levelTiers[j].value) + 4) / 50);
-            var fs = Math.ceil(fsBoost * (6 * atk + hp) * 7 / 60000);
+            var fs = Math.ceil(Math.round(fsBoost * (6 * atk + hp) * 7 / 6) / 10000);
 
             atkValue.dataset.value = atk;
             hpValue.dataset.value = hp;
