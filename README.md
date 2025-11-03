@@ -39,8 +39,9 @@ When the tier, level, skill tree, or Prestige Ability settings are changed, the 
 The formulas used in these calculations are as follows:
 
 <details>
-  <summary>If you cannot view the LaTeX below, click here to view it in plaintext.</summary>
+<summary>If you cannot view the LaTeX below, click here to view it in plaintext.</summary>
 
+----
 * ATK:
   * `ATK_BOOST = {NO +ATK% NODES: 0, ALL +ATK% NODES: 0.5}`
   * `ATK_LVL_1 = BASE_ATK * (1 + ATK_BOOST)`
@@ -66,6 +67,7 @@ The formulas used in these calculations are as follows:
     * Rounding was only done once, and the rounding method didn't matter.
     * Before version 4.3.3, Headstrong and Understudy had swapped stats when evolved to diamond tier.
   * For more info and analysis regarding base stats, see my [SGM Evolution Scaling Analysis](https://docs.google.com/spreadsheets/d/1vrwR6ta8gHr1ldXVXqIljYSAq3mnwhdS1uQ6OTcJVzo) spreadsheet.
+----
 </details>
 
 * ATK:
