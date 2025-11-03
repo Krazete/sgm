@@ -1166,7 +1166,7 @@ function initOptionsMenu() {
             var j = Math.max(evolveRange.value, variants[key].tier);
             var atk = Math.ceil(baseATK * (parseInt(levelTiers[j].value) + 4) / 50);
             var hp = Math.ceil(baseHP * (parseInt(levelTiers[j].value) + 4) / 50);
-            var fs = Math.ceil(fsBoost * (6 * atk + hp) * 7 / 60000);
+            var fs = Math.ceil(Math.round((6 * atk + hp) * 700 / 6) * fsBoost / 1000000);
 
             atkValue.dataset.value = atk;
             hpValue.dataset.value = hp;
@@ -1628,7 +1628,7 @@ function felExport() {
 
         var atk = Math.ceil(baseATK * 64 / 50);
         var hp = Math.ceil(baseHP * 64 / 50);
-        var fs = Math.ceil(fsBoost * (6 * atk + hp) * 7 / 60000);
+        var fs = Math.ceil(Math.round((6 * atk + hp) * 700 / 6) * fsBoost / 1000000);
 
         return {
             "atk": stats[0].attack.toLocaleString("en-US"),
