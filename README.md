@@ -38,6 +38,36 @@ You can modify the tier, level, skill tree, and ability levels of the displayed 
 When the tier, level, skill tree, or Prestige Ability settings are changed, the attack, health, and Fighter Score values on each card are recalculated.
 The formulas used in these calculations are as follows:
 
+<details>
+  <summary>If you cannot view the LaTeX below, click here to view it in plaintext.</summary>
+
+* ATK:
+  * `ATK_BOOST = {NO +ATK% NODES: 0, ALL +ATK% NODES: 0.5}`
+  * `ATK_LVL_1 = BASE_ATK * (1 + ATK_BOOST)`
+  * `ATK_LVL_N = CEIL(ATK_LVL_1 * (1 + (N - 1) / 5))`
+* HP:
+  * `HP_BOOST = {NO +HP% NODES: 0, ALL +HP% NODES: 0.5}`
+  * `HP_LVL_1 = BASE_HP * (1 + HP_BOOST)`
+  * `HP_LVL_N = CEIL(HP_LVL_1 * (1 + (N - 1) / 5))`
+* FS:
+  * `TREE_BOOST = {NO SKILL TREE NODES: 0, ALL SKILL TREE NODES: 0.46}`
+  * `MA_BOOST = MA / 100`
+  * `PA_BOOST = (PA + (9 if PA > 0 else 0) + (9 if PA > 99 else 0)) / 1000`
+  * `FS_BOOST = TREE_BOOST + MA_BOOST + PA_BOOST`
+  * `FS_LVL_N = CEIL(((ATK_LVL_N + HP_LVL_N / 6) * 7 / 10) * (1 + FS_BOOST))`
+* `ATK_BOOST`, `HP_BOOST`, and `TREE_BOOST` are determined by unlocked skill tree nodes.
+* `MA_BOOST` and `PA_BOOST` are determined by the Marquee Ability level and Prestige Ability level.
+* `ATK_LVL_N`, `HP_LVL_N`, and `FS_LVL_N` is the stat value when the fighter is level `N`.
+* `BASE_ATK` and `BASE_HP` are hard-coded for every tier of every fighter, although they follow the pattern:
+  * `BASE_STAT(V) = ROUND(BASE_STAT(V - 1) * 1.95)`
+  * `V` is the number of times the fighter was evolved and `BASE_STAT(0)` is known.
+  * Rounding is done with the round-half-to-even method.
+  * Before version 7.7.0, the more accurate equation was `BASE_STAT(V) = ROUND(BASE_STAT(0) * 1.8 ^ V)`.
+    * Rounding was only done once, and the rounding method didn't matter.
+    * Before version 4.3.3, Headstrong and Understudy had swapped stats when evolved to diamond tier.
+  * For more info and analysis regarding base stats, see my [SGM Evolution Scaling Analysis](https://docs.google.com/spreadsheets/d/1vrwR6ta8gHr1ldXVXqIljYSAq3mnwhdS1uQ6OTcJVzo) spreadsheet.
+</details>
+
 * ATK:
   * $Boost_{ATK} \in [0, 0.5]$
   * $ATK(1) = ATK_{Base} \times \left( 1 + Boost_{ATK} \right)$
