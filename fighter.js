@@ -1160,13 +1160,13 @@ function initOptionsMenu() {
             var fsValue = card.getElementsByClassName("fs-value")[0];
 
             var i = Math.max(0, evolveRange.value - variants[key].tier);
-            var baseATK = baseBoost * variants[key].stats[i].attack;
-            var baseHP = baseBoost * variants[key].stats[i].lifebar;
+            var baseATK = variants[key].stats[i].attack * baseBoost;
+            var baseHP = variants[key].stats[i].lifebar * baseBoost;
 
             var j = Math.max(evolveRange.value, variants[key].tier);
             var atk = Math.ceil(baseATK * (parseInt(levelTiers[j].value) + 4) / 50);
             var hp = Math.ceil(baseHP * (parseInt(levelTiers[j].value) + 4) / 50);
-            var fs = Math.ceil(Math.round(fsBoost * (6 * atk + hp) * 7 / 60) / 1000);
+            var fs = Math.ceil(Math.round((6 * atk + hp) * 7 / 60) * fsBoost / 1000);
 
             atkValue.dataset.value = atk;
             hpValue.dataset.value = hp;
@@ -1620,19 +1620,15 @@ function felExport() {
 
     function felStats(stats) { /* unused */
         var baseBoost = 15;
-
-        var treeBoost = 1460;
-        var maBoost = 110;
-        var paBoost = 118;
-        var fsBoost = treeBoost + maBoost + paBoost;
+        var fsBoost = 1688;
         
         var i = stats.length - 1;
-        var baseATK = baseBoost * stats[i].attack;
-        var baseHP = baseBoost * stats[i].lifebar;
+        var baseATK = stats[i].attack * baseBoost;
+        var baseHP = stats[i].lifebar * baseBoost;
 
         var atk = Math.ceil(baseATK * 64 / 50);
         var hp = Math.ceil(baseHP * 64 / 50);
-        var fs = Math.ceil(fsBoost * (6 * atk + hp) * 7 / 60000);
+        var fs = Math.ceil(Math.round((6 * atk + hp) * 7 / 60) * fsBoost / 1000);
 
         return {
             "atk": stats[0].attack.toLocaleString("en-US"),
