@@ -1179,13 +1179,13 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     width: 50%;
     height: 50%;
     background: linear-gradient(155deg,
-        hotpink 9%,
+        skyblue 9%,
         beige 11% 19%,
-        skyblue 21% 29%,
+        orange 21% 29%,
         beige 31% 39%,
-        hotpink 41% 49%,
+        skyblue 41% 49%,
         beige 51% 59%,
-        skyblue 61% 69%,
+        orange 61% 69%,
         beige 71%
     );
     font-size: 50px;
