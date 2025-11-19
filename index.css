@@ -2200,13 +2200,13 @@ body.guilddebut:after {
 }
 
 body.guilddebut:before {
-    content: '\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\ATo celebrate the game\'s new main menu, this website now has horizontal scrolling!\A\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69';
+    content: 'To celebrate the game\'s new main menu, this website now has horizontal scrolling!';
     left: 0;
     background-image: url(image/what.gif);
 }
 
 body.guilddebut:after {
-    content: '\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\AI\'ll remove this in a week.\A\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69';
+    content: 'I\'ll remove this in a week.';
     left: calc(100% - 300px);
     background-image: url(image/huh.gif);
 }
