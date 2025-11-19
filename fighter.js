@@ -1188,8 +1188,14 @@ function initOptionsMenu() {
             for (var i = 0; i < saDescriptions.length; i++) {
                 var saDescription = saDescriptions[i];
                 var template = corpus[variants[key].sa.features[i].description];
-                var substitutions = variants[key].sa.features[i].tiers[saRange.value - 1].values;
-                saDescription.innerHTML = format(template, substitutions);
+                for (var j = saRange.value - 1; j >= 0; j--) {
+                    var tier = variants[key].sa.features[i].tiers[j];
+                    if (tier && "values" in tier) {
+                        var substitutions = tier.values;
+                        saDescription.innerHTML = format(template, substitutions);
+                        break;
+                    }
+                }
             }
         }
     }
@@ -1723,7 +1729,14 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
+            var guildnotes = "https://hub.skullgirlsmobile.com/updates/game-update-80-patch-notes-an-undying-alliance-guilds-launch-and-shards-of-undying-launch-1118";
+            var patchnotes = "https://hub.skullgirlsmobile.com/news/game-update-77-patch-notes-the-table-is-set-%E2%80%9Ca-fools-feast%E2%80%9D-november-backstage-pass";
             var vids = [
+                { /* raid */
+                    bBaddy: "",
+                    elizaRaidBoss: "",
+                    goku: "",
+                },
                 { /* new */
                     aTach: "Superluminal Valentine,-Stats",
                     teto: "Idol Echo Fukua,-Stats",
@@ -1740,14 +1753,14 @@ function initialize() {
             ];
 
             function addLabel(id, type) {
-                var text = ["NEW", "CHANGED"][type];
-                var element = document.getElementById(id).getElementsByClassName(["frame", "sa"][type])[0];
+                var text = ["GUILDS", "NEW", "CHANGED"][type];
+                var element = document.getElementById(id).getElementsByClassName(["frame", "frame", "sa"][type])[0];
                 var textFragment = "#:~:text=" + encodeURI(vids[type][id]).replace(/,/g, "%2C").replace(/-/g, "%2D").replace(/%2C%2D/g, ",-");
                 var label = document.createElement("a");
                 label.className = "label";
                 label.innerHTML = text;
                 label.target = "_blank";
-                label.href = "https://hub.skullgirlsmobile.com/news/game-update-77-patch-notes-the-table-is-set-%E2%80%9Ca-fools-feast%E2%80%9D-november-backstage-pass" + textFragment;
+                label.href = text == "GUILDS" ? guildnotes : (patchnotes + textFragment);
                 element.appendChild(label);
             }
 
@@ -1759,7 +1772,7 @@ function initialize() {
                 }
             }
     }).then(toggleLoadingScreen);
-    window.scrollTo(250, 0);
+    window.scrollTo(275, 0);
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
