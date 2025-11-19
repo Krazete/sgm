@@ -1759,6 +1759,7 @@ function initialize() {
                 }
             }
     }).then(toggleLoadingScreen);
+    window.scrollTo(250, 0);
 }
 
 document.addEventListener("DOMContentLoaded", initialize);

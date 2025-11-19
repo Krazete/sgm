@@ -2177,3 +2177,36 @@ html[lang='pt-br'] .fighter.card .pa .ability-type:before, html[lang='pt-br'] .p
         transform: translate(-100%);
     }
 }
+
+body.guilddebut {
+    padding: 0 300px;
+}
+
+body.guilddebut:before,
+body.guilddebut:after {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-size: 300px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 100px;
+    text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black, 0 0 25px black, 0 0 30px black;
+    padding: 100px 0;
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+body.guilddebut:before {
+    content: '\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\ATo celebrate the game\'s new main menu, this website now has horizontal scrolling!\A\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69';
+    left: 0;
+    background-image: url(image/what.gif);
+}
+
+body.guilddebut:after {
+    content: '\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\AI\'ll remove this in a week.\A\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69\fe69';
+    left: calc(100% - 300px);
+    background-image: url(image/huh.gif);
+}
