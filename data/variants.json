@@ -732,6 +732,98 @@
         ],
         "tier": 2
     },
+    "bBaddy": {
+        "base": "bb",
+        "element": 2,
+        "fandom": "Big Baddy",
+        "name": "Char_BigBand_G_V6_Name",
+        "quote": "Variant_Description_BigBand_BigBaddy",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BigBand_SA_BurlyBouncer_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                35.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BigBand_SA_BurlyBouncer_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                2,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                5.0,
+                                2,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0,
+                                2,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BigBand_SA_BurlyBouncer_Title"
+        },
+        "stats": [
+            {
+                "attack": 218,
+                "lifebar": 2426
+            },
+            {
+                "attack": 425,
+                "lifebar": 4731
+            }
+        ],
+        "tier": 2
+    },
     "bBandit": {
         "base": "bb",
         "element": 4,
@@ -5368,6 +5460,245 @@
         ],
         "tier": 3
     },
+    "elizaRaidBoss": {
+        "base": "el",
+        "element": 3,
+        "fandom": "Doomsayer",
+        "name": "Char_Eliza_RaidBoss_Name",
+        "quote": "Variant_Description_Eliza_RaidBoss",
+        "sa": {
+            "features": [
+                {
+                    "description": "SA_Eliza_Doom_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 5,
+                            "values": [
+                                4.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Eliza_Doom_Desc3",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                10.0,
+                                10.0,
+                                1,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                10.0,
+                                10.0,
+                                2,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                10.0,
+                                10.0,
+                                3,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                3,
+                                10.0,
+                                10.0,
+                                3,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Eliza_Doom_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                30.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                30.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                30.0,
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Eliza_Doom_Desc4",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                6.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Eliza_Doom_Desc5",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                2
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 4,
+                            "values": []
+                        },
+                        {
+                            "level": 5,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 4,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Eliza_SA_RaidBoss_Title"
+        },
+        "stats": [
+            {
+                "attack": 600,
+                "lifebar": 13021
+            }
+        ],
+        "tier": 3
+    },
     "fCookie": {
         "base": "mf",
         "element": 4,
@@ -7497,6 +7828,320 @@
             }
         ],
         "tier": 1
+    },
+    "goku": {
+        "base": "ma",
+        "element": 5,
+        "fandom": "Undying Warrior",
+        "name": "Char_Marie_RaidBoss_Name",
+        "quote": "Variant_Description_Marie_HeartlessSeeker",
+        "sa": {
+            "features": [
+                {
+                    "description": "SA_Marie_RaidBoss_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.4,
+                                7.0,
+                                5,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.4,
+                                10.0,
+                                5,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.4,
+                                13.0,
+                                5,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                0.4,
+                                16.0,
+                                5,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 5,
+                            "values": [
+                                0.4,
+                                20.0,
+                                5,
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Marie_RaidBoss_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                20.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                30.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                40.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                50.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Marie_RaidBoss_Desc3",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Marie_RaidBoss_Desc4",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Marie_RaidBoss_Desc5",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0,
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 4,
+                            "values": []
+                        },
+                        {
+                            "level": 5,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 4,
+                            "values": []
+                        },
+                        {
+                            "level": 5,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 4,
+                            "values": []
+                        },
+                        {
+                            "level": 5,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 4,
+                            "values": []
+                        },
+                        {
+                            "level": 5,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_RaidBoss_Title"
+        },
+        "stats": [
+            {
+                "attack": 700,
+                "lifebar": 13021
+            }
+        ],
+        "tier": 3
     },
     "goldG": {
         "base": "bd",
@@ -17869,7 +18514,7 @@
                         {
                             "level": 2,
                             "values": [
-                                10.0,
+                                15.0,
                                 4.0,
                                 9.0
                             ]
@@ -17877,7 +18522,7 @@
                         {
                             "level": 3,
                             "values": [
-                                12.0,
+                                20.0,
                                 4.0,
                                 10.0
                             ]
@@ -20091,6 +20736,15 @@
                                 10.0,
                                 10
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
                         }
                     ]
                 },
