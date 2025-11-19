@@ -1731,13 +1731,21 @@ function initialize() {
             */
             var guildnotes = "https://hub.skullgirlsmobile.com/updates/game-update-80-patch-notes-an-undying-alliance-guilds-launch-and-shards-of-undying-launch-1118";
             var patchnotes = "https://hub.skullgirlsmobile.com/news/game-update-77-patch-notes-the-table-is-set-%E2%80%9Ca-fools-feast%E2%80%9D-november-backstage-pass";
-            var vids = [
-                { /* raid */
-                    bBaddy: "",
-                    elizaRaidBoss: "",
+            var vids = {
+                guilds: {
+                    _url: guildnotes,
+                    _class: "frame",
+                    bBaddy: "Big Baddy Big Band",
+                    elizaRaidBoss: "Raid Boss",
+                },
+                "guilds?": {
+                    _url: guildnotes,
+                    _class: "frame",
                     goku: "",
                 },
-                { /* new */
+                new: {
+                    _url: patchnotes,
+                    _class: "frame",
                     aTach: "Superluminal Valentine,-Stats",
                     teto: "Idol Echo Fukua,-Stats",
                     mMercury: "Miss Mercury Annie,-Stats",
@@ -1747,28 +1755,34 @@ function initialize() {
                     eEcho: "Feared Faux Fukua,-Stats",
                     hFiend: "Hallow Fiend Valentine,-Stats",
                 },
-                { /* changed */
+                changed: {
+                    _url: patchnotes,
+                    _class: "sa",
                     // dProne: "Misc. Updates-,Danger-Prone",
                 }
-            ];
+            };
 
-            function addLabel(id, type) {
-                var text = ["GUILDS", "NEW", "CHANGED"][type];
-                var element = document.getElementById(id).getElementsByClassName(["frame", "frame", "sa"][type])[0];
-                var textFragment = "#:~:text=" + encodeURI(vids[type][id]).replace(/,/g, "%2C").replace(/-/g, "%2D").replace(/%2C%2D/g, ",-");
+            function addLabel(id, type, url, classname) {
+                var text = type.toUpperCase();
+                var element = document.getElementById(id).getElementsByClassName(classname)[0];
+                var textFragment = vids[type][id] == "" ? "" : (
+                    "#:~:text=" + encodeURI(vids[type][id]).replace(/,/g, "%2C").replace(/-/g, "%2D").replace(/%2C%2D/g, ",-")
+                );
                 var label = document.createElement("a");
                 label.className = "label";
                 label.innerHTML = text;
                 label.target = "_blank";
-                label.href = text == "GUILDS" ? guildnotes : (patchnotes + textFragment);
+                label.href = url + textFragment;
                 element.appendChild(label);
             }
 
             var j = 0;
-            for (var i in vids) {
-                for (var vid in vids[i]) {
-                    addLabel(vid, i);
-                    document.getElementById("collection").insertBefore(document.getElementById(vid), document.getElementsByClassName("card")[j++]);
+            for (var type in vids) {
+                for (var vid in vids[type]) {
+                    if (!vid.startsWith("_")) {
+                        addLabel(vid, type, vids[type]._url, vids[type]._class);
+                        document.getElementById("collection").insertBefore(document.getElementById(vid), document.getElementsByClassName("card")[j++]);
+                    }
                 }
             }
     }).then(toggleLoadingScreen);
