@@ -1602,6 +1602,9 @@ function felExport() {
                 var index = parseInt(match.replace(/{\s*(\d+)(?::\d+)?%?\s*}%?/, "$1"));
                 var subs = [];
                 for (var i = 0; i < 3; i++) {
+                    if (i >= feature.tiers.length) { /* raid bosses */
+                        break;
+                    }
                     var subi = Math.abs(feature.tiers[i].values[index]);
                     if (match.includes("%}")) {
                         subi *= 100;
@@ -1674,14 +1677,14 @@ function felExport() {
             "element": "fire",
             "character": "<:sp_an:767922687204524032> Annie",
             "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/hSync.png",
-            "ability": "SEARING STARS",
-            "SA1": "Gain ENRAGE for 10/12/15 seconds when using a SPECIAL MOVE or BLOCKBUSTER while in STAR POWER mode.",
-            "SA2": "CHARGE ATTACKS consume all stacks of ENRAGE, inflicting STUN and HEAVY BLEED for 1/1.5/2 second(s) per stack consumed.",
             "stats": {
                 "atk": "706",
                 "hp": "3335",
                 "fs": "884"
-            }
+            },
+            "ability": "SEARING STARS",
+            "SA1": "Gain ENRAGE for 10/12/15 seconds when using a SPECIAL MOVE or BLOCKBUSTER while in STAR POWER mode.",
+            "SA2": "CHARGE ATTACKS consume all stacks of ENRAGE, inflicting STUN and HEAVY BLEED for 1/1.5/2 second(s) per stack consumed."
         }
     };
     for (var vid in variants) {
@@ -1693,15 +1696,21 @@ function felExport() {
             "element": elements[variant.element].replace(/wind/g, "air"),
             "character": emojiID[variant.base] + " " + corpus[fighters[variant.base].name],
             "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/" + variant.base + "/" + vid + ".png",
-            "ability": corpus[variant.sa.title],
-            "SA1": felFormat(variant.sa.features[0]),
-            "SA2": felFormat(variant.sa.features[1]),
             "stats": {
                 "atk": variant.stats[0].attack.toString(),
                 "hp": variant.stats[0].lifebar.toString(),
                 "fs": Math.ceil((6 * variant.stats[0].attack + variant.stats[0].lifebar) * 7 / 60).toString()
-            }
+            },
+            "ability": corpus[variant.sa.title],
+            "SA1": felFormat(variant.sa.features[0]),
+            "SA2": felFormat(variant.sa.features[1])
         };
+        for (var i = 2; i < variant.sa.features.length; i++) { /* raid bosses */
+            var feature = variant.sa.features[i];
+            if (feature.description) {
+                value["SA" + (i + 1)] = felFormat(feature);
+            }
+        }
         fel[id] = value;
     }
 
