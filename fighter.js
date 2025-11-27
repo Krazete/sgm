@@ -1795,7 +1795,6 @@ function initialize() {
                 }
             }
     }).then(toggleLoadingScreen);
-    window.scrollTo(275, 0);
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
