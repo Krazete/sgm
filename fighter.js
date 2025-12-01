@@ -1739,8 +1739,19 @@ function initialize() {
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
             var guildnotes = "https://hub.skullgirlsmobile.com/updates/game-update-80-patch-notes-an-undying-alliance-guilds-launch-and-shards-of-undying-launch-1118";
-            var patchnotes = "https://hub.skullgirlsmobile.com/news/game-update-77-patch-notes-the-table-is-set-%E2%80%9Ca-fools-feast%E2%80%9D-november-backstage-pass";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-81-patch-notes-thankful-relection-snowgrave-snowdown";
             var vids = {
+                new: {
+                    _url: patchnotes,
+                    _class: "frame",
+                    mCurl: "Magicurl Filia,-Stats",
+                    sBound: "Soulbound Annie,-Stats",
+                },
+                changed: {
+                    _url: patchnotes,
+                    _class: "sa",
+                    // dProne: "Misc. Updates-,Danger-Prone",
+                },
                 guilds: {
                     _url: guildnotes,
                     _class: "frame",
@@ -1751,23 +1762,6 @@ function initialize() {
                     _url: guildnotes,
                     _class: "frame",
                     goku: "",
-                },
-                new: {
-                    _url: patchnotes,
-                    _class: "frame",
-                    aTach: "Superluminal Valentine,-Stats",
-                    teto: "Idol Echo Fukua,-Stats",
-                    mMercury: "Miss Mercury Annie,-Stats",
-                    goliath: "Stone Sentinel Cerebella,-Stats",
-                    sSin: "Serpent Sin Double,-Stats",
-                    nShade: "Nightshade Eliza,-Stats",
-                    eEcho: "Feared Faux Fukua,-Stats",
-                    hFiend: "Hallow Fiend Valentine,-Stats",
-                },
-                changed: {
-                    _url: patchnotes,
-                    _class: "sa",
-                    // dProne: "Misc. Updates-,Danger-Prone",
                 }
             };
 

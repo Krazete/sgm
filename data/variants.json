@@ -11229,6 +11229,107 @@
         ],
         "tier": 2
     },
+    "mCurl": {
+        "base": "fi",
+        "element": 0,
+        "fandom": "Magicurl",
+        "name": "Char_Filia_G_V6_Name",
+        "quote": "Variant_Description_Filia_MagicalCurl",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Filia_SA_MiracleOfSacrifice_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                3.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                4.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                5.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Filia_SA_MiracleOfSacrifice_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                5.0,
+                                0.25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                5.0,
+                                0.30000001192092896,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                5.0,
+                                0.3499999940395355,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Filia_SA_MiracleOfSacrifice_Title"
+        },
+        "stats": [
+            {
+                "attack": 336,
+                "lifebar": 1390
+            },
+            {
+                "attack": 655,
+                "lifebar": 2710
+            }
+        ],
+        "tier": 2
+    },
     "mDear": {
         "base": "el",
         "element": 5,
@@ -17211,6 +17312,117 @@
         "stats": [
             {
                 "attack": 788,
+                "lifebar": 3335
+            }
+        ],
+        "tier": 3
+    },
+    "sBound": {
+        "base": "an",
+        "element": 5,
+        "fandom": "Soulbound",
+        "name": "Char_Annie_D_V5_Name",
+        "quote": "Variant_Description_Annie_Kris",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Annie_SA_SoulSplit_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                30.0,
+                                1,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                40.0,
+                                2,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                50.0,
+                                3,
+                                3.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Annie_SA_SoulSplit_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                35.0,
+                                10.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                35.0,
+                                12.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                35.0,
+                                15.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Annie_SA_SoulSplit_Title"
+        },
+        "stats": [
+            {
+                "attack": 706,
                 "lifebar": 3335
             }
         ],
