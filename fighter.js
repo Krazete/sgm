@@ -1333,10 +1333,16 @@ function initOptionsMenu() {
         else {
             input.value = Math.max(input.min, Math.min(value, input.max));
         }
-        if (input.value == input.max) {
+        if (input.id == "sa-number" && input.value > 3) {
+            input.classList.remove("maxed");
+            input.classList.add("overmaxed");
+        }
+        else if (input.value == input.max || input.id == "sa-number" && input.value == 3) {
+            input.classList.remove("overmaxed");
             input.classList.add("maxed");
         }
         else {
+            input.classList.remove("overmaxed");
             input.classList.remove("maxed");
         }
     }

@@ -588,6 +588,9 @@ html[lang='pt-br'] #level-label:before {content: 'N\00ed vel';}
     box-shadow: 0 0 6px 1px white;
 }
 
+#footer input[type='text'].overmaxed {
+    color: orangered;
+}
 #footer input[type='text'].maxed {
     color: skyblue;
 }
