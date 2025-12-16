@@ -7843,46 +7843,36 @@
                         {
                             "level": 1,
                             "values": [
-                                0.4,
-                                7.0,
-                                5,
-                                20.0
+                                40.0,
+                                null
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.4,
-                                10.0,
-                                5,
-                                20.0
+                                80.0,
+                                null
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.4,
-                                13.0,
-                                5,
-                                20.0
+                                120.0,
+                                null
                             ]
                         },
                         {
                             "level": 4,
                             "values": [
-                                0.4,
-                                16.0,
-                                5,
-                                20.0
+                                160.0,
+                                null
                             ]
                         },
                         {
                             "level": 5,
                             "values": [
-                                0.4,
-                                20.0,
-                                5,
-                                20.0
+                                200.0,
+                                null
                             ]
                         }
                     ]
@@ -7893,29 +7883,8 @@
                         {
                             "level": 1,
                             "values": [
-                                20.0,
-                                15.0
-                            ]
-                        },
-                        {
-                            "level": 2,
-                            "values": [
-                                30.0,
-                                15.0
-                            ]
-                        },
-                        {
-                            "level": 3,
-                            "values": [
-                                40.0,
-                                15.0
-                            ]
-                        },
-                        {
-                            "level": 4,
-                            "values": [
-                                50.0,
-                                15.0
+                                10.0,
+                                10.0
                             ]
                         }
                     ]
@@ -7927,21 +7896,36 @@
                             "level": 1,
                             "values": [
                                 3,
-                                10.0
+                                10.0,
+                                100.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 3,
-                                15.0
+                                15.0,
+                                100.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 3,
-                                20.0
+                                20.0,
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_Marie_RaidBoss_Desc5",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0,
+                                5.0
                             ]
                         }
                     ]
@@ -7964,18 +7948,6 @@
                     ]
                 },
                 {
-                    "description": "SA_Marie_RaidBoss_Desc5",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": [
-                                1.0,
-                                5.0
-                            ]
-                        }
-                    ]
-                },
-                {
                     "description": "",
                     "tiers": [
                         {
@@ -7992,19 +7964,6 @@
                         },
                         {
                             "level": 4,
-                            "values": []
-                        },
-                        {
-                            "level": 5,
-                            "values": []
-                        }
-                    ]
-                },
-                {
-                    "description": "",
-                    "tiers": [
-                        {
-                            "level": 1,
                             "values": []
                         }
                     ]
@@ -8061,22 +8020,6 @@
                         {
                             "level": 1,
                             "values": []
-                        },
-                        {
-                            "level": 2,
-                            "values": []
-                        },
-                        {
-                            "level": 3,
-                            "values": []
-                        },
-                        {
-                            "level": 4,
-                            "values": []
-                        },
-                        {
-                            "level": 5,
-                            "values": []
                         }
                     ]
                 },
@@ -8103,10 +8046,6 @@
                         {
                             "level": 1,
                             "values": []
-                        },
-                        {
-                            "level": 2,
-                            "values": []
                         }
                     ]
                 },
@@ -8128,6 +8067,10 @@
                     "tiers": [
                         {
                             "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
                             "values": []
                         }
                     ]
@@ -8137,7 +8080,7 @@
         },
         "stats": [
             {
-                "attack": 700,
+                "attack": 600,
                 "lifebar": 13021
             }
         ],
