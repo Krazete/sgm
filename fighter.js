@@ -1757,10 +1757,6 @@ function initialize() {
                     _class: "frame",
                     bBaddy: "Big Baddy Big Band",
                     elizaRaidBoss: "Raid Boss",
-                },
-                "guilds?": {
-                    _url: guildnotes,
-                    _class: "frame",
                     goku: "",
                 }
             };
