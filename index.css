@@ -1285,8 +1285,8 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     box-shadow: 0 1px 1px 1px black;
     padding: 2px;
 }
-.ja .nameplate,
-.ru .nameplate {
+html[lang='ja'] .nameplate,
+html[lang='ru'] .nameplate {
     width: unset;
 }
 
