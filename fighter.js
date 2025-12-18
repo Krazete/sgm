@@ -1607,10 +1607,7 @@ function felExport() {
             for (var match of matches) {
                 var index = parseInt(match.replace(/{\s*(\d+)(?::\d+)?%?\s*}%?/, "$1"));
                 var subs = [];
-                for (var i = 0; i < 3; i++) {
-                    if (i >= feature.tiers.length) { /* raid bosses */
-                        break;
-                    }
+                for (var i = 0; i < feature.tiers.length; i++) {
                     var subi = Math.abs(feature.tiers[i].values[index]);
                     if (match.includes("%}")) {
                         subi *= 100;
