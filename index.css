@@ -1035,8 +1035,7 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     display: grid;
 }
 
-.ability.sa .label,
-.frame .label {
+.patch {
     position: absolute;
     top: 3px;
     right: 0;

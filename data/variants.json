@@ -1058,8 +1058,8 @@
         },
         "stats": [
             {
-                "attack": 706,
-                "lifebar": 3335
+                "attack": 613,
+                "lifebar": 3704
             }
         ],
         "tier": 3
@@ -4622,6 +4622,77 @@
         ],
         "tier": 1
     },
+    "dLocked": {
+        "base": "bd",
+        "element": 3,
+        "fandom": "Locked 'N' Loaded",
+        "name": "Char_BlackDahlia_D_V4_Name",
+        "quote": "Variant_Description_BlackDahlia_HexCaliber",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BlackDahlia_SA_SoulDrain_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3.0,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3.0,
+                                8.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BlackDahlia_SA_SoulDrain_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BlackDahlia_SA_SoulDrain_Title"
+        },
+        "stats": [
+            {
+                "attack": 613,
+                "lifebar": 4169
+            }
+        ],
+        "tier": 3
+    },
     "dLocks": {
         "base": "fi",
         "element": 5,
@@ -5337,19 +5408,22 @@
                         {
                             "level": 1,
                             "values": [
-                                20
+                                20,
+                                8.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                15
+                                15,
+                                8.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                10
+                                10,
+                                8.0
                             ]
                         }
                     ]
@@ -6596,22 +6670,19 @@
                         {
                             "level": 1,
                             "values": [
-                                5.0,
-                                100.0
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                7.0,
-                                100.0
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                10.0,
-                                100.0
+                                10.0
                             ]
                         }
                     ]
@@ -8332,24 +8403,24 @@
                         {
                             "level": 1,
                             "values": [
-                                0.05000000074505806,
-                                50.0,
+                                0.10000000149011612,
+                                35.0,
                                 5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.07000000029802322,
-                                50.0,
+                                0.11999999731779099,
+                                35.0,
                                 5.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.10000000149011612,
-                                50.0,
+                                0.15000000596046448,
+                                35.0,
                                 5.0
                             ]
                         }
@@ -9092,20 +9163,20 @@
         },
         "stats": [
             {
-                "attack": 56,
-                "lifebar": 440
+                "attack": 66,
+                "lifebar": 400
             },
             {
-                "attack": 109,
-                "lifebar": 858
+                "attack": 129,
+                "lifebar": 780
             },
             {
-                "attack": 213,
-                "lifebar": 1673
+                "attack": 252,
+                "lifebar": 1521
             },
             {
-                "attack": 415,
-                "lifebar": 3262
+                "attack": 491,
+                "lifebar": 2966
             }
         ],
         "tier": 0
@@ -10520,6 +10591,23 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_Care_Title"
@@ -11358,22 +11446,22 @@
                         {
                             "level": 1,
                             "values": [
-                                0.10000000149011612,
-                                3.0
+                                0.20000000298023224,
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.10000000149011612,
-                                4.0
+                                0.20000000298023224,
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.10000000149011612,
-                                5.0
+                                0.20000000298023224,
+                                10.0
                             ]
                         }
                     ]
@@ -11913,21 +12001,24 @@
                             "level": 1,
                             "values": [
                                 25.0,
-                                10.0
+                                10.0,
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 50.0,
-                                10.0
+                                10.0,
+                                5.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 75.0,
-                                10.0
+                                10.0,
+                                5.0
                             ]
                         }
                     ]
@@ -13712,6 +13803,126 @@
             }
         ],
         "tier": 1
+    },
+    "oUp": {
+        "base": "bb",
+        "element": 0,
+        "fandom": "One Up",
+        "name": "Char_BigBand_G_V7_Name",
+        "quote": "Variant_Description_BigBand_G_V7",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_BigBand_G_8BitOverdrive_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_BigBand_G_8BitOverdrive_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_BigBand_G_8BitOverdrive_Title"
+        },
+        "stats": [
+            {
+                "attack": 256,
+                "lifebar": 2205
+            },
+            {
+                "attack": 499,
+                "lifebar": 4300
+            }
+        ],
+        "tier": 2
     },
     "pAssist": {
         "base": "rf",
@@ -22844,7 +23055,7 @@
         },
         "stats": [
             {
-                "attack": 538,
+                "attack": 685,
                 "lifebar": 4169
             }
         ],
@@ -22982,23 +23193,6 @@
                                 null,
                                 20.0
                             ]
-                        }
-                    ]
-                },
-                {
-                    "description": "",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": []
-                        },
-                        {
-                            "level": 2,
-                            "values": []
-                        },
-                        {
-                            "level": 3,
-                            "values": []
                         }
                     ]
                 },

@@ -583,7 +583,7 @@ function initLanguageMenu() {
         var paName = card.getElementsByClassName("pa-name")[0];
         variantName.innerHTML = corpus[variants[key].name];
         fighterName.innerHTML = corpus[fighters[variants[key].base].name];
-        quote.innerHTML = corpus[variants[key].quote].replace(/\s*\n\s*/, "<br>");
+        quote.innerHTML = (corpus[variants[key].quote] || " ").replace(/\s*\n\s*/, "<br>");
         caName.innerHTML = corpus[fighters[variants[key].base].ca.title];
         ca0.innerHTML = formatNumbers(corpus[fighters[variants[key].base].ca.description]);
         saName.innerHTML = corpus[variants[key].sa.title];
@@ -1741,27 +1741,51 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
+            var patchnotes = "https://hub.skullgirlsmobile.com/es/news/game-update-82-patch-notes-in-with-the-old-retro-reload-rumble";
             var guildnotes = "https://hub.skullgirlsmobile.com/updates/game-update-80-patch-notes-an-undying-alliance-guilds-launch-and-shards-of-undying-launch-1118";
-            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-81-patch-notes-thankful-relection-snowgrave-snowdown";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    mCurl: "Magicurl Filia,-Stats",
-                    sBound: "Soulbound Annie,-Stats",
+                    oUp: "One Up Big Band,-Element",
+                    dLocked: "Locked ‘N’ Loaded Black Dahlia,-Element",
                 },
                 changed: {
                     _url: patchnotes,
                     _class: "sa",
-                    // dProne: "Misc. Updates-,Danger-Prone",
+                    eSax: "Epic Sax Big Band:",
+                    fSoldier: "Foot Soldier Ms. Fortune:",
+                    dBand: "Dream Band Big Band:",
+                    mGirl: "Materia Girl Annie:",
+                    aGreed: "Assassin's Greed Valentine:",
+                    zeraora: "Proton Pulse:",
+                    mCorpse: "Octoplasm Marie:",
+                    mSonic: "Megasonic Big Band:",
+                    rStar: "Rock Star Filia:",
+                    hBelle: "Hell's Belle Fukua:",
+                    jKit: "Just Kitten:",
                 },
-                guilds: {
-                    _url: guildnotes,
-                    _class: "frame",
-                    bBaddy: "Big Baddy Big Band",
-                    elizaRaidBoss: "Raid Boss",
-                    goku: "",
+                "stats<br>changed": {
+                    _url: patchnotes,
+                    _class: "fs",
+                    hReign: "Heavy Reign Parasoul:",
+                    xBot: "X-Bot Robo-Fortune:",
+                    bBelle: "Locked In Parasoul:",
+                },
+                "bug fixed": {
+                    _url: patchnotes,
+                    _class: "sa",
+                    lHope: "Last Hope Valentine:",
+                    sShine: "Star Shine Annie:",
+                    model: "Model Leader Annie:",
                 }
+                // guilds: {
+                //     _url: guildnotes,
+                //     _class: "frame",
+                //     bBaddy: "Big Baddy Big Band",
+                //     elizaRaidBoss: "Raid Boss",
+                //     goku: "",
+                // },
             };
 
             function addLabel(id, type, url, classname) {
@@ -1771,7 +1795,7 @@ function initialize() {
                     "#:~:text=" + encodeURI(vids[type][id]).replace(/,/g, "%2C").replace(/-/g, "%2D").replace(/%2C%2D/g, ",-")
                 );
                 var label = document.createElement("a");
-                label.className = "label";
+                label.className = "patch";
                 label.innerHTML = text;
                 label.target = "_blank";
                 label.href = url + textFragment;
@@ -1782,8 +1806,10 @@ function initialize() {
             for (var type in vids) {
                 for (var vid in vids[type]) {
                     if (!vid.startsWith("_")) {
-                        addLabel(vid, type, vids[type]._url, vids[type]._class);
-                        document.getElementById("collection").insertBefore(document.getElementById(vid), document.getElementsByClassName("card")[j++]);
+                        try {
+                            addLabel(vid, type, vids[type]._url, vids[type]._class);
+                            document.getElementById("collection").insertBefore(document.getElementById(vid), document.getElementsByClassName("card")[j++]);
+                        } catch (e) {}
                     }
                 }
             }
