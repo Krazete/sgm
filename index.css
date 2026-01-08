@@ -1071,6 +1071,18 @@ html[lang='pt-br'] .error #loading:after {content: 'ERRO';}
     margin: 10px auto 0 auto;
 }
 
+.avatar.insufficient {
+    opacity: 0.5;
+}
+.avatar.insufficient:after {
+    content: attr(data-count);
+    background: #f008;
+    font-size: small;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 .frame {
     position: relative;
     width: 85px;

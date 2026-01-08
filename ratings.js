@@ -177,6 +177,12 @@ function setRatings(subkey) {
                 var row = document.getElementsByClassName(variants[key].base)[0];
                 var cell = row.cells[grade + 1];
                 var avatar = createAvatar(key);
+                var count = variants[key][subkey].count || 0;
+                if (count < 25) {
+                    avatar.dataset.count = count + " vote" + (count == 1 ? "" : "s");
+                    avatar.classList.add("insufficient");
+                    avatar.style.opacity = 0.5 + count / 50;
+                }
                 cell.appendChild(avatar);
             }
         }
