@@ -640,7 +640,8 @@ function initDock() {
     var sortOffense = document.getElementById("sort-offense");
     var sortDefense = document.getElementById("sort-defense");
 
-    var savedStar = localStorage.getItem("star") || "off";
+    /* set default to "off" to stay within quota */
+    var savedStar = localStorage.getItem("star") || "on";
 
     function getScrollRatio() {
         var scrollHeight = document.documentElement.scrollHeight - innerHeight;
@@ -796,11 +797,10 @@ function initDock() {
 
     ratings.addEventListener("click", toggleRatings);
 
-    /* auto-toggle disabled to stay within quota
+    /* disable this auto-toggle to stay within quota */
     if (savedStar == "on") {
         ratings.click();
     }
-    */
 }
 
 function initFilterMenu() {
