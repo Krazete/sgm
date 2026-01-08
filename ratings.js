@@ -178,10 +178,10 @@ function setRatings(subkey) {
                 var cell = row.cells[grade + 1];
                 var avatar = createAvatar(key);
                 var count = variants[key][subkey].count || 0;
-                if (count < 25) {
+                if (count < 20) {
                     avatar.dataset.count = count + " vote" + (count == 1 ? "" : "s");
                     avatar.classList.add("insufficient");
-                    avatar.style.opacity = 0.5 + count / 50;
+                    avatar.style.opacity = 0.5 + count / 40;
                 }
                 cell.appendChild(avatar);
             }
