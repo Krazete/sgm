@@ -1755,7 +1755,7 @@ function initialize() {
                     _class: "sa",
                     bHazard: "Biohazard Black Dahlia",
                     zeraora: "Proton Pulse Robo-Fortune",
-                    bShell: "Bombshell Parasoul",
+                    bShell: "Bombshell",
                     mSonic: "Megasonic Big Band",
                     mCorpse: "Octoplasm Marie",
                 },
