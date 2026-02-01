@@ -1741,44 +1741,15 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
-            var patchnotes = "https://hub.skullgirlsmobile.com/es/news/game-update-82-patch-notes-in-with-the-old-retro-reload-rumble";
-            var guildnotes = "https://hub.skullgirlsmobile.com/updates/game-update-80-patch-notes-an-undying-alliance-guilds-launch-and-shards-of-undying-launch-1118";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-83-patch-notes-aroo-you-ready-occult-overload";
+            // var guildnotes = "https://hub.skullgirlsmobile.com/updates/game-update-80-patch-notes-an-undying-alliance-guilds-launch-and-shards-of-undying-launch-1118";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    oUp: "One Up Big Band,-Element",
-                    dLocked: "Locked ‘N’ Loaded Black Dahlia,-Element",
+                    LLure: "Lucky Lure Umbrella,-Element",
+                    NBrakes: "Grand Mother Double,-Element",
                 },
-                changed: {
-                    _url: patchnotes,
-                    _class: "sa",
-                    eSax: "Epic Sax Big Band:",
-                    fSoldier: "Foot Soldier Ms. Fortune:",
-                    dBand: "Dream Band Big Band:",
-                    mGirl: "Materia Girl Annie:",
-                    aGreed: "Assassin's Greed Valentine:",
-                    zeraora: "Proton Pulse:",
-                    mCorpse: "Octoplasm Marie:",
-                    mSonic: "Megasonic Big Band:",
-                    rStar: "Rock Star Filia:",
-                    hBelle: "Hell's Belle Fukua:",
-                    jKit: "Just Kitten:",
-                },
-                "stats<br>changed": {
-                    _url: patchnotes,
-                    _class: "fs",
-                    hReign: "Heavy Reign Parasoul:",
-                    xBot: "X-Bot Robo-Fortune:",
-                    bBelle: "Locked In Parasoul:",
-                },
-                "bug fixed": {
-                    _url: patchnotes,
-                    _class: "sa",
-                    lHope: "Last Hope Valentine:",
-                    sShine: "Star Shine Annie:",
-                    model: "Model Leader Annie:",
-                }
                 // guilds: {
                 //     _url: guildnotes,
                 //     _class: "frame",

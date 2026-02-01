@@ -84,6 +84,169 @@
         ],
         "tier": 3
     },
+    "LLure": {
+        "base": "um",
+        "element": 3,
+        "fandom": "Lucky Lure",
+        "name": "Char_Umbrella_G_V6_Name",
+        "quote": "Variant_Description_Umbrella_LuckyLure",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Umbrella_SA_CandyFlush_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.30000001192092896,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.4000000059604645,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.5,
+                                7.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Umbrella_SA_CandyFlush_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Umbrella_SA_CandyFlush_Title"
+        },
+        "stats": [
+            {
+                "attack": 297,
+                "lifebar": 1698
+            },
+            {
+                "attack": 579,
+                "lifebar": 3311
+            }
+        ],
+        "tier": 2
+    },
+    "NBrakes": {
+        "base": "do",
+        "element": 4,
+        "fandom": "Grand Mother",
+        "name": "Char_Double_D_V5_Name",
+        "quote": "Variant_Description_Double_NoBrakes",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Double_SA_ClosingIn_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5,
+                                5.0,
+                                1,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75,
+                                5.0,
+                                1,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0,
+                                5.0,
+                                1,
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Double_SA_ClosingIn_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.5
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.75
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Double_SA_ClosingIn_Title"
+        },
+        "stats": [
+            {
+                "attack": 624,
+                "lifebar": 3056
+            }
+        ],
+        "tier": 3
+    },
     "aComp": {
         "base": "fu",
         "element": 0,
@@ -3994,19 +4157,19 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                12.0
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                15.0
+                                8.0
                             ]
                         }
                     ]
@@ -4627,7 +4790,7 @@
         "element": 3,
         "fandom": "Locked 'N' Loaded",
         "name": "Char_BlackDahlia_D_V4_Name",
-        "quote": "Variant_Description_BlackDahlia_HexCaliber",
+        "quote": "Variant_Description_BlackDahlia_Deadlocked",
         "sa": {
             "features": [
                 {
@@ -13809,7 +13972,7 @@
         "element": 0,
         "fandom": "One Up",
         "name": "Char_BigBand_G_V7_Name",
-        "quote": "Variant_Description_BigBand_G_V7",
+        "quote": "Variant_Description_BigBand_OneUp",
         "sa": {
             "features": [
                 {
@@ -23176,21 +23339,18 @@
                         {
                             "level": 1,
                             "values": [
-                                null,
                                 10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                null,
                                 15.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                null,
                                 20.0
                             ]
                         }
