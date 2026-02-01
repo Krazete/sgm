@@ -1750,11 +1750,6 @@ function initialize() {
                     LLure: "Lucky Lure Umbrella,-Element",
                     NBrakes: "Grand Mother Double,-Element",
                 },
-                "moveset<br>changed": {
-                    _url: patchnotes,
-                    _class: "fs",
-                    elizaRaidBoss: "Doomsayer Eliza",
-                },
                 "bug fixed": {
                     _url: patchnotes,
                     _class: "sa",
@@ -1763,6 +1758,11 @@ function initialize() {
                     bShell: "Bombshell Parasoul",
                     mSonic: "Megasonic Big Band",
                     mCorpse: "Octoplasm Marie",
+                },
+                "moveset<br>changed": {
+                    _url: patchnotes,
+                    _class: "fs",
+                    elizaRaidBoss: "Doomsayer Eliza",
                 },
                 // guilds: {
                 //     _url: guildnotes,
