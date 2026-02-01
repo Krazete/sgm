@@ -1750,6 +1750,20 @@ function initialize() {
                     LLure: "Lucky Lure Umbrella,-Element",
                     NBrakes: "Grand Mother Double,-Element",
                 },
+                "moveset<br>changed": {
+                    _url: patchnotes,
+                    _class: "fs",
+                    elizaRaidBoss: "Doomsayer Eliza",
+                },
+                "bug fixed": {
+                    _url: patchnotes,
+                    _class: "sa",
+                    bHazard: "Biohazard Black Dahlia",
+                    zeraora: "Proton Pulse Robo-Fortune",
+                    bShell: "Bombshell Parasoul",
+                    mSonic: "Megasonic Big Band",
+                    mCorpse: "Octoplasm Marie",
+                },
                 // guilds: {
                 //     _url: guildnotes,
                 //     _class: "frame",
