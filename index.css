@@ -2195,3 +2195,7 @@ html[lang='pt-br'] .fighter.card .pa .ability-type:before, html[lang='pt-br'] .p
         transform: translate(-100%);
     }
 }
+
+#crittyKitty .sa .description {
+    letter-spacing: -3px;
+}

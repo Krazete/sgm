@@ -4048,6 +4048,246 @@
         ],
         "tier": 2
     },
+    "crittyKitty": {
+        "base": "mf",
+        "element": 1,
+        "fandom": "Critty Kitty",
+        "name": "Char_MsFortune_RaidBoss_Name",
+        "quote": "Variant_Description_Marie_HeartlessSeeker",
+        "sa": {
+            "features": [
+                {
+                    "description": "SA_MsFortune_RaidBoss_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                5.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                5.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 5,
+                            "values": [
+                                5.0,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_MsFortune_RaidBoss_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.25
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1.5
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_MsFortune_RaidBoss_Desc3",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                0.15000000596046448
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                0.20000000298023224
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                0.25
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "values": [
+                                10.0,
+                                0.15000000596046448
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_MsFortune_RaidBoss_Desc4",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2.0,
+                                2.0,
+                                25.0,
+                                50.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2.0,
+                                3.0,
+                                25.0,
+                                75.0,
+                                15.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "SA_MsFortune_RaidBoss_Desc5",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2,
+                                10.0,
+                                5.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 4,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        },
+                        {
+                            "level": 4,
+                            "values": []
+                        },
+                        {
+                            "level": 5,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_MsFortune_SA_RaidBoss_Title"
+        },
+        "stats": [
+            {
+                "attack": 600,
+                "lifebar": 13021
+            }
+        ],
+        "tier": 3
+    },
     "dArtist": {
         "base": "sq",
         "element": 0,
@@ -5853,15 +6093,6 @@
                         },
                         {
                             "level": 3,
-                            "values": []
-                        }
-                    ]
-                },
-                {
-                    "description": "",
-                    "tiers": [
-                        {
-                            "level": 1,
                             "values": []
                         }
                     ]
@@ -8198,31 +8429,6 @@
                         },
                         {
                             "level": 4,
-                            "values": []
-                        }
-                    ]
-                },
-                {
-                    "description": "",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": []
-                        },
-                        {
-                            "level": 2,
-                            "values": []
-                        },
-                        {
-                            "level": 3,
-                            "values": []
-                        },
-                        {
-                            "level": 4,
-                            "values": []
-                        },
-                        {
-                            "level": 5,
                             "values": []
                         }
                     ]

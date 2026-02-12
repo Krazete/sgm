@@ -1187,12 +1187,18 @@ function initOptionsMenu() {
             var saDescriptions = sa.getElementsByClassName("description");
             for (var i = 0; i < saDescriptions.length; i++) {
                 var saDescription = saDescriptions[i];
-                var template = corpus[variants[key].sa.features[i].description];
+                var template = corpus[variants[key].sa.features[i].description] || "";
                 for (var j = saRange.value - 1; j >= 0; j--) {
                     var tier = variants[key].sa.features[i].tiers[j];
                     if (tier && "values" in tier) {
                         var substitutions = tier.values;
+                        if (key == "crittyKitty") {
+                            template = template.replace(/[A-Z]/g, "█").replace(/[a-z]/g, "▄").replace(/['\-]/g, "▀");
+                        }
                         saDescription.innerHTML = format(template, substitutions);
+                        if (key == "crittyKitty") {
+                            saDescription.innerHTML = saDescription.innerHTML.replace(/[\d%]/g, "█").replace(/[,.]/g, "▄");
+                        }
                         break;
                     }
                 }
