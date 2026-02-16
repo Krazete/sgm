@@ -2025,6 +2025,7 @@ html[lang='pt-br'] .fighter.card .pa .ability-type:before, html[lang='pt-br'] .p
 }
 .redacted .sa .description {
     letter-spacing: -3px;
+    overflow-wrap: anywhere;
 }
 
 .description span {
