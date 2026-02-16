@@ -1861,7 +1861,7 @@
     "SA_MsFortune_RaidBoss_Desc2": "Wenn einer der beiden K\u00e4mpfer einen nicht-Projektil-KRITISCHEN TREFFER landet, wird sein ANGRIFF dauerhaft um {0}% erh\u00f6ht.",
     "SA_MsFortune_RaidBoss_Desc3": "KRITISCHE TREFFER von Ms. Fortune erh\u00f6hen ihren KRITISCHEN SCHADEN dauerhaft um {0}% und haben eine Chance von {1:0%}, den Gegner sofort zu besiegen, wenn er unter TODESMAL leidet.",
     "SA_MsFortune_RaidBoss_Desc4": "Wenn der Gegner einen NICHT-KRITISCHEN TREFFER landet, erh\u00e4lt Ms. Fortune bis zum Ende des KOMBOS {0}% KRIT-RESISTENZ und der Gegner verliert {1}% seiner MAXIMALEN GESUNDHEIT. Wenn Ms. Fortune ZUBODEN GEHT, erh\u00e4lt der aktive K\u00e4mpfer {2}% KRIT-RATE und {3}% KRIT-SCHADEN f\u00fcr jeweils {4} Sekunden.",
-    "SA_MsFortune_RaidBoss_Desc5": "Wenn der Gegner einen NICHT-KRITISCHEN TREFFER landet, erleidet er \u00dcBERSPANNUNG f\u00fcr {0} Sekunden. Nicht-Projektil-TREFFER des Gegners verursachen {1}% mehr SCHADEN f\u00fcr jeden BUFF oder DEBUFF, der auf einen der beiden K\u00e4mpfer wirkt.",
+    "SA_MsFortune_RaidBoss_Desc5": "Wenn der Gegner einen NICHT-KRITISCHEN TREFFER landet, erleidet er \u00dcBERSPANNUNG f\u00fcr {0} Sekunden. Nicht-Projektil-TREFFER des Gegners verursachen {1}% mehr SCHADEN f\u00fcr jeden VERBESSERUNGSEFFEKT oder SCHW\u00c4CHUNGSEFFEKT, der auf einen der beiden K\u00e4mpfer wirkt.",
     "SA_MsFortune_SM5_ElGato": "KRITISCHE TREFFER BET\u00c4UBEN zu {0:0%} f\u00fcr {1} SEKUNDEN",
     "SA_MsFortune_SM7_CatScratch": "TREFFER verursachen zu {0:0%} f\u00fcr {1} Sekunden TODESMAL (oder R\u00dcSTUNGSBRUCH bei GEBLOCKTEN TREFFERN)",
     "SA_PainWheel_BB1_Deathcrawl": "TREFFER l\u00f6sen zu {0:0%} f\u00fcr {1} Sekunden eine BLUTUNG aus",
