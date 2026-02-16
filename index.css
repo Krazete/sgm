@@ -2023,6 +2023,9 @@ html[lang='pt-br'] .fighter.card .pa .ability-type:before, html[lang='pt-br'] .p
 .catalyst .description {
     grid-area: des;
 }
+.redacted .sa .description {
+    letter-spacing: -3px;
+}
 
 .description span {
     font-weight: bold;
@@ -2194,8 +2197,4 @@ html[lang='pt-br'] .fighter.card .pa .ability-type:before, html[lang='pt-br'] .p
         left: -1%; /* just to make sure it's offscreen */
         transform: translate(-100%);
     }
-}
-
-#crittyKitty .sa .description {
-    letter-spacing: -3px;
 }

@@ -10,6 +10,8 @@ var filterCards;
 var sortBasis;
 var updateCards;
 
+var redacted = [];
+
 var dormant = true;
 var chaos = false;
 var useCustom = Math.random() < 0.05;
@@ -496,6 +498,9 @@ function initCollection(responses) {
                 elements[variants[key].element],
                 variants[key].base
             ].join(" ");
+            if (redacted.includes(key)) {
+                card.classList.add("redacted");
+            }
             card.id = key;
             card.appendChild(createAvatar(key));
             card.appendChild(createQuote());
@@ -1192,11 +1197,11 @@ function initOptionsMenu() {
                     var tier = variants[key].sa.features[i].tiers[j];
                     if (tier && "values" in tier) {
                         var substitutions = tier.values;
-                        if (key == "crittyKitty") {
-                            template = template.replace(/[A-Z]/g, "█").replace(/[a-z]/g, "▄").replace(/['\-]/g, "▀");
+                        if (redacted.includes(key)) {
+                            template = template.replace(/\p{Lu}/gu, "█").replace(/[\p{Ll},.、。]/gu, "▄").replace(/['\-]/g, "▀").replace(/[^█▄▀\s{\d:%}]/g, "█");
                         }
                         saDescription.innerHTML = format(template, substitutions);
-                        if (key == "crittyKitty") {
+                        if (redacted.includes(key)) {
                             saDescription.innerHTML = saDescription.innerHTML.replace(/[\d%]/g, "█").replace(/[,.]/g, "▄");
                         }
                         break;
@@ -1748,7 +1753,6 @@ function initialize() {
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
             var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-83-patch-notes-aroo-you-ready-occult-overload";
-            // var guildnotes = "https://hub.skullgirlsmobile.com/updates/game-update-80-patch-notes-an-undying-alliance-guilds-launch-and-shards-of-undying-launch-1118";
             var vids = {
                 new: {
                     _url: patchnotes,
@@ -1756,27 +1760,11 @@ function initialize() {
                     LLure: "Lucky Lure Umbrella,-Element",
                     NBrakes: "Grand Mother Double,-Element",
                 },
-                "bug fixed": {
+                guilds: {
                     _url: patchnotes,
-                    _class: "sa",
-                    bHazard: "Biohazard Black Dahlia",
-                    zeraora: "Proton Pulse Robo-Fortune",
-                    bShell: "Bombshell",
-                    mSonic: "Megasonic Big Band",
-                    mCorpse: "Octoplasm Marie",
+                    _class: "frame",
+                    crittyKitty: "Critty Kitty",
                 },
-                "moveset<br>changed": {
-                    _url: patchnotes,
-                    _class: "fs",
-                    elizaRaidBoss: "Doomsayer Eliza",
-                },
-                // guilds: {
-                //     _url: guildnotes,
-                //     _class: "frame",
-                //     bBaddy: "Big Baddy Big Band",
-                //     elizaRaidBoss: "Raid Boss",
-                //     goku: "",
-                // },
             };
 
             function addLabel(id, type, url, classname) {
