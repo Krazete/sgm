@@ -324,7 +324,12 @@ function initFilterMenu() {
         }
         var key = card.id;
         var query = sanitize(searchbox.value);
-        if (searchCN.checked) {
+        if (query.includes("fel()")) {
+            searchbox.value = "";
+            felExport();
+            return true;
+        }
+        else if (searchCN.checked) {
             return sanitize(key).includes(query) || sanitize(corpus[catalysts[key].title]).includes(query);
         }
         else if (searchD.checked) {
@@ -497,6 +502,65 @@ function updateCards() {
             }
         }
     }
+}
+
+function felExport() {
+    function felFormat(feature) {
+        var template = corpus[feature.description];
+        var matches = template.match(/{\s*\d+(?::\d+)?%?\s*}%?/g);
+        var formatted = template.replace(/<.*?>/g, "");
+        if (matches) {
+            for (var match of matches) {
+                var index = parseInt(match.replace(/{\s*(\d+)(?::\d+)?%?\s*}%?/, "$1"));
+                var subs = [];
+                for (var i = 0; i < feature.tiers.length; i++) {
+                    var subi = Math.abs(feature.tiers[i].values[index]);
+                    if (match.includes("%}")) {
+                        subi *= 100;
+                    }
+                    subi = Math.round(subi * 100) / 100; /* round to nearest 100th */
+                    if (subs.length <= 0 || subs[subs.length - 1] != subi) {
+                        subs.push(subi);
+                    }
+                }
+                var substitute = subs.join("/") + (match.includes("%") ? "%" : "");
+                formatted = formatted.replace(match, substitute);
+            }
+        }
+        if (formatted.match(/NaN/g)) {
+            console.warn("NaN detected within \"" + template + "\.");
+        }
+        return formatted;
+    }
+
+    var fel = {};
+    for (var cid in catalysts) {
+        var catalyst = catalysts[cid];
+        var value = {
+            "name": corpus[catalyst.title],
+            "rarity": tiers[catalyst.tier],
+            "element": catalyst.constraints.elements ? elements[catalyst.constraints.elements[0]] : "",
+            "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/" + catalyst.icon + ".png"
+        };
+        if (catalyst.title != catalyst.ability.title) {
+            value.ability = corpus[catalyst.ability.title];
+        }
+        if (catalyst.ability.features) {
+            for (var i = 0; i < catalyst.ability.features.length; i++) {
+                var feature = catalyst.ability.features[i];
+                if (feature.description) {
+                    value["SA" + (i + 1)] = felFormat(feature);
+                }
+            }
+        }
+        fel[cid] = value;
+    }
+
+    var a = document.createElement("a");
+    var blob = new Blob([JSON.stringify(fel, null, 4)], {"type": "application/json"});
+    a.href = URL.createObjectURL(blob);
+    a.download = "stanleyDB-artifacts.json";
+    a.click();
 }
 
 function initialize() {

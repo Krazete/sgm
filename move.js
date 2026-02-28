@@ -370,7 +370,12 @@ function initFilterMenu() {
         }
         var key = card.id;
         var query = sanitize(searchbox.value);
-        if (searchMN.checked) {
+        if (query.includes("fel()")) {
+            searchbox.value = "";
+            felExport();
+            return true;
+        }
+        else if (searchMN.checked) {
             return sanitize(key).includes(query) || sanitize(corpus[moves[key].title]).includes(query);
         }
         else if (searchD.checked) {
@@ -662,6 +667,89 @@ function initOptionsMenu() {
     levelGold.addEventListener("change", setLevelViaNumber);
 
     updateCards();
+}
+
+function felExport() {
+    function felFormat(feature) {
+        var template = corpus[feature.description];
+        var matches = template.match(/{\s*\d+(?::\d+)?%?\s*}%?/g);
+        var formatted = template.replace(/<.*?>/g, "");
+        if (matches) {
+            for (var match of matches) {
+                var index = parseInt(match.replace(/{\s*(\d+)(?::\d+)?%?\s*}%?/, "$1"));
+                var subs = [];
+                for (var i = 0; i < feature.tiers.length; i++) {
+                    var subi = Math.abs(feature.tiers[i].values[index]);
+                    if (match.includes("%}")) {
+                        subi *= 100;
+                    }
+                    subi = Math.round(subi * 100) / 100; /* round to nearest 100th */
+                    if (subs.length <= 0 || subs[subs.length - 1] != subi) {
+                        subs.push(subi);
+                    }
+                }
+                var substitute = subs.join("/") + (match.includes("%") ? "%" : "");
+                formatted = formatted.replace(match, substitute);
+            }
+        }
+        if (formatted.match(/NaN/g)) {
+            console.warn("NaN detected within \"" + template + "\.");
+        }
+        return formatted;
+    }
+
+    var emojiID = {
+        "an": "<:sp_an:767922687204524032>",
+        "bb": "<:sp_bb:684054646528147500>",
+        "bd": "<:sp_bd:1115123780705063043>",
+        "be": "<:sp_beo:684771548414083107>",
+        "ce": "<:sp_cb:685401170495537152>",
+        "do": "<:sp_db:692275933536845884>",
+        "el": "<:sp_el:692287012450992219>",
+        "fi": "<:sp_fi:698821373698637894>",
+        "fu": "<:sp_fu:698919709336141886>",
+        "ma": "<:sp_ma:1247164362528133210>",
+        "mf": "<:sp_mf:698837829467242496>",
+        "pa": "<:sp_pa:698884548678910043>",
+        "pe": "<:sp_pe:698879915713626142>",
+        "pw": "<:sp_pw:698904045389348914>",
+        "rf": "<:sp_rf:698919676612313168>",
+        "sq": "<:sp_sq:698909665077231776>",
+        "um": "<:sp_um:969082448082268241>",
+        "va": "<:sp_va:698852651617746974>"
+    };
+
+    var fel = {};
+    for (var mid in moves) {
+        var move = moves[mid];
+        if (move.tier == 2) { /* only gold */
+            var value = {
+                "name": corpus[move.title],
+                "type": ["sm", "bb"][move.type],
+                "gear": move.gear,
+                "character": emojiID[move.base],
+                "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/" + move.icon
+            };
+            if (move.title != move.ability.title) {
+                value.ability = corpus[move.ability.title];
+            }
+            if (move.ability.features) {
+                for (var i = 0; i < move.ability.features.length; i++) {
+                    var feature = move.ability.features[i];
+                    if (feature.description) {
+                        value["SA" + (i + 1)] = felFormat(feature);
+                    }
+                }
+            }
+            fel[mid] = value;
+        }
+    }
+
+    var a = document.createElement("a");
+    var blob = new Blob([JSON.stringify(fel, null, 4)], {"type": "application/json"});
+    a.href = URL.createObjectURL(blob);
+    a.download = "stanleyDB-moves.json";
+    a.click();
 }
 
 function initialize() {

@@ -3,6 +3,10 @@ var moves, corpus;
 var tiers = ["bronze", "silver", "gold", "diamond"];
 var elements = ["neutral", "fire", "water", "wind", "dark", "light"];
 var fighterIDs = ["bdrain", "min"];
+var fandom = {
+    "bdrain": "Brain Drain",
+    "min": "Minette"
+};
 
 var cards = [];
 var filterCards;
@@ -352,7 +356,12 @@ function initFilterMenu() {
         }
         var key = card.id;
         var query = sanitize(searchbox.value);
-        if (searchMN.checked) {
+        if (query.includes("fel()")) {
+            searchbox.value = "";
+            felExport();
+            return true;
+        }
+        else if (searchMN.checked) {
             return sanitize(key).includes(query) || sanitize(corpus[moves[key].title]).includes(query);
         }
         else if (searchVN.checked) {
@@ -568,6 +577,67 @@ function initOptionsMenu() {
     levelText.addEventListener("change", setLevelViaNumber);
 
     updateCards();
+}
+
+function felExport() {
+    function felFormat(feature) {
+        var template = corpus[feature.description];
+        var matches = template.match(/{\s*\d+(?::\d+)?%?\s*}%?/g);
+        var formatted = template.replace(/<.*?>/g, "");
+        if (matches) {
+            for (var match of matches) {
+                var index = parseInt(match.replace(/{\s*(\d+)(?::\d+)?%?\s*}%?/, "$1"));
+                var subs = [];
+                for (var i = 0; i < feature.tiers.length; i++) {
+                    var subi = Math.abs(feature.tiers[i].values[index]);
+                    if (match.includes("%}")) {
+                        subi *= 100;
+                    }
+                    subi = Math.round(subi * 100) / 100; /* round to nearest 100th */
+                    if (subs.length <= 0 || subs[subs.length - 1] != subi) {
+                        subs.push(subi);
+                    }
+                }
+                var substitute = subs.join("/") + (match.includes("%") ? "%" : "");
+                formatted = formatted.replace(match, substitute);
+            }
+        }
+        else {
+            console.warn("No placeholders found in \"" + template + "\".");
+        }
+        if (formatted.match(/NaN/g)) {
+            console.warn("NaN detected within \"" + template + "\.");
+        }
+        return formatted;
+    }
+
+    var fel = {};
+    for (var mid in moves) {
+        var move = moves[mid];
+        var value = {
+            "name": corpus[move.name],
+            "element": elements[move.element].replace(/wind/g, "air"),
+            "character": fandom[move.base],
+            "stars": move.strength,
+            "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/" + move.icon
+        };
+        if (move.title != move.ability.title) {
+            value.ability = corpus[move.ability.title];
+        }
+        for (var i = 0; i < move.ability.features.length; i++) {
+            var feature = move.ability.features[i];
+            if (feature.description) {
+                value["SA" + (i + 1)] = felFormat(feature);
+            }
+        }
+        fel[mid] = value;
+    }
+
+    var a = document.createElement("a");
+    var blob = new Blob([JSON.stringify(fel, null, 4)], {"type": "application/json"});
+    a.href = URL.createObjectURL(blob);
+    a.download = "stanleyDB-assists.json";
+    a.click();
 }
 
 function initialize() {
