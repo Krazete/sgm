@@ -875,20 +875,20 @@ function initFilterMenu() {
                 }
             }
             else if (searchCA.checked) {
-                if (removePlaceholders(sanitize(corpus[fighters[variants[key].base].ca.description])).includes(query)) {
+                if (sanitize(removePlaceholders(corpus[fighters[variants[key].base].ca.description])).includes(query)) {
                     return true;
                 };
             }
             else if (searchSA.checked) {
                 for (var feature of variants[key].sa.features) {
-                    if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+                    if (sanitize(removePlaceholders(corpus[feature.description])).includes(query)) {
                         return true;
                     }
                 }
             }
             else if (searchMA.checked) {
                 for (var feature of fighters[variants[key].base].ma.features) {
-                    if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+                    if (sanitize(removePlaceholders(corpus[feature.description])).includes(query)) {
                         return true;
                     }
                 }

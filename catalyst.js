@@ -349,7 +349,7 @@ function initFilterMenu() {
         else if (searchD.checked) {
             if ("ability" in catalysts[key] && "features" in catalysts[key].ability) {
                 for (var feature of catalysts[key].ability.features) {
-                    if (removePlaceholders(sanitize(corpus[feature.description])).includes(query)) {
+                    if (sanitize(removePlaceholders(corpus[feature.description])).includes(query)) {
                         return true;
                     }
                 }
