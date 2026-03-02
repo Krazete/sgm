@@ -4789,6 +4789,81 @@
         ],
         "tier": 3
     },
+    "dExposure": {
+        "base": "rf",
+        "element": 5,
+        "fandom": "Double Exposure",
+        "name": "Char_RoboFortune_G_V7_Name",
+        "quote": "Variant_Description_RoboFortune_DoubleExposure",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_RoboFortune_SA_Snapshot_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_RoboFortune_SA_Snapshot_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                5.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_RoboFortune_SA_Snapshot_Title"
+        },
+        "stats": [
+            {
+                "attack": 336,
+                "lifebar": 1390
+            },
+            {
+                "attack": 655,
+                "lifebar": 2710
+            }
+        ],
+        "tier": 2
+    },
     "dHeat": {
         "base": "sq",
         "element": 1,
@@ -6421,21 +6496,21 @@
                             "level": 1,
                             "values": [
                                 5.0,
-                                30
+                                20
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 7.0,
-                                30
+                                20
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 10.0,
-                                30
+                                20
                             ]
                         }
                     ]
@@ -6696,6 +6771,114 @@
             {
                 "attack": 624,
                 "lifebar": 3566
+            }
+        ],
+        "tier": 3
+    },
+    "fFray": {
+        "base": "mf",
+        "element": 5,
+        "fandom": "Fatal Fray",
+        "name": "Char_MsFortune_D_V5_Name",
+        "quote": "Variant_Description_MsFortune_FatalFray",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_MsFortune_SA_BurdenOfSacrifice_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                4.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_MsFortune_SA_BurdenOfSacrifice_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                5.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                5.0,
+                                7.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5.0,
+                                10.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_MsFortune_SA_BurdenOfSacrifice_Title"
+        },
+        "stats": [
+            {
+                "attack": 548,
+                "lifebar": 3925
             }
         ],
         "tier": 3
@@ -7105,18 +7288,24 @@
                         {
                             "level": 1,
                             "values": [
+                                25.0,
+                                25.0,
                                 15.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
+                                25.0,
+                                20.0,
                                 20.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
+                                25.0,
+                                15.0,
                                 25.0
                             ]
                         }
@@ -7128,20 +7317,60 @@
                         {
                             "level": 1,
                             "values": [
-                                3
+                                1,
+                                3.0,
+                                3.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                4
+                                2,
+                                6.0,
+                                3.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                5
+                                3,
+                                9.0,
+                                3.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -18040,22 +18269,19 @@
                         {
                             "level": 1,
                             "values": [
-                                0.5,
-                                1.0
+                                3.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.5,
-                                2.0
+                                4.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.5,
-                                3.0
+                                5.0
                             ]
                         }
                     ]
@@ -18066,19 +18292,19 @@
                         {
                             "level": 1,
                             "values": [
-                                50.0
+                                null
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                75.0
+                                null
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                100.0
+                                null
                             ]
                         }
                     ]
