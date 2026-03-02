@@ -1752,18 +1752,20 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
-            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-83-patch-notes-aroo-you-ready-occult-overload";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-84-patch-notes-fatal-cut-springtime-exposure";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    LLure: "Lucky Lure Umbrella,-Element",
-                    NBrakes: "Grand Mother Double,-Element",
+                    dExposure: "Double Exposure Robo-Fortune,-Element",
+                    fFray: "Fatal Fray Ms. Fortune,-Element",
                 },
-                guilds: {
+                changed: {
                     _url: patchnotes,
-                    _class: "frame",
-                    crittyKitty: "Critty Kitty",
+                    _class: "sa",
+                    sCross: "Star-Crossed Parasoul:",
+                    fTrap: "Fly Trap Painwheel:",
+                    fFav: "Fan Favorite Beowulf:",
                 },
             };
 
