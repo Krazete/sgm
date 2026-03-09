@@ -18292,19 +18292,19 @@
                         {
                             "level": 1,
                             "values": [
-                                null
+                                50.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                null
+                                75.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                null
+                                100.0
                             ]
                         }
                     ]
