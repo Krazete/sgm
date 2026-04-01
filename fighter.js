@@ -1752,20 +1752,14 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
-            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-84-patch-notes-fatal-cut-springtime-exposure";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-85-patch-notes-thank-you-for-1-year-princesses-of-canopy-kingdom";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    dExposure: "Double Exposure Robo-Fortune,-Element",
-                    fFray: "Fatal Fray Ms. Fortune,-Element",
-                },
-                changed: {
-                    _url: patchnotes,
-                    _class: "sa",
-                    sCross: "Star-Crossed Parasoul:",
-                    fTrap: "Fly Trap Painwheel:",
-                    fFav: "Fan Favorite Beowulf:",
+                    fPower: "Flower Power Fukua,-Element",
+                    cCustodian: "Comet Custodian Marie,-Element",
+                    sGold: "Solid Gold Peacock,-Element",
                 },
             };
 
