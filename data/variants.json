@@ -729,6 +729,15 @@
                             "values": []
                         }
                     ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
                 }
             ],
             "title": "Char_Valentine_SA_FieldTest_Title"
@@ -3074,6 +3083,142 @@
             }
         ],
         "tier": 1
+    },
+    "cCustodian": {
+        "base": "ma",
+        "element": 3,
+        "fandom": "Comet Custodian",
+        "name": "Char_Marie_D_V4_Name",
+        "quote": "Variant_Description_Marie_CometCustodian",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Marie_SA_HilgardOfTheStars_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.20000000298023224,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.3499999940395355,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Marie_SA_HilgardOfTheStars_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                33.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                66.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Marie_SA_HilgardOfTheStars_Title"
+        },
+        "stats": [
+            {
+                "attack": 617,
+                "lifebar": 3753
+            }
+        ],
+        "tier": 3
     },
     "cCutter": {
         "base": "fi",
@@ -7036,6 +7181,129 @@
         ],
         "tier": 3
     },
+    "fPower": {
+        "base": "fu",
+        "element": 1,
+        "fandom": "Flower Power",
+        "name": "Char_Fukua_G_V7_Name",
+        "quote": "Variant_Description_Fukua_FlowerPower",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Fukua_SA_PowerUP_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0,
+                                3.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Fukua_SA_PowerUP_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                4.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Fukua_SA_PowerUP_Title"
+        },
+        "stats": [
+            {
+                "attack": 248,
+                "lifebar": 1698
+            },
+            {
+                "attack": 484,
+                "lifebar": 3311
+            }
+        ],
+        "tier": 2
+    },
     "fRein": {
         "base": "ma",
         "element": 5,
@@ -9046,6 +9314,23 @@
                                 10.0,
                                 15.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 },
@@ -18661,6 +18946,84 @@
             {
                 "attack": 636,
                 "lifebar": 3871
+            }
+        ],
+        "tier": 2
+    },
+    "sGold": {
+        "base": "pe",
+        "element": 0,
+        "fandom": "Solid Gold",
+        "name": "Char_Peacock_G_V7_Name",
+        "quote": "Variant_Description_Peacock_SolidGold",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Peacock_SA_WorthTheWait_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15,
+                                25.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15,
+                                30.0,
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15,
+                                35.0,
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Peacock_SA_WorthTheWait_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                0.30000001192092896,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.4000000059604645,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                0.5,
+                                10.0
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Peacock_SA_WorthTheWait_Title"
+        },
+        "stats": [
+            {
+                "attack": 297,
+                "lifebar": 1698
+            },
+            {
+                "attack": 579,
+                "lifebar": 3311
             }
         ],
         "tier": 2
