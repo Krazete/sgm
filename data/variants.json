@@ -124,19 +124,19 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                15.0
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                20.0
+                                15.0
                             ]
                         }
                     ]
@@ -12314,6 +12314,91 @@
         ],
         "tier": 3
     },
+    "mFlow": {
+        "base": "sq",
+        "element": 1,
+        "fandom": "Mana Flow",
+        "name": "Char_Squigly_D_V5_Name",
+        "quote": "Variant_Description_Squigly_ManaFlow",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Squigly_SA_QuickCast_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                15.0,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                20.0,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                25.0,
+                                25.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Squigly_SA_QuickCast_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                15.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Squigly_SA_QuickCast_Title"
+        },
+        "stats": [
+            {
+                "attack": 617,
+                "lifebar": 3753
+            }
+        ],
+        "tier": 3
+    },
     "mGirl": {
         "base": "an",
         "element": 2,
@@ -20234,6 +20319,104 @@
             }
         ],
         "tier": 0
+    },
+    "sTipper": {
+        "base": "fi",
+        "element": 4,
+        "fandom": "Scale Tipper",
+        "name": "Char_Filia_G_V7_Name",
+        "quote": "Variant_Description_Filia_ScaleTipper",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Filia_SA_ScaleTipper_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                4.0,
+                                1,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1,
+                                3.0,
+                                1,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1,
+                                2.0,
+                                1,
+                                7.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Filia_SA_ScaleTipper_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                25,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                20,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                17,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Filia_SA_ScaleTipper_Title"
+        },
+        "stats": [
+            {
+                "attack": 248,
+                "lifebar": 1698
+            },
+            {
+                "attack": 484,
+                "lifebar": 3311
+            }
+        ],
+        "tier": 2
     },
     "sViper": {
         "base": "el",

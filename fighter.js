@@ -1752,14 +1752,18 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
-            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-85-patch-notes-thank-you-for-1-year-princesses-of-canopy-kingdom";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-86-patch-notes-a-memorable-picnic-after-the-journey";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    fPower: "Flower Power Fukua,-Element",
-                    cCustodian: "Comet Custodian Marie,-Element",
-                    sGold: "Solid Gold Peacock,-Element",
+                    mFlow: "Mana Flow Squigly,-Element",
+                    sTipper: "Scale Tipper Filia,-Element",
+                },
+                changed: {
+                    _url: patchnotes,
+                    _class: "sa",
+                    LLure: "Lucky Lure:",
                 },
             };
 
