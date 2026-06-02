@@ -10510,6 +10510,97 @@
         ],
         "tier": 2
     },
+    "iFluencer": {
+        "base": "pe",
+        "element": 0,
+        "fandom": "Inkfluencer",
+        "name": "Char_Peacock_D_V4_Name",
+        "quote": "Variant_Description_Peacock_InkOrSwim",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Peacock_SA_Splat_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0,
+                                10.0,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                15.0,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                10.0,
+                                20.0,
+                                20.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Peacock_SA_Splat_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                50.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                75.0,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                100.0,
+                                30.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Peacock_SA_Splat_Title"
+        },
+        "stats": [
+            {
+                "attack": 788,
+                "lifebar": 2919
+            }
+        ],
+        "tier": 3
+    },
     "iHot": {
         "base": "va",
         "element": 2,
@@ -24269,6 +24360,132 @@
             {
                 "attack": 731,
                 "lifebar": 2322
+            }
+        ],
+        "tier": 2
+    },
+    "yOne": {
+        "base": "sq",
+        "element": 5,
+        "fandom": "Yellow One",
+        "name": "Char_Squigly_G_V7_Name",
+        "quote": "Variant_Description_Squigly_YellowOne",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Squigly_SA_YellowAbility_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                5,
+                                1.5
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Squigly_SA_YellowAbility_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                3,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                3,
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Squigly_SA_YellowAbility_Title"
+        },
+        "stats": [
+            {
+                "attack": 294,
+                "lifebar": 1787
+            },
+            {
+                "attack": 573,
+                "lifebar": 3485
             }
         ],
         "tier": 2
