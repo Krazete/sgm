@@ -1,0 +1,127 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="./frames/frame-001.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-002.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-003.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-004.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-005.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-006.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-007.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-008.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-009.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-010.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-011.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-012.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-013.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-014.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-015.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-016.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-017.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-018.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-019.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-020.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-021.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-022.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-023.bmp" as="image" type="image/bmp">
+    <link rel="preload" href="./frames/frame-024.bmp" as="image" type="image/bmp">
+    <style>
+        body {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: b 1s linear infinite;
+            background-image: url('./frames/frame-001.bmp');
+        }
+        #start {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+            font-size: 32px;
+            line-height: 1em;
+            display: block;
+        }
+        @keyframes b {
+             0% {background-image: url('./frames/frame-001.bmp');}
+             4% {background-image: url('./frames/frame-002.bmp');}
+             8% {background-image: url('./frames/frame-003.bmp');}
+            12% {background-image: url('./frames/frame-004.bmp');}
+            16% {background-image: url('./frames/frame-005.bmp');}
+            20% {background-image: url('./frames/frame-006.bmp');}
+            25% {background-image: url('./frames/frame-007.bmp');}
+            29% {background-image: url('./frames/frame-008.bmp');}
+            33% {background-image: url('./frames/frame-009.bmp');}
+            37% {background-image: url('./frames/frame-010.bmp');}
+            41% {background-image: url('./frames/frame-011.bmp');}
+            45% {background-image: url('./frames/frame-012.bmp');}
+            50% {background-image: url('./frames/frame-013.bmp');}
+            54% {background-image: url('./frames/frame-014.bmp');}
+            58% {background-image: url('./frames/frame-015.bmp');}
+            62% {background-image: url('./frames/frame-016.bmp');}
+            66% {background-image: url('./frames/frame-017.bmp');}
+            70% {background-image: url('./frames/frame-018.bmp');}
+            75% {background-image: url('./frames/frame-019.bmp');}
+            79% {background-image: url('./frames/frame-020.bmp');}
+            83% {background-image: url('./frames/frame-021.bmp');}
+            87% {background-image: url('./frames/frame-022.bmp');}
+            91% {background-image: url('./frames/frame-023.bmp');}
+            95% {background-image: url('./frames/frame-024.bmp');}
+        }
+        #spiid {
+            display: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <audio id="a1" src="./Bee in her Tub (Slow).ogg" preload></audio>
+    <audio id="a2" src="./Plazma.ogg" preload></audio>
+    <p id="trackname"></p>
+    <button id="start">⏭</button>
+    <input type="range" min="0" max="1000" id="spiid">
+    <script>
+        var a1 = document.getElementById("a1");
+        var a2 = document.getElementById("a2");
+        var trackname = document.getElementById("trackname");
+        var start = document.getElementById("start");
+        var speed = document.getElementById("spiid");
+        function init(e) {
+            if (a1.paused) {
+                a1.play();
+                a2.pause();
+                trackname.innerHTML = decodeURI(a1.src.split(/[/.]/g).slice(-2)[0]);
+            }
+            else {
+                a1.pause();
+                a2.play();
+                trackname.innerHTML = decodeURI(a2.src.split(/[/.]/g).slice(-2)[0]);
+            }
+        }
+        function parrot() {
+            if (!a1.paused && document.body.className != "slow") {
+                adjustSpeed(1000 * Math.pow(140/140, Math.E - 1));
+                // adjustSpeed(1000);
+            }
+            else if (!a2.paused && document.body.className != "fast") {
+                adjustSpeed(1000 * Math.pow(86/140, Math.E - 1));
+                // adjustSpeed(550);
+            }
+            else if (a1.paused && a2.paused) {
+                adjustSpeed(0);
+            }
+            requestAnimationFrame(parrot);
+        }
+        function adjustSpeed(n) {
+            if (this.value) {
+                n = this.value;
+            }
+            document.body.style.animationDuration = n + "ms";
+        }
+        parrot();
+        speed.addEventListener("input", adjustSpeed);
+        start.addEventListener("click", init);
+    </script>
+</body>
+</html>
