@@ -1752,13 +1752,13 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
-            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-87-patch-notes-an-inkling-of-whats-next-dye-hard";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-88-patch-notes-razing-hell";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    yOne: "Yellow One Squigly,-Element",
-                    iFluencer: "Influencer Peacock,-Element",
+                    dDefier: "Death Defier Annie,-Element",
+                    kTime: "Killing Time Eliza,-Element",
                 },
             };
 
