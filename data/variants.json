@@ -5704,21 +5704,21 @@
                         {
                             "level": 1,
                             "values": [
-                                null,
+                                10.0,
                                 15.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                null,
+                                10.0,
                                 12.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                null,
+                                10.0,
                                 10.0
                             ]
                         }
@@ -24269,21 +24269,21 @@
                             "level": 1,
                             "values": [
                                 4.0,
-                                null
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 6.0,
-                                null
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 8.0,
-                                null
+                                10.0
                             ]
                         }
                     ]
