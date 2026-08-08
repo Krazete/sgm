@@ -1752,13 +1752,13 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
-            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-88-patch-notes-razing-hell";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-89-patch-notes-insert-flavor-grill-or-be-grilled";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    dDefier: "Death Defier Annie,-Element",
-                    kTime: "Killing Time Eliza,-Element",
+                    unbearable: "UnBEARable Big Band,-Element",
+                    trueself: "True Self Fukua,-Element",
                 },
             };
 
