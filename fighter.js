@@ -1752,14 +1752,28 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
-            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-89-patch-notes-insert-flavor-grill-or-be-grilled";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-810-patch-notes-cirque-du-slay";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    unbearable: "UnBEARable Big Band,-Element",
-                    trueself: "True Self Fukua,-Element",
+                    bYaga: "Baba Yaga Beowulf,-Element",
+                    bRina: "Bellarina Cerebella,-Element",
                 },
+                changed: {
+                    _url: patchnotes,
+                    _class: "sa",
+                    cCyclone: "Crimson Cyclone Cerebella:",
+                    cHabit: "Creature of Habit Double:",
+                    bKill: "Buzzkill Painwheel:",
+                    polter: "Poltergust Squigly:",
+                    sCharmer: "Snake Charmer Marie:",
+                    iLeague: "Ivy League Parasoul:",
+                    rhythm: "Rhythm Rider Big Band:",
+                    vect: "Vector Protector Robo-Fortune:",
+                    starC: "Star Child Annie:",
+                    bLine: "Bassline Big Band:",
+                }
             };
 
             function addLabel(id, type, url, classname) {
