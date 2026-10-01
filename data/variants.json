@@ -1093,7 +1093,7 @@
         "sa": {
             "features": [
                 {
-                    "description": "SA_Eliza_SangSolo2",
+                    "description": "SA_Eliza_SangSolo2RE",
                     "tiers": [
                         {
                             "level": 1,
@@ -1116,25 +1116,45 @@
                     ]
                 },
                 {
-                    "description": "Char_Eliza_SA_Solo",
+                    "description": "Char_Eliza_SA_SoloRE",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
+                                0.25,
                                 0.25
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
+                                0.5,
                                 0.5
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
+                                1.0,
                                 1.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -3837,20 +3857,20 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_Cerebella_SA_BriarStraits_Desc",
+                    "description": "Char_Cerebella_SA_BriarStraitsRE_Desc1",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                5.0,
-                                10.0
+                                10.0,
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                7.0,
-                                10.0
+                                10.0,
+                                7.0
                             ]
                         },
                         {
@@ -3863,7 +3883,7 @@
                     ]
                 },
                 {
-                    "description": "Char_Cerebella_SA_BriarStraits_Desc2",
+                    "description": "Char_Cerebella_SA_BriarStraitsRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
@@ -9973,54 +9993,103 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_Double_SA_CorruptedWish_Desc",
+                    "description": "Char_Double_SA_CorruptedWishRE_Desc",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
+                                50.0,
                                 20.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                25.0
+                                60.0,
+                                20.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                30.0
+                                70.0,
+                                20.0
                             ]
                         }
                     ]
                 },
                 {
-                    "description": "Char_Double_SA_CorruptedWish_Desc2",
+                    "description": "Char_Double_SA_CorruptedWishRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                3,
-                                10.0,
-                                3
+                                1.0,
+                                5.0,
+                                2.0,
+                                7
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                3,
-                                15.0,
-                                3
+                                1.0,
+                                7.0,
+                                2.0,
+                                7
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                3,
-                                20.0,
-                                3
+                                1.0,
+                                10.0,
+                                2.0,
+                                7
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -10067,7 +10136,7 @@
                     ]
                 },
                 {
-                    "description": "Char_Valentine_SA_LethalInjection_Desc2",
+                    "description": "Char_Valentine_SA_LethalInjectionRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
@@ -14299,51 +14368,108 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_Annie_SA_TotalEclipse_Desc",
+                    "description": "Char_Annie_SA_TotalEclipseRE_Desc",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
                                 10.0,
-                                10.0
+                                10.0,
+                                5
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 10.0,
-                                12.0
+                                12.0,
+                                5
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 10.0,
-                                15.0
+                                15.0,
+                                5
                             ]
                         }
                     ]
                 },
                 {
-                    "description": "Char_Annie_SA_TotalEclipse_Desc2",
+                    "description": "Char_Annie_SA_TotalEclipseRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                50.0
+                                100.0,
+                                80.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                75.0
+                                100.0,
+                                60.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                100.0
+                                100.0,
+                                40.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -14371,60 +14497,74 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_RoboFortune_SA_PowerOfFive_Desc",
+                    "description": "Char_RoboFortune_SA_PowerOfFiveRE_Desc1",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                0.25,
-                                20.0,
-                                5
+                                1,
+                                5.0,
+                                null
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                0.3499999940395355,
-                                20.0,
+                                1,
+                                10.0,
                                 5
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                0.5,
-                                20.0,
+                                1,
+                                15.0,
                                 5
                             ]
                         }
                     ]
                 },
                 {
-                    "description": "Char_RoboFortune_SA_PowerOfFive_Desc2",
+                    "description": "Char_RoboFortune_SA_PowerOfFiveRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                5,
-                                5,
+                                5.0,
                                 5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                5,
-                                5,
-                                7.0
+                                10.0,
+                                5.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                5,
-                                5,
-                                10.0
+                                15.0,
+                                5.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -15012,35 +15152,6 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_Fukua_SA_SleepParalysis_Desc",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": [
-                                2,
-                                10.0,
-                                4.0
-                            ]
-                        },
-                        {
-                            "level": 2,
-                            "values": [
-                                2,
-                                10.0,
-                                3.0
-                            ]
-                        },
-                        {
-                            "level": 3,
-                            "values": [
-                                2,
-                                10.0,
-                                2.0
-                            ]
-                        }
-                    ]
-                },
-                {
                     "description": "Char_Fukua_SA_SleepParalysis_Desc2",
                     "tiers": [
                         {
@@ -15060,6 +15171,35 @@
                         {
                             "level": 3,
                             "values": [
+                                10.0,
+                                2.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Fukua_SA_SleepParalysisRE_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1,
+                                10.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1,
+                                10.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                1,
                                 10.0,
                                 2.0
                             ]
@@ -16439,6 +16579,98 @@
             }
         ],
         "tier": 1
+    },
+    "pTalk": {
+        "base": "be",
+        "element": 3,
+        "fandom": "Pillow Talk",
+        "name": "Char_Beowulf_G_V7_Name",
+        "quote": "Variant_Description_Beowulf_PillowTalk",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Beowulf_SA_PillowTalk_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                30.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Beowulf_SA_PillowTalk_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                2,
+                                5.0,
+                                null
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                2,
+                                7.0,
+                                null
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2,
+                                10.0,
+                                null
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Beowulf_SA_RepressedMemory_Title"
+        },
+        "stats": [
+            {
+                "attack": 326,
+                "lifebar": 1764
+            },
+            {
+                "attack": 636,
+                "lifebar": 3440
+            }
+        ],
+        "tier": 2
     },
     "pTech": {
         "base": "va",
@@ -18867,23 +19099,43 @@
                         {
                             "level": 1,
                             "values": [
-                                50.0,
-                                5.0
+                                25.0,
+                                3.0,
+                                0.5
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                75.0,
-                                6.0
+                                35.0,
+                                4.0,
+                                0.5
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                100.0,
-                                7.0
+                                50.0,
+                                5.0,
+                                0.5
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -20007,71 +20259,57 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_BlackDahlia_G_V6_Desc",
+                    "description": "Char_BlackDahlia_G_V6RE_Desc",
                     "tiers": [
                         {
                             "level": 1,
+                            "values": [
+                                10.0,
+                                5.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                7.0
+                            ]
+                        },
+                        {
+                            "level": 3,
                             "values": [
                                 10.0,
                                 10.0
                             ]
-                        },
-                        {
-                            "level": 2,
-                            "values": [
-                                10.0,
-                                12.0
-                            ]
-                        },
-                        {
-                            "level": 3,
-                            "values": [
-                                10.0,
-                                15.0
-                            ]
                         }
                     ]
                 },
                 {
-                    "description": "Char_BlackDahlia_G_V6_Desc2",
+                    "description": "Char_BlackDahlia_G_V6RE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                0.5,
-                                0.5
-                            ]
-                        },
-                        {
-                            "level": 2,
-                            "values": [
+                                0.2,
                                 1.0,
-                                1.0
+                                2.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                0.3,
+                                1.0,
+                                2.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                1.5,
-                                1.5
+                                0.4,
+                                1.0,
+                                2.0
                             ]
-                        }
-                    ]
-                },
-                {
-                    "description": "",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": []
-                        },
-                        {
-                            "level": 2,
-                            "values": []
-                        },
-                        {
-                            "level": 3,
-                            "values": []
                         }
                     ]
                 },
@@ -20265,48 +20503,71 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_Parasoul_SA_ThrowingShade_Desc",
+                    "description": "Char_Parasoul_SA_ThrowingShadeRE_Desc",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                3.0
+                                2.0,
+                                4.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                2.0
+                                2.0,
+                                3.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                1.0
+                                2.0,
+                                2.0
                             ]
                         }
                     ]
                 },
                 {
-                    "description": "Char_Parasoul_SA_ThrowingShade_Desc2",
+                    "description": "Char_Parasoul_SA_ThrowingShadeRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                3.0
+                                5.0,
+                                25.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                2.0
+                                7.0,
+                                35.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                1.0
+                                10.0,
+                                50.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -21294,21 +21555,21 @@
                             "level": 1,
                             "values": [
                                 25,
-                                10.0
+                                20.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 20,
-                                10.0
+                                20.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 17,
-                                10.0
+                                20.0
                             ]
                         }
                     ]
@@ -22125,57 +22386,80 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_Umbrella_SA_AlienAutopsy_Desc",
+                    "description": "Char_Umbrella_SA_AlienAutopsyRE_Desc",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                15.0,
-                                25.0
+                                30.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                15.0,
-                                35.0
+                                25.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                15.0,
-                                50.0
+                                20.0
                             ]
                         }
                     ]
                 },
                 {
-                    "description": "Char_Umbrella_SA_AlienAutopsy_Desc2",
+                    "description": "Char_Umbrella_SA_AlienAutopsyRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                3,
-                                10.0,
-                                3
+                                5.0,
+                                5,
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                3,
-                                12.0,
-                                3
+                                7.0,
+                                5,
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                3,
-                                15.0,
-                                3
+                                10.0,
+                                5,
+                                10.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
@@ -22499,56 +22783,93 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_Valentine_SA_TwoFaced_Desc",
+                    "description": "Char_Valentine_SA_TwoFacedRE_Desc",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                1,
-                                5.0
+                                3,
+                                3.0,
+                                3
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                1,
-                                4.0
+                                3,
+                                4.0,
+                                3
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                1,
-                                3.0
+                                3,
+                                5.0,
+                                3
                             ]
                         }
                     ]
                 },
                 {
-                    "description": "Char_Valentine_SA_TwoFaced_Desc2",
+                    "description": "Char_Valentine_SA_TwoFacedRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                5.0
+                                8.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                7.0
+                                10.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                10.0
+                                12.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }
             ],
-            "title": "Char_Valentine_SA_TwoFaced_Title"
+            "title": "Char_Valentine_SA_NeedleStorm_Title"
         },
         "stats": [
             {
@@ -23479,21 +23800,24 @@
                             "level": 1,
                             "values": [
                                 10,
-                                1.0
+                                1,
+                                10
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 10,
-                                1.5
+                                1,
+                                7
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 10,
-                                2.0
+                                1,
+                                5
                             ]
                         }
                     ]
@@ -23504,43 +23828,23 @@
                         {
                             "level": 1,
                             "values": [
-                                10.0,
-                                2.0,
-                                2.0
+                                5.0,
+                                10.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                12.0,
-                                2.5,
-                                3.0
+                                5.0,
+                                12.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                15.0,
-                                3.0,
-                                4.0
+                                5.0,
+                                15.0
                             ]
-                        }
-                    ]
-                },
-                {
-                    "description": "",
-                    "tiers": [
-                        {
-                            "level": 1,
-                            "values": []
-                        },
-                        {
-                            "level": 2,
-                            "values": []
-                        },
-                        {
-                            "level": 3,
-                            "values": []
                         }
                     ]
                 },
@@ -24585,6 +24889,182 @@
         ],
         "tier": 2
     },
+    "wBorne": {
+        "base": "pa",
+        "element": 3,
+        "fandom": "Dream Girl",
+        "name": "Char_Parasoul_D_V5_Name",
+        "quote": "Variant_Description_Parasoul_Wishborne",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Parasoul_SA_FogRollsIn_Desc",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                12.0,
+                                5.0,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                12.0,
+                                7.0,
+                                35.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                12.0,
+                                10.0,
+                                50.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Parasoul_SA_FogRollsIn_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                1.0,
+                                20.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                1.5,
+                                30.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                2.0,
+                                40.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Parasoul_SA_FogRollsIn_Title"
+        },
+        "stats": [
+            {
+                "attack": 613,
+                "lifebar": 3704
+            }
+        ],
+        "tier": 3
+    },
     "wCard": {
         "base": "pe",
         "element": 1,
@@ -25479,51 +25959,74 @@
         "sa": {
             "features": [
                 {
-                    "description": "Char_Double_SA_GameOver",
+                    "description": "Char_Double_SA_GameOverRE_Desc1",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
                                 0.5,
-                                30.0
+                                15.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
                                 0.75,
-                                30.0
+                                15.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
                                 1.0,
-                                30.0
+                                15.0
                             ]
                         }
                     ]
                 },
                 {
-                    "description": "Char_Double_SA_GameOver2",
+                    "description": "Char_Double_SA_GameOverRE_Desc2",
                     "tiers": [
                         {
                             "level": 1,
                             "values": [
-                                1
+                                10.0,
+                                1,
+                                5.0
                             ]
                         },
                         {
                             "level": 2,
                             "values": [
-                                2
+                                10.0,
+                                1,
+                                7.0
                             ]
                         },
                         {
                             "level": 3,
                             "values": [
-                                3
+                                10.0,
+                                1,
+                                10.0
                             ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
                         }
                     ]
                 }

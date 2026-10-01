@@ -1752,27 +1752,40 @@ function initialize() {
             /* variant id search helper
             cards.forEach(e => e.innerHTML = e.id + "<br>" + corpus[variants[e.id].name]);
             */
-            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-810-patch-notes-cirque-du-slay";
+            var patchnotes = "https://hub.skullgirlsmobile.com/updates/game-update-811-patch-notes-hush-hush-restless-nightmare";
             var vids = {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    bYaga: "Baba Yaga Beowulf,-Element",
-                    bRina: "Bellarina Cerebella,-Element",
+                    pTalk: "Pillow Talk Beowulf,-Element",
+                    wBorne: "Dream Girl Parasoul,-Element",
                 },
-                changed: {
+                reworked: {
                     _url: patchnotes,
                     _class: "sa",
-                    cCyclone: "Crimson Cyclone Cerebella:",
-                    cHabit: "Creature of Habit Double:",
-                    bKill: "Buzzkill Painwheel:",
-                    polter: "Poltergust Squigly:",
-                    sCharmer: "Snake Charmer Marie:",
-                    iLeague: "Ivy League Parasoul:",
-                    rhythm: "Rhythm Rider Big Band:",
-                    vect: "Vector Protector Robo-Fortune:",
-                    starC: "Star Child Annie:",
-                    bLine: "Bassline Big Band:",
+                    hDarkn: "Heart of Darkness Double",
+                    tChic: "Très Chic Valentine",
+                    moon: "Moonstruck Annie",
+                    sHuntress: "Stellar Huntress Black Dahlia",
+                    xMorph: "Xenomorph Double",
+                    spaceCase: "Space Case Umbrella",
+                },
+                buffed: {
+                    _url: patchnotes,
+                    _class: "sa",
+                    trueself: "True Self Fukua",
+                    cMind: "Criminal Mind Cerebella",
+                    bBath: "Bloodbath Eliza",
+                    nTerr: "Night Terror Fukua",
+                    nCrunch: "Number Cruncher Robo-Fortune",
+                    sOps: "Shadow Ops Parasoul",
+                    hFiend: "Hallow Fiend Valentine",
+                },
+                nerfed: {
+                    _url: patchnotes,
+                    _class: "sa",
+                    rhythm: "Rhythm Rider Big Band",
+                    sTipper: "Scale Tipper Filia",
                 }
             };
 
