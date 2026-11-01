@@ -1757,36 +1757,14 @@ function initialize() {
                 new: {
                     _url: patchnotes,
                     _class: "frame",
-                    pTalk: "Pillow Talk Beowulf,-Element",
-                    wBorne: "Dream Girl Parasoul,-Element",
+                    lSick: "Lovesick Valentine,-Element",
+                    gGremlin: "Garish Gremlin Umbrella,-Element",
                 },
-                reworked: {
-                    _url: patchnotes,
-                    _class: "sa",
-                    hDarkn: "Heart of Darkness Double",
-                    tChic: "Très Chic Valentine",
-                    moon: "Moonstruck Annie",
-                    sHuntress: "Stellar Huntress Black Dahlia",
-                    xMorph: "Xenomorph Double",
-                    spaceCase: "Space Case Umbrella",
-                },
-                buffed: {
-                    _url: patchnotes,
-                    _class: "sa",
-                    trueself: "True Self Fukua",
-                    cMind: "Criminal Mind Cerebella",
-                    bBath: "Bloodbath Eliza",
-                    nTerr: "Night Terror Fukua",
-                    nCrunch: "Number Cruncher Robo-Fortune",
-                    sOps: "Shadow Ops Parasoul",
-                    hFiend: "Hallow Fiend Valentine",
-                },
-                nerfed: {
-                    _url: patchnotes,
-                    _class: "sa",
-                    rhythm: "Rhythm Rider Big Band",
-                    sTipper: "Scale Tipper Filia",
-                }
+                // reworked: {
+                //     _url: patchnotes,
+                //     _class: "sa",
+                //     hDarkn: "Heart of Darkness Double",
+                // }
             };
 
             function addLabel(id, type, url, classname) {
