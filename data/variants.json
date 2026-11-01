@@ -8709,6 +8709,134 @@
         ],
         "tier": 2
     },
+    "gGremlin": {
+        "base": "um",
+        "element": 3,
+        "fandom": "Garish Gremlin",
+        "name": "Char_Umbrella_D_V5_Name",
+        "quote": "Variant_Description_Umbrella_GarishGremlin",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Umbrella_SA_BubbleBash_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                10
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                7
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Umbrella_SA_BubbleBash_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                2,
+                                10.0,
+                                1.0,
+                                25.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                10.0,
+                                2,
+                                10.0,
+                                1.0,
+                                50.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                15.0,
+                                2,
+                                10.0,
+                                1.0,
+                                75.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Umbrella_SA_BubbleBash_Title"
+        },
+        "stats": [
+            {
+                "attack": 685,
+                "lifebar": 2919
+            }
+        ],
+        "tier": 3
+    },
     "gJazz": {
         "base": "bb",
         "element": 3,
@@ -12374,6 +12502,167 @@
             {
                 "attack": 573,
                 "lifebar": 3485
+            }
+        ],
+        "tier": 2
+    },
+    "lSick": {
+        "base": "va",
+        "element": 4,
+        "fandom": "Lovesick",
+        "name": "Char_Valentine_G_V7_Name",
+        "quote": "Variant_Description_Valentine_Lovesick",
+        "sa": {
+            "features": [
+                {
+                    "description": "Char_Valentine_SA_KnightsDevotion_Desc1",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                5.0,
+                                7,
+                                7,
+                                15.0,
+                                3,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0,
+                                6,
+                                7,
+                                15.0,
+                                3,
+                                10.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                3.0,
+                                5,
+                                7,
+                                15.0,
+                                3,
+                                10.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Char_Valentine_SA_KnightsDevotion_Desc2",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": [
+                                4.0,
+                                5.0,
+                                7,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "values": [
+                                4.0,
+                                10.0,
+                                7,
+                                1.0
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "values": [
+                                4.0,
+                                15.0,
+                                7,
+                                1.0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                },
+                {
+                    "description": "",
+                    "tiers": [
+                        {
+                            "level": 1,
+                            "values": []
+                        },
+                        {
+                            "level": 2,
+                            "values": []
+                        },
+                        {
+                            "level": 3,
+                            "values": []
+                        }
+                    ]
+                }
+            ],
+            "title": "Char_Valentine_SA_KnightsDevotion_Title"
+        },
+        "stats": [
+            {
+                "attack": 256,
+                "lifebar": 1764
+            },
+            {
+                "attack": 499,
+                "lifebar": 3440
             }
         ],
         "tier": 2
